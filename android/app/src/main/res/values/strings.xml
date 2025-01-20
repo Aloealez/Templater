@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="plan_tasks_example">"dsa\ntest\nthird"</string>
+    <string name="plan_check">"○\n◉\n○"</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="spacing">" "</string>
+</resources>

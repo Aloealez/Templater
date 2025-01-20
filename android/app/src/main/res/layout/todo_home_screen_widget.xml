@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todo_home_screen_widget"
+    style="@style/Widget.Android.AppWidget.InnerView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.Android.AppWidgetContainer"
+    android:background="@drawable/todo_home_screen_widget_layout"
+    >
+
+<!--    style="@style/Widget.Android.AppWidget.Container"-->
+<!--    android:background="#ff6571ED"-->
+
+    <TextView
+        android:id="@+id/plan_title"
+        style="@style/Theme.Android.AppWidgetContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="3dp"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textSize="27sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#ffffffff"
+        android:textStyle="bold"
+        />
+
+    <ListView
+        android:id="@+id/plan_tasks_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plan_title"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:dividerHeight="-35sp"
+        android:paddingLeft="10sp"
+        >
+
+    </ListView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/plan_tasks_check"-->
+<!--        style="@style/Theme.Android.AppWidgetContainer"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/plan_title"-->
+<!--        android:paddingStart="0sp"-->
+<!--        android:contentDescription="@string/appwidget_text"-->
+<!--        android:text="@string/plan_check"-->
+<!--        android:textSize="20sp"-->
+<!--        android:fontFamily="sans-serif-light"-->
+<!--        android:textColor="#ffffffff"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--            android:id="@+id/plan_tasks"-->
+<!--            style="@style/Theme.Android.AppWidgetContainer"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--        android:layout_alignBottom="@id/plan_tasks_check"-->
+<!--        android:layout_alignTop="@id/plan_tasks_check"-->
+<!--        android:paddingLeft="15pt"-->
+<!--            android:contentDescription="@string/appwidget_text"-->
+<!--            android:text="@string/plan_tasks_example"-->
+<!--            android:textSize="16sp"-->
+<!--            android:fontFamily="sans-serif-light"-->
+<!--            android:textColor="#ffffffff"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+
+
+</RelativeLayout>

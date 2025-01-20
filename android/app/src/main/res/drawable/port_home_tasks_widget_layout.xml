@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Set the background color of the widget -->
+
+    <gradient
+        android:startColor="#FF8A94FB"
+        android:endColor="#FF5E6BEA"
+        android:angle="-45"
+        android:type="linear"
+        />
+    <!-- Define the corner radius for rounded corners -->
+
+    <corners android:radius="24dp" /> <!-- Adjust the radius as needed -->
+</shape>

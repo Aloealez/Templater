@@ -1,0 +1,1645 @@
+tests:
+- name: rice
+  video_id: YiiLg_KbZDM
+  questions:
+  - answers:
+    - 5%
+    - 10%
+    - 15%
+    - 20%
+    correct_answer: 3
+    question: Rice contributes to over … of the calories consumed by humans each year.
+  - answers:
+    - Japan
+    - China
+    - India
+    - Korea
+    correct_answer: 1
+    question: First came Asian rice, which many plant geneticists believe originated
+      in what’s now ….
+  - answers:
+    - 12 000
+    - 9 000
+    - 7 000
+    - 5 000
+    correct_answer: 1
+    question: Around … years ago, nomadic hunters in the region started planting rice
+      seeds.
+  - answers:
+    - 9 000
+    - 7 000
+    - 4 000
+    - 3 000
+    correct_answer: 2
+    question: South American growers also domesticated rice around … years ago.
+  - answers:
+    - Annaprashan
+    - Yaren
+    - Samsara
+    - Yom Kippur
+    correct_answer: 0
+    question: In India and Nepal, many Hindus mark an infant’s transition to solid
+      foods with a ceremony known as …, where the baby tastes rice for the first time.
+  - answers:
+    - half
+    - a third
+    - a fourth
+    - a fifth
+    correct_answer: 1
+    question: Rice crop uses over … of the world’s irrigation water.
+  - answers:
+    - astrocytes
+    - methanogens
+    - propanogens
+    - langerhans
+    correct_answer: 1
+    question: Flooded fields are the perfect breeding grounds for microorganisms known as ….
+  - answers:
+    - nitrogen
+    - oxygen
+    - carbon
+    - hydrogen
+    correct_answer: 1
+    question: Methanogens thrive in environments lacking ….
+  - answers:
+    - 5
+    - 10
+    - 15
+    - 25
+    correct_answer: 3
+    question: Methanogens produce methane - a greenhouse gas … times more potent than carbon dioxide.
+  - answers:
+    - 10%
+    - 20%
+    - 30%
+    - 40%
+    correct_answer: 2
+    question: Alternate wetting and drying can cut water use by ….
+- name: texas holdem
+  video_id: E_fAWuj7DDI
+  questions:
+  - answers:
+    - New York
+    - California
+    - New Orleans
+    - Florida
+    correct_answer: 2
+    question: The game first emerged around 1800 in the melting pot of ….
+  - answers:
+    - 20
+    - 30
+    - 42
+    - 52
+    correct_answer: 0
+    question: French pique was played with a …
+  - answers:
+    - American
+    - French
+    - Spanish
+    - English
+    correct_answer: 3
+    question: … Brag used 52-cards.
+  - answers:
+    - allowed
+    - did not allow
+    correct_answer: 0
+    question: Brag … players to discard and draw new cards.
+  - answers:
+    - car
+    - plane
+    - steamboat
+    - train
+    correct_answer: 2
+    question: The popularity of pooch skyrocketed after the invention of the ….
+  - answers:
+    - James Buchanan’s
+    - Andrew Johnson’s
+    - Grover Cleveland’s
+    - Abraham Lincoln’s
+    correct_answer: 3
+    question: By … election, Americans in every single state were playing the new
+      game.
+  - answers:
+    - hot
+    - cold
+    - 'false'
+    - 'true'
+    correct_answer: 1
+    question: But perhaps the most common method was sneaking a … deck into the game
+      (pre-sequenced hands).
+  - answers:
+    - Washington
+    - Florida
+    - Georgia
+    - California
+    correct_answer: 3
+    question: With four rounds of betting, Five-card Stud produced even more lucrative
+      pots, encouraging so much cheating that … outlawed the game in 1885.
+  - answers:
+    - 1920
+    - 1928
+    - 1940
+    - 1945
+    correct_answer: 1
+    question: In …, Hungarian polymath sought to explain the nuances of betting and
+      bluffing in mathematical terms.
+  - answers:
+    - Statistics
+    - Poker Theory
+    - Game Theory
+    - Prediction Theory
+    correct_answer: 2
+    question: The work of the Hungarian polymath became the foundation for a whole
+      new branch of mathematics called ….
+- name: motivation
+  video_id: II5h6uJPvvs
+  questions:
+  - answers:
+    - the desire or impetus to initiate and maintain a particular behaviour.
+    - the automatic response to external stimuli.
+    - a fixed, unchangeable trait in individuals.
+    - the result of genetic predisposition.
+    correct_answer: 0
+    question: Psychologist define motivation as ….
+  - answers:
+    - voluntary and involuntary.
+    - conscious and subconscious.
+    - intrinsic and extrinsic.
+    - positive and negative.
+    correct_answer: 2
+    question: 'Motivational forces generally fall into two broad categories:'
+  - answers:
+    - going to the dentist as a means to have healthy teeth in the future.
+    - playing a video game.
+    - studying as a means to getting accepted to a chosen university.
+    - receiving a monetary reward for completing a task.
+    correct_answer: 1
+    question: 'An example of an intrinsic motivation is:'
+  - answers:
+    - working out to lose weight.
+    - eating a birthday cake.
+    - going for a walk to relax.
+    - listening music to find some energy.
+    correct_answer: 0
+    question: 'An example of an extrinsic motivation is:'
+  - answers:
+    - short-lived.
+    - long-lived.
+    correct_answer: 0
+    question: 'The extrinsic reward’s effectiveness can be surprisingly:'
+  - answers:
+    - were
+    - weren’t
+    correct_answer: 1
+    question: A 2017 study found that those who were highly focused on the outcomes
+      of their New Year’s resolutions … most likely to stick to them.
+  - answers:
+    - more
+    - less
+    correct_answer: 1
+    question: One study of military cadets found that those who were driven by both
+      intrinsic and extrinsic motivation were overall … motivated than cadets driven
+      by just one of these factors.
+  - answers:
+    - has to many motivation sources.
+    - loses interest in an activity when intrinsic rewards are introduced.
+    - becomes highly motivated by external incentives.
+    - experiences a sudden increase in intrinsic motivation.
+    correct_answer: 0
+    question: 'Overjustification effect is when one:'
+  - answers:
+    - focusing on the reward after completing the task.
+    - simply putting the task off for later.
+    - multitasking, and thus not focusing too much on the activity itself.
+    correct_answer: 0
+    question: 'When a task is tedious, one may benefit by:'
+  - answers:
+    - making the activity more pleasant in itself.
+    - setting goals.
+    - rewarding themselves after performing the task.
+    correct_answer: 0
+    question: 'According to the video in order to increase one’s motivation one can
+      try:'
+- name: biggest brain
+  video_id: 00Ar2_irvJk
+  questions:
+  - answers:
+    - 10%
+    - 25%
+    - 40%
+    - 58%
+    correct_answer: 3
+    question: In the mid-1800s, soon after American whaling ships began operating
+      in the North Pacific, Whalers saw a … drop in their successful strikes within
+      just a few years.
+  - answers:
+    - renewable oil
+    - methanoceti oil
+    - spermaceti oil
+    - greasy oil
+    correct_answer: 2
+    question: Whales were killed to obtain ….
+  - answers:
+    - cardiovascular system
+    - digestive system
+    - echolocation system
+    - respiratory system
+    correct_answer: 2
+    question: Spermaceti oil is an essential part of the whales’ … .
+  - answers:
+    - elephants
+    - sperm whales
+    - orkas
+    - humans
+    correct_answer: 1
+    question: … have the largest brains of all animals.
+  - answers:
+    - 100
+    - 150
+    - 200
+    - 230
+    correct_answer: 3
+    question: Sperm whale-generated sounds can reach … dB.
+  - answers:
+    - lower jaw / eyes
+    - upper jaw / nose
+    - lower jaw / ears
+    - upper jaw / brain
+    correct_answer: 2
+    question: It is suspected that the returning vibrations are received by the whale’s
+      … and directed into the ….
+  - answers:
+    - defecation
+    - mating
+    - ventilation
+    - 'absorption '
+    correct_answer: 1
+    question: Scientists suspect that the clang noises, play a role in ….
+  - answers:
+    - Trunps
+    - Echos
+    - Codas
+    - Rents
+    correct_answer: 2
+    question: … are thought to function as social identity markers.
+  - answers:
+    - 'true'
+    - 'false'
+    correct_answer: 0
+    question: Some codas vary, based on the region and the family.
+  - answers:
+    - dialect
+    - physical appearance
+    - preferred prey species
+    - geographical territory
+    correct_answer: 0
+    question: According to the video each whale clan has its own ….
+- name: decision making
+  video_id: X7j8F16eSqs
+  questions:
+  - answers:
+    - 2 000
+    - 2005
+    - 2011
+    - 2015
+    correct_answer: 2
+    question: In a … study, researchers followed a group of judges.
+  - answers:
+    - well-being
+    - time of the day
+    - clothing
+    - 'odors '
+    correct_answer: 1
+    question: In the presented study … surprisingly had an impact on the decisions
+      made by the board.
+  - answers:
+    - morning
+    - evening
+    correct_answer: 0
+    question: Those that had their trial in the …, where more likely to be offered
+      a parole.
+  - answers:
+    - can make people more impulsive and less confident while making choices.
+    - leads to better decision-making due to increased focus.
+    - only affects decisions related to food choices.
+    - is caused by an excess of caffeine consumption.
+    correct_answer: 0
+    question: Decision fatigue …
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: All of our brains have the same decision fatigue threshold
+  - answers:
+    - frequency.
+    - complexity.
+    - novelty.
+    - personal preference.
+    correct_answer: 3
+    question: How quickly we reach the threshold DOESN’T depend on …
+  - answers:
+    - what to eat for breakfast.
+    - whether to buy a house or rent an apartment.
+    - which car to purchase.
+    - whether to accept a job offer.
+    correct_answer: 0
+    question: 'Choose an example of a decision that will NOT significantly contribute
+      to an individual approaching his decision fatigue:'
+  - answers:
+    - Asking others to make decisions for us.
+    - Limiting the amount of decisions we make each day.
+    - Increasing the complexity of our decisions.
+    - Practising regularly.
+    correct_answer: 1
+    question: What was the first strategy provided by the female that can slow down
+      a person from reaching his/her decision fatigue threshold.
+  - answers:
+    - more
+    - less
+    correct_answer: 1
+    question: It’s typically … draining to offer advice on a hard decision, than it
+      is to make that choice yourself.
+  - answers:
+    - learn how to relax about the small stuff, and prioritise the harder decisions.
+    - seek advice from those that are more experienced.
+    - make all decisions with equal importance, and stay organised
+    - focus primarily on the small and trivial decisions, as that will boost our satisfaction
+      and energy levels.
+    correct_answer: 0
+    question: In the last technique offered my the female, she suggest that we …
+- name: potato famine
+  video_id: OUieqzVZdQc
+  questions:
+  - answers:
+    - 1750
+    - 1800
+    - 1845
+    - 1905
+    correct_answer: 2
+    question: In the fall of …, the bright green leaves of potato plants dotted the
+      Irish countryside.
+  - answers:
+    - tasty and easy to prepare.
+    - nutrient-rich and inexpensive to harvest.
+    - difficult to cultivate.
+    - a natural source of caffeine.
+    correct_answer: 1
+    question: 'The potato became a staple food for the Irish due to it being:'
+  - answers:
+    - Ireland had complete control over its agricultural trade.
+    - Irish agricultural products were solely for domestic consumption.
+    - Ireland became self-sufficient in agriculture.
+    - Ireland’s more valuable agricultural products were exported.
+    correct_answer: 3
+    question: British mandates ensured
+  - answers:
+    - contracted an auto-immunological disease.
+    - suffered from epilepsy-like-shivers.
+    - suffered from severe stomach cramps.
+    - permanently damaged their fertility.
+    correct_answer: 2
+    question: 'Those who ate the abnormal potatoes:'
+  - answers:
+    - Western France
+    - Northern America
+    - Southern Africa
+    - Eastern Asia
+    correct_answer: 1
+    question: 'The fungus that affected the potatoes originated from:'
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: Due to the potato famine, the British stopped exporting Ireland’s grain
+      and livestock.
+  - answers:
+    - had to walk 18 km roundtrip to work every day.
+    - revolted agains the British rule over Ireland.
+    - helped those less-fortunate.
+    - documented the state of Southern Ireland under the rule of the British government.
+    correct_answer: 0
+    question: 'Thomas Malone is now known for having:'
+  - answers:
+    - substantially increased the aid provided for the Irish
+    - introduced friendly interests rates, as a means to improve the financial state
+      of the impoverished.
+    - limited who was eligible for tax relief.
+    - greatly invested in the education of the Iris.
+    correct_answer: 2
+    question: 'In the 1846, the British government:'
+  - answers:
+    - religious ideology.
+    - laissez-faire économie policies.
+    - political infighting.
+    - their simultaneous lack of resources.
+    correct_answer: 3
+    question: 'The described approach of the British towards the Irish DID NOT stem
+      from:'
+  - answers:
+    - '2'
+    - '5'
+    - '7'
+    - '10'
+    correct_answer: 2
+    question: The Irish famine lasted overall … years.
+- name: studying
+  video_id: TjPFZaMe2yw
+  questions:
+  - answers:
+    - 2 000
+    - 2 006
+    - 2 010
+    - 2 012
+    correct_answer: 1
+    question: The study brought up by the men took place in ….
+  - answers:
+    - Cerebellum
+    - Amygdala
+    - Hippocampus
+    - Basal Ganglia
+    correct_answer: 2
+    question: When you first learn something, the memory is initially stored in a
+      group of neurons in an area called the … .
+  - answers:
+    - reactivate
+    - deactivate
+    - damage
+    correct_answer: 0
+    question: When you continue learning the terms, you … the neurons.
+  - answers:
+    - Fornix
+    - Hindbrain
+    - Neocortex
+    - Midbrain
+    correct_answer: 2
+    question: The long-term storage of memories is possible because of the … .
+  - answers:
+    - omega-3 fatty acids.
+    - sleep.
+    - physical exercise.
+    - magnesium .
+    correct_answer: 1
+    question: 'According to the video, the translation of short-term memories to long-term
+      memories is likely facilitated by:'
+  - answers:
+    - Testing oneself.
+    - Copying the text to the notebook.
+    - Rereading the text over and over.
+    - Underscoring the important information.
+    correct_answer: 0
+    question: 'How can you force yourself to actively retrieve knowledge:'
+  - answers:
+    - 'Positively '
+    - Negatively
+    correct_answer: 0
+    question: Making mistakes while testing yourself … impacts your learning process.
+  - answers:
+    - asking others to explain the concepts to you.
+    - mixing various concepts.
+    - studying alone in a non-distracting environment.
+    - taking frequent brakes during the study session.
+    correct_answer: 1
+    question: The second learning technique recommends … .
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: Cramming the night before the exam, turns out to be beneficial for the
+      long-term retention of the concepts, as it makes the knowledge “fresh”.
+  - answers:
+    - amount of time they studied overall.
+    - techniques used during their study sessions.
+    - space they studied in.
+    - ' amount of days their studying was spread over.'
+    correct_answer: 3
+    question: The two study groups mentioned in the video different as to the … .
+- name: life meaning
+  video_id: 2aEQDi2ZYCI
+  questions:
+  - answers:
+    - Carbon
+    - Nitrogen
+    - Neuronium
+    - Uranium
+    correct_answer: 2
+    question: According to the scenario presented in the video, life on the planet depends entirely on … .
+  - answers:
+    - now emits a pollutant that lowers fertility in the species.
+    - is becoming a scarce resource, due to overuse.
+    - is contributing to the global warming on the planet.
+    - was found to be radioactive, and as a result trigger the release of cortisol.
+    correct_answer: 0
+    question: 'According to the scenario presented in the video, neuronium:'
+  - answers:
+    - Ethylen
+    - Polixate
+    - Fumenate
+    - Oxygenase
+    correct_answer: 1
+    question: 'The alternative energy source (from the video) is called:'
+  - answers:
+    - won’t solve the problem with fertility.
+    - won’t produce adequate yields of energy.
+    - isn’t renewable.
+    - won’t sustain cognition in the same way as Neuronium.
+    correct_answer: 3
+    question: The alternative source of energy, unfortunately … .
+  - answers:
+    - Polixate
+    - Neuronium
+    correct_answer: 1
+    question: Dr. Taylof’s contingent argues that your people must use …
+  - answers:
+    - the possibility to reproduce.
+    - the chance to live an affluent life.
+    - culture and imagination.
+    - the ability to communicate verbally.
+    correct_answer: 2
+    question: Dr. Taylof believes that the lives of future generations on Polixate
+      would be meaningless without …
+  - answers:
+    - have any inherent right to be brought into existence.
+    - should be excluded from important decisions.
+    - should not inherit the consequences of past generations' actions.
+    correct_answer: 0
+    question: Dr Taylof’s group doesn’t believe that future generations ….
+  - answers:
+    - lead a creative life.
+    - experience happiness.
+    - lead an educationally successful life.
+    - have the motivation to develop and thrive personally.
+    correct_answer: 1
+    question: Dr Kahan and her colleagues disagree with Dr Taylof, and claim that
+      with their basic needs met they could still …
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: Dr Taylof firmly believes that maximising the society’s happiness takes
+      precedence over personal development.
+  - answers:
+    - life in itself is not meaningful; it’s the goals we set that make is so.
+    - choosing a specie’s extinction is fundamentally unethical.
+    - all species are equally valuable in the ecosystem, and thus deciding to cease
+      the existence of one, would severely impact the planet.
+    - human actions have no impact on the environment.
+    correct_answer: 1
+    question: 'Dr Kahan states that:'
+- name: break bad habit
+  video_id: wr6fQ4KpbRM
+  questions:
+  - answers:
+    - regularly watching TV.
+    - nail-biting.
+    - being frequently late.
+    - putting tasks off for later.
+    correct_answer: 1
+    question: With what bad habit, does the video begin ?
+  - answers:
+    - Rubbing chili peppers.
+    - Wearing gloves all day.
+    - Dipping hands in salt.
+    - Having manicure.
+    correct_answer: 3
+    question: Which of the following techniques was NOT mentioned by the female, when
+      discussing braking the habit of nail-biting ?
+  - answers:
+    - behaviours that are performed regularly, and cued subconsciously in response
+      to certain environments.
+    - actions that are always driven by conscious decision-making, requiring continuous
+      effort and intentionality.
+    - behaviors that are entirely genetic in origin, predetermined by an individual's
+      DNA and impervious to environmental influences or personal choices, making them
+      immune to change efforts.
+    - routines that are difficult to change due to lack of effort, as individuals
+      are inherently lazy and reluctant to make any alterations to their daily practices.
+    correct_answer: 0
+    question: According to the video, scientists define habits as … .
+  - answers:
+    - Location
+    - Time
+    - Emotions
+    - Orders
+    correct_answer: 3
+    question: Which of these cannot be a habit trigger ?
+  - answers:
+    - Picking your hair when stressed.
+    - Frequent staying up late.
+    - Drinking coffee in the morning.
+    - Blinking your eyes.
+    correct_answer: 3
+    question: Which of these is NOT a habit ?
+  - answers:
+    - Cortisol.
+    - Dopamine.
+    - Glutamate.
+    - Gastrin.
+    correct_answer: 1
+    question: The feeling of pleasure is attributed to …
+  - answers:
+    - slower
+    - faster
+    correct_answer: 1
+    question: Cue-Behaviour-Reward loops are … than decision-making processes.
+  - answers:
+    - 40%
+    - 50%
+    - 60%
+    - 70%
+    correct_answer: 0
+    question: One study estimated that people spend more than … of their days performing
+      regularly repeated behaviour.
+  - answers:
+    - cue
+    - reward
+    correct_answer: 0
+    question: In order to brake a habit, one must first identify the … .
+  - answers:
+    - One must jot down each time they feel the urge to perform a certain task.
+    - One should replace an already existing habit with a less detrimental one.
+    - One must punish themselves for having executed a certain behaviour
+    - One must try to distract their minds when confronted with an urge to perform
+      a certain task.
+    correct_answer: 1
+    question: How does the habit reversal training work ?
+- name: birds
+  video_id: Amkg1cdDCpM
+  questions:
+  - answers:
+    - neurodigestive
+    - circadian
+    - reward
+    - musculoskeletal
+    correct_answer: 1
+    question: Whether we are an early bird or a night owl, is determined by our …
+      system.
+  - answers:
+    - hypothalamus.
+    - hippocampus.
+    - amygdala.
+    - basal ganglia.
+    correct_answer: 0
+    question: The circadian system is located in our …
+  - answers:
+    - light.
+    - pH of our blood.
+    - temperature.
+    - blood pressure.
+    correct_answer: 0
+    question: Your day-night cycle is dictated by …. .
+  - answers:
+    - Serotonin
+    - Glutamate
+    - Melatonin
+    - Acetylcholine
+    correct_answer: 2
+    question: Which of these hormones is termed as the “sleep inducing hormone” ?
+  - answers:
+    - Dopamine
+    - Melatonin
+    - Cortisol
+    - Norepinephrine
+    correct_answer: 2
+    question: In “early birds” … peaks just before waking up.
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 0
+    question: By keeping a regular sleep schedule one can alter their circadian rhythm.
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: Surprisingly a disregulated circadian rhythm doesn’t have health implications.
+  - answers:
+    - work out in the morning.
+    - drink high-glucose beverages in the morning.
+    - be exposed to fresh air.
+    - be exposed to sunlight.
+    correct_answer: 3
+    question: According to the video, a good way to “wake up” your body is to …
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 0
+    question: Whether you are an early bird or a night owl, biologically doesn’t really
+      matter.
+  - answers:
+    - establish a light contrast between the time we go to sleep and wake up.
+    - exercise regularly before going to sleep.
+    - not drink coffee before we go to sleep.
+    - sleep in a peaceful environment.
+    correct_answer: 0
+    question: According to the video, in order to have a properly functioning circadian
+      rhythm it’s important to …
+- name: meat
+  video_id: YTAmyCgmrZE
+  questions:
+  - answers:
+    - 25%
+    - 50%
+    - 66%
+    - 82%
+    correct_answer: 2
+    question: In 2021, a survey of over 1 000 Americans found that nearly … had eaten
+      plant-based meat alternatives in the past year.
+  - answers:
+    - muscle fibers
+    - connective tissues
+    - fat tissue
+    - cartilage tissue
+    correct_answer: 3
+    question: Farmed Meat is a complex structure that doesn’t consist of …
+  - answers:
+    - Carbohydrates
+    - Protein
+    - Fats
+    - It contains all of the above food groups.
+    correct_answer: 3
+    question: Plant based meat doesn’t contain …
+  - answers:
+    - long rod-like proteins / ball-shaped proteins.
+    - 'ball-shaped proteins / long rod-like proteins '
+    correct_answer: 0
+    question: Meat is composed of …, plants are composed of …
+  - answers:
+    - flattening device.
+    - compressing device.
+    - extruder device.
+    - extraction device.
+    correct_answer: 2
+    question: To replicate the protein structure characteristic of meat, plant’s proteins
+      can be pushed through …
+  - answers:
+    - red blood cells.
+    - leukocytes.
+    - stem cells.
+    - oligodendrocytes.
+    correct_answer: 2
+    question: Cultured meat begins as …
+  - answers:
+    - swapping red meat for plant-based meat
+    - reducing the amount of consumed meat
+    - swapping red meat for other options like chicken, nuts or legumes
+    - consuming solely well cooked red meat (not raw)
+    correct_answer: 2
+    question: One 2012 study concluded that … can potentially reduce mortality risk
+      by 7 to 19%.
+  - answers:
+    - potassium
+    - chloride
+    - sodium
+    - calcium
+    correct_answer: 2
+    question: Plant-based meats are highly processed and therefore high in … .
+  - answers:
+    - 5.4%
+    - 10.2%
+    - 14.5%
+    - 20%
+    correct_answer: 2
+    question: Animal agriculture generates an estimated … of human-caused greenhouse
+      gas emission.
+  - answers:
+    - 90%
+    - 63%
+    - 51%
+    - 43%
+    correct_answer: 0
+    question: Researchers estimate that producing plant-based meat substitutes results
+      in, on average, around … less greenhouse gas emission than an equivalent amount
+      of beef.
+- name: airplane mode
+  video_id: iKYHf22qVdM
+  questions:
+  - answers:
+    - Jupiter
+    - Saturn
+    - Uranium
+    - Neptun
+    correct_answer: 0
+    question: In fact, the signal your phone broadcasts is so strong, if your eyes
+      could see radio waves, your phone would be visible from … .
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 0
+    question: We turn on the airplane mode to protect those in our airway path.
+  - answers:
+    - proton waves
+    - electric waves
+    - magnetic waves
+    - electromagnetic waves
+    correct_answer: 3
+    question: Cell phones connect to networks by emitting information in the form
+      of … .
+  - answers:
+    - sounds
+    - colors
+    - pitches
+    - vibrations
+    correct_answer: 1
+    question: Our eyes perceive different wavelengths as different … .
+  - answers:
+    - lower amplitude
+    - higher amplitude
+    - higher frequency
+    - lower frequency
+    correct_answer: 1
+    question: When far aways from a cell tower, your phone will send … waves.
+  - answers:
+    - sends out giant radio waves, that interfere with nearby signals.
+    - has a reduced risk of interference with communication systems.
+    - reduced the air pressure in the air, due to the cramming of radio waves of many
+      phone users.
+    - may risk damaging the windows in the airplane.
+    correct_answer: 0
+    question: When flying in a plane without the airplane mode, one ….
+  - answers:
+    - 'True'
+    - 'False'
+    correct_answer: 1
+    question: According to the video, not all electronics emit rogue radio waves.
+  - answers:
+    - 1 - 20 GHz
+    - 1 - 30 GHz
+    - 1 - 40 GHz
+    - 1 - 50 GHz
+    correct_answer: 3
+    question: The Very Large Array can see signals throughout our solar system from ….
+- name: phone battery
+  video_id: vc8UBSp1tz0
+  questions:
+  - answers:
+    - the gasoline
+    - the battery
+    - the torch
+    correct_answer: 1
+    question: Out of these 3 energy sources only … is recyclable.
+  - answers:
+    - protons
+    - neutrons
+    - photons
+    - electrons
+    correct_answer: 3
+    question: In a battery the negative terminal releases … .
+  - answers:
+    - alkaline double-A
+    - lithium-ion
+    - car lead-acid
+    - nickel-cadmium
+    correct_answer: 0
+    question: In a typical … battery, zinc metal reacts with hydroxide ions.
+  - answers:
+    - potassium oxide
+    - sodium oxide
+    - zinc oxide
+    - manganese dioxide
+    correct_answer: 3
+    question: At the positive end of the alkaline double-A battery electrons are accepted
+      by … .
+  - answers:
+    - increase the internal resistance of the battery.
+    - decrease the internal resistance of the battery.
+    - increase the internal capacitance of the battery.
+    - decrease the internal capacitance of the battery.
+    correct_answer: 0
+    question: According to the video, over the course of many charge cycles, some
+      of the lithium ions engage in side reactions, producing substances that …
+  - answers:
+    - thrishing
+    - smelting
+    - riving
+    - dripping
+    correct_answer: 1
+    question: The heart of most battery recycling is a process called … .
+- name: flow state
+  video_id: 0rIjFCNay2Q
+  questions:
+  - answers:
+    - a unique mental state of effortless engagement.
+    - a state of complete distraction and reduced productivity.
+    - a condition where multitasking is maximized, enhancing efficiency.
+    - a mental state where the mind is entirely focused on the past or future, rather than the present moment.
+    correct_answer: 0
+    question: The state of flow is defined as
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 1
+    question: Only professional athletes and scientists can find flow.
+  - answers:
+    - positive emotions
+    - fatigue 
+    - creativity
+    - satisfaction
+    correct_answer: 1
+    question: According to the video, those who more frequently experience flow report higher levels of all except
+  - answers:
+    - 'true' 
+    - 'false'
+    - not given
+    correct_answer: 0
+    question: Psychologists go so far as to define flow as an altered state of consciousness.
+  - answers:
+    - Flow diminishes feelings of worry.
+    - During flow, time seems to fly by.
+    - During flow, it’s difficult to stop an activity.
+    - During flow, it’s difficult to start an activity.
+    correct_answer: 3
+    question: Which description of the state of flow is not accurate?
+  - answers:
+    - attention
+    - self-awareness
+    - self-consciousness
+    - memory retention
+    correct_answer: 3
+    question: Brain imaging studies have shown that flow is accompanied by changes in neural activity, notably in regions that play a role in all except ...
+  - answers:
+    - we find enjoyable and purposeful.
+    - require external rewards to maintain interest.
+    - feel like obligations or chores.
+    - we engage in solely for social approval.
+    correct_answer: 0
+    question: Activities that are intrinsically motivating are those that ...
+  - answers:
+    - avoid any challenging tasks to prevent frustration.
+    - focus on the outcome rather than the process.
+    - balance our personal skill level with the activity’s challenge.
+    - engage in repetitive tasks that require minimal effort or thought.
+    correct_answer: 2
+    question: The second theory mentioned in the video suggests that in order to achieve a state of flow, one needs to ...
+  - answers:
+    - the activity is very easy for us.
+    - the activity is very hard for us.
+    - the activity is not too easy and not too hard for us.
+    correct_answer: 2
+    question: It is easiest to enter the state of flow when ...
+  - answers:
+    - limiting distractions.
+    - focusing on achieving the state of flow.
+    - setting clear goals.
+    - breaking down the task into smaller tasks, which are easier to track.
+    correct_answer: 1
+    question: Which of these is not a strategy to reach the state of flow ...
+- name: food expiration
+  video_id: jDg8DQl7ZeQ
+  questions:
+  - answers:
+    - 12%
+    - 23%
+    - 37%
+    - 45%
+    correct_answer: 2
+    question: … of US food waste comes from individual households.
+  - answers:
+    - Supermarkets began stocking processed foods.
+    - New refrigeration technology made all food appear equally fresh.
+    - Packaging innovations masked signs of spoilage.
+    - Food labeling regulations removed expiration dates from products.
+    correct_answer: 0
+    question: It became harder to assess the freshness of food, because ...
+  - answers:
+    - How many people had touched a certain food product.
+    - How long food had been on the shelves.
+    - The temperature at which the food was stored during transportation.
+    - The number of times the food was restocked on the shelves.
+    correct_answer: 1
+    question: In the US groceries used packing codes to track ...
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 1
+    question: There are strict regulations that dictate how open dating should be calculated by the manufacturer.
+  - answers:
+    - Enhance the flavor and texture of frozen foods.
+    - Prevent the loss of nutritional value over time.
+    - Keep bacteria that cause food poisoning in check.
+    - Ensure that food remains fresh without any packaging.
+    correct_answer: 2
+    question: The freezer temperatures ...
+  - answers:
+    - The produce contains unhealthy amounts of pathogens.
+    - The produce is covered by mold.
+    - The produce has a slimy surface.
+    - The produce has lost its tenderness.
+    correct_answer: 3
+    question: Which of these characteristics does not automatically indicate that the food is spoiled?
+  - answers:
+    - minority
+    - majority
+    correct_answer: 1
+    question: The … of US citizens use the food labels to assess the freshness of food products.
+  - answers:
+    - packed cookies
+    - canned goods
+    - vegetarian meat options
+    - infant formula
+    correct_answer: 3
+    question: The dates on … are regulated to indicate safety.
+  - answers:
+    - Create a clear distinction between “freshness” and “eatability” of food.
+    - Reduce the shelf life of all produce to ensure quicker turnover.
+    - Encourage consumers to purchase only the most visually appealing produce.
+    - Mandate that all produce be sold before it reaches peak ripeness.
+    correct_answer: 0
+    question: One of the ways to limit the amount of produce thrown out is ...
+  - answers:
+    - 'True'
+    - 'False'
+    - Not given
+    correct_answer: 1
+    question: Grocery stores all around the world are prohibited from donating unsold food.
+- name: ozone layer
+  video_id: 5wVJeq4mLL0
+  questions:
+  - answers:
+    - damages plant and animal DNA.
+    - improves plant growth by increasing photosynthesis.
+    - makes animals more resistant to diseases.
+    - strengthens plant and animal DNA over time.
+    correct_answer: 0
+    question: Too much exposure to the sun’s UV radiation …
+  - answers:
+    - absorbed by ozone molecules.
+    - reflected back into space by clouds.
+    - absorbed by the Earth's surface.
+    - scattered by dust particles in the atmosphere.
+    correct_answer: 0
+    question: About 98% of the UV radiation is …
+  - answers:
+    - only found at ground level.
+    - concentrated in the Earth's core.
+    - absorbed directly by living organisms.
+    - dispersed in the stratosphere.
+    correct_answer: 3
+    question: Ozone molecules are …
+  - answers:
+    - CFCs increase the production of ozone in the atmosphere.
+    - CFCs upset the balance between the amount of ozone produced and broken down.
+    - CFCs have no effect on the ozone layer.
+    - CFCs only affect the ozone layer in polar regions.
+    correct_answer: 1
+    question: Choose the correct statement.
+  - answers:
+    - coolant for refrigerators.
+    - fertilisers for crops.
+    - cleaning agents for electronics.
+    - fuel for jet engines.
+    correct_answer: 0
+    question: CFCs were developed by three US-based corporations as ...
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 1
+    question: One CFC molecule can damage only one ozone molecule.
+  - answers:
+    - cold temperature (which can be found for e.g. in Antarctica).
+    - increased levels of carbon dioxide.
+    - high humidity in tropical regions.
+    - warmer temperatures in the stratosphere.
+    correct_answer: 0
+    question: One of the factors that accelerates ozone depletion is ...
+  - answers:
+    - rates of skin cancer would skyrocket.
+    - photosynthesis would be impaired.
+    - global agricultural production would plummet.
+    - the Earth's magnetic field would weaken.
+    correct_answer: 3
+    question: Which of these sentence endings is not true. If ozone depletion continued …
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 0
+    question: The use of CFCs was eventually banned in the 20th century.
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 0
+    question: The ozone hole is predicted to disappear one day.
+- name: middle ages
+  video_id: e9-l34TcV_U
+  questions:
+  - answers:
+    - a 1,000-year timespan.
+    - a 500-year timespan.
+    - a 200-year timespan.
+    - a 100-year timespan.
+    correct_answer: 0
+    question: The “Middle Ages” refers to …
+  - answers:
+    - a 1,000-year timespan.
+    - a 500-year timespan.
+    - a 200-year timespan.
+    - a 100-year timespan.
+    correct_answer: 0
+    question: The “Middle Ages” refers to …
+  - answers:
+    - the fall of Rome / the Italian renaissance.
+    - the discovery of America / the Industrial Revolution.
+    - the birth of Jesus / the French Revolution.
+    - the Viking Age / the Age of Enlightenment.
+    correct_answer: 0
+    question: The “Middle Ages” stretch from … to …
+  - answers:
+    - no longer paid attention to spirituality.
+    - had no knowledge of medicine or healing practices.
+    - never engaged in trade or commerce.
+    - were all ignorant and uneducated.
+    correct_answer: 3
+    question: One misconception (the first mentioned in the film) is that medieval people …
+  - answers:
+    - gradually dropped.
+    - stayed the same.
+    - gradually increased.
+    correct_answer: 2
+    question: During the “Middle Ages” literacy rates …
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 1
+    question: During the “Middle Ages” scholars abandoned Greek and Roman texts.
+  - answers:
+    - Covering meat with spices.
+    - Storing them in refrigerators.
+    - Storing them in cold water.
+    - Curing meat with salt.
+    correct_answer: 3
+    question: Which method was used by medieval people to preserve meat?
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 1
+    question: Medieval people avoided taking baths altogether, considering them to be unhealthy.
+  - answers:
+    - classical / modern
+    - prehistoric / industrial
+    - stone / enlightenment
+    - ancient / futuristic
+    correct_answer: 0
+    question: The … period came before the “Middle Ages” and the … period came after.
+  - answers:
+    - Renaissance writers would romanticize the past and create a distorted image of the Middle Ages.
+    - Medieval records were written in a fictional language.
+    - All historical documents from the period were destroyed during the Renaissance.
+    - The concept of history as a discipline didn’t exist until the 18th century.
+    correct_answer: 0
+    question: One of the reasons (according to the video) for the many misconceptions about the “Middle Ages” was the fact that
+  - answers:
+    - 'true'
+    - 'false'
+    - not given
+    correct_answer: 0
+    question: Medieval people engaged in trade with Asian countries.
+- name: happiness
+  video_id: m4Ics03xzUQ
+  questions:
+  - answers:
+    - When you are happy, you are automatically grateful.
+    - Gratefulness leads to happiness.
+    - Happiness and gratefulness are intertwined but not always simultaneous.
+    - Gratefulness is a result of achieving milestones.
+    correct_answer: 2
+    question: What is the connection between happiness and gratefulness?
+  - answers:
+    - Success and recognition.
+    - Something valuable and a true gift.
+    - Achieving goals and ambitions.
+    - Material possessions and wealth.
+    correct_answer: 1
+    question: According to David Steindl-Rast, what must come together to spark gratefulness?
+  - answers:
+    - By accumulating more possessions.
+    - By being aware that every moment is a gift.
+    - By constantly pursuing happiness.
+    - By seeking recognition from others.
+    correct_answer: 1
+    question: How does David Steindl-Rast suggest we can live gratefully?
+  - answers:
+    - Experiencing gratefulness not just occasionally but continually.
+    - Accumulating wealth and status.
+    - Achieving personal goals.
+    - Being recognized by others for one's achievements.
+    correct_answer: 0
+    question: What is the "key to all this" according to David Steindl-Rast?
+  - answers:
+    - Rushing through life and seizing every opportunity.
+    - "By adopting the simple method: Stop. Look. Go."
+    - Always striving for more without stopping to appreciate.
+    - By constantly comparing oneself to others.
+    correct_answer: 1
+    question: How does David Steindl-Rast propose we initiate grateful living?
+  - answers:
+    - They become fearful of losing what they have.
+    - They become violent towards others.
+    - They act out of a sense of abundance and are willing to share.
+    - They become focused solely on their own happiness.
+    correct_answer: 2
+    question: According to David Steindl-Rast, what happens when people are grateful?
+  - answers:
+    - A reduction in material wealth.
+    - A shift away from fear and violence towards respect and cooperation.
+    - An increase in personal achievements.
+    - A focus on individual happiness rather than collective well-being.
+    correct_answer: 1
+    question: What change does David Steindl-Rast believe gratefulness can bring to the world?
+  - answers:
+    - It encourages competition and rivalry.
+    - It fosters enjoyment of differences and respect for everyone.
+    - It leads to isolation and loneliness.
+    - It promotes selfishness and greed.
+    correct_answer: 1
+    question: According to David Steindl-Rast, what role does gratefulness play in our interactions with others?
+  - answers:
+    - By avoiding them whenever possible.
+    - By rising to the occasion and recognizing the opportunity presented.
+    - By complaining and lamenting our misfortune.
+    - By seeking immediate solutions without reflection.
+    correct_answer: 1
+    question: How does David Steindl-Rast suggest we respond to difficult situations?
+  - answers:
+    - Constantly pursuing new experiences and opportunities.
+    - Adopting the practice of stopping, looking, and then acting with gratitude.
+    - Ignoring past experiences and focusing on future goals.
+    - Surrounding oneself with material wealth and possessions.
+    correct_answer: 1
+    question: What does David Steindl-Rast propose as a solution to living gratefully?
+- name: hear best
+  video_id: VElc-9Xa1f0
+  questions:
+  - answers:
+    - They have unique adaptations that allow them to hear frequencies beyond human perception.
+    - They hear exactly the same range of sounds as humans.
+    - They rely solely on their vision to detect sounds.
+    - They have no special hearing abilities beyond what humans possess.
+    correct_answer: 0
+    question:  How can certain animals detect sounds that humans cannot perceive?
+  - answers:
+    - External sensors detect vibrations without involving the brain.
+    - Sound waves cause vibrations in ear structures, which stimulate sensory cells that send signals to the brain.
+    - Animals process sound directly through their muscles, bypassing the brain.
+    - The brain detects sound waves without any intermediary processes.
+    correct_answer: 1
+    question:  What is the fundamental process of hearing?
+  - answers:
+    - Their wings are designed to amplify sound.
+    - They funnel sound using their facial structure and have exceptionally sensitive ears.
+    - They are unable to determine the direction of sound.
+    - They primarily rely on their wings for sound detection.
+    correct_answer: 1
+    question:  How do owls enhance their ability to hear?
+  - answers:
+    - Their large ears are primarily for cooling purposes.
+    - They use their large ears to detect low-frequency sounds and to help regulate their body temperature.
+    - Their ears serve only to cool them, not for hearing.
+    - They can detect only high-frequency sounds with their ears.
+    correct_answer: 1
+    question:  What dual purpose do the large ears of the long-eared jerboa serve?
+  - answers:
+    - Ogre-faced spiders capture prey using their exceptional eyesight.
+    - Ogre-faced spiders depend solely on their hearing to catch prey.
+    - Ogre-faced spiders detect sound waves as faint as those from mosquito flight using receptors on their legs.
+    - Ogre-faced spiders are unable to hear and use other senses to locate prey.
+    correct_answer: 2
+    question:  How do ogre-faced spiders sense airborne prey?
+  - answers:
+    - Their middle ear bones are softer to enhance low-frequency detection.
+    - Their rigid middle ear bones allow them to efficiently transmit high-frequency vibrations.
+    - They are unable to hear high-frequency sounds.
+    - Their middle ear bones are specialized for detecting low-frequency vibrations.
+    correct_answer: 1
+    question:  How do toothed whales, such as dolphins and sperm whales, detect high-frequency sounds?
+  - answers:
+    - Baleen whales produce the highest-frequency sounds of any animal.
+    - Baleen whales emit sounds that are limited in travel distance.
+    - Baleen whales produce low-frequency sounds, around 14 hertz, that can travel for thousands of kilometers.
+    - Baleen whales do not have any special adaptations for sound emission.
+    correct_answer: 2
+    question:  What is notable about the sounds emitted by baleen whales?
+  - answers:
+    - By detecting vibrations through their jawbones.
+    - By sensing vibrations with their tongues.
+    - By hearing through their eyes.
+    - By relying solely on airborne sounds to locate prey.
+    correct_answer: 0
+    question:  How do snakes perceive ground vibrations?
+  - answers:
+    - Katydids detect ultrasonic sounds with sensors in their back legs.
+    - Katydids detect ultrasonic sounds with specialized sensors in their front legs.
+    - Katydids are incapable of detecting ultrasonic sounds.
+    - Katydids use their antennae to sense ultrasonic sounds.
+    correct_answer: 1
+    question:  How do katydids detect ultrasonic sounds?
+  - answers:
+    - By emitting high-frequency sounds from their thorax.
+    - By using eardrums located on their front legs.
+    - By detecting low-frequency vibrations in the ground with their middle ear bones.
+    - By perceiving sound through their eyes.
+    correct_answer: 2
+    question:  How do Namib Desert golden moles detect low-frequency vibrations in the sand?
+  - answers:
+    - By using thin, vibration-sensitive membranes on their abdomens.
+    - By having small ears located on their thorax.
+    - By utilizing their wings for sound detection.
+    - By lacking any specialized organs for hearing.
+    correct_answer: 0
+    question:  How do greater wax moths detect high-frequency sounds of up to 300,000 hertz?
+- name: ketchup
+  video_id: mAxFB3vbt7c
+  questions:
+  - answers:
+    - It was a sweet and savory brown sauce without tomatoes.
+    - England had just discovered tomatoes.
+    - It was always made with tomatoes.
+    - It was a dessert sauce.
+    correct_answer: 0
+    question: What was ketchup like in England in the mid-18th century?
+  - answers:
+    - Vinegar.
+    - Mustard.
+    - Mayonnaise.
+    - Fish sauce.
+    correct_answer: 3
+    question: Which condiment is considered a cousin to ketchup?
+  - answers:
+    - They salted and stored the fish, creating a fermented liquid.
+    - They buried the fish in the ground to ferment.
+    - They dried and ate the fish immediately.
+    - They turned the fish into a soup.
+    correct_answer: 0
+    question: How did Chinese fishermen in 300 BCE preserve their excess catch?
+  - answers:
+    - Garum was used exclusively in desserts.
+    - Garum was a sauce made from tomatoes.
+    - Garum was a sweet syrup.
+    - Garum was a fish sauce that was central to Roman cuisine.
+    correct_answer: 3
+    question: What was garum in ancient Roman cuisine?
+  - answers:
+    - Fish sauce remained popular in Europe even after the fall of the Roman Empire.
+    - The Romans exported fish sauce to Asia.
+    - The fall of the Roman Empire ended the use of fish sauce in Europe for a thousand years.
+    - Europeans never stopped using fish sauce after the fall of Rome.
+    correct_answer: 2
+    question: What happened to fish sauce in Europe after the Roman Empire collapsed?
+  - answers:
+    - Ketchup was originally made from mushrooms.
+    - Ketchup was always made from tomatoes in Europe.
+    - Ketchup was introduced to Europe from South America.
+    - Ketchup in the 1700s became a catch-all name for brown sauces made from various ingredients.
+    correct_answer: 3
+    question: How did the concept of ketchup change in the 1700s in England?
+  - answers:
+    - He introduced ketchup made from fish.
+    - He made ketchup a popular dessert topping.
+    - He developed a ketchup based on walnuts.
+    - He created the first tomato-based ketchup.
+    correct_answer: 3
+    question: What did James Mease contribute to the evolution of ketchup?
+  - answers:
+    - He introduced ketchup to the Asian market.
+    - He made ketchup a less popular condiment.
+    - He started a business selling pickled vegetables.
+    - He replaced sodium benzoate with riper tomatoes and more vinegar.
+    correct_answer: 3
+    question: How did Henry J. Heinz revolutionize ketchup production?
+  - answers:
+    - Most American households do not use ketchup anymore.
+    - Ketchup is now rarely found in American households.
+    - Ketchup has become the base for many other sauces and dressings worldwide.
+    - Ketchup is still made from fish sauce in most places.
+    correct_answer: 2
+    question: What is the significance of Heinz's ketchup in modern cuisine?
+  - answers:
+    - Worcestershire sauce was the first condiment to be made from tomatoes.
+    - The original ketchup was always sweet and made from fruits.
+    - Fish sauce was primarily used in desserts in ancient times.
+    - The history of ketchup can be traced back to fish sauce.
+    correct_answer: 3S
+    question: What is the historical connection between ketchup and fish sauce?
+- name: basketball
+  video_id: aa2Fmr7sKIA
+  questions:
+  - answers:
+    - To automatically adjust its skill level.
+    - To demonstrate its ability to shoot baskets.
+    - To challenge a human player to a one-on-one game.
+    - To play basketball perfectly every time.
+    correct_answer: 0
+    question: What was the Dunk-O-Matic expected to do according to the CEO's overpromised advertisement?
+  - answers:
+    - Adjust the robot's probability of success based on the opponent.
+    - Install a new AI system.
+    - Change the robot’s shooting angle.
+    - Make the robot shoot faster.
+    correct_answer: 0
+    question: What solution did the engineer implement to make the game fair for each opponent?
+  - answers:
+    - The robot always wins.
+    - The game is unfair.
+    - The human always wins.
+    - The first player always wins.
+    correct_answer: 3
+    question: What happens when both the human and robot have a 100% chance of making a basket?
+  - answers:
+    - Probability of failure for both players and the next round of attempts.
+    - Adding the chances of multiple successful shots.
+    - Creating a perfect sequence of shots.
+    - Using a linear function to calculate success.
+    correct_answer: 0
+    question: What does a geometric series help calculate in the context of this problem?
+  - answers:
+    - 1 minus the ratio of misses.
+    - p divided by 1 minus p.
+    - q multiplied by p.
+    - The ratio of successful shots.
+    correct_answer: 1
+    question: What is the formula for calculating q to make the game fair?
+  - answers:
+    - The human player cannot lose.
+    - A fair game is impossible because the human will always win.
+    - The robot has no chance of winning.
+    - The human will definitely lose.
+    correct_answer: 1
+    question: What happens if the human's probability of success is greater than 50%?
+  - answers:
+    - p times 1 minus q.
+    - The same series as the human's chances.
+    - q times 1 minus p.
+    - p times q.
+    correct_answer: 1
+    question: How does the robot's series compare to the human's series?
+  - answers:
+    - They have the same sum and are effectively the same series.
+    - The robot has a higher probability in later rounds.
+    - The human's chances are always lower.
+    - The robot's series is more complex.
+    correct_answer: 0
+    question: What is true about the geometric series when q equals p over 1-minus-p?
+  - answers:
+    - The competitors' chances reset to being equal.
+    - The robot gains an advantage.
+    - The human gains an advantage.
+    - The game becomes unfair after the first round.
+    correct_answer: 0
+    question: What happens to the competitors' chances in each round of the game?
+  - answers:
+    - The presentation leads to a promotion.
+    - The engineer ends up working at a better company.
+    - The robot is destroyed.
+    - The engineer becomes famous for inventing the Dunk-O-Matic.
+    correct_answer: 1
+    question: What is the final outcome for the engineer after the conference?
+- name: poseidon
+  video_id: 1siE5_Q9vs0
+  questions:
+  - answers:
+    - Hades.
+    - Zeus.
+    - Poseidon.
+    - Apollo.
+    correct_answer: 2
+    question: Which deity is considering retirement and selling the ocean?
+  - answers:
+    - To build his real estate portfolio and expand his domain.
+    - To create a new habitat for souls.
+    - To convert the ocean into a lake of fire.
+    - To merge the ocean with the Underworld.
+    correct_answer: 0
+    question: Why is Hades interested in buying the ocean?
+  - answers:
+    - The ocean's fishing industry employs over 500 million people.
+    - The ocean produces half of the world's oxygen.
+    - The ocean generates over $14 trillion annually from marine shipping alone.
+    - The ocean covers 90% of Earth's surface.
+    correct_answer: 2
+    question: What is one of the ocean’s economic contributions mentioned by the accountant?
+  - answers:
+    - It directly provides energy to all life on Earth.
+    - It creates new marine species through evolution.
+    - It prevents $500 billion in damages annually.
+    - It has absorbed more than 90% of excess heat since 1955.
+    correct_answer: 3
+    question: What is one of the ocean’s environmental roles that the accountant highlights?
+  - answers:
+    - An increase in coastal populations and rising tourism.
+    - Climate change, pollution, overfishing, and seabed extraction.
+    - The depletion of marine resources due to tourism.
+    - The expanding interest in coral reef conservation.
+    correct_answer: 1
+    question: What are the recent developments impacting the ocean that must be factored into its value?
+  - answers:
+    - It helps humanity transition from fossil fuels.
+    - It’s the primary source of water for all living beings.
+    - It’s one of the largest ecosystems on Earth.
+    - It supports more life than all terrestrial ecosystems combined.
+    correct_answer: 0
+    question: How does the ocean contribute to humanity’s shift to renewable energy?
+  - answers:
+    - $36 trillion.
+    - $5.7 trillion.
+    - $83 billion.
+    - $24 trillion.
+    correct_answer: 3
+    question: What is the estimated current value of the ocean according to the accountant?
+  - answers:
+    - Up to 500% in profits.
+    - Up to 600% in profits.
+    - Up to 300% in profits.
+    - Up to 200% in profits.
+    correct_answer: 1
+    question: What potential profit could humanity gain by reinvesting in the ocean's health?
+  - answers:
+    - Poseidon sells the ocean to Hades.
+    - Poseidon creates a new ocean entirely.
+    - Poseidon decides to retire and pass on his duties.
+    - Poseidon reaffirms his eternal vow to protect the ocean.
+    correct_answer: 3
+    question: What does Poseidon ultimately decide after the accountant's presentation?
+  - answers:
+    - A betrayal by his brother Hades.
+    - A last-minute change of heart.
+    - A trick by other gods to take his domain.
+    - A much-needed intervention by Hades and the accountant.
+    correct_answer: 3
+    question: What does Poseidon eventually realize about the meeting with Hades and the accountant?
+- name: milky way
+  video_id: iyOVbs_mO7o
+  questions:
+  - answers:
+    - The Fermi Bubbles.
+    - The Sagittarius Bubbles.
+    - The eROSITA Bubbles.
+    - The Andromeda Bubbles.
+    correct_answer: 0
+    question: What are the two gigantic gaseous bubbles discovered by NASA in 2010 called?
+  - answers:
+    - They were formed by a massive burst of star formation.
+    - They were caused by a supernova explosion.
+    - They are the result of a powerful outburst from the supermassive black hole.
+    - They are created by cosmic ray collisions.
+    correct_answer: 2
+    question: What is one of the theories about the origin of the Fermi Bubbles?
+  - answers:
+    - They extend nearly 25,000 light years in each direction.
+    - They are fully encapsulated by the eROSITA Bubbles.
+    - They are the largest structures ever discovered in space.
+    - They emit gamma rays and soft X-rays.
+    correct_answer: 1
+    question: How do the Fermi Bubbles relate to the eROSITA Bubbles?
+  - answers:
+    - The Fermi Bubbles are formed by recent star formation bursts.
+    - The eROSITA Bubbles are the result of stellar winds.
+    - The Fermi Bubbles are created by jets of energy from a black hole.
+    - The eROSITA Bubbles are made of ultra-fast particles.
+    correct_answer: 0
+    question: According to the first theory, what is the origin of the Fermi Bubbles?
+  - answers:
+    - About 1 million times the energy of the Sun.
+    - About 10 million times the energy of the Sun.
+    - About 100 million times the energy of the Sun.
+    - About 500,000 times the energy of the Sun.
+    correct_answer: 0
+    question: How much energy is estimated to have been generated by the event that formed the bubbles?
+  - answers:
+    - Less than 3 million years ago.
+    - Less than 5 million years ago.
+    - About 10 million years ago.
+    - About 50 million years ago.
+    correct_answer: 0
+    question: When did the event that likely formed the bubbles occur?
+  - answers:
+    - Star formation creates massive outflows of gas.
+    - Black holes eject gas from their centers.
+    - Galactic winds push away surrounding material.
+    - All of the above.
+    correct_answer: 3
+    question: What are the factors involved in the formation of the bubbles according to the theories?
+  - answers:
+    - Evidence of circumgalactic medium winds.
+    - Evidence of nearby supernova explosions.
+    - Evidence of dark matter interactions.
+    - Evidence of collisions with other galaxies.
+    correct_answer: 0
+    question: What other factor might explain some unique features of the bubbles?
+  - answers:
+    - They might be active galactic nuclei known as quasars.
+    - They might be related to cosmic microwave background radiation.
+    - They might be created by collisions between galaxies.
+    - They might be remnants of ancient cosmic events.
+    correct_answer: 0
+    question: What do similar jets of energy in other distant galaxies indicate about the Fermi Bubbles?
+  - answers:
+    - New telescopes will help provide more answers.
+    - Future missions to the Fermi Bubbles are planned.
+    - Additional studies on dark matter will be conducted.
+    - Further analysis of the cosmic microwave background is needed.
+    correct_answer: 0
+    question: What is expected to improve our understanding of the bubbles in the future?

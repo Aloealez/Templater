@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mean_scores>
+    <mean_score>
+        <exercise>1</exercise>
+        <score>6</score>
+    </mean_score>
+
+    <mean_score>
+        <exercise>2</exercise>
+        <score>9</score>
+    </mean_score>
+</mean_scores>

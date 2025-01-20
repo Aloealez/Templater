@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/plan_task_item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="40sp"
+        android:textColor="#ffffffff"
+        android:textStyle=""
+        android:fontFamily="sans-serif-medium"
+        android:text="◉○"
+        />
+
+    <TextView
+        android:id="@+id/plan_task_item_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/plan_task_item_check"
+        android:text="@string/spacing"
+        android:textColor="#ffffffff"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/plan_task_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/plan_task_item_space"
+        android:paddingTop="7sp"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="asda"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:textStyle="" />
+</RelativeLayout>

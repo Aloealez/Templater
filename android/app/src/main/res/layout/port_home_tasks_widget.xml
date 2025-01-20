@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/port_home_tasks_widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Android.AppWidgetContainer"
+    android:background="@drawable/port_home_tasks_widget_layout"
+    >
+
+    <ImageView
+        android:id="@+id/port_home_widget_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="#ff000000"
+        />
+<!--    android:scaleType="centerCrop"-->
+</LinearLayout>

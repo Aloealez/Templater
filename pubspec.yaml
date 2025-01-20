@@ -1,0 +1,269 @@
+name: brainace_pro
+description: "BrainAce.pro - Adoptive training platform using AI."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.4+4
+
+environment:
+  sdk: ">=3.6.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ">=4.10.0" # (sprawdź najnowszą wersję na pub.dev)
+  xml: ^6.5.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  any_link_preview:
+    git:
+      url: https://github.com/sur950/any_link_preview.git
+  youtube_player_iframe: ^5.1.1
+  flutter_math_fork: ^0.7.2
+  path_provider: ^2.0.15
+  geekyants_flutter_gauges: ^1.0.3
+  flutter_quizzes:
+    git:
+      url: https://github.com/Asilmaz/flutter_quizzes.git
+  animated_text_kit: ^4.2.2
+  flutter_glow: ^0.3.0
+  liquid_swipe:
+    git:
+      url: https://github.com/iamSahdeep/liquid_swipe_flutter.git
+  pie_chart: ^5.4.0
+  circular_chart_flutter:
+    git:
+      url: https://github.com/MWronski12/circular_chart_flutter-0.0.2.git
+  fl_chart: ">=0.70.2"
+  intl: ">=0.20.1"
+  flutter_animate: ^4.4.0
+  flutter_sequence_animation: "^4.0.0"
+  flutter_bta_functions:
+    git:
+      url: https://github.com/Staheos/flutter_bta_functions.git
+  syncfusion_flutter_charts: ">=28.1.39"
+  syncfusion_flutter_gauges: ">=28.1.39"
+  url_launcher: ">=6.3.1"
+  bulleted_list: ^0.0.1+0.1a
+  flutter_svg: ">=2.0.17"
+  video_player: ^2.8.2
+  flutter_html_as_text:
+    git:
+      url: https://github.com/Staheos/flutter_html_as_text.git
+  youtube_player_flutter: ^9.0.0
+  shared_preferences: ">=2.3.5"
+  flip_card:
+    git:
+      url: https://github.com/BrunoJurkovic/flip_card.git
+  sudoku_dart:
+    git:
+      url: https://github.com/einsitang/sudoku-dart.git
+  confetti:
+    git:
+      url: https://github.com/Staheos/flutter_confetti.git
+  word_generator: ^0.4.4
+  crossword: ^1.3.1
+  yaml: ">=3.1.3"
+  dictionaryx: ^0.3.5
+  flick_video_player:
+    git:
+      url: https://github.com/GeekyAnts/flick-video-player.git
+  smooth_page_indicator: ^1.1.0
+  widget_zoom: ^0.0.4
+  audioplayers: ">=6.1.0"
+  flutter_markdown: ^0.7.3
+  tuple: ">=2.0.2"
+  flutter_launcher_icons: ^0.14.1
+  page_transition: ">=2.2.1"
+  icon_decoration: ^2.0.2
+  home_widget: ^0.7.0
+  davinci:
+    git:
+      url: https://github.com/Staheos/davinci.git
+  flutter_local_notifications: ">=18.0.1"
+  timezone: ">=0.10.0"
+  #flutter_native_timezone: ^1.0.0
+  material_design_icons_flutter: ^7.0.7296
+  linear_progress_bar: ^1.1.2
+  http:
+  flutter_colorpicker: ">=1.1.0"
+  permission_handler: ">=11.3.1"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    #    - family: Arial
+    #      fonts:
+    #        - asset: assets/fonts/Arial.ttf
+    - family: OpenSauceOne
+      fonts:
+        - asset: assets/fonts/OpenSauceOne-Medium.ttf
+          style: normal
+        - asset: assets/fonts/OpenSauceOne-Bold.ttf
+          #style: bold
+        - asset: assets/fonts/OpenSauceOne-MediumItalic.ttf
+          style: italic
+    - family: OpenSauceSans
+      fonts:
+        - asset: assets/fonts/OpenSauceSans-Regular.ttf
+          style: normal
+        - asset: assets/fonts/OpenSauceSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/OpenSauceSans-Italic.ttf
+          style: italic
+    - family: OpenSauceTwo
+      fonts:
+        - asset: assets/fonts/OpenSauceTwo-Regular.ttf
+          style: normal
+        - asset: assets/fonts/OpenSauceTwo-Italic.ttf
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-Light.ttf
+          weight: 300
+        - asset: assets/fonts/OpenSauceTwo-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSauceTwo-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSauceTwo-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/OpenSauceTwo-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSauceTwo-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/OpenSauceTwo-Black.ttf
+          weight: 900
+        - asset: assets/fonts/OpenSauceTwo-BlackItalic.ttf
+          weight: 900
+          style: italic
+    - family: Horizon
+      fonts:
+        - asset: "assets/Horizon-updated/Horizon.otf"
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+  #  w100 Thin, the least thick
+  #  w200 Extra-light
+  #  w300 Light
+  #  w400 Normal / regular / plain
+  #  w500 Medium
+  #  w600 Semi-bold
+  #  w700 Bold
+  #  w800 Extra-bold
+  #  w900 Black, the most thick
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+    - assets/improvement_selection/
+    - assets/activities/
+    - assets/memory/
+    - assets/memory/memory_game/
+    - assets/memory/memory_game/cats/
+    - assets/memory/faces/
+    - assets/meditation/
+    - assets/attention/
+    - assets/attention/reading/
+    - assets/attention/reading/classic/
+    - assets/attention/reading/business/
+    - assets/attention/reading/personal_development/
+    - assets/attention/reading/covers/
+    - assets/linguistic/
+    - assets/linguistic/hangman/
+    - assets/self_reflection/
+    - assets/math/
+    - assets/riddles/
+    - assets/logical_thinking/
+    - assets/navbar_icons/
+    - assets/investing/
+    - assets/investing/lesson1/
+    - assets/investing/lesson2/
+    - assets/investing/lesson14/
+    - assets/investing/lesson15/
+    - assets/investing/lesson24/
+    - assets/investing/lesson25/
+    - assets/settings/
+    - assets/sats/
+    - assets/sats/start_images/
+    - assets/icons/
+    - assets/video/
+    - assets/questions/
+    - assets/questions/spelling_mistakes/
+    - assets/questions/correct_a_word/
+    - assets/questions/vocabulary/
+    - assets/questions/grammar/
+    - assets/questions/idioms/
+    - assets/questions/riddle_of_the_day/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_logo.png"
