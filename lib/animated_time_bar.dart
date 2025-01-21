@@ -15,13 +15,37 @@ class AnimatedTimeBar extends StatefulWidget {
 }
 
 class _AnimatedTimeBarState extends State<AnimatedTimeBar> {
-  Color? animationColor = Colors.green;
   double timePassed = 0;
   double animatedWidth = 0.0;
+  double lastTimePassed = 0;
 
   @override
   void initState() {
     super.initState();
+
+    Future.delayed(Duration(milliseconds: 10), () {
+      setState(() {
+        animatedWidth = 1.0;
+      });
+    });
+  }
+
+  @override
+  void didUpdateWidget(AnimatedTimeBar oldWidget) {
+    timePassed = widget.totalTime - widget.timeLeft;
+    print('timePassed: $timePassed' ' lastTimePassed: $lastTimePassed');
+    if (timePassed != lastTimePassed) {
+      setState(() {
+        animatedWidth = 0.0;
+      });
+      Future.delayed(Duration(milliseconds: 10), () {
+        setState(() {
+          animatedWidth = 1.0;
+        });
+      });
+    }
+    lastTimePassed = timePassed;
+    super.didUpdateWidget(oldWidget);
   }
 
   @override
@@ -42,23 +66,12 @@ class _AnimatedTimeBarState extends State<AnimatedTimeBar> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(widget.totalTime.toInt(), (index) {
               if (index == timePassed) {
-                print("Equal");
-                setState(() {
-                  animatedWidth = 0.0;
-                });
-                // animationColor = null;
-                Future.delayed(Duration(milliseconds:  300), () {
-                  setState(() {
-                    animatedWidth = 1.0;
-                    animationColor = Theme.of(context).colorScheme.primaryContainer;
-                  });
-                });
                 return Flexible(
                   flex: 1,
                   child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 700),
-                    width: animatedWidth * timePassed * size.width * 0.9 / widget.totalTime,
-                    color: Colors.green,
+                    duration: Duration(milliseconds: 1010),
+                    width: animatedWidth * size.width * 0.9 / widget.totalTime,
+                    color: Theme.of(context).colorScheme.primaryContainer,
                     child: const Align(
                       alignment: Alignment.center,
                     ),

@@ -26,10 +26,14 @@ FutureBuilder riddleOfTheDayBuilder(
         );
       }
       return QuizModel(
-        "RiddleOfTheDay",
+        "Riddle Of The Day",
         "RiddleOfTheDay",
         180,
         answerLayout: QuizModelAnswerLayout.textInput,
+        centerTitle: true,
+        timeBar: true,
+        progressBar: false,
+        singleTextQuestion: true,
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: double.parse(snapshot.data![1].last),

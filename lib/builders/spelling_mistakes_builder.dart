@@ -66,10 +66,13 @@ FutureBuilder spellingMistakesBuilder(
         );
       }
       return QuizModel(
-        "Linguistic",
-        "Linguistic",
+        "Spelling",
+        "Spelling",
         60,
         answerLayout: QuizModelAnswerLayout.boxes,
+        centerTitle: true,
+        timeBar: true,
+        progressBar: false,
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: 0,

@@ -12,36 +12,6 @@ FutureBuilder correctAWordBuilder(
     }) {
   return FutureBuilder(
     future: () async {
-      // String file = await rootBundle.loadString('assets/linguistic/correct_a_word.yml');
-      // final tasks = loadYaml(file)["words"][0]["correct"];
-      // final incorrectWords = loadYaml(file)["words"][1]["incorrect"];
-      // print("tasks: $tasks");
-      // Map<String, QuizQuestionData> questions = {
-      //   for (int i = 0; i < tasks.length; ++i)
-      //     "$i": () {
-      //       Map<String, String> answers = {
-      //         "A": incorrectWords[i].toString(),
-      //         "B": tasks[i].toString(),
-      //       };
-      //       Map<String, bool> correct = {
-      //         "A": false,
-      //         "B": true,
-      //       };
-      //       print("answers: $answers");
-      //       return QuizQuestionData(
-      //         answers,
-      //         correct,
-      //         {
-      //           "A": 1,
-      //           "B": 0,
-      //         },
-      //         question: "${incorrectWords[i]}",
-      //       );
-      //     }(),
-      // };
-      // questions = getRandomElementsMap(questions, 10);
-      // print("before return questions: $questions");
-      // return questions;
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String level = prefs.getString("level") ?? "cpe";
       return await convertToQuestions("correct_a_word", level, 3);
@@ -54,10 +24,11 @@ FutureBuilder correctAWordBuilder(
       }
       print("questions: ${snapshot.connectionState} ${snapshot.data}");
       return QuizModel(
-        "Linguistic",
-        "Linguistic",
+        "Correct a Word",
+        "Correct a Word",
         120,
         answerLayout : QuizModelAnswerLayout.textInput,
+        singleTextQuestion: true,
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: 0,

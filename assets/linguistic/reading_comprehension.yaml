@@ -1,0 +1,1552 @@
+tests:
+  0:
+  - title: Pride and Prejudice
+    author: Jane Austen
+    text: |-
+      It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
+
+      "My dear Mr. Bennet," said his lady to him one day, "have you heard that Netherfield Park is let at last?"
+
+      Mr. Bennet replied that he had not.
+
+      "But it is," returned she; "for Mrs. Long has just been here, and she told me all about it."
+
+      Mr. Bennet made no answer.
+
+      "Do you not want to know who has taken it?" cried his wife impatiently.
+
+      "You want to tell me, and I have no objection to hearing it."
+
+      This was invitation enough.
+
+      "Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week."
+
+      "What is his name?"
+
+      "Bingley."
+
+      "Is he married or single?"
+
+      "Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!"
+
+      "How so? How can it affect them?"
+
+      "My dear Mr. Bennet," replied his wife, "how can you be so tiresome! You must know that I am thinking of his marrying one of them."
+
+      "Is that his design in settling here?"
+
+      "Design! Nonsense, how can you talk so! But it is very likely that he may fall in love with one of them, and therefore you must visit him as soon as he comes."
+
+      "I see no occasion for that. You and the girls may go, or you may send them by themselves, which perhaps will be still better, for as you are as handsome as any of them, Mr. Bingley may like you the best of the party."
+
+      "My dear, you flatter me. I certainly have had my share of beauty, but I do not pretend to be anything extraordinary now. When a woman has five grown-up daughters, she ought to give over thinking of her own beauty."
+
+      "In such cases, a woman has not often much beauty to think of."
+
+      "But, my dear, you must indeed go and see Mr. Bingley when he comes into the neighbourhood."
+
+      "It is more than I engage for, I assure you."
+
+      "But consider your daughters. Only think what an establishment it would be for one of them. Sir William and Lady Lucas are determined to go, merely on that account, for in general, you know, they visit no newcomers. Indeed you must go, for it will be impossible for us to visit him if you do not."
+
+      "You are over-scrupulous, surely. I dare say Mr. Bingley will be very glad to see you; and I will send a few lines by you to assure him of my hearty consent to his marrying whichever he chooses of the girls; though I must throw in a good word for my little Lizzy."
+
+      "I desire you will do no such thing. Lizzy is not a bit better than the others; and I am sure she is not half so handsome as Jane, nor half so good-humoured as Lydia. But you are always giving her the preference."
+
+      "They have none of them much to recommend them," replied he; "they are all silly and ignorant like other girls; but Lizzy has something more of quickness than her sisters."
+
+      "Mr. Bennet, how can you abuse your own children in such a way? You take delight in vexing me. You have no compassion for my poor nerves."
+
+      "You mistake me, my dear. I have a high respect for your nerves. They are my old friends. I have heard you mention them with consideration these last twenty years at least."
+
+      "Ah, you do not know what I suffer."
+
+      "But I hope you will get over it, and live to see many young men of four thousand a year come into the neighbourhood."
+
+      "It will be no use to us, if twenty such should come, since you will not visit them."
+
+      "Depend upon it, my dear, that when there are twenty, I will visit them all."
+
+      Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the experience of three-and-twenty years had been insufficient to make his wife understand his character. Her mind was less difficult to develop. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented, she fancied herself nervous. The business of her life was to get her daughters married; its solace was visiting and news.
+    questions:
+    - answers:
+      - That a single woman in possession of beauty must be in want of a husband.
+      - That a single man in possession of a good fortune must be in want of a wife.
+      - That a married couple must always agree with each other.
+      - That a wealthy man must be lonely.
+      correct_answer: 1
+      question: What is the "truth universally acknowledged" mentioned in the first sentence of the passage?
+    - answers:
+      - He is a famous writer.
+      - He is a potential husband for one of her daughters.
+      - He is a wealthy businessman.
+      - He is a potential husband for one of her daughters.
+      correct_answer: 3
+      question: Why does Mrs. Bennet consider Mr. Bingley's arrival significant?
+    - answers:
+      - With great enthusiasm.
+      - With indifference.
+      - With anger.
+      - With suspicion.
+      correct_answer: 1
+      question: How does Mr. Bennet react to the news about Netherfield Park being let?
+    - answers:
+      - To introduce their daughters.
+      - To welcome him to the neighborhood.
+      - To ask for a loan.
+      - To discuss local politics.
+      correct_answer: 0
+      question: Why does Mrs. Bennet want Mr. Bennet to visit Mr. Bingley?
+    - answers:
+      - He believes they are the best in the neighborhood.
+      - He finds them silly and ignorant but appreciates Lizzy's quickness.
+      - He thinks they are perfect.
+      - He is indifferent towards them.
+      correct_answer: 1
+      question: What is Mr. Bennet's attitude towards his daughters?
+    - answers:
+      - She laughs it off.
+      - She feels vexed and complains about her suffering.
+      - She agrees with him.
+      - She ignores him.
+      correct_answer: 1
+      question: How does Mrs. Bennet react when Mr. Bennet teases her about her nerves?
+    - answers:
+      - He will visit them all.
+      - He will throw a party.
+      - He will find husbands for all his daughters.
+      - He will introduce them to his friends.
+      correct_answer: 2
+      question: What does Mr. Bennet promise to do if twenty wealthy young men move into the neighborhood?
+    - answers:
+      - Wise and patient.
+      - Intelligent and understanding.
+      - Mean understanding, little information, and uncertain temper.
+      - Kind and nurturing.
+      correct_answer: 0
+      question: How does the passage describe Mrs. Bennet's character?
+    - answers:
+      - Her own beauty.
+      - Getting her daughters married.
+      - Her husband's health.
+      - Managing the household.
+      correct_answer: 1
+      question: What is Mrs. Bennet's primary concern in life?
+    - answers:
+      - Reading books.
+      - Visiting and news.
+      - Gardening.
+      - Playing piano.
+      correct_answer: 1
+      question: What is the main source of solace for Mrs. Bennet?
+  1:
+  - title: Pride and Prejudice
+    author: Jane Austen
+    text: |-
+      Not all that Mrs. Bennet, however, with the assistance of her five daughters, could ask on the subject, was sufficient to draw from her husband any satisfactory description of Mr. Bingley. They attacked him in various ways—with barefaced questions, ingenious suppositions, and distant surmises; but he eluded the skill of them all, and they were at last obliged to accept the second-hand intelligence of their neighbour, Lady Lucas. Her report was highly favourable. Sir William had been delighted with him. He was quite young, wonderfully handsome, extremely agreeable, and, to crown the whole, he meant to be at the next assembly with a large party. Nothing could be more delightful! To be fond of dancing was a certain step towards falling in love; and very lively hopes of Mr. Bingley's heart were entertained.
+
+      “If I can but see one of my daughters happily settled at Netherfield,” said Mrs. Bennet to her husband, “and all the others equally well married, I shall have nothing to wish for.”
+
+      In a few days Mr. Bingley returned Mr. Bennet's visit, and sat about ten minutes with him in his library. He had entertained hopes of being admitted to a sight of the young ladies, of whose beauty he had heard much; but he saw only the father. The ladies were somewhat more fortunate, for they had the advantage of ascertaining from an upper window that he wore a blue coat, and rode a black horse.
+
+      An invitation to dinner was soon afterwards dispatched; and already had Mrs. Bennet planned the courses that were to do credit to her housekeeping, when an answer arrived which deferred it all. Mr. Bingley was obliged to be in town the following day, and, consequently, unable to accept the honour of their invitation, etc. Mrs. Bennet was quite disconcerted. She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be. Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls grieved over such a number of ladies, but were comforted the day before the ball by hearing that instead of twelve he brought only six with him from London—his five sisters and a cousin. And when the party entered the assembly room it consisted of only five altogether—Mr. Bingley, his two sisters, the husband of the eldest, and another young man.
+
+      Mr. Bingley was good-looking and gentlemanlike; he had a pleasant countenance, and easy, unaffected manners. His sisters were fine women, with an air of decided fashion. His brother-in-law, Mr. Hurst, merely looked the gentleman; but his friend Mr. Darcy soon drew the attention of the room by his fine, tall person, handsome features, noble mien, and the report which was in general circulation within five minutes after his entrance, of his having ten thousand a year. The gentlemen pronounced him to be a fine figure of a man, the ladies declared he was much handsomer than Mr. Bingley, and he was looked at with great admiration for about half the evening, till his manners gave a disgust which turned the tide of his popularity; for he was discovered to be proud, to be above his company, and above being pleased; and not all his large estate in Derbyshire could then save him from having a most forbidding, disagreeable countenance, and being unworthy to be compared with his friend.
+    questions: 
+    - answers:
+      - He had not met Mr. Bingley.
+      - He evaded their questions.
+      - He did not care about Mr. Bingley.
+      - He did not find Mr. Bingley interesting.
+      correct_answer: 1
+      question: Why were Mrs. Bennet and her daughters unable to get a satisfactory description of Mr. Bingley from Mr. Bennet?
+    - answers:
+      - Young, handsome, agreeable, and fond of dancing.
+      - Old, wealthy, and intelligent.
+      - Reserved, proud, and indifferent.
+      - Tall, dark, and handsome.
+      correct_answer: 0
+      question: How did Lady Lucas describe Mr. Bingley?
+    - answers:
+      - To have successful careers.
+      - To see them all married well.
+      - To move to London.
+      - To travel the world.
+      correct_answer: 1
+      question: What was Mrs. Bennet's primary wish for her daughters?
+    - answers:
+      - To return Mr. Bennet's visit.
+      - To see the young ladies.
+      - To discuss business.
+      - To borrow a book.
+      correct_answer: 0
+      question: Why did Mr. Bingley visit Mr. Bennet in his library?
+    - answers:
+      - He was handsome.
+      - He was wealthy.
+      - He wore a blue coat and rode a black horse.
+      - He was a good dancer.
+      correct_answer: 2
+      question: What did the Bennet ladies learn about Mr. Bingley from their window?
+    - answers:
+      - He refused to attend any social events.
+      - He had to be in town the next day.
+      - He did not like the Bennets.
+      - He had other plans.
+      correct_answer: 1
+      question: Why was Mrs. Bennet disappointed by Mr. Bingley's response to their dinner invitation?
+    - answers:
+      - Mr. Bingley was not interested in socializing.
+      - Mr. Bingley went to London to gather a large party for the ball.
+      - Mr. Bingley was visiting other neighbors.
+      - Mr. Bingley was planning a surprise for the Bennets.
+      correct_answer: 1
+      question: What idea did Lady Lucas propose to comfort Mrs. Bennet about Mr. Bingley's absence?
+    - answers:
+      - Excited
+      - Indifferent
+      - Grieved
+      - Relieved
+      correct_answer: 2
+      question: How did the Bennet girls feel about the number of ladies Mr. Bingley was expected to bring to the assembly?
+    - answers:
+      - Mr. Bingley, his two sisters, the husband of the eldest, and another young man.
+      - Mr. Bingley, his five sisters, and a cousin.
+      - Mr. Bingley, his brother, and three friends.
+      - Mr. Bingley, his parents, and three siblings.
+      correct_answer: 0
+      question: What was the actual composition of Mr. Bingley's party at the assembly?
+    - answers:
+      - His proud manners made him unpopular despite his wealth.
+      - His friendliness made him very popular.
+      - His shyness made him mysterious and intriguing.
+      - His generosity made him beloved by all.
+      correct_answer: 0
+      question: How did Mr. Darcy's demeanor affect his popularity at the assembly?
+  2:
+  - title: Pride and Prejudice
+    author: Jane Austen
+    text: |-
+      Mr. Bingley had soon made himself acquainted with all the principal people in the room; he was lively and unreserved, danced every dance, was angry that the ball closed so early, and talked of giving one himself at Netherfield. Such amiable qualities must speak for themselves. What a contrast between him and his friend! Mr. Darcy danced only once with Mrs. Hurst and once with Miss Bingley, declined being introduced to any other lady, and spent the rest of the evening in walking about the room, speaking occasionally to one of his own party. His character was decided. He was the proudest, most disagreeable man in the world, and everybody hoped that he would never come there again. Amongst the most violent against him was Mrs. Bennet, whose dislike of his general behaviour was sharpened into particular resentment by his having slighted one of her daughters.
+
+      Elizabeth Bennet had been obliged, by the scarcity of gentlemen, to sit down for two dances; and during part of that time, Mr. Darcy had been standing near enough for her to hear a conversation between him and Mr. Bingley, who came from the dance for a few minutes, to press his friend to join it.
+
+      “Come, Darcy,” said he, “I must have you dance. I hate to see you standing about by yourself in this stupid manner. You had much better dance.”
+
+      “I certainly shall not. You know how I detest it, unless I am particularly acquainted with my partner. At such an assembly as this it would be insupportable. Your sisters are engaged, and there is not another woman in the room whom it would not be a punishment to me to stand up with.”
+
+      “I would not be so fastidious as you are,” cried Mr. Bingley, “for a kingdom! Upon my honour, I never met with so many pleasant girls in my life as I have this evening; and there are several of them you see uncommonly pretty.”
+
+      “You are dancing with the only handsome girl in the room,” said Mr. Darcy, looking at the eldest Miss Bennet.
+
+      “Oh! She is the most beautiful creature I ever beheld! But there is one of her sisters sitting down just behind you, who is very pretty, and I dare say very agreeable. Do let me ask my partner to introduce you.”
+
+      “Which do you mean?” and turning round he looked for a moment at Elizabeth, till catching her eye, he withdrew his own and coldly said: “She is tolerable, but not handsome enough to tempt me; I am in no humour at present to give consequence to young ladies who are slighted by other men. You had better return to your partner and enjoy her smiles, for you are wasting your time with me.”
+
+      Mr. Bingley followed his advice. Mr. Darcy walked off; and Elizabeth remained with no very cordial feelings toward him. She told the story, however, with great spirit among her friends; for she had a lively, playful disposition, which delighted in anything ridiculous.
+
+      The evening altogether passed off pleasantly to the whole family. Mrs. Bennet had seen her eldest daughter much admired by the Netherfield party. Mr. Bingley had danced with her twice, and she had been distinguished by his sisters. Jane was as much gratified by this as her mother could be, though in a quieter way. Elizabeth felt Jane's pleasure. Mary had heard herself mentioned to Miss Bingley as the most accomplished girl in the neighbourhood; and Catherine and Lydia had been fortunate enough never to be without partners, which was all that they had yet learnt to care for at a ball. They returned, therefore, in good spirits to Longbourn, the village where they lived, and of which they were the principal inhabitants. They found Mr. Bennet still up. With a book he was regardless of time; and on the present occasion he had a good deal of curiosity as to the events of an evening which had raised such splendid expectations. He had rather hoped that his wife's views on the stranger would be disappointed; but he soon found out that he had a different story to hear.
+    questions:
+    - answers:
+      - He was lively, danced every dance, and was friendly.
+      - He was reserved and only danced once.
+      - He was quiet and avoided dancing.
+      - He was angry and refused to dance.
+      correct_answer: 0
+      question: How did Mr. Bingley conduct himself at the ball?
+    - answers:
+      - He was charming and well-liked.
+      - He was proud and disagreeable.
+      - He was humorous and entertaining.
+      - He was shy and reserved.
+      correct_answer: 1
+      question: What was the general opinion of Mr. Darcy at the ball?
+    - answers:
+      - He insulted her cooking.
+      - He slighted one of her daughters.
+      - He refused to speak with her.
+      - He ignored Mr. Bingley.
+      correct_answer: 1
+      question: Why did Mrs. Bennet particularly dislike Mr. Darcy?
+    - answers:
+      - She was flattered by his attention.
+      - She was offended by his remark.
+      - She ignored the conversation.
+      - She agreed with his opinion.
+      correct_answer: 1
+      question: What was Elizabeth's reaction to overhearing Mr. Darcy's conversation?
+    - answers:
+      - By offering him a reward.
+      - By introducing him to several ladies.
+      - By expressing his dislike for seeing him alone.
+      - By telling him it was a requirement.
+      correct_answer: 2
+      question: How did Mr. Bingley try to persuade Mr. Darcy to dance?
+    - answers:
+      - She is tolerable, but not handsome enough to tempt me.
+      - She is the most beautiful creature I ever beheld.
+      - She is uncommonly pretty and agreeable.
+      - She is not worth his time.
+      correct_answer: 0
+      question: What did Mr. Darcy say about Elizabeth when asked by Mr. Bingley?
+    - answers:
+      - She confronted him immediately.
+      - She ignored it and moved on.
+      - She told the story with great spirit among her friends.
+      - She wrote a letter of complaint.
+      correct_answer: 2
+      question: How did Elizabeth handle Mr. Darcy's slight?
+    - answers:
+      - Mr. Darcy's attention to Elizabeth.
+      - The fine food and decorations.
+      - Her eldest daughter was admired by the Netherfield party.
+      - The music and entertainment.
+      correct_answer: 2
+      question: What pleased Mrs. Bennet about the evening?
+    - answers:
+      - She was gratified in a quieter way.
+      - She was indifferent to it.
+      - She was embarrassed by the attention.
+      - She was angry about it.
+      correct_answer: 0
+      question: How did Jane feel about being admired by Mr. Bingley and his sisters?
+    - answers:
+      - That it was a disaster.
+      - That it raised splendid expectations.
+      - That it was boring.
+      - That it was just another ordinary ball.
+      correct_answer: 1
+      question: What did Mr. Bennet expect to hear about the evening's events?
+  3:
+  - title: Jane Eyre
+    author: Charlotte Brontë
+    text: |-
+      There was no possibility of taking a walk that day. We had been wandering, indeed, in the leafless shrubbery an hour in the morning; but since dinner (Mrs. Reed, when there was no company, dined early) the cold winter wind had brought with it clouds so sombre, and a rain so penetrating, that further outdoor exercise was now out of the question.
+
+      I was glad of it: I never liked long walks, especially on chilly afternoons: dreadful to me was the coming home in the raw twilight, with nipped fingers and toes, and a heart saddened by the chidings of Bessie, the nurse, and humbled by the consciousness of my physical inferiority to Eliza, John, and Georgiana Reed.
+
+      The said Eliza, John, and Georgiana were now clustered round their mama in the drawing-room: she lay reclined on a sofa by the fireside, and with her darlings about her (for the time neither quarrelling nor crying) looked perfectly happy. Me, she had dispensed from joining the group; saying, 'She regretted to be under the necessity of keeping me at a distance; but that until she heard from Bessie, and could discover by her own observation, that I was endeavouring in good earnest to acquire a more sociable and childlike disposition, a more attractive and sprightly manner— something lighter, franker, more natural, as it were—she really must exclude me from privileges intended only for contented, happy, little children.'
+
+      'What does Bessie say I have done?' I asked.
+
+      'Jane, I don't like cavillers or questioners; besides, there is something truly forbidding in a child taking up her elders in that manner. Be seated somewhere; and until you can speak pleasantly, remain silent.'
+
+      A breakfast-room adjoined the drawing-room; I slipped in there. It contained a bookcase: I soon possessed myself of a volume, taking care that it should be one stored with pictures. I mounted into the window-seat: gathering up my feet, I sat cross-legged, like a Turk; and, having drawn the red moreen curtain nearly close, I was shrined in double retirement.
+
+      Folds of scarlet drapery shut in my view to the right hand; to the left were the clear panes of glass, protecting, but not separating me from the drear November day. At intervals, while turning over the leaves of my book, I studied the aspect of that winter afternoon. Afar, it offered a pale blank of mist and cloud; near, a scene of wet lawn and storm-beat shrub, with ceaseless rain sweeping away wildly before a long and lamentable blast.
+
+      I returned to my book—Bewick's History of British Birds: the letterpress thereof I cared little for, generally speaking; and yet there were certain introductory pages that, child as I was, I could not pass quite as a blank. They were those which treat of the haunts of sea-fowl; of 'the solitary rocks and promontories' by them only inhabited; of the coast of Norway, studded with isles from its southern extremity, the Lindeness, or Naze, to the North Cape—
+
+      'Where the Northern Ocean, in vast whirls,
+      Boils round the naked, melancholy isles
+      Of farthest Thule; and the Atlantic surge
+      Pours in among the stormy Hebrides.'
+
+      Nor could I pass unnoticed the suggestion of the bleak shores of Lapland, Siberia, Spitzbergen, Nova Zembla, Iceland, Greenland, with 'the vast sweep of the Arctic Zone, and those forlorn regions of dreary space,—that reservoir of frost and snow, where firm fields of ice, the accumulation of centuries of winters, glazed in Alpine heights above heights, surround the pole, and concentre the multiplied rigours of extreme cold.' Of these death-white realms I formed an idea of my own: shadowy, like all the half-comprehended notions that float dim through children's brains, but strangely impressive. The words in these introductory pages connected themselves with the succeeding vignettes, and gave significance to the rock standing up alone in a sea of billow and spray; to the broken boat stranded on a desolate coast; to the cold and ghastly moon glancing through bars of cloud at a wreck just sinking.
+
+      I cannot tell what sentiment haunted the quite solitary churchyard, with its inscribed headstone; its gate, its two trees, its low horizon, girdled by a broken wall, and its newly-risen crescent, attesting the hour of eventide. The two ships becalmed on a torpid sea, I believed to be marine phantoms. The fiend pinning down the thief's pack behind him, I passed over quickly: it was an object of terror. So was the black horned thing seated aloof on a rock, surveying a distant crowd surrounding a gallows. Each picture told a story; mysterious often to my undeveloped understanding and imperfect feelings, yet ever profoundly interesting: as interesting as the tales Bessie sometimes narrated on winter evenings, when she chanced to be in good humour; and when, having brought her ironing-table to the nursery hearth, she allowed us to sit about it, and while she got up Mrs. Reed's lace frills, and crimped her nightcap borders, fed our eager attention with passages of love and adventure taken from old fairy tales and other ballads; or (as at a later period I discovered) from the pages of Pamela, and Henry, Earl of Moreland.
+    questions:
+    - answers:
+      - It was too dark.
+      - The cold winter wind and penetrating rain made it impossible.
+      - The ground was too muddy.
+      - The shrubbery was too overgrown.
+      correct_answer: 1
+      question: Why was outdoor exercise no longer possible that day?
+    - answers:
+      - She enjoyed them.
+      - She disliked them.
+      - She was indifferent.
+      - She found them invigorating.
+      correct_answer: 1
+      question: How did Jane feel about long walks on chilly afternoons?
+    - answers:
+      - Jane was too sickly.
+      - Jane was misbehaving.
+      - Jane needed to acquire a more sociable and childlike disposition.
+      - Jane was too noisy.
+      correct_answer: 2
+      question: What reason did Mrs. Reed give for keeping Jane at a distance?
+    - answers:
+      - To her bedroom.
+      - Outside.
+      - To the drawing-room.
+      - To the breakfast-room.
+      correct_answer: 3
+      question: Where did Jane go after being dismissed by Mrs. Reed?
+    - answers:
+      - Ate a meal.
+      - Took a nap.
+      - Read a book in the window-seat.
+      - Played with toys.
+      correct_answer: 2
+      question: What did Jane do in the breakfast-room?
+    - answers:
+      - Pamela.
+      - Bewick's History of British Birds.
+      - Henry, Earl of Moreland.
+      - A book of fairy tales.
+      correct_answer: 1
+      question: What book did Jane read in the breakfast-room?
+    - answers:
+      - The detailed illustrations of birds.
+      - The author's life story.
+      - The descriptions of desolate, cold regions.
+      - The list of bird species.
+      correct_answer: 2
+      question: What did Jane find interesting about the introductory pages of the book?
+    - answers:
+      - Clear and precise.
+      - Shadowy and strangely impressive.
+      - Bright and cheerful.
+      - Mundane and unremarkable.
+      correct_answer: 1
+      question: How did Jane describe her idea of the 'death-white realms'?
+    - answers:
+      - The historical accuracy.
+      - The mysterious and often terrifying scenes.
+      - The romantic themes.
+      - The colorful landscapes.
+      correct_answer: 1
+      question: What story elements did Jane find profoundly interesting in the pictures?
+    - answers:
+      - By playing games with them.
+      - By baking treats for them.
+      - By telling stories from old fairy tales and ballads.
+      - By teaching them how to sew.
+      correct_answer: 2
+      question: How did Bessie entertain the children on winter evenings?
+  4:
+  - title: Jane Eyre
+    author: Charlotte Brontë
+    text: |-
+      John Reed was a schoolboy of fourteen years old; four years older than I, for I was but ten: large and stout for his age, with a dingy and unwholesome skin; thick lineaments in a spacious visage, heavy limbs, and large extremities. He gorged himself habitually at table, which made him bilious, and gave him a dim and bleared eye and flabby cheeks. He ought now to have been at school; but his mama had taken him home for a month or two, 'on account of his delicate health.' Mr. Miles, the master, affirmed that he would do very well if he had fewer cakes and sweetmeats sent him from home; but the mother's heart turned from an opinion so harsh and inclined rather to the more refined idea that John's sallowness was owing to over-application and, perhaps, to pining after home.
+
+      John had not much affection for his mother and sisters, and an antipathy to me. He bullied and punished me; not two or three times in the week, nor once or twice in the day, but continually: every nerve I had feared him, and every morsel of flesh in my bones shrank when he came near.
+
+      There were moments when I was bewildered by the terror he inspired, because I had no appeal whatever against either his menaces or his inflictions; the servants did not like to offend their young master by taking my part against him, and Mrs. Reed was blind and deaf on the subject: she never saw him strike or heard him abuse me, though he did both now and then in her very presence, more frequently, however, behind her back.
+
+      Habitually obedient to John, I came up to his chair: he spent some three minutes in thrusting out his tongue at me as far as he could without damaging the roots: I knew he would soon strike, and while dreading the blow, I mused on the disgusting and ugly appearance of him who would presently deal it. I wonder if he read that notion in my face; for, all at once, without speaking, he struck suddenly and strongly. I tottered, and on regaining my equilibrium retired back a step or two from his chair.
+
+      'That is for your impudence in answering mama awhile since,' said he, 'and for your sneaking way of getting behind curtains, and for the look you had in your eyes two minutes since, you rat!'
+
+      Accustomed to John Reed's abuse, I never had an idea of replying to it; my care was how to endure the blow which would certainly follow the insult.
+
+      'What were you doing behind the curtain?' he asked.
+
+      'I was reading.'
+
+      'Show the book.'
+
+      I returned to the window and fetched it thence.
+
+      'You have no business to take our books; you are a dependent, mama says; you have no money; your father left you none; you ought to beg, and not to live here with gentlemen's children like us, and eat the same meals we do, and wear clothes at our mama's expense. Now, I'll teach you to rummage my bookshelves: for they ARE mine; all the house belongs to me, or will do in a few years. Go and stand by the door, out of the way of the mirror and the windows.'
+
+      I did so, not at first aware what was his intention; but when I saw him lift and poise the book and stand in act to hurl it, I instinctively started aside with a cry of alarm: not soon enough, however; the volume was flung, it hit me, and I fell, striking my head against the door and cutting it. The cut bled, the pain was sharp: my terror had passed its climax; other feelings succeeded.
+    questions:
+    - answers:
+      - Two years older
+      - Three years older
+      - Four years older
+      - Five years older
+      correct_answer: 2
+      question: How old is John Reed compared to Jane?
+    - answers:
+      - Tall and handsome
+      - Thin and frail
+      - Large, stout, with a dingy and unwholesome skin
+      - Athletic and fit
+      correct_answer: 2
+      question: What is John Reed's physical appearance described as?
+    - answers:
+      - He was excelling academically.
+      - His mother thought he had delicate health.
+      - He was being bullied.
+      - He wanted to spend more time with his family.
+      correct_answer: 1
+      question: Why was John Reed taken home from school?
+    - answers:
+      - He ignored her.
+      - He was kind to her.
+      - He bullied and punished her continuously.
+      - He played with her.
+      correct_answer: 2
+      question: How did John Reed treat Jane?
+    - answers:
+      - They defended Jane.
+      - They reported John to Mrs. Reed.
+      - They did not take Jane's part to avoid offending John.
+      - They disciplined John.
+      correct_answer: 2
+      question: How did the servants react to John's treatment of Jane?
+    - answers:
+      - She said she was reading.
+      - She said she was hiding.
+      - She said she was sleeping.
+      - She said she was playing.
+      correct_answer: 0
+      question: What was Jane's response when John asked what she was doing behind the curtain?
+    - answers:
+      - She didn't know how to read.
+      - She was too young.
+      - She was a dependent and had no money.
+      - She had her own books.
+      correct_answer: 2
+      question: Why did John say Jane had no right to take their books?
+    - answers:
+      - He tore it apart.
+      - He returned it to the shelf.
+      - He kept it for himself.
+      - He hurled it at Jane, hitting her.
+      correct_answer: 3
+      question: What did John do with the book Jane had been reading?
+    - answers:
+      - She cried loudly.
+      - She ran away.
+      - She retaliated against John.
+      - She experienced other feelings after the climax of terror passed.
+      correct_answer: 3
+      question: How did Jane react to the injury caused by the book?
+    - answers:
+      - She had insulted him.
+      - She was a dependent and not entitled to the same privileges.
+      - She had broken a toy.
+      - She had lied to him.
+      correct_answer: 1
+      question: What was John's justification for mistreating Jane?
+  5:
+  - title: Jane Eyre
+    author: Charlotte Brontë
+    text: |-
+      November, December, and half of January passed away. Christmas and the New Year had been celebrated at Gateshead with the usual festive cheer; presents had been interchanged, dinners and evening parties given. From every enjoyment I was, of course, excluded: my share of the gaiety consisted in witnessing the daily apparelling of Eliza and Georgiana, and seeing them descend to the drawing-room, dressed out in thin muslin frocks and scarlet sashes, with hair elaborately ringletted; and afterwards, in listening to the sound of the piano or the harp played below, to the passing to and fro of the butler and footman, to the jingling of glass and china as refreshments were handed, to the broken hum of conversation as the drawing-room door opened and closed. When tired of this occupation, I would retire from the stairhead to the solitary and silent nursery: there, though somewhat sad, I was not miserable. To speak truth, I had not the least wish to go into company, for in company I was very rarely noticed; and if Bessie had but been kind and companionable, I should have deemed it a treat to spend the evenings quietly with her, instead of passing them under the formidable eye of Mrs. Reed, in a room full of ladies and gentlemen. But Bessie, as soon as she had dressed her young ladies, used to take herself off to the lively regions of the kitchen and housekeeper's room, generally bearing the candle along with her. I then sat with my doll on my knee till the fire got low, glancing round occasionally to make sure that nothing worse than myself haunted the shadowy room; and when the embers sank to a dull red, I undressed hastily, tugging at knots and strings as I best might, and sought shelter from cold and darkness in my crib. To this crib I always took my doll; human beings must love something, and, in the dearth of worthier objects of affection, I contrived to find a pleasure in loving and cherishing a faded graven image, shabby as a miniature scarecrow. It puzzles me now to remember with what absurd sincerity I doted on this little toy, half fancying it alive and capable of sensation. I could not sleep unless it was folded in my night-gown; and when it lay there safe and warm, I was comparatively happy, believing it to be happy likewise.
+
+      Long did the hours seem while I waited the departure of the company, and listened for the sound of Bessie's step on the stairs: sometimes she would come up in the interval to seek her thimble or her scissors, or perhaps to bring me something by way of supper—a bun or a cheese-cake—then she would sit on the bed while I ate it, and when I had finished, she would tuck the clothes round me, and twice she kissed me, and said, 'Good night, Miss Jane.' When thus gentle, Bessie seemed to me the best, prettiest, kindest being in the world; and I wished most intensely that she would always be so pleasant and amiable, and never push me about, or scold, or task me unreasonably, as she was too often wont to do. Bessie Lee must, I think, have been a girl of good natural capacity, for she was smart in all she did, and had a remarkable knack of narrative; so, at least, I judge from the impression made on me by her nursery tales. She was pretty too, if my recollections of her face and person are correct. I remember her as a slim young woman, with black hair, dark eyes, very nice features, and good, clear complexion; but she had a capricious and hasty temper, and indifferent ideas of principle or justice: still, such as she was, I preferred her to any one else at Gateshead Hall.
+    questions:
+    - answers:
+      - Watching fireworks
+      - Exchanging presents, dinners, and evening parties
+      - Traveling to different places
+      - Singing carols and decorating trees
+      correct_answer: 1
+      question: What activities marked the celebration of Christmas and New Year at Gateshead?
+    - answers:
+      - She was deeply hurt and miserable.
+      - She was indifferent and did not care.
+      - She was somewhat sad but not miserable.
+      - She was angry and rebellious.
+      correct_answer: 2
+      question: How did Jane feel about being excluded from the festivities?
+    - answers:
+      - In the drawing-room with everyone else
+      - Outside in the garden
+      - In the solitary and silent nursery
+      - In her bedroom
+      correct_answer: 2
+      question: Where did Jane spend her time during the parties?
+    - answers:
+      - Played with other children
+      - Read books and wrote letters
+      - Sat with her doll on her knee until the fire got low
+      - Listened to music and danced
+      correct_answer: 2
+      question: What did Jane do while sitting in the nursery?
+    - answers:
+      - She thought it was silly and unnecessary.
+      - She doted on it with absurd sincerity, half-fancying it alive.
+      - She only kept it out of habit.
+      - She did not care much for it.
+      correct_answer: 1
+      question: How did Jane feel about her doll?
+    - answers:
+      - Believing her doll was safe and warm in her night-gown
+      - Knowing the parties would soon be over
+      - Thinking about the stories Bessie told
+      - Dreaming about a better future
+      correct_answer: 0
+      question: What made Jane feel comparatively happy at night?
+    - answers:
+      - A cup of milk and cookies
+      - A slice of pie
+      - A piece of bread and butter
+      - A bun or a cheese-cake
+      correct_answer: 3
+      question: What did Bessie sometimes bring Jane by way of supper?
+    - answers:
+      - She felt Bessie was the best, prettiest, kindest being in the world.
+      - She felt indifferent and unaffected.
+      - She wished Bessie would leave her alone.
+      - She felt suspicious of Bessie's motives.
+      correct_answer: 0
+      question: How did Jane feel when Bessie was gentle and kind?
+    - answers:
+      - She disliked her completely.
+      - She preferred Mrs. Reed over Bessie.
+      - She thought Bessie was lazy and incompetent.
+      - She preferred Bessie to anyone else at Gateshead Hall.
+      correct_answer: 3
+      question: What was Jane's opinion of Bessie despite her capricious temper?
+    - answers:
+      - Blonde hair and blue eyes
+      - Tall and fair-skinned
+      - Slim, with black hair, dark eyes, and a good, clear complexion
+      - Short and plump
+      correct_answer: 2
+      question: What qualities did Jane remember about Bessie's appearance?
+  6:
+  - title: Les Misérables
+    author: Victor Hugo
+    text: |-
+      In 1815, M. Charles-François-Bienvenu Myriel was Bishop of D——. He was an old man of about seventy-five years of age; he had occupied the see of D—— since 1806.
+
+      Although this detail has no connection whatever with the real substance of what we are about to relate, it will not be superfluous, if merely for the sake of exactness in all points, to mention here the various rumors and remarks which had been in circulation about him from the very moment when he arrived in the diocese. True or false, that which is said of men often occupies as important a place in their lives, and above all in their destinies, as that which they do. M. Myriel was the son of a councillor of the Parliament of Aix; hence he belonged to the nobility of the bar. It was said that his father, destining him to be the heir of his own post, had married him at a very early age, eighteen or twenty, in accordance with a custom which is rather widely prevalent in parliamentary families. In spite of this marriage, however, it was said that Charles Myriel created a great deal of talk. He was well formed, though rather short in stature, elegant, graceful, intelligent; the whole of the first portion of his life had been devoted to the world and to gallantry.
+
+      The Revolution came; events succeeded each other with precipitation; the parliamentary families, decimated, pursued, hunted down, were dispersed. M. Charles Myriel emigrated to Italy at the very beginning of the Revolution. There his wife died of a malady of the chest, from which she had long suffered. He had no children. What took place next in the fate of M. Myriel? The ruin of the French society of the olden days, the fall of his own family, the tragic spectacles of '93, which were, perhaps, even more alarming to the emigrants who viewed them from a distance, with the magnifying powers of terror,—did these cause the ideas of renunciation and solitude to germinate in him? Was he, in the midst of these distractions, these affections which absorbed his life, suddenly smitten with one of those mysterious and terrible blows which sometimes overwhelm, by striking to his heart, a man whom public catastrophes would not shake, by striking at his existence and his fortune? No one could have told: all that was known was, that when he returned from Italy he was a priest.
+
+      In 1804, M. Myriel was the Curé of B—— [Brignolles]. He was already advanced in years, and lived in a very retired manner.
+
+      About the epoch of the coronation, some petty affair connected with his curacy—just what, is not precisely known—took him to Paris. Among other powerful persons to whom he went to solicit aid for his parishioners was M. le Cardinal Fesch. One day, when the Emperor had come to visit his uncle, the worthy Curé, who was waiting in the anteroom, found himself present when His Majesty passed. Napoleon, on finding himself observed with a certain curiosity by this old man, turned round and said abruptly:—
+
+      “Who is this good man who is staring at me?”
+
+      “Sire,” said M. Myriel, “you are looking at a good man, and I at a great man. Each of us can profit by it.”
+
+      That very evening, the Emperor asked the Cardinal the name of the Curé, and some time afterwards M. Myriel was utterly astonished to learn that he had been appointed Bishop of D——.
+
+      What truth was there, after all, in the stories which were invented as to the early portion of M. Myriel's life? No one knew. Very few families had been acquainted with the Myriel family before the Revolution. M. Myriel had to undergo the fate of every newcomer in a little town, where there are many mouths which talk, and very few heads which think. He was obliged to undergo it although he was a bishop, and because he was a bishop. But after all, the rumors with which his name was connected were rumors only,—noise, sayings, words; less than words—*palabres*, as the energetic language of the South expresses it.
+
+      However that may be, after nine years of episcopal power and of residence in D——, all the stories and subjects of conversation which engross petty towns and petty people at the outset had fallen into profound oblivion. No one would have dared to mention them; no one would have dared to recall them.
+    questions:
+    - answers:
+      - Sixty-five
+      - Seventy
+      - Seventy-five
+      - Eighty
+      correct_answer: 2
+      question: How old was M. Myriel when he became Bishop of D——?
+    - answers:
+      - He was from a family of merchants.
+      - He was from a peasant family.
+      - He was the son of a councillor of the Parliament of Aix and belonged to the nobility of the bar.
+      - He was the son of a military officer.
+      correct_answer: 2
+      question: What was M. Myriel's family background?
+    - answers:
+      - The outbreak of a plague
+      - A personal scandal
+      - The French Revolution
+      - An invitation from the Pope
+      correct_answer: 2
+      question: What event caused M. Myriel to emigrate to Italy?
+    - answers:
+      - She died of a malady of the chest.
+      - She was killed during the Revolution.
+      - She died in a tragic accident.
+      - She committed suicide.
+      correct_answer: 0
+      question: How did M. Myriel's wife die?
+    - answers:
+      - He became a politician.
+      - He started a family.
+      - He became a priest.
+      - He joined the military.
+      correct_answer: 2
+      question: What significant change occurred in M. Myriel's life after he returned from Italy?
+    - answers:
+      - He wrote a letter to Napoleon.
+      - He was seen observing Napoleon during a visit to the Cardinal.
+      - He performed a heroic act.
+      - He was recommended by his parishioners.
+      correct_answer: 1
+      question: How did M. Myriel come to the attention of Emperor Napoleon?
+    - answers:
+      - Curé of B——
+      - Archbishop of Paris
+      - Bishop of D——
+      - Cardinal of Aix
+      correct_answer: 2
+      question: What position was M. Myriel appointed to after meeting Emperor Napoleon?
+    - answers:
+      - They warmly welcomed him.
+      - They spread various rumors and remarks about him.
+      - They ignored him.
+      - They were openly hostile to him.
+      correct_answer: 1
+      question: How did the townspeople initially react to M. Myriel's arrival in the diocese?
+    - answers:
+      - Three years
+      - Five years
+      - Nine years
+      - Twelve years
+      correct_answer: 2
+      question: How long had M. Myriel been Bishop of D—— before the rumors about him fell into oblivion?
+    - answers:
+      - Positive and praising his virtues
+      - Negative, but ultimately inconsequential
+      - Indifferent and factual
+      - Encouraging and supportive
+      correct_answer: 1
+      question: What was the general nature of the rumors about M. Myriel?
+  7:
+  - title: The Count of Monte Cristo
+    author: Alexandre Dumas
+    text: |-
+      On the 24th of February, 1815, the look-out at Notre-Dame de la Garde signalled the three-master, the Pharaon from Smyrna, Trieste, and Naples. As usual, a pilot put off immediately, and rounding the Château d'If, got on board the vessel between Cape Morgion and Rion island. Immediately, and according to custom, the ramparts of Fort Saint-Jean were covered with spectators; it is always an event at Marseilles for a ship to come into port, especially when this ship, like the Pharaon, has been built, rigged, and laden at the old Phocee docks, and belongs to an owner of the city.
+
+      The ship drew on and had safely passed the strait, which some volcanic shock has made between the Calasareigne and Jaros islands; had doubled Pomègue, and approached the harbor under topsails, jib, and spanker, but so slowly and sedately that the idlers, with that instinct which is the forerunner of evil, asked one another what misfortune could have happened on board. However, those experienced in navigation saw plainly that if any accident had occurred, it was not to the vessel herself, for she bore down with all the evidence of being skilfully handled, the anchor a-cockbill, the jib-boom guys already eased off, and standing by the side of the pilot, who was steering the Pharaon towards the narrow entrance of the inner port, was a young man, who, with activity and vigilant eye, watched every motion of the ship, and repeated each direction of the pilot.
+
+      The vague disquietude which prevailed among the spectators had so much affected one of the crowd that he did not await the arrival of the vessel in harbor, but jumping into a small skiff, desired to be pulled alongside the Pharaon, which he reached as she rounded into La Réserve basin. When the young man on board saw this person approach, he left his station by the pilot, and, hat in hand, leaned over the ship's bulwarks.
+
+      He was a fine, tall, slim young fellow of eighteen or twenty, with black eyes, and hair as dark as a raven's wing; and his whole appearance bespoke that calmness and resolution peculiar to men accustomed from their cradle to contend with danger.
+
+      “Ah, is it you, Dantès?” cried the man in the skiff. “What's the matter? and why have you such an air of sadness aboard?”
+
+      “A great misfortune, M. Morrel,” replied the young man,—“a great misfortune, for me especially! Off Civita Vecchia we lost our brave Captain Leclere.”
+
+      “And the cargo?” inquired the owner, eagerly.
+
+      “Is all safe, M. Morrel; and I think you will be satisfied on that head. But poor Captain Leclere—”
+
+      “What happened to him?” asked the owner, with an air of considerable resignation. “What happened to the worthy captain?”
+
+      “He died.”
+
+      “Fell into the sea?”
+
+      “No, sir, he died of brain-fever in dreadful agony.” Then turning to the crew, he said, “Bear a hand there, to take in sail!”
+
+      All hands obeyed, and at once the eight or ten seamen who composed the crew, sprang to their respective stations at the spanker brails and outhaul, topsail sheets and halyards, the jib downhaul, and the topsail clewlines and buntlines. The young sailor gave a look to see that his orders were promptly and accurately obeyed, and then turned again to the owner.
+
+      “And how did this misfortune occur?” inquired the latter, resuming the interrupted conversation.
+
+      “Alas, sir, in the most unexpected manner. After a long talk with the harbor-master, Captain Leclere left Naples greatly disturbed in mind. In twenty-four hours he was attacked by a fever, and died three days afterwards. We performed the usual burial service, and he is at his rest, sewn up in his hammock with a thirty-six pound shot at his head and his heels, off El Giglio island. We bring to his widow his sword and cross of honor. It was worth while, truly,” added the young man with a melancholy smile, “to make war against the English for ten years, and to die in his bed at last, like everybody else.”
+
+      “Why, you see, Edmond,” replied the owner, who appeared more comforted at every moment, “we are all mortal, and the old must make way for the young. If not, why, there would be no promotion; and since you assure me that the cargo—”
+
+      “Is all safe and sound, M. Morrel, take my word for it; and I advise you not to take 25,000 francs for the profits of the voyage.”
+
+      Then, as they were just passing the Round Tower, the young man shouted: “Stand by there to lower the topsails and jib; brail up the spanker!” The order was executed as promptly as it would have been on board a man-of-war.
+    questions:
+    - answers:
+      - The Titan
+      - The Seahawk
+      - The Pharaon
+      - The Nautilus
+      correct_answer: 2
+      question: What ship is being described in the passage?
+    - answers:
+      - Smyrna, Trieste, and Naples
+      - Lisbon, Barcelona, and Venice
+      - Cairo, Alexandria, and Rome
+      - Athens, Istanbul, and Malta
+      correct_answer: 0
+      question: Where did the Pharaon come from?
+    - answers:
+      - The ship was heavily damaged.
+      - The ship was moving too quickly.
+      - The ship was moving slowly and sedately.
+      - The ship was flying a distress signal.
+      correct_answer: 2
+      question: What caused the spectators to feel a sense of foreboding as the Pharaon approached the harbor?
+    - answers:
+      - The captain
+      - A pilot
+      - M. Morrel
+      - Edmond Dantès
+      correct_answer: 1
+      question: Who was steering the Pharaon as it approached the harbor?
+    - answers:
+      - He left his station by the pilot and leaned over the ship's bulwarks.
+      - He ignored the man and continued his duties.
+      - He shouted at the man to stay away.
+      - He jumped into the skiff to meet the man.
+      correct_answer: 0
+      question: How did the young man on board react when he saw the man in the skiff approach?
+    - answers:
+      - The ship was damaged.
+      - The cargo was lost.
+      - The captain had died.
+      - The crew had mutinied.
+      correct_answer: 2
+      question: What unfortunate news did the young man relay to M. Morrel?
+    - answers:
+      - He fell overboard.
+      - He was poisoned.
+      - He was injured in a battle.
+      - He died of brain-fever.
+      correct_answer: 3
+      question: What was the cause of Captain Leclere's death?
+    - answers:
+      - Sewn up in his hammock with a thirty-six pound shot, he was buried at sea.
+      - Buried him on a nearby island.
+      - Took his body back to his family.
+      - Left his body on the ship.
+      correct_answer: 0
+      question: What did the crew do with Captain Leclere's body?
+    - answers:
+      - It was partially lost.
+      - It was completely destroyed.
+      - It was delayed.
+      - It was all safe and sound.
+      correct_answer: 3
+      question: What did the young man assure M. Morrel regarding the cargo?
+    - answers:
+      - To increase speed and sail into the harbor
+      - To lower the topsails and jib; brail up the spanker
+      - To drop anchor immediately
+      - To prepare for a storm
+      correct_answer: 1
+      question: What order did the young man give as they passed the Round Tower?
+  8:
+  - title: Alice's Adventures in Wonderland
+    author: Lewis Carroll
+    text: |-
+      ALICE was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, “and what is the use of a book,” thought Alice, “without pictures or conversations?”
+
+      So she was considering in her own mind, (as well as she could, for the hot day made her feel very sleepy and stupid,) whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a white rabbit with pink eyes ran close by her.
+
+      There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, “Oh dear! Oh dear! I shall be too late!” (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket or a watch to take out of it, and, burning with curiosity, she ran across the field after it, and was just in time to see it pop down a large rabbit-hole under the hedge.
+
+      In another moment down went Alice after it, never once considering how in the world she was to get out again. The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down what seemed to be a very deep well.
+
+      Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her, and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything: then she looked at the sides of the well, and noticed that they were filled with cupboards and bookshelves: here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled “ORANGE MARMALADE,” but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody underneath, so managed to put it into one of the cupboards as she fell past it.
+
+      “Well!” thought Alice to herself, “after such a fall as this, I shall think nothing of tumbling down stairs! How brave they'll all think me at home! Why, I wouldn't say anything about it, even if I fell off the top of the house!” (Which was very likely true.) Down, down, down. Would the fall never come to an end? “I wonder how many miles I've fallen by this time?” she said aloud. “I must be getting somewhere near the centre of the earth. Let me see: that would be four thousand miles down, I think—” (for, you see, Alice had learnt several things of this sort in her lessons in the schoolroom, and though this was not a very good opportunity for showing off her knowledge, as there was no one to listen to her, still it was good practice to say it over) “—yes, that's about the right distance—but then I wonder what Latitude or Longitude I've got to?” (Alice had not the slightest idea what Latitude was, or Longitude either, but she thought they were nice grand words to say.)
+
+      Presently she began again. “I wonder if I shall fall right through the earth! How funny it'll seem to come out among the people that walk with their heads downwards! The Antipathies, I think—” (she was rather glad there was no one listening, this time, as it didn't sound at all the right word) “—but I shall have to ask them what the name of the country is, you know. Please, Ma'am, is this New Zealand or Australia?” (and she tried to curtsey as she spoke—fancy curtseying as you're falling through the air! Do you think you could manage it?) “And what an ignorant little girl she'll think me for asking! No, it'll never do to ask: perhaps I shall see it written up somewhere.”
+    questions:
+    - answers:
+      - She was hungry.
+      - She had nothing to do.
+      - She was cold.
+      - She was uncomfortable.
+      correct_answer: 1
+      question: Why was Alice getting tired of sitting by her sister?
+    - answers:
+      - It was too difficult to understand.
+      - It had no pictures or conversations.
+      - It was too long.
+      - It was very interesting.
+      correct_answer: 1
+      question: What did Alice think about the book her sister was reading?
+    - answers:
+      - A singing bird
+      - A white rabbit with pink eyes
+      - A butterfly
+      - A talking flower
+      correct_answer: 1
+      question: What caught Alice's attention and made her curious?
+    - answers:
+      - A map
+      - A watch
+      - A handkerchief
+      - A key
+      correct_answer: 1
+      question: What did the White Rabbit take out of its waistcoat-pocket?
+    - answers:
+      - She called out to it.
+      - She ran across the field after it.
+      - She ignored it.
+      - She went back to her sister.
+      correct_answer: 1
+      question: What did Alice do when she saw the White Rabbit?
+    - answers:
+      - Down a large rabbit-hole
+      - Up a tree
+      - Into a cave
+      - Into a house
+      correct_answer: 0
+      question: Where did the White Rabbit go that Alice followed?
+    - answers:
+      - Frightened and screaming
+      - Excited and happy
+      - Curious and wondering what would happen next
+      - Sad and crying
+      correct_answer: 2
+      question: How did Alice feel as she fell down the rabbit-hole?
+    - answers:
+      - Windows and doors
+      - Drawings and paintings
+      - Cupboards and bookshelves
+      - Stairs and ladders
+      correct_answer: 2
+      question: What did Alice find on the sides of the well as she fell?
+    - answers:
+      - Strawberry Jam
+      - Blueberry Pie
+      - Orange Marmalade
+      - Apple Sauce
+      correct_answer: 2
+      question: What was the label on the jar Alice took down from the shelf?
+    - answers:
+      - She would think nothing of tumbling down stairs after such a fall.
+      - She would be afraid to fall again.
+      - She would tell everyone about it.
+      - She would never go near a rabbit-hole again.
+      correct_answer: 0
+      question: What did Alice think to herself about the fall?
+  9:
+  - title: Wuthering Heights
+    author: Emily Brontë
+    text: |-
+      1801 - I have just returned from a visit to my landlord - the solitary neighbour that I shall be troubled with. This is certainly a beautiful country! In all England, I do not believe that I could have fixed on a situation so completely removed from the stir of society. A perfect misanthropist's heaven: and Mr. Heathcliff and I are such a suitable pair to divide the desolation between us. A capital fellow! He little imagined how my heart warmed towards him when I beheld his black eyes withdraw so suspiciously under their brows, as I rode up, and when his fingers sheltered themselves, with a jealous resolution, still further in his waistcoat, as I announced my name.
+
+      'Mr. Heathcliff?' I said. A nod was the answer.
+
+      'Mr. Lockwood, your new tenant, sir. I do myself the honour of calling as soon as possible after my arrival, to express the hope that I have not inconvenienced you by my perseverance in soliciting the occupation of Thrushcross Grange: I heard yesterday you had had some thoughts - '
+
+      'Thrushcross Grange is my own, sir,' he interrupted, wincing. 'I should not allow any one to inconvenience me, if I could hinder it - walk in!'
+
+      The 'walk in' was uttered with closed teeth, and expressed the sentiment, 'Go to the Deuce:' even the gate over which he leant manifested no sympathising movement to the words; and I think that circumstance determined me to accept the invitation: I felt interested in a man who seemed more exaggeratedly reserved than myself.
+
+      When he saw my horse's breast fairly pushing the barrier, he did put out his hand to unchain it, and then sullenly preceded me up the causeway, calling, as we entered the court, - 'Joseph, take Mr. Lockwood's horse; and bring up some wine.'
+
+      'Here we have the whole establishment of domestics, I suppose,' was the reflection suggested by this compound order. 'No wonder the grass grows up between the flags, and cattle are the only hedge- cutters.'
+
+      Joseph was an elderly, nay, an old man: very old, perhaps, though hale and sinewy. 'The Lord help us!' he soliloquised in an undertone of peevish displeasure, while relieving me of my horse: looking, meantime, in my face so sourly that I charitably conjectured he must have need of divine aid to digest his dinner, and his pious ejaculation had no reference to my unexpected advent.
+
+      Wuthering Heights is the name of Mr. Heathcliff's dwelling. 'Wuthering' being a significant provincial adjective, descriptive of the atmospheric tumult to which its station is exposed in stormy weather. Pure, bracing ventilation they must have up there at all times, indeed: one may guess the power of the north wind blowing over the edge, by the excessive slant of a few stunted firs at the end of the house; and by a range of gaunt thorns all stretching their limbs one way, as if craving alms of the sun. Happily, the architect had foresight to build it strong: the narrow windows are deeply set in the wall, and the corners defended with large jutting stones.
+
+      Before passing the threshold, I paused to admire a quantity of grotesque carving lavished over the front, and especially about the principal door; above which, among a wilderness of crumbling griffins and shameless little boys, I detected the date '1500,' and the name 'Hareton Earnshaw.' I would have made a few comments, and requested a short history of the place from the surly owner; but his attitude at the door appeared to demand my speedy entrance, or complete departure, and I had no desire to aggravate his impatience previous to inspecting the penetralium.
+
+      One step brought us into the family sitting-room, without any introductory lobby or passage: they call it here 'the house' pre-eminently. It includes kitchen and parlour, generally; but I believe at Wuthering Heights the kitchen is forced to retreat altogether into another quarter: at least I distinguished a chatter of tongues, and a clatter of culinary utensils, deep within; and I observed no signs of roasting, boiling, or baking, about the huge fireplace; nor any glitter of copper saucepans and tin colanders on the walls. One end, indeed, reflected splendidly both light and heat from ranks of immense pewter dishes, interspersed with silver jugs and tankards, towering row after row, on a vast oak dresser, to the very roof. The latter had never been under-drawn: its entire anatomy lay bare to an inquiring eye, except where a frame of wood laden with oatcakes and clusters of legs of beef, mutton, and ham, concealed it. Above the chimney were sundry villainous old guns, and a couple of horse-pistols: and, by way of ornament, three gaudily-painted canisters disposed along its ledge. The floor was of smooth, white stone; the chairs, high-backed, primitive structures, painted green: one or two heavy black ones lurking in the shade. In an arch under the dresser reposed a huge, liver-coloured bitch pointer, surrounded by a swarm of squealing puppies; and other dogs haunted other recesses.
+    questions:
+    - answers:
+      - 1800
+      - 1801
+      - 1810
+      - 1811
+      correct_answer: 1
+      question: What year is it when the narrator visits his landlord?
+    - answers:
+      - Mr. Lockwood
+      - Mr. Heathcliff
+      - Joseph
+      - Hareton Earnshaw
+      correct_answer: 1
+      question: What is the name of the narrator's landlord?
+    - answers:
+      - Wuthering Heights
+      - Thrushcross Grange
+      - Notre-Dame de la Garde
+      - Fort Saint-Jean
+      correct_answer: 1
+      question: Where does the narrator express his hope of not inconveniencing Mr. Heathcliff?
+    - answers:
+      - Warmly and welcoming
+      - Coldly and suspiciously
+      - With indifference
+      - With joy
+      correct_answer: 1
+      question: How does Mr. Heathcliff react to the narrator's introduction?
+    - answers:
+      - Prepare a meal
+      - Take Mr. Lockwood's horse and bring up some wine
+      - Clean the house
+      - Fetch a doctor
+      correct_answer: 1
+      question: What does Mr. Heathcliff order Joseph to do upon their arrival?
+    - answers:
+      - Luxurious, referring to its grand decor
+      - Spacious, referring to its large rooms
+      - Wuthering, referring to the atmospheric tumult in stormy weather
+      - Ancient, referring to its old age
+      correct_answer: 2
+      question: What is the significant adjective describing Mr. Heathcliff's dwelling, and what does it refer to?
+    - answers:
+      - Narrow windows deeply set in the wall and large jutting stones at the corners
+      - Wide doors and large windows
+      - Marble floors and golden chandeliers
+      - Modern design and sleek lines
+      correct_answer: 0
+      question: What architectural features did the narrator notice about Wuthering Heights?
+    - answers:
+      - The date '1801' and the name 'Heathcliff'
+      - The date '1500' and the name 'Hareton Earnshaw'
+      - The date '1700' and the name 'Lockwood'
+      - The date '1600' and the name 'Joseph'
+      correct_answer: 1
+      question: What did the narrator see above the principal door of Wuthering Heights?
+    - answers:
+      - The parlour
+      - The kitchen
+      - The house
+      - The hall
+      correct_answer: 2
+      question: What is the main room in Wuthering Heights called?
+    - answers:
+      - Modern and stylish furniture
+      - High-backed, primitive structures painted green, and a huge, liver-coloured bitch pointer surrounded by puppies
+      - Elegant and sophisticated decor
+      - Minimalist and sparse furnishing
+      correct_answer: 1
+      question: What did the narrator notice about the decoration and furnishings in the main room?
+  10:
+  - title: Little Women
+    author: Louisa May Alcott
+    text: |-
+      'Christmas won't be Christmas without any presents,' grumbled Jo, lying on the rug.
+
+      'It's so dreadful to be poor!' sighed Meg, looking down at her old dress.
+
+      'I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all,' added little Amy, with an injured sniff.
+
+      'We've got Father and Mother, and each other,' said Beth contentedly from her corner.
+
+      The four young faces on which the firelight shone brightened at the cheerful words, but darkened again as Jo said sadly, 'We haven't got Father, and shall not have him for a long time.' She didn't say 'perhaps never,' but each silently added it, thinking of Father far away, where the fighting was.
+
+      Nobody spoke for a minute; then Meg said in an altered tone, 'You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone; and she thinks we ought not to spend money for pleasure, when our men are suffering so in the army. We can't do much, but we can make our little sacrifices, and ought to do it gladly. But I am afraid I don't.' And Meg shook her head, as she thought regretfully of all the pretty things she wanted.
+
+      'But I don't think the little we should spend would do any good. We've each got a dollar, and the army wouldn't be much helped by our giving that. I agree not to expect anything from Mother or you, but I do want to buy UNDINE AND SINTRAM for myself. I've wanted it so long,' said Jo, who was a bookworm.
+
+      'I planned to spend mine on new music,' said Beth, with a little sigh, which no one heard but the hearth brush and kettle holder.
+
+      'I shall get a nice box of Faber's drawing pencils. I really need them,' said Amy decidedly.
+
+      'Mother didn't say anything about our money, and she won't wish us to give up everything. Let's each buy what we want, and have a little fun. I'm sure we work hard enough to earn it,' cried Jo, examining the heels of her shoes in a gentlemanly manner.
+
+      'I know I do—teaching those tiresome children nearly all day, when I'm longing to enjoy myself at home,' began Meg, in the complaining tone again.
+
+      'You don't have half such a hard time as I do,' said Jo. 'How would you like to be shut up for hours with a nervous, fussy old lady, who keeps you trotting, is never satisfied, and worries you till you're ready to fly out the window or cry?'
+
+      'It's naughty to fret, but I do think washing dishes and keeping things tidy is the worst work in the world. It makes me cross, and my hands get so stiff, I can't practice well at all.' And Beth looked at her rough hands with a sigh that any one could hear that time.
+
+      'I don't believe any of you suffer as I do,' cried Amy, 'for you don't have to go to school with impertinent girls, who plague you if you don't know your lessons, and laugh at your dresses, and label your father if he isn't rich, and insult you when your nose isn't nice.'
+
+      'If you mean libel, I'd say so, and not talk about labels, as if Papa was a pickle bottle,' advised Jo, laughing.
+
+      'I know what I mean, and you needn't be satirical about it. It's proper to use good words, and improve your vocabulary,' returned Amy, with dignity.
+
+      'Don't peck at one another, children. Don't you wish we had the money Papa lost when we were little, Jo? Dear me! How happy and good we'd be, if we had no worries!' said Meg, who could remember better times.
+
+      'You said the other day you thought we were a deal happier than the King children, for they were fighting and fretting all the time, in spite of their money.'
+
+      'So I did, Beth. Well, I think we are. For though we do have to work, we make fun of ourselves, and are a pretty jolly set, as Jo would say.'
+
+      'Jo does use such slang words!' observed Amy, with a reproving look at the long figure stretched on the rug.
+
+      Jo immediately sat up, put her hands in her pockets, and began to whistle.
+
+      'Don't, Jo. It's so boyish!'
+
+      'That's why I do it.'
+
+      'I detest rude, unladylike girls!'
+
+      'I hate affected, niminy-piminy chits!'
+
+      'Birds in their little nests agree,' sang Beth, the peacemaker, with such a funny face that both sharp voices softened to a laugh, and the 'pecking' ended for that time.
+    questions:
+    - answers:
+      - She was hungry.
+      - She was cold.
+      - She was upset about not having Christmas presents.
+      - She was tired of sitting on the rug.
+      correct_answer: 2
+      question: Why was Jo grumbling at the beginning of the passage?
+    - answers:
+      - Having to go to school.
+      - Being poor and wearing an old dress.
+      - Doing chores.
+      - Not having a book to read.
+      correct_answer: 1
+      question: What did Meg sigh about?
+    - answers:
+      - Father, Mother, and each other
+      - Plenty of food
+      - Beautiful clothes
+      - Toys and books
+      correct_answer: 0
+      question: What did Beth say they had, despite their poverty?
+    - answers:
+      - He was working in another city.
+      - He had passed away.
+      - He was visiting relatives.
+      - He was away fighting in the war.
+      correct_answer: 3
+      question: Why did the girls not have their father with them?
+    - answers:
+      - Drawing pencils
+      - New music
+      - A book
+      - Clothes
+      correct_answer: 2
+      question: What did Jo want to buy with her dollar?
+    - answers:
+      - A book
+      - Clothes
+      - New music
+      - Drawing pencils
+      correct_answer: 2
+      question: What did Beth plan to spend her dollar on?
+    - answers:
+      - To buy drawing pencils
+      - To buy a book
+      - To buy new music
+      - To buy clothes
+      correct_answer: 0
+      question: How did Amy plan to use her dollar?
+    - answers:
+      - Their mother insisted on it.
+      - They thought their small contributions wouldn't help much in the war effort.
+      - They received more money from their mother.
+      - They found extra money around the house.
+      correct_answer: 1
+      question: Why did the girls decide to spend their money on themselves?
+    - answers:
+      - Teaching tiresome children
+      - Doing all the household chores
+      - Being teased at school
+      - Washing dishes
+      correct_answer: 0
+      question: What did Meg complain about?
+    - answers:
+      - She scolded the girls.
+      - She asked them to be quiet.
+      - She sang a line from a song making them laugh.
+      - She left the room quietly.
+      correct_answer: 2
+      question: How did Beth act as a peacemaker at the end of the passage?
+  11:
+  - title: Crime and Punishment
+    author: Fyodor Dostoevsky
+    text: |-
+      On an exceptionally hot evening early in July, a young man emerged from the garret where he lodged in S. Place. He walked slowly, as though hesitating, towards K. Bridge. He had successfully avoided encountering his landlady on the staircase. His garret, situated under the roof of a tall, five-story building, was more akin to a cupboard than a room. The landlady, who provided him with his garret, dinners, and other necessities, lived on the floor below. Every time he left the building, he was forced to pass her kitchen, the door of which was always open. Each time he passed, a sick, frightened feeling overcame him, causing him to scowl and feel ashamed. He was hopelessly in debt to his landlady and dreaded the thought of meeting her.
+
+      This fear was not due to cowardice or an abject nature—quite the contrary. For some time, he had been in an overstrained, irritable state, verging on hypochondria. He had become so absorbed in himself and isolated from others that he feared meeting anyone, not just his landlady. Crushed by poverty, he had reached a point where the anxieties of his situation no longer weighed on him. He had given up attending to practical matters and lost all desire to do so. Nothing the landlady could do truly terrified him. However, the thought of being stopped on the stairs, forced to listen to her trivial, irrelevant gossip, pestering demands for payment, threats, and complaints, and having to rack his brains for excuses, prevaricate, or lie—no, rather than endure that, he would creep down the stairs like a cat and slip out unseen.
+
+      This evening, however, as he stepped into the street, he became acutely aware of his fears.
+
+      “I want to attempt something like that and yet I’m frightened by these trifles,” he thought with an odd smile. “Hmm… yes, everything is within a man’s power, yet he lets it all slip away from cowardice—that’s an axiom. It would be interesting to know what men fear the most. Taking a new step, uttering a new word—that’s what they fear most… But I’m talking too much. It’s because I chatter that I do nothing. Or perhaps it’s that I chatter because I do nothing. I’ve learned to chatter over this last month, lying for days on end in my den, thinking… of Jack the Giant-killer. Why am I going there now? Am I capable of that? Is it serious? It’s not serious at all. It’s simply a fantasy to amuse myself; a plaything! Yes, maybe it’s just a plaything.”
+
+      The heat in the street was oppressive. The airlessness, the bustle, the plaster, scaffolding, bricks, and dust all around him, combined with that peculiar Petersburg stench familiar to those unable to escape the city in summer, all worked painfully on the young man’s already overwrought nerves. The insufferable stench from the pot-houses, which were particularly numerous in that part of town, and the drunken men he encountered continually, even though it was a working day, completed the revolting misery of the scene. For a moment, an expression of profound disgust flickered across the young man’s refined face. He was, incidentally, exceptionally handsome, above average in height, slim, well-built, with beautiful dark eyes and dark brown hair. Soon he sank into deep thought, or more accurately, into a complete blankness of mind. He walked along, oblivious to his surroundings, and had no desire to take notice of them. From time to time, he muttered something, a habit he had developed from talking to himself, as he had just admitted. During these moments, he became aware that his thoughts were sometimes tangled and that he was very weak; for two days, he had scarcely eaten anything.
+
+      He was so poorly dressed that even someone accustomed to shabbiness would have been ashamed to be seen in the street in such rags. However, in that part of town, few would have noticed his shortcomings in dress.
+    questions:
+    - answers:
+      - He was irritated by the heat and noise of the city.
+      - He was angry at his landlady.
+      - He was afraid of meeting someone he knew.
+      - He was lost in thought and unaware of his surroundings.
+      correct_answer: 0
+      question: Why did the young man feel discomfort upon stepping into the street?
+    - answers:
+      - The landlady had raised the rent.
+      - He was in debt to his landlady.
+      - He had quarreled with his neighbors.
+      - He disliked the garret where he lived.
+      correct_answer: 1
+      question: What was the primary reason for the young man's fear of encountering his landlady?
+    - answers:
+      - He was ashamed of his appearance.
+      - He feared being seen by a creditor.
+      - He was afraid of being arrested.
+      - He was worried about being late for an appointment.
+      correct_answer: 0
+      question: Why would the young man have been embarrassed to be seen on the street?
+    - answers:
+      - Taking a new step and uttering a new word.
+      - Making a mistake in public.
+      - Meeting someone important.
+      - Losing his way in the city.
+      correct_answer: 0
+      question: What did the young man believe most people feared the most?
+    - answers:
+      - His mind was racing with ideas.
+      - He was afraid of confronting his problems.
+      - He was weak from hunger and had trouble thinking clearly.
+      - He was excited about a new opportunity.
+      correct_answer: 2
+      question: What caused the young man to realize that his thoughts were sometimes tangled?
+    - answers:
+      - The oppressive heat in the city.
+      - The fact that he had lost his job.
+      - His isolation from others.
+      - His obsession with a fantasy.
+      correct_answer: 3
+      question: What did the young man consider as a plaything to amuse himself?
+    - answers:
+      - He was planning to visit a friend.
+      - He was going to buy food.
+      - He was unsure if he was capable of carrying out a certain act.
+      - He wanted to escape the city.
+      correct_answer: 3
+      question: What was the young man questioning his ability to do?
+    - answers:
+      - He was contemplating an important decision.
+      - He was eager to see someone.
+      - He was searching for a job.
+      - He was running from someone.
+      correct_answer: 0
+      question: What was the young man lost in thought about as he walked through the city?
+    - answers:
+      - He had been lying in his garret for days, thinking.
+      - He had just recovered from an illness.
+      - He was weak from having worked too hard.
+      - He had been wandering the streets all night.
+      correct_answer: 0
+      question: Why had the young man developed a habit of talking to himself?
+    - answers:
+      - Because of the oppressive heat.
+      - Due to the noise and stench of the city.
+      - Because he had not eaten in two days.
+      - Due to the fear of encountering someone he knew.
+      correct_answer: 2
+      question: What contributed to the young man's feeling of weakness as he walked through the streets?
+  12:
+  - title: The Picture of Dorian Gray
+    author: Oscar Wilde
+    text: |-
+      The studio was filled with the rich odor of roses, and as the light summer wind stirred amidst the trees in the garden, the heavy scent of lilac or the delicate perfume of pink-flowering thorn wafted through the open door.
+
+      From the corner of the divan, covered with Persian saddle-bags, where he lay smoking innumerable cigarettes, as was his custom, Lord Henry Wotton could just catch the gleam of the honey-sweet, honey-colored blossoms of a laburnum. The tremulous branches of the tree seemed hardly able to bear the burden of such flamelike beauty. Now and then, the fantastic shadows of birds in flight flitted across the long tussore-silk curtains that stretched in front of the huge window, producing a kind of momentary Japanese effect. These shadows made him think of the pallid, jade-faced painters of Tokyo, who, through the medium of an art that is necessarily immobile, seek to convey a sense of swiftness and motion.
+
+      The sullen murmur of bees, shouldering their way through the long unmown grass or circling with monotonous insistence around the dusty gilt horns of the straggling woodbine, seemed to make the stillness even more oppressive. The dim roar of London was like the bourdon note of a distant organ.
+
+      In the center of the room, clamped to an upright easel, stood the full-length portrait of a young man of extraordinary personal beauty. A short distance away sat the artist himself, Basil Hallward, whose sudden disappearance some years ago had caused a public sensation and led to many strange conjectures.
+
+      As the painter gazed at the gracious and comely form he had so skillfully captured in his art, a smile of pleasure crossed his face and seemed about to linger there. But suddenly, he started up, closed his eyes, and placed his fingers upon his lids, as though trying to imprison within his brain some curious dream from which he feared he might awaken.
+
+      "It is your best work, Basil, the best thing you have ever done," said Lord Henry languidly. "You must certainly send it to the Grosvenor next year. The Academy is too large and too vulgar. Whenever I've gone there, there have been either so many people that I couldn't see the pictures, which was dreadful, or so many pictures that I couldn't see the people, which was worse. The Grosvenor is really the only place."
+
+      "I don't think I shall send it anywhere," replied Basil, tossing his head back in that odd way that used to make his friends laugh at him at Oxford. "No, I won't send it anywhere."
+
+      Lord Henry elevated his eyebrows and looked at him in amazement through the thin blue wreaths of smoke that curled up in such fanciful whorls from his heavy, opium-tainted cigarette. "Not send it anywhere? My dear fellow, why? Have you any reason? What odd chaps you painters are! You do anything in the world to gain a reputation, and as soon as you have one, you seem to want to throw it away. It's silly of you, for there's only one thing in the world worse than being talked about, and that is not being talked about. A portrait like this would set you far above all the young men in England and make the old men quite jealous—if old men are ever capable of any emotion."
+
+      "I know you will laugh at me," Basil replied, "but I really can't exhibit it. I've put too much of myself into it."
+    questions:
+    - answers:
+      - The scent of roses.
+      - The scent of lilac.
+      - The scent of laburnum.
+      - The scent of pink-flowering thorn.
+      correct_answer: 1
+      question: What scent entered the studio through the open door when the wind stirred?
+    - answers:
+      - Persian rugs.
+      - Silk curtains.
+      - Saddle-bags.
+      - Paintings.
+      correct_answer: 2
+      question: What was the divan in the studio covered with?
+    - answers:
+      - Because it reminded him of London.
+      - Because it made him think of Japanese art.
+      - Because it created a shadowy effect.
+      - Because it made him feel melancholic.
+      correct_answer: 2
+      question: Why did the shadows of birds flitting across the curtains intrigue Lord Henry?
+    - answers:
+      - The murmur of bees.
+      - The dim roar of London.
+      - The rustling of trees.
+      - The hum of the wind.
+      correct_answer: 1
+      question: What sound did Lord Henry compare to the bourdon note of a distant organ?
+    - answers:
+      - A portrait of Lord Henry.
+      - A landscape of the garden.
+      - A full-length portrait of a young man.
+      - A still life of roses.
+      correct_answer: 2
+      question: What was the subject of the painting clamped to the easel?
+    - answers:
+      - His imminent departure.
+      - His sudden disappearance years ago.
+      - His mysterious identity.
+      - His secretive habits.
+      correct_answer: 1
+      question: What aspect of Basil Hallward caused public excitement and strange conjectures?
+    - answers:
+      - He wanted to fix a mistake.
+      - He wanted to make it more perfect.
+      - He wanted to trap a dream within his mind.
+      - He wanted to change the background.
+      correct_answer: 2
+      question: Why did Basil suddenly close his eyes and place his fingers on his lids?
+    - answers:
+      - He disliked the Academy's crowds.
+      - He felt the painting was too personal.
+      - He wanted to surprise the public later.
+      - He thought the painting wasn’t good enough.
+      correct_answer: 1
+      question: Why did Basil decide not to exhibit the painting?
+    - answers:
+      - He disliked painters in general.
+      - He believed no one would understand the painting.
+      - He was puzzled by Basil's decision.
+      - He thought the painting was too controversial.
+      correct_answer: 2
+      question: What was Lord Henry's reaction to Basil's decision not to exhibit the painting?
+    - answers:
+      - His fear of rejection.
+      - His deep connection to the portrait.
+      - His lack of confidence in his work.
+      - His desire to keep it private.
+      correct_answer: 1
+      question: What reason did Basil give for not wanting to exhibit the portrait?
+  13:
+  - title: The Tenant of Wildfell Hall
+    author: Anne Brontë
+    text: |-
+      You must accompany me back to the autumn of 1827. My father, as you may know, was a gentleman farmer in ——shire, and, by his explicit wish, I succeeded him in the same quiet occupation. However, this was not my preference, for my ambitions urged me toward higher goals, and my self-conceit convinced me that by ignoring these ambitions, I was burying my talent and hiding my light under a bushel. My mother did her utmost to persuade me that I was capable of great achievements, but my father, who believed that ambition led to ruin and that change was synonymous with destruction, dismissed any plans for bettering either my own situation or that of others. He assured me it was all nonsense and, with his dying breath, exhorted me to continue in the good old way, to follow in his footsteps and those of his father before him, and to let my highest ambition be to walk honestly through life, without looking to the right or to the left, and to pass on the family estate to my children in, at least, as good a condition as he left it to me.
+
+      “Well!” I thought, “an honest and industrious farmer is one of the most useful members of society. If I dedicate my talents to cultivating my farm and improving agriculture, I will benefit not only my immediate family and dependents but, in some small way, mankind at large. Thus, I will not have lived in vain.”
+
+      With these reflections, I tried to console myself as I trudged home from the fields one cold, damp, and cloudy evening near the end of October. However, the sight of a bright red fire gleaming through the parlor window did more to lift my spirits and silence my ungrateful complaints than all the wise reflections and good resolutions I had forced myself to consider—for remember, I was young then, only twenty-four, and I had not yet acquired half the self-control I now possess, trivial as that may be.
+
+      Still, I could not enter that haven of bliss until I had exchanged my muddy boots for a clean pair of shoes, my rough coat for a respectable one, and generally made myself presentable to polite society; for my mother, despite all her kindness, was quite particular about such things.
+
+      As I ascended to my room, I was met on the stairs by a smart, pretty girl of nineteen, with a neat, petite figure, a round face, bright, rosy cheeks, glossy, clustering curls, and merry brown eyes. I need not tell you this was my sister Rose. She is, I know, still a comely matron and doubtless no less lovely in your eyes than on the happy day you first saw her. At that time, nothing hinted to me that she would, a few years later, become the wife of someone entirely unknown to me then, but destined to become a closer friend than even herself, more intimate than that unruly lad of seventeen who collared me in the passage as I came down and nearly knocked me off balance. In retaliation for his impudence, he received a resounding whack over the head, which fortunately caused no serious harm, as his head was more than commonly thick and was well protected by a shock of short, reddish curls that my mother called auburn.
+
+      Upon entering the parlor, we found our honored mother seated in her armchair by the fireside, knitting away as she usually did when she had nothing else to occupy her. She had swept the hearth and made a bright, blazing fire in preparation for our return. The servant had just brought in the tea tray, and Rose was retrieving the sugar basin and tea caddy from the cupboard in the black oak sideboard, which shone like polished ebony in the cheerful parlor twilight.
+    questions:
+    - answers:
+      - He believed ambition led to ruin.
+      - He thought ambition was a noble pursuit.
+      - He had no opinion on ambition.
+      - He encouraged ambition but only in moderation.
+      correct_answer: 0
+      question: What was the father's opinion on ambition?
+    - answers:
+      - To inherit the family farm.
+      - To pursue a career in law.
+      - To become a merchant.
+      - To move to the city.
+      correct_answer: 0
+      question: What was the father's explicit wish for his son?
+    - answers:
+      - A secure and stable life.
+      - The excitement of a new career.
+      - A life of travel and exploration.
+      - The pursuit of great academic achievements.
+      correct_answer: 1
+      question: What did the son secretly desire instead of farming?
+    - answers:
+      - She believed he was incapable of great achievements.
+      - She thought farming was the best life for him.
+      - She did not express any opinion.
+      - She believed he was capable of great achievements.
+      correct_answer: 3
+      question: What was the mother’s belief regarding her son’s potential?
+    - answers:
+      - His father wanted him to preserve the family estate.
+      - His father wanted him to explore new opportunities.
+      - His father thought farming was unimportant.
+      - His father wished for him to become a scholar.
+      correct_answer: 0
+      question: Why did the father want his son to continue farming?
+    - answers:
+      - The scent of the autumn air.
+      - The sight of the family farm.
+      - The reflection on his wise decisions.
+      - The gleam of a bright red fire through the window.
+      correct_answer: 3
+      question: What ultimately lifted the son’s spirits as he returned home?
+    - answers:
+      - Twenty-four.
+      - Nineteen.
+      - Seventeen.
+      - Twenty.
+      correct_answer: 0
+      question: How old was the narrator during the events of the passage?
+    - answers:
+      - His sister Rose.
+      - His mother.
+      - His father.
+      - The servant.
+      correct_answer: 0
+      question: Who did the narrator encounter on the stairs as he went to his room?
+    - answers:
+      - A clean pair of boots.
+      - A neat scarf.
+      - A clean pair of shoes and a respectable coat.
+      - A pair of gloves.
+      correct_answer: 2
+      question: What did the narrator have to change into before entering the parlor?
+    - answers:
+      - The mother was knitting by the fire.
+      - The mother was preparing dinner.
+      - The mother was reading a book.
+      - The mother was sweeping the floor.
+      correct_answer: 0
+      question: What was the mother doing when the narrator entered the parlor?
+  14:
+  - title: Agnes Gray
+    author: Acton Bell
+    text: |-
+      All true histories offer instruction, though in some, the valuable lesson may be difficult to uncover, and when found, so meager in quantity that the effort hardly seems worth it. Whether this is true of my own history, I am not fully qualified to say. At times, I think it may prove useful to some and entertaining to others, but I will leave that for the world to decide. Protected by my own obscurity, the passage of time, and the use of a few fictitious names, I feel no fear in sharing this story with the public, even though I would not reveal it to my closest friend.
+
+      My father was a clergyman in the north of England, respected by all who knew him. In his younger days, he lived comfortably on the combined income of a small incumbency and a modest property of his own. My mother, who married him against the wishes of her family, was a squire’s daughter and a woman of strong will. Despite warnings that if she became the poor parson’s wife, she would have to give up her carriage, lady’s-maid, and all the luxuries that were nearly essential to her, she remained resolute. A carriage and a lady’s-maid were convenient, but she was thankful she had feet to carry her and hands to take care of her needs. An elegant house and spacious grounds were appealing, but she would rather live in a cottage with Richard Grey than in a palace with any other man in the world.
+
+      When arguments failed, her father eventually told the lovers they could marry if they wished, but doing so would mean his daughter would forfeit her entire fortune. He expected this to dampen their enthusiasm, but he was mistaken. My father knew my mother’s exceptional worth and realized she was a treasure in her own right. He would gladly welcome her into his modest home on any terms. She, in turn, would rather work with her own hands than be separated from the man she loved, whose happiness she was determined to ensure, and with whom she was already united in heart and soul. Thus, her fortune went to a more prudent sister who had married a wealthy nabob, while my mother, to the amazement and pity of all who knew her, chose to bury herself in the humble village parsonage among the hills of ——. Yet, despite all of this, and despite my mother’s strong will and my father’s quirks, I believe you could search all of England and not find a happier couple.
+
+      Of their six children, only my sister Mary and I survived the dangers of infancy and early childhood. Being younger by five or six years, I was always seen as the child and the darling of the family. My father, mother, and sister all contributed to spoiling me—not through foolish indulgence that would make me unruly, but through constant kindness that left me too dependent and ill-prepared for the hardships of life.
+
+      Mary and I were raised in strict seclusion. My mother, who was highly accomplished, well-informed, and fond of keeping busy, took complete charge of our education, except for Latin, which my father taught us. We never attended school, and since there was little society nearby, our only interaction with the world was the occasional stately tea party with the local farmers and tradespeople (to avoid being labeled as too proud to associate with our neighbors) and an annual visit to our paternal grandfather’s. There, we saw only him, our kind grandmother, a maiden aunt, and two or three elderly ladies and gentlemen. Occasionally, our mother would entertain us with stories and anecdotes from her youth, which, while they delighted us, often stirred in me, at least, a secret desire to see more of the world.
+    questions:
+    - answers:
+      - The difficulty in finding valuable lessons in some histories.
+      - The personal success of the narrator's family.
+      - The insignificance of true histories.
+      - The importance of financial wealth.
+      correct_answer: 0
+      question: What does the narrator suggest about true histories in the opening of the passage?
+    - answers:
+      - It is highly respected.
+      - It is insignificant.
+      - It is rarely taken seriously.
+      - It is largely forgotten.
+      correct_answer: 0
+      question: How is the narrator's father's role as a clergyman perceived by those who knew him?
+    - answers:
+      - She was persuaded by her father to marry a wealthy man.
+      - She married a poor clergyman despite her family's objections.
+      - She chose to live in luxury rather than marry for love.
+      - She married someone of her own social standing.
+      correct_answer: 1
+      question: What decision did the narrator’s mother make regarding her marriage?
+    - answers:
+      - Relinquish all the luxuries she was accustomed to.
+      - Inherit a fortune from her family.
+      - Marry a wealthy nabob.
+      - Live in a large estate with her husband.
+      correct_answer: 0
+      question: What did the narrator’s mother have to give up when she married the narrator’s father?
+    - answers:
+      - His fortune would grow.
+      - His daughter would regret her decision.
+      - Their love for each other would diminish.
+      - Both would lose interest in the marriage.
+      correct_answer: 1
+      question: What did the mother’s father expect would happen if his daughter married the narrator’s father?
+    - answers:
+      - Her father disapproved of her decision.
+      - Her mother tried to dissuade her.
+      - She valued love and happiness over wealth.
+      - She was forced to marry a wealthy man.
+      correct_answer: 2
+      question: What does the narrator’s mother’s decision to marry reveal about her character?
+    - answers:
+      - They were both unhappy with their life choices.
+      - They lived a life of regret and poverty.
+      - They were a very happy couple despite their circumstances.
+      - They eventually separated due to financial struggles.
+      correct_answer: 3
+      question: What was the ultimate outcome of the narrator’s parents’ marriage?
+    - answers:
+      - All six children survived into adulthood.
+      - Mary and the narrator were the only two children who survived.
+      - Only Mary survived past infancy.
+      - The narrator was an only child.
+      correct_answer: 1
+      question: What is said about the survival of the narrator and their siblings?
+    - answers:
+      - They were spoiled with material wealth.
+      - They were spoiled with indulgence that made them unruly.
+      - They were treated with constant kindness that made them dependent.
+      - They were neglected by their parents.
+      correct_answer: 2
+      question: How does the narrator describe the treatment they received from their family during childhood?
+    - answers:
+      - Their father provided them with a formal education.
+      - They received a strict and comprehensive education at home.
+      - They attended school with other children in the village.
+      - They were educated by tutors hired by their parents.
+      correct_answer: 1
+      question: How were the narrator and their sister educated?
+    - answers:
+      - They had many friends and social engagements.
+      - They were secluded with limited social interaction.
+      - They frequently traveled to see the world.
+      - They were constantly surrounded by family and friends.
+      correct_answer: 1
+      question: How does the narrator describe their social life during childhood?
+  15:
+  - title: Moby-Dick; or, The Whale
+    author: Herman Melville
+    text: |-
+      Call me Ishmael. Some years ago—never mind exactly how long—having little or no money in my pocket, and nothing in particular to keep me on shore, I decided to sail about a bit and explore the watery part of the world. It’s a method I use to shake off melancholy and improve my mood. Whenever I feel myself growing grim; whenever there’s a damp, drizzly November in my soul; whenever I find myself lingering in front of coffin warehouses or following every funeral I come across; and especially whenever my anxiety becomes so overwhelming that it takes a strong moral effort to stop myself from stepping into the street and knocking off people’s hats—then I know it’s time to get to sea as soon as possible. This is my alternative to drastic measures. Where Cato might have thrown himself on his sword, I simply board a ship. There’s nothing unusual in this. If they were aware of it, most men, at some point, have probably felt nearly the same way about the ocean as I do.
+
+      Consider the island city of Manhattan, surrounded by wharves like Indian isles by coral reefs—commerce encircles it like surf. The streets lead you toward the water from every direction. At the southern tip of the island lies the Battery, where the noble pier is washed by waves and cooled by breezes that were far out at sea just a few hours before. Look at the crowds of people gazing at the water there.
+
+      Walk around the city on a dreamy Sunday afternoon. Go from Corlears Hook to Coenties Slip, and then north by Whitehall. What do you see? Like silent sentinels posted around the town, thousands upon thousands of people stand absorbed in thoughts of the ocean. Some lean against the piers; some sit on the pier-heads; some peer over the sides of ships from China; some even climb high into the rigging, as if trying to get a better view of the sea. But these are all landsmen; on weekdays, they’re confined to offices, shops, and desks. So what is it that draws them here? Are the green fields gone? What are they seeking?
+
+      But wait, look! More crowds are coming, heading straight for the water, as if preparing to dive in. Strange! Nothing will satisfy them but the very edge of the land; loitering in the shade of nearby warehouses won’t do. No, they have to get as close to the water as possible without actually falling in. And there they stand—miles of them, leagues. They come from every direction—north, east, south, and west. Yet here they all gather. Tell me, is it the magnetic pull of the compasses on all those ships that draws them here?
+    questions:
+    - answers:
+      - He is wealthy and seeking adventure.
+      - He is financially struggling and looking for a change.
+      - He is mourning the loss of a loved one.
+      - He is curious about different cultures.
+      correct_answer: 1
+      question: What is Ishmael’s primary reason for deciding to sail and see the "watery part of the world"?
+    - answers:
+      - To explore new lands.
+      - To avoid succumbing to despair and melancholy.
+      - To escape from his creditors.
+      - To find employment on a ship.
+      correct_answer: 2
+      question: What does Ishmael hope to achieve by going to sea?
+    - answers:
+      - Walking aimlessly in the streets.
+      - Feeling a strong urge to be near water.
+      - Being overly cheerful.
+      - Avoiding social gatherings.
+      correct_answer: 1
+      question: Which of the following is a sign that Ishmael needs to go to sea?
+    - answers:
+      - An aggressive and violent attitude.
+      - A calm and peaceful demeanor.
+      - A deep fascination with the ocean.
+      - A desire to isolate himself from others.
+      correct_answer: 0
+      question: How does Ishmael describe his mood when he feels the need to go to sea?
+    - answers:
+      - He plans to take extreme measures like Cato.
+      - He quietly boards a ship as his escape.
+      - He confronts his problems directly.
+      - He seeks the company of friends to lift his spirits.
+      correct_answer: 1
+      question: What is Ishmael's alternative to drastic measures like Cato’s?
+    - answers:
+      - New York City.
+      - The island of Manhattan.
+      - An island in the Pacific.
+      - A remote coastal town.
+      correct_answer: 1
+      question: Which location does Ishmael describe as "your insular city of the Manhattoes"?
+    - answers:
+      - Because of its strategic position for trade.
+      - Because of its connection to the ocean.
+      - Because it is a bustling and crowded city.
+      - Because it is surrounded by coral reefs.
+      correct_answer: 1
+      question: Why does Ishmael compare Manhattan to islands surrounded by coral reefs?
+    - answers:
+      - Curious tourists.
+      - Fishermen preparing to sail.
+      - People absorbed in thoughts of the ocean.
+      - Traders engaged in commerce.
+      correct_answer: 2
+      question: What does Ishmael observe about the people standing near the water in Manhattan?
+    - answers:
+      - They are locals.
+      - They are sailors.
+      - They are landsmen tied to their jobs during the week.
+      - They are merchants.
+      correct_answer: 2
+      question: Who are the people Ishmael sees standing by the water?
+    - answers:
+      - The people are driven by an unconscious urge to be near water.
+      - The people are eager to board ships and travel.
+      - The people are waiting for someone to arrive.
+      - The people are escaping from something.
+      correct_answer: 0
+      question: What does Ishmael suggest about the people who gather at the water’s edge?
+    - answers:
+      - To highlight the city's connection to the ocean.
+      - To describe the dangers of living by the sea.
+      - To explain why people are drawn to ships.
+      - To speculate on the magnetic pull of the ocean on people's minds.
+      correct_answer: 3
+      question: What is the purpose of Ishmael’s rhetorical question about the "magnetic virtue of the needles of the compasses"?
