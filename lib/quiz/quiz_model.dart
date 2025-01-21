@@ -1,9 +1,9 @@
+import 'package:brainace_pro/animated_time_bar.dart';
 import 'package:flutter_html_as_text/flutter_html_as_text.dart';
 import 'package:brainace_pro/animated_progress_bar.dart';
 import 'package:brainace_pro/buttons.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/quiz_question_task.dart';
-import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/score_n_progress/progress_screen.dart';
 import 'package:brainace_pro/score_n_progress/show_improvement.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +15,7 @@ import '../initial_score_screen.dart';
 class QuizModel extends StatefulWidget {
   final Map<String, QuizQuestionData> questions;
 
+  /// Used for top title of the quiz.
   final String title;
   final String exerciseName;
 
@@ -263,6 +264,60 @@ class _QuizModelState extends State<QuizModel> {
     super.dispose();
   }
 
+  Widget buildTitle(BuildContext context, Size size) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "${widget.title} ${currentQuestionIndex + 1}",
+                style: TextStyle(fontSize: 0.025 * size.height),
+                textAlign: TextAlign.start,
+              ),
+            ),
+            SizedBox(width: 0.018 * size.width),
+            InkWell(
+              child: Image.asset(Theme.of(context).brightness == Brightness.dark ? "assets/help_icon_dark.png" : "assets/help_icon_light.png",
+                width: 0.056 * size.width,),
+              onTap: () {
+                ReportQuestionDialog(
+                  context,
+                  null,
+                  widget.questions[currentQuestionId]!.question,
+                );
+              },
+            ),
+            const Spacer(),
+            // Icon(
+            //   Icons.timer,
+            //   size: 0.08 * size.width,
+            //   color: Theme.of(context).colorScheme.primary,
+            // ),
+            // const SizedBox(width: 10.0),
+            Text(
+              "${_time.toString()}s",
+              style: TextStyle(fontSize: size.width / 20),
+              textAlign: TextAlign.start,
+            ),
+            SizedBox(width: 0.019 * size.width),
+          ],
+        ),
+        AnimatedTimeBar(
+          timeLeft: _time.toDouble(),
+          totalTime: widget.time.toDouble(),
+        ),
+        SizedBox(height: 0.02 * size.height),
+        // SatsProgressBar(answers: answers),
+        AnimatedProgressBar(
+          answerCount: widget.questions.length,
+          answers: answers,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -274,7 +329,6 @@ class _QuizModelState extends State<QuizModel> {
     return Scaffold(
       appBar: appBar(context, ""),
       body: Stack(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Align(
             alignment: Alignment(Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1),
@@ -299,49 +353,7 @@ class _QuizModelState extends State<QuizModel> {
                   child: Column(
                     children: [
                       SizedBox(height: 0.02 * size.height),
-                      Row(
-                        children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "${widget.title} ${currentQuestionIndex + 1}",
-                              style: TextStyle(fontSize: 0.025 * size.height),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                          SizedBox(width: 0.018 * size.width),
-                          InkWell(
-                            child: Image.asset(Theme.of(context).brightness == Brightness.dark ? "assets/help_icon_dark.png" : "assets/help_icon_light.png",
-                                width: 0.056 * size.width,),
-                            onTap: () {
-                              ReportQuestionDialog(
-                                context,
-                                null,
-                                widget.questions[currentQuestionId]!.question,
-                              );
-                            },
-                          ),
-                          const Spacer(),
-                          // Icon(
-                          //   Icons.timer,
-                          //   size: 0.08 * size.width,
-                          //   color: Theme.of(context).colorScheme.primary,
-                          // ),
-                          // const SizedBox(width: 10.0),
-                          Text(
-                            "${_time.toString()}s",
-                            style: TextStyle(fontSize: size.width / 20),
-                            textAlign: TextAlign.start,
-                          ),
-                          SizedBox(width: 0.019 * size.width),
-                        ],
-                      ),
-                      SizedBox(height: 0.02 * size.height),
-                      // SatsProgressBar(answers: answers),
-                      AnimatedProgressBar(
-                        answerCount: widget.questions.length,
-                        answers: answers,
-                      ),
+                      this.buildTitle(context, size),
                       SizedBox(height: 0.02 * size.height),
                       // SatsQuestionModel(quizQuestions.values.elementAt(currentQuestionIndex)),
                       QuizQuestionTask(

@@ -5,7 +5,6 @@ import '../../app_bar.dart';
 import 'dart:math' as math;
 import '../home.dart';
 import '../quiz/quiz_model.dart';
-import 'package:flutter_quizzes/flutter_quizzes.dart';
 
 class StartSatsQuiz extends StatefulWidget {
   final SatsQuestionSubcategoriesRW subcategory;

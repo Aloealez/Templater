@@ -1,11 +1,7 @@
 import 'package:brainace_pro/builders/strong_concentration_builder.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:dictionaryx/dictionary_msa_json_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yaml/yaml.dart';
-import 'package:flutter_bta_functions/flutter_bta_functions.dart';
 import '../home.dart';
 import '../quiz/quiz_model.dart';
 

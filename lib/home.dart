@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'package:brainace_pro/widgets/port_home_tasks_widget.dart' as hw;
-import 'package:brainace_pro/widgets/port_home_tasks_widget_config.dart' as hwc;
 import 'package:flutter/material.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';

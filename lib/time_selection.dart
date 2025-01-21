@@ -341,6 +341,8 @@ class _TimeSelectionState extends State<TimeSelection> {
       );
     } else if (skill == 'games') {
       route = Home();
+    } else {
+      route = Home();
     }
     setState(() {
       startedLevelTest = false;
