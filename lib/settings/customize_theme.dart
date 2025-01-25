@@ -23,6 +23,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
   }
 
   void _showCupertinoColorPicker(String colorKey) {
+    Size size = MediaQuery.of(context).size;
     showCupertinoModalPopup(
       context: context,
       builder: (BuildContext context) {
@@ -50,11 +51,25 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
           ),
           actions: [
             CupertinoActionSheetAction(
-              child: const Text('Ok'),
+              child: Text(
+                'OK',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: size.width * 0.064,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               onPressed: () => Navigator.of(context).pop(),
             ),
             CupertinoActionSheetAction(
-              child: const Text('Reset'),
+              child: Text(
+                'Reset',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: size.width * 0.064,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               onPressed: () {
                 setThemeColor(prefs, Theme.of(context).brightness, colorKey, null).then((obj) {
                   Navigator.of(context).pop();
@@ -99,8 +114,8 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
             label,
             style: TextStyle(
               color: textColor ?? Theme.of(context).colorScheme.onPrimary,
-              fontSize: size.width * 0.045,
-              fontWeight: FontWeight.w500,
+              fontSize: size.width * 0.051,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ),
@@ -123,41 +138,44 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
           future: prefsF,
           builder: (context, snapshot) {
             prefs = snapshot.data as SharedPreferences?;
-            return Container(
-              margin: EdgeInsets.only(
-                left: size.width / 8,
-                right: size.width / 8,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                spacing: 30,
-                children: [
-                  _buildColorTile(
-                    label: 'Background',
-                    colorKey: "surface",
-                  ),
+            return SingleChildScrollView(
+              child: Container(
+                margin: EdgeInsets.only(
+                  left: size.width / 10,
+                  right: size.width / 10,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  spacing: 30,
+                  children: [
+                    _buildColorTile(
+                      label: 'Background',
+                      colorKey: "surface",
+                      textColor: Theme.of(context).colorScheme.onSurface,
+                    ),
 
-                  _buildColorTile(
-                    label: 'Primary',
-                    colorKey: "primary",
-                  ),
+                    _buildColorTile(
+                      label: 'Primary',
+                      colorKey: "primary",
+                    ),
 
-                  _buildColorTile(
-                    label: 'Secondary',
-                    colorKey: "secondary",
-                  ),
+                    _buildColorTile(
+                      label: 'Secondary',
+                      colorKey: "secondary",
+                    ),
 
-                  _buildColorTile(
-                    label: 'Accent',
-                    colorKey: "tertiary",
-                  ),
+                    _buildColorTile(
+                      label: 'Accent',
+                      colorKey: "tertiary",
+                    ),
 
-                  _buildColorTile(
-                    label: 'Contrast',
-                    colorKey: "primaryContainer",
-                    textColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                  ),
-                ],
+                    _buildColorTile(
+                      label: 'Contrast',
+                      colorKey: "primaryContainer",
+                      textColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                    ),
+                  ],
+                ),
               ),
             );
           },

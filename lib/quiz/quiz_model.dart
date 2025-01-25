@@ -1,9 +1,10 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:brainace_pro/animated_time_bar.dart';
 import 'package:flutter_html_as_text/flutter_html_as_text.dart';
 import 'package:brainace_pro/animated_progress_bar.dart';
 import 'package:brainace_pro/buttons.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:brainace_pro/quiz_question_task.dart';
+import 'package:brainace_pro/quiz/quiz_question_task.dart';
 import 'package:brainace_pro/score_n_progress/progress_screen.dart';
 import 'package:brainace_pro/score_n_progress/show_improvement.dart';
 import 'package:flutter/material.dart';
@@ -39,8 +40,25 @@ class QuizModel extends StatefulWidget {
   /// Initial max score (this quiz will add to the value provided).
   final double initMaxScore;
 
+  /// If task and answers should be displayed in one line.
+  final bool inlineTaskAndAnswers;
+
+  /// If all questions should be shown at once, especially useful for multiline user-input ones.
+  final bool showMultipleQuestions;
+
+  /// If question task defined in QuestionData should be displayed.
+  final bool showQuestionTask;
+
   /// Layout of the answer options.
   final QuizModelAnswerLayout answerLayout;
+
+  /// Hint text for text input.
+  final String hintText;
+
+  /// If text input should only accept numbers.
+  final bool inputTextNumbersOnly;
+
+  final AssetSource? music;
 
   final String exerciseName;
 
@@ -56,28 +74,35 @@ class QuizModel extends StatefulWidget {
   final Future Function(Map<String, QuizQuestionData> questions,
       Map<String, bool> answers, bool initialTest, bool endingTest)? onEndAsync;
 
-  const QuizModel(this.title,
-      this.exerciseName,
-      this.time, {
-        this.centerTitle = false,
-        this.progressBar = true,
-        this.timeBar = false,
-        this.singleTextQuestion = false,
-        required this.questions,
-        super.key,
-        this.initScore = 0,
-        this.initMaxScore = 0,
-        this.initialTest = false,
-        this.endingTest = false,
-        required this.page,
-        required this.description,
-        required this.oldName,
-        required this.exerciseNumber,
-        required this.exerciseString,
-        this.onEnd,
-        this.onEndAsync,
-        this.answerLayout = QuizModelAnswerLayout.list,
-      });
+  const QuizModel(
+    this.title,
+    this.exerciseName,
+    this.time, {
+    this.showMultipleQuestions = false,
+    this.showQuestionTask = true,
+    this.centerTitle = false,
+    this.progressBar = true,
+    this.timeBar = false,
+    this.singleTextQuestion = false,
+    required this.questions,
+    super.key,
+    this.initScore = 0,
+    this.initMaxScore = 0,
+    this.initialTest = false,
+    this.endingTest = false,
+    required this.page,
+    required this.description,
+    required this.oldName,
+    required this.exerciseNumber,
+    required this.exerciseString,
+    this.onEnd,
+    this.onEndAsync,
+    this.answerLayout = QuizModelAnswerLayout.list,
+    this.inlineTaskAndAnswers = false,
+    this.hintText = "Enter your answer",
+    this.inputTextNumbersOnly = false,
+    this.music,
+  });
 
   @override
   State<QuizModel> createState() => _QuizModelState();
@@ -90,31 +115,32 @@ class _QuizModelState extends State<QuizModel> {
   String currentQuestionId = "";
   late Timer _timer;
   late int _time;
-  Map<String, bool> answers = {};
+  Map<String, String> answers = {};
   double maxScore = 0;
-  final _textInputController = TextEditingController();
+  Map<String, TextEditingController> _textEditingControllers = {};
+  final player = AudioPlayer();
 
   @override
   void initState() {
-    print(
-        "int max score init: ${widget.initMaxScore}  init score: ${widget
-            .initScore}");
     _time = widget.time;
-    score += widget.initScore;
     currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
     selectedOption =
-    widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
+        widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
 
     super.initState();
-
-    for (var question in widget.questions.values) {
-      maxScore += question.score.values.elementAt(0);
+    for (var questionId in widget.questions.keys) {
+      _textEditingControllers[questionId] = TextEditingController();
+      maxScore += widget.questions[questionId]!.score.values.elementAt(0);
     }
     print("init max score: $maxScore");
     setState(() {
       maxScore = maxScore + widget.initMaxScore;
     });
 
+    if (widget.music != null) {
+      player.play(widget.music!);
+      player.setReleaseMode(ReleaseMode.loop);
+    }
     startTimer();
   }
 
@@ -132,168 +158,160 @@ class _QuizModelState extends State<QuizModel> {
     return false;
   }
 
-  void handleContinue() {
-    if (widget.answerLayout == QuizModelAnswerLayout.list ||
-        widget.answerLayout == QuizModelAnswerLayout.boxes) {
-      if (isCorrect(selectedOption)) {
-        score +=
-            widget.questions[currentQuestionId]?.score[selectedOption] ?? 0;
-      } else if (widget.questions[currentQuestionId]?.scoreIncorrect != null) {
-        score += widget.questions[currentQuestionId]
-            ?.scoreIncorrect![selectedOption] ??
-            0;
-      }
-    } else if (widget.answerLayout == QuizModelAnswerLayout.textInput) {
-      for (int i = 0;
-      i < widget.questions[currentQuestionId]!.answers.length;
-      i++) {
-        if (widget.questions[currentQuestionId]?.answers.values.elementAt(i) ==
-            selectedOption) {
-          score +=
-              widget.questions[currentQuestionId]?.score.values.elementAt(i) ??
-                  0;
-          break;
-        }
-      }
-      _textInputController.clear();
+  void handleContinue({bool force = false}) {
+    print("selectedOption: $selectedOption");
+    print("answers: $answers");
+    if (widget.answerLayout == QuizModelAnswerLayout.textInput && !widget.showMultipleQuestions) {
+      setState(() {
+        answers[currentQuestionId] = selectedOption!;
+      });
+      // _textInputController.clear();
     }
-    if (currentQuestionIndex < widget.questions.length - 1 && _time > 0) {
+    if (currentQuestionIndex < widget.questions.length - 1 &&
+        _time > 0 &&
+        !widget.showMultipleQuestions &&
+        !force
+    ) {
       if (selectedOption != null) {
         setState(
-              () {
+          () {
             selectedOption =
-            widget.answerLayout == QuizModelAnswerLayout.textInput
-                ? ""
-                : null;
+                widget.answerLayout == QuizModelAnswerLayout.textInput
+                    ? ""
+                    : null;
             currentQuestionIndex++;
-            currentQuestionId =
-                widget.questions.keys.elementAt(currentQuestionIndex);
+            currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
           },
         );
       }
     } else {
       if (widget.onEnd != null) {
-        widget.onEnd!(
-            widget.questions, answers, widget.initialTest, widget.endingTest);
+        // widget.onEnd!(widget.questions, answers, widget.initialTest, widget.endingTest);
       }
       if (widget.onEndAsync != null) {
-        widget.onEndAsync!(
-            widget.questions, answers, widget.initialTest, widget.endingTest);
+        // widget.onEndAsync!(widget.questions, answers, widget.initialTest, widget.endingTest);
       }
-      Navigator.pop(context);
 
+      double score = 0;
+      score = widget.initScore;
+      for (var questionId in widget.questions.keys) {
+        if (answers[questionId] == null) {
+          continue;
+        }
+        print(
+            "questionId: $questionId answer: ${answers[questionId]} correct: ${widget.questions[questionId]!.correct[answers[questionId]]}");
+        if (widget.questions[questionId]!.correct[answers[questionId]] ??
+            false) {
+          score +=
+              widget.questions[questionId]!.score[answers[questionId]] ?? 0;
+        } else if (widget.questions[questionId]!.scoreIncorrect != null) {
+          score += widget.questions[questionId]!
+                  .scoreIncorrect![answers[questionId]] ??
+              0;
+        }
+      }
+
+      print("score: $score");
+      print("answers: $answers");
+
+      Navigator.pop(context);
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-          (widget.initialTest)
+          builder: (context) => (widget.initialTest)
               ? InitialScoreScreen(
-            title: widget.exerciseName,
-            description: widget.description,
-            exercise: widget.exerciseNumber,
-            userScore: score,
-            maxScore: maxScore,
-            page: widget.page,
-          )
+                  title: widget.exerciseName,
+                  description: widget.description,
+                  exercise: widget.exerciseNumber,
+                  userScore: score,
+                  maxScore: maxScore,
+                  page: widget.page,
+                )
               : (widget.endingTest
-              ? ShowImprovement(
-            title: widget.exerciseName,
-            description: widget.description,
-            exercise: widget.exerciseNumber,
-            yourScore: score,
-            maximum: widget.questions.length.toDouble(),
-            page: widget.page,
-          )
-              : ProgressScreen(
-            name: widget.oldName,
-            userScore: score,
-            maxScore: maxScore,
-            exercise: widget.exerciseString,
-          )),
+                  ? ShowImprovement(
+                      title: widget.exerciseName,
+                      description: widget.description,
+                      exercise: widget.exerciseNumber,
+                      yourScore: score,
+                      maximum: widget.questions.length.toDouble(),
+                      page: widget.page,
+                    )
+                  : ProgressScreen(
+                      name: widget.oldName,
+                      userScore: score,
+                      maxScore: maxScore,
+                      exercise: widget.exerciseString,
+                    )),
         ),
       );
     }
   }
 
-  ImageIcon createAnswerIcon(BuildContext context,
-      String answerLetter,
-      bool coloredIcon,) {
+  ImageIcon createAnswerIcon(
+    BuildContext context,
+    String answerLetter,
+    bool coloredIcon,
+  ) {
     String theme =
-    Theme
-        .of(context)
-        .brightness == Brightness.dark ? "black" : "black";
+        Theme.of(context).brightness == Brightness.dark ? "black" : "black";
     return ImageIcon(
       coloredIcon
           ? answerLetter == "A"
-          ? AssetImage('assets/icons/a_filled.png')
-          : answerLetter == "B"
-          ? AssetImage('assets/icons/b_filled.png')
-          : answerLetter == "C"
-          ? AssetImage('assets/icons/c_filled.png')
-          : AssetImage('assets/icons/d_filled.png')
+              ? AssetImage('assets/icons/a_filled.png')
+              : answerLetter == "B"
+                  ? AssetImage('assets/icons/b_filled.png')
+                  : answerLetter == "C"
+                      ? AssetImage('assets/icons/c_filled.png')
+                      : AssetImage('assets/icons/d_filled.png')
           : answerLetter == "A"
-          ? AssetImage('assets/icons/a_outlined_$theme.png')
-          : answerLetter == "B"
-          ? AssetImage('assets/icons/b_outlined_$theme.png')
-          : answerLetter == "C"
-          ? AssetImage('assets/icons/c_outlined_$theme.png')
-          : AssetImage('assets/icons/d_outlined_$theme.png'),
+              ? AssetImage('assets/icons/a_outlined_$theme.png')
+              : answerLetter == "B"
+                  ? AssetImage('assets/icons/b_outlined_$theme.png')
+                  : answerLetter == "C"
+                      ? AssetImage('assets/icons/c_outlined_$theme.png')
+                      : AssetImage('assets/icons/d_outlined_$theme.png'),
       color: coloredIcon
           ? isCorrect(answerLetter)
-          ? Colors.green
-          : Colors.red
-          : Theme
-          .of(context)
-          .colorScheme
-          .onSurface,
-      size: 0.062 * MediaQuery
-          .of(context)
-          .size
-          .width,
+              ? Colors.green
+              : Colors.red
+          : Theme.of(context).colorScheme.onSurface,
+      size: 0.062 * MediaQuery.of(context).size.width,
     );
   }
 
-  ImageIcon buildAnswerChecks(BuildContext context,
-      String? usersAnswer,
-      String answerLetter,) {
-    Size size = MediaQuery
-        .of(context)
-        .size;
+  ImageIcon buildAnswerChecks(BuildContext context, String? usersAnswer,
+      String answerLetter, String questionId) {
+    Size size = MediaQuery.of(context).size;
     if (usersAnswer == null) {
       return createAnswerIcon(context, answerLetter, false);
     }
     return (usersAnswer == answerLetter ||
-        widget.questions[currentQuestionId]!.correct[answerLetter]!)
+            widget.questions[questionId]!.correct[answerLetter]!)
         ? createAnswerIcon(context, answerLetter, true)
         : createAnswerIcon(context, answerLetter, false);
   }
 
-  ListTile buildAnswer(BuildContext context, String answerLetter) {
-    Size size = MediaQuery
-        .of(context)
-        .size;
+  ListTile buildLetterAnswer(
+      BuildContext context, String answerLetter, String questionId) {
+    Size size = MediaQuery.of(context).size;
     return ListTile(
       contentPadding: EdgeInsets.only(
         left: 0.008 * size.width,
         right: 0.012 * size.width,
       ),
-      leading: buildAnswerChecks(context, selectedOption, answerLetter),
+      leading:
+          buildAnswerChecks(context, selectedOption, answerLetter, questionId),
       title: HtmlAsTextSpan(
-        "${widget.questions[currentQuestionId]?.answers[answerLetter]}",
+        "${widget.questions[questionId]?.answers[answerLetter]}",
         fontSize: 0.0155 * size.height,
       ),
-      // title: Text(
-      //   "${quizQuestions.values.elementAt(questionIndex).getAnswer(answerLetter)}",
-      //   style: TextStyle(fontSize: 0.015 * size.height),
-      // ),
       onTap: selectedOption == null
           ? () {
-        setState(() {
-          selectedOption = answerLetter;
-          answers[currentQuestionId] =
-          widget.questions[currentQuestionId]!.correct[answerLetter]!;
-        });
-      }
+              setState(() {
+                selectedOption = answerLetter;
+                answers[questionId] = selectedOption!;
+              });
+            }
           : null,
     );
   }
@@ -301,9 +319,9 @@ class _QuizModelState extends State<QuizModel> {
   void startTimer() {
     _timer = Timer.periodic(
       const Duration(seconds: 1),
-          (timer) {
+      (timer) {
         setState(
-              () {
+          () {
             _time--;
             if (_time <= 0) {
               handleContinue();
@@ -316,29 +334,31 @@ class _QuizModelState extends State<QuizModel> {
 
   @override
   void dispose() {
+    player.audioCache.clearAll();
+    player.dispose();
     _timer.cancel();
     super.dispose();
   }
 
-  Column buildTitle(BuildContext context, Size size) {
+  Column buildTitle(
+      BuildContext context, Size size, int questionIndex, String questionId) {
     return Column(
       children: [
         if (!widget.centerTitle)
           Row(
             children: [
-              Padding(padding: EdgeInsets.only(left: size.width / 11),
+              Padding(
+                padding: EdgeInsets.only(left: size.width / 11),
                 child: Text(
-                  "${widget.title}".replaceAll(
-                      "{}", "${currentQuestionIndex + 1}"),
+                  "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
                   style: TextStyle(fontSize: 0.025 * size.height),
                   textAlign: TextAlign.start,
-                ),),
+                ),
+              ),
               SizedBox(width: 0.018 * size.width),
               InkWell(
                 child: Image.asset(
-                  Theme
-                      .of(context)
-                      .brightness == Brightness.dark
+                  Theme.of(context).brightness == Brightness.dark
                       ? "assets/help_icon_dark.png"
                       : "assets/help_icon_light.png",
                   width: 0.056 * size.width,
@@ -347,7 +367,7 @@ class _QuizModelState extends State<QuizModel> {
                   ReportQuestionDialog(
                     context,
                     null,
-                    widget.questions[currentQuestionId]!.question,
+                    widget.questions[questionId]!.question,
                   );
                 },
               ),
@@ -368,9 +388,9 @@ class _QuizModelState extends State<QuizModel> {
           ),
         if (widget.centerTitle)
           Text(
-            "${widget.title}".replaceAll("{}", "${currentQuestionIndex + 1}"),
+            "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
             style: TextStyle(
-              fontSize: 0.039 * size.height,
+              fontSize: 0.041 * size.height,
               fontWeight: FontWeight.w600,
             ),
             textAlign: TextAlign.center,
@@ -385,282 +405,348 @@ class _QuizModelState extends State<QuizModel> {
         if (widget.progressBar)
           AnimatedProgressBar(
             answerCount: widget.questions.length,
-            answers: answers,
+            answers: {
+              for (var answerId in answers.keys)
+                answerId: widget.questions[answerId] == null
+                    ? false
+                    : widget.questions[answerId]!.correct[answers[answerId]] ??
+                        false,
+            },
           ),
       ],
     );
   }
 
-  Widget buildQuestionBody(BuildContext context, Size size) {
+  Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
+    return widget.inlineTaskAndAnswers
+        ? Row(
+            children: [
+              Text("${questionId}"),
+              SizedBox(
+                width: size.width * 0.025,
+              ),
+              Text(
+                widget.questions[questionId]!.question,
+                style: TextStyle(
+                  fontSize: size.width * 0.035,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          )
+        : widget.singleTextQuestion
+            ? Text(
+                widget.questions[questionId]!.question,
+                style: TextStyle(
+                  fontSize: size.width * 0.035,
+                  fontWeight: FontWeight.w600,
+                ),
+              )
+            : QuizQuestionTask(
+                question: widget.questions[questionId]!,
+              );
+  }
+
+  Widget buildBoxAnswer(
+      BuildContext context, Size size, String questionId, String answerId) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 0.15 * size.height,
+          width: size.width * 0.71,
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                selectedOption = answerId;
+                answers[questionId] = selectedOption!;
+              });
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: selectedOption == null
+                      ? [
+                          Theme.of(context).colorScheme.primary,
+                          Theme.of(context).colorScheme.secondary
+                        ]
+                      : selectedOption == answerId
+                          ? (widget.questions[questionId]!.correct[answerId]!
+                              ? [
+                                  Colors.green,
+                                  Colors.green,
+                                ]
+                              : [Colors.red, Colors.red])
+                          : widget.questions[questionId]!.correct[answerId]!
+                              ? [Colors.green, Colors.green]
+                              : [
+                                  Theme.of(context).colorScheme.primary,
+                                  Theme.of(context).colorScheme.secondary
+                                ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius:
+                    BorderRadius.circular(35), // for pill-like corners
+              ),
+              child: Center(
+                child: Text(
+                  widget.questions[questionId]!.answers[answerId]!,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onPrimary,
+                    fontSize: size.width * 0.07,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(height: 0.04 * size.height),
+      ],
+    );
+  }
+
+  Widget buildTextInput(BuildContext context, Size size, String questionId,
+      {double fontSize = 1.0}) {
+    return Center(
+      child: TextField(
+        controller: _textEditingControllers[questionId],
+        enableSuggestions: false,
+        onChanged: (value) {
+          value = value.trim();
+          if (widget.inputTextNumbersOnly) {
+            try {
+              value = double.parse(value.replaceAll(',', '.')).toString();
+            } catch (e) {
+              value = "";
+            }
+          }
+          for (int i = 0; i < widget.questions[questionId]!.answers.length; i++
+          ) {
+            print("value: $value");
+            print("answer: ${widget.questions[questionId]!.answers.values.elementAt(i)}");
+            print("score: ${widget.questions[questionId]!.score.values.elementAt(i)}");
+            if (widget.questions[questionId]?.answers.values.elementAt(i) ==
+                value) {
+              setState(() {
+                selectedOption =
+                    widget.questions[questionId]?.answers.keys.elementAt(i);
+                if (widget.showMultipleQuestions) {
+                  answers[questionId] = selectedOption!;
+                }
+              });
+              break;
+            }
+          }
+        },
+        style: TextStyle(
+          height: 0.9,
+          fontSize: 14 * fontSize,
+          // e.g., set text color if desired
+          color: Theme.of(context).colorScheme.onSurface,
+        ),
+        decoration: InputDecoration(
+          hintText: "",
+          hintStyle: TextStyle(
+            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+          ),
+          // Use a big border radius for the “pill” look
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(50),
+            borderSide: const BorderSide(
+              color: Colors.white,
+              // pick your outline color
+              width: 1.0,
+            ),
+          ),
+          // Make sure the enabled/disabled/focused borders match
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(50),
+            borderSide: const BorderSide(
+              color: Colors.white,
+              width: 1.0,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(50),
+            borderSide: const BorderSide(
+              color: Colors.white,
+              width: 1.0,
+            ),
+          ),
+          // Optional: adjust padding so text is vertically/horizontally centered
+          contentPadding: EdgeInsets.only(
+            top: size.height / 60,
+            left: size.width / 50,
+            right: size.width / 50,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildAnswers(BuildContext context, Size size, String questionId) {
     return Container(
       margin: EdgeInsets.only(
         left: size.width / 11,
         right: size.width / 14,
       ),
-      child: widget.singleTextQuestion ? Text(
-        widget.questions[currentQuestionId]!.question,
-        style: TextStyle(
-          fontSize: size.width * 0.035,
-          fontWeight: FontWeight.w600,
-        ),
-      ) : QuizQuestionTask(
-        question: widget.questions[currentQuestionId]!,
-      ),
+      child: widget.answerLayout == QuizModelAnswerLayout.boxes
+          ? Column(
+              children: [
+                for (int i = 0;
+                    i < widget.questions[questionId]!.answers.length;
+                    i++)
+                  buildBoxAnswer(context, size, questionId,
+                      widget.questions[questionId]!.answers.keys.elementAt(i)),
+              ],
+            )
+          : widget.answerLayout == QuizModelAnswerLayout.textInput
+              ? Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 0.02 * size.width,
+                    vertical: 0.04 * size.height,
+                  ),
+                  child: buildTextInput(context, size, questionId,
+                    fontSize: 1.3,
+                  ),
+                )
+              : widget.answerLayout == QuizModelAnswerLayout.list
+                  ? Column(
+                      children: [
+                        for (int i = 0;
+                            i < widget.questions[questionId]!.answers.length;
+                            i++)
+                          buildLetterAnswer(
+                              context,
+                              widget.questions[questionId]!.answers.keys
+                                  .elementAt(i),
+                              questionId),
+                      ],
+                    )
+                  : Container(),
     );
   }
 
-  Widget buildAnswers(BuildContext context, Size size) {
-    if (widget.answerLayout == QuizModelAnswerLayout.boxes) {
-      return Column(
-        children: [
-          for (int i = 0; i <
-              widget.questions[currentQuestionId]!.answers.length; i++)
-            Column(
-              children: [
-                SizedBox(
-                  height: 0.15 * size.height,
-                  width: size.width * 0.71,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        selectedOption = widget
-                            .questions[currentQuestionId]!
-                            .answers
-                            .keys
-                            .elementAt(i);
-                        answers[currentQuestionId] = widget
-                            .questions[currentQuestionId]!
-                            .correct[selectedOption]!;
-                      });
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: selectedOption == null
-                              ? [
-                            Theme
-                                .of(context)
-                                .colorScheme
-                                .primary,
-                            Theme
-                                .of(context)
-                                .colorScheme
-                                .secondary
-                          ]
-                              : selectedOption ==
-                              widget
-                                  .questions[
-                              currentQuestionId]!
-                                  .answers
-                                  .keys
-                                  .elementAt(i)
-                              ? (widget
-                              .questions[
-                          currentQuestionId]!
-                              .correct
-                              .values
-                              .elementAt(i)
-                              ? [
-                            Colors.green,
-                            Colors.green
-                          ]
-                              : [Colors.red, Colors.red])
-                              : widget
-                              .questions[
-                          currentQuestionId]!
-                              .correct
-                              .values
-                              .elementAt(i)
-                              ? [
-                            Colors.green,
-                            Colors.green
-                          ]
-                              : [
-                            Theme
-                                .of(context)
-                                .colorScheme
-                                .primary,
-                            Theme
-                                .of(context)
-                                .colorScheme
-                                .secondary
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(
-                            35), // for pill-like corners
-                      ),
-                      child: Center(
-                        child: Text(
-                          widget.questions[currentQuestionId]!
-                              .answers.values
-                              .elementAt(i),
-                          style: TextStyle(
-                            color: Theme
-                                .of(context)
-                                .colorScheme
-                                .onPrimary,
-                            fontSize: size.width * 0.07,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
+  Widget buildQuestion(
+      BuildContext context, Size size, String questionId, int questionIndex) {
+    return Column(
+      children: [
+        widget.inlineTaskAndAnswers
+            ? Container(
+                margin: EdgeInsets.only(
+                  left: size.width / 11,
+                  right: size.width / 14,
+                ),
+                child: Row(
+                  children: [
+                    this.buildQuestionTask(context, size, questionId),
+                    SizedBox(width: 0.015 * size.width),
+                    SizedBox(
+                      width: 0.15 * size.width,
+                      height: 0.03 * size.height,
+                      child: buildTextInput(context, size, questionId,
+                          fontSize: 1,
                       ),
                     ),
-                  ),
+                  ],
                 ),
-                SizedBox(height: 0.04 * size.height),
-              ],
-            ),
-        ],
-      );
-    }
-    if (widget.answerLayout == QuizModelAnswerLayout.textInput) {
-      return Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 0.02 * size.width,
-          vertical: 0.04 * size.height,
-        ),
-        child: TextField(
-          controller: _textInputController,
-          enableSuggestions: false,
-          onChanged: (value) {
-            selectedOption = value.trim();
-          },
-          style: TextStyle(
-            // e.g., set text color if desired
-            color: Theme
-                .of(context)
-                .colorScheme
-                .onSurface,
-          ),
-          decoration: InputDecoration(
-            hintText: "Enter your answer",
-            hintStyle: TextStyle(
-              color: Theme
-                  .of(context)
-                  .colorScheme
-                  .onSurface
-                  .withOpacity(0.7),
-            ),
-            // Use a big border radius for the “pill” look
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(
-                color: Colors.white,
-                // pick your outline color
-                width: 1.0,
+              )
+            : Column(
+                children: [
+                  if (widget.showQuestionTask ||
+                      widget.answerLayout == QuizModelAnswerLayout.list ||
+                      widget.answerLayout == QuizModelAnswerLayout.textInput)
+                    Container(
+                      margin: EdgeInsets.only(
+                        left: size.width / 11,
+                        right: size.width / 14,
+                      ),
+                      child: this.buildQuestionTask(context, size, questionId),
+                    ),
+                  SizedBox(height: 0.01 * size.height),
+                  this.buildAnswers(context, size, questionId),
+                ],
               ),
-            ),
-            // Make sure the enabled/disabled/focused borders match
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(
-                color: Colors.white,
-                width: 1.0,
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(
-                color: Colors.white,
-                width: 1.0,
-              ),
-            ),
-            // Optional: adjust padding so text is vertically/horizontally centered
-            contentPadding: const EdgeInsets.symmetric(
-              vertical: 8.0,
-              horizontal: 16.0,
-            ),
-          ),
-        ),
-      );
-    }
-    if (widget.answerLayout == QuizModelAnswerLayout.list) {
-      return Column(
-        children: [
-          buildAnswer(context, "A"),
-          buildAnswer(context, "B"),
-          if (widget.questions[currentQuestionId]!
-              .answers["C"] !=
-              null)
-            buildAnswer(context, "C"),
-          if (widget.questions[currentQuestionId]!
-              .answers["D"] !=
-              null)
-            buildAnswer(context, "D"),
-        ],
-      );
-    }
-    return Container();
+      ],
+    );
   }
 
-    @override
-    Widget build(BuildContext context) {
-      Size size = MediaQuery
-          .of(context)
-          .size;
+  Widget buildQuestions(
+      BuildContext context, Size size, String questionId, int questionIndex) {
+    print("building question: ${widget.questions[questionId]!.question}");
+    return Column(
+      children: [
+        this.buildTitle(context, size, questionIndex, questionId),
+        SizedBox(height: 0.035 * size.height),
+        if (!widget.showMultipleQuestions)
+          buildQuestion(context, size, questionId, questionIndex),
+        if (widget.showMultipleQuestions)
+          for (int i = 0; i < widget.questions.length; i++)
+            Column(
+              children: [
+                buildQuestion(
+                    context, size, widget.questions.keys.elementAt(i), i),
+                SizedBox(height: 0.025 * size.height),
+              ],
+            )
+      ],
+    );
+  }
 
-      return Scaffold(
-        appBar: appBar(context, ""),
-        body: Stack(
-          children: [
-            Align(
-              alignment: Alignment(
-                  Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1),
-              child: Text(
-                "WS",
-                style: TextStyle(
-                  fontSize: size.width / 279,
-                  color: Colors.white.withOpacity(0.3),
-                ),
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    print("score: $score");
+
+    return Scaffold(
+      appBar: appBar(context, ""),
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment(
+                Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1),
+            child: Text(
+              "WS",
+              style: TextStyle(
+                fontSize: size.width / 279,
+                color: Colors.white.withOpacity(0.3),
               ),
             ),
-            Align(
-              alignment: Alignment(-1, -1),
-              child: SingleChildScrollView(
-                child: Container(
+          ),
+          Align(
+            alignment: Alignment(-1, -1),
+            child: SingleChildScrollView(
+              child: Container(
                   width: size.width * 0.9,
                   margin: EdgeInsets.only(
                     left: size.height / 30,
                     right: size.height / 30,
                     bottom: size.height / 9,
                   ),
-                  child: Column(
-                    children: [
-                      this.buildTitle(context, size),
-                      SizedBox(height: 0.04 * size.height),
-                      if (widget.answerLayout == QuizModelAnswerLayout.list ||
-                          widget.answerLayout ==
-                              QuizModelAnswerLayout.textInput)
-                        this.buildQuestionBody(context, size),
-                      SizedBox(height: 0.01 * size.height),
-
-                      this.buildAnswers(context, size),
-                    ],
-                  ),
-                ),
+                  child: buildQuestions(
+                      context, size, currentQuestionId, currentQuestionIndex)),
+            ),
+          ),
+          Align(
+            alignment: Alignment(0, 0.9),
+            child: SizedBox(
+              height: size.height * 0.065,
+              width: size.width * 0.71,
+              child: RedirectButton(
+                onClick: handleContinue,
+                text: 'Continue',
+                width: size.width,
+                requirement:
+                    widget.answerLayout == QuizModelAnswerLayout.list ||
+                            widget.answerLayout == QuizModelAnswerLayout.boxes
+                        ? selectedOption != null
+                        : true,
               ),
             ),
-            Align(
-              alignment: Alignment(0, 0.9),
-              child: SizedBox(
-                height: size.height * 0.065,
-                width: size.width * 0.71,
-                child: RedirectButton(
-                  onClick: handleContinue,
-                  text: 'Continue',
-                  width: size.width,
-                  requirement:
-                  widget.answerLayout == QuizModelAnswerLayout.list ||
-                      widget.answerLayout == QuizModelAnswerLayout.boxes
-                      ? selectedOption != null
-                      : true,
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+          ),
+        ],
+      ),
+    );
   }
+}

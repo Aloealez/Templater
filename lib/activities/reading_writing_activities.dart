@@ -149,8 +149,6 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
                             text2: "",
                             fontSize: 0.023 * size.height * 1,
                             onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(questionSubcategory)),
-                            color1: Theme.of(context).colorScheme.primary,
-                            color2: Theme.of(context).colorScheme.secondary,
                             zero: 1,
                             blocked: false,
                             textWidth: 0.45,

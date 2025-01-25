@@ -59,8 +59,6 @@ class _MathActivities extends State<MathActivities> {
         text2: txt2,
         fontSize: 0.023 * size.height * fontSize,
         onTapRoute: route,
-        color1: Theme.of(context).colorScheme.primary,
-        color2: Theme.of(context).colorScheme.secondary,
         zero: zero,
         blocked: false,
         textWidth: 0.45,

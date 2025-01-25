@@ -26,19 +26,22 @@ class _MathComingSoon extends State<MathComingSoon> {
   void initState() {
     super.initState();
     Timer.periodic(Duration(milliseconds: 100), (Timer timer) {
-      setState(() {
-        if (currentIndex < fullText.length) {
-          visibleText += fullText[currentIndex];
-          currentIndex++;
-          if (visibleText.length > 5) {
-            lastText += visibleText[0];
-            visibleText = visibleText.substring(1);
+      if (mounted)
+      {
+        setState(() {
+          if (currentIndex < fullText.length) {
+            visibleText += fullText[currentIndex];
+            currentIndex++;
+            if (visibleText.length > 5) {
+              lastText += visibleText[0];
+              visibleText = visibleText.substring(1);
+            }
+            opacity = 1.0;
+          } else {
+            timer.cancel();
           }
-          opacity = 1.0;
-        } else {
-          timer.cancel();
-        }
-      });
+        });
+      }
     });
   }
 
@@ -57,7 +60,7 @@ class _MathComingSoon extends State<MathComingSoon> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: size.width / 15,
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.onSurface,
 
                   ),
                 ),
@@ -81,14 +84,14 @@ class _MathComingSoon extends State<MathComingSoon> {
                               text: lastText,
                               style: TextStyle(
                                 fontSize: size.height * 0.02,
-                                color: Colors.white,
+                                color: Theme.of(context).colorScheme.onSurface,
                               ),
                               children: [
                                 TextSpan(
                                     text: visibleText,
                                     style: TextStyle(
                                       fontSize: size.height * 0.02,
-                                      color: Colors.white,
+                                      color: Theme.of(context).colorScheme.onSurface,
                                     ),
                                 ),
                               ],

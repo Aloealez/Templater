@@ -33,7 +33,6 @@ class _AnimatedTimeBarState extends State<AnimatedTimeBar> {
   @override
   void didUpdateWidget(AnimatedTimeBar oldWidget) {
     timePassed = widget.totalTime - widget.timeLeft;
-    print('timePassed: $timePassed' ' lastTimePassed: $lastTimePassed');
     if (timePassed != lastTimePassed) {
       setState(() {
         animatedWidth = 0.0;
@@ -55,7 +54,7 @@ class _AnimatedTimeBarState extends State<AnimatedTimeBar> {
     return Align(
       alignment: Alignment.center,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(79),
         child: Container(
           width: size.width * 0.9,
           height: size.height * 0.005,

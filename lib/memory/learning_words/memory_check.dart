@@ -150,7 +150,7 @@ class _Memory2 extends State<Memory2> {
                     width: size.width * 0.75,
                     child: RedirectButton(
                       route: QuizModel(
-                        "Memory",
+                        "Memory {}",
                         "Memory",
                         60,
                         initialTest: widget.initialTest,

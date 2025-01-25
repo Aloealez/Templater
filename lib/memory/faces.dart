@@ -60,20 +60,25 @@ class _Faces extends State<Faces> {
                   SizedBox(
                     height: size.height / 50,
                   ),
-                  Text(
-                    "Exercise 1 - Faces memory ",
-                    style: TextStyle(fontSize: size.width / 20),
+                  Center(
+                    child: Text(
+                      "Exercise 1 - Faces memory ",
+                      style: TextStyle(fontSize: size.width / 20),
+                    ),
                   ),
                 ],
               ),
               SizedBox(
                 height: size.height / 15,
               ),
-              Text(
-                "Have you seen this face before?",
-                style: TextStyle(
-                  fontSize: size.width / 20,
-                  fontWeight: FontWeight.bold,
+              Center(
+                child: Text(
+                  "Have you seen this face before?",
+                  style: TextStyle(
+                    fontSize: size.width / 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
               SizedBox(

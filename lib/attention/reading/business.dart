@@ -27,8 +27,6 @@ class _Business extends State<Business> {
       text2: txt2,
       fontSize: 0.025 * size.height * fontSize,
       onTapRoute: route,
-      color1: Theme.of(context).colorScheme.primary,
-      color2: Theme.of(context).colorScheme.secondary,
       zero: 0.8,
       textWidth: 0.4,
       title: true,

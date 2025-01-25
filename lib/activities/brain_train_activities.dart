@@ -70,8 +70,6 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
         text2: txt2,
         fontSize: 0.023 * size.height * fontSize,
         onTapRoute: route,
-        color1: Theme.of(context).colorScheme.primary,
-        color2: Theme.of(context).colorScheme.secondary,
         zero: zero,
         blocked: false,
         textWidth: 0.45,
@@ -210,7 +208,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 0.02 * size.height),
+                        SizedBox(height: 0.03 * size.height),
                         createActivity2(
                           context,
                           "learning_words",

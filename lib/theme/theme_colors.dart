@@ -4,9 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 ColorScheme defaultLightColors = const ColorScheme.light(
   primary: Color(0xFF8D97FC),
-  onPrimary: Color(0xFF000000),
+  onPrimary: Color(0xFFFFFFFF),
   secondary: Color(0xFF858AE3),
-  onSecondary: Color(0xFF000000),
+  onSecondary: Color(0xFFFFFFFF),
   tertiary: Color(0xFF1B9AAA),
   onTertiary: Color(0xFF000000),
   primaryContainer: Color(0xFF12263A),

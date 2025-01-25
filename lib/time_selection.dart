@@ -448,16 +448,16 @@ class _TimeSelectionState extends State<TimeSelection> {
               Text(
                 "Pick Your Daily",
                 style: TextStyle(
-                  fontSize: size.width / 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: size.width / 13,
+                  fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,
               ),
               Text(
                 "Practice Time",
                 style: TextStyle(
-                  fontSize: size.width / 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: size.width / 13,
+                  fontWeight: FontWeight.w600,
                   // decoration: TextDecoration.underline,
                 ),
                 textAlign: TextAlign.center,

@@ -9,8 +9,8 @@ class ActivityButton extends StatelessWidget {
   final String text2;
   final double fontSize;
   final Widget onTapRoute;
-  final Color color1;
-  final Color color2;
+  final Color? leftColorGradient;
+  final Color? rightColorGradient;
   final double zero;
   final bool blocked;
   final double textWidth;
@@ -21,15 +21,15 @@ class ActivityButton extends StatelessWidget {
   final String skill;
   final List<String> plan;
 
-  const ActivityButton(
+  ActivityButton(
     BuildContext context, {
     required this.img,
     required this.text1,
     required this.text2,
     required this.fontSize,
     required this.onTapRoute,
-    required this.color1,
-    required this.color2,
+    this.leftColorGradient = null,
+    this.rightColorGradient = null,
     this.zero = 1,
     this.blocked = false,
     this.textWidth = 0.45,
@@ -42,8 +42,12 @@ class ActivityButton extends StatelessWidget {
     super.key,
   });
 
+
   @override
   Widget build(BuildContext context) {
+    Color color1 = leftColorGradient != null ? leftColorGradient! : Theme.of(context).colorScheme.primary;
+    Color color2 = rightColorGradient != null ? rightColorGradient! : Theme.of(context).colorScheme.secondary;
+
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
@@ -65,7 +69,7 @@ class ActivityButton extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -77,7 +81,7 @@ class ActivityButton extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Theme.of(context).colorScheme.shadow.withOpacity(1),
+                      color: Theme.of(context).colorScheme.shadow.withAlpha(139),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(5, 5),
@@ -130,7 +134,7 @@ class ActivityButton extends StatelessWidget {
                                 Text(
                                   text1,
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Theme.of(context).colorScheme.onPrimary,
                                     fontSize: fontSize,
                                     fontWeight: FontWeight.bold,
                                     height: 1.2,
@@ -149,7 +153,7 @@ class ActivityButton extends StatelessWidget {
                                     : Text(
                                   text2,
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Theme.of(context).colorScheme.onPrimary,
                                     fontSize: zero * fontSize,
                                     fontWeight: FontWeight.bold,
                                     height: 1.2,

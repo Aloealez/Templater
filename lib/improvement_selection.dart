@@ -28,7 +28,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 0.02 * size.height),
+              SizedBox(height: 0.03 * size.height),
               Padding(
                 padding: EdgeInsets.only(
                   right: size.width / 10,
@@ -38,25 +38,25 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                     Text(
                       "Choose",
                       style: TextStyle(
-                        fontSize: size.width / 13,
-                        fontWeight: FontWeight.w400,
-                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: size.width / 10,
+                        fontWeight: FontWeight.w500,
+                        color: Theme.of(context).colorScheme.onSurface,
                       ),
                       textAlign: TextAlign.center,
                     ),
                     Text(
                       "Your Program",
                       style: TextStyle(
-                        fontSize: size.width / 13,
-                        fontWeight: FontWeight.w400,
-                        color : Theme.of(context).colorScheme.onSecondary,
+                        fontSize: size.width / 11,
+                        fontWeight: FontWeight.w500,
+                        color : Theme.of(context).colorScheme.onSurface,
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: size.height / 20),
+              SizedBox(height: size.height * 0.06),
               ImprovementButton(
                 text: "SATs Prep",
                 width: size.width,

@@ -55,7 +55,10 @@ class _Settings extends State<Settings> {
         } else if (route != null) {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => route),
+            PageTransition(
+              child: route,
+              type: PageTransitionType.fade,
+            ),
           );
         }
       },

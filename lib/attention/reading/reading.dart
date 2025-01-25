@@ -81,14 +81,16 @@ class _Reading extends State<Reading> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Text(
-              "Book Reading Out Loud",
-              style: TextStyle(fontSize: size.width / 18),
-              textAlign: TextAlign.center,
+            Center(
+              child: Text(
+                "Book Reading Out Loud",
+                style: TextStyle(fontSize: size.width / 18),
+                textAlign: TextAlign.center,
+              ),
             ),
             SizedBox(height: 0.02 * size.height),
             Text(
-              "We won’t check if you read books, but you will be able to put a tick each day you do.",
+              "We won’t check if you read books, but you will be able to put a tick each day you do 😉",
               style: TextStyle(fontSize: size.width / 25),
             ),
             SizedBox(height: 0.02 * size.height),
@@ -124,7 +126,7 @@ class _Reading extends State<Reading> {
                 ),
                 SizedBox(width: 0.03 * size.width),
                 Text(
-                  "Today I read a Book",
+                  "Today I Read a Book",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 0.025 * size.height,
@@ -175,8 +177,6 @@ class _Reading extends State<Reading> {
                         text2: "Novels",
                         fontSize: 0.025 * size.height,
                         onTapRoute: const Classic(),
-                        color1: Theme.of(context).colorScheme.primary,
-                        color2: Theme.of(context).colorScheme.secondary,
                         textWidth: 0.35,
                       ),
                       ActivityButton(
@@ -186,8 +186,8 @@ class _Reading extends State<Reading> {
                         text2: "Money",
                         fontSize: 0.025 * size.height,
                         onTapRoute: const Business(),
-                        color1: const Color.fromARGB(255, 143, 0, 226),
-                        color2: const Color.fromARGB(255, 101, 0, 184),
+                        leftColorGradient: const Color.fromARGB(255, 143, 0, 226),
+                        rightColorGradient: const Color.fromARGB(255, 101, 0, 184),
                         textWidth: 0.35,
                       ),
                       ActivityButton(
@@ -197,8 +197,8 @@ class _Reading extends State<Reading> {
                         text2: "Development",
                         fontSize: 0.025 * size.height,
                         onTapRoute: const PersonalDevelopment(),
-                        color1: const Color.fromARGB(255, 221, 65, 221),
-                        color2: const Color.fromARGB(255, 137, 39, 176),
+                        leftColorGradient: const Color.fromARGB(255, 221, 65, 221),
+                        rightColorGradient: const Color.fromARGB(255, 137, 39, 176),
                         textWidth: 0.35,
                       ),
                     ],

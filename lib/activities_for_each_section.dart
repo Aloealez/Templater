@@ -1,5 +1,4 @@
 import 'package:brainace_pro/attention/long_term_concentration_video.dart';
-import 'package:brainace_pro/attention/strong_concentration.dart';
 import 'package:brainace_pro/builders/idioms_builder.dart';
 import 'package:brainace_pro/investing/menu.dart';
 import 'package:brainace_pro/linguistic/hangman.dart';
@@ -27,6 +26,7 @@ import 'package:brainace_pro/memory/learning_words/memory.dart';
 import 'builders/grammar_mcq_builder.dart';
 import 'builders/correct_a_word_builder.dart';
 import 'builders/riddle_of_the_day_builder.dart';
+import 'builders/strong_concentration_builder.dart';
 import 'builders/vocabulary_builder.dart';
 
 var memoryBaseList = [
@@ -73,7 +73,7 @@ var memoryAllList = [
 ];
 
 var attentionBaseList = [
-  [StrongConcentration, "StrongConcentrationDesc", 5],
+  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
   [ShortTermConcentration, "ShortTermConcentration", 5],
   [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
   [Memory, "Memory", 10],
@@ -172,7 +172,7 @@ var linguisticAllList = [
 ];
 
 var logicalBaseList = [
-  [const StrongConcentration(), "StrongConcentrationDesc", 5],
+  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
   [const Riddles(), "Riddles", 10],
   [riddleOfTheDayBuilder, "RiddleOfTheDay", 3],
   [const Game2048(), "Game2048", 5],
@@ -217,7 +217,7 @@ var gamesBaseList = [
   [const Game2048(), "Game2048", 5],
   [const SudokuGame(), "SudokuGame", 5],
   [const FindTheNumber(), "FindTheNumber", 5],
-  [const MemoryGame1(), "MemoryGame1", 5],
+  [MemoryGame1, "MemoryGame1", 5],
 ];
 var gamesRestList = [
   const Reading(),
@@ -250,21 +250,29 @@ var satsBaseList = [
   [MemoryGame1, "MemoryGame1", 5],
   [Faces, "Faces", 5],
   [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
-];
-
-var satsRestList = [
-  const InvestingMenu(),
-  const Reading(),
-  const Scrabble(iteration: 1, allPoints: 0),
-  const Hangman(),
-  const SudokuGame(),
-  const Wordly(),
-  const Game2048(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
-  const FindTheNumber(),
+  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
+  [ShortTermConcentration, "ShortTermConcentration", 5],
+  [FindTheNumber, "FindTheNumber", 5],
+  [PoemsInfo, "PoemsInfo", 5],
+  [ReadingComprehension, "ReadingComprehension", 10],
+  [ListeningComprehensionVideo, "ListeningComprehensionVideo", 10],
+  [0, "SpellingMistakes", 5],
+  // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
+  [correctAWordBuilder, "CorrectAWord", 5],
+  [grammarMcqBuilder, "Grammar", 5],
+  [0, "SpellingMistakes", 5],
+  // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
+  [vocabularyBuilder, "Vocabulary", 5],
+  [idiomsBuilder, "Idioms", 5],
+  [const Scrabble(iteration: 1, allPoints: 0), "Scrabble", 5],
+  [const Hangman(), "Hangman", 5],
+  [const Wordly(), "Wordly", 5],
+  [const Riddles(), "Riddles", 10],
+  [riddleOfTheDayBuilder, "RiddleOfTheDay", 3],
+  [const Game2048(), "Game2048", 5],
+  [const SudokuGame(), "SudokuGame", 10],
+  [const InvestingMenu(), "InvestingMenu", 15],
+  [const FindTheNumber(), "FindTheNumber", 5],
 ];
 
 var satsAllList = [
@@ -273,18 +281,31 @@ var satsAllList = [
   'MemoryGame1',
   'Faces',
   'LongTermConcentrationVideo',
-  'InvestingMenu',
-  'Reading',
+  'StrongConcentrationDesc',
+  'ShortTermConcentration',
+  'FindTheNumber',
+  'PoemsInfo',
+  'ReadingComprehension',
+  'ListeningComprehensionVideo',
+  'SpellingMistakes',
+  'CorrectAWord',
+  'Grammar',
+  'SpellingMistakes',
+  'Vocabulary',
+  'Idioms',
   'Scrabble',
   'Hangman',
-  'SudokuGame',
   'Wordly',
+  'Riddles',
+  'RiddleOfTheDay',
   'Game2048',
+  'SudokuGame',
+  'InvestingMenu',
+  'Reading',
   'Meditation',
   'Meme',
   'Sport',
   'Yoga',
-  'FindTheNumber',
 ];
 
 var skillBaseLists = {
@@ -295,16 +316,6 @@ var skillBaseLists = {
   'games': gamesBaseList,
   // 'sats': SatsQuestionTypesRW.typesList,
   'sats': satsBaseList,
-};
-
-var skillRestLists = {
-  'memory': memoryRestList,
-  'attention': attentionRestList,
-  'linguistic': linguisticRestList,
-  'logical': logicalRestList,
-  'games': gamesRestList,
-  // 'sats': SatsQuestionTypesRW.typesList,
-  'sats': satsRestList,
 };
 
 var skillAllLists = {
