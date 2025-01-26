@@ -107,32 +107,32 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
         ),
         child: Stack(
           children: <Widget>[
-            Align(
-              alignment: Alignment(0, -0.93),
-              child: RichText(
-                text: TextSpan(
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: widget.title.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: size.width / 8,
-                      ),
-                    ),
-                  ],
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Align(
-              alignment: Alignment(0, -0.8),
-              child: Text(
-                widget.description,
-                style: TextStyle(fontSize: size.width / 22),
-              ),
-            ),
+            // Align(
+            //   alignment: Alignment(0, -0.93),
+            //   child: RichText(
+            //     text: TextSpan(
+            //       style: TextStyle(
+            //         color: Theme.of(context).colorScheme.onSurface,
+            //       ),
+            //       children: [
+            //         TextSpan(
+            //           text: widget.title,
+            //           style: TextStyle(
+            //             fontSize: size.width / 8,
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //     textAlign: TextAlign.center,
+            //   ),
+            // ),
+            // Align(
+            //   alignment: Alignment(0, -0.8),
+            //   child: Text(
+            //     widget.description,
+            //     style: TextStyle(fontSize: size.width / 22),
+            //   ),
+            // ),
             Align(
               alignment: Alignment(0, 0.15),
               child: Column(

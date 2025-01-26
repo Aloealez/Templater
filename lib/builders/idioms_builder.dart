@@ -14,7 +14,7 @@ FutureBuilder idiomsBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String level = prefs.getString("level") ?? "cpe";
-      return await convertToQuestions("idioms", level, 10);
+      return await convertToRandomQuestions("idioms", level, 10);
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {

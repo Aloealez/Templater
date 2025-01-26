@@ -129,7 +129,8 @@ class _RiddlesTest extends State<RiddlesTest> {
         ? const Center(child: CircularProgressIndicator())
         : LevelInstruction(
         "Riddles",
-        testTime: 4,
+        testTime: "8 minutes",
+        exercise: "Riddles",
         testActivitiesDescription: "In this exercise, you will be given a series of riddles to solve. You will have 4 minutes.",
         testScoreDescription: "For each correct answer you get 5 points, and for each wrong answer you will loose 2 points.",
         nextRouteBuilder: FutureBuilder(future: () async {} (), builder:
@@ -191,120 +192,5 @@ class _RiddlesTest extends State<RiddlesTest> {
         ),
         testRouteBuilder: MemoryGame2.routeBuilder,
     );
-
-    Size size = MediaQuery.of(context).size;
-
-    return questions.isEmpty & answers.isEmpty & correctAnswers.isEmpty
-        ? const Center(child: CircularProgressIndicator())
-        : Scaffold(
-            appBar: appBar(context, ""),
-            body: SingleChildScrollView(
-              child: Container(
-                margin: EdgeInsets.only(
-                  left: size.width / 15,
-                  right: size.width / 15,
-                  bottom: size.height / 20,
-                ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Align(
-                            alignment: Alignment.center,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Logical",
-                                  style: TextStyle(fontSize: 0.07 * size.height),
-                                ),
-                                Text(
-                                  "Thinking",
-                                  style: TextStyle(fontSize: 0.035 * size.height),
-                                ),
-                                SizedBox(height: 0.02 * size.height),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      "Exercise 2 -  Math riddles",
-                                      style: TextStyle(
-                                        fontSize: 0.043 * size.width,
-                                      ),
-                                    ),
-                                    SizedBox(width: 0.05 * size.width),
-                                    Icon(
-                                      Icons.timer,
-                                      size: 0.08 * min(size.width, size.height),
-                                      color: Theme.of(context).colorScheme.primary,
-                                    ),
-                                    const SizedBox(width: 8),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 0.05 * size.height),
-                          Text(
-                            questions[questionIndex],
-                            style: TextStyle(fontSize: 0.02 * size.height),
-                          ),
-                          SizedBox(height: 0.02 * size.height),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(height: 0.04 * size.height),
-                          SizedBox(
-                            height: size.height * 0.05,
-                            width: size.width * 0.75,
-                            child: RedirectButton(
-                              onClick: () {
-                                if (selectedOption == -1) return;
-
-                                if (selectedOption == correctAnswers[questionIndex]) {
-                                  score += 5;
-                                } else {
-                                  score -= 2;
-                                }
-
-                                if (passed < 1 || widget.initialTest || widget.endingTest) {
-                                  passed += 1;
-                                  setState(() {
-                                    questionIndex = Random().nextInt(numberOfQuestions);
-                                    selectedOption = -1;
-                                  });
-                                  return;
-                                }
-                                write((score.toInt() == 10) ? 1 : 0);
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ProgressScreen(
-                                      name: "long_term_concentration",
-                                      userScore: score,
-                                      maxScore: 10,
-                                      exercise: 'Riddles',
-                                    ),
-                                  ),
-                                );
-                              },
-                              text: 'Continue',
-                              width: size.width,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          );
   }
 }

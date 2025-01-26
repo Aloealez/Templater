@@ -263,7 +263,6 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                               page: longTermConcentrationBuilder(Random().nextInt(13), false, true),
                             )
                           : ProgressScreen(
-                              name: "short_term_concentration",
                               userScore: score,
                               maxScore: 3,
                               exercise: "ShortTermConcentration",

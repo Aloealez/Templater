@@ -282,7 +282,6 @@ class _WorkingMemory extends State<WorkingMemory> {
                               lastin: true,
                             )
                           : ProgressScreen(
-                              name: "working_memory",
                               userScore: score,
                               maxScore: 3,
                               exercise: "WorkingMemory",

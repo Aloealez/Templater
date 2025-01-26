@@ -6,6 +6,7 @@ import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'app_bar.dart';
 import 'attention/short_term_concentration.dart';
 import 'home.dart';
 import 'improvement_selection.dart';
@@ -211,7 +212,7 @@ class _TimeSelectionState extends State<TimeSelection> {
             } else {
               print("Questions: $questions");
               return QuizModel(
-                "Exercise",
+                "R&W - Exercise {}",
                 "R&W",
                 900,
                 page: Home(),
@@ -434,12 +435,13 @@ class _TimeSelectionState extends State<TimeSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: appBar(context, ""),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
             left: size.width / 10,
             right: size.width / 10,
-            top: size.height / 10,
+            top: size.height / 69,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

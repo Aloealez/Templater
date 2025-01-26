@@ -59,7 +59,6 @@ class _Hangman extends State<Hangman> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProgressScreen(
-                    name: "idioms",
                     userScore: mistakes.toDouble(),
                     maxScore: 8,
                     txt: "You got",
@@ -178,7 +177,7 @@ class _Hangman extends State<Hangman> {
                           right: size.width / 20,
                         ),
                         child: Text(
-                          '$mistakes letters mistaken',
+                          '$mistakes ${mistakes == 1 ? 'letter' : 'letters'} mistaken',
                           style: TextStyle(
                             fontSize: size.width / 20,
                             fontWeight: FontWeight.w500,

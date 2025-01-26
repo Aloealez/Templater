@@ -176,7 +176,6 @@ class _Wordly extends State<Wordly> {
         context,
         MaterialPageRoute(
           builder: (context) => ProgressScreen(
-            name: "wordly",
             userScore: (6 - act ~/ 6).toDouble(),
             maxScore: 6,
             exercise: 'Wordly',
@@ -237,7 +236,6 @@ class _Wordly extends State<Wordly> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => ProgressScreen(
-                              name: "wordly",
                               userScore: (6 - act ~/ 6).toDouble(),
                               maxScore: 6,
                               exercise: 'Wordly',

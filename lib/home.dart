@@ -236,6 +236,7 @@ class _Home extends State<Home> {
     print("basePlanTicked: $basePlanTicked");
 
     for (int i = 0; i < plan.length; ++i) {
+      print("plan[i] ${plan[i]}");
       newBasePlanTicked[i] = prefs.getString("${plan[i]}TickedDay$day") ?? "0";
       if (newBasePlanTicked[i] == "1") {
         newPoints += sectionTimes[plan[i]]!;

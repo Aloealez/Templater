@@ -137,7 +137,7 @@ class _LevelTestState extends State<LevelTest> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: size.height * 0.074,
+                  height: size.height * 0.064,
                   width: size.width * 0.39,
                   child: RedirectButton(
                     text: 'Start',
@@ -148,7 +148,7 @@ class _LevelTestState extends State<LevelTest> {
                 ),
                 SizedBox(width: 0.054 * size.width),
                 SizedBox(
-                  height: size.height * 0.074,
+                  height: size.height * 0.064,
                   width: size.width * 0.33,
                   child: RedirectButton(
                     text: 'Skip',

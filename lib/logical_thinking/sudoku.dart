@@ -133,7 +133,6 @@ class _SudokuGame extends State<SudokuGame> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProgressScreen(
-                    name: "sudoku",
                     userScore: lastScore.toDouble(),
                     maxScore: 20.0,
                     txt: "You now have",

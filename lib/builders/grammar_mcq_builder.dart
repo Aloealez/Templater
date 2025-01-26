@@ -15,7 +15,11 @@ FutureBuilder grammarMcqBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String level = prefs.getString("level") ?? "cpe";
-      return await convertToQuestions("grammar", level, 10);
+      Map<String, QuizQuestionData> questions = await convertToRandomQuestions("grammar", level, 10);
+      for (String key in questions.keys) {
+        questions[key]?.question += "\n\nWhich choice completes the text, so that it conforms to the rules of standard written English?";
+      }
+      return questions;
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {

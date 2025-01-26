@@ -155,6 +155,7 @@ class _Memory2 extends State<Memory2> {
                         60,
                         initialTest: widget.initialTest,
                         endingTest: widget.endingTest,
+                        singleTextQuestion: true,
                         initScore: calcScore().toDouble(),
                         initMaxScore: 4,
                         page: widget.initialTest
@@ -191,7 +192,7 @@ class _Memory2 extends State<Memory2> {
                                   "C": 1,
                                   "D": 1,
                                 },
-                                question: "Choose the definition.\n${picked[i].keys.first}",
+                                question: "Choose the definition: ${picked[i].keys.first}",
                               );
                             }(),
                         },

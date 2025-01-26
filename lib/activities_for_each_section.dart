@@ -37,20 +37,6 @@ var memoryBaseList = [
   [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
 ];
 
-var memoryRestList = [
-  const InvestingMenu(),
-  const Reading(),
-  const Scrabble(iteration: 1, allPoints: 0),
-  const Hangman(),
-  const SudokuGame(),
-  const Wordly(),
-  const Game2048(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
-  const FindTheNumber(),
-];
 
 var memoryAllList = [
   'Memory',
@@ -79,20 +65,6 @@ var attentionBaseList = [
   [Memory, "Memory", 10],
   [MemoryGame1, "MemoryGame1", 5],
   [FindTheNumber, "FindTheNumber", 5],
-];
-
-var attentionRestList = [
-  const Reading(),
-  const Scrabble(iteration: 1, allPoints: 0),
-  const Hangman(),
-  const SudokuGame(),
-  const Wordly(),
-  const Game2048(),
-  const InvestingMenu(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
 ];
 
 var attentionAllList = [
@@ -133,17 +105,6 @@ var linguisticBaseList = [
   [const Wordly(), "Wordly", 5],
 ];
 
-var linguisticRestList = [
-  const Reading(),
-  const SudokuGame(),
-  const Game2048(),
-  const InvestingMenu(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
-  const FindTheNumber(),
-];
 
 var linguisticAllList = [
   'Memory',
@@ -179,18 +140,7 @@ var logicalBaseList = [
   [const SudokuGame(), "SudokuGame", 10],
   [const InvestingMenu(), "InvestingMenu", 15],
 ];
-var logicalRestList = [
-  const Scrabble(iteration: 1, allPoints: 0),
-  const Hangman(),
-  const Wordly(),
-  const MemoryGame1(),
-  const Reading(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
-  const FindTheNumber(),
-];
+
 var logicalAllList = [
   'StrongConcentrationDesc',
   'Riddles',
@@ -219,15 +169,7 @@ var gamesBaseList = [
   [const FindTheNumber(), "FindTheNumber", 5],
   [MemoryGame1, "MemoryGame1", 5],
 ];
-var gamesRestList = [
-  const Reading(),
-  const PoemsInfo(),
-  const MeditationMinutes(),
-  const Meme(),
-  const Sport(),
-  const Yoga(),
-  const InvestingMenu(),
-];
+
 var gamesAllList = [
   'Scrabble',
   'Hangman',

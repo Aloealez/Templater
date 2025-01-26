@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'app_bar.dart';
 import 'time_selection.dart';
 
 
@@ -83,12 +84,13 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: appBar(context, ""),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
             left: size.width / 40,
             right: size.width / 40,
-            top: size.height / 10,
+            top: size.height / 69,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

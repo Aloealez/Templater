@@ -124,7 +124,6 @@ class _FindTheNumber extends State<FindTheNumber> {
                 PageTransition(
                   type: PageTransitionType.fade,
                   child: ProgressScreen(
-                    name: "find_the_number",
                     userScore: score.toDouble(),
                     maxScore: 10,
                     exercise: "FindTheNumber",
@@ -160,7 +159,7 @@ class _FindTheNumber extends State<FindTheNumber> {
             children: <Widget>[
               Center(
                 child: Text(
-                  "ATTENTION",
+                  "Attention",
                   style: TextStyle(
                     fontSize: size.width / 8,
                   ),

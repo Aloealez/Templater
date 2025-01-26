@@ -146,7 +146,6 @@ class _Game2048State extends State<Game2048> {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => ProgressScreen(
-                                  name: "2048",
                                   userScore: score.toDouble(),
                                   maxScore: 2048,
                                   exercise: 'Game2048',

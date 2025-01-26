@@ -137,7 +137,6 @@ class _Faces extends State<Faces> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => ProgressScreen(
-                                  name: "faces_memory",
                                   userScore: points,
                                   maxScore: 10,
                                   exercise: 'Faces',
@@ -177,7 +176,6 @@ class _Faces extends State<Faces> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => ProgressScreen(
-                                  name: "faces_memory",
                                   userScore: points,
                                   maxScore: 10,
                                   exercise: 'Faces',

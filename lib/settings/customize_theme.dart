@@ -34,16 +34,16 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                BlockPicker(
+                ColorPicker(
                   pickerColor: getThemeColor(prefs, Theme.of(context).brightness, colorKey),
-                  onColorChanged: (Color color) {
-                    print("Color changed to $color");
-                    setThemeColor(prefs, Theme.of(context).brightness, colorKey, color).then((obj) {
-                      if (context.mounted) {
-                        MyApp.of(context).reloadTheme();
-                      }
-                    });
-                    setState(() {});
+                    onColorChanged: (Color color) {
+                      print("Color changed to $color");
+                      setThemeColor(prefs, Theme.of(context).brightness, colorKey, color).then((obj) {
+                        if (context.mounted) {
+                          MyApp.of(context).reloadTheme();
+                        }
+                      });
+                      setState(() {});
                   },
                 ),
               ],

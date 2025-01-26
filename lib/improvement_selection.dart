@@ -1,6 +1,8 @@
 import 'package:brainace_pro/buttons.dart';
 import 'package:flutter/material.dart';
 
+import 'app_bar.dart';
+
 class ImprovementSelection extends StatefulWidget {
   const ImprovementSelection({super.key});
 
@@ -19,16 +21,16 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: appBar(context, ""),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 10,
-          top: size.height / 15,
+          top: size.height / 69,
         ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 0.03 * size.height),
               Padding(
                 padding: EdgeInsets.only(
                   right: size.width / 10,

@@ -14,7 +14,7 @@ FutureBuilder correctAWordBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String level = prefs.getString("level") ?? "cpe";
-      return await convertToQuestions("correct_a_word", level, 3);
+      return await convertToRandomQuestions("correct_a_word", level, 3);
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {

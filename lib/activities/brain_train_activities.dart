@@ -177,7 +177,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                   Container(
                     margin: EdgeInsets.only(
                       left: size.width / 20,
-                      right: size.width / 20,
+                      right: size.width / 30,
                     ),
                     child: Column(
                       children: [
@@ -216,7 +216,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Words",
                           LevelInstruction(
                             "Learning Words",
-                            testTime: 7,
+                            testTime: "7 minutes",
+                            exercise: "Memory",
                             testRouteBuilder: MemoryWords.routeBuilder,
                             testActivitiesDescription:
                                 "In this exercises you will be given 5 minutes to learn as many words as you can.",
@@ -232,7 +233,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Memory",
                           LevelInstruction(
                             "Working Memory",
-                            testTime: 3,
+                            testTime: "3 minutes",
+                            exercise: "WorkingMemory",
                             testRouteBuilder: WorkingMemory.routeBuilder,
                             testActivitiesDescription: "In this activity, we will test your short-term memory.",
                             testScoreDescription: "You will need a piece of paper and something to write with.",
@@ -252,20 +254,18 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "listening",
                           "Listening",
                           "Comprehension",
-                          // const ListeningComprehensionVideo(),
                           LevelInstruction(
                             "Listening Comprehension",
-                            testTime: 1,
+                            testTime: "6 minute",
+                            exercise: "ListeningComprehensionVideo",
                             nextRouteBuilder: listeningComprehensionBuilder(math.Random().nextInt(16), false, false),
                             testRouteBuilder: (
                                 BuildContext context, {
                                   required bool initialTest,
                                   required bool endingTest,
                                 }) {return MemoryWords.routeBuilder(context, initialTest: initialTest, endingTest: endingTest);},
-                            testActivitiesDescription:
-                                "In this exercise, you will listen to a video and answer questions about it.",
-                            testScoreDescription:
-                                "You will have 5 minutes to answer the questions.",
+                            testActivitiesDescription: "In this activity you will watch a 4-5 minutes video, which will be followed by a MCQ quiz.",
+                            testScoreDescription: "You will have no possibility to rewatch the video so we recommend you make notes.",
                           ),
                           "ListeningComprehensionVideo",
                         ),
@@ -284,7 +284,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Reading",
                           LevelInstruction(
                             "Poems Reading",
-                            testTime: 1,
+                            testTime: "1 minute",
                             testRouteBuilder: Poems.routeBuilder,
                             testActivitiesDescription:
                                 "In this activity, you can listen to a poem, read it aloud, and have your pronunciation checked 🙂.",
@@ -301,7 +301,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Mistakes",
                           LevelInstruction(
                             "Spelling Mistakes",
-                            testTime: 1,
+                            testTime: "1 minute",
+                            exercise: "SpellingMistakes",
                             nextRouteBuilder: spellingMistakesBuilder(
                               context,
                               initialTest: false,
@@ -329,7 +330,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "",
                           LevelInstruction(
                             "Riddle Of The Day",
-                            testTime: 3,
+                            testTime: "3 minutes",
+                            exercise: "RiddleOfTheDay",
                             nextRouteBuilder: riddleOfTheDayBuilder(context, initialTest: false, endingTest: false),
                             testRouteBuilder: RiddlesTest.routeBuilder,
                             testActivitiesDescription: "In this section you will receive one harder riddle.",
@@ -355,7 +357,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Concentration",
                           LevelInstruction(
                             "Attention",
-                              testTime: 5,
+                              testTime: "5 minutes",
+                            exercise: "ShortTermConcentration",
                             testRouteBuilder: ShortTermConcentration.routeBuilder,
                             testActivitiesDescription: "In this activity, we will test your short-term memory.",
                             testScoreDescription: "You will need a piece of paper and something to write with.",
@@ -369,7 +372,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Concentration",
                           LevelInstruction(
                             "Attention",
-                            testTime: 5,
+                            testTime: "5 minutes",
+                            exercise: "LongTermConcentrationVideo",
                             nextRouteBuilder: longTermConcentrationBuilder(math.Random().nextInt(13), false, false),
                             testRouteBuilder: LongTermConcentrationVideo.routeBuilder,
                             testActivitiesDescription: "In this activity you will watch a 4-5 minutes video, which will be followed by a MCQ quiz.",
@@ -384,7 +388,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Concentration",
                           LevelInstruction(
                             "Strong Concentration",
-                            testTime: 2,
+                            testTime: "2 minutes",
+                            exercise: "StrongConcentrationDesc",
                             nextRouteBuilder: strongConcentrationBuilder(initialTest: false, endingTest: false),
                             testRouteBuilder: LongTermConcentrationVideo.routeBuilder,
                             testActivitiesDescription:
@@ -455,7 +460,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "",
                           LevelInstruction(
                             "Correct A Word",
-                            testTime: 2,
+                            testTime: "2 minutes",
+                            exercise: "SpellingMistakes",
                             nextRouteBuilder: correctAWordBuilder(
                               context,
                               initialTest: false,
@@ -483,7 +489,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "",
                           LevelInstruction(
                             "Grammar",
-                            testTime: 1,
+                            testTime: "1 minute",
+                            exercise: "Grammar",
                             nextRouteBuilder: grammarMcqBuilder(
                               context,
                               initialTest: false,
@@ -504,7 +511,8 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "",
                           LevelInstruction(
                             "Vocabulary",
-                            testTime: 1,
+                            testTime: "1 minute",
+                            exercise: "Vocabulary",
                             nextRouteBuilder: vocabularyBuilder(context, initialTest: false, endingTest: false),
                             testRouteBuilder: MemoryGame2.routeBuilder,
                             testActivitiesDescription: "In this activity, you should select the best word to complete fill-in-the-blank sentences.",
@@ -519,8 +527,9 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Idioms, Expressions, and Phrasal Verbs",
                           "",
                           LevelInstruction(
-                            "Idioms, Expressions, and Phrasal Verbs",
-                            testTime: 1,
+                            "Idioms",
+                            testTime: "1 minute",
+                            exercise: "Idioms",
                             nextRouteBuilder: idiomsBuilder(context, initialTest: false, endingTest: false),
                             testRouteBuilder: MemoryGame2.routeBuilder,
                             testActivitiesDescription: "In this activity, you should select the best phrase to complete fill-in-the-blank sentences.",
@@ -536,7 +545,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "Game",
                           LevelInstruction(
                             "Memory Game",
-                            testTime: 1,
+                            testTime: "1 minute",
                             testRouteBuilder: MemoryGame2.routeBuilder,
                             testActivitiesDescription:
                                 "Match all pairs of cards by remembering their positions. Click to reveal a card, and try to find its match.",
@@ -549,19 +558,20 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "sport",
                           "Sport",
                           "Optional",
-                          LevelInstruction(
-                            "Sport",
-                            nextRouteBuilder: FutureBuilder(future: () async {} (),
-                                builder: (context, snapshot) {
-                                  if (snapshot.connectionState == ConnectionState.waiting) {
-                                    return const Center(child: CircularProgressIndicator());
-                                  }
-                                  return const Sport();
-                                },),
-                            testRouteBuilder: MemoryGame2.routeBuilder,
-                            testActivitiesDescription: "Here is an example plan we created for you 🙂",
-                            testScoreDescription: "Next update will introduce different plan choices.",
-                          ),
+                          Sport(),
+                          // LevelInstruction(
+                          //   "Sport",
+                          //   nextRouteBuilder: FutureBuilder(future: () async {} (),
+                          //       builder: (context, snapshot) {
+                          //         if (snapshot.connectionState == ConnectionState.waiting) {
+                          //           return const Center(child: CircularProgressIndicator());
+                          //         }
+                          //         return const Sport();
+                          //       },),
+                          //   testRouteBuilder: MemoryGame2.routeBuilder,
+                          //   testActivitiesDescription: "Here is an example plan we created for you 🙂",
+                          //   testScoreDescription: "Next update will introduce different plan choices.",
+                          // ),
                           "Sport",
                         ),
                         createActivity2(
@@ -588,9 +598,9 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "",
                           LevelInstruction(
                             "Meditation",
-                            testTime: 5,
+                            testTime: "1-5 minutes",
                             testRouteBuilder: MeditationMinutes.routeBuilder,
-                            testActivitiesDescription: "Let’s go 🥳\nBefore you begin, find a quiet place and get comfortable. When you are ready to start.",
+                            testActivitiesDescription: "Let’s go 🥳\nBefore you begin, find a quiet place and get comfortable.",
                             testScoreDescription: "You can sit on a cushion or chair, or even lie down if that's more comfortable for you.",
                           ),
                           "Meditation",

@@ -59,6 +59,9 @@ class QuizModel extends StatefulWidget {
   /// If text input should only accept numbers.
   final bool inputTextNumbersOnly;
 
+  /// If answer is required to continue.
+  final bool requireAnswer;
+
   final AssetSource? music;
 
   final String exerciseName;
@@ -102,6 +105,7 @@ class QuizModel extends StatefulWidget {
     this.inlineTaskAndAnswers = false,
     this.hintText = "Enter your answer",
     this.inputTextNumbersOnly = false,
+    this.requireAnswer = false,
     this.music,
   });
 
@@ -120,6 +124,7 @@ class _QuizModelState extends State<QuizModel> {
   double maxScore = 0;
   Map<String, TextEditingController> _textEditingControllers = {};
   final player = AudioPlayer();
+  bool forceContinue = false;
 
   double textScaleFactor(int textLength) {
     double val = 0.0056;
@@ -128,6 +133,16 @@ class _QuizModelState extends State<QuizModel> {
     val = math.max(val, 0.029);
     print("val: $val");
     return val;
+  }
+
+  Map<String, bool> getCorrectBoolArray() {
+    return {
+      for (var answerId in answers.keys)
+        answerId: widget.questions[answerId] == null
+            ? false
+            : widget.questions[answerId]!.correct[answers[answerId]] ??
+            false,
+    };
   }
 
   @override
@@ -168,7 +183,7 @@ class _QuizModelState extends State<QuizModel> {
     return false;
   }
 
-  void handleContinue({bool force = false}) {
+  void handleContinue() {
     print("selectedOption: $selectedOption");
     print("answers: $answers");
     if (widget.answerLayout == QuizModelAnswerLayout.textInput && !widget.showMultipleQuestions) {
@@ -180,7 +195,7 @@ class _QuizModelState extends State<QuizModel> {
     if (currentQuestionIndex < widget.questions.length - 1 &&
         _time > 0 &&
         !widget.showMultipleQuestions &&
-        !force
+        !forceContinue
     ) {
       if (selectedOption != null) {
         setState(
@@ -196,10 +211,10 @@ class _QuizModelState extends State<QuizModel> {
       }
     } else {
       if (widget.onEnd != null) {
-        // widget.onEnd!(widget.questions, answers, widget.initialTest, widget.endingTest);
+        widget.onEnd!(widget.questions, getCorrectBoolArray(), widget.initialTest, widget.endingTest);
       }
       if (widget.onEndAsync != null) {
-        // widget.onEndAsync!(widget.questions, answers, widget.initialTest, widget.endingTest);
+        widget.onEndAsync!(widget.questions, getCorrectBoolArray(), widget.initialTest, widget.endingTest);
       }
 
       double score = 0;
@@ -247,7 +262,6 @@ class _QuizModelState extends State<QuizModel> {
                       page: widget.page,
                     )
                   : ProgressScreen(
-                      name: widget.oldName,
                       userScore: score,
                       maxScore: maxScore,
                       exercise: widget.exerciseString,
@@ -365,7 +379,7 @@ class _QuizModelState extends State<QuizModel> {
                 padding: EdgeInsets.only(left: size.width / 11),
                 child: Text(
                   "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
-                  style: TextStyle(fontSize: 0.025 * size.height),
+                  style: TextStyle(fontSize: 0.023 * size.height),
                   textAlign: TextAlign.start,
                 ),
               ),
@@ -419,13 +433,7 @@ class _QuizModelState extends State<QuizModel> {
         if (widget.progressBar)
           AnimatedProgressBar(
             answerCount: widget.questions.length,
-            answers: {
-              for (var answerId in answers.keys)
-                answerId: widget.questions[answerId] == null
-                    ? false
-                    : widget.questions[answerId]!.correct[answers[answerId]] ??
-                        false,
-            },
+            answers: getCorrectBoolArray(),
           ),
       ],
     );
@@ -744,19 +752,37 @@ class _QuizModelState extends State<QuizModel> {
           ),
           Align(
             alignment: Alignment(0, 0.9),
-            child: SizedBox(
-              height: size.height * 0.065,
-              width: size.width * 0.71,
-              child: RedirectButton(
-                onClick: handleContinue,
-                text: 'Continue',
-                width: size.width,
-                requirement:
-                    widget.answerLayout == QuizModelAnswerLayout.list ||
-                            widget.answerLayout == QuizModelAnswerLayout.boxes
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: size.height * 0.064,
+                  width: size.width * 0.33,
+                  child: RedirectButton(
+                    onClick: () {
+                      forceContinue = true;
+                      handleContinue();
+                    },
+                    text: 'End',
+                    width: size.width,
+                  ),
+                ),
+                SizedBox(width: 0.054 * size.width),
+                SizedBox(
+                  height: size.height * 0.064,
+                  width: size.width * 0.39,
+                  child: RedirectButton(
+                    onClick: handleContinue,
+                    text: 'Continue',
+                    width: size.width,
+                    requirement: widget.requireAnswer ? (selectedOption != null && selectedOption != "")
+                    : widget.answerLayout == QuizModelAnswerLayout.list ||
+                        widget.answerLayout == QuizModelAnswerLayout.boxes
                         ? selectedOption != null
                         : true,
-              ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

@@ -11,9 +11,8 @@ import 'package:brainace_pro/activities_for_each_section.dart';
 
 class ProgressScreen extends StatefulWidget {
   final bool points;
-  final String name;
-  final double userScore;
-  final double maxScore;
+  final double? userScore;
+  final double? maxScore;
   final String txt;
   final String pointAlternative;
   final String exercise;
@@ -21,9 +20,8 @@ class ProgressScreen extends StatefulWidget {
   const ProgressScreen({
     super.key,
     this.points = true,
-    required this.name,
-    required this.userScore,
-    required this.maxScore,
+    this.userScore,
+    this.maxScore,
     required this.exercise,
     this.txt = "You Received",
     this.pointAlternative = "Points",
@@ -46,10 +44,15 @@ class _ProgressScreen extends State<ProgressScreen>
   late List<ChartData> chartData = <ChartData>[];
   late ConfettiController _confettiController;
   int day = 0;
+  bool newScores = false;
+  double lastUserScore = 0;
+  double maxScore = 1;
 
 
   @override
   void initState() {
+    newScores = widget.userScore != null;
+    lastUserScore = widget.userScore ?? 0;
     super.initState();
     readMemory();
     _confettiController =
@@ -91,21 +94,39 @@ class _ProgressScreen extends State<ProgressScreen>
     prefs = await SharedPreferences.getInstance();
     List<ChartData> newChartData = <ChartData>[];
 
+    if (widget.maxScore != null) {
+      prefs.setString("lastMaxScore_${widget.exercise}", widget.maxScore.toString());
+      maxScore = widget.maxScore!;
+    } else {
+      maxScore = double.parse(prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
+    }
+
     List<String> timestamps = prefs.getStringList(
-      "timestamps_${widget.name}",
+      "timestamps_${widget.exercise}",
     ) ??
         [];
     List<String> scores = prefs.getStringList(
-      "${widget.name}_scores",
+      "${widget.exercise}_scores",
     ) ??
         [];
 
-    timestamps.add(DateTime.now().millisecondsSinceEpoch.toString());
-    scores.add(widget.userScore.toString());
-    //scores = [];
+    if (newScores) {
+      timestamps.add(DateTime.now().millisecondsSinceEpoch.toString());
+      scores.add(widget.userScore.toString());
+    }
 
-    prefs.setStringList("timestamps_${widget.name}", timestamps);
-    prefs.setStringList("${widget.name}_scores", scores);
+    print("scores: $scores");
+    print("scores: $scores");
+    if (scores.isNotEmpty) {
+      lastUserScore = double.parse(scores.last);
+    } else {
+      lastUserScore = 0;
+    }
+
+    if (newScores) {
+      prefs.setStringList("timestamps_${widget.exercise}", timestamps);
+      prefs.setStringList("${widget.exercise}_scores", scores);
+    }
 
     for (int i = 0; i < scores.length; i++) {
       newChartData.add(
@@ -116,10 +137,9 @@ class _ProgressScreen extends State<ProgressScreen>
       );
     }
 
-
-
-
-    prefs.setString("${widget.exercise}TickedDay$day", "1");
+    if (newScores) {
+      prefs.setString("${widget.exercise}TickedDay$day", "1");
+    }
 
     callHomeWidgetUpdate();
 
@@ -161,7 +181,7 @@ class _ProgressScreen extends State<ProgressScreen>
 
   @override
   Widget build(BuildContext context) {
-    print("widget.name: ${widget.name} widget.userScore: ${widget.userScore} maxScore: ${widget.maxScore}");
+    print("widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: ${maxScore}");
     Size size = MediaQuery.of(context).size;
     print("widget.score: ${widget.userScore}");
 
@@ -233,7 +253,7 @@ class _ProgressScreen extends State<ProgressScreen>
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      "Your Accuracy Is Now Equal To ${(widget.userScore * 100 / widget.maxScore).round()}%",
+                      "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / maxScore).round()}%",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: size.width / 18,
@@ -342,15 +362,15 @@ class _ProgressScreen extends State<ProgressScreen>
                             if (index == 0) {
                               final day = data.day.day.toString().padLeft(2, '0');
                               final month = data.day.month.toString().padLeft(2, '0');
-                              return "${(data.score.round() / widget.maxScore * 100).round()}%\n$day.$month";
+                              return "${(data.score.round() / maxScore * 100).round()}%\n$day.$month";
                             }
                             else if (index == chartData.length - 1) {
-                              return "${(data.score.round() / widget.maxScore * 100).round()}%\nNow";
+                              return "${(data.score.round() / maxScore * 100).round()}%\nNow";
                             }
                             else if (_tappedIndex == index) {
                               final day = data.day.day.toString().padLeft(2, '0');
                               final month = data.day.month.toString().padLeft(2, '0');
-                              return "${(data.score.round() / widget.maxScore * 100).round()}%\n$day.$month";
+                              return "${(data.score.round() / maxScore * 100).round()}%\n$day.$month";
                             }
                             return "";
                           },

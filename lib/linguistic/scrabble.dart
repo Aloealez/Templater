@@ -361,7 +361,7 @@ class _Scrabble extends State<Scrabble> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: size.height * 0.074,
+                      height: size.height * 0.064,
                       width: size.width * 0.39,
                       child: RedirectButton(
                         text: '${widget.allPoints} ${widget.allPoints == 1 ? 'point' : 'points'}',
@@ -373,11 +373,10 @@ class _Scrabble extends State<Scrabble> {
                     SizedBox(width: 0.051 * size.width),
                     (widget.iteration == 5)
                         ? SizedBox(
-                      height: size.height * 0.074,
+                      height: size.height * 0.064,
                       width: size.width * 0.37,
                       child: RedirectButton(
                         route: ProgressScreen(
-                          name: "scrabble",
                           userScore: (widget.allPoints + (wordExists ? roundPoints : 0)).toDouble(),
                           maxScore: 50,
                           exercise: 'Scrabble',
@@ -388,7 +387,7 @@ class _Scrabble extends State<Scrabble> {
                       ),
                     )
                         : SizedBox(
-                      height: size.height * 0.074,
+                      height: size.height * 0.064,
                       width: size.width * 0.37,
                       child: RedirectButton(
                         color: Color(0xFFFF5ACE),
