@@ -330,7 +330,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                             testTime: 3,
                             nextRouteBuilder: riddleOfTheDayBuilder(context, initialTest: false, endingTest: false),
                             testRouteBuilder: RiddlesTest.routeBuilder,
-                            testActivitiesDescription: "In this section you will receive one harder riddle per day.",
+                            testActivitiesDescription: "In this section you will receive one harder riddle.",
                             testScoreDescription: "You will have 3 minutes to solve it.",
                           ),
                           // const RiddlesTest(),

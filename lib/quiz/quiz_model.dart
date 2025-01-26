@@ -12,6 +12,7 @@ import 'dart:math';
 import 'dart:async';
 import '../../../app_bar.dart';
 import '../initial_score_screen.dart';
+import 'dart:math' as math;
 
 class QuizModel extends StatefulWidget {
   final Map<String, QuizQuestionData> questions;
@@ -119,6 +120,15 @@ class _QuizModelState extends State<QuizModel> {
   double maxScore = 0;
   Map<String, TextEditingController> _textEditingControllers = {};
   final player = AudioPlayer();
+
+  double textScaleFactor(int textLength) {
+    double val = 0.0056;
+    val += 1 / (math.sqrt(math.sqrt(math.sqrt(textLength.toDouble()))) * 16);
+    val = math.min(val, 0.049);
+    val = math.max(val, 0.029);
+    print("val: $val");
+    return val;
+  }
 
   @override
   void initState() {
@@ -251,6 +261,8 @@ class _QuizModelState extends State<QuizModel> {
     BuildContext context,
     String answerLetter,
     bool coloredIcon,
+      String questionId,
+      String answerId,
   ) {
     String theme =
         Theme.of(context).brightness == Brightness.dark ? "black" : "black";
@@ -275,7 +287,8 @@ class _QuizModelState extends State<QuizModel> {
               ? Colors.green
               : Colors.red
           : Theme.of(context).colorScheme.onSurface,
-      size: 0.062 * MediaQuery.of(context).size.width,
+      // size: 0.062 * MediaQuery.of(context).size.width,
+      size: textScaleFactor(widget.questions[questionId]!.question!.length) * MediaQuery.of(context).size.width * 1.7,
     );
   }
 
@@ -283,12 +296,12 @@ class _QuizModelState extends State<QuizModel> {
       String answerLetter, String questionId) {
     Size size = MediaQuery.of(context).size;
     if (usersAnswer == null) {
-      return createAnswerIcon(context, answerLetter, false);
+      return createAnswerIcon(context, answerLetter, false, questionId, answerLetter);
     }
     return (usersAnswer == answerLetter ||
             widget.questions[questionId]!.correct[answerLetter]!)
-        ? createAnswerIcon(context, answerLetter, true)
-        : createAnswerIcon(context, answerLetter, false);
+        ? createAnswerIcon(context, answerLetter, true, questionId, answerLetter)
+        : createAnswerIcon(context, answerLetter, false, questionId, answerLetter);
   }
 
   ListTile buildLetterAnswer(
@@ -303,7 +316,8 @@ class _QuizModelState extends State<QuizModel> {
           buildAnswerChecks(context, selectedOption, answerLetter, questionId),
       title: HtmlAsTextSpan(
         "${widget.questions[questionId]?.answers[answerLetter]}",
-        fontSize: 0.0155 * size.height,
+        // fontSize: 0.0155 * size.height,
+        fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 0.9 * size.width,
       ),
       onTap: selectedOption == null
           ? () {
@@ -438,7 +452,7 @@ class _QuizModelState extends State<QuizModel> {
             ? Text(
                 widget.questions[questionId]!.question,
                 style: TextStyle(
-                  fontSize: size.width * 0.035,
+                  fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.1 * size.width,
                   fontWeight: FontWeight.w600,
                 ),
               )
@@ -455,12 +469,12 @@ class _QuizModelState extends State<QuizModel> {
           height: 0.15 * size.height,
           width: size.width * 0.71,
           child: InkWell(
-            onTap: () {
+            onTap: selectedOption == null ? () {
               setState(() {
                 selectedOption = answerId;
                 answers[questionId] = selectedOption!;
               });
-            },
+            } : null,
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(

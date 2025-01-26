@@ -27,6 +27,7 @@ FutureBuilder longTermConcentrationBuilder(int exerciseId, bool initialTest, boo
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: 0,
+        singleTextQuestion: true,
         initMaxScore: 4,
         page: initialTest
             ? strongConcentrationBuilder(initialTest: true, endingTest: false)

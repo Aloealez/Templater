@@ -73,6 +73,8 @@ FutureBuilder spellingMistakesBuilder(
         centerTitle: true,
         timeBar: true,
         progressBar: false,
+        showQuestionTask: false,
+        singleTextQuestion: true,
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: 0,

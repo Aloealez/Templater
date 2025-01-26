@@ -31,6 +31,7 @@ FutureBuilder vocabularyBuilder(
         endingTest: endingTest,
         initScore: 0,
         initMaxScore: 0,
+        singleTextQuestion: true,
         page: Home(),
         description: "Vocabulary",
         oldName: "vocabulary",

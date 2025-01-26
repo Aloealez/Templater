@@ -1,8 +1,11 @@
+import 'package:brainace_pro/level_instruction.dart';
+import 'package:brainace_pro/memory/memory_game1.dart';
 import 'package:brainace_pro/quiz/quiz_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:yaml/yaml.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
+import '../memory/memory_game2.dart';
 import '../score_n_progress/progress_screen.dart';
 import 'package:brainace_pro/buttons.dart';
 import 'dart:async';
@@ -124,55 +127,70 @@ class _RiddlesTest extends State<RiddlesTest> {
   Widget build(BuildContext context) {
     return tasks == null
         ? const Center(child: CircularProgressIndicator())
-        : QuizModel(
-            "Riddles",
-            "Riddles",
-            480,
-            initialTest: widget.initialTest,
-            endingTest: widget.endingTest,
-            initScore: 0,
-            initMaxScore: 0,
-            page: widget.initialTest
-                ? const Home()
-                : widget.endingTest
+        : LevelInstruction(
+        "Riddles",
+        testTime: 4,
+        testActivitiesDescription: "In this exercise, you will be given a series of riddles to solve. You will have 4 minutes.",
+        testScoreDescription: "For each correct answer you get 5 points, and for each wrong answer you will loose 2 points.",
+        nextRouteBuilder: FutureBuilder(future: () async {} (), builder:
+          (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          }
+              return QuizModel(
+                "Riddles - {}",
+                "Riddles",
+                240,
+                initialTest: widget.initialTest,
+                endingTest: widget.endingTest,
+                singleTextQuestion: true,
+                initScore: 0,
+                initMaxScore: 0,
+                page: widget.initialTest
+                    ? const Home()
+                    : widget.endingTest
                     ? const TitlePage(
-                        title: "BrainAce.pro",
-                      )
+                  title: "BrainAce.pro",
+                )
                     : const Home(),
-            description: "Exercise 1 - Short Term Concentration",
-            oldName: "long_term_concentration",
-            exerciseNumber: 1,
-            exerciseString: "Riddles",
-            questions: {
-              for (int i = 0; i < numberOfQuestions; ++i)
-                "$i": () {
-                  Map<String, String> answers = {};
-                  answers = {
-                    "A": tasks[i]["answers"][0].toString(),
-                    "B": tasks[i]["answers"][1].toString(),
-                    if (tasks[i]["answers"].length >= 3) "C": tasks[i]["answers"][2].toString(),
-                    if (tasks[i]["answers"].length >= 4) "D": tasks[i]["answers"][3].toString(),
-                  };
-                  Map<String, bool> correct = {
-                    "A": tasks[i]["correct_answer"] == 0,
-                    "B": tasks[i]["correct_answer"] == 1,
-                    "C": tasks[i]["correct_answer"] == 2,
-                    "D": tasks[i]["correct_answer"] == 3,
-                  };
-                  return QuizQuestionData(
-                    answers,
-                    correct,
-                    {
-                      for (var key in answers.keys) key: 5,
-                    },
-                    scoreIncorrect: {
-                      for (var key in answers.keys) key: -2,
-                    },
-                    question: "${tasks[i]["question"]}",
-                  );
-                }(),
-            },
-          );
+                description: "Exercise 1 - Short Term Concentration",
+                oldName: "long_term_concentration",
+                exerciseNumber: 1,
+                exerciseString: "Riddles",
+                questions: {
+                  for (int i = 0; i < numberOfQuestions; ++i)
+                    "$i": () {
+                      Map<String, String> answers = {};
+                      answers = {
+                        "A": tasks[i]["answers"][0].toString(),
+                        "B": tasks[i]["answers"][1].toString(),
+                        if (tasks[i]["answers"].length >= 3) "C": tasks[i]["answers"][2].toString(),
+                        if (tasks[i]["answers"].length >= 4) "D": tasks[i]["answers"][3].toString(),
+                      };
+                      Map<String, bool> correct = {
+                        "A": tasks[i]["correct_answer"] == 0,
+                        "B": tasks[i]["correct_answer"] == 1,
+                        "C": tasks[i]["correct_answer"] == 2,
+                        "D": tasks[i]["correct_answer"] == 3,
+                      };
+                      return QuizQuestionData(
+                        answers,
+                        correct,
+                        {
+                          for (var key in answers.keys) key: 5,
+                        },
+                        scoreIncorrect: {
+                          for (var key in answers.keys) key: -2,
+                        },
+                        question: "${tasks[i]["question"]}",
+                      );
+                    }(),
+                },
+              );
+          },
+        ),
+        testRouteBuilder: MemoryGame2.routeBuilder,
+    );
 
     Size size = MediaQuery.of(context).size;
 

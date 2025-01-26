@@ -28,6 +28,7 @@ FutureBuilder listeningComprehensionBuilder(int exerciseId, bool initialTest, bo
         endingTest: endingTest,
         initScore: 0,
         initMaxScore: 4,
+        singleTextQuestion: true,
         page: initialTest
             ? const ReadingComprehensionInfo(initialTest: true)
             : endingTest

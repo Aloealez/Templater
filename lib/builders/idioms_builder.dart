@@ -30,6 +30,7 @@ FutureBuilder idiomsBuilder(
         endingTest: endingTest,
         initScore: 0,
         initMaxScore: 0,
+        singleTextQuestion: true,
         page: Home(),
         description: "Idioms, expressions, and phrasal verbs.",
         oldName: "idioms",
