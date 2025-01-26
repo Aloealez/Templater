@@ -357,44 +357,75 @@ class _Scrabble extends State<Scrabble> {
               ),
               Align(
                 alignment: Alignment(0, 0.85),
-                child: (widget.iteration == 5)
-                    ? SizedBox(
-                  height: size.height * 0.05,
-                  width: size.width * 0.75,
-                  child: RedirectButton(
-                    route: ProgressScreen(
-                      name: "scrabble",
-                      userScore: (widget.allPoints + (wordExists ? roundPoints : 0)).toDouble(),
-                      maxScore: 50,
-                      exercise: 'Scrabble',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: size.height * 0.074,
+                      width: size.width * 0.39,
+                      child: RedirectButton(
+                        text: '${widget.allPoints} ${widget.allPoints == 1 ? 'point' : 'points'}',
+                        width: size.width,
+                        popRoute: false,
+                        color: Color(0xFF2EEAE8),
+                      ),
                     ),
-                    text: 'Continue',
-                    width: size.width,
-                  ),
-                )
-                    : SizedBox(
-                  height: size.height * 0.05,
-                  width: size.width * 0.75,
-                  child: RedirectButton(
-                    onClick: () {
-                      Navigator.pop(context);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Scrabble(
-                            iteration: widget.iteration + 1,
-                            allPoints: wordExists
-                                ? (widget.allPoints + roundPoints)
-                                : widget.allPoints,
-                            initialTest: widget.initialTest,
-                            endingTest: widget.endingTest,
-                          ),
+                    SizedBox(width: 0.051 * size.width),
+                    (widget.iteration == 5)
+                        ? SizedBox(
+                      height: size.height * 0.074,
+                      width: size.width * 0.37,
+                      child: RedirectButton(
+                        route: ProgressScreen(
+                          name: "scrabble",
+                          userScore: (widget.allPoints + (wordExists ? roundPoints : 0)).toDouble(),
+                          maxScore: 50,
+                          exercise: 'Scrabble',
                         ),
-                      );
-                    },
-                    text: 'Continue',
-                    width: size.width,
-                  ),
+                        text: 'End',
+                        width: size.width,
+                        color: Color(0xFFFF5ACE),
+                      ),
+                    )
+                        : SizedBox(
+                      height: size.height * 0.074,
+                      width: size.width * 0.37,
+                      child: RedirectButton(
+                        color: Color(0xFFFF5ACE),
+                        onClick: () {
+                          Navigator.pop(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Scrabble(
+                                iteration: widget.iteration + 1,
+                                allPoints: wordExists
+                                    ? (widget.allPoints + roundPoints)
+                                    : widget.allPoints,
+                                initialTest: widget.initialTest,
+                                endingTest: widget.endingTest,
+                              ),
+                            ),
+                          );
+                        },
+                        text: '${widget.iteration + 1}${ () {
+                          switch (widget.iteration + 1) {
+                            case 1:
+                              return 'st';
+                            case 2:
+                              return 'nd';
+                            case 3:
+                              return 'rd';
+                            case 4:
+                              return 'th';
+                            default:
+                              return 'th';
+                          }
+                        } ()} round',
+                        width: size.width,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

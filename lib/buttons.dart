@@ -135,6 +135,7 @@ class RedirectButton extends StatefulWidget {
   final bool requirement;
   final void Function() onClick;
   final bool clearAllWindows;
+  final Color? color;
 
   const RedirectButton({
     super.key,
@@ -146,6 +147,7 @@ class RedirectButton extends StatefulWidget {
     this.requirement = true,
     this.onClick = nuthin,
     this.clearAllWindows = false,
+    this.color,
   });
 
   @override
@@ -214,7 +216,7 @@ class _RedirectButtonState extends State<RedirectButton> {
               ? Theme.of(context).colorScheme.error
               : hovered
                   ? Theme.of(context).colorScheme.tertiaryFixed
-                  : Theme.of(context).colorScheme.primary,
+                  : widget.color ?? Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(69),
           boxShadow: [
             BoxShadow(
@@ -231,7 +233,10 @@ class _RedirectButtonState extends State<RedirectButton> {
                 child: Center(
                   child: Text(
                     widget.text,
-                    style: TextStyle(fontSize: widget.width / 16),
+                    style: TextStyle(
+                        fontSize: widget.width / 15,
+                        fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               )
@@ -239,9 +244,9 @@ class _RedirectButtonState extends State<RedirectButton> {
                 child: Text(
                   widget.text,
                   style: TextStyle(
-                    fontSize: widget.width / 19,
+                    fontSize: widget.width / 18,
                     color: Colors.white,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
