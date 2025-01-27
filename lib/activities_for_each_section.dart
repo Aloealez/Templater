@@ -337,7 +337,8 @@ Map<String, Widget Function(BuildContext)> sectionActivities = {
   'ShortTermConcentration': activityShortTermConcentration,
   'FindTheNumber': activityFindTheNumber,
   'PoemsInfo': activityPoemsReading,
-  'ReadingComprehension': activityReading,
+  'ReadingComprehension': activityReadingComprehension,
+  'Reading': activityReading,
   'ListeningComprehensionVideo': activityListeningComprehension,
   'SpellingMistakes': activitySpellingMistakes,
   'CorrectAWord': activityCorrectAWord,
@@ -351,7 +352,7 @@ Map<String, Widget Function(BuildContext)> sectionActivities = {
   'RiddleOfTheDay': activityRiddleOfTheDay,
   'Game2048': activityGame2048,
   'SudokuGame': activitySudokuGame,
-  'WorkingMemory': activityMemory,
+  'WorkingMemory': activityWorkingMemory,
   'MemoryGame1': activityMemoryGame,
   'InvestingMenu': activityInvestingMenu,
 

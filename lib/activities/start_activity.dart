@@ -94,8 +94,8 @@ initialTest: false,
 endingTest: false,
 ),
 testRouteBuilder: ShortTermConcentration.routeBuilder,
-testActivitiesDescription: "In this activity, you are supposed to select the correct spelling of the word.",
-testScoreDescription: "The questions will match the level you picked at the beginning.",
+testActivitiesDescription: "In this activity, we will test your short-term memory.",
+testScoreDescription: "You will need a piece of paper and something to write with.",
 );
 
 Widget activityRiddlesTest(BuildContext context) => const RiddlesTest();
@@ -115,7 +115,7 @@ Widget activitySudokuGame(BuildContext context) => const SudokuGame();
 
 Widget activityShortTermConcentration(BuildContext context) => LevelInstruction(
 "Attention",
-testTime: "5 minutes",
+testTime: "3 minutes",
 exercise: "ShortTermConcentration",
 testRouteBuilder: ShortTermConcentration.routeBuilder,
 testActivitiesDescription: "In this activity, we will test your short-term memory.",
