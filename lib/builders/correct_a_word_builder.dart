@@ -14,7 +14,11 @@ FutureBuilder correctAWordBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String level = prefs.getString("level") ?? "cpe";
-      return await convertToRandomQuestions("correct_a_word", level, 3);
+      Map<String, QuizQuestionData> questions = await convertToRandomQuestions("correct_a_word", level, 3);
+      for (String key in questions.keys) {
+        questions[key]?.question += "\n\nFind the misspelled word (Warning: There might not be one).";
+      }
+      return questions;
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {

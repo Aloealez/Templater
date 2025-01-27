@@ -123,6 +123,7 @@ class _Faces extends State<Faces> {
                     width: size.width / 4,
                     height: size.height / 15,
                     child: FloatingActionButton(
+                      backgroundColor: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.3),
                       onPressed: () {
                         setState(() {
                           if (seenPhotos.contains(picked[currentPhoto])) {
@@ -162,6 +163,7 @@ class _Faces extends State<Faces> {
                     width: size.width / 4,
                     height: size.height / 15,
                     child: FloatingActionButton(
+                      backgroundColor: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.3),
                       onPressed: () {
                         setState(() {
                           if (seenPhotos.contains(picked[currentPhoto])) {

@@ -66,17 +66,17 @@ class ActivityButton extends StatelessWidget {
               ),
             );
           } else {
-            // if (!blocked) {
-            //   Navigator.push(
-            //     context,
-            //     PageTransition(
-            //       type: PageTransitionType.fade,
-            //       child: onTapRoute,
-            //       reverseDuration: const Duration(milliseconds: 100),
-            //       opaque: true,
-            //     ),
-            //   );
-            // }
+            if (!blocked) {
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.fade,
+                  child: onTapRoute,
+                  reverseDuration: const Duration(milliseconds: 100),
+                  opaque: true,
+                ),
+              );
+            }
           }
         }
       },
