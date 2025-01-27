@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:home_widget/home_widget.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:circular_chart_flutter/circular_chart_flutter.dart';
 import 'package:intl/intl.dart';
@@ -363,26 +364,44 @@ class _Home extends State<Home> {
         for (int i = 0; i < plan.length; i++)
           Column(
             children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: size.width / 15,
-                    child: Icon(
-                      (basePlanTicked[i] == "1") ? Icons.circle : Icons.circle_outlined,
-                      size: size.width / 14.7,
-                      color: const Color(0xfff66fd3),
-                    ),
-                  ),
-                  SizedBox(width: size.width / 35),
-                  Flexible(
-                    child: Text(
-                      "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
-                      style: TextStyle(
-                        fontSize: size.width / 22,
+              InkWell(
+                onTap: () {
+                  print("currentplanObj ${plan[i]}");
+                  if (sectionActivities[plan[i]] != null) {
+                    Navigator.push(context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        child: (sectionActivities[plan[i]]!(context)),
+                        reverseDuration: const Duration(milliseconds: 100),
+                        opaque: true,
+                      ),
+                      // MaterialPageRoute(
+                      //   builder: (context) => (sectionActivities[plan[i]]!(context)),
+                      // ),
+                    );
+                  }
+                },
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: size.width / 15,
+                      child: Icon(
+                        (basePlanTicked[i] == "1") ? Icons.circle : Icons.circle_outlined,
+                        size: size.width / 14.7,
+                        color: const Color(0xfff66fd3),
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(width: size.width / 35),
+                    Flexible(
+                      child: Text(
+                        "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
+                        style: TextStyle(
+                          fontSize: size.width / 22,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 0.01 * size.height),
             ],

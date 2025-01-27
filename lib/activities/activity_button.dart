@@ -1,3 +1,4 @@
+import 'package:brainace_pro/activities_for_each_section.dart';
 import 'package:flutter/material.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 import 'package:page_transition/page_transition.dart';
@@ -52,16 +53,31 @@ class ActivityButton extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        if (!blocked) {
-          Navigator.push(
-            context,
-            PageTransition(
-              type: PageTransitionType.fade,
-              child: onTapRoute,
-              reverseDuration: const Duration(milliseconds: 100),
-              opaque: true,
-            ),
-          );
+        if(!blocked) {
+          if (sectionActivities[exerciseName] != null)
+          {
+            Navigator.push(
+              context,
+              PageTransition(
+                type: PageTransitionType.fade,
+                child: sectionActivities[exerciseName]!(context),
+                reverseDuration: const Duration(milliseconds: 100),
+                opaque: true,
+              ),
+            );
+          } else {
+            // if (!blocked) {
+            //   Navigator.push(
+            //     context,
+            //     PageTransition(
+            //       type: PageTransitionType.fade,
+            //       child: onTapRoute,
+            //       reverseDuration: const Duration(milliseconds: 100),
+            //       opaque: true,
+            //     ),
+            //   );
+            // }
+          }
         }
       },
       child:

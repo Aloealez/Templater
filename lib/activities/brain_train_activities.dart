@@ -1,4 +1,5 @@
 import 'package:brainace_pro/activities/activity_button.dart';
+import 'package:brainace_pro/activities/start_activity.dart';
 import 'package:brainace_pro/attention/find_the_number.dart';
 import 'package:brainace_pro/builders/grammar_mcq_builder.dart';
 import 'package:brainace_pro/builders/idioms_builder.dart';
@@ -214,16 +215,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "learning_words",
                           "Learning",
                           "Words",
-                          LevelInstruction(
-                            "Learning Words",
-                            testTime: "7 minutes",
-                            exercise: "Memory",
-                            testRouteBuilder: MemoryWords.routeBuilder,
-                            testActivitiesDescription:
-                                "In this exercises you will be given 5 minutes to learn as many words as you can.",
-                            testScoreDescription:
-                                "You will be tested on both the words and their meaning.",
-                          ),
+                          activityMemory(context),
                           "Memory",
                         ),
                         createActivity2(
@@ -479,7 +471,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "investing",
                           "Investing",
                           "Course",
-                          const InvestingMenu(),
+                          activityInvestingMenu(context),
                           "InvestingMenu",
                         ),
                         createActivity2(
@@ -487,20 +479,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "grammar",
                           "Grammar",
                           "",
-                          LevelInstruction(
-                            "Grammar",
-                            testTime: "1 minute",
-                            exercise: "Grammar",
-                            nextRouteBuilder: grammarMcqBuilder(
-                              context,
-                              initialTest: false,
-                              endingTest: false,
-                              exerciseId: 0,
-                            ),
-                            testRouteBuilder: MemoryGame2.routeBuilder,
-                            testActivitiesDescription: "In this activity, you should select the correct grammatical option to complete fill-in-the-blank sentences.",
-                            testScoreDescription: "The questions will match the level you picked at the beginning.",
-                          ),
+                          activityGrammar(context),
                           "Grammar",
                           zero: 0,
                         ),
@@ -509,15 +488,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "vocabulary",
                           "Vocabulary",
                           "",
-                          LevelInstruction(
-                            "Vocabulary",
-                            testTime: "1 minute",
-                            exercise: "Vocabulary",
-                            nextRouteBuilder: vocabularyBuilder(context, initialTest: false, endingTest: false),
-                            testRouteBuilder: MemoryGame2.routeBuilder,
-                            testActivitiesDescription: "In this activity, you should select the best word to complete fill-in-the-blank sentences.",
-                            testScoreDescription: "The questions will match the level you picked at the beginning.",
-                          ),
+                          activityVocabulary(context),
                           // const ChooseBestWord(),
                           "Vocabulary",
                         ),
@@ -526,15 +497,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "idioms",
                           "Idioms, Expressions, and Phrasal Verbs",
                           "",
-                          LevelInstruction(
-                            "Idioms",
-                            testTime: "1 minute",
-                            exercise: "Idioms",
-                            nextRouteBuilder: idiomsBuilder(context, initialTest: false, endingTest: false),
-                            testRouteBuilder: MemoryGame2.routeBuilder,
-                            testActivitiesDescription: "In this activity, you should select the best phrase to complete fill-in-the-blank sentences.",
-                            testScoreDescription: "The questions will match the level you picked at the beginning.",
-                          ),
+                          activityIdioms(context),
                           "Idioms",
                           zero: 0,
                         ),
@@ -543,14 +506,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "memory_game",
                           "Memory",
                           "Game",
-                          LevelInstruction(
-                            "Memory Game",
-                            testTime: "1 minute",
-                            testRouteBuilder: MemoryGame2.routeBuilder,
-                            testActivitiesDescription:
-                                "Match all pairs of cards by remembering their positions. Click to reveal a card, and try to find its match.",
-                            testScoreDescription: "Click “Start” when ready 🙂",
-                          ),
+                          activityMemoryGame(context),
                           "MemoryGame1",
                         ),
                         createActivity2(
@@ -558,7 +514,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "sport",
                           "Sport",
                           "Optional",
-                          Sport(),
+                          activitySport(context),
                           // LevelInstruction(
                           //   "Sport",
                           //   nextRouteBuilder: FutureBuilder(future: () async {} (),
@@ -579,7 +535,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "yoga",
                           "Yoga",
                           "",
-                          const Yoga(),
+                          activityYoga(context),
                           "Yoga",
                           zero: 0,
                         ),
@@ -588,7 +544,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "self_reflection",
                           "Self",
                           "Reflection",
-                          const SelfReflection(),
+                          activitySelfReflection(context),
                           "SelfReflection",
                         ),
                         createActivity2(
@@ -596,13 +552,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "meditation",
                           "Meditation",
                           "",
-                          LevelInstruction(
-                            "Meditation",
-                            testTime: "1-5 minutes",
-                            testRouteBuilder: MeditationMinutes.routeBuilder,
-                            testActivitiesDescription: "Let’s go 🥳\nBefore you begin, find a quiet place and get comfortable.",
-                            testScoreDescription: "You can sit on a cushion or chair, or even lie down if that's more comfortable for you.",
-                          ),
+                          activityMeditation(context),
                           "Meditation",
                           zero: 0,
                         ),
@@ -611,7 +561,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                           "memes",
                           "Memes",
                           "",
-                          const Meme(),
+                          activityMeme(context),
                           "Meme",
                           zero: 0,
                         ),

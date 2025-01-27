@@ -1,3 +1,4 @@
+import 'package:brainace_pro/activities/start_activity.dart';
 import 'package:brainace_pro/attention/long_term_concentration_video.dart';
 import 'package:brainace_pro/builders/idioms_builder.dart';
 import 'package:brainace_pro/investing/menu.dart';
@@ -11,6 +12,8 @@ import 'package:brainace_pro/attention/reading/reading.dart';
 import 'package:brainace_pro/linguistic/scrabble.dart';
 import 'package:brainace_pro/logical_thinking/sudoku.dart';
 import 'package:brainace_pro/logical_thinking/2048/game_2048.dart';
+import 'package:brainace_pro/sats/start_sats_quiz.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/well_being/meditation/meditation_minutes.dart';
 import 'package:brainace_pro/well_being/memes.dart';
@@ -326,16 +329,53 @@ var sectionNames = {
   for (var type in SatsQuestionSubcategoriesRW.typesList) type: SatsQuestionSubcategoriesRW.fromString(type).getName(),
 };
 
+Map<String, Widget Function(BuildContext)> sectionActivities = {
+  'Memory': activityMemory,
+  'Faces': activityFaces,
+  'LongTermConcentrationVideo': activityLongTermConcentrationVideo,
+  'StrongConcentrationDesc': activirtStrongConcentration,
+  'ShortTermConcentration': activityShortTermConcentration,
+  'FindTheNumber': activityFindTheNumber,
+  'PoemsInfo': activityPoemsReading,
+  'ReadingComprehension': activityReading,
+  'ListeningComprehensionVideo': activityListeningComprehension,
+  'SpellingMistakes': activitySpellingMistakes,
+  'CorrectAWord': activityCorrectAWord,
+  'Grammar': activityGrammar,
+  'Vocabulary': activityVocabulary,
+  'Idioms': activityIdioms,
+  'Scrabble': activityScrabble,
+  'Hangman': activityHangman,
+  'Wordly': activityWordly,
+  'Riddles': activityRiddlesTest,
+  'RiddleOfTheDay': activityRiddleOfTheDay,
+  'Game2048': activityGame2048,
+  'SudokuGame': activitySudokuGame,
+  'WorkingMemory': activityMemory,
+  'MemoryGame1': activityMemoryGame,
+  'InvestingMenu': activityInvestingMenu,
+
+  // for (var type in SatsQuestionSubcategoriesRW.typesList) type: SatsQuestionSubcategoriesRW.fromString(type).getName(),
+  for (var type in SatsQuestionSubcategoriesRW.typesList) type: (context) => StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(type)),
+
+  'Sport' : activitySport,
+  'Yoga' : activityYoga,
+  'SelfReflection' : activitySelfReflection,
+  'Outdoor time' : activityMeme,
+  'Meditation' : activityMeditation,
+  'Meme' : activityMeme,
+} ;
+
 var wellbeing = [
   'Sport / Yoga',
   'Self reflection',
   'Outdoor time',
-  'Mediation',
+  'Meditation',
 ];
 
 var wellbeingTimes = {
   'Sport / Yoga': 4,
   'Self reflection': 2,
   'Outdoor time': 2,
-  'Mediation': 2,
+  'Meditation': 2,
 };

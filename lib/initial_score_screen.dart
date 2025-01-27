@@ -158,7 +158,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                           opacity: isTextVisible ? 1.0 : 0.0,
                           duration: Duration(milliseconds: 300),
                           child: Text(
-                            "You got ${widget.userScore.toStringAsFixed(0)} points.",
+                            "You got ${widget.userScore.toStringAsFixed(0)} ${widget.userScore.toStringAsFixed(0) == "1" ? "point" : "points"}.",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: size.width / 15,
