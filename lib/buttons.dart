@@ -136,6 +136,7 @@ class RedirectButton extends StatefulWidget {
   final void Function() onClick;
   final bool clearAllWindows;
   final Color? color;
+final double fontScale;
 
   const RedirectButton({
     super.key,
@@ -148,6 +149,7 @@ class RedirectButton extends StatefulWidget {
     this.onClick = nuthin,
     this.clearAllWindows = false,
     this.color,
+    this.fontScale = 1,
   });
 
   @override
@@ -234,7 +236,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                   child: Text(
                     widget.text,
                     style: TextStyle(
-                        fontSize: widget.width / 15,
+                        fontSize: widget.width / 15 * widget.fontScale,
                         fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -244,7 +246,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                 child: Text(
                   widget.text,
                   style: TextStyle(
-                    fontSize: widget.width / 18,
+                    fontSize: widget.width / 18 * widget.fontScale,
                     color: Colors.white,
                     fontWeight: FontWeight.w600,
                   ),

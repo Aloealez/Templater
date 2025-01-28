@@ -345,7 +345,7 @@ class _QuizModelState extends State<QuizModel> {
         // fontSize: 0.0155 * size.height,
         fontSize:
             textScaleFactor(widget.questions[questionId]!.question.length) *
-                0.9 *
+                0.95 *
                 size.width,
       ),
       onTap: selectedOption == null
@@ -669,6 +669,7 @@ class _QuizModelState extends State<QuizModel> {
                             child: RedirectButton(
                               onClick: handleContinue,
                               text: 'Next',
+                              fontScale: 0.73,
                               width: size.width,
                               requirement: widget.requireAnswer
                                   ? (selectedOption != null &&
