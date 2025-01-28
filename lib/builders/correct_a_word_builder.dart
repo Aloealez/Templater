@@ -26,7 +26,6 @@ FutureBuilder correctAWordBuilder(
           child: CircularProgressIndicator(),
         );
       }
-      print("questions: ${snapshot.connectionState} ${snapshot.data}");
       return QuizModel(
         "Correct a Word",
         "Correct a Word",

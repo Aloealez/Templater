@@ -42,10 +42,8 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
       for (var subcategory in SatsQuestionSubcategoriesRW.typesList) {
         List<String> savedScores = prefs.getStringList("${subcategory}_scores",) ?? [];
         double lastScore = savedScores.isNotEmpty ? double.parse(savedScores.last) : 0;
-        print("Sats start quiz last score: $lastScore");
         minScore = math.min(minScore, lastScore);
       }
-      print("Sats start quiz min score: $minScore");
       SatsQuestionDifficulty difficulty = minScore < 4 ? SatsQuestionDifficulty.difficultyEasy : minScore < 9 ? SatsQuestionDifficulty.difficultyMedium : SatsQuestionDifficulty.difficultyHard;
       SatsQuestionBank questionBank = SatsQuestionBank();
       await questionBank.init();
@@ -53,7 +51,6 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
       // questionBank.loadFromAssets(widget.subcategory, limit: 5);
       // questionBank.updateQuestionsFromBackend(widget.subcategory, limit: 20);
       questions = await questionBank.getQuestions(widget.subcategory, 5, true, true, difficulty: difficulty);
-      print("Updated questions: $questions");
     }();
 
     return Scaffold(
@@ -99,7 +96,6 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                           if (snapshot.connectionState == ConnectionState.waiting) {
                             return Center(child: CircularProgressIndicator());
                           } else {
-                            print("Questions: $questions");
                             return QuizModel(
                               "Exercise",
                               "R&W",
@@ -113,7 +109,6 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                                   };
 
                                   List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
-                                  print("previous savedProgressQuestionScores: $savedProgressQuestionScores");
 
                                   for (int i = 0; i < SatsQuestionSubcategoriesRW.typesList.length; i++) {
                                     String questionSubcategory = SatsQuestionSubcategoriesRW.typesList.elementAt(i);
@@ -128,15 +123,12 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                                     if (score > -1) {
                                       savedQuestionScores[questionSubcategory]?.add(score.toString());
                                     }
-                                    print("questionSubcategory: $questionSubcategory ${score >= 0.0 ? "true" : "false"}");
                                     savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
 
                                     prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
 
-                                    print("saving savedProgressQuestionScores: $savedProgressQuestionScores");
                                     prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
 
-                                    print("previous question scores: $savedQuestionScores");
                                   }
                                 });
                               },

@@ -136,7 +136,7 @@ class _QuizModelState extends State<QuizModel> {
     val += 1 / (math.sqrt(math.sqrt(math.sqrt(textLength.toDouble()))) * 16);
     val = math.min(val, 0.049);
     val = math.max(val, 0.029);
-    print("val: $val");
+
     return val;
   }
 
@@ -161,7 +161,7 @@ class _QuizModelState extends State<QuizModel> {
       _textEditingControllers[questionId] = TextEditingController();
       maxScore += widget.questions[questionId]!.score.values.elementAt(0);
     }
-    print("init max score: $maxScore");
+
     setState(() {
       maxScore = maxScore + widget.initMaxScore;
     });
@@ -188,8 +188,8 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   void handleContinue() {
-    print("selectedOption: $selectedOption");
-    print("answers: $answers");
+
+
     if (widget.answerLayout == QuizModelAnswerLayout.textInput &&
         !widget.showMultipleQuestions) {
       setState(() {
@@ -230,8 +230,6 @@ class _QuizModelState extends State<QuizModel> {
         if (answers[questionId] == null) {
           continue;
         }
-        print(
-            "questionId: $questionId answer: ${answers[questionId]} correct: ${widget.questions[questionId]!.correct[answers[questionId]]}");
         if (widget.questions[questionId]!.correct[answers[questionId]] ??
             false) {
           score +=
@@ -243,8 +241,8 @@ class _QuizModelState extends State<QuizModel> {
         }
       }
 
-      print("score: $score");
-      print("answers: $answers");
+
+
 
       Navigator.pop(context);
       Navigator.push(
@@ -509,7 +507,7 @@ class _QuizModelState extends State<QuizModel> {
                   colors: selectedOption == null
                       ? [
                           Theme.of(context).colorScheme.primary,
-                          Theme.of(context).colorScheme.secondary
+                          Theme.of(context).colorScheme.secondary,
                         ]
                       : selectedOption == answerId
                           ? (widget.questions[questionId]!.correct[answerId]!
@@ -566,11 +564,7 @@ class _QuizModelState extends State<QuizModel> {
           for (int i = 0;
               i < widget.questions[questionId]!.answers.length;
               i++) {
-            print("value: $value");
-            print(
-                "answer: ${widget.questions[questionId]!.answers.values.elementAt(i)}");
-            print(
-                "score: ${widget.questions[questionId]!.score.values.elementAt(i)}");
+
             if (widget.questions[questionId]?.answers.values.elementAt(i) ==
                 value) {
               setState(() {
@@ -757,7 +751,7 @@ class _QuizModelState extends State<QuizModel> {
 
   Widget buildQuestions(
       BuildContext context, Size size, String questionId, int questionIndex) {
-    print("building question: ${widget.questions[questionId]!.question}");
+
     return Column(
       children: [
         this.buildTitle(context, size, questionIndex, questionId),
@@ -780,7 +774,7 @@ class _QuizModelState extends State<QuizModel> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print("score: $score");
+
 
     return Scaffold(
       appBar: appBar(context, ""),
@@ -819,19 +813,6 @@ class _QuizModelState extends State<QuizModel> {
                 children: [
                   SizedBox(
                     height: size.height * 0.064,
-                    width: size.width * 0.33,
-                    child: RedirectButton(
-                      onClick: () {
-                        forceContinue = true;
-                        handleContinue();
-                      },
-                      text: 'End',
-                      width: size.width,
-                    ),
-                  ),
-                  SizedBox(width: 0.054 * size.width),
-                  SizedBox(
-                    height: size.height * 0.064,
                     width: size.width * 0.39,
                     child: RedirectButton(
                       onClick: handleContinue,
@@ -840,10 +821,23 @@ class _QuizModelState extends State<QuizModel> {
                       requirement: widget.requireAnswer
                           ? (selectedOption != null && selectedOption != "")
                           : widget.answerLayout == QuizModelAnswerLayout.list ||
-                                  widget.answerLayout ==
-                                      QuizModelAnswerLayout.boxes
-                              ? selectedOption != null
-                              : true,
+                          widget.answerLayout ==
+                              QuizModelAnswerLayout.boxes
+                          ? selectedOption != null
+                          : true,
+                    ),
+                  ),
+                  SizedBox(width: 0.054 * size.width),
+                  SizedBox(
+                    height: size.height * 0.064,
+                    width: size.width * 0.33,
+                    child: RedirectButton(
+                      onClick: () {
+                        forceContinue = true;
+                        handleContinue();
+                      },
+                      text: 'End',
+                      width: size.width,
                     ),
                   ),
                 ],

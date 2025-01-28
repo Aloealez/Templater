@@ -33,6 +33,7 @@ class ProgressScreen extends StatefulWidget {
 
 class ChartData {
   ChartData(this.day, this.score);
+
   final DateTime day;
   final double score;
 }
@@ -46,8 +47,7 @@ class _ProgressScreen extends State<ProgressScreen>
   int day = 0;
   bool newScores = false;
   double lastUserScore = 0;
-  double maxScore = 1;
-
+  double lastMaxScore = 1;
 
   @override
   void initState() {
@@ -96,18 +96,18 @@ class _ProgressScreen extends State<ProgressScreen>
 
     if (widget.maxScore != null) {
       prefs.setString("lastMaxScore_${widget.exercise}", widget.maxScore.toString());
-      maxScore = widget.maxScore!;
+      lastMaxScore = widget.maxScore!;
     } else {
-      maxScore = double.parse(prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
+      lastMaxScore = double.parse(prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
     }
 
     List<String> timestamps = prefs.getStringList(
-      "timestamps_${widget.exercise}",
-    ) ??
+          "timestamps_${widget.exercise}",
+        ) ??
         [];
     List<String> scores = prefs.getStringList(
-      "${widget.exercise}_scores",
-    ) ??
+          "${widget.exercise}_scores",
+        ) ??
         [];
 
     if (newScores) {
@@ -116,7 +116,7 @@ class _ProgressScreen extends State<ProgressScreen>
     }
 
     print("scores: $scores");
-    print("scores: $scores");
+    print("timestamps: $timestamps");
     if (scores.isNotEmpty) {
       lastUserScore = double.parse(scores.last);
     } else {
@@ -143,9 +143,11 @@ class _ProgressScreen extends State<ProgressScreen>
 
     callHomeWidgetUpdate();
 
-    setState(() {
-      chartData = newChartData;
-    });
+    if (newScores) {
+      setState(() {
+        chartData = newChartData;
+      });
+    }
   }
 
   Future<void> callHomeWidgetUpdate() async {
@@ -155,9 +157,11 @@ class _ProgressScreen extends State<ProgressScreen>
     List<String> widgetItems = [];
     for (int i = 0; i < basePlanData.plan.length; i++) {
       widgetItems.add(
-          "${basePlanData.basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[basePlanData.plan[i]]}",);
+        "${basePlanData.basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[basePlanData.plan[i]]}",
+      );
       print(
-          "plan[$i] ${basePlanData.plan[i]} ${sectionNames[basePlanData.plan[i]]} ${basePlanData.basePlanTicked[i]}",);
+        "plan[$i] ${basePlanData.plan[i]} ${sectionNames[basePlanData.plan[i]]} ${basePlanData.basePlanTicked[i]}",
+      );
     }
 
     HomeWidget.saveWidgetData("plan_title", "To - Do List");
@@ -181,9 +185,10 @@ class _ProgressScreen extends State<ProgressScreen>
 
   @override
   Widget build(BuildContext context) {
-    print("widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: ${maxScore}");
+    print(
+        "widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: ${lastMaxScore}");
     Size size = MediaQuery.of(context).size;
-    print("widget.score: ${widget.userScore}");
+    print("widget.userScore: ${widget.userScore}");
 
     DateTimeAxis xAxis = DateTimeAxis(
       isVisible: false,
@@ -226,7 +231,6 @@ class _ProgressScreen extends State<ProgressScreen>
           ],
         ),
       ),
-
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 10,
@@ -248,12 +252,12 @@ class _ProgressScreen extends State<ProgressScreen>
                     ),
                   ),
                   SizedBox(
-                    height: size.height/60,
+                    height: size.height / 60,
                   ),
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / maxScore).round()}%",
+                      "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / lastMaxScore).round()}%",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: size.width / 18,
@@ -263,125 +267,143 @@ class _ProgressScreen extends State<ProgressScreen>
                     ),
                   ),
                   SizedBox(height: size.height / 25),
-
                   SizedBox(
                     height: size.height * 0.35,
                     child: chartData.isEmpty
                         ? const Center(child: CircularProgressIndicator())
                         : SfCartesianChart(
-
-                      primaryXAxis: DateTimeCategoryAxis(
-                        isVisible: false,
-                        rangePadding: ChartRangePadding.none,
-                      ),
-                      primaryYAxis: NumericAxis(
-                        isVisible: false,
-                      ),
-
-                      series: <CartesianSeries>[
-                        // Warstwa 1
-                        LineSeries<ChartData, DateTime>(
-                          color: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.02),
-                          width: 35,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                        ),
-                        // Warstwa 2
-                        LineSeries<ChartData, DateTime>(
-                          color: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.03),
-                          width: 25,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                        ),
-                        // Warstwa 3
-                        LineSeries<ChartData, DateTime>(
-                          color: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.04),
-                          width: 20,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                        ),
-                        // Warstwa 4
-                        LineSeries<ChartData, DateTime>(
-                          color: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.05),
-                          width: 15,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                        ),
-                        // Warstwa 5
-                        LineSeries<ChartData, DateTime>(
-                          color: Theme.of(context).colorScheme.primaryFixedDim.withOpacity(0.06),
-                          width: 10,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                        ),
-                        LineSeries<ChartData, DateTime>(
-                          onPointTap: (ChartPointDetails details) {
-                            debugPrint("onPointTap wywołany! index = ${details.pointIndex}");
-                            final int? index = details.pointIndex;
-                            if (index != null && index > 0 && index < chartData.length - 1) {
-                              setState(() {
-                                _tappedIndex = index;
-                              });
-                              Future.delayed(const Duration(seconds: 1), () {
-                                if (mounted && _tappedIndex == index) {
-                                  setState(() {
-                                    _tappedIndex = null;
-                                  });
-                                }
-                              });
-                            }
-
-                          },
-
-                          color: Theme.of(context).colorScheme.primaryFixedDim,
-                          width: 5,
-                          dataSource: chartData,
-                          xValueMapper: (ChartData data, _) => data.day,
-                          yValueMapper: (ChartData data, _) => data.score,
-                          markerSettings: MarkerSettings(
-                            isVisible: true,
-                            shape: DataMarkerType.circle,
-                            color: Theme.of(context).colorScheme.primaryFixedDim,
-                            width: 12,
-                            height: 12,
-                          ),
-                          dataLabelSettings: const DataLabelSettings(
-                            isVisible: true,
-                            labelAlignment: ChartDataLabelAlignment.bottom,
-                            offset: Offset(0, -5),
-                            textStyle: TextStyle(
-                              fontSize: 16,
+                            primaryXAxis: DateTimeCategoryAxis(
+                              isVisible: false,
+                              rangePadding: ChartRangePadding.none,
                             ),
+                            primaryYAxis: NumericAxis(
+                              isVisible: false,
+                            ),
+                            series: <CartesianSeries>[
+                              // Warstwa 1
+                              LineSeries<ChartData, DateTime>(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim
+                                    .withOpacity(0.02),
+                                width: 35,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                              ),
+                              // Warstwa 2
+                              LineSeries<ChartData, DateTime>(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim
+                                    .withOpacity(0.03),
+                                width: 25,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                              ),
+                              // Warstwa 3
+                              LineSeries<ChartData, DateTime>(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim
+                                    .withOpacity(0.04),
+                                width: 20,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                              ),
+                              // Warstwa 4
+                              LineSeries<ChartData, DateTime>(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim
+                                    .withOpacity(0.05),
+                                width: 15,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                              ),
+                              // Warstwa 5
+                              LineSeries<ChartData, DateTime>(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim
+                                    .withOpacity(0.06),
+                                width: 10,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                              ),
+                              LineSeries<ChartData, DateTime>(
+                                onPointTap: (ChartPointDetails details) {
+                                  debugPrint("onPointTap wywołany! index = ${details.pointIndex}");
+                                  final int? index = details.pointIndex;
+                                  if (index != null &&
+                                      index > 0 &&
+                                      index < chartData.length - 1) {
+                                    setState(() {
+                                      _tappedIndex = index;
+                                    });
+                                    Future.delayed(const Duration(seconds: 1),
+                                        () {
+                                      if (mounted && _tappedIndex == index) {
+                                        setState(() {
+                                          _tappedIndex = null;
+                                        });
+                                      }
+                                    });
+                                  }
+                                },
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primaryFixedDim,
+                                width: 5,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.day,
+                                yValueMapper: (ChartData data, _) => data.score,
+                                markerSettings: MarkerSettings(
+                                  isVisible: true,
+                                  shape: DataMarkerType.circle,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .primaryFixedDim,
+                                  width: 12,
+                                  height: 12,
+                                ),
+                                dataLabelSettings: const DataLabelSettings(
+                                  isVisible: true,
+                                  labelAlignment:
+                                      ChartDataLabelAlignment.bottom,
+                                  offset: Offset(0, -5),
+                                  textStyle: TextStyle(
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                dataLabelMapper: (ChartData data, int index) {
+                                  if (index == 0) {
+                                    final day =
+                                        data.day.day.toString().padLeft(2, '0');
+                                    final month = data.day.month
+                                        .toString()
+                                        .padLeft(2, '0');
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                  } else if (index == chartData.length - 1) {
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\nNow";
+                                  } else if (_tappedIndex == index) {
+                                    final day =
+                                        data.day.day.toString().padLeft(2, '0');
+                                    final month = data.day.month
+                                        .toString()
+                                        .padLeft(2, '0');
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                  }
+                                  return "";
+                                },
+                              ),
+                            ],
                           ),
-                          dataLabelMapper: (ChartData data, int index) {
-                            if (index == 0) {
-                              final day = data.day.day.toString().padLeft(2, '0');
-                              final month = data.day.month.toString().padLeft(2, '0');
-                              return "${(data.score.round() / maxScore * 100).round()}%\n$day.$month";
-                            }
-                            else if (index == chartData.length - 1) {
-                              return "${(data.score.round() / maxScore * 100).round()}%\nNow";
-                            }
-                            else if (_tappedIndex == index) {
-                              final day = data.day.day.toString().padLeft(2, '0');
-                              final month = data.day.month.toString().padLeft(2, '0');
-                              return "${(data.score.round() / maxScore * 100).round()}%\n$day.$month";
-                            }
-                            return "";
-                          },
-
-                        ),
-                      ],
-                    ),
                   ),
-
-
-
                   SizedBox(height: size.height / 25),
                 ],
               ),
@@ -394,7 +416,7 @@ class _ProgressScreen extends State<ProgressScreen>
 
   /// 1 dzień wstecz, jeśli mamy > niż 1 punkt
   DateTime _getCustomMin(DateTime firstDay, int length) {
-    if(length > 1) {
+    if (length > 1) {
       return firstDay.subtract(const Duration(days: 1));
     }
     return firstDay; // jeśli tylko 1 punkt, nic nie odejmujemy
@@ -402,7 +424,7 @@ class _ProgressScreen extends State<ProgressScreen>
 
   /// 1 dzień do przodu, jeśli mamy > niż 1 punkt
   DateTime _getCustomMax(DateTime lastDay, int length) {
-    if(length > 1) {
+    if (length > 1) {
       return lastDay.add(const Duration(days: 1));
     }
     return lastDay; // jeśli tylko 1 punkt, nic nie dodajemy

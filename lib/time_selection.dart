@@ -210,7 +210,6 @@ class _TimeSelectionState extends State<TimeSelection> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());
             } else {
-              print("Questions: $questions");
               return QuizModel(
                 "R&W - Exercise {}",
                 "R&W",
@@ -225,7 +224,6 @@ class _TimeSelectionState extends State<TimeSelection> {
                     };
 
                     List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
-                    print("previous savedProgressQuestionScores: $savedProgressQuestionScores");
 
                     for (int i = 0; i < SatsQuestionSubcategoriesRW.typesList.length; i++) {
                       String questionSubcategory = SatsQuestionSubcategoriesRW.typesList.elementAt(i);
@@ -240,15 +238,12 @@ class _TimeSelectionState extends State<TimeSelection> {
                       if (score > -1) {
                         savedQuestionScores[questionSubcategory]?.add(score.toString());
                       }
-                      print("questionSubcategory: ${questionSubcategory} ${score >= 0.0 ? "true" : "false"}");
                       savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
 
                       prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
 
-                      print("saving savedProgressQuestionScores: $savedProgressQuestionScores");
                       prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
 
-                      print("previous question scores: $savedQuestionScores");
                     }
                   });
                 },

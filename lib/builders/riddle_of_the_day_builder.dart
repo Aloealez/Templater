@@ -19,21 +19,17 @@ FutureBuilder riddleOfTheDayBuilder(
       SharedPreferences prefs = await SharedPreferences.getInstance();
 
       List<String> lastScores = prefs.getStringList("riddle_of_the_day_scores") ?? ["0"];
-      print("lastScores: $lastScores");
 
       String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
-      print("date: $date");
       Map<String, QuizQuestionData>? todayQuestion;
 
       if (prefs.getString("lastDateTime_riddle_of_the_day") != date) {
         await prefs.setString("lastDateTime_riddle_of_the_day", date);
 
         String todayQuestionId = (await getRandomQuestions("riddle_of_the_day", "default", 1)).keys.last;
-        print("todayQuestionId: $todayQuestionId");
         await prefs.setString("todayQuestionId_riddle_of_the_day", todayQuestionId);
       }
       String todayQuestionId = prefs.getString("todayQuestionId_riddle_of_the_day") ?? "-1";
-      print("todayQuestionId: $todayQuestionId");
 
       String data = await loadQuestionsAsset("riddle_of_the_day", "default");
       Map<String, dynamic> questions = jsonDecode(data);
@@ -43,11 +39,9 @@ FutureBuilder riddleOfTheDayBuilder(
       };
 
       String lastDoneDate = prefs.getString("lastDone_riddle_of_the_day") ?? "";
-      print("lastDoneDate: $lastDoneDate");
       if (lastDoneDate == date) {
         todayQuestion = null;
       }
-      print("todayQuestion: $todayQuestion");
       return [todayQuestion, lastScores];
     }(),
     builder: (context, snapshot) {
@@ -56,7 +50,6 @@ FutureBuilder riddleOfTheDayBuilder(
           child: CircularProgressIndicator(),
         );
       }
-      print("snapshot.data: ${snapshot.data}");
       if (snapshot.data![0] == null) {
         return ProgressScreen(maxScore: snapshot.data![1].length.toDouble(), exercise: "RiddleOfTheDay");
       }
