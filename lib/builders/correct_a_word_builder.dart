@@ -33,6 +33,7 @@ FutureBuilder correctAWordBuilder(
         120,
         answerLayout : QuizModelAnswerLayout.textInput,
         singleTextQuestion: true,
+        inlineTextInputButton: true,
         initialTest: initialTest,
         endingTest: endingTest,
         initScore: 0,

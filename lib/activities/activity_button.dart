@@ -9,7 +9,7 @@ class ActivityButton extends StatelessWidget {
   final String text1;
   final String text2;
   final double fontSize;
-  final Widget onTapRoute;
+  final Widget? onTapRoute;
   final Color? leftColorGradient;
   final Color? rightColorGradient;
   final double zero;
@@ -28,7 +28,7 @@ class ActivityButton extends StatelessWidget {
     required this.text1,
     required this.text2,
     required this.fontSize,
-    required this.onTapRoute,
+    this.onTapRoute,
     this.leftColorGradient = null,
     this.rightColorGradient = null,
     this.zero = 1,
@@ -53,31 +53,29 @@ class ActivityButton extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        if(!blocked) {
-          if (sectionActivities[exerciseName] != null)
-          {
-            Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.fade,
-                child: sectionActivities[exerciseName]!(context),
-                reverseDuration: const Duration(milliseconds: 100),
-                opaque: true,
-              ),
-            );
-          } else {
-            if (!blocked) {
-              Navigator.push(
-                context,
-                PageTransition(
-                  type: PageTransitionType.fade,
-                  child: onTapRoute,
-                  reverseDuration: const Duration(milliseconds: 100),
-                  opaque: true,
-                ),
-              );
-            }
-          }
+        if (blocked) {
+          return;
+        }
+        if (sectionActivities[exerciseName] != null) {
+          Navigator.push(
+            context,
+            PageTransition(
+              type: PageTransitionType.fade,
+              child: sectionActivities[exerciseName]!(context),
+              reverseDuration: const Duration(milliseconds: 100),
+              opaque: false,
+            ),
+          );
+        } else if (onTapRoute != null) {
+          Navigator.push(
+            context,
+            PageTransition(
+              type: PageTransitionType.fade,
+              child: onTapRoute,
+              reverseDuration: const Duration(milliseconds: 100),
+              opaque: false,
+            ),
+          );
         }
       },
       child:

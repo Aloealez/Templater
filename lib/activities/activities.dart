@@ -9,6 +9,7 @@ import 'package:brainace_pro/activities_for_each_section.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 import 'dart:math' as math;
 
+import '../margins.dart';
 import 'activity_button.dart';
 
 class Activities extends StatefulWidget {
@@ -111,11 +112,7 @@ class _Activities extends State<Activities> {
 
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
-          left: size.width / 15,
-          right: size.width / 15,
-          top: size.height / 10,
-        ),
+        margin: activitiesMargins(size),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

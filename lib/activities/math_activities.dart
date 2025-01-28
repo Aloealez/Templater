@@ -1,6 +1,7 @@
 import 'package:brainace_pro/activities/activity_button.dart';
 import 'package:brainace_pro/attention/find_the_number.dart';
 import 'package:brainace_pro/linguistic/reading_comprehension.dart';
+import 'package:brainace_pro/margins.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../navbar.dart';
@@ -128,11 +129,7 @@ class _MathActivities extends State<MathActivities> {
 
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
-          left: size.width / 15,
-          right: size.width / 15,
-          top: size.height / 10,
-        ),
+        margin: activitiesMargins(size),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

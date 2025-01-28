@@ -68,6 +68,9 @@ class _LevelInstructionState extends State<LevelInstruction> {
                 bottom: 0,
               ),
               child: RawScrollbar(
+                thumbColor: Theme.of(context).colorScheme.primary,
+                radius: const Radius.circular(40),
+                thickness: 5,
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -113,6 +116,9 @@ class _LevelInstructionState extends State<LevelInstruction> {
                 bottom: size.height / 50,
               ),
               child: RawScrollbar(
+                thumbColor: Theme.of(context).colorScheme.primary,
+                radius: const Radius.circular(40),
+                thickness: 5,
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

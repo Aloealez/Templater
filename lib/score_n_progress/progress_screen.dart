@@ -138,7 +138,7 @@ class _ProgressScreen extends State<ProgressScreen>
     }
 
     if (newScores) {
-      prefs.setString("${widget.exercise}TickedDay$day", "1");
+      await prefs.setString("${widget.exercise}TickedDay$day", "1");
     }
 
     callHomeWidgetUpdate();

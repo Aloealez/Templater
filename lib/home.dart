@@ -69,7 +69,8 @@ class _Home extends State<Home> {
         int previousDay = day - 1;
         bool allDoneYesterday = false;
 
-        List<String>? yesterdayPlan = prefs.getStringList("basePlanDay$previousDay");
+        List<String>? yesterdayPlan =
+            prefs.getStringList("basePlanDay$previousDay");
         if (yesterdayPlan != null && yesterdayPlan.isNotEmpty) {
           allDoneYesterday = yesterdayPlan.every((task) {
             return prefs.getString("${task}TickedDay$previousDay") == "1";
@@ -131,7 +132,8 @@ class _Home extends State<Home> {
     List<bool> newWellBeingTicked = [false, false, false, false];
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
-      newWellBeingTicked[i] = (newWellBeingTickedString[i] == "1" ? true : false);
+      newWellBeingTicked[i] =
+          (newWellBeingTickedString[i] == "1" ? true : false);
       if (newWellBeingTicked[i]) {
         newPoints += wellbeingTimes[wellbeing[i]]!;
       }
@@ -178,23 +180,32 @@ class _Home extends State<Home> {
     int currentTime = 0;
 
     if (skill == "sats") {
-      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
-      List<String> questionsSubcategories = List.from(SatsQuestionSubcategoriesRW.typesList);
+      List<String> questionSubcategoriesPointsStr = prefs
+              .getStringList("scores_questionsLast") ??
+          List<String>.generate(
+              SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
+      List<String> questionsSubcategories =
+          List.from(SatsQuestionSubcategoriesRW.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
-          SatsQuestionSubcategoriesRW.typesList[i]: double.parse(questionSubcategoriesPointsStr[i]),
+          SatsQuestionSubcategoriesRW.typesList[i]:
+              double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
-        if (questionsSubcategoriesPoints[a]! > questionsSubcategoriesPoints[b]!) {
+        if (questionsSubcategoriesPoints[a]! >
+            questionsSubcategoriesPoints[b]!) {
           return 1;
-        } else if (questionsSubcategoriesPoints[a]! < questionsSubcategoriesPoints[b]!) {
+        } else if (questionsSubcategoriesPoints[a]! <
+            questionsSubcategoriesPoints[b]!) {
           return -1;
         } else {
           return 0;
         }
       });
       int timePerRWQuestion = 5;
-      for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
+      for (int i = 0;
+          i < questionsSubcategories.length && currentTime < trainingTime;
+          i++) {
         newPlan.add(questionsSubcategories[i]);
         currentTime += timePerRWQuestion;
       }
@@ -243,11 +254,13 @@ class _Home extends State<Home> {
         newPoints += sectionTimes[plan[i]]!;
       }
     }
-    setState(() {
-      basePlanTicked = newBasePlanTicked;
-      points = newPoints;
-      calcValues();
-    });
+    if (basePlanTicked != newBasePlanTicked) {
+      setState(() {
+        basePlanTicked = newBasePlanTicked;
+        points = newPoints;
+        calcValues();
+      });
+    }
   }
 
   void getPoints() {
@@ -263,7 +276,7 @@ class _Home extends State<Home> {
 
   Future<void> readMemory() async {
     await calcDay();
-    await checkAndUpdateStreak();
+    // await checkAndUpdateStreak();
     print("day: $day");
     if (day >= 30) {
       if (mounted) {
@@ -282,12 +295,14 @@ class _Home extends State<Home> {
     await getBasePlanTicked();
 
     // Sprawdzenie, czy wszystkie zadania dzisiaj zostały wykonane i aktualizacja streak
-    bool allDoneToday = plan.isNotEmpty && plan.every((task) {
-      return prefs.getString("${task}TickedDay$day") == "1";
-    });
-    if(allDoneToday) {
+    print("plan: $plan");
+    bool allDoneToday = plan.isNotEmpty &&
+        plan.every((task) {
+          return prefs.getString("${task}TickedDay$day") == "1";
+        });
+    if (allDoneToday) {
       int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
-      if(lastUpdateDay != day) {
+      if (lastUpdateDay != day) {
         int currentStreak = prefs.getInt('streak_days') ?? 0;
         currentStreak++;
         streakDays = currentStreak;
@@ -306,14 +321,15 @@ class _Home extends State<Home> {
 
     String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
       String newEmoji = emojis[rng.nextInt(emojis.length)];
 
       await prefs.setString('wellbeing_emoji', newEmoji);
-      await prefs.setString('last_emoji_update_date', currentDate.toIso8601String());
+      await prefs.setString(
+          'last_emoji_update_date', currentDate.toIso8601String());
 
       setState(() {});
     }
@@ -368,16 +384,14 @@ class _Home extends State<Home> {
                 onTap: () {
                   print("currentplanObj ${plan[i]}");
                   if (sectionActivities[plan[i]] != null) {
-                    Navigator.push(context,
+                    Navigator.push(
+                      context,
                       PageTransition(
                         type: PageTransitionType.fade,
                         child: (sectionActivities[plan[i]]!(context)),
                         reverseDuration: const Duration(milliseconds: 100),
-                        opaque: true,
+                        opaque: false,
                       ),
-                      // MaterialPageRoute(
-                      //   builder: (context) => (sectionActivities[plan[i]]!(context)),
-                      // ),
                     );
                   }
                 },
@@ -386,7 +400,9 @@ class _Home extends State<Home> {
                     SizedBox(
                       width: size.width / 15,
                       child: Icon(
-                        (basePlanTicked[i] == "1") ? Icons.circle : Icons.circle_outlined,
+                        (basePlanTicked[i] == "1")
+                            ? Icons.circle
+                            : Icons.circle_outlined,
                         size: size.width / 14.7,
                         color: const Color(0xfff66fd3),
                       ),
@@ -413,8 +429,10 @@ class _Home extends State<Home> {
   void callHomeWidgetUpdate() {
     List<String> widgetItems = [];
     for (int i = 0; i < plan.length; i++) {
-      widgetItems.add("${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}");
-      print("plan[$i] ${plan[i]} ${sectionNames[plan[i]]} ${basePlanTicked[i]}");
+      widgetItems.add(
+          "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}");
+      print(
+          "plan[$i] ${plan[i]} ${sectionNames[plan[i]]} ${basePlanTicked[i]}");
     }
 
     HomeWidget.saveWidgetData("plan_title", "To - Do List");
@@ -506,7 +524,8 @@ class _Home extends State<Home> {
 
   List<CircularStackEntry> _generateChartData() {
     Color? dialColor = Theme.of(context).colorScheme.secondary;
-    Color? dialColor2 = Theme.of(context).colorScheme.secondary.withOpacity(0.2);
+    Color? dialColor2 =
+        Theme.of(context).colorScheme.secondary.withOpacity(0.2);
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
         ? const Color.fromARGB(255, 255, 136, 255)
         : const Color.fromARGB(255, 211, 54, 198);
@@ -514,7 +533,6 @@ class _Home extends State<Home> {
     List<CircularStackEntry> data = <CircularStackEntry>[
       CircularStackEntry(
         <CircularSegmentEntry>[
-
           CircularSegmentEntry(
             value3,
             dialColor3,
@@ -548,76 +566,83 @@ class _Home extends State<Home> {
     String formattedDate = formatter.format(now);
 
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.only(
-          left: size.width / 10,
-          right: size.width / 10,
-          top: size.height / 10,
-        ),
+      body: RawScrollbar(
+        thumbColor: Theme.of(context).colorScheme.primary,
+        radius: const Radius.circular(40),
+        thickness: 5,
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Center(
-                    child: Text(
-                      "Your Plan",
-                      style: TextStyle(
-                        fontSize: size.width / 6,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  SizedBox(height: 0 * size.height),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Day $day - ${formattedDate.toString()}",
-                          style: TextStyle(
-                            fontSize: size.width / 22,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'OpenSauceTwo',
-                          ),
-                          textAlign: TextAlign.center,
+          child: Container(
+            margin: EdgeInsets.only(
+              left: size.width / 10,
+              right: size.width / 10,
+              top: size.height / 10,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Center(
+                      child: Text(
+                        "Your Plan",
+                        style: TextStyle(
+                          fontSize: size.width / 6,
                         ),
-                        SizedBox(width: 0.03 * size.width),
-                        Container(
-                          padding: EdgeInsets.only(
-                            left: size.width / 30,
-                            right: size.width / 30,
-                            top: size.height / 200,
-                            bottom: size.height / 200,
-                          ),
-                          decoration: BoxDecoration(
-                            color: streakDays == 0 ? const Color(0xff6a0d0a) : const Color(0xff06523f),
-                            borderRadius: BorderRadius.circular(24.0),
-                          ),
-                          child: Text(
-                            "$streakDays Days",
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(height: 0 * size.height),
+                    Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Day $day - ${formattedDate.toString()}",
                             style: TextStyle(
                               fontSize: size.width / 22,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: 'OpenSauceTwo',
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(width: 0.03 * size.width),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: size.width / 30,
+                              right: size.width / 30,
+                              top: size.height / 200,
+                              bottom: size.height / 200,
+                            ),
+                            decoration: BoxDecoration(
+                              color: streakDays == 0
+                                  ? const Color(0xff6a0d0a)
+                                  : const Color(0xff06523f),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                            child: Text(
+                              "$streakDays Days",
+                              style: TextStyle(
+                                fontSize: size.width / 22,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 0.05 * size.height),
-              createBaseProgram(context),
-              SizedBox(height: size.height / 40),
-              SizedBox(height: 0.01 * size.height),
-              createWellBeing(context),
-            ],
-          ),
+                  ],
+                ),
+                SizedBox(height: 0.05 * size.height),
+                createBaseProgram(context),
+                SizedBox(height: 0.04 * size.height),
+                createWellBeing(context),
+                SizedBox(height: 0.069 * size.height),
+              ],
+            ),
+          ) ,
         ),
       ),
       bottomNavigationBar: const MyBottomNavigationBar(),

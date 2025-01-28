@@ -8,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 import 'dart:math' as math;
 
+import '../margins.dart';
+
 class ReadingWritingActivities extends StatefulWidget {
   const ReadingWritingActivities({super.key});
 
@@ -74,11 +76,7 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
 
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
-          left: size.width / 15,
-          right: size.width / 15,
-          top: size.height / 10,
-        ),
+        margin: activitiesMargins(size),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -148,7 +146,7 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
                             text1: SatsQuestionSubcategoriesRW.fromString(questionSubcategory).getName(),
                             text2: "",
                             fontSize: 0.023 * size.height * 1,
-                            onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(questionSubcategory)),
+                            // onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(questionSubcategory)),
                             zero: 1,
                             blocked: false,
                             textWidth: 0.45,

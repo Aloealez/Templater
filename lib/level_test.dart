@@ -92,6 +92,9 @@ class _LevelTestState extends State<LevelTest> {
                 bottom: size.height / 50,
               ),
               child: RawScrollbar(
+                thumbColor: Theme.of(context).colorScheme.primary,
+                radius: const Radius.circular(40),
+                thickness: 5,
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

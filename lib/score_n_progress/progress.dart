@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:circular_chart_flutter/circular_chart_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../margins.dart';
 import '../navbar.dart';
 import 'dart:math';
 
@@ -192,11 +193,7 @@ class _Progress extends State<Progress> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(
-          left: size.width / 15,
-          right: size.width / 15,
-          top: size.height / 10,
-        ),
+        margin: activitiesMargins(size),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
