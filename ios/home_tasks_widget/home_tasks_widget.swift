@@ -1,13 +1,13 @@
-//
-//  home_tasks_widget.swift
-//  home_tasks_widget
-//
-//  Created by Weronika Sioda on 17/10/2024.
-//
-
 import WidgetKit
 import SwiftUI
 import Intents
+import UIKit
+
+func getSmallWidgetPixelSize() -> CGSize {
+    let scale = UIScreen.main.scale
+    let smallWidgetSize = CGSize(width: 120, height: 120) // in points
+    return CGSize(width: smallWidgetSize.width * scale, height: smallWidgetSize.height * scale)
+}
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -43,7 +43,9 @@ struct home_tasks_widgetEntryView : View {
             let image = Image(uiImage: uiImage)
                 .resizable()
                 .scaledToFill()
-            let targetSize = CGSize(width: 350, height: 350)
+            let targetSize = getSmallWidgetPixelSize()
+            print("Small widget pixel size: \(targetSize.width) x \(targetSize.height)")
+            //let targetSize = CGSize(width: 350, height: 350)
             let widthScaleRatio = targetSize.width / uiImage.size.width
             let heightScaleRatio = targetSize.height / uiImage.size.height
             let scaleRatio = min(widthScaleRatio, heightScaleRatio)
