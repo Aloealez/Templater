@@ -32,6 +32,7 @@ class _Home extends State<Home> {
   int points = 0;
   int procent = 0;
   int streakDays = 0;
+  bool streakInDanger = false;
 
   double summ = 100.0;
   double value = 40.0;
@@ -295,22 +296,26 @@ class _Home extends State<Home> {
     await getBasePlanTicked();
 
     // Sprawdzenie, czy wszystkie zadania dzisiaj zostały wykonane i aktualizacja streak
-    print("plan: $plan");
+    print("streak plan: $plan");
+    print("day $day");
     bool allDoneToday = plan.isNotEmpty &&
         plan.every((task) {
+          print("Ticked streak: ${prefs.getString("${task}TickedDay$day")}");
           return prefs.getString("${task}TickedDay$day") == "1";
         });
+    int currentStreak = prefs.getInt('streak_days') ?? 0;
+    streakInDanger = true;
     if (allDoneToday) {
+      streakInDanger = false;
       int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
       if (lastUpdateDay != day) {
-        int currentStreak = prefs.getInt('streak_days') ?? 0;
         currentStreak++;
-        streakDays = currentStreak;
         await prefs.setInt('streak_days', currentStreak);
         await prefs.setInt('last_update_day', day);
-        setState(() {});
       }
     }
+    streakDays = currentStreak;
+    setState(() {});
   }
 
   Future<void> updateEmoji() async {
@@ -616,13 +621,13 @@ class _Home extends State<Home> {
                               bottom: size.height / 200,
                             ),
                             decoration: BoxDecoration(
-                              color: streakDays == 0
+                              color: streakInDanger
                                   ? const Color(0xff6a0d0a)
                                   : const Color(0xff06523f),
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             child: Text(
-                              "$streakDays Days",
+                              "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
                               style: TextStyle(
                                 fontSize: size.width / 22,
                                 fontWeight: FontWeight.w700,

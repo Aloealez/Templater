@@ -14,7 +14,7 @@ ColorScheme defaultLightColors = const ColorScheme.light(
   surface: Color(0xFFFCFEFF),
   onSurface: Color(0xFF000000),
   error: Color.fromARGB(255, 238, 51, 38),
-  shadow: Color.fromARGB(100, 76, 76, 76),
+  shadow: Color.fromARGB(70, 6, 13, 104),
 
   primaryFixed: Color(0xFF5E17EB),
   primaryFixedDim: Color(0xFF0E148D),

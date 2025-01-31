@@ -49,7 +49,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
                 fontSize: size.width / 8,
-                fontFamily: "OpenSauceTwo",
+                fontFamily: "OpenSans",
               ),
             ),
           ),
@@ -77,7 +77,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: size.width / 11,
                         fontWeight: FontWeight.bold,
-                        fontFamily: "OpenSauceTwo",
+                        fontFamily: "OpenSans",
                       ),
                     ),
                   ),

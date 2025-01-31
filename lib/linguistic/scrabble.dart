@@ -176,7 +176,7 @@ class _Scrabble extends State<Scrabble> {
           borderRadius: BorderRadius.circular((size.width * 0.14) / 2.5),
           boxShadow: [
             BoxShadow(
-              color: Theme.of(context).colorScheme.shadow.withOpacity(0.4),
+              color: Theme.of(context).colorScheme.shadow,
               spreadRadius: 5,
               blurRadius: 7,
               offset: const Offset(5, 5),
@@ -245,7 +245,7 @@ class _Scrabble extends State<Scrabble> {
         borderRadius: BorderRadius.circular((size.width * 0.14) / 2.5),
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).colorScheme.shadow.withOpacity(0.4),
+            color: Theme.of(context).colorScheme.shadow,
             spreadRadius: 5,
             blurRadius: 7,
             offset: const Offset(5, 5),

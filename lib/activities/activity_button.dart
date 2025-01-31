@@ -95,10 +95,10 @@ class ActivityButton extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Theme.of(context).colorScheme.shadow.withAlpha(139),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(5, 5),
+                      color: Theme.of(context).colorScheme.shadow,
+                      spreadRadius: 4,
+                      blurRadius: 6,
+                      offset: const Offset(3, 3),
                     ),
                   ],
                 ),
@@ -153,13 +153,6 @@ class ActivityButton extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     height: 1.2,
                                     fontStyle: (title) ? FontStyle.italic : FontStyle.normal,
-                                    shadows: [
-                                      Shadow(
-                                        color: Theme.of(context).colorScheme.shadow,
-                                        blurRadius: 10,
-                                        offset: const Offset(5, 5),
-                                      ),
-                                    ],
                                   ),
                                 ),
                                 text2 == ""
@@ -171,13 +164,6 @@ class ActivityButton extends StatelessWidget {
                                     fontSize: zero * fontSize,
                                     fontWeight: FontWeight.bold,
                                     height: 1.2,
-                                    shadows: [
-                                      Shadow(
-                                        color: Theme.of(context).colorScheme.shadow,
-                                        blurRadius: 10,
-                                        offset: const Offset(5, 5),
-                                      ),
-                                    ],
                                   ),
                                 ),
                               ],

@@ -220,7 +220,7 @@ Container createRecipe(
       ),
       boxShadow: [
         BoxShadow(
-          color: Theme.of(context).colorScheme.shadow.withOpacity(1),
+          color: Theme.of(context).colorScheme.shadow,
           spreadRadius: 5,
           blurRadius: 7,
           offset: const Offset(5, 5),

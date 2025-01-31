@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'home.dart';
 import 'main.dart';
 
 AppBar appBar(
@@ -17,6 +19,16 @@ AppBar appBar(
             color: (!meditation) ? Theme.of(context).colorScheme.onSurface : Colors.white,
             icon: const Icon(Icons.close),
             onPressed: () {
+              // if (route == null) {
+              //   Navigator.of(context).pushAndRemoveUntil(
+              //     PageTransition(
+              //       type: PageTransitionType.fade,
+              //       child: Home(),
+              //     ),
+              //         (Route<dynamic> route) => false,
+              //   );
+              //   Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+              // }
               Navigator.pop(context);
               if (route != null) {
                 Navigator.push(

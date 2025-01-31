@@ -132,6 +132,57 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          style: normal
+        - asset: assets/fonts/OpenSans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/OpenSans-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/OpenSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/OpenSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/SFPRODISPLAYREGULAR.OTF
+          style: normal
+        - asset: assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF
+          weight: 300
+        - asset: assets/fonts/SFPRODISPLAYMEDIUM.OTF
+          weight: 500
+          style: italic
+        - asset: assets/fonts/SFPRODISPLAYBOLD.OTF
+          weight: 700
+        - asset: assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF
+          weight: 700
+          style: italic
+        - asset: assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF
+          weight: 800
+          style: italic
+        - asset: assets/fonts/SFPRODISPLAYBLACKITALIC.OTF
+          weight: 900
+          style: italic
     #    - family: Arial
     #      fonts:
     #        - asset: assets/fonts/Arial.ttf

@@ -114,7 +114,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
                 boxShadow: (!blocked[no])
                     ? [
                         BoxShadow(
-                          color: Theme.of(context).colorScheme.shadow.withOpacity(0.5),
+                          color: Theme.of(context).colorScheme.shadow,
                           spreadRadius: 5,
                           blurRadius: 7,
                           offset: const Offset(5, 5),

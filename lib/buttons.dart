@@ -373,7 +373,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
                         Shadow(
                           offset: const Offset(2.0, 2.0),
                           blurRadius: 3.0,
-                          color: Theme.of(context).colorScheme.shadow.withAlpha(169),
+                          color: Theme.of(context).colorScheme.shadow,
                         ),
                       ],
                     ),
