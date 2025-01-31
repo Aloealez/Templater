@@ -164,7 +164,7 @@ class _ProgressScreen extends State<ProgressScreen>
       );
     }
 
-    HomeWidget.saveWidgetData("plan_title", "To - Do List");
+    HomeWidget.saveWidgetData("plan_title", "BeSmart List");
     HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
     HomeWidget.updateWidget(
       androidName: "TodoHomeScreenWidget",

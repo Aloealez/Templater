@@ -440,7 +440,7 @@ class _Home extends State<Home> {
           "plan[$i] ${plan[i]} ${sectionNames[plan[i]]} ${basePlanTicked[i]}");
     }
 
-    HomeWidget.saveWidgetData("plan_title", "To - Do List");
+    HomeWidget.saveWidgetData("plan_title", "BeSmart List");
     HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
     HomeWidget.updateWidget(
       androidName: "TodoHomeScreenWidget",

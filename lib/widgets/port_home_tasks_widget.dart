@@ -44,7 +44,7 @@ class PortHomeTasksWidget extends StatelessWidget {
           SizedBox(height: size.height / 12),
           Flexible(
             child: Text(
-              "To - Do List",
+              "BeSmart List",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
