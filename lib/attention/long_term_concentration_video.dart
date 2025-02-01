@@ -154,7 +154,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                       route: QuizModel(
                         "Attention",
                         "Attention",
-                        60,
+                        120,
                         initialTest: widget.initialTest,
                         endingTest: widget.endingTest,
                         initScore: 0,

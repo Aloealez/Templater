@@ -99,7 +99,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                             return QuizModel(
                               "Exercise",
                               "R&W",
-                              900,
+                              300,
                               page: Home(),
                               onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
                                 SharedPreferences.getInstance().then((prefs) {
