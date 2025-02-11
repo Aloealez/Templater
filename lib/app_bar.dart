@@ -9,6 +9,7 @@ AppBar appBar(
   bool canReturn = true,
   meditation = false,
   Widget? route,
+  Widget? screen,
 }) {
   Size size = MediaQuery.of(context).size;
   return AppBar(
@@ -29,6 +30,13 @@ AppBar appBar(
               //   );
               //   Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
               // }
+              if (screen != null) {
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (context) => screen),
+                      (Route<dynamic> route) => false,
+                );
+                return;
+              }
               Navigator.pop(context);
               if (route != null) {
                 Navigator.push(

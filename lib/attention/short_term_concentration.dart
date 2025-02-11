@@ -182,8 +182,16 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                   SizedBox(
                     height: size.height / 30,
                   ),
-                  YoutubePlayer(
-                    controller: _controller,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: YoutubePlayer(
+                        controller: _controller,
+                      ),
+                    ),
                   ),
                   SizedBox(
                     height: size.height / 25,

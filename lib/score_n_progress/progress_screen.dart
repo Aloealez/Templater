@@ -9,6 +9,8 @@ import 'package:brainace_pro/widgets/port_home_tasks_widget_config.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:brainace_pro/activities_for_each_section.dart';
 
+import '../home.dart';
+
 class ProgressScreen extends StatefulWidget {
   final bool points;
   final double? userScore;
@@ -206,7 +208,7 @@ class _ProgressScreen extends State<ProgressScreen>
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Stack(
           children: [
-            appBar(context, ""),
+            appBar(context, "", screen: Home()),
             Positioned.fill(
               top: kToolbarHeight,
               child: ConfettiWidget(

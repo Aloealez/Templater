@@ -25,7 +25,7 @@ class _VideoScreenState extends State<VideoScreen> {
     params: const YoutubePlayerParams(
       showControls: true,
       mute: false,
-      showFullscreenButton: false,
+      showFullscreenButton: true,
       loop: false,
       enableKeyboard: false,
     ),

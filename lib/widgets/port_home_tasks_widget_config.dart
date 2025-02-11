@@ -26,12 +26,12 @@ class PortHomeTasksWidgetConfig {
     print("directory.path: ${directory.path}");
 
     await HomeWidget.saveWidgetData('filename', tempFile.path);
-    await HomeWidget.updateWidget(
-      name: "home_tasks_widget",
-        iOSName: 'home_tasks_widget',
-        androidName: 'PortHomeTasksWidget',
-      qualifiedAndroidName: 'PortHomeTasksWidget',
-    );
+    // await HomeWidget.updateWidget(
+    //   name: "home_tasks_widget",
+    //     iOSName: 'home_tasks_widget',
+    //     androidName: 'PortHomeTasksWidget',
+    //   qualifiedAndroidName: 'PortHomeTasksWidget',
+    // );
   }
 
   static Future<void> initialize() async {
