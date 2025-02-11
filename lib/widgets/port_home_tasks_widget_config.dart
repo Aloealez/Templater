@@ -11,6 +11,7 @@ import 'package:path_provider/path_provider.dart';
 
 class PortHomeTasksWidgetConfig {
   static Future<void> update(context, PortHomeTasksWidget widget) async {
+    await initialize();
     widget.themeBrightness = Theme.of(context).brightness;
     Uint8List bytes = await DavinciCapture.offStage(widget,
       context: context,
@@ -21,6 +22,8 @@ class PortHomeTasksWidgetConfig {
     final directory = await getApplicationSupportDirectory();
     File tempFile = File("${directory.path}/${DateTime.now().toIso8601String()}.png");
     await tempFile.writeAsBytes(bytes);
+
+    print("directory.path: ${directory.path}");
 
     await HomeWidget.saveWidgetData('filename', tempFile.path);
     await HomeWidget.updateWidget(
