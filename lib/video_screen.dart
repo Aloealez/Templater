@@ -187,8 +187,6 @@ class _VideoScreenState extends State<VideoScreen> {
                         color: Theme.of(context).colorScheme.onSecondary,
                       ),
                       label: Text(
-
-
                         "Skip",
                         style: TextStyle(
                           fontSize: 22,
