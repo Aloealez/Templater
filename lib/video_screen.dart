@@ -44,6 +44,7 @@ class _VideoScreenState extends State<VideoScreen> {
     }
   }
 
+
   @override
   void initState() {
     super.initState();
@@ -79,6 +80,7 @@ class _VideoScreenState extends State<VideoScreen> {
     _controller.close();
     super.dispose();
   }
+
 
   @override
   Widget build(BuildContext context) {
