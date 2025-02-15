@@ -188,6 +188,7 @@ class _VideoScreenState extends State<VideoScreen> {
                       ),
                       label: Text(
 
+
                         "Skip",
                         style: TextStyle(
                           fontSize: 22,
