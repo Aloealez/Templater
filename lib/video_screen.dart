@@ -81,7 +81,6 @@ class _VideoScreenState extends State<VideoScreen> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
