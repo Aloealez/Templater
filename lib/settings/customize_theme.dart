@@ -35,15 +35,18 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ColorPicker(
-                  pickerColor: getThemeColor(prefs, Theme.of(context).brightness, colorKey),
-                    onColorChanged: (Color color) {
-                      print("Color changed to $color");
-                      setThemeColor(prefs, Theme.of(context).brightness, colorKey, color).then((obj) {
-                        if (context.mounted) {
-                          MyApp.of(context).reloadTheme();
-                        }
-                      });
-                      setState(() {});
+                  pickerColor: getThemeColor(
+                      prefs, Theme.of(context).brightness, colorKey),
+                  onColorChanged: (Color color) {
+                    print("Color changed to $color");
+                    setThemeColor(
+                        prefs, Theme.of(context).brightness, colorKey, color)
+                        .then((obj) {
+                      if (context.mounted) {
+                        MyApp.of(context).reloadTheme();
+                      }
+                    });
+                    setState(() {});
                   },
                 ),
               ],
@@ -71,7 +74,9 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                 ),
               ),
               onPressed: () {
-                setThemeColor(prefs, Theme.of(context).brightness, colorKey, null).then((obj) {
+                setThemeColor(
+                    prefs, Theme.of(context).brightness, colorKey, null)
+                    .then((obj) {
                   Navigator.of(context).pop();
                   if (context.mounted) {
                     MyApp.of(context).reloadTheme();
@@ -98,7 +103,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
         color: getThemeColor(prefs, Theme.of(context).brightness, colorKey),
         boxShadow: [
           BoxShadow(
-            color: Color(0x4C4C4C64).withAlpha(137),
+            color: const Color(0x4C4C4C64).withAlpha(137),
             spreadRadius: 5,
             blurRadius: 7,
             offset: const Offset(5, 5),
@@ -123,6 +128,22 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
     );
   }
 
+
+  Future<void> resetToDefaultColors() async {
+    if (prefs != null) {
+      final brightness = Theme.of(context).brightness;
+      await setThemeColor(prefs, brightness, "surface", null);
+      await setThemeColor(prefs, brightness, "primary", null);
+      await setThemeColor(prefs, brightness, "secondary", null);
+      await setThemeColor(prefs, brightness, "tertiary", null);
+      await setThemeColor(prefs, brightness, "primaryContainer", null);
+      if (context.mounted) {
+        MyApp.of(context).reloadTheme();
+      }
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -145,34 +166,49 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                   right: size.width / 10,
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  spacing: 30,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _buildColorTile(
                       label: 'Background',
                       colorKey: "surface",
                       textColor: Theme.of(context).colorScheme.onSurface,
                     ),
-
+                    const SizedBox(height: 30),
                     _buildColorTile(
                       label: 'Primary',
                       colorKey: "primary",
                     ),
-
+                    const SizedBox(height: 30),
                     _buildColorTile(
                       label: 'Secondary',
                       colorKey: "secondary",
                     ),
-
+                    const SizedBox(height: 30),
                     _buildColorTile(
                       label: 'Accent',
                       colorKey: "tertiary",
                     ),
-
+                    const SizedBox(height: 30),
                     _buildColorTile(
                       label: 'Contrast',
                       colorKey: "primaryContainer",
-                      textColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                      textColor:
+                      Theme.of(context).colorScheme.onPrimaryContainer,
+                    ),
+                    const SizedBox(height: 40),
+                    ElevatedButton(
+                      onPressed: resetToDefaultColors,
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.width * 0.08,
+                          vertical: size.height * 0.02,
+                        ),
+                        foregroundColor: Colors.black,
+                      ),
+                      child: const Text(
+                        'Reset to Default Colors',
+                        style: TextStyle(fontSize: 16, color: const Color(0xFF7D509F)),
+                      ),
                     ),
                   ],
                 ),

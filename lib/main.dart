@@ -110,7 +110,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_outlined_$theme.png");
       }
     }
-    
+
     myAppPrecacheImage("assets/brain.png");
     myAppPrecacheImage("assets/help_icon_dark.png");
     myAppPrecacheImage("assets/help_icon_light.png");
@@ -230,7 +230,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   void switchTheme() {
     setState(
-      () {
+          () {
         actTheme = (actTheme + 1) % themes.length;
         themeMode = themes[actTheme];
         saveTheme(actTheme);
