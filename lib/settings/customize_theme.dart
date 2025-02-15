@@ -207,7 +207,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                       ),
                       child: const Text(
                         'Reset to Default Colors',
-                        style: TextStyle(fontSize: 16, color: const Color(0xFF7D509F)),
+                        style: TextStyle(fontSize: 20, color: const Color(0xFF7D509F)),
                       ),
                     ),
                   ],
