@@ -101,7 +101,7 @@ Widget createDot(
   int val,
 ) {
   Size size = MediaQuery.of(context).size;
-  return usersAnswer == val || correct == val
+  return (usersAnswer == val || correct == val) && usersAnswer != -1
       ? Padding(
           padding: EdgeInsets.symmetric(
             horizontal: size.width / 30,
