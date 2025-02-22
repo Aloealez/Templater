@@ -30,30 +30,26 @@ class _Lesson13 extends State<Lesson13> {
     Widget? imageWidget,
   }) {
     List<String> answers = questions[questionNumber]["answers"] as List<String>;
-    ListTile createListTitle(int val, String text, Size size) {
-      return ListTile(
-        dense: true,
-        title: Text(
-          text,
-          style: TextStyle(fontSize: 0.02 * size.height),
+    InkWell createListTitle(int val, String text, Size size) {
+      return InkWell(
+        onTap: usersAnswers[questionNumber] == -1 ? () {
+          setState(() {
+            usersAnswers[questionNumber] = val;
+          });
+        } : () {},
+        child: ListTile(
+          dense: true,
+          title: Text(
+            text,
+            style: TextStyle(fontSize: 0.02 * size.height),
+          ),
+          leading: createDot(
+            context,
+            usersAnswers[questionNumber],
+            questions[questionNumber]["correctAnswer"]!,
+            val,
+          ),
         ),
-        leading: (usersAnswers[questionNumber] == -1)
-            ? Radio<int>(
-                value: val,
-                groupValue: usersAnswers[questionNumber],
-                activeColor: Colors.blue,
-                onChanged: (value) {
-                  setState(() {
-                    usersAnswers[questionNumber] = value!;
-                  });
-                },
-              )
-            : createDot(
-                context,
-                usersAnswers[questionNumber],
-                questions[questionNumber]["correctAnswer"]!,
-                val,
-              ),
       );
     }
 
