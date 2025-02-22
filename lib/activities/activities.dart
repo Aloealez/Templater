@@ -176,6 +176,8 @@ class _Activities extends State<Activities> {
                             ),
                           ],
                         ),
+
+
                         SizedBox(height: 0.03 * size.height),
                         ActivityButton(
                           context,
