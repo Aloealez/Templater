@@ -1,0 +1,430 @@
+{
+  "questions": [
+    {
+      "task": "In the figure, AC = CD. The measure of angle EBC is 36°, and the measure of angle ACD is 78°. What is the value of x?",
+      "answers": {
+        "A": "17°",
+        "B": "130°",
+        "C": "92°",
+        "D": "87°"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+      },
+      "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+      },
+      "explanation": "The correct answer is 87.\n\nRationale:\nGiven ∠ACD = 78°, in isosceles triangle ACD we have ∠CDA = ∠CAD, so each is (180 - 78)/2.\nGiven ∠EBC = 36° and ∠BDE = (180 - 78)/2,\nwe deduce that x = 180 - [∠BDE + ∠EBC] = 87°.\n",
+      "category": "Geometry",
+      "difficulty": "Medium",
+      "graph": [
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              10,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              7,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "task": "In the figure, AC = CD. The measure of angle EBC is 32°, and the measure of angle ACD is 116°. What is the value of x?",
+      "answers": {
+        "A": "131°",
+        "B": "75°",
+        "C": "64°",
+        "D": "23°"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+      },
+      "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+      },
+      "explanation": "The correct answer is 64.\n\nRationale:\nGiven ∠ACD = 116°, in isosceles triangle ACD we have ∠CDA = ∠CAD, so each is (180 - 116)/2.\nGiven ∠EBC = 32° and ∠BDE = (180 - 116)/2,\nwe deduce that x = 180 - [∠BDE + ∠EBC] = 64°.\n",
+      "category": "Geometry",
+      "difficulty": "Medium",
+      "graph": [
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              10,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              7,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "task": "In the figure, AC = CD. The measure of angle EBC is 49°, and the measure of angle ACD is 92°. What is the value of x?",
+      "answers": {
+        "A": "93°",
+        "B": "122°",
+        "C": "132°",
+        "D": "24°"
+      },
+      "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      },
+      "explanation": "The correct answer is 93.\n\nRationale:\nGiven ∠ACD = 92°, in isosceles triangle ACD we have ∠CDA = ∠CAD, so each is (180 - 92)/2.\nGiven ∠EBC = 49° and ∠BDE = (180 - 92)/2,\nwe deduce that x = 180 - [∠BDE + ∠EBC] = 93°.\n",
+      "category": "Geometry",
+      "difficulty": "Medium",
+      "graph": [
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              10,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "line_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "line_thickness": 1.0,
+          "point_color": [
+            255,
+            0,
+            0,
+            0
+          ],
+          "point_thickness": 0.0,
+          "grid": false,
+          "graph_points": [
+            [
+              8,
+              4
+            ],
+            [
+              7,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
