@@ -276,9 +276,10 @@ class _Home extends State<Home> {
   }
 
   Future<void> readMemory() async {
+    prefs = await SharedPreferences.getInstance();
     await calcDay();
-    // await checkAndUpdateStreak();
     print("day: $day");
+
     if (day >= 30) {
       if (mounted) {
         Navigator.pop(context);
@@ -290,33 +291,48 @@ class _Home extends State<Home> {
         );
       }
     }
+
     await getSkill();
     await getWellBeingTicked();
     await createPlan();
     await getBasePlanTicked();
 
-    // Sprawdzenie, czy wszystkie zadania dzisiaj zostały wykonane i aktualizacja streak
-    print("streak plan: $plan");
-    print("day $day");
-    bool allDoneToday = plan.isNotEmpty &&
-        plan.every((task) {
-          print("Ticked streak: ${prefs.getString("${task}TickedDay$day")}");
-          return prefs.getString("${task}TickedDay$day") == "1";
-        });
+
     int currentStreak = prefs.getInt('streak_days') ?? 0;
-    streakInDanger = true;
-    if (allDoneToday) {
-      streakInDanger = false;
-      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
-      if (lastUpdateDay != day) {
-        currentStreak++;
+    final int previousDay = day - 1;
+
+    if (previousDay > 0) {
+      final yesterdayPlan = prefs.getStringList("basePlanDay$previousDay");
+      bool allDoneYesterday = false;
+
+      if (yesterdayPlan != null && yesterdayPlan.isNotEmpty) {
+        allDoneYesterday = yesterdayPlan.every(
+              (task) => prefs.getString("${task}TickedDay$previousDay") == "1",
+        );
+      }
+
+      if (!allDoneYesterday) {
+        currentStreak = 0;
         await prefs.setInt('streak_days', currentStreak);
-        await prefs.setInt('last_update_day', day);
       }
     }
+
+    bool allDoneToday = plan.isNotEmpty &&
+        plan.every((task) => prefs.getString("${task}TickedDay$day") == "1");
+
+    if (allDoneToday) {
+      currentStreak++;
+      await prefs.setInt('streak_days', currentStreak);
+      streakInDanger = false;
+    } else {
+      streakInDanger = true;
+    }
+
     streakDays = currentStreak;
     setState(() {});
   }
+
+
 
   Future<void> updateEmoji() async {
     prefs = await SharedPreferences.getInstance();
