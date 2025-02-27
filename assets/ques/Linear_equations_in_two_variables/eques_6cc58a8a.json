@@ -1,0 +1,19 @@
+{
+  "task": "Line $k$ is defined by the equation $y = -9x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
+  "answers": {
+    "A": "-6/1",
+    "B": "-9/1",
+    "C": "1/9",
+    "D": "9/1"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "The equation of line $k$ is given as $y = -9x + b$, so its slope is -9. For a perpendicular line, the slope is the negative reciprocal of -9, which is 1/9. Thus, the correct answer is 1/9.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "6cc58a8a"
+}

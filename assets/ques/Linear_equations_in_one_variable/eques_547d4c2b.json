@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "The number of months it took the cactus to double its height.",
+    "B": "The height, in units, of the cactus when it was 1 month old.",
+    "C": "The average number of months it takes similar cactuss to grow 14 units.",
+    "D": "The average number of units the cactus's height increased per month."
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "A cactus had a height of 8 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the cactus to reach a height of 14 units. Which of the following is the best interpretation of the number 4 in this context?\n\n$ 4n + 8 = 14 $",
+  "explanation": "Choice D is correct.\n\nThe height of the cactus at a given time is equal to its initial height plus the number of units it grew. In the given equation, 14 represents the height at the final time, and 8 represents the height when it was first measured. It follows that 4n represents the total height growth over time.\n\nSince $ n $ represents the number of months between the two measurements, the coefficient 4 must represent the average number of units the cactus's height increased per month.\n\n",
+  "category": "Algebraic Word Problems",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "547d4c2b"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "A certain tree weighs 427 centimeters at birth and gains more than 2.36 but less than 4.02 centimeters per day during its first year. Which of the following inequalities represents all possible centimeters values, $w$, for the tree after 377 days?",
+  "answers": {
+    "A": "1317 < w < 1943",
+    "B": "1267 < w < 1893",
+    "C": "1417 < w < 2043",
+    "D": "1053 < w < 1554"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The tree starts at 427 centimeters and grows between 2.36 and 4.02 centimeters per day. The inequality describing this scenario is: $ 427 + 2.36 \times d < w < 427 + 4.02 \times d $. Substituting 377 for $d$ gives: $ 1317 < w < 1943 $.",
+  "category": "Linear Inequalities - Growth Over Time",
+  "difficulty": "Medium",
+  "id": "32e165f8"
+}

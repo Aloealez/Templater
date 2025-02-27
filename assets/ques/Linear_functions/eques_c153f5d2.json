@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{16}{1} $",
+    "B": "$ \\frac{8}{1} $",
+    "C": "12",
+    "D": "$ \\frac{18}{1} $"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "The function $ h $ is defined by $ h(x) = 3x + 12 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+  "explanation": "Choice B is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 12 $\n\nSetting $ y = 0 $:\n$ 0 = 3x + 12 $\nSolving for $ x $:\n$ x = -\\frac{12}{3} = -4 $\n\nThus, the x-intercept is $ (-4, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 12 = 12 $\n\nThus, the y-intercept is $ (0, 12) $.\n\nSince $ a = -4 $ and $ b = 12 $, the sum is:\n$ a + b = -4 + 12 = 8 $.",
+  "category": "Linear Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "c153f5d2"
+}

@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{95}{6} $",
+    "B": "$ \\frac{15}{1} $",
+    "C": "$ \\frac{46}{3} $",
+    "D": "$ \\frac{-46}{3} $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "What value of $ p $ is the solution of the equation below?\n\n$ 1(p + 4) + 5(p - 10) = 3p $",
+  "explanation": "Choice C is correct.\n\nOne way to solve the equation $ 1(p + 4) + 5(p - 10) = 3p $ is to first distribute the terms outside the parentheses:\n\n$ 1p + 4 + 5p - 50 = 3p $\n\nNext, combine like terms on the left side:\n$ (1p + 5p) + (4 - 50) = 3p $\n$ 6p + -46 = 3p $\n\nSubtracting 6p from both sides:\n$ -46 = 3p - 6p $\n$ -46 = (-3)p $\n\nDividing both sides by -3:\n$ p = \\frac{-46}{-3} $\n\nThus, the correct value of $ p $ is **$ \\frac{46}{3} $**, which is equivalent to **15.33**.",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "a776d8e3"
+}

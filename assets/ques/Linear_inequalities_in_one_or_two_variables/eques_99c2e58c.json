@@ -1,0 +1,19 @@
+{
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$\ny \u2264 -2x + -1\n$$\n$$\ny \u2264 2x + 5\n$$",
+  "answers": {
+    "A": "(-3, 3)",
+    "B": "(2, -2)",
+    "C": "(3, -2)",
+    "D": "(-4, -3)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both y \u2264 -2x + -1 and y \u2264 2x + 5, making (-4, -3) the correct choice.",
+  "category": "Linear Inequalities - System Solutions",
+  "difficulty": "Medium",
+  "id": "99c2e58c"
+}

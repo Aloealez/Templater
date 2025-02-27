@@ -1,0 +1,19 @@
+{
+  "task": "At how many points do the graphs of the equations $y = -2x + 17$ and $y = -2x + 17$ intersect in the xy-plane?",
+  "answers": {
+    "A": "1",
+    "B": "2",
+    "C": "0",
+    "D": "Infinite"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Each equation is written in slope-intercept form, $y = mx + b$, where $m$ is the slope. If the slopes are different, the graphs will intersect at exactly one point. If the slopes are the same but the y-intercepts are different, the graphs are parallel and never intersect. If the slopes and y-intercepts are the same, the graphs are identical and have infinitely many intersection points. In some cases, depending on the system type, there may be exactly two intersections.",
+  "category": "Systems of Equations - Intersection Points",
+  "difficulty": "Medium",
+  "id": "d28e5288"
+}

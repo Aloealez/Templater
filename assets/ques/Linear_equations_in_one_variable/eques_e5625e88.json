@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{-39}{7} $",
+    "B": "$ \\frac{53}{7} $",
+    "C": "$ \\frac{-67}{7} $",
+    "D": "$ \\frac{-53}{7} $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "If x is the solution to the equation below, what is the value of x - 10?\n\n$ 5(2x - 10) - 5 = 3(x - 10) + -8 $",
+  "explanation": "Choice D is correct.\n\nExpanding the left-hand side:\n$ 5(2x - 10) - 5 = 10x - 50 - 5 = 10x -55 $\n\nExpanding the right-hand side:\n$ 3(x - 10) + -8 = 3x - 30 + -8 = 3x -38 $\n\nRewriting the equation:\n$ 10x -55 = 3x -38 $\n\nSubtracting 3x from both sides:\n$ (10 - 3)x = 17 $\n\nSolving for x:\n$ x = \\frac{17}{7} = \\frac{17}{7} $\n\nSince we need to find $ x - 10 $, we compute:\n$ x - 10 = \\frac{-53}{7} $\n\nThus, the correct answer is $ \\frac{-53}{7} $. ",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "e5625e88"
+}

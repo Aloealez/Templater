@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n$$\n\frac{-5}{2} y = 1\n$$\n$$\nx - \frac{3}{2} y = 8\n$$",
+  "answers": {
+    "A": "32/5",
+    "B": "37/5",
+    "C": "5/2",
+    "D": "42/5"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = \frac{2 \times 1}{-5}$. Substituting into the second equation and solving for $x$ gives $x = 37/5$. Thus, the correct answer is 37/5.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "67e5577c"
+}

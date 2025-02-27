@@ -1,0 +1,20 @@
+{
+  "task": "In the given scatterplot, a line of best fit for the data is shown. Which of the following is closest to the slope of the line of best fit shown?",
+  "answers": {
+    "A": "1.88",
+    "B": "4.05",
+    "C": "1.31",
+    "D": "2.42"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "A line in the xy-plane that passes through points $(x_1, y_1)$ and $(x_2, y_2)$ has a slope of $m = \frac{y_2 - y_1}{x_2 - x_1}$. The line of best fit shown passes through approximately $(x_1, 0.6)$ and $(x_2, 10.0)$. Computing the slope: $m = \frac{10.0 - 0.6}{5 - 0} = 1.88$. Thus, the closest answer choice is 1.88.",
+  "category": "Line of Best Fit - Slope Estimation",
+  "difficulty": "Medium",
+  "image": "scatterplot.png",
+  "id": "e7472006"
+}

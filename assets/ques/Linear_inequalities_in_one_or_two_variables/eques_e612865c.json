@@ -1,0 +1,19 @@
+{
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$\ny \u2264 1x + -9\n$$\n$$\ny \u2264 0x + 4\n$$",
+  "answers": {
+    "A": "(5, 4)",
+    "B": "(-2, -4)",
+    "C": "(4, -5)",
+    "D": "(4, -3)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both y \u2264 1x + -9 and y \u2264 0x + 4, making (4, -5) the correct choice.",
+  "category": "Linear Inequalities - System Solutions",
+  "difficulty": "Medium",
+  "id": "e612865c"
+}

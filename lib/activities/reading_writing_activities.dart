@@ -139,14 +139,14 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
                           ],
                         ),
                         SizedBox(height: 0.03 * size.height),
-                        for (String questionSubcategory in SatsQuestionSubcategoriesRW.typesList)
+                        for (String questionSubcategory in SatsQuestionSubcategories.typesList.sublist(0, 10))
                           ActivityButton(
                             context,
                             img: "activities/$questionSubcategory",
-                            text1: SatsQuestionSubcategoriesRW.fromString(questionSubcategory).getName(),
+                            text1: SatsQuestionSubcategories.fromString(questionSubcategory).getName(),
                             text2: "",
                             fontSize: 0.023 * size.height * 1,
-                            // onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(questionSubcategory)),
+                            // onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategories.fromString(questionSubcategory)),
                             zero: 1,
                             blocked: false,
                             textWidth: 0.45,

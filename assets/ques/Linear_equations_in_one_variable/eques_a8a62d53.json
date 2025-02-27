@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "The height, in units, of the bush when it was 1 month old.",
+    "B": "The average number of units the bush's height increased per month.",
+    "C": "The average number of months it takes similar bushs to grow 16 units.",
+    "D": "The number of months it took the bush to double its height."
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "A bush had a height of 8 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the bush to reach a height of 16 units. Which of the following is the best interpretation of the number 1 in this context?\n\n$ 1n + 8 = 16 $",
+  "explanation": "Choice B is correct.\n\nThe height of the bush at a given time is equal to its initial height plus the number of units it grew. In the given equation, 16 represents the height at the final time, and 8 represents the height when it was first measured. It follows that 1n represents the total height growth over time.\n\nSince $ n $ represents the number of months between the two measurements, the coefficient 1 must represent the average number of units the bush's height increased per month.\n\n",
+  "category": "Algebraic Word Problems",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "a8a62d53"
+}

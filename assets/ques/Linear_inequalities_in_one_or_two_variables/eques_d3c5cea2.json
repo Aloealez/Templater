@@ -1,0 +1,19 @@
+{
+  "task": "A certain elephant weighs 114 centimeters at birth and gains more than 2.09 but less than 4.47 centimeters per day during its first year. Which of the following inequalities represents all possible centimeters values, $w$, for the elephant after 294 days?",
+  "answers": {
+    "A": "678 < w < 1378",
+    "B": "728 < w < 1428",
+    "C": "582 < w < 1142",
+    "D": "828 < w < 1528"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The elephant starts at 114 centimeters and grows between 2.09 and 4.47 centimeters per day. The inequality describing this scenario is: $ 114 + 2.09 \times d < w < 114 + 4.47 \times d $. Substituting 294 for $d$ gives: $ 728 < w < 1428 $.",
+  "category": "Linear Inequalities - Growth Over Time",
+  "difficulty": "Medium",
+  "id": "d3c5cea2"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $(x, y)$:\n$$\n-4x + -1y = 0\n$$\n$$\n-7x + 3y = 3\n$$",
+  "answers": {
+    "A": "(13/38, 12/19)",
+    "B": "(-3/19, 12/19)",
+    "C": "(-3/19, 43/38)",
+    "D": "(12/19, -3/19)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "We solve the system using elimination or substitution. The determinant is computed as -4 * 3 - -1 * -7 = -19, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-3/19, 12/19)$.",
+  "category": "Systems of Equations - Solving for (x, y)",
+  "difficulty": "Medium",
+  "id": "f5acb22c"
+}

@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{5}{3} $",
+    "B": "$ \\frac{2}{1} $",
+    "C": "$ \\frac{-2}{1} $",
+    "D": "$ \\frac{5}{2} $"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "What value of $ p $ is the solution of the equation below?\n\n$ 1(p + 10) + 1(p - 4) = 5p $",
+  "explanation": "Choice B is correct.\n\nOne way to solve the equation $ 1(p + 10) + 1(p - 4) = 5p $ is to first distribute the terms outside the parentheses:\n\n$ 1p + 10 + 1p - 4 = 5p $\n\nNext, combine like terms on the left side:\n$ (1p + 1p) + (10 - 4) = 5p $\n$ 2p + 6 = 5p $\n\nSubtracting 2p from both sides:\n$ 6 = 5p - 2p $\n$ 6 = (3)p $\n\nDividing both sides by 3:\n$ p = \\frac{6}{3} $\n\nThus, the correct value of $ p $ is **$ \\frac{2}{1} $**, which is equivalent to **2.00**.",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "f29c93a6"
+}

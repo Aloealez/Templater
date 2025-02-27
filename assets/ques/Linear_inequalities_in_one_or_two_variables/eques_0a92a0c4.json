@@ -1,0 +1,19 @@
+{
+  "task": "The maximum value of $x$ is 18 less than 9 times another number $n$. Which inequality shows the possible values of $x$?",
+  "answers": {
+    "A": "x \u2264 18 - 9n",
+    "B": "x \u2265 18 - 9n",
+    "C": "x \u2264 9n - 18",
+    "D": "x \u2265 9n - 18"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "Since the statement describes 18 less than 9 times n, we write 9n - 18 to express that relationship. If the statement mentions a minimum value, we use \u2265, and if it mentions a maximum, we use \u2264. Thus, the correct inequality is x \u2264 9n - 18.",
+  "category": "Linear Inequalities - Expression Formation",
+  "difficulty": "Medium",
+  "id": "0a92a0c4"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 166 to $m$ is equivalent to the ratio 26 to 182. What is the value of $m$?",
+  "answers": {
+    "A": "1162",
+    "B": "1264",
+    "C": "1075",
+    "D": "1201"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{166}{m} = \frac{26}{182}$. Cross multiplying gives: 166 \u00d7 182 = 26 \u00d7 m. Solving for $m$, we get $m = 1162$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "9d1a1430"
+}

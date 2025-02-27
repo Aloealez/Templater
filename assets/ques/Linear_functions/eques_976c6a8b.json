@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{42}{1} $",
+    "B": "$ \\frac{30}{1} $",
+    "C": "$ \\frac{47}{1} $",
+    "D": "36"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "The function $ h $ is defined by $ h(x) = 6x + 36 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+  "explanation": "Choice B is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 6x + 36 $\n\nSetting $ y = 0 $:\n$ 0 = 6x + 36 $\nSolving for $ x $:\n$ x = -\\frac{36}{6} = -6 $\n\nThus, the x-intercept is $ (-6, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 6(0) + 36 = 36 $\n\nThus, the y-intercept is $ (0, 36) $.\n\nSince $ a = -6 $ and $ b = 36 $, the sum is:\n$ a + b = -6 + 36 = 30 $.",
+  "category": "Linear Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "976c6a8b"
+}

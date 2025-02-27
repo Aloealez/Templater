@@ -1,0 +1,19 @@
+{
+  "task": "From a population of 51682 people, 1674 were chosen at random and surveyed about an election candidate. Based on the survey, it is estimated that 34% of people in the population support it, with an associated margin of error of 3%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+  "answers": {
+    "A": "19648",
+    "B": "837",
+    "C": "18523",
+    "D": "1674"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "It's given that an estimated 34% of people in the population support an election candidate, with a margin of error of 3%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 31% and 37% of the population. Multiplying these percentages by the total population (51682) gives a range of 16021 to 19122. Since 18523 falls within this range, it is a plausible answer.",
+  "category": "Inference from Sample Statistics and Margin of Error",
+  "difficulty": "Medium",
+  "id": "16673989"
+}

@@ -1,6 +1,8 @@
+import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:brainace_pro/activities/reading_writing_activities.dart';
 import 'package:brainace_pro/activities/brain_train_activities.dart';
 import 'package:brainace_pro/quiz/math_coming_soon.dart';
+import 'package:brainace_pro/sats/start_sats_math.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:brainace_pro/navbar.dart';
@@ -176,8 +178,6 @@ class _Activities extends State<Activities> {
                             ),
                           ],
                         ),
-
-
                         SizedBox(height: 0.03 * size.height),
                         ActivityButton(
                           context,
@@ -185,15 +185,12 @@ class _Activities extends State<Activities> {
                           text1: "Math",
                           text2: "",
                           fontSize: 0.023 * size.height * 1,
-                          onTapRoute: const QuizModel(
-                            "Exercise 1 - Math",  // 1) tytuł
-                            "Math",               // 2) exerciseName
-                            300,                  // 3) czas w sekundach
-                          ),
+                          onTapRoute: const MathActivities(),
+                          // onTapRoute: StartSatsMath(
+                          //   subcategory: SatsQuestionSubcategories(ESatsQuestionSubcategories.NonlinearFunctions),
+                          // ),
                           forceStar: false,
                         ),
-
-
                         // SizedBox(height: 0.02 * size.height),
                         ActivityButton(
                           context,

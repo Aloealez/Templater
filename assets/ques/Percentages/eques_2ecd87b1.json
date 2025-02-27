@@ -1,0 +1,19 @@
+{
+  "task": "The number $k$ is 12% greater than 38. If $k$ is the product of 38 and $r$, what is the value of $r$?",
+  "answers": {
+    "A": "-0.23",
+    "B": "1.12",
+    "C": "2.59",
+    "D": "3.43"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since $k$ is 12% greater than 38, we calculate: $k = 38 + (12/100) \times 38$. This simplifies to $k = 42.56$. We also know $k = 38r$, so solving for $r$: $r = 42.56 / 38 = 1.12$.",
+  "category": "Percentages and Proportions",
+  "difficulty": "Medium",
+  "id": "2ecd87b1"
+}

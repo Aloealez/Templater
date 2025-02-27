@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{26}{1} $",
+    "B": "$ \\frac{57}{1} $",
+    "C": "39",
+    "D": "$ \\frac{52}{1} $"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "The function $ h $ is defined by $ h(x) = 3x + 39 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+  "explanation": "Choice A is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 39 $\n\nSetting $ y = 0 $:\n$ 0 = 3x + 39 $\nSolving for $ x $:\n$ x = -\\frac{39}{3} = -13 $\n\nThus, the x-intercept is $ (-13, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 39 = 39 $\n\nThus, the y-intercept is $ (0, 39) $.\n\nSince $ a = -13 $ and $ b = 39 $, the sum is:\n$ a + b = -13 + 39 = 26 $.",
+  "category": "Linear Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "d8705c7b"
+}

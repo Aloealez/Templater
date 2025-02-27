@@ -1,0 +1,19 @@
+{
+  "task": "The number $k$ is 48% greater than 57. If $k$ is the product of 57 and $r$, what is the value of $r$?",
+  "answers": {
+    "A": "1.48",
+    "B": "2.22",
+    "C": "3.1",
+    "D": "-0.06"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since $k$ is 48% greater than 57, we calculate: $k = 57 + (48/100) \times 57$. This simplifies to $k = 84.36$. We also know $k = 57r$, so solving for $r$: $r = 84.36 / 57 = 1.48$.",
+  "category": "Percentages and Proportions",
+  "difficulty": "Medium",
+  "id": "e04ecef7"
+}

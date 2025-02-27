@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{-47}{2} $",
+    "B": "$ \\frac{-73}{3} $",
+    "C": "$ \\frac{24}{1} $",
+    "D": "$ \\frac{-24}{1} $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "What value of $ p $ is the solution of the equation below?\n\n$ 4(p + 9) + 3(p - 4) = 6p $",
+  "explanation": "Choice D is correct.\n\nOne way to solve the equation $ 4(p + 9) + 3(p - 4) = 6p $ is to first distribute the terms outside the parentheses:\n\n$ 4p + 36 + 3p - 12 = 6p $\n\nNext, combine like terms on the left side:\n$ (4p + 3p) + (36 - 12) = 6p $\n$ 7p + 24 = 6p $\n\nSubtracting 7p from both sides:\n$ 24 = 6p - 7p $\n$ 24 = (-1)p $\n\nDividing both sides by -1:\n$ p = \\frac{24}{-1} $\n\nThus, the correct value of $ p $ is **$ \\frac{-24}{1} $**, which is equivalent to **-24.00**.",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "28c7f04f"
+}

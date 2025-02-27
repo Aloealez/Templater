@@ -1,0 +1,19 @@
+{
+  "task": "A certain puppy weighs 370 grams at birth and gains more than 4.42 but less than 5.19 grams per day during its first year. Which of the following inequalities represents all possible grams values, $w$, for the puppy after 231 days?",
+  "answers": {
+    "A": "1341 < w < 1519",
+    "B": "1391 < w < 1569",
+    "C": "1112 < w < 1255",
+    "D": "1491 < w < 1669"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The puppy starts at 370 grams and grows between 4.42 and 5.19 grams per day. The inequality describing this scenario is: $ 370 + 4.42 \times d < w < 370 + 5.19 \times d $. Substituting 231 for $d$ gives: $ 1391 < w < 1569 $.",
+  "category": "Linear Inequalities - Growth Over Time",
+  "difficulty": "Medium",
+  "id": "568124a3"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $(x, y)$:\n$$\n-1x + 8y = 14\n$$\n$$\n8x + 2y = 17\n$$",
+  "answers": {
+    "A": "(18/11, 27/11)",
+    "B": "(18/11, 43/22)",
+    "C": "(47/22, 43/22)",
+    "D": "(43/22, 18/11)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "We solve the system using elimination or substitution. The determinant is computed as -1 * 2 - 8 * 8 = -66, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (18/11, 43/22)$.",
+  "category": "Systems of Equations - Solving for (x, y)",
+  "difficulty": "Medium",
+  "id": "a4fcf2e5"
+}

@@ -12,6 +12,7 @@ import 'package:brainace_pro/attention/reading/reading.dart';
 import 'package:brainace_pro/linguistic/scrabble.dart';
 import 'package:brainace_pro/logical_thinking/sudoku.dart';
 import 'package:brainace_pro/logical_thinking/2048/game_2048.dart';
+import 'package:brainace_pro/sats/start_sats_math.dart';
 import 'package:brainace_pro/sats/start_sats_quiz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
@@ -298,7 +299,7 @@ var sectionTimes = {
   'Game2048': 5,
   'SudokuGame': 10,
   'InvestingMenu': 15,
-  for (var type in SatsQuestionSubcategoriesRW.typesList) type: 5, // we give 1 minute for each SATs question (on average)
+  for (var type in SatsQuestionSubcategories.typesList) type: 5, // we give 1 minute for each SATs question (on average)
 };
 
 var sectionNames = {
@@ -326,7 +327,7 @@ var sectionNames = {
   'WorkingMemory': 'Working memory',
   'MemoryGame1': 'Memory Game',
   'InvestingMenu': 'Short Learning Course',
-  for (var type in SatsQuestionSubcategoriesRW.typesList) type: SatsQuestionSubcategoriesRW.fromString(type).getName(),
+  for (var type in SatsQuestionSubcategories.typesList) type: SatsQuestionSubcategories.fromString(type).getName(),
 };
 
 Map<String, Widget Function(BuildContext)> sectionActivities = {
@@ -356,8 +357,9 @@ Map<String, Widget Function(BuildContext)> sectionActivities = {
   'MemoryGame1': activityMemoryGame,
   'InvestingMenu': activityInvestingMenu,
 
-  // for (var type in SatsQuestionSubcategoriesRW.typesList) type: SatsQuestionSubcategoriesRW.fromString(type).getName(),
-  for (var type in SatsQuestionSubcategoriesRW.typesList) type: (context) => StartSatsQuiz(subcategory: SatsQuestionSubcategoriesRW.fromString(type)),
+  // for (var type in SatsQuestionSubcategories.typesList) type: SatsQuestionSubcategories.fromString(type).getName(),
+  for (var type in SatsQuestionSubcategories.typesList.sublist(0, 10)) type: (context) => StartSatsQuiz(subcategory: SatsQuestionSubcategories.fromString(type)),
+  for (var type in SatsQuestionSubcategories.typesList.sublist(10)) type: (context) => StartSatsMath(subcategory: SatsQuestionSubcategories.fromString(type)),
 
   'Sport' : activitySport,
   'Yoga' : activityYoga,

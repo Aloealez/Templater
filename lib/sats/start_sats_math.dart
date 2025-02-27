@@ -1,4 +1,5 @@
 import 'package:brainace_pro/quiz/math_coming_soon.dart';
+import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -21,7 +22,7 @@ class StartSatsMath extends StatefulWidget {
 }
 
 class _StartSatsMathState extends State<StartSatsMath> {
-  late Map<String, SatsQuestion> questions;
+  late Map<String, QuizQuestionData> questions;
   bool _isVisible = false;
   late SharedPreferences prefs;
 
@@ -47,12 +48,13 @@ class _StartSatsMathState extends State<StartSatsMath> {
         minScore = math.min(minScore, lastScore);
       }
       SatsQuestionDifficulty difficulty = minScore < 4 ? SatsQuestionDifficulty.difficultyEasy : minScore < 9 ? SatsQuestionDifficulty.difficultyMedium : SatsQuestionDifficulty.difficultyHard;
-      SatsQuestionBank questionBank = SatsQuestionBank();
+      QuestionBank questionBank = QuestionBank();
       await questionBank.init();
-      questionBank.updateQuestions(widget.subcategory, limit: 5);
+      questionBank.updateQuestions(widget.subcategory.string, limit: 5);
       // questionBank.loadFromAssets(widget.subcategory, limit: 5);
       // questionBank.updateQuestionsFromBackend(widget.subcategory, limit: 20);
-      questions = await questionBank.getQuestions(widget.subcategory, 5, true, true, difficulty: difficulty);
+      questions = await questionBank.getQuestions(widget.subcategory.string, 5, true, true, difficulty: difficulty);
+      print("got questions: ${questions.length}");
     }();
 
     return Scaffold(
@@ -63,8 +65,6 @@ class _StartSatsMathState extends State<StartSatsMath> {
           right: size.width / 10,
         ),
         child: Stack(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Align(
               alignment: Alignment(0, -0.85),
@@ -130,55 +130,15 @@ class _StartSatsMathState extends State<StartSatsMath> {
                                     prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
 
                                     prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
-
                                   }
                                 });
                               },
                               description: "The test will comprise of 10 Reading and Writing Questions.",
                               exerciseNumber: 0,
-                              questions: () {
-                                Map<String, QuizQuestionData> newQuestions = {};
-                                for (int j = 0; j < questions.length; j++) {
-                                  String i = questions.keys.elementAt(j);
-                                  newQuestions[i] = QuizQuestionData(
-                                    {
-                                      "A": questions[i]!.A,
-                                      "B": questions[i]!.B,
-                                      "C": questions[i]!.C,
-                                      "D": questions[i]!.D,
-                                    },
-                                    {
-                                      "A": questions[i]!.correct == "A",
-                                      "B": questions[i]!.correct == "B",
-                                      "C": questions[i]!.correct == "C",
-                                      "D": questions[i]!.correct == "D",
-                                    },
-                                    {
-                                      "A": questions[i]!.difficulty.getScore(),
-                                      "B": questions[i]!.difficulty.getScore(),
-                                      "C": questions[i]!.difficulty.getScore(),
-                                      "D": questions[i]!.difficulty.getScore(),
-                                    },
-                                    introduction: questions[i]?.introduction,
-                                    text: questions[i]?.text,
-                                    text2: questions[i]?.text2,
-                                    question: questions[i]!.question,
-                                    explanation: questions[i]?.explanation,
-                                    subcategory: questions[i]?.subcategory,
-                                    difficulty: questions[i]?.difficulty,
-                                  );
-                                }
-                                return newQuestions;
-                              }(),
-                              oldName: questions.values.elementAt(0).subcategory!.string,
-                              exerciseString: questions.values.elementAt(0).subcategory!.string,
+                              questions: questions,
+                              oldName: questions.values.elementAt(0).subcategoryStr!,
+                              exerciseString: questions.values.elementAt(0).subcategoryStr!,
                             );
-                            // return SatsQuizRw(
-                            //   widget.subcategory.string,
-                            //   questions,
-                            //   300,
-                            //   0,
-                            // );
                           }
                         },
                       ),

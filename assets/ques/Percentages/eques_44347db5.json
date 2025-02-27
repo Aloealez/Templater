@@ -1,0 +1,19 @@
+{
+  "task": "The number $k$ is 10% greater than 89. If $k$ is the product of 89 and $r$, what is the value of $r$?",
+  "answers": {
+    "A": "1.76",
+    "B": "1.1",
+    "C": "3.53",
+    "D": "-0.11"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since $k$ is 10% greater than 89, we calculate: $k = 89 + (10/100) \times 89$. This simplifies to $k = 97.9$. We also know $k = 89r$, so solving for $r$: $r = 97.9 / 89 = 1.1$.",
+  "category": "Percentages and Proportions",
+  "difficulty": "Medium",
+  "id": "44347db5"
+}

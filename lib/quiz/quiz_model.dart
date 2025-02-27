@@ -14,6 +14,7 @@ import 'dart:async';
 import '../../../app_bar.dart';
 import '../initial_score_screen.dart';
 import 'dart:math' as math;
+import 'build_answer_icon.dart';
 
 class QuizModel extends StatefulWidget {
   final Map<String, QuizQuestionData> questions;
@@ -131,24 +132,6 @@ class _QuizModelState extends State<QuizModel> {
   final player = AudioPlayer();
   bool forceContinue = false;
 
-  double textScaleFactor(int textLength) {
-    double val = 0.0056;
-    val += 1 / (math.sqrt(math.sqrt(math.sqrt(textLength.toDouble()))) * 16);
-    val = math.min(val, 0.049);
-    val = math.max(val, 0.029);
-
-    return val;
-  }
-
-  Map<String, bool> getCorrectBoolArray() {
-    return {
-      for (var answerId in answers.keys)
-        answerId: widget.questions[answerId] == null
-            ? false
-            : widget.questions[answerId]!.correct[answers[answerId]] ?? false,
-    };
-  }
-
   @override
   void initState() {
     _time = widget.time;
@@ -173,19 +156,7 @@ class _QuizModelState extends State<QuizModel> {
     startTimer();
   }
 
-  bool isCorrect(String? selectedAnswer) {
-    if (widget.answerLayout == QuizModelAnswerLayout.list ||
-        widget.answerLayout == QuizModelAnswerLayout.boxes) {
-      if (selectedAnswer == null) {
-        return false;
-      }
-      return widget.questions[currentQuestionId]?.correct[selectedAnswer] ??
-          false;
-    } else if (widget.answerLayout == QuizModelAnswerLayout.textInput) {
-      return false;
-    }
-    return false;
-  }
+
 
   void handleContinue() {
 
@@ -216,11 +187,11 @@ class _QuizModelState extends State<QuizModel> {
       }
     } else {
       if (widget.onEnd != null) {
-        widget.onEnd!(widget.questions, getCorrectBoolArray(),
+        widget.onEnd!(widget.questions, getCorrectBoolArray(widget.questions, answers),
             widget.initialTest, widget.endingTest);
       }
       if (widget.onEndAsync != null) {
-        widget.onEndAsync!(widget.questions, getCorrectBoolArray(),
+        widget.onEndAsync!(widget.questions, getCorrectBoolArray(widget.questions, answers),
             widget.initialTest, widget.endingTest);
       }
 
@@ -240,9 +211,6 @@ class _QuizModelState extends State<QuizModel> {
               0;
         }
       }
-
-
-
 
       Navigator.pop(context);
       Navigator.push(
@@ -276,59 +244,22 @@ class _QuizModelState extends State<QuizModel> {
     }
   }
 
-  ImageIcon createAnswerIcon(
-    BuildContext context,
-    String answerLetter,
-    bool coloredIcon,
-    String questionId,
-    String answerId,
-  ) {
-    String theme =
-        Theme.of(context).brightness == Brightness.dark ? "black" : "black";
-    return ImageIcon(
-      coloredIcon
-          ? answerLetter == "A"
-              ? AssetImage('assets/icons/a_filled.png')
-              : answerLetter == "B"
-                  ? AssetImage('assets/icons/b_filled.png')
-                  : answerLetter == "C"
-                      ? AssetImage('assets/icons/c_filled.png')
-                      : AssetImage('assets/icons/d_filled.png')
-          : answerLetter == "A"
-              ? AssetImage('assets/icons/a_outlined_$theme.png')
-              : answerLetter == "B"
-                  ? AssetImage('assets/icons/b_outlined_$theme.png')
-                  : answerLetter == "C"
-                      ? AssetImage('assets/icons/c_outlined_$theme.png')
-                      : AssetImage('assets/icons/d_outlined_$theme.png'),
-      color: coloredIcon
-          ? isCorrect(answerLetter)
-              ? Colors.green
-              : Colors.red
-          : Theme.of(context).colorScheme.onSurface,
-      // size: 0.062 * MediaQuery.of(context).size.width,
-      size: textScaleFactor(widget.questions[questionId]!.question!.length) *
-          MediaQuery.of(context).size.width *
-          1.7,
-    );
-  }
-
   ImageIcon buildAnswerChecks(BuildContext context, String? usersAnswer,
       String answerLetter, String questionId) {
     Size size = MediaQuery.of(context).size;
     if (usersAnswer == null) {
-      return createAnswerIcon(
-          context, answerLetter, false, questionId, answerLetter);
+      return buildAnswerIcon(
+          context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter,);
     }
     return (usersAnswer == answerLetter ||
             widget.questions[questionId]!.correct[answerLetter]!)
-        ? createAnswerIcon(
-            context, answerLetter, true, questionId, answerLetter)
-        : createAnswerIcon(
-            context, answerLetter, false, questionId, answerLetter);
+        ? buildAnswerIcon(
+            context, answerLetter, true, widget.answerLayout, widget.questions, questionId, answerLetter)
+        : buildAnswerIcon(
+            context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter);
   }
 
-  ListTile buildLetterAnswer(
+  Widget buildLetterAnswer(
       BuildContext context, String answerLetter, String questionId) {
     Size size = MediaQuery.of(context).size;
     return ListTile(
@@ -446,7 +377,7 @@ class _QuizModelState extends State<QuizModel> {
         if (widget.progressBar)
           AnimatedProgressBar(
             answerCount: widget.questions.length,
-            answers: getCorrectBoolArray(),
+            answers: getCorrectBoolArray(widget.questions, answers),
           ),
       ],
     );

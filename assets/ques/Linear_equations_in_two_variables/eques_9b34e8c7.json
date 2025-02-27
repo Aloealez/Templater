@@ -1,0 +1,19 @@
+{
+  "task": "A line passes through the points $(-2, 5)$ and $(13, -1)$ in the xy-plane. What is the slope of the line?",
+  "answers": {
+    "A": "0/1",
+    "B": "-2/5",
+    "C": "-1/5",
+    "D": "-1/2"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The correct answer is $-2/5$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \frac{-1 - 5}{13 - -2} = -2/5$. Thus, the correct answer is -2/5, or approximately -0.4 in decimal form.",
+  "category": "Linear Equations - Slope Calculation",
+  "difficulty": "Medium",
+  "id": "9b34e8c7"
+}

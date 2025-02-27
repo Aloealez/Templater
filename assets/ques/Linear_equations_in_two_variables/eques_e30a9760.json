@@ -1,0 +1,19 @@
+{
+  "task": "Line t is defined by the equation $ 1y + -11x = 6 $. Line r is perpendicular to line t in the xy-plane. What is the slope of line r?",
+  "answers": {
+    "A": "1/11",
+    "B": "-11",
+    "C": "-1/11",
+    "D": "11"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "The given equation of line t is rewritten in slope-intercept form as $ y = 11x + b $. This means the slope of line t is 11. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of 11 is -1/11. Thus, the slope of line r is -1/11.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "e30a9760"
+}

@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "42",
+    "B": "$ \\frac{63}{1} $",
+    "C": "$ \\frac{68}{1} $",
+    "D": "$ \\frac{21}{1} $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "The function $ h $ is defined by $ h(x) = 2x + 42 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+  "explanation": "Choice D is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 2x + 42 $\n\nSetting $ y = 0 $:\n$ 0 = 2x + 42 $\nSolving for $ x $:\n$ x = -\\frac{42}{2} = -21 $\n\nThus, the x-intercept is $ (-21, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 2(0) + 42 = 42 $\n\nThus, the y-intercept is $ (0, 42) $.\n\nSince $ a = -21 $ and $ b = 42 $, the sum is:\n$ a + b = -21 + 42 = 21 $.",
+  "category": "Linear Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "1f946dbc"
+}

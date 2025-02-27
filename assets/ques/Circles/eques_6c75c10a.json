@@ -1,0 +1,19 @@
+{
+  "task": "The measure of angle R is 1\u03c0 radians. The measure of angle T is 8/5\u03c0 radians greater than the measure of angle R. What is the measure of angle T, in degrees?",
+  "answers": {
+    "A": "936",
+    "B": "468",
+    "C": "180",
+    "D": "288"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The measure of angle R is 1\u03c0 radians, and angle T is 8/5\u03c0 radians greater. Thus, the measure of angle T is:\n\n1\u03c0 + 8/5\u03c0 = 13/5\u03c0 radians.\n\nTo convert to degrees, multiply by 180/\u03c0:\n13/5 \u00d7 (180/\u03c0) = 468 degrees.\n\nThus, the correct answer is 468 degrees.",
+  "category": "Geometry - Radians and Degrees",
+  "difficulty": "Medium",
+  "id": "6c75c10a"
+}

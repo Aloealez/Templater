@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "(\\frac{33}{2}, 0)",
+    "B": "(\\frac{-35}{2}, 0)",
+    "C": "(\\frac{-31}{2}, 0)",
+    "D": "(\\frac{-33}{2}, 0)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "The function $ f $ is defined by $ f(x) = 2x + 33 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+  "explanation": "Choice D is correct.\n\nThe given function $ f(x) = 2x + 33 $ is a linear function.\n\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 2x + 33 $\n\nSolving for $ x $:\n$ 2x = -33 $\n$ x = \\frac{-33}{2} $\n\nThus, the x-intercept is $ $\\frac{-33}{2}$ $.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "e7320c80"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 12 times its width. The function $y = (12w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square centimeters, and $y > 0$. Which of the following is the best interpretation of 12w in this context?",
+  "answers": {
+    "A": "The length of the rectangle, in centimeters",
+    "B": "The difference between the length and the width of the rectangle, in centimeters",
+    "C": "The area of the rectangle, in square centimeters",
+    "D": "The width of the rectangle, in centimeters"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the rectangle's length is 12 times its width, we define its length as 12w. This means that 12w represents the length of the rectangle, in centimeters.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "610b71bf"
+}

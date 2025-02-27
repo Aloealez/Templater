@@ -1,0 +1,19 @@
+{
+  "task": "The minimum value of $x$ is 9 less than 5 times another number $n$. Which inequality shows the possible values of $x$?",
+  "answers": {
+    "A": "x \u2265 9 - 5n",
+    "B": "x \u2264 9 - 5n",
+    "C": "x \u2264 5n - 9",
+    "D": "x \u2265 5n - 9"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Since the statement describes 9 less than 5 times n, we write 5n - 9 to express that relationship. If the statement mentions a minimum value, we use \u2265, and if it mentions a maximum, we use \u2264. Thus, the correct inequality is x \u2265 5n - 9.",
+  "category": "Linear Inequalities - Expression Formation",
+  "difficulty": "Medium",
+  "id": "b5183c8a"
+}

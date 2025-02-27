@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n$$\n\frac{-4}{2} y = 1\n$$\n$$\nx - \frac{1}{2} y = -5\n$$",
+  "answers": {
+    "A": "-17/4",
+    "B": "-21/4",
+    "C": "5/4",
+    "D": "-25/4"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = \frac{2 \times 1}{-4}$. Substituting into the second equation and solving for $x$ gives $x = -21/4$. Thus, the correct answer is -21/4.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "406965fd"
+}

@@ -184,12 +184,12 @@ class _Home extends State<Home> {
       List<String> questionSubcategoriesPointsStr = prefs
               .getStringList("scores_questionsLast") ??
           List<String>.generate(
-              SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
+              SatsQuestionSubcategories.typesList.length, (index) => "-1");
       List<String> questionsSubcategories =
-          List.from(SatsQuestionSubcategoriesRW.typesList);
+          List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
-          SatsQuestionSubcategoriesRW.typesList[i]:
+          SatsQuestionSubcategories.typesList[i]:
               double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {

@@ -1,0 +1,19 @@
+{
+  "task": "Line s is defined by the equation $ 2y + -15x = 2 $. Line r is perpendicular to line s in the xy-plane. What is the slope of line r?",
+  "answers": {
+    "A": "-15/2",
+    "B": "2/15",
+    "C": "15/2",
+    "D": "-2/15"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The given equation of line s is rewritten in slope-intercept form as $ y = 15/2x + b $. This means the slope of line s is 15/2. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of 15/2 is -2/15. Thus, the slope of line r is -2/15.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "b9c6586c"
+}

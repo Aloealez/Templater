@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 139 to $m$ is equivalent to the ratio 17 to 170. What is the value of $m$?",
+  "answers": {
+    "A": "1454",
+    "B": "1466",
+    "C": "1390",
+    "D": "1293"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{139}{m} = \frac{17}{170}$. Cross multiplying gives: 139 \u00d7 170 = 17 \u00d7 m. Solving for $m$, we get $m = 1390$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "d8abc176"
+}

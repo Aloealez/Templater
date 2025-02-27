@@ -1,0 +1,19 @@
+{
+  "task": "A right triangle has legs with lengths of 19 centimeters and 27 centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
+  "answers": {
+    "A": "3\u221a19",
+    "B": "33",
+    "C": "1090",
+    "D": "1\u221a1090"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The correct answer is 1\u221a1090. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(19)\u00b2 + (27)\u00b2 = c\u00b2\n361 + 729 = 1090 = c\u00b2\nTaking the square root: \u221a1090 = c.\nThe simplified radical form of \u221a1090 is 1\u221a1090, so the hypotenuse is 1\u221a1090 cm.",
+  "category": "Geometry - Pythagorean Theorem",
+  "difficulty": "Medium",
+  "id": "5fb99c08"
+}

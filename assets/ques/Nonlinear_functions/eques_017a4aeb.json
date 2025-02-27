@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 6 times its width. The function $y = (6w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square meters, and $y > 0$. Which of the following is the best interpretation of 6w in this context?",
+  "answers": {
+    "A": "The width of the rectangle, in meters",
+    "B": "The area of the rectangle, in square meters",
+    "C": "The difference between the length and the width of the rectangle, in meters",
+    "D": "The length of the rectangle, in meters"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Since the rectangle's length is 6 times its width, we define its length as 6w. This means that 6w represents the length of the rectangle, in meters.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "017a4aeb"
+}

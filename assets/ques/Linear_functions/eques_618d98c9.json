@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "7.1",
+    "B": "7.6",
+    "C": "6.6",
+    "D": "6.08"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "According to a model, the wingspan, in meters, of a bumblebee can be estimated by adding 1.1 to 5 times the bumblebee's weight, in grams.\n\nAccording to the model, what would be the wingspan, in meters, of a bumblebee that has a body weight of 1.3 grams?",
+  "explanation": "Choice B is correct.\n\nAccording to the model, the wingspan of a bumblebee can be estimated using the equation:\n$ y = 1.1 + 5x $\n\nLet $ x $ represent the body weight, in grams, and let $ y $ represent the wingspan, in meters.\n\nSubstituting 1.3 grams for $ x $:\n$ y = 1.1 + 5(1.3) $\n$ y = 1.1 + 6.5 $\n$ y = 7.6 $\n\nTherefore, a bumblebee with a body weight of 1.3 grams has an estimated wingspan of 7.6 meters.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "618d98c9"
+}

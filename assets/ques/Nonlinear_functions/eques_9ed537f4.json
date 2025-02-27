@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 7 times its width. The function $y = (7w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square feet, and $y > 0$. Which of the following is the best interpretation of 7w in this context?",
+  "answers": {
+    "A": "The length of the rectangle, in feet",
+    "B": "The difference between the length and the width of the rectangle, in feet",
+    "C": "The area of the rectangle, in square feet",
+    "D": "The width of the rectangle, in feet"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the rectangle's length is 7 times its width, we define its length as 7w. This means that 7w represents the length of the rectangle, in feet.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "9ed537f4"
+}

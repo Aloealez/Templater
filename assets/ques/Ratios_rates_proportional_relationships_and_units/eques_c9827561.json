@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 54 to $m$ is equivalent to the ratio 49 to 294. What is the value of $m$?",
+  "answers": {
+    "A": "307",
+    "B": "324",
+    "C": "373",
+    "D": "398"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{54}{m} = \frac{49}{294}$. Cross multiplying gives: 54 \u00d7 294 = 49 \u00d7 m. Solving for $m$, we get $m = 324$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "c9827561"
+}

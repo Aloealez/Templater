@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "f(x) = 1x + 13",
+    "B": "f(x) = 4x + 8",
+    "C": "f(x) = 2x + 13",
+    "D": "f(x) = 1x + 8"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "In the xy-plane, the graph of the linear function $ f $ contains the points $ (0, 8) $ and $ (10, 18) $. Which equation defines $ f $, where $ y = f(x) $? ",
+  "explanation": "Choice D is correct.\n\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $ m $ represents the slope and $ (0, b) $ represents the y-intercept.\n\nIt's given that the graph contains the points $ (0, 8) $ and $ (10, 18) $, meaning that the y-intercept is $ b = 8 $.\n\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{18 - 8}{10 - 0} = 1 $\n\nSubstituting $ m = 1 $ and $ b = 8 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 1x + 8 $.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "e154f782"
+}

@@ -2,11 +2,13 @@ import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/theme/theme_colors.dart';
 import 'package:brainace_pro/well_being/meme_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tex/flutter_tex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'title_page.dart';
 import 'package:flutter/services.dart';
 import 'package:brainace_pro/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'quiz/question_bank.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,10 +34,10 @@ void main() async {
 
   SatsQuestionBank questionBank = SatsQuestionBank();
   await questionBank.init();
-  for (var subcategory in SatsQuestionSubcategoriesRW.typesList) {
-    // questionBank.loadFromAssets(SatsQuestionSubcategoriesRW.fromString(subcategory), limit: 5);
-    // questionBank.updateQuestionsFromBackend(SatsQuestionSubcategoriesRW.fromString(subcategory), limit: 5);
-    questionBank.updateQuestions(SatsQuestionSubcategoriesRW.fromString(subcategory), limit: 2);
+  for (var subcategory in SatsQuestionSubcategories.typesList) {
+    // questionBank.loadFromAssets(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
+    // questionBank.updateQuestionsFromBackend(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
+    questionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
   }
 
   runApp(
@@ -105,10 +107,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     for (String answer in ["A", "B", "C", "D"]) {
       myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_filled.png");
     }
-    for (String theme in ["white", "black"]) {
-      for (String answer in ["A", "B", "C", "D"]) {
-        myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_outlined_$theme.png");
-      }
+    for (String answer in ["A", "B", "C", "D"]) {
+      myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_outlined.png");
     }
 
     myAppPrecacheImage("assets/brain.png");
@@ -130,7 +130,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       myAppPrecacheImage("assets/improvement_selection/${improvementSelection}_light.png");
     }
 
-    for (String satsSubcategory in SatsQuestionSubcategoriesRW.typesList) {
+    for (String satsSubcategory in SatsQuestionSubcategories.typesList) {
       myAppPrecacheImage("assets/sats/start_images/$satsSubcategory.png");
     }
 
@@ -199,6 +199,17 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> fut() async {
+      var questionBank = QuestionBank();
+      await questionBank.init();
+      await questionBank.loadFromAssets("Linear_functions", limit: 1);
+      var questions = await questionBank.getQuestions("Linear_functions", 1, false, false);
+      print("AssetManifest: ${questions}");
+    }
+    Future.delayed(Duration(milliseconds: 1000), () {
+      fut();
+    });
+
     if (prefs == null) {
       SharedPreferences.getInstance().then((value) {
         setState(() {

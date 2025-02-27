@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n$$\n\frac{-1}{2} y = -3\n$$\n$$\nx - \frac{3}{2} y = 1\n$$",
+  "answers": {
+    "A": "11",
+    "B": "9",
+    "C": "2",
+    "D": "10"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = \frac{2 \times -3}{-1}$. Substituting into the second equation and solving for $x$ gives $x = 10$. Thus, the correct answer is 10.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "15914675"
+}

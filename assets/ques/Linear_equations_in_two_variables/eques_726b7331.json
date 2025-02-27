@@ -1,0 +1,19 @@
+{
+  "task": "Line s is defined by the equation $ 9y + -19x = 117 $. Line v is perpendicular to line s in the xy-plane. What is the slope of line v?",
+  "answers": {
+    "A": "-9/19",
+    "B": "-19/9",
+    "C": "19/9",
+    "D": "9/19"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The given equation of line s is rewritten in slope-intercept form as $ y = 19/9x + b $. This means the slope of line s is 19/9. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of 19/9 is -9/19. Thus, the slope of line v is -9/19.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "726b7331"
+}

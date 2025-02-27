@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "6.1",
+    "B": "5.1",
+    "C": "7.32",
+    "D": "5.6"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "According to a model, the length, in inches, of a balloon can be estimated by adding 0.5 to 4 times the balloon's weight, in grams.\n\nAccording to the model, what would be the length, in inches, of a balloon that has a body weight of 1.4 grams?",
+  "explanation": "Choice A is correct.\n\nAccording to the model, the length of a balloon can be estimated using the equation:\n$ y = 0.5 + 4x $\n\nLet $ x $ represent the body weight, in grams, and let $ y $ represent the length, in inches.\n\nSubstituting 1.4 grams for $ x $:\n$ y = 0.5 + 4(1.4) $\n$ y = 0.5 + 5.6 $\n$ y = 6.1 $\n\nTherefore, a balloon with a body weight of 1.4 grams has an estimated length of 6.1 inches.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "0903463b"
+}

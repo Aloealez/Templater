@@ -1,0 +1,19 @@
+{
+  "task": "A line passes through the points $(9, 19)$ and $(14, 1)$ in the xy-plane. What is the slope of the line?",
+  "answers": {
+    "A": "-17/5",
+    "B": "-3/1",
+    "C": "-4/1",
+    "D": "-18/5"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The correct answer is $-18/5$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \frac{1 - 19}{14 - 9} = -18/5$. Thus, the correct answer is -18/5, or approximately -3.6 in decimal form.",
+  "category": "Linear Equations - Slope Calculation",
+  "difficulty": "Medium",
+  "id": "b226c686"
+}

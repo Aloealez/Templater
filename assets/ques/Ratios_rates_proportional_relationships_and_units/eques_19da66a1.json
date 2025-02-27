@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 154 to $m$ is equivalent to the ratio 32 to 288. What is the value of $m$?",
+  "answers": {
+    "A": "1453",
+    "B": "1371",
+    "C": "1445",
+    "D": "1386"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{154}{m} = \frac{32}{288}$. Cross multiplying gives: 154 \u00d7 288 = 32 \u00d7 m. Solving for $m$, we get $m = 1386$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "19da66a1"
+}

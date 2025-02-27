@@ -117,11 +117,11 @@ class BasePlanData {
     int currentTime = 0;
 
     if (skill == "sats") {
-      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
-      List<String> questionsSubcategories = List.from(SatsQuestionSubcategoriesRW.typesList);
+      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
+      List<String> questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
-          SatsQuestionSubcategoriesRW.typesList[i] : double.parse(questionSubcategoriesPointsStr[i]),
+          SatsQuestionSubcategories.typesList[i] : double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! > questionsSubcategoriesPoints[b]!) {

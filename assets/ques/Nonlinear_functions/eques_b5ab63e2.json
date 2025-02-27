@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 5 times its width. The function $y = (5w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square yards, and $y > 0$. Which of the following is the best interpretation of 5w in this context?",
+  "answers": {
+    "A": "The area of the rectangle, in square yards",
+    "B": "The difference between the length and the width of the rectangle, in yards",
+    "C": "The length of the rectangle, in yards",
+    "D": "The width of the rectangle, in yards"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "Since the rectangle's length is 5 times its width, we define its length as 5w. This means that 5w represents the length of the rectangle, in yards.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "b5ab63e2"
+}

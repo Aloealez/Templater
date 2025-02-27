@@ -1,0 +1,19 @@
+{
+  "task": "In a bag, there are 10 purple marbles, 15 yellow marbles, 12 black marbles, and 21 red marbles. If one of these marbles is selected at random, what is the probability of selecting a marbles that is neither black nor red?",
+  "answers": {
+    "A": "22/58",
+    "B": "21/58",
+    "C": "36/58",
+    "D": "15/58"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "There are a total of 58 marbles in the bag. If the marbles is neither black nor red, then it must be either red or yellow. The probability of selecting one of these is (21 + 15)/58. Thus, the probability is 36/58.",
+  "category": "Probability and Conditional Probability",
+  "difficulty": "Medium",
+  "id": "98c6949a"
+}

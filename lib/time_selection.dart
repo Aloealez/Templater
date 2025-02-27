@@ -40,68 +40,68 @@ class _TimeSelectionState extends State<TimeSelection> {
       await questionBank.init();
       questions = {};
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.CentralIdeasAndDetails,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.CentralIdeasAndDetails,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyEasy,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.CommandOfEvidence,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.CommandOfEvidence,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyEasy,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.CrossTextConnections,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.CrossTextConnections,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyEasy,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.FormStructureAndSense,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.FormStructureAndSense,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyMedium,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(ESatsQuestionSubcategoriesRW.Inferences),
+        SatsQuestionSubcategories(ESatsQuestionSubcategories.Inferences),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyMedium,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.RhetoricalSynthesis,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.RhetoricalSynthesis,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyMedium,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.TextStructureAndPurpose,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.TextStructureAndPurpose,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyMedium,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(ESatsQuestionSubcategoriesRW.Transitions),
+        SatsQuestionSubcategories(ESatsQuestionSubcategories.Transitions),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyHard,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(
-          ESatsQuestionSubcategoriesRW.WordsInContext,),
+        SatsQuestionSubcategories(
+          ESatsQuestionSubcategories.WordsInContext,),
         1,
         true,
         true,
         difficulty: SatsQuestionDifficulty.difficultyHard,),);
       questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategoriesRW(ESatsQuestionSubcategoriesRW.Boundaries),
+        SatsQuestionSubcategories(ESatsQuestionSubcategories.Boundaries),
         1,
         true,
         true,
@@ -109,8 +109,8 @@ class _TimeSelectionState extends State<TimeSelection> {
       if (questions.length < 10) {
         questions = {};
         for (var questionSubcategoryStr
-        in SatsQuestionSubcategoriesRW.typesList) {
-          var questionSubcategory = SatsQuestionSubcategoriesRW.fromString(
+        in SatsQuestionSubcategories.typesList) {
+          var questionSubcategory = SatsQuestionSubcategories.fromString(
             questionSubcategoryStr,
           );
           await questionBank.loadFromAssets(
@@ -123,71 +123,71 @@ class _TimeSelectionState extends State<TimeSelection> {
           // );
         }
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.CentralIdeasAndDetails,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.CentralIdeasAndDetails,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyEasy,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.CommandOfEvidence,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.CommandOfEvidence,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyEasy,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.CrossTextConnections,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.CrossTextConnections,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyEasy,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.FormStructureAndSense,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.FormStructureAndSense,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyMedium,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.Inferences,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.Inferences,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyMedium,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.RhetoricalSynthesis,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.RhetoricalSynthesis,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyMedium,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.TextStructureAndPurpose,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.TextStructureAndPurpose,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyMedium,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.Transitions,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.Transitions,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyHard,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.WordsInContext,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.WordsInContext,),
           1,
           true,
           true,
           difficulty: SatsQuestionDifficulty.difficultyHard,),);
         questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategoriesRW(
-            ESatsQuestionSubcategoriesRW.Boundaries,),
+          SatsQuestionSubcategories(
+            ESatsQuestionSubcategories.Boundaries,),
           1,
           true,
           true,
@@ -219,14 +219,14 @@ class _TimeSelectionState extends State<TimeSelection> {
                 onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
                   SharedPreferences.getInstance().then((prefs) {
                     Map<String, List<String>> savedQuestionScores = {
-                      for (String questionSubcategory in SatsQuestionSubcategoriesRW.typesList)
+                      for (String questionSubcategory in SatsQuestionSubcategories.typesList)
                         questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
                     };
 
-                    List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
+                    List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
 
-                    for (int i = 0; i < SatsQuestionSubcategoriesRW.typesList.length; i++) {
-                      String questionSubcategory = SatsQuestionSubcategoriesRW.typesList.elementAt(i);
+                    for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
+                      String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
                       int score = -1;
                       for (String questionId in questions.keys) {
                         if (questions[questionId]!.subcategory?.string == questionSubcategory) {

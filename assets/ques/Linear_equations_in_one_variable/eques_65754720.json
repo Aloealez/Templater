@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{27}{8} $",
+    "B": "$ \\frac{-11}{8} $",
+    "C": "$ \\frac{-43}{8} $",
+    "D": "$ \\frac{-27}{8} $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "If x is the solution to the equation below, what is the value of x - 6?\n\n$ 5(2x - 6) - 2 = 2(x - 6) + 1 $",
+  "explanation": "Choice D is correct.\n\nExpanding the left-hand side:\n$ 5(2x - 6) - 2 = 10x - 30 - 2 = 10x -32 $\n\nExpanding the right-hand side:\n$ 2(x - 6) + 1 = 2x - 12 + 1 = 2x -11 $\n\nRewriting the equation:\n$ 10x -32 = 2x -11 $\n\nSubtracting 2x from both sides:\n$ (10 - 2)x = 21 $\n\nSolving for x:\n$ x = \\frac{21}{8} = \\frac{21}{8} $\n\nSince we need to find $ x - 6 $, we compute:\n$ x - 6 = \\frac{-27}{8} $\n\nThus, the correct answer is $ \\frac{-27}{8} $. ",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "65754720"
+}

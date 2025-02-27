@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "(\\frac{-56}{6}, 0)",
+    "B": "(\\frac{56}{6}, 0)",
+    "C": "(\\frac{-62}{6}, 0)",
+    "D": "(\\frac{-50}{6}, 0)"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "The function $ f $ is defined by $ f(x) = 6x + 56 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+  "explanation": "Choice A is correct.\n\nThe given function $ f(x) = 6x + 56 $ is a linear function.\n\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 6x + 56 $\n\nSolving for $ x $:\n$ 6x = -56 $\n$ x = \\frac{-56}{6} $\n\nThus, the x-intercept is $ $\\frac{-56}{6}$ $.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "c98ca736"
+}

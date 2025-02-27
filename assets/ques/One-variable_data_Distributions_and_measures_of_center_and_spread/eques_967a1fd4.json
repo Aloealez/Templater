@@ -1,0 +1,19 @@
+{
+  "task": "The numbers 14, 16, 16, 18, and $x$ are given. The mean and the median of these five numbers are equal. Which of the following is a possible value of $x$?",
+  "answers": {
+    "A": "14",
+    "B": "12",
+    "C": "16",
+    "D": "20"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "To satisfy the condition where mean and median are equal, $x$ must be chosen so that: the middle value (median) of the ordered set is equal to the mean (sum of all values divided by 5). For the given numbers [14, 16, 16, 18], the possible values of $x$ that satisfy this condition are: [16]. Since 16 satisfies this condition, it is the correct answer.",
+  "category": "Mean and Median Relationship",
+  "difficulty": "Medium",
+  "id": "967a1fd4"
+}

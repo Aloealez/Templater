@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "229",
+    "B": "9",
+    "C": "249",
+    "D": "269"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "A model predicts that a certain whale weighed 249 grams when it was born and that the whale gained 9 grams per months in its early life.\n\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted grams of the whale $ x $ months after birth, and $ a $ and $ b $ are constants.\n\nWhat is the value of $ a $? ",
+  "explanation": "Choice C is correct.\n\nFor a certain whale, it's given that a model predicts the whale weighed 249 grams when it was born and gained 9 grams per months in its early life.\n\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the whale after $ x $ months.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per months.\n\nSince $ a $ represents the weight of the whale at birth, the value of $ a $ is **249 grams**.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "44a399b6"
+}

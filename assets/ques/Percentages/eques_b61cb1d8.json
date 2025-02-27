@@ -1,0 +1,19 @@
+{
+  "task": "The number $k$ is 24% greater than 99. If $k$ is the product of 99 and $r$, what is the value of $r$?",
+  "answers": {
+    "A": "1.24",
+    "B": "2.87",
+    "C": "0.22",
+    "D": "2.23"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since $k$ is 24% greater than 99, we calculate: $k = 99 + (24/100) \times 99$. This simplifies to $k = 122.76$. We also know $k = 99r$, so solving for $r$: $r = 122.76 / 99 = 1.24$.",
+  "category": "Percentages and Proportions",
+  "difficulty": "Medium",
+  "id": "b61cb1d8"
+}

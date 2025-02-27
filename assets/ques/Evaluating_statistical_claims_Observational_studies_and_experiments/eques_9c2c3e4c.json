@@ -1,0 +1,19 @@
+{
+  "task": "A survey was conducted using a sample of university students selected at random from California State Universities. The surveyed individuals were asked about a specific topic related to their field. What is the largest population to which the results of the survey can be generalized?",
+  "answers": {
+    "A": "All university students in the United States",
+    "B": "All university students at California State Universities",
+    "C": "All professors at California State Universities",
+    "D": "All professors in the United States"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from university students at California State Universities, the largest population to which the results can be generalized is All university students at California State Universities. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
+  "category": "Evaluating Statistical Claims: Observational Studies and Experiments",
+  "difficulty": "Medium",
+  "id": "9c2c3e4c"
+}

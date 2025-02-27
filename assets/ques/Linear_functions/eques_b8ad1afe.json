@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ \\frac{103}{2} $",
+    "B": "$ \\frac{99}{2} $",
+    "C": "$ \\frac{33}{2} $",
+    "D": "33"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "The function $ h $ is defined by $ h(x) = 2x + 33 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+  "explanation": "Choice C is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 2x + 33 $\n\nSetting $ y = 0 $:\n$ 0 = 2x + 33 $\nSolving for $ x $:\n$ x = -\\frac{33}{2} = -33/2 $\n\nThus, the x-intercept is $ (-33/2, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 2(0) + 33 = 33 $\n\nThus, the y-intercept is $ (0, 33) $.\n\nSince $ a = -33/2 $ and $ b = 33 $, the sum is:\n$ a + b = -33/2 + 33 = 33/2 $.",
+  "category": "Linear Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "b8ad1afe"
+}

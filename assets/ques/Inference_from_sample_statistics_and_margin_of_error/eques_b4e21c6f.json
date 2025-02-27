@@ -1,0 +1,19 @@
+{
+  "task": "From a population of 60130 people, 1927 were chosen at random and surveyed about a new school program. Based on the survey, it is estimated that 30% of people in the population support it, with an associated margin of error of 3%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+  "answers": {
+    "A": "19786",
+    "B": "20827",
+    "C": "1927",
+    "D": "963"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "It's given that an estimated 30% of people in the population support a new school program, with a margin of error of 3%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 27% and 33% of the population. Multiplying these percentages by the total population (60130) gives a range of 16235 to 19842. Since 19786 falls within this range, it is a plausible answer.",
+  "category": "Inference from Sample Statistics and Margin of Error",
+  "difficulty": "Medium",
+  "id": "b4e21c6f"
+}

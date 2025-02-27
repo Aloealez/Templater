@@ -1,0 +1,19 @@
+{
+  "task": "If $p = 2x + 3$ and $v = x + 4$, which of the following is equivalent to $p v - 1 p + v$?",
+  "answers": {
+    "A": "2x^2 + 9x + 10",
+    "B": "2x^2 + 10x + 13",
+    "C": "2x^2 + 13x + 15",
+    "D": "2x^2 + 12x + 8"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Substituting $p$ and $v$ into the given expression: $ (2x + 3)(x + 4) - 1(2x + 3) + x + 4 $. Expanding yields: $ 2x^2 + 8x + 3x + 12 - 2x - 3 + x + 4 $. Combining like terms, we get: $ 2x^2 + 10x + 13 $, which is the correct answer.",
+  "category": "Equivalent Expressions - Expanding and Simplifying",
+  "difficulty": "Medium",
+  "id": "def6732b"
+}

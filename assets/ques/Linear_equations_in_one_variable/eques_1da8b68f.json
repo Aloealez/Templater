@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "The average number of weeks it takes similar plants to grow 15 units.",
+    "B": "The number of weeks it took the plant to double its circumference.",
+    "C": "The average number of units the plant's circumference increased per week.",
+    "D": "The circumference, in units, of the plant when it was 1 week old."
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "A plant had a circumference of 6 units when it was first measured. The equation below can be used to find how many weeks ($ n $) it took the plant to reach a circumference of 15 units. Which of the following is the best interpretation of the number 2 in this context?\n\n$ 2n + 6 = 15 $",
+  "explanation": "Choice C is correct.\n\nThe circumference of the plant at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 15 represents the circumference at the final time, and 6 represents the circumference when it was first measured. It follows that 2n represents the total circumference growth over time.\n\nSince $ n $ represents the number of weeks between the two measurements, the coefficient 2 must represent the average number of units the plant's circumference increased per week.\n\n",
+  "category": "Algebraic Word Problems",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "1da8b68f"
+}

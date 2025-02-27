@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "471",
+    "B": "8",
+    "C": "431",
+    "D": "451"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "A model predicts that a certain dog weighed 451 pounds when it was born and that the dog gained 8 pounds per months in its early life.\n\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted pounds of the dog $ x $ months after birth, and $ a $ and $ b $ are constants.\n\nWhat is the value of $ a $? ",
+  "explanation": "Choice D is correct.\n\nFor a certain dog, it's given that a model predicts the dog weighed 451 pounds when it was born and gained 8 pounds per months in its early life.\n\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the dog after $ x $ months.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per months.\n\nSince $ a $ represents the weight of the dog at birth, the value of $ a $ is **451 pounds**.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "f91cf890"
+}

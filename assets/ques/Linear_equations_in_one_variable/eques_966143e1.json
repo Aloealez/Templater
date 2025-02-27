@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "The average number of months it takes similar flowers to grow 12 units.",
+    "B": "The average number of units the flower's weight increased per month.",
+    "C": "The weight, in units, of the flower when it was 1 month old.",
+    "D": "The number of months it took the flower to double its weight."
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "A flower had a weight of 4 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the flower to reach a weight of 12 units. Which of the following is the best interpretation of the number 5 in this context?\n\n$ 5n + 4 = 12 $",
+  "explanation": "Choice B is correct.\n\nThe weight of the flower at a given time is equal to its initial weight plus the number of units it grew. In the given equation, 12 represents the weight at the final time, and 4 represents the weight when it was first measured. It follows that 5n represents the total weight growth over time.\n\nSince $ n $ represents the number of months between the two measurements, the coefficient 5 must represent the average number of units the flower's weight increased per month.\n\n",
+  "category": "Algebraic Word Problems",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "966143e1"
+}

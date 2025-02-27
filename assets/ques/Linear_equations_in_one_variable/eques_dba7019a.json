@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "The circumference, in units, of the cactus when it was 1 year old.",
+    "B": "The number of years it took the cactus to double its circumference.",
+    "C": "The average number of units the cactus's circumference increased per year.",
+    "D": "The average number of years it takes similar cactuss to grow 22 units."
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "A cactus had a circumference of 8 units when it was first measured. The equation below can be used to find how many years ($ n $) it took the cactus to reach a circumference of 22 units. Which of the following is the best interpretation of the number 4 in this context?\n\n$ 4n + 8 = 22 $",
+  "explanation": "Choice C is correct.\n\nThe circumference of the cactus at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 22 represents the circumference at the final time, and 8 represents the circumference when it was first measured. It follows that 4n represents the total circumference growth over time.\n\nSince $ n $ represents the number of years between the two measurements, the coefficient 4 must represent the average number of units the cactus's circumference increased per year.\n\n",
+  "category": "Algebraic Word Problems",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "dba7019a"
+}

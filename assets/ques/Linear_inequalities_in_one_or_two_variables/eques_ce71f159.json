@@ -1,0 +1,19 @@
+{
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$\ny \u2264 -2x + -6\n$$\n$$\ny \u2264 0x + 10\n$$",
+  "answers": {
+    "A": "(3, 2)",
+    "B": "(-2, 0)",
+    "C": "(-1, 5)",
+    "D": "(-5, 1)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both y \u2264 -2x + -6 and y \u2264 0x + 10, making (-5, 1) the correct choice.",
+  "category": "Linear Inequalities - System Solutions",
+  "difficulty": "Medium",
+  "id": "ce71f159"
+}

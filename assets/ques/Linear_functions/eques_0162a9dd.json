@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "(-5, 0)",
+    "B": "(-2, 0)",
+    "C": "(3, 0)",
+    "D": "(-3, 0)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "The function $ f $ is defined by $ f(x) = 10x + 30 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+  "explanation": "Choice D is correct.\n\nThe given function $ f(x) = 10x + 30 $ is a linear function.\n\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 10x + 30 $\n\nSolving for $ x $:\n$ 10x = -30 $\n$ x = \\frac{-30}{10} $\n\nThus, the x-intercept is $ (-3, 0) $.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "0162a9dd"
+}

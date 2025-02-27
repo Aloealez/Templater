@@ -1,0 +1,19 @@
+{
+  "task": "A survey was conducted using a sample of engineers selected at random from California State Universities. The surveyed individuals were asked about a specific topic related to their field. What is the largest population to which the results of the survey can be generalized?",
+  "answers": {
+    "A": "All professors in the United States",
+    "B": "All engineers in the United States",
+    "C": "All engineers at California State Universities",
+    "D": "All professors at California State Universities"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from engineers at California State Universities, the largest population to which the results can be generalized is All engineers at California State Universities. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
+  "category": "Evaluating Statistical Claims: Observational Studies and Experiments",
+  "difficulty": "Medium",
+  "id": "f727528b"
+}

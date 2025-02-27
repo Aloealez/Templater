@@ -1,0 +1,19 @@
+{
+  "task": "A right triangle has legs with lengths of 23 centimeters and 17 centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
+  "answers": {
+    "A": "1\u221a818",
+    "B": "8\u221a53",
+    "C": "28",
+    "D": "818"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The correct answer is 1\u221a818. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(23)\u00b2 + (17)\u00b2 = c\u00b2\n529 + 289 = 818 = c\u00b2\nTaking the square root: \u221a818 = c.\nThe simplified radical form of \u221a818 is 1\u221a818, so the hypotenuse is 1\u221a818 cm.",
+  "category": "Geometry - Pythagorean Theorem",
+  "difficulty": "Medium",
+  "id": "50dc316b"
+}

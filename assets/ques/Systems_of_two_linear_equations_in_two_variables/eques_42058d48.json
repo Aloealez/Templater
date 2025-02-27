@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n$$\n\frac{3}{2} y = 5\n$$\n$$\nx - \frac{-1}{2} y = -1\n$$",
+  "answers": {
+    "A": "-5/3",
+    "B": "-11/3",
+    "C": "-8/3",
+    "D": "7/4"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = \frac{2 \times 5}{3}$. Substituting into the second equation and solving for $x$ gives $x = -8/3$. Thus, the correct answer is -8/3.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "42058d48"
+}

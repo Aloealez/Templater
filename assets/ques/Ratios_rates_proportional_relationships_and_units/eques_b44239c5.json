@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 112 to $m$ is equivalent to the ratio 9 to 27. What is the value of $m$?",
+  "answers": {
+    "A": "279",
+    "B": "336",
+    "C": "350",
+    "D": "402"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{112}{m} = \frac{9}{27}$. Cross multiplying gives: 112 \u00d7 27 = 9 \u00d7 m. Solving for $m$, we get $m = 336$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "b44239c5"
+}

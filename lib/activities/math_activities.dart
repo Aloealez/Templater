@@ -1,77 +1,24 @@
 import 'package:brainace_pro/activities/activity_button.dart';
-import 'package:brainace_pro/attention/find_the_number.dart';
-import 'package:brainace_pro/linguistic/reading_comprehension.dart';
-import 'package:brainace_pro/margins.dart';
+import 'package:flutter_quizzes/flutter_quizzes.dart';
+import 'package:brainace_pro/sats/start_sats_quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../navbar.dart';
-import '../well_being/self_reflection.dart';
+import 'package:brainace_pro/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../well_being/sport.dart';
-import '../well_being/yoga.dart';
-import '../memory/memory_game1.dart';
-import '../memory/learning_words/memory.dart';
-import '../memory/faces.dart';
-import '../attention/long_term_concentration_video.dart';
-import '../attention/short_term_concentration.dart';
-import '../attention/reading/reading.dart';
-import '../logical_thinking/sudoku.dart';
-import '../linguistic/wordly.dart';
-import '../linguistic/hangman.dart';
-import '../logical_thinking/riddles.dart';
-import '../linguistic/listening_comprehension_video.dart';
-import '../memory/working_memory.dart';
-import '../linguistic/scrabble.dart';
-import '../logical_thinking/2048/game_2048.dart';
-import '../well_being/memes.dart';
-import '../investing/menu.dart';
-import '../linguistic/poems_reading/poems_info.dart';
-import 'package:brainace_pro/activities_for_each_section.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 import 'dart:math' as math;
 
+import '../margins.dart';
+
 class MathActivities extends StatefulWidget {
   const MathActivities({super.key});
+
   @override
-  State<MathActivities> createState() => _MathActivities();
+  State<MathActivities> createState() => _MathActivitiesState();
 }
 
-class _MathActivities extends State<MathActivities> {
+class _MathActivitiesState extends State<MathActivities> {
   List<String> plan = [];
-
-  Widget createActivity2(
-    BuildContext context,
-    String img,
-    String txt1,
-    String txt2,
-    Widget route,
-    String activityName, {
-    double fontSize = 1,
-    double zero = 1,
-  }) {
-    Size size = MediaQuery.of(context).size;
-
-    if (skillAllLists[skill] != null &&
-        skillAllLists[skill]!.contains(activityName)) {
-      return ActivityButton(
-        context,
-        img: "activities/$img",
-        text1: txt1,
-        text2: txt2,
-        fontSize: 0.023 * size.height * fontSize,
-        onTapRoute: route,
-        zero: zero,
-        blocked: false,
-        textWidth: 0.45,
-        title: false,
-        star: true,
-        exerciseName: activityName,
-        skill: skill,
-        plan: plan,
-      );
-    }
-    return const SizedBox();
-  }
 
   Future<void> getPlan() async {
     prefs = await SharedPreferences.getInstance();
@@ -177,8 +124,7 @@ class _MathActivities extends State<MathActivities> {
                                   color: const Color.fromARGB(255, 255, 208, 0),
                                   size: 0.03 * size.height,
                                 ),
-                                decoration:
-                                    const IconDecoration(border: IconBorder()),
+                                decoration: const IconDecoration(border: IconBorder()),
                               ),
                             ),
                             SizedBox(width: 0.02 * size.width),
@@ -186,271 +132,30 @@ class _MathActivities extends State<MathActivities> {
                               "Do Today",
                               style: TextStyle(
                                 fontSize: 0.02 * size.height,
-                                color:
-                                    Theme.of(context).colorScheme.onSurface,
+                                color: Theme.of(context).colorScheme.onSurface,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 0.02 * size.height),
-                        createActivity2(
-                          context,
-                          "learning_words",
-                          "Learning",
-                          "Words",
-                          const Memory(),
-                          "Memory",
-                        ),
-                        createActivity2(
-                          context,
-                          "working_memory",
-                          "Working",
-                          "Memory",
-                          const WorkingMemory(),
-                          "WorkingMemory",
-                        ),
-                        createActivity2(
-                          context,
-                          "find_the_number",
-                          "Find the",
-                          "Number",
-                          const FindTheNumber(),
-                          "FindTheNumber",
-                        ),
-                        createActivity2(
-                          context,
-                          "listening",
-                          "Listening",
-                          "Comprehension",
-                          const ListeningComprehensionVideo(),
-                          "ListeningComprehensionVideo",
-                        ),
-                        createActivity2(
-                          context,
-                          "reading",
-                          "Reading",
-                          "Comprehension",
-                          const ReadingComprehension(),
-                          "ReadingComprehension",
-                        ),
-                        createActivity2(
-                          context,
-                          "poems",
-                          "POEMS",
-                          "Reading",
-                          const PoemsInfo(),
-                          "PoemsInfo",
-                        ),
-                        // createActivity2(
-                        //   context,
-                        //   "spelling",
-                        //   "SPELLING",
-                        //   "Mistakes",
-                        //   const SpellingMistakes(
-                        //     exerciseId: 0,
-                        //   ),
-                        //   "SpellingMistakes",
-                        // ),
-                        createActivity2(
-                          context,
-                          "riddles",
-                          "RIDDLES",
-                          "",
-                          const RiddlesTest(),
-                          "Riddles",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "sudoku",
-                          "Sudoku",
-                          "",
-                          const SudokuGame(),
-                          "SudokuGame",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "short_term_concentration",
-                          "Short-Term",
-                          "Concentration",
-                          const ShortTermConcentration(),
-                          "ShortTermConcentration",
-                        ),
-                        createActivity2(
-                          context,
-                          "long_term_concentration",
-                          "Long-Term",
-                          "Concentration",
-                          const LongTermConcentrationVideo(),
-                          "LongTermConcentrationVideo",
-                        ),
-                        // createActivity2(
-                        //   context,
-                        //   "strong_concentration",
-                        //   "Strong",
-                        //   "Concentration",
-                        //   const StrongConcentrationDesc(),
-                        //   "StrongConcentrationDesc",
-                        // ),
-                        createActivity2(
-                          context,
-                          "reading_out_loud",
-                          "Reading",
-                          "Out-loud",
-                          const Reading(),
-                          "Reading",
-                        ),
-                        createActivity2(
-                          context,
-                          "hangman",
-                          "Hangman",
-                          "",
-                          const Hangman(),
-                          "Hangman",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "wordly",
-                          "Wordly",
-                          "",
-                          const Wordly(),
-                          "Wordly",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "2048",
-                          "2048",
-                          "",
-                          const Game2048(),
-                          "Game2048",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "scrabble",
-                          "Like",
-                          "Scrabble",
-                          const Scrabble(
-                            iteration: 1,
-                            allPoints: 0,
+                        SizedBox(height: 0.03 * size.height),
+                        for (String questionSubcategory in SatsQuestionSubcategories.typesList.sublist(10))
+                          ActivityButton(
+                            context,
+                            img: "activities/$questionSubcategory",
+                            text1: SatsQuestionSubcategories.fromString(questionSubcategory).getName(),
+                            text2: "",
+                            fontSize: 0.023 * size.height * 1,
+                            // onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategories.fromString(questionSubcategory)),
+                            zero: 1,
+                            blocked: false,
+                            textWidth: 0.45,
+                            title: false,
+                            star: true,
+                            exerciseName: questionSubcategory,
+                            skill: skill,
+                            plan: plan,
                           ),
-                          "Scrabble",
-                        ),
-                        createActivity2(
-                          context,
-                          "faces_memory",
-                          "Faces",
-                          "Memory",
-                          const Faces(),
-                          "Faces",
-                        ),
-                        // createActivity2(
-                        //   context,
-                        //   "correct_a_word",
-                        //   "Correct a word",
-                        //   "",
-                        //   const CorrectAWord(),
-                        //   "CorrectAWord",
-                        //   zero: 0,
-                        // ),
-                        createActivity2(
-                          (context),
-                          "investing",
-                          "Investing",
-                          "Course",
-                          const InvestingMenu(),
-                          "InvestingMenu",
-                        ),
-                        // createActivity2(
-                        //   context,
-                        //   "grammar",
-                        //   "Grammar",
-                        //   "",
-                        //   const Grammar(
-                        //     exerciseId: 0,
-                        //   ),
-                        //   "Grammar",
-                        //   zero: 0,
-                        // ),
-                        // createActivity2(
-                        //   context,
-                        //   "choose_best_word",
-                        //   "Vocabulary",
-                        //   "",
-                        //   const ChooseBestWord(),
-                        //   "Vocabulary",
-                        // ),
-                        // createActivity2(
-                        //   context,
-                        //   "idioms",
-                        //   "Idioms, expressions and phrasal verbs",
-                        //   "",
-                        //   const Idioms(),
-                        //   "Idioms",
-                        //   zero: 0,
-                        // ),
-                        createActivity2(
-                          context,
-                          "memory_game",
-                          "Memory",
-                          "Game",
-                          const MemoryGame1(),
-                          "MemoryGame1",
-                        ),
-                        createActivity2(
-                          context,
-                          "sport",
-                          "Sport",
-                          "Optional",
-                          const Sport(),
-                          "Sport",
-                        ),
-                        createActivity2(
-                          context,
-                          "yoga",
-                          "Yoga",
-                          "",
-                          const Yoga(),
-                          "Yoga",
-                          zero: 0,
-                        ),
-                        createActivity2(
-                          context,
-                          "self_reflection",
-                          "Self",
-                          "Reflection",
-                          const SelfReflection(),
-                          "SelfReflection",
-                        ),
-                        // createActivity2(
-                        //   context,
-                        //   "meditation",
-                        //   "Meditation",
-                        //   "",
-                        //   LevelInstruction(
-                        //     "Meditation",
-                        //     5,
-                        //     MeditationMinutes.routeBuilder,
-                        //     testTimeDescription: "Meditation offers a path to inner peace, reduced stress, increased focus, and enhanced emotional balance.",
-                        //     testActivitiesDescription: "Before you begin, find a quiet place and get comfortable. When you are ready to start.",
-                        //     testScoreDescription: "You can sit on a cushion or chair, or even lie down if that's more comfortable for you.",
-                        //   ),
-                        //   "Meditation",
-                        //   zero: 0,
-                        // ),
-                        createActivity2(
-                          context,
-                          "memes",
-                          "Memes",
-                          "",
-                          const Meme(),
-                          "Meme",
-                          zero: 0,
-                        ),
                       ],
                     ),
                   ),

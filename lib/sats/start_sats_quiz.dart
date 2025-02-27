@@ -7,7 +7,7 @@ import '../home.dart';
 import '../quiz/quiz_model.dart';
 
 class StartSatsQuiz extends StatefulWidget {
-  final SatsQuestionSubcategoriesRW subcategory;
+  final SatsQuestionSubcategories subcategory;
 
   const StartSatsQuiz({
     required this.subcategory,
@@ -39,7 +39,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
     Future<void> questionsF = () async {
       prefs = await SharedPreferences.getInstance();
       double minScore = 69;
-      for (var subcategory in SatsQuestionSubcategoriesRW.typesList) {
+      for (var subcategory in SatsQuestionSubcategories.typesList) {
         List<String> savedScores = prefs.getStringList("${subcategory}_scores",) ?? [];
         double lastScore = savedScores.isNotEmpty ? double.parse(savedScores.last) : 0;
         minScore = math.min(minScore, lastScore);
@@ -104,14 +104,14 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                               onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
                                 SharedPreferences.getInstance().then((prefs) {
                                   Map<String, List<String>> savedQuestionScores = {
-                                    for (String questionSubcategory in SatsQuestionSubcategoriesRW.typesList)
+                                    for (String questionSubcategory in SatsQuestionSubcategories.typesList)
                                       questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
                                   };
 
-                                  List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
+                                  List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
 
-                                  for (int i = 0; i < SatsQuestionSubcategoriesRW.typesList.length; i++) {
-                                    String questionSubcategory = SatsQuestionSubcategoriesRW.typesList.elementAt(i);
+                                  for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
+                                    String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
                                     int score = -1;
                                     for (String questionId in questions.keys) {
                                       if (questions[questionId]!.subcategory?.string == questionSubcategory) {

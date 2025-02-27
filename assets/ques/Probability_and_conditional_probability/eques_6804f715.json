@@ -1,0 +1,19 @@
+{
+  "task": "In a bag, there are 28 black balls, 30 white balls, 26 blue balls, and 38 red balls. If one of these balls is selected at random, what is the probability of selecting a balls that is neither blue nor red?",
+  "answers": {
+    "A": "26/122",
+    "B": "64/122",
+    "C": "38/122",
+    "D": "58/122"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "There are a total of 122 balls in the bag. If the balls is neither blue nor red, then it must be either blue or red. The probability of selecting one of these is (26 + 38)/122. Thus, the probability is 64/122.",
+  "category": "Probability and Conditional Probability",
+  "difficulty": "Medium",
+  "id": "6804f715"
+}
