@@ -71,7 +71,7 @@ class _Home extends State<Home> {
         bool allDoneYesterday = false;
 
         List<String>? yesterdayPlan =
-            prefs.getStringList("basePlanDay$previousDay");
+        prefs.getStringList("basePlanDay$previousDay");
         if (yesterdayPlan != null && yesterdayPlan.isNotEmpty) {
           allDoneYesterday = yesterdayPlan.every((task) {
             return prefs.getString("${task}TickedDay$previousDay") == "1";
@@ -134,7 +134,7 @@ class _Home extends State<Home> {
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
       newWellBeingTicked[i] =
-          (newWellBeingTickedString[i] == "1" ? true : false);
+      (newWellBeingTickedString[i] == "1" ? true : false);
       if (newWellBeingTicked[i]) {
         newPoints += wellbeingTimes[wellbeing[i]]!;
       }
@@ -182,15 +182,15 @@ class _Home extends State<Home> {
 
     if (skill == "sats") {
       List<String> questionSubcategoriesPointsStr = prefs
-              .getStringList("scores_questionsLast") ??
+          .getStringList("scores_questionsLast") ??
           List<String>.generate(
               SatsQuestionSubcategoriesRW.typesList.length, (index) => "-1");
       List<String> questionsSubcategories =
-          List.from(SatsQuestionSubcategoriesRW.typesList);
+      List.from(SatsQuestionSubcategoriesRW.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
           SatsQuestionSubcategoriesRW.typesList[i]:
-              double.parse(questionSubcategoriesPointsStr[i]),
+          double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -205,8 +205,8 @@ class _Home extends State<Home> {
       });
       int timePerRWQuestion = 5;
       for (int i = 0;
-          i < questionsSubcategories.length && currentTime < trainingTime;
-          i++) {
+      i < questionsSubcategories.length && currentTime < trainingTime;
+      i++) {
         newPlan.add(questionsSubcategories[i]);
         currentTime += timePerRWQuestion;
       }
@@ -330,7 +330,7 @@ class _Home extends State<Home> {
 
     String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
@@ -534,7 +534,7 @@ class _Home extends State<Home> {
   List<CircularStackEntry> _generateChartData() {
     Color? dialColor = Theme.of(context).colorScheme.secondary;
     Color? dialColor2 =
-        Theme.of(context).colorScheme.secondary.withOpacity(0.2);
+    Theme.of(context).colorScheme.secondary.withOpacity(0.2);
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
         ? const Color.fromARGB(255, 255, 136, 255)
         : const Color.fromARGB(255, 211, 54, 198);
