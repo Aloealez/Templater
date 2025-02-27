@@ -278,7 +278,6 @@ class _Home extends State<Home> {
   Future<void> readMemory() async {
     prefs = await SharedPreferences.getInstance();
     await calcDay();
-    print("day: $day");
 
     if (day >= 30) {
       if (mounted) {
@@ -292,45 +291,34 @@ class _Home extends State<Home> {
       }
     }
 
+    // Ustawienie skill, planu itd.
     await getSkill();
     await getWellBeingTicked();
     await createPlan();
     await getBasePlanTicked();
 
-
-    int currentStreak = prefs.getInt('streak_days') ?? 0;
-    final int previousDay = day - 1;
-
-    if (previousDay > 0) {
-      final yesterdayPlan = prefs.getStringList("basePlanDay$previousDay");
-      bool allDoneYesterday = false;
-
-      if (yesterdayPlan != null && yesterdayPlan.isNotEmpty) {
-        allDoneYesterday = yesterdayPlan.every(
-              (task) => prefs.getString("${task}TickedDay$previousDay") == "1",
-        );
-      }
-
-      if (!allDoneYesterday) {
-        currentStreak = 0;
-        await prefs.setInt('streak_days', currentStreak);
-      }
-    }
-
+    // --- Poniżej: nowy (poprawiony) kod streak ---
+    // Sprawdzenie czy user zrobił wszystkie zadania na dziś
     bool allDoneToday = plan.isNotEmpty &&
         plan.every((task) => prefs.getString("${task}TickedDay$day") == "1");
 
+    int currentStreak = prefs.getInt('streak_days') ?? 0;
+    streakInDanger = true;
+
     if (allDoneToday) {
-      currentStreak++;
-      await prefs.setInt('streak_days', currentStreak);
       streakInDanger = false;
-    } else {
-      streakInDanger = true;
+      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
+      if (lastUpdateDay != day) {
+        currentStreak++;
+        await prefs.setInt('streak_days', currentStreak);
+        await prefs.setInt('last_update_day', day);
+      }
     }
 
     streakDays = currentStreak;
     setState(() {});
   }
+
 
 
 
