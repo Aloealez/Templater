@@ -55,45 +55,37 @@ class _Home extends State<Home> {
 
   Future<void> checkAndUpdateStreak() async {
     final prefs = await SharedPreferences.getInstance();
-    final currentDate = DateTime.now();
-    final lastOpenDate = DateTime.tryParse(prefs.getString('last_open_date') ?? '');
+    int currentDay = day;
 
-    if (lastOpenDate == null) {
-      await prefs.setInt('streak_days', 0);
-      await prefs.setString('last_open_date', currentDate.toIso8601String());
-      setState(() {
-        streakDays = 0;
-      });
-    } else {
-      final difference = currentDate.difference(lastOpenDate).inDays;
-      if (difference >= 1) {
-        int previousDay = day - 1;
-        bool allDoneYesterday = false;
-
-        List<String>? yesterdayPlan =
-            prefs.getStringList("basePlanDay$previousDay");
-        if (yesterdayPlan != null && yesterdayPlan.isNotEmpty) {
-          allDoneYesterday = yesterdayPlan.every((task) {
-            return prefs.getString("${task}TickedDay$previousDay") == "1";
-          });
-        } else {
-          allDoneYesterday = false;
-        }
-
-        if (difference == 1 && allDoneYesterday) {
-          int sd = prefs.getInt('streak_days') ?? 0;
-          sd++;
-          streakDays = sd;
-          await prefs.setInt('streak_days', sd);
-        } else {
-          streakDays = 0;
-          await prefs.setInt('streak_days', 0);
-        }
-        await prefs.setString('last_open_date', currentDate.toIso8601String());
-        setState(() {});
+    if (currentDay > 1) {
+      List<String>? yesterdayPlan = prefs.getStringList("basePlanDay${currentDay - 1}");
+      bool allDoneYesterday = yesterdayPlan != null &&
+          yesterdayPlan.isNotEmpty &&
+          yesterdayPlan.every((task) =>
+          prefs.getString("${task}TickedDay${currentDay - 1}") == "1");
+      if (!allDoneYesterday) {
+        await prefs.setInt('streak_days', 0);
       }
     }
+
+    bool allDoneToday = plan.isNotEmpty &&
+        plan.every((task) => prefs.getString("${task}TickedDay$currentDay") == "1");
+
+    streakInDanger = !allDoneToday;
+
+    int currentStreak = prefs.getInt('streak_days') ?? 0;
+    if (allDoneToday) {
+      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
+      if (lastUpdateDay != currentDay) {
+        currentStreak++;
+        await prefs.setInt('streak_days', currentStreak);
+        await prefs.setInt('last_update_day', currentDay);
+      }
+    }
+    streakDays = currentStreak;
+    setState(() {});
   }
+
 
   void calcValues() {
     setState(() {
@@ -134,7 +126,7 @@ class _Home extends State<Home> {
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
       newWellBeingTicked[i] =
-          (newWellBeingTickedString[i] == "1" ? true : false);
+      (newWellBeingTickedString[i] == "1" ? true : false);
       if (newWellBeingTicked[i]) {
         newPoints += wellbeingTimes[wellbeing[i]]!;
       }
@@ -182,7 +174,7 @@ class _Home extends State<Home> {
 
     if (skill == "sats") {
       List<String> questionSubcategoriesPointsStr = prefs
-              .getStringList("scores_questionsLast") ??
+          .getStringList("scores_questionsLast") ??
           List<String>.generate(
               SatsQuestionSubcategories.typesList.length, (index) => "-1");
       List<String> questionsSubcategories =
@@ -205,8 +197,8 @@ class _Home extends State<Home> {
       });
       int timePerRWQuestion = 5;
       for (int i = 0;
-          i < questionsSubcategories.length && currentTime < trainingTime;
-          i++) {
+      i < questionsSubcategories.length && currentTime < trainingTime;
+      i++) {
         newPlan.add(questionsSubcategories[i]);
         currentTime += timePerRWQuestion;
       }
@@ -277,8 +269,6 @@ class _Home extends State<Home> {
 
   Future<void> readMemory() async {
     await calcDay();
-    // await checkAndUpdateStreak();
-    print("day: $day");
     if (day >= 30) {
       if (mounted) {
         Navigator.pop(context);
@@ -295,28 +285,9 @@ class _Home extends State<Home> {
     await createPlan();
     await getBasePlanTicked();
 
-    // Sprawdzenie, czy wszystkie zadania dzisiaj zostały wykonane i aktualizacja streak
-    print("streak plan: $plan");
-    print("day $day");
-    bool allDoneToday = plan.isNotEmpty &&
-        plan.every((task) {
-          print("Ticked streak: ${prefs.getString("${task}TickedDay$day")}");
-          return prefs.getString("${task}TickedDay$day") == "1";
-        });
-    int currentStreak = prefs.getInt('streak_days') ?? 0;
-    streakInDanger = true;
-    if (allDoneToday) {
-      streakInDanger = false;
-      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
-      if (lastUpdateDay != day) {
-        currentStreak++;
-        await prefs.setInt('streak_days', currentStreak);
-        await prefs.setInt('last_update_day', day);
-      }
-    }
-    streakDays = currentStreak;
-    setState(() {});
+    await checkAndUpdateStreak();
   }
+
 
   Future<void> updateEmoji() async {
     prefs = await SharedPreferences.getInstance();
@@ -326,7 +297,7 @@ class _Home extends State<Home> {
 
     String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
@@ -440,6 +411,7 @@ class _Home extends State<Home> {
           "plan[$i] ${plan[i]} ${sectionNames[plan[i]]} ${basePlanTicked[i]}");
     }
 
+    HomeWidget.saveWidgetData("plan_title", "To - Do List");
     HomeWidget.saveWidgetData("plan_title", "BeSmart List");
     HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
     HomeWidget.updateWidget(
@@ -530,7 +502,7 @@ class _Home extends State<Home> {
   List<CircularStackEntry> _generateChartData() {
     Color? dialColor = Theme.of(context).colorScheme.secondary;
     Color? dialColor2 =
-        Theme.of(context).colorScheme.secondary.withOpacity(0.2);
+    Theme.of(context).colorScheme.secondary.withOpacity(0.2);
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
         ? const Color.fromARGB(255, 255, 136, 255)
         : const Color.fromARGB(255, 211, 54, 198);
