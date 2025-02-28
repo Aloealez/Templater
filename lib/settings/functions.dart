@@ -7,13 +7,13 @@ import 'package:url_launcher/url_launcher.dart';
 import '../main.dart';
 
 Future<void> popUp(
-  BuildContext context,
-  String txt,
-  String txtBold,
-  String txt2,
-  String question,
-  Function fn,
-) async {
+    BuildContext context,
+    String txt,
+    String txtBold,
+    String txt2,
+    String question,
+    Function fn,
+    ) async {
   Size size = MediaQuery.of(context).size;
   await showDialog(
     context: context,
@@ -106,6 +106,7 @@ Future<void> popUp(
 }
 
 void endProgram(BuildContext context) {
+  // Instead of resetting, just navigate to the final screen
   SharedPreferences.getInstance().then((prefs) {
     if (context.mounted) {
       Navigator.pushReplacement(
@@ -134,7 +135,7 @@ Future<void> restartAppButton(BuildContext context) async {
                 RichText(
                   text: TextSpan(
                     text:
-                        'By restarting the program, you will return to the welcome screen. Your ',
+                    'By restarting the program, you will return to the welcome screen. Your ',
                     style: TextStyle(
                       fontSize: size.width / 20,
                     ),
@@ -224,6 +225,7 @@ Future<void> restartAppButton(BuildContext context) async {
 void restartApp(BuildContext context) {
   SharedPreferences.getInstance().then((prefs) {
     prefs.clear();
+    // Reload theme so the new user starts fresh
     if (context.mounted) {
       MyApp.of(context).reloadTheme();
     }
