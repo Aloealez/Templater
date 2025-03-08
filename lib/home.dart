@@ -39,7 +39,7 @@ class _Home extends State<Home> with RouteAware{
   double summ = 100.0;
   double value = 40.0;
   double value2 = 60.0;
-  double value3 = 00.0;
+  double value3 = 0.0;
   double value32 = 50.0;
 
   @override
@@ -65,6 +65,7 @@ class _Home extends State<Home> with RouteAware{
     }
 
     setState(() {
+      // how many days have passed since the first day
       day = today.difference(firstDay).inDays + 1;
     });
   }
@@ -73,8 +74,10 @@ class _Home extends State<Home> with RouteAware{
     final prefs = await SharedPreferences.getInstance();
     int currentDay = day;
 
+    // If we are beyond day 1, check if previous day's tasks were all completed
     if (currentDay > 1) {
-      List<String>? yesterdayPlan = prefs.getStringList("basePlanDay${currentDay - 1}");
+      List<String>? yesterdayPlan =
+      prefs.getStringList("basePlanDay${currentDay - 1}");
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
           yesterdayPlan.every((task) =>
@@ -84,6 +87,7 @@ class _Home extends State<Home> with RouteAware{
       }
     }
 
+    // Check if today's tasks are all done
     bool allDoneToday = plan.isNotEmpty &&
         plan.every((task) => prefs.getString("${task}TickedDay$currentDay") == "1");
 
@@ -102,21 +106,20 @@ class _Home extends State<Home> with RouteAware{
     setState(() {});
   }
 
-
   void calcValues() {
     setState(() {
-      procent = int.parse((points / trainingTime * 100).toStringAsFixed(0));
+      procent = trainingTime == 0
+          ? 0
+          : int.parse((points / trainingTime * 100).toStringAsFixed(0));
       if (procent >= 200) {
         value = 100;
         value2 = 0;
         value3 = 100;
       } else {
-        value = min(procent.toDouble(), 100);
+        value = procent.toDouble().clamp(0, 100);
         value2 = 100 - value;
         value3 = (procent > 100) ? procent % 100 : 0;
       }
-      List<CircularStackEntry> data = _generateChartData();
-      // key.currentState!.updateData(data);
     });
   }
 
@@ -133,7 +136,6 @@ class _Home extends State<Home> with RouteAware{
 
   Future<void> getWellBeingTicked() async {
     prefs = await SharedPreferences.getInstance();
-
     int newPoints = points;
 
     List<String> newWellBeingTickedString =
@@ -141,8 +143,7 @@ class _Home extends State<Home> with RouteAware{
     List<bool> newWellBeingTicked = [false, false, false, false];
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
-      newWellBeingTicked[i] =
-      (newWellBeingTickedString[i] == "1" ? true : false);
+      newWellBeingTicked[i] = (newWellBeingTickedString[i] == "1");
       if (newWellBeingTicked[i]) {
         newPoints += wellbeingTimes[wellbeing[i]]!;
       }
@@ -163,8 +164,8 @@ class _Home extends State<Home> with RouteAware{
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
-    String newSkill = prefs.getString('skill')!;
-    int newTrainingTime = prefs.getInt('training_time')!;
+    String newSkill = prefs.getString('skill') ?? "";
+    int newTrainingTime = prefs.getInt('training_time') ?? 0;
 
     setState(() {
       skill = newSkill;
@@ -175,30 +176,31 @@ class _Home extends State<Home> with RouteAware{
   Future<void> createPlan() async {
     prefs = await SharedPreferences.getInstance();
     List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
-    print("poczatek newPlan: $newPlan");
-    print("skill: $skill");
+
+    // If we've already stored the plan for today, just use it
     if (newPlan.isNotEmpty) {
       setState(() {
         plan = newPlan;
       });
       return;
     }
-    print("skillbaseLists: $skillBaseLists");
+
+    // Otherwise, generate a new plan
     skillBaseList = List.from(skillBaseLists[skill]!);
-    print("skillBaseList: $skillBaseList");
     int currentTime = 0;
 
+    // Example for "sats" skill
     if (skill == "sats") {
       List<String> questionSubcategoriesPointsStr = prefs
           .getStringList("scores_questionsLast") ??
           List<String>.generate(
               SatsQuestionSubcategories.typesList.length, (index) => "-1");
       List<String> questionsSubcategories =
-          List.from(SatsQuestionSubcategories.typesList);
+      List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
           SatsQuestionSubcategories.typesList[i]:
-              double.parse(questionSubcategoriesPointsStr[i]),
+          double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -211,6 +213,8 @@ class _Home extends State<Home> with RouteAware{
           return 0;
         }
       });
+
+      // Each subcategory ~5 minutes in this example
       int timePerRWQuestion = 5;
       for (int i = 0;
       i < questionsSubcategories.length && currentTime < trainingTime;
@@ -220,6 +224,7 @@ class _Home extends State<Home> with RouteAware{
       }
     }
 
+    // Example for "linguistic" skill
     if (skill == 'linguistic') {
       int x = rng.nextInt(4);
       if (x == 0) {
@@ -235,13 +240,14 @@ class _Home extends State<Home> with RouteAware{
       }
     }
 
-    while (currentTime < trainingTime) {
+    // Fill up the rest of the training time with random tasks from skillBaseList
+    while (currentTime < trainingTime && skillBaseList.isNotEmpty) {
       int el = rng.nextInt(skillBaseList.length);
       newPlan.add(skillBaseList[el].toList()[1].toString());
       currentTime += skillBaseList[el].toList()[2] as int;
       skillBaseList.removeAt(el);
     }
-    print("newPlan: $newPlan");
+
     prefs.setStringList("basePlanDay$day", newPlan);
     setState(() {
       plan = newPlan;
@@ -253,11 +259,7 @@ class _Home extends State<Home> with RouteAware{
     List<String> newBasePlanTicked = List.filled(plan.length, "0");
     int newPoints = points;
 
-    print("plan: $plan");
-    print("basePlanTicked: $basePlanTicked");
-
     for (int i = 0; i < plan.length; ++i) {
-      print("plan[i] ${plan[i]}");
       newBasePlanTicked[i] = prefs.getString("${plan[i]}TickedDay$day") ?? "0";
       if (newBasePlanTicked[i] == "1") {
         newPoints += sectionTimes[plan[i]]!;
@@ -275,7 +277,7 @@ class _Home extends State<Home> with RouteAware{
   void getPoints() {
     int newPoints = points;
     for (int i = 0; i < wellBeingTicked.length; ++i) {
-      if (wellBeingTicked[i]) newPoints += wellbeingTimes[wellbeing[1]]!;
+      if (wellBeingTicked[i]) newPoints += wellbeingTimes[wellbeing[i]]!;
     }
     setState(() {
       points = newPoints;
@@ -285,17 +287,21 @@ class _Home extends State<Home> with RouteAware{
 
   Future<void> readMemory() async {
     await calcDay();
+
+    // Show the final screen if day >= 30, but do NOT reset progress.
     if (day >= 30) {
       if (mounted) {
-        Navigator.pop(context);
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => const Finish(),
           ),
         );
       }
+      return;
     }
+
+    // If day < 30, continue the normal plan logic
     await getSkill();
     await getWellBeingTicked();
     await createPlan();
@@ -303,7 +309,6 @@ class _Home extends State<Home> with RouteAware{
 
     await checkAndUpdateStreak();
   }
-
 
   Future<void> updateEmoji() async {
     prefs = await SharedPreferences.getInstance();
@@ -334,14 +339,15 @@ class _Home extends State<Home> with RouteAware{
 
   @override
   void initState() {
-    print("Init state home");
     NotificationService.scheduleAllNotifications();
 
+    // Update any widget tasks
     WidgetsBinding.instance.addPostFrameCallback((timestamp) {
-      PortHomeTasksWidgetConfig.initialize().then((value) async {
+      PortHomeTasksWidgetConfig.initialize().then((value) {
         callHomeWidgetUpdate();
       });
     });
+
     super.initState();
     readMemory();
     updateEmoji();
@@ -380,7 +386,6 @@ class _Home extends State<Home> with RouteAware{
             children: [
               InkWell(
                 onTap: () {
-                  print("currentplanObj ${plan[i]}");
                   if (sectionActivities[plan[i]] != null) {
                     Navigator.push(
                       context,
@@ -429,17 +434,15 @@ class _Home extends State<Home> with RouteAware{
     for (int i = 0; i < plan.length; i++) {
       widgetItems.add(
           "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}");
-      print(
-          "plan[$i] ${plan[i]} ${sectionNames[plan[i]]} ${basePlanTicked[i]}");
     }
 
-    HomeWidget.saveWidgetData("plan_title", "To - Do List");
     HomeWidget.saveWidgetData("plan_title", "BeSmart List");
     HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
     HomeWidget.updateWidget(
       androidName: "TodoHomeScreenWidget",
     );
 
+    // For larger devices
     PortHomeTasksWidgetConfig.update(
       context,
       PortHomeTasksWidget(
@@ -523,15 +526,14 @@ class _Home extends State<Home> with RouteAware{
 
   List<CircularStackEntry> _generateChartData() {
     Color? dialColor = Theme.of(context).colorScheme.secondary;
-    Color? dialColor2 =
-    Theme.of(context).colorScheme.secondary.withOpacity(0.2);
+    Color? dialColor2 = dialColor.withOpacity(0.2);
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
         ? const Color.fromARGB(255, 255, 136, 255)
         : const Color.fromARGB(255, 211, 54, 198);
 
-    List<CircularStackEntry> data = <CircularStackEntry>[
+    return [
       CircularStackEntry(
-        <CircularSegmentEntry>[
+        [
           CircularSegmentEntry(
             value3,
             dialColor3,
@@ -545,13 +547,12 @@ class _Home extends State<Home> with RouteAware{
           CircularSegmentEntry(
             value2,
             dialColor2,
-            rankKey: 'percentage4',
+            rankKey: 'percentage2',
           ),
         ],
-        rankKey: 'percentage4',
+        rankKey: 'main',
       ),
     ];
-    return data;
   }
 
   @override
@@ -579,60 +580,52 @@ class _Home extends State<Home> with RouteAware{
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Center(
-                      child: Text(
-                        "Your Plan",
+                Center(
+                  child: Text(
+                    "Your Plan",
+                    style: TextStyle(
+                      fontSize: size.width / 6,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 0.01 * size.height),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Day $day - $formattedDate",
                         style: TextStyle(
-                          fontSize: size.width / 6,
+                          fontSize: size.width / 22,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'OpenSauceTwo',
                         ),
                         textAlign: TextAlign.center,
                       ),
-                    ),
-                    SizedBox(height: 0 * size.height),
-                    Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Day $day - ${formattedDate.toString()}",
-                            style: TextStyle(
-                              fontSize: size.width / 22,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'OpenSauceTwo',
-                            ),
-                            textAlign: TextAlign.center,
+                      SizedBox(width: 0.03 * size.width),
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.width / 30,
+                          vertical: size.height / 200,
+                        ),
+                        decoration: BoxDecoration(
+                          color: streakInDanger
+                              ? const Color(0xff6a0d0a)
+                              : const Color(0xff06523f),
+                          borderRadius: BorderRadius.circular(24.0),
+                        ),
+                        child: Text(
+                          "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
+                          style: TextStyle(
+                            fontSize: size.width / 22,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
                           ),
-                          SizedBox(width: 0.03 * size.width),
-                          Container(
-                            padding: EdgeInsets.only(
-                              left: size.width / 30,
-                              right: size.width / 30,
-                              top: size.height / 200,
-                              bottom: size.height / 200,
-                            ),
-                            decoration: BoxDecoration(
-                              color: streakInDanger
-                                  ? const Color(0xff6a0d0a)
-                                  : const Color(0xff06523f),
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                            child: Text(
-                              "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
-                              style: TextStyle(
-                                fontSize: size.width / 22,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 SizedBox(height: 0.05 * size.height),
                 createBaseProgram(context),
@@ -641,7 +634,7 @@ class _Home extends State<Home> with RouteAware{
                 SizedBox(height: 0.069 * size.height),
               ],
             ),
-          ) ,
+          ),
         ),
       ),
       bottomNavigationBar: const MyBottomNavigationBar(),

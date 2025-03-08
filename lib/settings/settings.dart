@@ -45,9 +45,9 @@ class _Settings extends State<Settings> {
           popUp(
             context,
             'By ending the program, you will ',
-            'recieve a final test, ',
-            'and be transported to the welcome screen.',
-            'Do you want to end the Program?',
+            'receive a final test, ',
+            'and then you can continue or go back to home.',
+            'Do you want to end the Program now?',
             endProgram,
           );
         } else if (index == 4) {
@@ -63,11 +63,9 @@ class _Settings extends State<Settings> {
         }
       },
       onTapUp: (details) {
-        setState(
-              () {
-            highlighted[index] = false;
-          },
-        );
+        setState(() {
+          highlighted[index] = false;
+        });
       },
       onTapDown: (details) {
         setState(() {
@@ -85,17 +83,16 @@ class _Settings extends State<Settings> {
           Container(
             decoration: BoxDecoration(
               border: Border.all(
-                color: highlighted[index] ? Theme.of(context).colorScheme.primaryContainer : Theme.of(context).colorScheme.primary,
+                color: highlighted[index]
+                    ? Theme.of(context).colorScheme.primaryContainer
+                    : Theme.of(context).colorScheme.primary,
                 width: 4.0,
               ),
-              color: (Theme.of(context).brightness == Brightness.dark)
-                  ? Theme.of(context).colorScheme.surface
-                  : Theme.of(context).colorScheme.surface,
+              color: Theme.of(context).colorScheme.surface,
               borderRadius: BorderRadius.circular(2137.0),
             ),
             width: double.infinity,
             height: size.height * 0.07,
-            //margin: EdgeInsets.only(top: 10),
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -108,7 +105,9 @@ class _Settings extends State<Settings> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: highlighted[index] ? Theme.of(context).colorScheme.primaryContainer : Theme.of(context).colorScheme.primary,
+                        color: highlighted[index]
+                            ? Theme.of(context).colorScheme.primaryContainer
+                            : Theme.of(context).colorScheme.primary,
                         width: 4.0,
                       ),
                     ),
@@ -120,14 +119,14 @@ class _Settings extends State<Settings> {
                         "assets/settings/${text.replaceAll(" ", "_").toLowerCase()}.png",
                         fit: BoxFit.fill,
                         gaplessPlayback: true,
-                        color: highlighted[index] ? Theme.of(context).colorScheme.primaryContainer : Theme.of(context).colorScheme.primary,
+                        color: highlighted[index]
+                            ? Theme.of(context).colorScheme.primaryContainer
+                            : Theme.of(context).colorScheme.primary,
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: size.width * 0.04,
-                ),
+                SizedBox(width: size.width * 0.04),
                 Text(
                   text,
                   style: TextStyle(fontSize: size.width / 20),
@@ -169,17 +168,11 @@ class _Settings extends State<Settings> {
               Column(
                 children: [
                   element(context, const TermsOfService(), "Terms of Use", 0),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  SizedBox(height: size.height * 0.03),
                   element(context, const Contact(), "Contact Us", 1),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  SizedBox(height: size.height * 0.03),
                   element(context, null, "Reset The App", 2),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  SizedBox(height: size.height * 0.03),
                   element(
                     context,
                     const ShowImprovement(
@@ -193,20 +186,13 @@ class _Settings extends State<Settings> {
                     "End The Program",
                     3,
                   ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  SizedBox(height: size.height * 0.03),
                   element(context, const SizedBox(), "Our Website", 4),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  SizedBox(height: size.height * 0.03),
                   element(context, null, "Switch Theme", 5, onTap: () {
                     MyApp.of(context).switchTheme();
-                  },
-                  ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  }),
+                  SizedBox(height: size.height * 0.03),
                   element(context, null, "Customize Colors", 6, onTap: () {
                     Navigator.push(
                       context,
@@ -215,11 +201,8 @@ class _Settings extends State<Settings> {
                         type: PageTransitionType.fade,
                       ),
                     );
-                  },
-                  ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
+                  }),
+                  SizedBox(height: size.height * 0.03),
                 ],
               ),
             ],
