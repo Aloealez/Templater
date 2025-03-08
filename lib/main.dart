@@ -10,6 +10,8 @@ import 'package:brainace_pro/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'quiz/question_bank.dart';
 
+final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await NotificationService.init();
@@ -32,12 +34,18 @@ void main() async {
   final prefs = await SharedPreferences.getInstance();
   final int themeMode = prefs.getInt('themeMode') ?? 0;
 
-  SatsQuestionBank questionBank = SatsQuestionBank();
-  await questionBank.init();
-  for (var subcategory in SatsQuestionSubcategories.typesList) {
+  SatsQuestionBank satsQuestionBank = SatsQuestionBank();
+  await satsQuestionBank.init();
+  for (var subcategory in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
     // questionBank.loadFromAssets(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
     // questionBank.updateQuestionsFromBackend(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
-    questionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
+    satsQuestionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
+  }
+
+  QuestionBank questionBank = QuestionBank();
+  await questionBank.init();
+  for (var subcategory in SatsQuestionSubcategories.typesList.sublist(10)) {
+    questionBank.updateQuestions(subcategory, limit: 4);
   }
 
   runApp(
@@ -199,17 +207,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    Future<void> fut() async {
-      var questionBank = QuestionBank();
-      await questionBank.init();
-      await questionBank.loadFromAssets("Linear_functions", limit: 1);
-      var questions = await questionBank.getQuestions("Linear_functions", 1, false, false);
-      print("AssetManifest: ${questions}");
-    }
-    Future.delayed(Duration(milliseconds: 1000), () {
-      fut();
-    });
-
     if (prefs == null) {
       SharedPreferences.getInstance().then((value) {
         setState(() {
@@ -221,6 +218,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     precacheAllF = precacheAll();
 
     return MaterialApp(
+      navigatorObservers: [routeObserver],
       title: 'BrainAce.pro',
       theme: ThemeData(
         brightness: Brightness.light,

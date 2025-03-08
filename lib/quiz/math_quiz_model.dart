@@ -163,6 +163,8 @@ class MathQuizModel extends StatefulWidget {
 
   final String exerciseName;
 
+  final int htmlFormat;
+
   final bool initialTest;
   final bool endingTest;
   final Widget page;
@@ -204,6 +206,7 @@ class MathQuizModel extends StatefulWidget {
     this.answerLayout = QuizModelAnswerLayout.list,
     this.requireAnswer = false,
     this.music,
+    this.htmlFormat = -1,
   });
 
   @override
@@ -219,7 +222,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
   late int _time;
   Map<String, String> answers = {};
   double maxScore = 0;
-  Map<String, TextEditingController> _textEditingControllers = {};
   final player = AudioPlayer();
   bool forceContinue = false;
 
@@ -232,7 +234,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
 
     super.initState();
     for (var questionId in widget.questions.keys) {
-      _textEditingControllers[questionId] = TextEditingController();
       maxScore += widget.questions[questionId]!.score.values.elementAt(0);
     }
 
@@ -262,10 +263,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
       if (selectedOption != null) {
         setState(
           () {
-            selectedOption =
-                widget.answerLayout == QuizModelAnswerLayout.textInput
-                    ? ""
-                    : null;
+            selectedOption = null;
             currentQuestionIndex++;
             currentQuestionId =
                 widget.questions.keys.elementAt(currentQuestionIndex);
@@ -397,16 +395,33 @@ class _MathQuizModelState extends State<MathQuizModel> {
           answerLetter,
           questionId,
         ),
-        title: LaTexT(
-          equationStyle: TextStyle(fontSize: textScaleFactor(widget.questions[questionId]!.answers[answerLetter]!.length,) * 1.3 * size.width),
-          laTeXCode: Text(
-            widget.questions[questionId]!.answers[answerLetter]!,
-            style: TextStyle(
-              fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.2 * size.width,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
-          ),
-        ),
+        title: (widget.htmlFormat != 1 && widget.htmlFormat <= currentQuestionIndex)
+            ? HtmlAsTextSpan(
+                "${widget.questions[questionId]?.answers[answerLetter]}",
+                fontSize: textScaleFactor(
+                        widget.questions[questionId]!.question.length) *
+                    0.95 *
+                    size.width,
+              )
+            : LaTexT(
+                equationStyle: TextStyle(
+                    fontSize: textScaleFactor(
+                          widget.questions[questionId]!.answers[answerLetter]!
+                              .length,
+                        ) *
+                        1.3 *
+                        size.width),
+                laTeXCode: Text(
+                  widget.questions[questionId]!.answers[answerLetter]!,
+                  style: TextStyle(
+                    fontSize: textScaleFactor(
+                            widget.questions[questionId]!.question.length) *
+                        1.2 *
+                        size.width,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
+              ),
         onTap: selectedOption == null
             ? () {
                 setState(() {
@@ -502,17 +517,29 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-    return LaTexT(
-      equationStyle: TextStyle(fontSize: textScaleFactor(widget.questions[questionId]!.question.length,) * 1.3 * size.width),
-      laTeXCode: Text(
-        widget.questions[questionId]!.question,
-        style: TextStyle(
-          fontSize: textScaleFactor(widget.questions[questionId]!.question.length,) * 1.1 * size.width,
-          color: Theme.of(context).colorScheme.onSurface,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    );
+    print("Question task: ${widget.questions[questionId]}");
+    print("Question task: ${widget.questions[questionId]!.question}");
+    return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
+        ? QuizQuestionTask(
+            question: widget.questions[questionId]!,
+          )
+        : LaTexT(
+            equationStyle: TextStyle(
+              fontSize: 0.06 * size.width,
+            ),
+            laTeXCode: Text(
+              widget.questions[questionId]!.question,
+              style: TextStyle(
+                fontSize: textScaleFactor(
+                      widget.questions[questionId]!.question.length,
+                    ) *
+                    1.1 *
+                    size.width,
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          );
   }
 
   Widget buildBoxAnswer(
@@ -657,11 +684,21 @@ class _MathQuizModelState extends State<MathQuizModel> {
           margin: quizMargins(size),
           child: Column(
             children: [
-              if (widget.answerLayout == QuizModelAnswerLayout.list ||
-                  widget.answerLayout == QuizModelAnswerLayout.textInput)
-                this.buildQuestionTask(context, size, questionId),
+              this.buildQuestionTask(context, size, questionId),
               SizedBox(height: 0.01 * size.height),
-              widget.questions.values.elementAt(0).answers.values.elementAt(0).length - widget.questions.values.elementAt(0).answers.values.elementAt(0).allMatches("\$").length * 4 < 10
+              widget.questions[questionId]!
+                              .answers
+                              .values
+                              .elementAt(0)
+                              .length -
+                          widget.questions[questionId]!
+                                  .answers
+                                  .values
+                                  .elementAt(0)
+                                  .allMatches("\$")
+                                  .length *
+                              4 <
+                      10
                   ? _buildMultiColumnAnswers(context, size, questionId)
                   : _buildSingleColumnAnswers(context, size, questionId),
             ],
@@ -729,7 +766,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                 margin: EdgeInsets.only(
                   left: size.height / 50,
                   right: size.height / 50,
-                  bottom: size.height / 9,
+                  bottom: size.height / 7,
                 ),
                 child: buildQuestions(
                   context,

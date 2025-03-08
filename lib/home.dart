@@ -12,6 +12,8 @@ import 'dart:math';
 import 'score_n_progress/finish_screen.dart';
 import '/memory/faces.dart';
 import 'package:brainace_pro/notification.dart';
+import 'main.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,7 +22,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _Home();
 }
 
-class _Home extends State<Home> {
+class _Home extends State<Home> with RouteAware{
   late SharedPreferences prefs;
   String skill = "";
   int trainingTime = 0;
@@ -39,6 +41,20 @@ class _Home extends State<Home> {
   double value2 = 60.0;
   double value3 = 00.0;
   double value32 = 50.0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context)!);
+  }
+
+  @override
+  void didPopNext() {
+    super.didPopNext();
+    print("Home widget is now the top widget");
+    readMemory();
+    updateEmoji();
+  }
 
   Future<void> calcDay() async {
     DateTime firstDay = DateTime.now();
@@ -329,6 +345,12 @@ class _Home extends State<Home> {
     super.initState();
     readMemory();
     updateEmoji();
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
   }
 
   Future<void> updatePoints() async {

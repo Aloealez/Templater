@@ -162,7 +162,7 @@ class _Activities extends State<Activities> {
                                 icon: Icon(
                                   Icons.star,
                                   color: const Color.fromARGB(255, 255, 208, 0),
-                                  size: 0.03 * size.height,
+                                  size: 0.036 * size.height,
                                 ),
                                 decoration: const IconDecoration(border: IconBorder()),
                               ),
@@ -171,7 +171,7 @@ class _Activities extends State<Activities> {
                             Text(
                               "Do Today",
                               style: TextStyle(
-                                fontSize: 0.02 * size.height,
+                                fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
                                 fontWeight: FontWeight.bold,
                               ),

@@ -50,10 +50,10 @@ class _StartSatsMathState extends State<StartSatsMath> {
       SatsQuestionDifficulty difficulty = minScore < 4 ? SatsQuestionDifficulty.difficultyEasy : minScore < 9 ? SatsQuestionDifficulty.difficultyMedium : SatsQuestionDifficulty.difficultyHard;
       QuestionBank questionBank = QuestionBank();
       await questionBank.init();
-      questionBank.updateQuestions(widget.subcategory.string, limit: 5);
+      questionBank.updateQuestions(widget.subcategory.string, limit: 4);
       // questionBank.loadFromAssets(widget.subcategory, limit: 5);
       // questionBank.updateQuestionsFromBackend(widget.subcategory, limit: 20);
-      questions = await questionBank.getQuestions(widget.subcategory.string, 5, true, true, difficulty: difficulty);
+      questions = await questionBank.getQuestions(widget.subcategory.string, 4, true, true, difficulty: difficulty);
       print("got questions: ${questions.length}");
     }();
 

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:brainace_pro/builders/listening_comprehension_builder.dart';
 import 'package:brainace_pro/quiz/quiz_model.dart';
+import 'package:brainace_pro/sats/sats_program_selection.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
@@ -26,174 +27,10 @@ class TimeSelection extends StatefulWidget {
 
 class _TimeSelectionState extends State<TimeSelection> {
   bool startedLevelTest = false;
-  late SharedPreferences prefs;
-  late Map<String, SatsQuestion> questions;
-  final String category = "rw";
-  late Future<void> questionsF;
 
   @override
   void initState() {
     super.initState();
-    questionsF = () async {
-      prefs = await SharedPreferences.getInstance();
-      SatsQuestionBank questionBank = SatsQuestionBank();
-      await questionBank.init();
-      questions = {};
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.CentralIdeasAndDetails,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.CommandOfEvidence,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.CrossTextConnections,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.FormStructureAndSense,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(ESatsQuestionSubcategories.Inferences),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.RhetoricalSynthesis,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.TextStructureAndPurpose,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(ESatsQuestionSubcategories.Transitions),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyHard,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(
-          ESatsQuestionSubcategories.WordsInContext,),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyHard,),);
-      questions.addAll(await questionBank.getQuestions(
-        SatsQuestionSubcategories(ESatsQuestionSubcategories.Boundaries),
-        1,
-        true,
-        true,
-        difficulty: SatsQuestionDifficulty.difficultyHard,),);
-      if (questions.length < 10) {
-        questions = {};
-        for (var questionSubcategoryStr
-        in SatsQuestionSubcategories.typesList) {
-          var questionSubcategory = SatsQuestionSubcategories.fromString(
-            questionSubcategoryStr,
-          );
-          await questionBank.loadFromAssets(
-            questionSubcategory,
-            limit: 5,
-          );
-          // questionBank.updateQuestionsFromBackend(
-          //   questionSubcategory,
-          //   limit: 20,
-          // );
-        }
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.CentralIdeasAndDetails,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.CommandOfEvidence,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.CrossTextConnections,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyEasy,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.FormStructureAndSense,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.Inferences,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.RhetoricalSynthesis,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.TextStructureAndPurpose,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyMedium,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.Transitions,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyHard,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.WordsInContext,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyHard,),);
-        questions.addAll(await questionBank.getQuestions(
-          SatsQuestionSubcategories(
-            ESatsQuestionSubcategories.Boundaries,),
-          1,
-          true,
-          true,
-          difficulty: SatsQuestionDifficulty.difficultyHard,),);
-      }
-    }();
   }
 
   startLevelTest() async {
@@ -202,104 +39,7 @@ class _TimeSelectionState extends State<TimeSelection> {
 
     var route;
     if (skill == 'sats') {
-      route = LevelTest(
-        10,
-        testRouteBuilder: (BuildContext context, {required bool initialTest, required bool endingTest}) => FutureBuilder(
-          future: questionsF,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: CircularProgressIndicator());
-            } else {
-              return QuizModel(
-                "R&W - Exercise {}",
-                "R&W",
-                900,
-                page: Home(),
-                initialTest: true,
-                onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
-                  SharedPreferences.getInstance().then((prefs) {
-                    Map<String, List<String>> savedQuestionScores = {
-                      for (String questionSubcategory in SatsQuestionSubcategories.typesList)
-                        questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
-                    };
-
-                    List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
-
-                    for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
-                      String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
-                      int score = -1;
-                      for (String questionId in questions.keys) {
-                        if (questions[questionId]!.subcategory?.string == questionSubcategory) {
-                          if (answers[questionId] ?? false) {
-                            score = score == -1 ? 1 : score + 1;
-                          }
-                        }
-                      }
-                      if (score > -1) {
-                        savedQuestionScores[questionSubcategory]?.add(score.toString());
-                      }
-                      savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
-
-                      prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
-
-                      prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
-
-                    }
-                  });
-                },
-                description: "The test will comprise of 10 Reading and Writing Questions.",
-                exerciseNumber: 0,
-                questions: () {
-                  Map<String, QuizQuestionData> newQuestions = {};
-                  for (int j = 0; j < questions.length; j++) {
-                    String i = questions.keys.elementAt(j);
-                    newQuestions[i] = QuizQuestionData(
-                      {
-                        "A": questions[i]!.A,
-                        "B": questions[i]!.B,
-                        "C": questions[i]!.C,
-                        "D": questions[i]!.D,
-                      },
-                      {
-                        "A": questions[i]!.correct == "A",
-                        "B": questions[i]!.correct == "B",
-                        "C": questions[i]!.correct == "C",
-                        "D": questions[i]!.correct == "D",
-                      },
-                      {
-                        "A": questions[i]!.difficulty.getScore(),
-                        "B": questions[i]!.difficulty.getScore(),
-                        "C": questions[i]!.difficulty.getScore(),
-                        "D": questions[i]!.difficulty.getScore(),
-                      },
-                      introduction: questions[i]?.introduction,
-                      text: questions[i]?.text,
-                      text2: questions[i]?.text2,
-                      question: questions[i]!.question,
-                      explanation: questions[i]?.explanation,
-                      subcategory: questions[i]?.subcategory,
-                      difficulty: questions[i]?.difficulty,
-                    );
-                  }
-                  return newQuestions;
-                }(),
-                oldName: questions.values.elementAt(0).subcategory!.string,
-                exerciseString: questions.values.elementAt(0).subcategory!.string,
-              );
-              // return SatsQuizRw(
-              //   "sat_rw",
-              //   questions,
-              //   900,
-              //   0,
-              //   initialTest: true,
-              // );
-            }
-          },
-        ),
-        initialTest: true,
-        testActivitiesDescription: "The test will comprise of 10 Reading and Writing Questions.",
-        testScoreDescription: "We will use your score to personalize your app experience.",
-      );
+      route = SatsProgramSelection();
     } else if (skill == 'memory') {
       route = LevelTest(
         12,
@@ -343,7 +83,6 @@ class _TimeSelectionState extends State<TimeSelection> {
     setState(() {
       startedLevelTest = false;
     });
-    // Navigator.pop(context);
     Navigator.push(
       context,
       PageTransition(
@@ -393,18 +132,10 @@ class _TimeSelectionState extends State<TimeSelection> {
                 SharedPreferences.getInstance().then((prefs) {
                   prefs.setInt('training_time', time);
                 });
-
                 startLevelTest();
                 setState(() {
                   startedLevelTest = true;
                 });
-
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => const ImprovementSelection(),
-                //   ),
-                // );
               },
               child: Center(
                 child: Text(
@@ -455,7 +186,6 @@ class _TimeSelectionState extends State<TimeSelection> {
                 style: TextStyle(
                   fontSize: size.width / 13,
                   fontWeight: FontWeight.w600,
-                  // decoration: TextDecoration.underline,
                 ),
                 textAlign: TextAlign.center,
               ),

@@ -50,7 +50,8 @@ class QuestionBank {
       String questionSubcategory, {
         int? limit,
       }) async {
-    // try {
+    String lastId = "";
+    try {
       List<String> questionIds = await assetQuestionList(questionSubcategory);
       List<String> savedQuestionIds = getSavedQuestionIds(questionSubcategory);
       print("QuestionIds: $questionIds");
@@ -59,6 +60,7 @@ class QuestionBank {
         if (savedQuestionIds.contains(id)) {
           continue;
         }
+        lastId = id;
         String questionStr = await rootBundle.loadString('$questionAssetPath/${questionSubcategory}/$id', cache: false);
         QuizQuestionData question = QuizQuestionData.fromJsonDifficulty(jsonDecode(questionStr), SatsQuestionDifficulty.difficultyEasy);
         // question.subcategory = questionSubcategory;
@@ -69,9 +71,9 @@ class QuestionBank {
         }
       }
       await setSavedQuestionIds(questionSubcategory, savedQuestionIds);
-    // } catch (error) {
-    //   print("loadFromAssets(${questionSubcategory}) error: $error");
-    // }
+    } catch (error) {
+      print("loadFromAssets(${questionSubcategory}) Question: ${questionSubcategory}/${lastId}  error: $error");
+    }
   }
 
   Future<List<String>?> getQuestionListFromBackend(
