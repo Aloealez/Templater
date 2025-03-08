@@ -208,7 +208,7 @@ class _ProgressScreen extends State<ProgressScreen>
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Stack(
           children: [
-            appBar(context, "", screen: Home()),
+            appBar(context, ""),
             Positioned.fill(
               top: kToolbarHeight,
               child: ConfettiWidget(
