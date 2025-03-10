@@ -25,6 +25,7 @@ class Home extends StatefulWidget {
 class _Home extends State<Home> with RouteAware{
   late SharedPreferences prefs;
   String skill = "";
+  String skillSats = "";
   int trainingTime = 0;
   var rng = Random();
   List<String> plan = [];
@@ -165,10 +166,12 @@ class _Home extends State<Home> with RouteAware{
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
     String newSkill = prefs.getString('skill') ?? "";
+    String newSkillSats = prefs.getString('skill_sats') ?? "";
     int newTrainingTime = prefs.getInt('training_time') ?? 0;
 
     setState(() {
       skill = newSkill;
+      skillSats = newSkillSats;
       trainingTime = newTrainingTime;
     });
   }
@@ -216,9 +219,7 @@ class _Home extends State<Home> with RouteAware{
 
       // Each subcategory ~5 minutes in this example
       int timePerRWQuestion = 5;
-      for (int i = 0;
-      i < questionsSubcategories.length && currentTime < trainingTime;
-      i++) {
+      for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
         newPlan.add(questionsSubcategories[i]);
         currentTime += timePerRWQuestion;
       }
@@ -374,24 +375,34 @@ class _Home extends State<Home> with RouteAware{
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Base Plan - $minutes Minutes",
+          skillSats != "both" ? "Base Plan - $minutes Minutes" : "Reading & Writing - $minutes Minutes",
           style: TextStyle(
             fontSize: size.width / 20,
             fontWeight: FontWeight.w700,
           ),
         ),
         SizedBox(height: 0.01 * size.height),
-        for (int i = 0; i < plan.length; i++)
+          () {
+          List<String> listPlan = [];
+          for (int i = 0; i < plan.length; i++) {
+            if (skillSats == "both" && !SatsQuestionSubcategories.typesList.sublist(0, 10).contains(plan[i])) {
+            continue;
+            }
+            listPlan.add(plan[i]);
+          }
+          return Column(
+            children: [
+          for (int i = 0; i < listPlan.length; i++)
           Column(
             children: [
               InkWell(
                 onTap: () {
-                  if (sectionActivities[plan[i]] != null) {
+                  if (sectionActivities[listPlan[i]] != null) {
                     Navigator.push(
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        child: (sectionActivities[plan[i]]!(context)),
+                        child: (sectionActivities[listPlan[i]]!(context)),
                         reverseDuration: const Duration(milliseconds: 100),
                         opaque: false,
                       ),
@@ -413,7 +424,7 @@ class _Home extends State<Home> with RouteAware{
                     SizedBox(width: size.width / 35),
                     Flexible(
                       child: Text(
-                        "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
+                        "${sectionNames[listPlan[i]]} - ${sectionTimes[listPlan[i]]} min",
                         style: TextStyle(
                           fontSize: size.width / 22,
                         ),
@@ -424,10 +435,13 @@ class _Home extends State<Home> with RouteAware{
               ),
               SizedBox(height: 0.01 * size.height),
             ],
-          ),
+            ),
+            ],
+          );
+          }(),
       ],
     );
-  }
+    }
 
   void callHomeWidgetUpdate() {
     List<String> widgetItems = [];
@@ -455,7 +469,13 @@ class _Home extends State<Home> with RouteAware{
 
   Widget createWellBeing(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
+    int minutes = 0;
+    for (int i = 0; i < plan.length; ++i) {
+      if (skillSats == "both" && SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i]))
+        {
+          minutes += sectionTimes[plan[i]]!;
+        }
+    }
     return FutureBuilder<String>(
       future: getEmoji(),
       builder: (context, snapshot) {
@@ -464,13 +484,78 @@ class _Home extends State<Home> with RouteAware{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Optional - Well Being $emoji",
+              skillSats != "both" ? "Optional - Well Being $emoji" : "Math Section - $minutes Minutes",
               style: TextStyle(
                 fontSize: size.width / 20,
                 fontWeight: FontWeight.w700,
               ),
             ),
             SizedBox(height: 0.01 * size.height),
+            () {
+            List<String> listPlan = [];
+            if (skillSats == "both") {
+
+            for (int i = 0; i < plan.length; i++) {
+              if (skillSats == "both" &&
+                  !SatsQuestionSubcategories.typesList.sublist(10).contains(
+                      plan[i])) {
+                continue;
+              }
+            }
+            return Column(
+              children: [
+            for (int i = 0; i < listPlan.length; i++)
+            InkWell(
+                onTap: () {
+                  if (sectionActivities[listPlan[i]] != null) {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        child: (sectionActivities[listPlan[i]]!(context)),
+                        reverseDuration: const Duration(milliseconds: 100),
+                        opaque: false,
+                      ),
+                    );
+                  }
+                },
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: size.width / 15,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: size.width / 12,
+                            child: Icon(
+                              wellBeingTicked[i]
+                                  ? Icons.circle
+                                  : Icons.circle_outlined,
+                              size: size.width / 15,
+                              color: const Color(0xff51ceda),
+                            ),
+                          ),
+                          SizedBox(width: size.width / 40),
+                          Flexible(
+                            child: Text(
+                              wellbeing[i],
+                              style: TextStyle(
+                                fontSize: size.width / 22,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 0.01 * size.height),
+                  ],
+                ),
+              ),
+            ],
+              );
+            } else {
+              return Column(
+                children: [
             for (int i = 0; i < wellbeing.length; i++)
               InkWell(
                 onTap: () {
@@ -518,6 +603,10 @@ class _Home extends State<Home> with RouteAware{
                   ],
                 ),
               ),
+              ],
+        );
+              }
+              } (),
           ],
         );
       },

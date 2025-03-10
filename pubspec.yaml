@@ -54,7 +54,8 @@ dependencies:
   pie_chart:
   circular_chart_flutter:
     git:
-      url: https://github.com/MWronski12/circular_chart_flutter-0.0.2.git
+      url: https://github.com/Staheos/flutter_circular_chart.git
+  nimble_charts:
   fl_chart:
   intl:
   flutter_animate: ">=4.5.2"
