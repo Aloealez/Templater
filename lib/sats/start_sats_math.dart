@@ -51,8 +51,6 @@ class _StartSatsMathState extends State<StartSatsMath> {
       QuestionBank questionBank = QuestionBank();
       await questionBank.init();
       questionBank.updateQuestions(widget.subcategory.string, limit: 4);
-      // questionBank.loadFromAssets(widget.subcategory, limit: 5);
-      // questionBank.updateQuestionsFromBackend(widget.subcategory, limit: 20);
       questions = await questionBank.getQuestions(widget.subcategory.string, 4, true, true, difficulty: difficulty);
       print("got questions: ${questions.length}");
     }();

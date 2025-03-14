@@ -382,6 +382,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
     String answerLetter,
     String questionId,
   ) {
+    print("Answer letter: ${widget.questions[questionId]!.answers[answerLetter]}");
     Size size = MediaQuery.of(context).size;
     return Card(
       child: ListTile(
@@ -395,7 +396,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
           answerLetter,
           questionId,
         ),
-        title: (widget.htmlFormat != 1 && widget.htmlFormat <= currentQuestionIndex)
+        title: (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
             ? HtmlAsTextSpan(
                 "${widget.questions[questionId]?.answers[answerLetter]}",
                 fontSize: textScaleFactor(
@@ -410,7 +411,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
                               .length,
                         ) *
                         1.3 *
-                        size.width),
+                        size.width
+                ),
                 laTeXCode: Text(
                   widget.questions[questionId]!.answers[answerLetter]!,
                   style: TextStyle(
@@ -529,6 +531,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             ),
             laTeXCode: Text(
               widget.questions[questionId]!.question,
+              softWrap: true,
               style: TextStyle(
                 fontSize: textScaleFactor(
                       widget.questions[questionId]!.question.length,
