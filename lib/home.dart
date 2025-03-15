@@ -14,7 +14,6 @@ import '/memory/faces.dart';
 import 'package:brainace_pro/notification.dart';
 import 'main.dart';
 
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -22,7 +21,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _Home();
 }
 
-class _Home extends State<Home> with RouteAware{
+class _Home extends State<Home> with RouteAware {
   late SharedPreferences prefs;
   String skill = "";
   String skillSats = "";
@@ -78,11 +77,13 @@ class _Home extends State<Home> with RouteAware{
     // If we are beyond day 1, check if previous day's tasks were all completed
     if (currentDay > 1) {
       List<String>? yesterdayPlan =
-      prefs.getStringList("basePlanDay${currentDay - 1}");
+          prefs.getStringList("basePlanDay${currentDay - 1}");
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
-          yesterdayPlan.every((task) =>
-          prefs.getString("${task}TickedDay${currentDay - 1}") == "1",);
+          yesterdayPlan.every(
+            (task) =>
+                prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
+          );
       if (!allDoneYesterday) {
         await prefs.setInt('streak_days', 0);
       }
@@ -90,7 +91,8 @@ class _Home extends State<Home> with RouteAware{
 
     // Check if today's tasks are all done
     bool allDoneToday = plan.isNotEmpty &&
-        plan.every((task) => prefs.getString("${task}TickedDay$currentDay") == "1");
+        plan.every(
+            (task) => prefs.getString("${task}TickedDay$currentDay") == "1");
 
     streakInDanger = !allDoneToday;
 
@@ -194,13 +196,18 @@ class _Home extends State<Home> with RouteAware{
 
     // Example for "sats" skill
     if (skill == "sats") {
-      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ??
-          List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1",);
+      List<String> questionSubcategoriesPointsStr =
+          prefs.getStringList("scores_questionsLast") ??
+              List<String>.generate(
+                SatsQuestionSubcategories.typesList.length,
+                (index) => "-1",
+              );
       List<String> questionsSubcategories;
       questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
-          SatsQuestionSubcategories.typesList[i]: double.parse(questionSubcategoriesPointsStr[i]),
+          SatsQuestionSubcategories.typesList[i]:
+              double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -216,36 +223,53 @@ class _Home extends State<Home> with RouteAware{
       print("QuestionSubcategories: $questionsSubcategories");
 
       int timePerSatQuestion = 5;
-      if (skillSats == "both")
-        {
-          print("Both");
-          int currentMathTime = 0;
-          int currentRWTime = 0;
-          for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
-            print("comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]}");
-            if (SatsQuestionSubcategories.typesList.sublist(10).contains(questionsSubcategories[i])) {
-              if (currentMathTime < trainingTime / 2) {
-                newPlan.add(questionsSubcategories[i]);
-                currentTime += timePerSatQuestion;
-                currentMathTime += timePerSatQuestion;
-              }
-            } else if (SatsQuestionSubcategories.typesList.sublist(0, 10).contains(questionsSubcategories[i])) {
-              print("Reading & Writing: $currentRWTime < ${trainingTime / 2}");
-              if (currentRWTime < trainingTime / 2) {
-                newPlan.add(questionsSubcategories[i]);
-                currentTime += timePerSatQuestion;
-                currentRWTime += timePerSatQuestion;
-              }
+      if (skillSats == "both") {
+        print("Both");
+        int currentMathTime = 0;
+        int currentRWTime = 0;
+        for (int i = 0;
+            i < questionsSubcategories.length && currentTime < trainingTime;
+            i++) {
+          print(
+              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]}");
+          if (SatsQuestionSubcategories.typesList
+              .sublist(10)
+              .contains(questionsSubcategories[i])) {
+            if (currentMathTime < trainingTime / 2) {
+              newPlan.add(questionsSubcategories[i]);
+              currentTime += timePerSatQuestion;
+              currentMathTime += timePerSatQuestion;
+            }
+          } else if (SatsQuestionSubcategories.typesList
+              .sublist(0, 10)
+              .contains(questionsSubcategories[i])) {
+            print("Reading & Writing: $currentRWTime < ${trainingTime / 2}");
+            if (currentRWTime < trainingTime / 2) {
+              newPlan.add(questionsSubcategories[i]);
+              currentTime += timePerSatQuestion;
+              currentRWTime += timePerSatQuestion;
             }
           }
         }
-      else
-        {
-          for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
+      } else {
+        for (int i = 0;
+            i < questionsSubcategories.length && currentTime < trainingTime;
+            i++) {
+          if (skillSats == "math" &&
+              SatsQuestionSubcategories.typesList
+                  .sublist(10)
+                  .contains(questionsSubcategories[i])) {
+            newPlan.add(questionsSubcategories[i]);
+            currentTime += timePerSatQuestion;
+          } else if (skillSats == "rw" &&
+              SatsQuestionSubcategories.typesList
+                  .sublist(0, 10)
+                  .contains(questionsSubcategories[i])) {
             newPlan.add(questionsSubcategories[i]);
             currentTime += timePerSatQuestion;
           }
         }
+      }
     }
 
     // Example for "linguistic" skill
@@ -342,7 +366,7 @@ class _Home extends State<Home> with RouteAware{
 
     String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
@@ -350,7 +374,9 @@ class _Home extends State<Home> with RouteAware{
 
       await prefs.setString('wellbeing_emoji', newEmoji);
       await prefs.setString(
-          'last_emoji_update_date', currentDate.toIso8601String(),);
+        'last_emoji_update_date',
+        currentDate.toIso8601String(),
+      );
 
       setState(() {});
     }
@@ -392,85 +418,93 @@ class _Home extends State<Home> with RouteAware{
     Size size = MediaQuery.of(context).size;
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
-      minutes += sectionTimes[plan[i]]!;
+      if ((skillSats == "both" &&
+              SatsQuestionSubcategories.typesList
+                  .sublist(0, 10)
+                  .contains(plan[i])) ||
+          skillSats != "both") {
+        minutes += sectionTimes[plan[i]]!;
+      }
     }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          skillSats != "both" ? "Base Plan - $minutes Minutes" : "Reading & Writing - $minutes Minutes",
+          skillSats != "both"
+              ? "Base Plan - $minutes Minutes"
+              : "Reading & Writing - $minutes Minutes",
           style: TextStyle(
             fontSize: size.width / 20,
             fontWeight: FontWeight.w700,
           ),
         ),
         SizedBox(height: 0.01 * size.height),
-          () {
-          List<String> listPlan = [];
-          for (int i = 0; i < plan.length; i++) {
-            if (skillSats == "both" && !SatsQuestionSubcategories.typesList.sublist(0, 10).contains(plan[i])) {
-              continue;
-            }
-            listPlan.add(plan[i]);
-          }
+        () {
           return Column(
             children: [
-          for (int i = 0; i < listPlan.length; i++)
-          Column(
-            children: [
-              InkWell(
-                onTap: () {
-                  if (sectionActivities[listPlan[i]] != null) {
-                    Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.fade,
-                        child: (sectionActivities[listPlan[i]]!(context)),
-                        reverseDuration: const Duration(milliseconds: 100),
-                        opaque: false,
-                      ),
-                    );
-                  }
-                },
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: size.width / 15,
-                      child: Icon(
-                        (basePlanTicked[i] == "1")
-                            ? Icons.circle
-                            : Icons.circle_outlined,
-                        size: size.width / 14.7,
-                        color: const Color(0xfff66fd3),
-                      ),
-                    ),
-                    SizedBox(width: size.width / 35),
-                    Flexible(
-                      child: Text(
-                        "${sectionNames[listPlan[i]]} - ${sectionTimes[listPlan[i]]} min",
-                        style: TextStyle(
-                          fontSize: size.width / 22,
+              for (int i = 0; i < plan.length; i++)
+                if ((skillSats == "both" &&
+                        SatsQuestionSubcategories.typesList
+                            .sublist(0, 10)
+                            .contains(plan[i])) ||
+                    skillSats != "both")
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          if (sectionActivities[plan[i]] != null) {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                type: PageTransitionType.fade,
+                                child: (sectionActivities[plan[i]]!(context)),
+                                reverseDuration:
+                                    const Duration(milliseconds: 100),
+                                opaque: false,
+                              ),
+                            );
+                          }
+                        },
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: size.width / 15,
+                              child: Icon(
+                                (basePlanTicked[i] == "1")
+                                    ? Icons.circle
+                                    : Icons.circle_outlined,
+                                size: size.width / 14.7,
+                                color: const Color(0xfff66fd3),
+                              ),
+                            ),
+                            SizedBox(width: size.width / 35),
+                            Flexible(
+                              child: Text(
+                                "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
+                                style: TextStyle(
+                                  fontSize: size.width / 22,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 0.01 * size.height),
-            ],
-            ),
+                      SizedBox(height: 0.01 * size.height),
+                    ],
+                  ),
             ],
           );
-          }(),
+        }(),
       ],
     );
-    }
+  }
 
   void callHomeWidgetUpdate() {
     List<String> widgetItems = [];
     for (int i = 0; i < plan.length; i++) {
       widgetItems.add(
-          "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}",);
+        "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}",
+      );
     }
 
     HomeWidget.saveWidgetData("plan_title", "BeSmart List");
@@ -494,10 +528,10 @@ class _Home extends State<Home> with RouteAware{
     Size size = MediaQuery.of(context).size;
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
-      if (skillSats == "both" && SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i]))
-        {
-          minutes += sectionTimes[plan[i]]!;
-        }
+      if (skillSats == "both" &&
+          SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i])) {
+        minutes += sectionTimes[plan[i]]!;
+      }
     }
     return FutureBuilder<String>(
       future: getEmoji(),
@@ -507,7 +541,9 @@ class _Home extends State<Home> with RouteAware{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              skillSats != "both" ? "Optional - Well Being $emoji" : "Math Section - $minutes Minutes",
+              skillSats != "both"
+                  ? "Optional - Well Being $emoji"
+                  : "Math Section - $minutes Minutes",
               style: TextStyle(
                 fontSize: size.width / 20,
                 fontWeight: FontWeight.w700,
@@ -515,122 +551,128 @@ class _Home extends State<Home> with RouteAware{
             ),
             SizedBox(height: 0.01 * size.height),
             () {
-            if (skillSats == "both") {
-              List<String> listPlan = [];
-            for (int i = 0; i < plan.length; i++) {
-              if (skillSats == "both" && !SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i],)) {
-                continue;
-              }
-              listPlan.add(plan[i]);
-            }
-            print("ListPlan: $listPlan");
-            return Column(
-              children: [
-            for (int i = 0; i < plan.length; i++)
-
-            if (skillSats == "both" && SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i]))
-              InkWell(
-                onTap: () {
-                  if (sectionActivities[plan[i]] != null) {
-                    Navigator.push(
-                      context,
-                      PageTransition(
-                        type: PageTransitionType.fade,
-                        child: (sectionActivities[plan[i]]!(context)),
-                        reverseDuration: const Duration(milliseconds: 100),
-                        opaque: false,
-                      ),
-                    );
+              if (skillSats == "both") {
+                List<String> listPlan = [];
+                for (int i = 0; i < plan.length; i++) {
+                  if (skillSats == "both" &&
+                      !SatsQuestionSubcategories.typesList.sublist(10).contains(
+                            plan[i],
+                          )) {
+                    continue;
                   }
-                },
-                child: Column(
+                  listPlan.add(plan[i]);
+                }
+                print("ListPlan: $listPlan");
+                return Column(
                   children: [
-                    SizedBox(
-                      height: size.width / 15,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: size.width / 12,
-                            child: Icon(
-                              (basePlanTicked[i] == "1")
-                                  ? Icons.circle
-                                  : Icons.circle_outlined,
-                              size: size.width / 14.7,
-                              color: const Color(0xff51ceda),
-                            ),
+                    for (int i = 0; i < plan.length; i++)
+                      if (skillSats == "both" &&
+                          SatsQuestionSubcategories.typesList
+                              .sublist(10)
+                              .contains(plan[i]))
+                        InkWell(
+                          onTap: () {
+                            if (sectionActivities[plan[i]] != null) {
+                              Navigator.push(
+                                context,
+                                PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: (sectionActivities[plan[i]]!(context)),
+                                  reverseDuration:
+                                      const Duration(milliseconds: 100),
+                                  opaque: false,
+                                ),
+                              );
+                            }
+                          },
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: size.width / 15,
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: size.width / 12,
+                                      child: Icon(
+                                        (basePlanTicked[i] == "1")
+                                            ? Icons.circle
+                                            : Icons.circle_outlined,
+                                        size: size.width / 14.7,
+                                        color: const Color(0xff51ceda),
+                                      ),
+                                    ),
+                                    SizedBox(width: size.width / 40),
+                                    Flexible(
+                                      child: Text(
+                                        "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
+                                        style: TextStyle(
+                                          fontSize: size.width / 22,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(height: 0.01 * size.height),
+                            ],
                           ),
-                          SizedBox(width: size.width / 40),
-                          Flexible(
-                            child: Text(
-                              "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
-                              style: TextStyle(
-                                fontSize: size.width / 22,
+                        ),
+                  ],
+                );
+              } else {
+                return Column(
+                  children: [
+                    for (int i = 0; i < wellbeing.length; i++)
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            wellBeingTicked[i] = !wellBeingTicked[i];
+                            if (wellBeingTicked[i]) {
+                              points += wellbeingTimes[wellbeing[i]]!;
+                            } else {
+                              points -= wellbeingTimes[wellbeing[i]]!;
+                            }
+                            calcValues();
+                          });
+                          setWellBeingTicked();
+                          updatePoints();
+                        },
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: size.width / 15,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: size.width / 12,
+                                    child: Icon(
+                                      wellBeingTicked[i]
+                                          ? Icons.circle
+                                          : Icons.circle_outlined,
+                                      size: size.width / 15,
+                                      color: const Color(0xff51ceda),
+                                    ),
+                                  ),
+                                  SizedBox(width: size.width / 40),
+                                  Flexible(
+                                    child: Text(
+                                      wellbeing[i],
+                                      style: TextStyle(
+                                        fontSize: size.width / 22,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ),
-                        ],
+                            SizedBox(height: 0.01 * size.height),
+                          ],
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 0.01 * size.height),
                   ],
-                ),
-              ),
-              ],
-            );
-            } else {
-              return Column(
-                children: [
-            for (int i = 0; i < wellbeing.length; i++)
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    wellBeingTicked[i] = !wellBeingTicked[i];
-                    if (wellBeingTicked[i]) {
-                      points += wellbeingTimes[wellbeing[i]]!;
-                    } else {
-                      points -= wellbeingTimes[wellbeing[i]]!;
-                    }
-                    calcValues();
-                  });
-                  setWellBeingTicked();
-                  updatePoints();
-                },
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: size.width / 15,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: size.width / 12,
-                            child: Icon(
-                              wellBeingTicked[i]
-                                  ? Icons.circle
-                                  : Icons.circle_outlined,
-                              size: size.width / 15,
-                              color: const Color(0xff51ceda),
-                            ),
-                          ),
-                          SizedBox(width: size.width / 40),
-                          Flexible(
-                            child: Text(
-                              wellbeing[i],
-                              style: TextStyle(
-                                fontSize: size.width / 22,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 0.01 * size.height),
-                  ],
-                ),
-              ),
-              ],
-        );
+                );
               }
-              } (),
+            }(),
           ],
         );
       },

@@ -175,7 +175,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                   Container(
                     margin: EdgeInsets.only(
                       left: size.width / 20,
-                      right: size.width / 30,
+                      right: size.width / 20,
                     ),
                     child: Column(
                       children: [
@@ -188,7 +188,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                                 icon: Icon(
                                   Icons.star,
                                   color: const Color.fromARGB(255, 255, 208, 0),
-                                  size: 0.03 * size.height,
+                                  size: 0.036 * size.height,
                                 ),
                                 decoration: const IconDecoration(
                                   border: IconBorder(),
@@ -199,7 +199,7 @@ class _BrainTrainActivities extends State<BrainTrainActivities> {
                             Text(
                               "Do Today",
                               style: TextStyle(
-                                fontSize: 0.02 * size.height,
+                                fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
                                 fontWeight: FontWeight.bold,
                               ),
