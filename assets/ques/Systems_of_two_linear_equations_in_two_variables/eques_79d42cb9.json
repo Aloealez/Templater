@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n$$\\frac{4}{2} y = -8$$\n$$x - \\frac{1}{2} y = -6$$",
+  "answers": {
+    "A": "$-8$",
+    "B": "$-7$",
+    "C": "$-9$",
+    "D": "$\\frac{2}{3}$"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = $-4. Substituting into the second equation and solving for $x$ gives $x = $-8. Thus, the correct answer is $-8$.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "79d42cb9"
+}

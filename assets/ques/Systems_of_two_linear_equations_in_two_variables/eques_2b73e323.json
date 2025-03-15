@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n $$ $$ \n$$\\frac{2}{2} y = 9$$\n$$x - \\frac{-5}{2} y = -7$$",
+  "answers": {
+    "A": "$\\frac{-61}{2}$",
+    "B": "$\\frac{-57}{2}$",
+    "C": "$\\frac{5}{4}$",
+    "D": "$\\frac{-59}{2}$"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = $9. Substituting into the second equation and solving for $x$ gives $x = $\\frac{-59}{2}. Thus, the correct answer is $\\frac{-59}{2}$.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "2b73e323"
+}

@@ -82,7 +82,7 @@ class _Home extends State<Home> with RouteAware{
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
           yesterdayPlan.every((task) =>
-          prefs.getString("${task}TickedDay${currentDay - 1}") == "1");
+          prefs.getString("${task}TickedDay${currentDay - 1}") == "1",);
       if (!allDoneYesterday) {
         await prefs.setInt('streak_days', 0);
       }
@@ -189,21 +189,18 @@ class _Home extends State<Home> with RouteAware{
     }
 
     // Otherwise, generate a new plan
-    skillBaseList = List.from(skillBaseLists[skill]!);
     int currentTime = 0;
+    skillBaseList = List.from(skillBaseLists[skill]!);
 
     // Example for "sats" skill
     if (skill == "sats") {
-      List<String> questionSubcategoriesPointsStr = prefs
-          .getStringList("scores_questionsLast") ??
-          List<String>.generate(
-              SatsQuestionSubcategories.typesList.length, (index) => "-1");
-      List<String> questionsSubcategories =
-      List.from(SatsQuestionSubcategories.typesList);
+      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ??
+          List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1",);
+      List<String> questionsSubcategories;
+      questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
-          SatsQuestionSubcategories.typesList[i]:
-          double.parse(questionSubcategoriesPointsStr[i]),
+          SatsQuestionSubcategories.typesList[i]: double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -216,13 +213,39 @@ class _Home extends State<Home> with RouteAware{
           return 0;
         }
       });
+      print("QuestionSubcategories: $questionsSubcategories");
 
-      // Each subcategory ~5 minutes in this example
-      int timePerRWQuestion = 5;
-      for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
-        newPlan.add(questionsSubcategories[i]);
-        currentTime += timePerRWQuestion;
-      }
+      int timePerSatQuestion = 5;
+      if (skillSats == "both")
+        {
+          print("Both");
+          int currentMathTime = 0;
+          int currentRWTime = 0;
+          for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
+            print("comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]}");
+            if (SatsQuestionSubcategories.typesList.sublist(10).contains(questionsSubcategories[i])) {
+              if (currentMathTime < trainingTime / 2) {
+                newPlan.add(questionsSubcategories[i]);
+                currentTime += timePerSatQuestion;
+                currentMathTime += timePerSatQuestion;
+              }
+            } else if (SatsQuestionSubcategories.typesList.sublist(0, 10).contains(questionsSubcategories[i])) {
+              print("Reading & Writing: $currentRWTime < ${trainingTime / 2}");
+              if (currentRWTime < trainingTime / 2) {
+                newPlan.add(questionsSubcategories[i]);
+                currentTime += timePerSatQuestion;
+                currentRWTime += timePerSatQuestion;
+              }
+            }
+          }
+        }
+      else
+        {
+          for (int i = 0; i < questionsSubcategories.length && currentTime < trainingTime; i++) {
+            newPlan.add(questionsSubcategories[i]);
+            currentTime += timePerSatQuestion;
+          }
+        }
     }
 
     // Example for "linguistic" skill
@@ -327,7 +350,7 @@ class _Home extends State<Home> with RouteAware{
 
       await prefs.setString('wellbeing_emoji', newEmoji);
       await prefs.setString(
-          'last_emoji_update_date', currentDate.toIso8601String());
+          'last_emoji_update_date', currentDate.toIso8601String(),);
 
       setState(() {});
     }
@@ -386,7 +409,7 @@ class _Home extends State<Home> with RouteAware{
           List<String> listPlan = [];
           for (int i = 0; i < plan.length; i++) {
             if (skillSats == "both" && !SatsQuestionSubcategories.typesList.sublist(0, 10).contains(plan[i])) {
-            continue;
+              continue;
             }
             listPlan.add(plan[i]);
           }
@@ -447,7 +470,7 @@ class _Home extends State<Home> with RouteAware{
     List<String> widgetItems = [];
     for (int i = 0; i < plan.length; i++) {
       widgetItems.add(
-          "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}");
+          "${basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[plan[i]]}",);
     }
 
     HomeWidget.saveWidgetData("plan_title", "BeSmart List");
@@ -492,27 +515,28 @@ class _Home extends State<Home> with RouteAware{
             ),
             SizedBox(height: 0.01 * size.height),
             () {
-            List<String> listPlan = [];
             if (skillSats == "both") {
-
+              List<String> listPlan = [];
             for (int i = 0; i < plan.length; i++) {
-              if (skillSats == "both" &&
-                  !SatsQuestionSubcategories.typesList.sublist(10).contains(
-                      plan[i])) {
+              if (skillSats == "both" && !SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i],)) {
                 continue;
               }
+              listPlan.add(plan[i]);
             }
+            print("ListPlan: $listPlan");
             return Column(
               children: [
-            for (int i = 0; i < listPlan.length; i++)
-            InkWell(
+            for (int i = 0; i < plan.length; i++)
+
+            if (skillSats == "both" && SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i]))
+              InkWell(
                 onTap: () {
-                  if (sectionActivities[listPlan[i]] != null) {
+                  if (sectionActivities[plan[i]] != null) {
                     Navigator.push(
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        child: (sectionActivities[listPlan[i]]!(context)),
+                        child: (sectionActivities[plan[i]]!(context)),
                         reverseDuration: const Duration(milliseconds: 100),
                         opaque: false,
                       ),
@@ -528,17 +552,17 @@ class _Home extends State<Home> with RouteAware{
                           SizedBox(
                             width: size.width / 12,
                             child: Icon(
-                              wellBeingTicked[i]
+                              (basePlanTicked[i] == "1")
                                   ? Icons.circle
                                   : Icons.circle_outlined,
-                              size: size.width / 15,
+                              size: size.width / 14.7,
                               color: const Color(0xff51ceda),
                             ),
                           ),
                           SizedBox(width: size.width / 40),
                           Flexible(
                             child: Text(
-                              wellbeing[i],
+                              "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
                               style: TextStyle(
                                 fontSize: size.width / 22,
                               ),
@@ -551,8 +575,8 @@ class _Home extends State<Home> with RouteAware{
                   ],
                 ),
               ),
-            ],
-              );
+              ],
+            );
             } else {
               return Column(
                 children: [
