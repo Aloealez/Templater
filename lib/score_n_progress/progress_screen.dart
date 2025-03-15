@@ -27,8 +27,6 @@ class ProgressScreen extends StatefulWidget {
     required this.exercise,
     this.txt = "You Received",
     this.pointAlternative = "Points",
-    final bool showAsPercentage;
-
   });
 
   @override
@@ -261,11 +259,9 @@ class _ProgressScreen extends State<ProgressScreen>
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      widget.showAsPercentage
-                      ? "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / lastMaxScore).round()}%"
-                       : "Your Score: ${lastUserScore.toStringAsFixed(2)}",                      
-                       textAlign: TextAlign.center,
-                       style: TextStyle(
+                      "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / lastMaxScore).round()}%",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
                         fontSize: size.width / 18,
                         color: Theme.of(context).colorScheme.onSurface,
                         fontWeight: FontWeight.bold,
@@ -387,24 +383,25 @@ class _ProgressScreen extends State<ProgressScreen>
                                   ),
                                 ),
                                 dataLabelMapper: (ChartData data, int index) {
-                            String scoreText = widget.showAsPercentage
-                      ? "${(data.score.round() / lastMaxScore * 100).round()}%"
-                     : "${data.score.toStringAsFixed(2)}";
-
-                    if (index == 0) {
-                     final day = data.day.day.toString().padLeft(2, '0');
-                    final month = data.day.month.toString().padLeft(2, '0');
-                    return "$scoreText\n$day.$month";
-                    } else if (index == chartData.length - 1) {
-                      return "$scoreText\nNow";
-                     } else if (_tappedIndex == index) {
-                      final day = data.day.day.toString().padLeft(2, '0');
-                      final month = data.day.month.toString().padLeft(2, '0');
-                      return "$scoreText\n$day.$month";
-                          }
-                         return "";
-                          },
-
+                                  if (index == 0) {
+                                    final day =
+                                        data.day.day.toString().padLeft(2, '0');
+                                    final month = data.day.month
+                                        .toString()
+                                        .padLeft(2, '0');
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                  } else if (index == chartData.length - 1) {
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\nNow";
+                                  } else if (_tappedIndex == index) {
+                                    final day =
+                                        data.day.day.toString().padLeft(2, '0');
+                                    final month = data.day.month
+                                        .toString()
+                                        .padLeft(2, '0');
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                  }
+                                  return "";
+                                },
                               ),
                             ],
                           ),
