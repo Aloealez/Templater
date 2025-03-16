@@ -27,6 +27,8 @@ class ProgressScreen extends StatefulWidget {
     required this.exercise,
     this.txt = "You Received",
     this.pointAlternative = "Points",
+    final bool showAsPercentage = false;
+
   });
 
   @override
