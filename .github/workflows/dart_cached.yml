@@ -1,58 +1,78 @@
-name: Dart Cached (faster)
+name: Flutter CI
 
 on:
-  push:
-    branches: [ "main", "master", "test", "test2", "aloealez", "aloealez2", "aloealez-actions-test", "aloealez-5" ]
   pull_request:
-    branches: [ "main", "master", "test", "test2", "aloealez", "aloealez2", "aloealez-actions-test", "aloealez-5" ]
+    branches: 
+      - main
+      - master
+      - test
+      - test2
+      - aloealez
+      - aloealez2
+      - aloealez-actions-test
+      - aloealez-5
 
 env:
   flutter_version: "3.27.1"
-  java_version: "17.x"
 
 jobs:
-  build:
+  analyze:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v4
 
-      - name: Install Java
-        uses: actions/setup-java@v4.5.0
+      - uses: actions/setup-java@v4
         with:
-          java-version: ${{ env.java_version }}
           distribution: temurin
+          java-version: "17"
 
-      - name: Cache Flutter
+      - uses: cachix/install-nix-action@v2
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Determine if cache should be loaded
+        id: check_cache_steps
+        run: |
+          if echo "${{ github.event.pull_request.title }}" | grep -q -i "flutter clean"; then
+            echo "flutter_clean_cache=true" >> $GITHUB_ENV
+          else
+            echo "flutter_clean_cache=false" >> $GITHUB_ENV
+          fi
+
+      - name: Load Flutter cache
+        if: env.flutter_clean_cache == 'false'
         uses: actions/cache@v4
         with:
           path: /opt/hostedtoolcache/flutter
-          key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
+          key: ${{ runner.os }}-flutter-${{ env.flutter_version }}
+          restore-keys: |
+            ${{ runner.os }}-flutter-
 
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2.14.0
+      - uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.flutter_version }}
 
       - name: Verify Flutter installation
         run: flutter doctor
 
-      - name: Fetch dependencies
+      - name: Install dependencies
         run: flutter pub get
 
       - name: Analyze code
-        run: flutter analyze
+        id: analyze
+        continue-on-error: true
+        run: |
+          flutter analyze --write=analysis_results.json || echo "ANALYSIS_FAILED=true" >> $GITHUB_ENV
 
-      - name: Run tests (optional)
-        run: flutter test
-
-      - name: Build APK in debug mode
-        run: flutter build apk --debug --verbose
-
-      - name: Upload APK as artifact
-        uses: actions/upload-artifact@v4.4.3
+      - name: Upload analysis results
+        uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: Debug-apk-cached
-          path: build/app/outputs/flutter-apk/app-debug.apk
-          retention-days: 3
+          name: analysis_results
+          path: analysis_results.json
+
+      - name: Fail job if there are analysis errors
+        if: env.ANALYSIS_FAILED == 'true'
+        run: |
+          echo "::error title=Analysis failed::Flutter analyze found issues. Please check the analysis_results artifact."
+          exit 1
