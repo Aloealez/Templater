@@ -23,7 +23,7 @@ jobs:
           distribution: temurin
 
       - name: Cache Flutter
-        uses: actions/cache@v4.1.2
+        uses: actions/cache@v4
         with:
           path: /opt/hostedtoolcache/flutter
           key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
