@@ -70,44 +70,51 @@ class _Home extends State<Home> with RouteAware {
     });
   }
 
-  Future<void> checkAndUpdateStreak() async {
-    final prefs = await SharedPreferences.getInstance();
-    int currentDay = day;
+   streakInDanger = !allDoneToday;
 
-    // If we are beyond day 1, check if previous day's tasks were all completed
-    if (currentDay > 1) {
-      List<String>? yesterdayPlan =
-          prefs.getStringList("basePlanDay${currentDay - 1}");
-      bool allDoneYesterday = yesterdayPlan != null &&
-          yesterdayPlan.isNotEmpty &&
-          yesterdayPlan.every(
-            (task) =>
-                prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
-          );
-      if (!allDoneYesterday) {
-        await prefs.setInt('streak_days', 0);
-      }
-    }
+ 
+ if (currentDay > 1) {
+   List<String>? yesterdayPlan =
+       prefs.getStringList("basePlanDay${currentDay - 1}");
+   bool allDoneYesterday = yesterdayPlan != null &&
+       yesterdayPlan.isNotEmpty &&
+       yesterdayPlan.every(
+         (task) =>
+             prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
+       );
+   
+   if (!allDoneYesterday && !allDoneToday) {
+     
+   }
+   
+   else if (!allDoneYesterday && allDoneToday) {
+     
+     if (lastUpdateDay != currentDay) {
+       await prefs.setInt('last_update_day', currentDay);
+     }
+   }
+  
+   else if (allDoneYesterday) {
+     
+     if (allDoneToday && lastUpdateDay != currentDay) {
+       currentStreak++;
+       await prefs.setInt('streak_days', currentStreak);
+       await prefs.setInt('last_update_day', currentDay);
+     }
+     
+   }
+ }
+ 
+ else if (currentDay == 1 && allDoneToday) {
+   if (lastUpdateDay != currentDay) {
+     currentStreak = 1;
+     await prefs.setInt('streak_days', currentStreak);
+     await prefs.setInt('last_update_day', currentDay);
+   }
+ }
 
-    // Check if today's tasks are all done
-    bool allDoneToday = plan.isNotEmpty &&
-        plan.every(
-            (task) => prefs.getString("${task}TickedDay$currentDay") == "1");
-
-    streakInDanger = !allDoneToday;
-
-    int currentStreak = prefs.getInt('streak_days') ?? 0;
-    if (allDoneToday) {
-      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
-      if (lastUpdateDay != currentDay) {
-        currentStreak++;
-        await prefs.setInt('streak_days', currentStreak);
-        await prefs.setInt('last_update_day', currentDay);
-      }
-    }
-    streakDays = currentStreak;
-    setState(() {});
-  }
+ streakDays = currentStreak;
+ setState(() {});
 
   void calcValues() {
     setState(() {
