@@ -70,51 +70,44 @@ class _Home extends State<Home> with RouteAware {
     });
   }
 
-   streakInDanger = !allDoneToday;
+  Future<void> checkAndUpdateStreak() async {
+    final prefs = await SharedPreferences.getInstance();
+    int currentDay = day;
 
- 
- if (currentDay > 1) {
-   List<String>? yesterdayPlan =
-       prefs.getStringList("basePlanDay${currentDay - 1}");
-   bool allDoneYesterday = yesterdayPlan != null &&
-       yesterdayPlan.isNotEmpty &&
-       yesterdayPlan.every(
-         (task) =>
-             prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
-       );
-   
-   if (!allDoneYesterday && !allDoneToday) {
-     
-   }
-   
-   else if (!allDoneYesterday && allDoneToday) {
-     
-     if (lastUpdateDay != currentDay) {
-       await prefs.setInt('last_update_day', currentDay);
-     }
-   }
-  
-   else if (allDoneYesterday) {
-     
-     if (allDoneToday && lastUpdateDay != currentDay) {
-       currentStreak++;
-       await prefs.setInt('streak_days', currentStreak);
-       await prefs.setInt('last_update_day', currentDay);
-     }
-     
-   }
- }
- 
- else if (currentDay == 1 && allDoneToday) {
-   if (lastUpdateDay != currentDay) {
-     currentStreak = 1;
-     await prefs.setInt('streak_days', currentStreak);
-     await prefs.setInt('last_update_day', currentDay);
-   }
- }
+    // If we are beyond day 1, check if previous day's tasks were all completed
+    if (currentDay > 1) {
+      List<String>? yesterdayPlan =
+      prefs.getStringList("basePlanDay${currentDay - 1}");
+      bool allDoneYesterday = yesterdayPlan != null &&
+          yesterdayPlan.isNotEmpty &&
+          yesterdayPlan.every(
+                (task) =>
+            prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
+          );
+      if (!allDoneYesterday) {
+        await prefs.setInt('streak_days', 0);
+      }
+    }
 
- streakDays = currentStreak;
- setState(() {});
+    // Check if today's tasks are all done
+    bool allDoneToday = plan.isNotEmpty &&
+        plan.every(
+                (task) => prefs.getString("${task}TickedDay$currentDay") == "1");
+
+    streakInDanger = !allDoneToday;
+
+    int currentStreak = prefs.getInt('streak_days') ?? 0;
+    if (allDoneToday) {
+      int lastUpdateDay = prefs.getInt('last_update_day') ?? 0;
+      if (lastUpdateDay != currentDay) {
+        currentStreak++;
+        await prefs.setInt('streak_days', currentStreak);
+        await prefs.setInt('last_update_day', currentDay);
+      }
+    }
+    streakDays = currentStreak;
+    setState(() {});
+  }
 
   void calcValues() {
     setState(() {
@@ -207,14 +200,14 @@ class _Home extends State<Home> with RouteAware {
           prefs.getStringList("scores_questionsLast") ??
               List<String>.generate(
                 SatsQuestionSubcategories.typesList.length,
-                (index) => "-1",
+                    (index) => "-1",
               );
       List<String> questionsSubcategories;
       questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
           SatsQuestionSubcategories.typesList[i]:
-              double.parse(questionSubcategoriesPointsStr[i]),
+          double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -235,8 +228,8 @@ class _Home extends State<Home> with RouteAware {
         int currentMathTime = 0;
         int currentRWTime = 0;
         for (int i = 0;
-            i < questionsSubcategories.length && currentTime < trainingTime;
-            i++) {
+        i < questionsSubcategories.length && currentTime < trainingTime;
+        i++) {
           print(
               "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]}");
           if (SatsQuestionSubcategories.typesList
@@ -260,8 +253,8 @@ class _Home extends State<Home> with RouteAware {
         }
       } else {
         for (int i = 0;
-            i < questionsSubcategories.length && currentTime < trainingTime;
-            i++) {
+        i < questionsSubcategories.length && currentTime < trainingTime;
+        i++) {
           if (skillSats == "math" &&
               SatsQuestionSubcategories.typesList
                   .sublist(10)
@@ -373,7 +366,7 @@ class _Home extends State<Home> with RouteAware {
 
     String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
@@ -426,9 +419,9 @@ class _Home extends State<Home> with RouteAware {
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
       if ((skillSats == "both" &&
-              SatsQuestionSubcategories.typesList
-                  .sublist(0, 10)
-                  .contains(plan[i])) ||
+          SatsQuestionSubcategories.typesList
+              .sublist(0, 10)
+              .contains(plan[i])) ||
           skillSats != "both") {
         minutes += sectionTimes[plan[i]]!;
       }
@@ -446,14 +439,14 @@ class _Home extends State<Home> with RouteAware {
           ),
         ),
         SizedBox(height: 0.01 * size.height),
-        () {
+            () {
           return Column(
             children: [
               for (int i = 0; i < plan.length; i++)
                 if ((skillSats == "both" &&
-                        SatsQuestionSubcategories.typesList
-                            .sublist(0, 10)
-                            .contains(plan[i])) ||
+                    SatsQuestionSubcategories.typesList
+                        .sublist(0, 10)
+                        .contains(plan[i])) ||
                     skillSats != "both")
                   Column(
                     children: [
@@ -466,7 +459,7 @@ class _Home extends State<Home> with RouteAware {
                                 type: PageTransitionType.fade,
                                 child: (sectionActivities[plan[i]]!(context)),
                                 reverseDuration:
-                                    const Duration(milliseconds: 100),
+                                const Duration(milliseconds: 100),
                                 opaque: false,
                               ),
                             );
@@ -557,14 +550,14 @@ class _Home extends State<Home> with RouteAware {
               ),
             ),
             SizedBox(height: 0.01 * size.height),
-            () {
+                () {
               if (skillSats == "both") {
                 List<String> listPlan = [];
                 for (int i = 0; i < plan.length; i++) {
                   if (skillSats == "both" &&
                       !SatsQuestionSubcategories.typesList.sublist(10).contains(
-                            plan[i],
-                          )) {
+                        plan[i],
+                      )) {
                     continue;
                   }
                   listPlan.add(plan[i]);
@@ -586,7 +579,7 @@ class _Home extends State<Home> with RouteAware {
                                   type: PageTransitionType.fade,
                                   child: (sectionActivities[plan[i]]!(context)),
                                   reverseDuration:
-                                      const Duration(milliseconds: 100),
+                                  const Duration(milliseconds: 100),
                                   opaque: false,
                                 ),
                               );

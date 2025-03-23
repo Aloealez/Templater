@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import '/buttons.dart';
-import '/home_screen.dart'; 
 
 class ChartDataImprovement {
   ChartDataImprovement(this.day, this.score);
@@ -84,14 +83,9 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
     });
     if (widget.lastin) {
       prefs.clear();
-      navigateToHomeScreen();
     }
   }
-   void navigateToHomeScreen() {
-    Navigator.pushReplacement()
-   }
 
-   
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
