@@ -22,7 +22,7 @@ class Home extends StatefulWidget {
 }
 
 class _Home extends State<Home> with RouteAware {
-  late SharedPreferences prefs;
+  SharedPreferences? prefs;
   String skill = "";
   String skillSats = "";
   int trainingTime = 0;
@@ -59,9 +59,12 @@ class _Home extends State<Home> with RouteAware {
   Future<void> calcDay() async {
     DateTime firstDay = DateTime.now();
     DateTime today = DateTime.now();
-    prefs = await SharedPreferences.getInstance();
-    if (prefs.getString('beginning_date') != null) {
-      firstDay = DateTime.parse(prefs.getString('beginning_date')!);
+    prefs ??= await SharedPreferences.getInstance();
+    if (prefs == null) {
+      throw Exception("Failed to initialize SharedPreferences");
+    }
+    if (prefs?.getString('beginning_date') != null) {
+      firstDay = DateTime.parse(prefs!.getString('beginning_date')!);
     }
 
     setState(() {
@@ -70,51 +73,50 @@ class _Home extends State<Home> with RouteAware {
     });
   }
 
-   streakInDanger = !allDoneToday;
+  Future<void> checkAndUpdateStreak() async {
+    bool allDoneToday = true; // Define or calculate this variable as needed
+    int currentDay = day; // Use the 'day' variable or calculate currentDay
+    int lastUpdateDay = prefs?.getInt('last_update_day') ?? 0;
+    int currentStreak = prefs?.getInt('streak_days') ?? 0;
 
- 
- if (currentDay > 1) {
-   List<String>? yesterdayPlan =
-       prefs.getStringList("basePlanDay${currentDay - 1}");
-   bool allDoneYesterday = yesterdayPlan != null &&
-       yesterdayPlan.isNotEmpty &&
-       yesterdayPlan.every(
-         (task) =>
-             prefs.getString("${task}TickedDay${currentDay - 1}") == "1",
-       );
-   
-   if (!allDoneYesterday && !allDoneToday) {
-     
-   }
-   
-   else if (!allDoneYesterday && allDoneToday) {
-     
-     if (lastUpdateDay != currentDay) {
-       await prefs.setInt('last_update_day', currentDay);
-     }
-   }
-  
-   else if (allDoneYesterday) {
-     
-     if (allDoneToday && lastUpdateDay != currentDay) {
-       currentStreak++;
-       await prefs.setInt('streak_days', currentStreak);
-       await prefs.setInt('last_update_day', currentDay);
-     }
-     
-   }
- }
- 
- else if (currentDay == 1 && allDoneToday) {
-   if (lastUpdateDay != currentDay) {
-     currentStreak = 1;
-     await prefs.setInt('streak_days', currentStreak);
-     await prefs.setInt('last_update_day', currentDay);
-   }
- }
+    setState(() {
+      streakInDanger = !allDoneToday;
+    });
 
- streakDays = currentStreak;
- setState(() {});
+    if (currentDay > 1) {
+      List<String>? yesterdayPlan =
+          prefs?.getStringList("basePlanDay${currentDay - 1}");
+      bool allDoneYesterday = yesterdayPlan != null &&
+          yesterdayPlan.isNotEmpty &&
+          yesterdayPlan.every(
+            (task) =>
+                prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
+          );
+
+      if (!allDoneYesterday && !allDoneToday) {
+      } else if (!allDoneYesterday && allDoneToday) {
+        if (lastUpdateDay != currentDay) {
+          await prefs?.setInt('last_update_day', currentDay);
+        }
+      } else if (allDoneYesterday) {
+        if (allDoneToday && lastUpdateDay != currentDay) {
+          currentStreak++;
+          await prefs?.setInt('streak_days', currentStreak);
+          await prefs?.setInt('last_update_day', currentDay);
+        }
+      }
+    } else if (currentDay == 1 && allDoneToday) {
+      if (lastUpdateDay != currentDay) {
+        currentStreak = 1;
+        await prefs?.setInt('streak_days', currentStreak);
+        await prefs?.setInt('last_update_day', currentDay);
+      }
+    }
+
+    setState(() {
+      streakDays = currentStreak;
+    });
+  }
 
   void calcValues() {
     setState(() {
@@ -141,7 +143,7 @@ class _Home extends State<Home> with RouteAware {
     for (int i = 0; i < wellBeingTicked.length; i++) {
       newWellBeingTickedString[i] = (wellBeingTicked[i] ? "1" : "0");
     }
-    prefs.setStringList("wellBeingTickedDay$day", newWellBeingTickedString);
+    prefs?.setStringList("wellBeingTickedDay$day", newWellBeingTickedString);
   }
 
   Future<void> getWellBeingTicked() async {
@@ -149,7 +151,7 @@ class _Home extends State<Home> with RouteAware {
     int newPoints = points;
 
     List<String> newWellBeingTickedString =
-        prefs.getStringList('wellBeingTickedDay$day') ?? [];
+        prefs?.getStringList('wellBeingTickedDay$day') ?? [];
     List<bool> newWellBeingTicked = [false, false, false, false];
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
@@ -174,9 +176,9 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
-    String newSkill = prefs.getString('skill') ?? "";
-    String newSkillSats = prefs.getString('skill_sats') ?? "";
-    int newTrainingTime = prefs.getInt('training_time') ?? 0;
+    String newSkill = prefs?.getString('skill') ?? "";
+    String newSkillSats = prefs?.getString('skill_sats') ?? "";
+    int newTrainingTime = prefs?.getInt('training_time') ?? 0;
 
     setState(() {
       skill = newSkill;
@@ -187,7 +189,7 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> createPlan() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
+    List<String> newPlan = prefs?.getStringList("basePlanDay$day") ?? [];
 
     // If we've already stored the plan for today, just use it
     if (newPlan.isNotEmpty) {
@@ -204,7 +206,7 @@ class _Home extends State<Home> with RouteAware {
     // Example for "sats" skill
     if (skill == "sats") {
       List<String> questionSubcategoriesPointsStr =
-          prefs.getStringList("scores_questionsLast") ??
+          prefs?.getStringList("scores_questionsLast") ??
               List<String>.generate(
                 SatsQuestionSubcategories.typesList.length,
                 (index) => "-1",
@@ -238,7 +240,7 @@ class _Home extends State<Home> with RouteAware {
             i < questionsSubcategories.length && currentTime < trainingTime;
             i++) {
           print(
-              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]}");
+              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},");
           if (SatsQuestionSubcategories.typesList
               .sublist(10)
               .contains(questionsSubcategories[i])) {
@@ -303,7 +305,7 @@ class _Home extends State<Home> with RouteAware {
       skillBaseList.removeAt(el);
     }
 
-    prefs.setStringList("basePlanDay$day", newPlan);
+    prefs?.setStringList("basePlanDay$day", newPlan);
     setState(() {
       plan = newPlan;
     });
@@ -315,7 +317,7 @@ class _Home extends State<Home> with RouteAware {
     int newPoints = points;
 
     for (int i = 0; i < plan.length; ++i) {
-      newBasePlanTicked[i] = prefs.getString("${plan[i]}TickedDay$day") ?? "0";
+      newBasePlanTicked[i] = prefs?.getString("${plan[i]}TickedDay$day") ?? "0";
       if (newBasePlanTicked[i] == "1") {
         newPoints += sectionTimes[plan[i]]!;
       }
@@ -371,7 +373,7 @@ class _Home extends State<Home> with RouteAware {
     List<String> emojis = ["😄", "😁", "😊", "😀", "🥰", "🙂"];
     DateTime currentDate = DateTime.now();
 
-    String? lastUpdateDateStr = prefs.getString('last_emoji_update_date');
+    String? lastUpdateDateStr = prefs?.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
         lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
@@ -379,8 +381,8 @@ class _Home extends State<Home> with RouteAware {
         currentDate.difference(lastUpdateDate).inDays >= 1) {
       String newEmoji = emojis[rng.nextInt(emojis.length)];
 
-      await prefs.setString('wellbeing_emoji', newEmoji);
-      await prefs.setString(
+      await prefs?.setString('wellbeing_emoji', newEmoji);
+      await prefs?.setString(
         'last_emoji_update_date',
         currentDate.toIso8601String(),
       );
@@ -391,7 +393,7 @@ class _Home extends State<Home> with RouteAware {
 
   Future<String> getEmoji() async {
     prefs = await SharedPreferences.getInstance();
-    return prefs.getString('wellbeing_emoji') ?? "😄";
+    return prefs?.getString('wellbeing_emoji') ?? "😄";
   }
 
   @override
@@ -418,7 +420,7 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> updatePoints() async {
     prefs = await SharedPreferences.getInstance();
-    prefs.setInt("pointsDay$day", points);
+    prefs?.setInt("pointsDay$day", points);
   }
 
   Widget createBaseProgram(BuildContext context) {
@@ -436,16 +438,6 @@ class _Home extends State<Home> with RouteAware {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          skillSats != "both"
-              ? "Base Plan - $minutes Minutes"
-              : "Reading & Writing - $minutes Minutes",
-          style: TextStyle(
-            fontSize: size.width / 20,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        SizedBox(height: 0.01 * size.height),
         () {
           return Column(
             children: [
@@ -472,28 +464,42 @@ class _Home extends State<Home> with RouteAware {
                             );
                           }
                         },
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: size.width / 15,
-                              child: Icon(
-                                (basePlanTicked[i] == "1")
-                                    ? Icons.circle
-                                    : Icons.circle_outlined,
-                                size: size.width / 14.7,
-                                color: const Color(0xfff66fd3),
-                              ),
-                            ),
-                            SizedBox(width: size.width / 35),
-                            Flexible(
-                              child: Text(
-                                "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
-                                style: TextStyle(
-                                  fontSize: size.width / 22,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            vertical: size.width / 50,
+                            horizontal: size.width / 200,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Color(0xff240b2b),
+                            border: Border.all(color: Color(0xff2d1f38)),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: size.width / 15,
+                                child: Icon(
+                                  (basePlanTicked[i] == "1")
+                                      ? Icons.square_rounded
+                                      : Icons.crop_square_outlined,
+                                  size: size.width / 14.7,
+                                  color: const Color(0xff653378),
                                 ),
                               ),
-                            ),
-                          ],
+                              SizedBox(width: size.width / 35),
+                              Flexible(
+                                child: Text(
+                                  "${sectionNames[plan[i]]}",
+                                  style: TextStyle(
+                                    decoration: (basePlanTicked[i] == "1")
+                                        ? TextDecoration.lineThrough
+                                        : TextDecoration.none,
+                                    fontSize: size.width / 22,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(height: 0.01 * size.height),
@@ -547,16 +553,6 @@ class _Home extends State<Home> with RouteAware {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              skillSats != "both"
-                  ? "Optional - Well Being $emoji"
-                  : "Math Section - $minutes Minutes",
-              style: TextStyle(
-                fontSize: size.width / 20,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            SizedBox(height: 0.01 * size.height),
             () {
               if (skillSats == "both") {
                 List<String> listPlan = [];
@@ -594,25 +590,37 @@ class _Home extends State<Home> with RouteAware {
                           },
                           child: Column(
                             children: [
-                              SizedBox(
-                                height: size.width / 15,
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: size.width / 50,
+                                  horizontal: size.width / 200,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Color(0xff0b162a),
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(color: Color(0xff1a202e)),
+                                ),
                                 child: Row(
                                   children: [
                                     SizedBox(
                                       width: size.width / 12,
                                       child: Icon(
                                         (basePlanTicked[i] == "1")
-                                            ? Icons.circle
-                                            : Icons.circle_outlined,
+                                            ? Icons.square_rounded
+                                            : Icons.crop_square_rounded,
                                         size: size.width / 14.7,
-                                        color: const Color(0xff51ceda),
+                                        color: const Color(0xff364377),
                                       ),
                                     ),
                                     SizedBox(width: size.width / 40),
                                     Flexible(
                                       child: Text(
-                                        "${sectionNames[plan[i]]} - ${sectionTimes[plan[i]]} min",
+                                        "${sectionNames[plan[i]]}",
                                         style: TextStyle(
+                                          decoration: (basePlanTicked[i] == "1")
+                                              ? TextDecoration.lineThrough
+                                              : TextDecoration.none,
+                                          color: Colors.grey,
                                           fontSize: size.width / 22,
                                         ),
                                       ),
@@ -744,45 +752,125 @@ class _Home extends State<Home> with RouteAware {
               children: [
                 Center(
                   child: Text(
-                    "Your Plan",
-                    style: TextStyle(
-                      fontSize: size.width / 6,
-                    ),
+                    "Plan For Today",
+                    style:
+                        TextStyle(fontSize: size.width / 9, letterSpacing: 1.5),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 SizedBox(height: 0.01 * size.height),
                 Center(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
-                        "Day $day - $formattedDate",
-                        style: TextStyle(
-                          fontSize: size.width / 22,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: 'OpenSauceTwo',
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(width: 0.03 * size.width),
+                      // streak
                       Container(
                         padding: EdgeInsets.symmetric(
-                          horizontal: size.width / 30,
+                          horizontal: size.width / 50,
                           vertical: size.height / 200,
                         ),
                         decoration: BoxDecoration(
                           color: streakInDanger
                               ? const Color(0xff6a0d0a)
                               : const Color(0xff06523f),
-                          borderRadius: BorderRadius.circular(24.0),
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        child: Text(
-                          "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
-                          style: TextStyle(
-                            fontSize: size.width / 22,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
+                        child: Text.rich(
+                          TextSpan(
+                            children: [
+                              WidgetSpan(
+                                child: Icon(
+                                  Icons.local_fire_department,
+                                  color: streakInDanger
+                                      ? const Color(0xfff8b4b4)
+                                      : const Color(0xff59cfb7),
+                                  size: size.width / 20,
+                                ),
+                              ),
+                              WidgetSpan(child: SizedBox(width: 5)),
+                              TextSpan(
+                                text:
+                                    "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
+                                style: TextStyle(
+                                  fontSize: size.width / 25,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: size.width * 0.001,
+                                  color: streakInDanger
+                                      ? const Color(0xfff8b4b4)
+                                      : const Color(0xff59cfb7),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 0.03 * size.width),
+                      // completed in percentage
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.width / 50,
+                          vertical: size.height / 200,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xff0b2971),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text.rich(
+                          TextSpan(
+                            children: [
+                              WidgetSpan(
+                                child: Icon(
+                                  Icons.check_circle,
+                                  color: Color(0xff4961c5),
+                                  size: size.width / 20,
+                                ),
+                              ),
+                              WidgetSpan(child: SizedBox(width: 5)),
+                              TextSpan(
+                                text: "$procent%",
+                                style: TextStyle(
+                                  fontSize: size.width / 25,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xff4961c5),
+                                  letterSpacing: size.width * 0.001,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 0.03 * size.width),
+                      // Coins
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.width / 30,
+                          vertical: size.height / 200,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xff0a6d59),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text.rich(
+                          TextSpan(
+                            children: [
+                              WidgetSpan(
+                                child: Icon(
+                                  Icons.currency_exchange_rounded,
+                                  color: Color(0xff59cfb7),
+                                  size: size.width / 20,
+                                ),
+                              ),
+                              WidgetSpan(child: SizedBox(width: 5)),
+                              TextSpan(
+                                text: "32 Auria",
+                                style: TextStyle(
+                                  fontSize: size.width / 25,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xff59cfb7),
+                                  letterSpacing: size.width * 0.001,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -791,7 +879,6 @@ class _Home extends State<Home> with RouteAware {
                 ),
                 SizedBox(height: 0.05 * size.height),
                 createBaseProgram(context),
-                SizedBox(height: 0.04 * size.height),
                 createWellBeing(context),
                 SizedBox(height: 0.069 * size.height),
               ],

@@ -40,7 +40,7 @@ class _SatsProgramButtonState extends State<SatsProgramButton> {
     late SharedPreferences prefs;
     return SizedBox(
       height: widget.height,
-      width: size.width * 0.6,
+      width: size.width * 0.9,
       child: InkWell(
         onHover: (value) {
           setState(() {
@@ -70,9 +70,8 @@ class _SatsProgramButtonState extends State<SatsProgramButton> {
           // );
         },
         child: Container(
-          width: size.width * 0.5,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(32),
+            borderRadius: BorderRadius.circular(20),
             color: widget.color,
             boxShadow: [
               BoxShadow(
@@ -87,7 +86,7 @@ class _SatsProgramButtonState extends State<SatsProgramButton> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontSize: size.width / 16,
+                fontSize: size.width / 20,
                 color: Colors.white,
                 shadows: <Shadow>[
                   Shadow(
@@ -158,24 +157,16 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           fontWeight: FontWeight.w500,
                         ),
                         children: [
-                          TextSpan(text: 'I would like to\n'),
-                          TextSpan(
-                            text: 'prepare',
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          TextSpan(text: ' for the'),
+                          TextSpan(text: 'Choose Sections\nTo Prepare For'),
                         ],
                       ),
                     ),
                     SizedBox(height: size.height * 0.08),
                     SatsProgramButton(
-                      text: "Math Part",
-                      height: size.height * 0.1,
-                      color: Theme.of(context).colorScheme.secondary,
-                      name: "math",
+                      text: "Both Sections",
+                      height: size.height * 0.07,
+                      color: Theme.of(context).colorScheme.tertiary,
+                      name: "both",
                       onTap: () {
                         setState(() {
                           startedLevelTest = true;
@@ -186,8 +177,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           await questionBank.init();
                           questions = {};
                           for (var questionSubcategoryStr
-                          in SatsQuestionSubcategories.typesList.sublist(10)) {
-                            var questionSubcategory = SatsQuestionSubcategories.fromString(
+                              in SatsQuestionSubcategories.typesList
+                                  .sublist(10)) {
+                            var questionSubcategory =
+                                SatsQuestionSubcategories.fromString(
                               questionSubcategoryStr,
                             );
                             await questionBank.loadFromAssets(
@@ -198,7 +191,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           questions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.NonlinearEquationsInOneVariableAndSystemsOfEquationsInTwoVariables,
+                                ESatsQuestionSubcategories
+                                    .NonlinearEquationsInOneVariableAndSystemsOfEquationsInTwoVariables,
                               ).string,
                               1,
                               true,
@@ -231,23 +225,14 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           questions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.LinesAnglesAndTriangles,
+                                ESatsQuestionSubcategories
+                                    .RightTrianglesAndTrigonometry,
                               ).string,
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
-                            ),
-                          );
-                          questions.addAll(
-                            await questionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.RightTrianglesAndTrigonometry,
-                              ).string,
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           questions.addAll(
@@ -258,72 +243,236 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
-                          print("questions: ${questions.length}");
+
+                          Map<String, SatsQuestion> tempQuestions = {};
+                          SatsQuestionBank satsQuestionBank =
+                              SatsQuestionBank();
+                          await satsQuestionBank.init();
+                          for (var questionSubcategoryStr
+                              in SatsQuestionSubcategories.typesList
+                                  .sublist(0, 10)) {
+                            var questionSubcategory =
+                                SatsQuestionSubcategories.fromString(
+                              questionSubcategoryStr,
+                            );
+                            await satsQuestionBank.loadFromAssets(
+                              questionSubcategory,
+                              limit: 5,
+                            );
+                          }
+                          tempQuestions.addAll(
+                            await satsQuestionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories
+                                    .CentralIdeasAndDetails,
+                              ),
+                              1,
+                              true,
+                              true,
+                              difficulty: SatsQuestionDifficulty.difficultyEasy,
+                            ),
+                          );
+                          tempQuestions.addAll(
+                            await satsQuestionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories.CrossTextConnections,
+                              ),
+                              1,
+                              true,
+                              true,
+                              difficulty: SatsQuestionDifficulty.difficultyEasy,
+                            ),
+                          );
+                          tempQuestions.addAll(
+                            await satsQuestionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories
+                                    .TextStructureAndPurpose,
+                              ),
+                              1,
+                              true,
+                              true,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
+                            ),
+                          );
+                          tempQuestions.addAll(
+                            await satsQuestionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories.Transitions,
+                              ),
+                              1,
+                              true,
+                              true,
+                              difficulty: SatsQuestionDifficulty.difficultyHard,
+                            ),
+                          );
+                          tempQuestions.addAll(
+                            await satsQuestionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories.WordsInContext,
+                              ),
+                              1,
+                              true,
+                              true,
+                              difficulty: SatsQuestionDifficulty.difficultyHard,
+                            ),
+                          );
+                          print("mixed questions rw: ${tempQuestions.length}");
+                          for (int j = 0; j < tempQuestions.length; j++) {
+                            String i = tempQuestions.keys.elementAt(j);
+                            questions[i] = QuizQuestionData(
+                              {
+                                "A": tempQuestions[i]!.A,
+                                "B": tempQuestions[i]!.B,
+                                "C": tempQuestions[i]!.C,
+                                "D": tempQuestions[i]!.D,
+                              },
+                              {
+                                "A": tempQuestions[i]!.correct == "A",
+                                "B": tempQuestions[i]!.correct == "B",
+                                "C": tempQuestions[i]!.correct == "C",
+                                "D": tempQuestions[i]!.correct == "D",
+                              },
+                              {
+                                "A": tempQuestions[i]!.difficulty.getScore(),
+                                "B": tempQuestions[i]!.difficulty.getScore(),
+                                "C": tempQuestions[i]!.difficulty.getScore(),
+                                "D": tempQuestions[i]!.difficulty.getScore(),
+                              },
+                              introduction: tempQuestions[i]?.introduction,
+                              text: tempQuestions[i]?.text,
+                              text2: tempQuestions[i]?.text2,
+                              question: tempQuestions[i]!.question,
+                              explanation: tempQuestions[i]?.explanation,
+                              subcategory: tempQuestions[i]?.subcategory,
+                              difficulty: tempQuestions[i]?.difficulty,
+                            );
+                          }
                         }();
                         Navigator.of(context).push(
                           PageTransition(
                             type: PageTransitionType.fade,
                             child: LevelTest(
-                              10,
-                              testRouteBuilder: (BuildContext context, {required bool initialTest, required bool endingTest}) => FutureBuilder(
+                              15,
+                              testRouteBuilder: (BuildContext context,
+                                      {required bool initialTest,
+                                      required bool endingTest}) =>
+                                  FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
-                                  print("future questions: ${questions.length}");
-                                  if (snapshot.connectionState == ConnectionState.waiting) {
-                                    return Center(child: CircularProgressIndicator());
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return Center(
+                                      child: CircularProgressIndicator(),
+                                    );
                                   } else {
                                     return MathQuizModel(
-                                      "R&W - Exercise {}",
-                                      "R&W",
-                                      600,
+                                      "Sats - Exercise {}",
+                                      "Sats",
+                                      900,
                                       page: Home(),
                                       initialTest: true,
-                                      onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
-                                        SharedPreferences.getInstance().then((prefs) {
-                                          Map<String, List<String>> savedQuestionScores = {
-                                            for (String questionSubcategory in SatsQuestionSubcategories.typesList)
-                                              questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
+                                      onEnd: (Map<String, QuizQuestionData>
+                                              questions,
+                                          Map<String, bool> answers,
+                                          bool initialTest,
+                                          bool endingTest) {
+                                        SharedPreferences.getInstance()
+                                            .then((prefs) {
+                                          Map<String, List<String>>
+                                              savedQuestionScores = {
+                                            for (String questionSubcategory
+                                                in SatsQuestionSubcategories
+                                                    .typesList)
+                                              questionSubcategory:
+                                                  prefs.getStringList(
+                                                        "scores_questions_$questionSubcategory",
+                                                      ) ??
+                                                      [],
                                           };
 
-                                          List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
+                                          List<String>
+                                              savedProgressQuestionScores =
+                                              prefs.getStringList(
+                                                      "scores_questionsLast") ??
+                                                  List<String>.generate(
+                                                      SatsQuestionSubcategories
+                                                          .typesList.length,
+                                                      (index) => "-1");
 
-                                          for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
-                                            String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
+                                          for (int i = 0;
+                                              i <
+                                                  SatsQuestionSubcategories
+                                                      .typesList.length;
+                                              i++) {
+                                            String questionSubcategory =
+                                                SatsQuestionSubcategories
+                                                    .typesList
+                                                    .elementAt(i);
                                             int score = -1;
-                                            for (String questionId in questions.keys) {
-                                              if (questions[questionId]!.subcategory?.string == questionSubcategory) {
-                                                if (answers[questionId] ?? false) {
-                                                  score = score == -1 ? 1 : score + 1;
+                                            for (String questionId
+                                                in questions.keys) {
+                                              if (questions[questionId]!
+                                                      .subcategory
+                                                      ?.string ==
+                                                  questionSubcategory) {
+                                                if (answers[questionId] ??
+                                                    false) {
+                                                  score = score == -1
+                                                      ? 1
+                                                      : score + 1;
                                                 }
                                               }
                                             }
                                             if (score > -1) {
-                                              savedQuestionScores[questionSubcategory]?.add(score.toString());
+                                              savedQuestionScores[
+                                                      questionSubcategory]
+                                                  ?.add(score.toString());
                                             }
-                                            savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
+                                            savedProgressQuestionScores[
+                                                i] = score >=
+                                                    0.0
+                                                ? score.toString()
+                                                : savedProgressQuestionScores[
+                                                    i];
 
-                                            prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
+                                            prefs.setStringList(
+                                              "scores_questions_$questionSubcategory",
+                                              savedQuestionScores[
+                                                  questionSubcategory]!,
+                                            );
 
-                                            prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
-
+                                            prefs.setStringList(
+                                                "scores_questionsLast",
+                                                savedProgressQuestionScores);
                                           }
                                         });
                                       },
-                                      description: "The test will comprise of 6 Math Questions.",
+                                      htmlFormat: 5,
+                                      description:
+                                          "The test will comprise of 5 Math, and 5 Reading and Writing Questions.",
                                       exerciseNumber: 0,
                                       questions: questions,
-                                      oldName: questions.values.elementAt(0).subcategoryStr!,
-                                      exerciseString: questions.values.elementAt(0).subcategoryStr!,
+                                      oldName: questions.values
+                                          .elementAt(0)
+                                          .subcategoryStr!,
+                                      exerciseString: questions.values
+                                          .elementAt(0)
+                                          .subcategoryStr!,
                                     );
                                   }
                                 },
                               ),
                               initialTest: true,
-                              testActivitiesDescription: "The test will comprise of 6 Math Questions.\n\nYou can use the graphic calculator.",
-                              testScoreDescription: "We will use your score to personalize your app experience.",
+                              testActivitiesDescription:
+                                  "The test will comprise of 5 Reading and Writing Questions, and 5 Math Questions.\n\nYou can use the graphic calculator.",
+                              testScoreDescription:
+                                  "We will use your score to personalize your app experience.",
                             ),
                           ),
                         );
@@ -331,8 +480,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     ),
                     SizedBox(height: size.height / 30),
                     SatsProgramButton(
-                      text: "Reading &\nWriting Part",
-                      height: size.height * 0.14,
+                      text: "Only Reading &\nWriting Section",
+                      height: size.height * 0.1,
                       color: Theme.of(context).colorScheme.secondary,
                       name: "rw",
                       onTap: () {
@@ -346,8 +495,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           await questionBank.init();
                           questions = {};
                           for (var questionSubcategoryStr
-                          in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
-                            var questionSubcategory = SatsQuestionSubcategories.fromString(
+                              in SatsQuestionSubcategories.typesList
+                                  .sublist(0, 10)) {
+                            var questionSubcategory =
+                                SatsQuestionSubcategories.fromString(
                               questionSubcategoryStr,
                             );
                             await questionBank.loadFromAssets(
@@ -358,7 +509,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           tempQuestions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.CentralIdeasAndDetails,
+                                ESatsQuestionSubcategories
+                                    .CentralIdeasAndDetails,
                               ),
                               1,
                               true,
@@ -391,12 +543,14 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           tempQuestions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.FormStructureAndSense,
+                                ESatsQuestionSubcategories
+                                    .FormStructureAndSense,
                               ),
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           tempQuestions.addAll(
@@ -407,7 +561,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           tempQuestions.addAll(
@@ -418,18 +573,21 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           tempQuestions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.TextStructureAndPurpose,
+                                ESatsQuestionSubcategories
+                                    .TextStructureAndPurpose,
                               ),
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           tempQuestions.addAll(
@@ -501,11 +659,16 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                             type: PageTransitionType.fade,
                             child: LevelTest(
                               15,
-                              testRouteBuilder: (BuildContext context, {required bool initialTest, required bool endingTest}) => FutureBuilder(
+                              testRouteBuilder: (BuildContext context,
+                                      {required bool initialTest,
+                                      required bool endingTest}) =>
+                                  FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
-                                  if (snapshot.connectionState == ConnectionState.waiting) {
-                                    return Center(child: CircularProgressIndicator());
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return Center(
+                                        child: CircularProgressIndicator());
                                   } else {
                                     return QuizModel(
                                       "R&W - Exercise {}",
@@ -513,49 +676,103 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                       900,
                                       page: Home(),
                                       initialTest: true,
-                                      onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
-                                        SharedPreferences.getInstance().then((prefs) {
-                                          Map<String, List<String>> savedQuestionScores = {
-                                            for (String questionSubcategory in SatsQuestionSubcategories.typesList)
-                                              questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
+                                      onEnd: (Map<String, QuizQuestionData>
+                                              questions,
+                                          Map<String, bool> answers,
+                                          bool initialTest,
+                                          bool endingTest) {
+                                        SharedPreferences.getInstance()
+                                            .then((prefs) {
+                                          Map<String, List<String>>
+                                              savedQuestionScores = {
+                                            for (String questionSubcategory
+                                                in SatsQuestionSubcategories
+                                                    .typesList)
+                                              questionSubcategory:
+                                                  prefs.getStringList(
+                                                        "scores_questions_$questionSubcategory",
+                                                      ) ??
+                                                      [],
                                           };
 
-                                          List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
+                                          List<String>
+                                              savedProgressQuestionScores =
+                                              prefs.getStringList(
+                                                      "scores_questionsLast") ??
+                                                  List<String>.generate(
+                                                      SatsQuestionSubcategories
+                                                          .typesList.length,
+                                                      (index) => "-1");
 
-                                          for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
-                                            String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
+                                          for (int i = 0;
+                                              i <
+                                                  SatsQuestionSubcategories
+                                                      .typesList.length;
+                                              i++) {
+                                            String questionSubcategory =
+                                                SatsQuestionSubcategories
+                                                    .typesList
+                                                    .elementAt(i);
                                             int score = -1;
-                                            for (String questionId in questions.keys) {
-                                              if (questions[questionId]!.subcategory?.string == questionSubcategory) {
-                                                if (answers[questionId] ?? false) {
-                                                  score = score == -1 ? 1 : score + 1;
+                                            for (String questionId
+                                                in questions.keys) {
+                                              if (questions[questionId]!
+                                                      .subcategory
+                                                      ?.string ==
+                                                  questionSubcategory) {
+                                                if (answers[questionId] ??
+                                                    false) {
+                                                  score = score == -1
+                                                      ? 1
+                                                      : score + 1;
                                                 }
                                               }
                                             }
                                             if (score > -1) {
-                                              savedQuestionScores[questionSubcategory]?.add(score.toString());
+                                              savedQuestionScores[
+                                                      questionSubcategory]
+                                                  ?.add(score.toString());
                                             }
-                                            savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
+                                            savedProgressQuestionScores[
+                                                i] = score >=
+                                                    0.0
+                                                ? score.toString()
+                                                : savedProgressQuestionScores[
+                                                    i];
 
-                                            prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
+                                            prefs.setStringList(
+                                              "scores_questions_$questionSubcategory",
+                                              savedQuestionScores[
+                                                  questionSubcategory]!,
+                                            );
 
-                                            prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
-
+                                            prefs.setStringList(
+                                                "scores_questionsLast",
+                                                savedProgressQuestionScores);
                                           }
                                         });
                                       },
-                                      description: "The test will comprise of 10 Reading and Writing Questions.",
+                                      description:
+                                          "The test will comprise of 10 Reading and Writing Questions.",
                                       exerciseNumber: 0,
                                       questions: questions,
-                                      oldName: questions.values.elementAt(0).subcategory!.string,
-                                      exerciseString: questions.values.elementAt(0).subcategory!.string,
+                                      oldName: questions.values
+                                          .elementAt(0)
+                                          .subcategory!
+                                          .string,
+                                      exerciseString: questions.values
+                                          .elementAt(0)
+                                          .subcategory!
+                                          .string,
                                     );
                                   }
                                 },
                               ),
                               initialTest: true,
-                              testActivitiesDescription: "The test will comprise of 10 Reading and Writing Questions.",
-                              testScoreDescription: "We will use your score to personalize your app experience.",
+                              testActivitiesDescription:
+                                  "The test will comprise of 10 Reading and Writing Questions.",
+                              testScoreDescription:
+                                  "We will use your score to personalize your app experience.",
                             ),
                           ),
                         );
@@ -563,10 +780,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     ),
                     SizedBox(height: size.height / 30),
                     SatsProgramButton(
-                      text: "Both Parts",
-                      height: size.height * 0.1,
+                      text: "Only Math Section",
+                      height: size.height * 0.07,
                       color: Theme.of(context).colorScheme.secondary,
-                      name: "both",
+                      name: "math",
                       onTap: () {
                         setState(() {
                           startedLevelTest = true;
@@ -577,8 +794,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           await questionBank.init();
                           questions = {};
                           for (var questionSubcategoryStr
-                          in SatsQuestionSubcategories.typesList.sublist(10)) {
-                            var questionSubcategory = SatsQuestionSubcategories.fromString(
+                              in SatsQuestionSubcategories.typesList
+                                  .sublist(10)) {
+                            var questionSubcategory =
+                                SatsQuestionSubcategories.fromString(
                               questionSubcategoryStr,
                             );
                             await questionBank.loadFromAssets(
@@ -589,7 +808,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           questions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.NonlinearEquationsInOneVariableAndSystemsOfEquationsInTwoVariables,
+                                ESatsQuestionSubcategories
+                                    .NonlinearEquationsInOneVariableAndSystemsOfEquationsInTwoVariables,
                               ).string,
                               1,
                               true,
@@ -622,12 +842,27 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           questions.addAll(
                             await questionBank.getQuestions(
                               SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.RightTrianglesAndTrigonometry,
+                                ESatsQuestionSubcategories
+                                    .LinesAnglesAndTriangles,
                               ).string,
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
+                            ),
+                          );
+                          questions.addAll(
+                            await questionBank.getQuestions(
+                              SatsQuestionSubcategories(
+                                ESatsQuestionSubcategories
+                                    .RightTrianglesAndTrigonometry,
+                              ).string,
+                              1,
+                              true,
+                              true,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
                           questions.addAll(
@@ -638,177 +873,136 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               1,
                               true,
                               true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
+                              difficulty:
+                                  SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
-
-                          Map<String, SatsQuestion> tempQuestions = {};
-                          SatsQuestionBank satsQuestionBank = SatsQuestionBank();
-                          await satsQuestionBank.init();
-                          for (var questionSubcategoryStr
-                          in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
-                            var questionSubcategory = SatsQuestionSubcategories.fromString(
-                              questionSubcategoryStr,
-                            );
-                            await satsQuestionBank.loadFromAssets(
-                              questionSubcategory,
-                              limit: 5,
-                            );
-                          }
-                          tempQuestions.addAll(
-                            await satsQuestionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.CentralIdeasAndDetails,
-                              ),
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyEasy,
-                            ),
-                          );
-                          tempQuestions.addAll(
-                            await satsQuestionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.CrossTextConnections,
-                              ),
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyEasy,
-                            ),
-                          );
-                          tempQuestions.addAll(
-                            await satsQuestionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.TextStructureAndPurpose,
-                              ),
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyMedium,
-                            ),
-                          );
-                          tempQuestions.addAll(
-                            await satsQuestionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.Transitions,
-                              ),
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyHard,
-                            ),
-                          );
-                          tempQuestions.addAll(
-                            await satsQuestionBank.getQuestions(
-                              SatsQuestionSubcategories(
-                                ESatsQuestionSubcategories.WordsInContext,
-                              ),
-                              1,
-                              true,
-                              true,
-                              difficulty: SatsQuestionDifficulty.difficultyHard,
-                            ),
-                          );
-                          print("mixed questions rw: ${tempQuestions.length}");
-                          for (int j = 0; j < tempQuestions.length; j++) {
-                            String i = tempQuestions.keys.elementAt(j);
-                            questions[i] = QuizQuestionData(
-                              {
-                                "A": tempQuestions[i]!.A,
-                                "B": tempQuestions[i]!.B,
-                                "C": tempQuestions[i]!.C,
-                                "D": tempQuestions[i]!.D,
-                              },
-                              {
-                                "A": tempQuestions[i]!.correct == "A",
-                                "B": tempQuestions[i]!.correct == "B",
-                                "C": tempQuestions[i]!.correct == "C",
-                                "D": tempQuestions[i]!.correct == "D",
-                              },
-                              {
-                                "A": tempQuestions[i]!.difficulty.getScore(),
-                                "B": tempQuestions[i]!.difficulty.getScore(),
-                                "C": tempQuestions[i]!.difficulty.getScore(),
-                                "D": tempQuestions[i]!.difficulty.getScore(),
-                              },
-                              introduction: tempQuestions[i]?.introduction,
-                              text: tempQuestions[i]?.text,
-                              text2: tempQuestions[i]?.text2,
-                              question: tempQuestions[i]!.question,
-                              explanation: tempQuestions[i]?.explanation,
-                              subcategory: tempQuestions[i]?.subcategory,
-                              difficulty: tempQuestions[i]?.difficulty,
-                            );
-                          }
+                          print("questions: ${questions.length}");
                         }();
                         Navigator.of(context).push(
                           PageTransition(
                             type: PageTransitionType.fade,
                             child: LevelTest(
-                              15,
-                              testRouteBuilder: (BuildContext context, {required bool initialTest, required bool endingTest}) => FutureBuilder(
+                              10,
+                              testRouteBuilder: (BuildContext context,
+                                      {required bool initialTest,
+                                      required bool endingTest}) =>
+                                  FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
-                                  if (snapshot.connectionState == ConnectionState.waiting) {
-                                    return Center(child: CircularProgressIndicator());
+                                  print(
+                                      "future questions: ${questions.length}");
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return Center(
+                                        child: CircularProgressIndicator());
                                   } else {
                                     return MathQuizModel(
-                                      "Sats - Exercise {}",
-                                      "Sats",
-                                      900,
+                                      "R&W - Exercise {}",
+                                      "R&W",
+                                      600,
                                       page: Home(),
                                       initialTest: true,
-                                      onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
-                                        SharedPreferences.getInstance().then((prefs) {
-                                          Map<String, List<String>> savedQuestionScores = {
-                                            for (String questionSubcategory in SatsQuestionSubcategories.typesList)
-                                              questionSubcategory : prefs.getStringList("scores_questions_$questionSubcategory",) ?? [],
+                                      onEnd: (Map<String, QuizQuestionData>
+                                              questions,
+                                          Map<String, bool> answers,
+                                          bool initialTest,
+                                          bool endingTest) {
+                                        SharedPreferences.getInstance()
+                                            .then((prefs) {
+                                          Map<String, List<String>>
+                                              savedQuestionScores = {
+                                            for (String questionSubcategory
+                                                in SatsQuestionSubcategories
+                                                    .typesList)
+                                              questionSubcategory:
+                                                  prefs.getStringList(
+                                                        "scores_questions_$questionSubcategory",
+                                                      ) ??
+                                                      [],
                                           };
 
-                                          List<String> savedProgressQuestionScores = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
+                                          List<String>
+                                              savedProgressQuestionScores =
+                                              prefs.getStringList(
+                                                      "scores_questionsLast") ??
+                                                  List<String>.generate(
+                                                      SatsQuestionSubcategories
+                                                          .typesList.length,
+                                                      (index) => "-1");
 
-                                          for (int i = 0; i < SatsQuestionSubcategories.typesList.length; i++) {
-                                            String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
+                                          for (int i = 0;
+                                              i <
+                                                  SatsQuestionSubcategories
+                                                      .typesList.length;
+                                              i++) {
+                                            String questionSubcategory =
+                                                SatsQuestionSubcategories
+                                                    .typesList
+                                                    .elementAt(i);
                                             int score = -1;
-                                            for (String questionId in questions.keys) {
-                                              if (questions[questionId]!.subcategory?.string == questionSubcategory) {
-                                                if (answers[questionId] ?? false) {
-                                                  score = score == -1 ? 1 : score + 1;
+                                            for (String questionId
+                                                in questions.keys) {
+                                              if (questions[questionId]!
+                                                      .subcategory
+                                                      ?.string ==
+                                                  questionSubcategory) {
+                                                if (answers[questionId] ??
+                                                    false) {
+                                                  score = score == -1
+                                                      ? 1
+                                                      : score + 1;
                                                 }
                                               }
                                             }
                                             if (score > -1) {
-                                              savedQuestionScores[questionSubcategory]?.add(score.toString());
+                                              savedQuestionScores[
+                                                      questionSubcategory]
+                                                  ?.add(score.toString());
                                             }
-                                            savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
+                                            savedProgressQuestionScores[
+                                                i] = score >=
+                                                    0.0
+                                                ? score.toString()
+                                                : savedProgressQuestionScores[
+                                                    i];
 
-                                            prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
+                                            prefs.setStringList(
+                                              "scores_questions_$questionSubcategory",
+                                              savedQuestionScores[
+                                                  questionSubcategory]!,
+                                            );
 
-                                            prefs.setStringList("scores_questionsLast", savedProgressQuestionScores);
-
+                                            prefs.setStringList(
+                                                "scores_questionsLast",
+                                                savedProgressQuestionScores);
                                           }
                                         });
                                       },
-                                      htmlFormat: 5,
-                                      description: "The test will comprise of 5 Math, and 5 Reading and Writing Questions.",
+                                      description:
+                                          "The test will comprise of 6 Math Questions.",
                                       exerciseNumber: 0,
                                       questions: questions,
-                                      oldName: questions.values.elementAt(0).subcategoryStr!,
-                                      exerciseString: questions.values.elementAt(0).subcategoryStr!,
+                                      oldName: questions.values
+                                          .elementAt(0)
+                                          .subcategoryStr!,
+                                      exerciseString: questions.values
+                                          .elementAt(0)
+                                          .subcategoryStr!,
                                     );
                                   }
                                 },
                               ),
                               initialTest: true,
-                              testActivitiesDescription: "The test will comprise of 5 Reading and Writing Questions, and 5 Math Questions.\n\nYou can use the graphic calculator.",
-                              testScoreDescription: "We will use your score to personalize your app experience.",
+                              testActivitiesDescription:
+                                  "The test will comprise of 6 Math Questions.\n\nYou can use the graphic calculator.",
+                              testScoreDescription:
+                                  "We will use your score to personalize your app experience.",
                             ),
                           ),
                         );
                       },
                     ),
-                    SizedBox(height: size.height / 40),
                   ],
                 ),
               ),

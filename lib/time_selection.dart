@@ -55,25 +55,32 @@ class _TimeSelectionState extends State<TimeSelection> {
         12,
         testRouteBuilder: ShortTermConcentration.routeBuilder,
         initialTest: true,
-        testActivitiesDescription: "The test will comprise two activities, during which we will assess your short-term and long-term concentration abilities.",
-        testScoreDescription: "We will use your score to personalize your app experience.",
+        testActivitiesDescription:
+            "The test will comprise two activities, during which we will assess your short-term and long-term concentration abilities.",
+        testScoreDescription:
+            "We will use your score to personalize your app experience.",
       );
     } else if (skill == 'linguistic') {
       route = LevelTest(
         12,
-        nextRouteBuilder: listeningComprehensionBuilder(Random().nextInt(16), true, false),
+        nextRouteBuilder:
+            listeningComprehensionBuilder(Random().nextInt(16), true, false),
         testRouteBuilder: ListeningComprehensionVideo.routeBuilder,
         initialTest: true,
-        testActivitiesDescription: "The test will comprise two activities, through which we will assess your listening and reading levels in English.",
-        testScoreDescription: "We will use your score to personalize your app experience.",
+        testActivitiesDescription:
+            "The test will comprise two activities, through which we will assess your listening and reading levels in English.",
+        testScoreDescription:
+            "We will use your score to personalize your app experience.",
       );
     } else if (skill == 'logical') {
       route = LevelTest(
         12,
         testRouteBuilder: RiddlesTest.routeBuilder,
         initialTest: true,
-        testActivitiesDescription: "In this you will have 8 minutes to solve as many riddles as you can.",
-        testScoreDescription: "We will use your score to personalize your app experience.",
+        testActivitiesDescription:
+            "In this you will have 8 minutes to solve as many riddles as you can.",
+        testScoreDescription:
+            "We will use your score to personalize your app experience.",
       );
     } else if (skill == 'games') {
       route = Home();
@@ -94,23 +101,16 @@ class _TimeSelectionState extends State<TimeSelection> {
     );
   }
 
-  Widget createTimeButton(BuildContext context, int time) {
+  Widget createTimeButton(BuildContext context, int time,
+      {required Color color}) {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * 0.6,
-      height: size.height / 9,
+      width: size.width * 0.75,
+      height: size.height / 12,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: <Color>[
-            Theme.of(context).colorScheme.primary,
-            Theme.of(context).colorScheme.secondary,
-          ],
-          tileMode: TileMode.decal,
-        ),
+        borderRadius: BorderRadius.circular(20),
+        color: color,
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).colorScheme.shadow,
@@ -190,13 +190,29 @@ class _TimeSelectionState extends State<TimeSelection> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 0.07 * size.height),
-              createTimeButton(context, 10),
-              SizedBox(height: 0.05 * size.height),
-              createTimeButton(context, 15),
-              SizedBox(height: 0.05 * size.height),
-              createTimeButton(context, 20),
-              SizedBox(height: 0.05 * size.height),
-              createTimeButton(context, 30),
+              createTimeButton(
+                context,
+                30,
+                color: Theme.of(context).colorScheme.tertiary,
+              ),
+              SizedBox(height: 0.03 * size.height),
+              createTimeButton(
+                context,
+                20,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              SizedBox(height: 0.03 * size.height),
+              createTimeButton(
+                context,
+                15,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              SizedBox(height: 0.03 * size.height),
+              createTimeButton(
+                context,
+                10,
+                color: Theme.of(context).colorScheme.primary,
+              ),
             ],
           ),
         ),

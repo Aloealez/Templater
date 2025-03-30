@@ -70,51 +70,35 @@ class _TitlePageState extends State<TitlePage>
           child: Stack(
             children: <Widget>[
               Align(
-                alignment: Alignment(0, -0.79),
+                alignment: Alignment(0, -0.2),
+                child: ShaderMask(
+                  shaderCallback: (bounds) => LinearGradient(
+                    colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ).createShader(bounds),
+                  child: Text(
+                    "Welcome",
+                    style: TextStyle(
+                      fontFamily: 'OleoScriptSwashCaps',
+                      fontSize: 60.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0, -0.05),
                 child: Text(
-                  "BrainAce.pro",
+                  "Prepare for your SAT exam the smart way!",
                   style: TextStyle(
-                    fontSize: size.width / 10,
-                    fontWeight: FontWeight.w500,
-                    height: 1,
-                    color: Theme.of(context).colorScheme.primaryContainer,
+                    fontFamily: 'Open',
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
-                ),
-              ),
-              Align(
-                alignment: Alignment(0, -0.64),
-                child: Text(
-                  "Train Your Brain With AI",
-                  style: TextStyle(fontSize: size.width / 16),
-                ),
-              ),
-              Align(
-                alignment: Alignment(0, 0.13),
-                child: Container(
-                  margin: EdgeInsets.all(size.width / 14.0),
-                  child: AnimatedBuilder(
-                    animation: _animation,
-                    builder: (context, child) {
-                      return ShaderMask(
-                        shaderCallback: (rect) {
-                          return LinearGradient(
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                            stops: [
-                              max(_animation.value - 1, 0),
-                              min(_animation.value, 1),
-                            ],
-                            colors: [Color(0xFFFB2EBA),
-                              Theme.of(context).colorScheme.secondary,
-                            ],
-                          ).createShader(rect); //Color(0xFFFB2EBA) is the pink color of the brain  //Theme.of(context).colorScheme.secondary is the secondary color of the app
-                        },
-                        blendMode: BlendMode.modulate,
-                        child: Image.asset('assets/brain.png'),
-                      );
-                    },
-                  ),
                 ),
               ),
               Align(
@@ -124,27 +108,28 @@ class _TitlePageState extends State<TitlePage>
                   width: size.width * 0.72,
                   child: firstTime
                       ? StartButton(
-                    text: "Choose A Program",
-                    width: size.width,
-                    tooltip: 'Smart Decision!',
-                  )
+                          text: "Choose A Program",
+                          width: size.width,
+                          tooltip: 'Smart Decision!',
+                        )
                       : RedirectButton(
-                    route: FutureBuilder(
-                      future: initSharedPrefs(),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState ==
-                            ConnectionState.waiting) {
-                          return const CircularProgressIndicator();
-                        } else if (prefs.getString('skill') == 'sats') {
-                          return const Home();
-                        } else {
-                          return const Home();
-                        }
-                      },
-                    ),
-                    text: 'Continue',
-                    width: size.width,
-                  ),
+                          route: FutureBuilder(
+                            future: initSharedPrefs(),
+                            builder: (context, snapshot) {
+                              if (snapshot.connectionState ==
+                                  ConnectionState.waiting) {
+                                return const CircularProgressIndicator();
+                              } else if (prefs.getString('skill') == 'sats') {
+                                return const Home();
+                              } else {
+                                return const Home();
+                              }
+                            },
+                          ),
+                          text: 'Continue',
+                          width: size.width,
+                          color: Color(0xff4c2f65),
+                        ),
                 ),
               ),
               Align(
@@ -153,7 +138,6 @@ class _TitlePageState extends State<TitlePage>
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     style: Theme.of(context).textTheme.bodyMedium,
-
                     children: <TextSpan>[
                       TextSpan(
                         text: "By using our App, you agree to our\n",
