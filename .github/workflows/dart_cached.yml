@@ -26,9 +26,12 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - uses: cachix/install-nix-action@v2
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
+      # Install Nix with a fixed environment file method
+      - name: Install Nix
+        run: |
+          curl -L https://nixos.org/nix/install | sh
+          . /home/runner/.nix-profile/etc/profile.d/nix.sh
+          echo "NIX_PATH=/nix/var/nix/profiles/per-user/runner/channels" >> $GITHUB_ENV
 
       - name: Determine if cache should be loaded
         id: check_cache_steps
