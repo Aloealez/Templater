@@ -494,6 +494,9 @@ class _Home extends State<Home> with RouteAware {
                                     decoration: (basePlanTicked[i] == "1")
                                         ? TextDecoration.lineThrough
                                         : TextDecoration.none,
+                                    color: (basePlanTicked[i] == "1")
+                                        ? Colors.grey
+                                        : Colors.white,
                                     fontSize: size.width / 22,
                                   ),
                                 ),
@@ -620,7 +623,9 @@ class _Home extends State<Home> with RouteAware {
                                           decoration: (basePlanTicked[i] == "1")
                                               ? TextDecoration.lineThrough
                                               : TextDecoration.none,
-                                          color: Colors.grey,
+                                          color: (basePlanTicked[i] == "1")
+                                              ? Colors.grey
+                                              : Colors.white,
                                           fontSize: size.width / 22,
                                         ),
                                       ),
