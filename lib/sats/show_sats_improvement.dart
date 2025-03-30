@@ -88,7 +88,7 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
     }
   }
    void navigateToHomeScreen() {
-    Navigator.pushReplacement()
+    Navigator.pushReplacement();
    }
 
    
