@@ -92,11 +92,10 @@ class _Progress extends State<Progress> {
 
   List<CircularStackEntry> _generateChartData(int dayNum) {
     Color? dialColor = Theme.of(context).colorScheme.secondary;
-    Color? dialColor2 =
-        Theme.of(context).colorScheme.secondary.withOpacity(0.2);
+    Color? dialColor2 = Theme.of(context).colorScheme.secondary.withOpacity(1);
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
-        ? const Color.fromARGB(255, 255, 136, 255)
-        : const Color.fromARGB(255, 211, 54, 198);
+        ? const Color(0xffAD2194)
+        : const Color(0xff4C1C5F);
 
     List<CircularStackEntry> data = <CircularStackEntry>[
       CircularStackEntry(
@@ -144,11 +143,11 @@ class _Progress extends State<Progress> {
   SizedBox buildChart(BuildContext context, int dayNum) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: 60,
+      width: 0,
       height: 60,
       child: AnimatedCircularChart(
         key: keys[dayNum],
-        size: const Size(80.0, 80.0),
+        size: Size(75, 75),
         initialChartData: _generateChartData(dayNum),
         holeRadius: 10,
         chartType: CircularChartType.Radial,
@@ -157,8 +156,9 @@ class _Progress extends State<Progress> {
         holeLabel: dayNum.toString(),
         labelStyle: TextStyle(
           fontSize: 0.022 * size.height,
-          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+          color: Theme.of(context).colorScheme.onSurface,
           fontWeight: FontWeight.bold,
+          fontFamily: 'opensans',
         ),
       ),
     );
@@ -169,19 +169,19 @@ class _Progress extends State<Progress> {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             for (int j = 1; j <= 5; ++j) buildChart(context, (i - 1) * 5 + j),
           ],
         ),
-        SizedBox(height: 0.02 * size.height),
+        SizedBox(height: 0.001 * size.height),
       ],
     );
   }
 
   Column buildChartColumn(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         for (int i = 1; i <= 6; ++i) buildChartRow(context, i),
       ],
@@ -203,24 +203,28 @@ class _Progress extends State<Progress> {
               children: <Widget>[
                 Center(
                   child: Text(
-                    "Your 30 Days",
+                    "Consistency",
                     style: TextStyle(
                       fontSize: size.width / 9,
                       fontWeight: FontWeight.w500,
+                      fontFamily: 'OpenSans',
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Center(
                   child: Text(
-                    "100% Means That All The Tasks Were Completed",
-                    style: TextStyle(fontSize: size.width / 22),
+                    "100% means you did\nall of your tasks 🙂",
+                    style: TextStyle(
+                      fontSize: size.width / 23,
+                      fontFamily: 'OpenSans',
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 0.05 * size.height),
+            SizedBox(height: 0.04 * size.height),
             buildChartColumn(context),
           ],
         ),

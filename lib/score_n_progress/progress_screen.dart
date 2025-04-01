@@ -27,8 +27,7 @@ class ProgressScreen extends StatefulWidget {
     required this.exercise,
     this.txt = "You Received",
     this.pointAlternative = "Points",
-    final bool showAsPercentage = false;
-
+    final bool showAsPercentage = false,
   });
 
   @override
@@ -99,10 +98,12 @@ class _ProgressScreen extends State<ProgressScreen>
     List<ChartData> newChartData = <ChartData>[];
 
     if (widget.maxScore != null) {
-      prefs.setString("lastMaxScore_${widget.exercise}", widget.maxScore.toString());
+      prefs.setString(
+          "lastMaxScore_${widget.exercise}", widget.maxScore.toString());
       lastMaxScore = widget.maxScore!;
     } else {
-      lastMaxScore = double.parse(prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
+      lastMaxScore = double.parse(
+          prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
     }
 
     List<String> timestamps = prefs.getStringList(
@@ -261,7 +262,7 @@ class _ProgressScreen extends State<ProgressScreen>
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      "Your Accuracy Is Now Equal To ${(lastUserScore * 100 / lastMaxScore).round()}%",
+                      "Your Accuracy Is Now Equal To ${lastMaxScore > 0 ? (lastUserScore * 100 / lastMaxScore).round() : 0}%",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: size.width / 18,
@@ -341,7 +342,8 @@ class _ProgressScreen extends State<ProgressScreen>
                               ),
                               LineSeries<ChartData, DateTime>(
                                 onPointTap: (ChartPointDetails details) {
-                                  debugPrint("onPointTap wywołany! index = ${details.pointIndex}");
+                                  debugPrint(
+                                      "onPointTap wywołany! index = ${details.pointIndex}");
                                   final int? index = details.pointIndex;
                                   if (index != null &&
                                       index > 0 &&
@@ -391,9 +393,16 @@ class _ProgressScreen extends State<ProgressScreen>
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                    return lastMaxScore > 0
+                                        ? "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month"
+                                        : "0%\n$day.$month";
                                   } else if (index == chartData.length - 1) {
-                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\nNow";
+                                    final day =
+                                        data.day.day.toString().padLeft(2, '0');
+                                    final month = data.day.month
+                                        .toString()
+                                        .padLeft(2, '0');
+                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month";
                                   } else if (_tappedIndex == index) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
