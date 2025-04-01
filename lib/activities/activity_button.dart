@@ -43,11 +43,14 @@ class ActivityButton extends StatelessWidget {
     super.key,
   });
 
-
   @override
   Widget build(BuildContext context) {
-    Color color1 = leftColorGradient != null ? leftColorGradient! : Theme.of(context).colorScheme.primary;
-    Color color2 = rightColorGradient != null ? rightColorGradient! : Theme.of(context).colorScheme.secondary;
+    Color color1 = leftColorGradient != null
+        ? leftColorGradient!
+        : Theme.of(context).colorScheme.primary;
+    Color color2 = rightColorGradient != null
+        ? rightColorGradient!
+        : Theme.of(context).colorScheme.secondary;
 
     Size size = MediaQuery.of(context).size;
 
@@ -78,106 +81,106 @@ class ActivityButton extends StatelessWidget {
           );
         }
       },
-      child:
-          Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: <Color>[
-                      color1,
-                      color2,
-                    ],
-                    tileMode: TileMode.decal,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Theme.of(context).colorScheme.shadow,
-                      spreadRadius: 4,
-                      blurRadius: 6,
-                      offset: const Offset(3, 3),
-                    ),
-                  ],
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  color1,
+                  color2,
+                ],
+                tileMode: TileMode.decal,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Theme.of(context).colorScheme.shadow,
+                  spreadRadius: 4,
+                  blurRadius: 6,
+                  offset: const Offset(3, 3),
                 ),
-                height: 0.115 * size.height,
-                child: Stack(
-                  children: [
-                    if ((star && plan.contains(exerciseName)) || forceStar)
-                      Align(
-                        alignment: Alignment(0.98, -0.85),
-                        child: Transform.rotate(
-                          angle: dart_math.pi / 0.07,
-                          child: DecoratedIcon(
-                            icon: Icon(
-                              Icons.star,
-                              color: const Color.fromARGB(255, 255, 208, 0),
-                              size: 0.05 * size.height,
-                            ),
-                            decoration: const IconDecoration(border: IconBorder()),
+              ],
+            ),
+            height: 0.115 * size.height,
+            child: Stack(
+              children: [
+                if ((star && plan.contains(exerciseName)) || forceStar)
+                  Align(
+                    alignment: Alignment(0.98, -0.85),
+                    child: Icon(
+                      Icons.star_rounded,
+                      color: const Color.fromARGB(255, 255, 208, 0),
+                      size: 0.05 * size.height,
+                    ),
+                  ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        height: 0.115 * size.height,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: FadeInImage(
+                            placeholder: (Theme.of(context).brightness ==
+                                    Brightness.light)
+                                ? const AssetImage('assets/placeholder.png')
+                                : const AssetImage(
+                                    'assets/placeholder_dark.png',
+                                  ),
+                            image: AssetImage('assets/$img.png'),
+                            fit: BoxFit.cover,
+                            fadeInDuration: const Duration(milliseconds: 200),
                           ),
                         ),
                       ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            height: 0.115 * size.height,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: FadeInImage(
-                                placeholder: (Theme.of(context).brightness == Brightness.light)
-                                    ? const AssetImage('assets/placeholder.png')
-                                    : const AssetImage('assets/placeholder_dark.png'),
-                                image: AssetImage('assets/$img.png'),
-                                fit: BoxFit.cover,
-                                fadeInDuration: const Duration(milliseconds: 200),
+                      SizedBox(width: 0.039 * size.width),
+                      SizedBox(
+                        width: size.width * textWidth,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              text1,
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                                fontSize: fontSize,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
+                                fontStyle: (title)
+                                    ? FontStyle.italic
+                                    : FontStyle.normal,
                               ),
                             ),
-                          ),
-                          SizedBox(width: 0.025 * size.width),
-                          SizedBox(
-                            width: size.width * textWidth,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  text1,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    fontSize: fontSize,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.2,
-                                    fontStyle: (title) ? FontStyle.italic : FontStyle.normal,
+                            text2 == ""
+                                ? const SizedBox(width: 0, height: 0)
+                                : Text(
+                                    text2,
+                                    style: TextStyle(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimary,
+                                      fontSize: zero * fontSize,
+                                      fontWeight: FontWeight.bold,
+                                      height: 1.2,
+                                    ),
                                   ),
-                                ),
-                                text2 == ""
-                                    ? const SizedBox(width: 0, height: 0)
-                                    : Text(
-                                  text2,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    fontSize: zero * fontSize,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.2,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(height: 0.025 * size.height),
-            ],
+              ],
+            ),
           ),
+          SizedBox(height: 0.025 * size.height),
+        ],
+      ),
     );
   }
 }

@@ -38,7 +38,8 @@ class _Activities extends State<Activities> {
   }) {
     Size size = MediaQuery.of(context).size;
 
-    if (skillAllLists[skill] != null && skillAllLists[skill]!.contains(activityName)) {
+    if (skillAllLists[skill] != null &&
+        skillAllLists[skill]!.contains(activityName)) {
       return ActivityButton(
         context,
         img: "activities/$img",
@@ -126,24 +127,16 @@ class _Activities extends State<Activities> {
               child: Text(
                 "Your Activities",
                 style: TextStyle(
-                  fontSize: size.width / 12,
+                  fontSize: size.width / 9,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
-            Center(
-              child: Text(
-                "Day $day - ${formattedDate.toString()}",
-                style: TextStyle(fontSize: size.width / 17),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 0.015 * size.height),
             Expanded(
               child: ListView(
                 padding: EdgeInsets.only(
-                  top: 0.02 * size.height, // space between "Do Today" and activities list
+                  top: 0,
                 ),
                 children: [
                   Container(
@@ -156,16 +149,10 @@ class _Activities extends State<Activities> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Transform.rotate(
-                              angle: math.pi / 0.07,
-                              child: DecoratedIcon(
-                                icon: Icon(
-                                  Icons.star,
-                                  color: const Color.fromARGB(255, 255, 208, 0),
-                                  size: 0.036 * size.height,
-                                ),
-                                decoration: const IconDecoration(border: IconBorder()),
-                              ),
+                            Icon(
+                              Icons.star_rounded,
+                              color: const Color.fromARGB(255, 255, 208, 0),
+                              size: 0.036 * size.height,
                             ),
                             SizedBox(width: 0.02 * size.width),
                             Text(
@@ -178,13 +165,13 @@ class _Activities extends State<Activities> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 0.03 * size.height),
+                        SizedBox(height: 0.06 * size.height),
                         ActivityButton(
                           context,
                           img: "activities/maths_section",
-                          text1: "Math",
-                          text2: "",
-                          fontSize: 0.023 * size.height * 1,
+                          text1: "Mathematics",
+                          text2: "Scetion",
+                          fontSize: 0.03 * size.height * 1,
                           onTapRoute: const MathActivities(),
                           // onTapRoute: StartSatsMath(
                           //   subcategory: SatsQuestionSubcategories(ESatsQuestionSubcategories.NonlinearFunctions),
@@ -196,8 +183,8 @@ class _Activities extends State<Activities> {
                           context,
                           img: "activities/reading_writing_section",
                           text1: "Reading &",
-                          text2: "Writing",
-                          fontSize: 0.023 * size.height * 1,
+                          text2: "Writing Scetion",
+                          fontSize: 0.029 * size.height * 1,
                           onTapRoute: const ReadingWritingActivities(),
                           forceStar: true,
                         ),
@@ -207,7 +194,7 @@ class _Activities extends State<Activities> {
                           img: "activities/brain_train_section",
                           text1: "Brain Train",
                           text2: "Section",
-                          fontSize: 0.023 * size.height * 1,
+                          fontSize: 0.03 * size.height * 1,
                           onTapRoute: const BrainTrainActivities(),
                         ),
                       ],
