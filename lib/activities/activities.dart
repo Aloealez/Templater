@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,8 +18,55 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Activities extends StatelessWidget {
+class Activities extends StatefulWidget {
   const Activities({super.key});
+
+  @override
+  _Activities createState() => _Activities();
+}
+
+class _Activities extends State<Activities> {
+  List<String> plan = [];
+  int day = 1;
+  late SharedPreferences prefs;
+  String skill = "attention";
+
+  Future<void> getPlan() async {
+    prefs = await SharedPreferences.getInstance();
+    List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
+    if (newPlan.isNotEmpty) {
+      setState(() {
+        plan = newPlan;
+      });
+    }
+  }
+
+  Future<void> getSkill() async {
+    prefs = await SharedPreferences.getInstance();
+    setState(() {
+      skill = prefs.getString('skill') ?? "attention";
+    });
+  }
+
+  Future<void> calcDay() async {
+    prefs = await SharedPreferences.getInstance();
+    String beginningDate = prefs.getString('beginning_date') ?? '';
+    if (beginningDate.isNotEmpty) {
+      DateTime firstDay = DateTime.parse(beginningDate);
+      DateTime today = DateTime.now();
+      setState(() {
+        day = today.difference(firstDay).inDays + 1;
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getPlan();
+    getSkill();
+    calcDay();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,66 +74,62 @@ class Activities extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF77528A),
+        title: const Text(
+          'Moje Aktywności',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Welcome Title
-            Text(
-              "Welcome",
-              style: TextStyle(
-                fontSize: size.width / 8,
-                fontWeight: FontWeight.bold,
-                foreground: Paint()
-                  ..shader = const LinearGradient(
-                    colors: [
-                      Color(0xFF77528A),
-                      Color(0xFF6F699D),
-                    ],
-                  ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0)),
+            Center(
+              child: Text(
+                "Your Activities",
+                style: TextStyle(
+                  fontSize: size.width / 9,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 10),
-            // Subtitle
-            Text(
-              "Prepare for your SAT exam\nthe smart way!",
-              style: TextStyle(
-                fontSize: size.width / 22,
-                color: Colors.white70,
-                height: 1.5,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 40),
-            // Buttons
-            ActivityButton(
-              text1: "SAT Exam Prep",
-              text2: "",
-              fontSize: 18,
-              gradientColor1: const Color(0xFF77528A),
-              gradientColor2: const Color(0xFF6F699D),
-              onTapRoute: const ExampleScreen(title: "SAT Exam Prep"),
             ),
             const SizedBox(height: 20),
-            ActivityButton(
-              text1: "Memory Mastery",
-              text2: "",
-              fontSize: 18,
-              gradientColor1: const Color(0xFF6F699D),
-              gradientColor2: const Color(0xFF5E548E),
-              onTapRoute: const ExampleScreen(title: "Memory Mastery"),
-            ),
-            const SizedBox(height: 20),
-            ActivityButton(
-              text1: "Focus Training",
-              text2: "",
-              fontSize: 18,
-              gradientColor1: const Color(0xFF524A7E),
-              gradientColor2: const Color(0xFF3D3A6B),
-              onTapRoute: const ExampleScreen(title: "Focus Training"),
+            Expanded(
+              child: ListView(
+                children: [
+                  ActivityButton(
+                    text1: "SAT Exam Prep",
+                    text2: "Improve your skills!",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF77528A),
+                    gradientColor2: const Color(0xFF6F699D),
+                    onTapRoute: ExampleScreen(title: "SAT Exam Prep"),
+                  ),
+                  const SizedBox(height: 20),
+                  ActivityButton(
+                    text1: "Memory Mastery",
+                    text2: "Sharpen your memory!",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF6F699D),
+                    gradientColor2: const Color(0xFF5E548E),
+                    onTapRoute: ExampleScreen(title: "Memory Mastery"),
+                  ),
+                  const SizedBox(height: 20),
+                  ActivityButton(
+                    text1: "Focus Training",
+                    text2: "Enhance concentration",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF524A7E),
+                    gradientColor2: const Color(0xFF3D3A6B),
+                    onTapRoute: ExampleScreen(title: "Focus Training"),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -143,7 +188,6 @@ class ActivityButton extends StatelessWidget {
           ],
         ),
         padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
-        width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -170,7 +214,6 @@ class ActivityButton extends StatelessWidget {
   }
 }
 
-// Example Screen for Navigating
 class ExampleScreen extends StatelessWidget {
   final String title;
 
@@ -199,4 +242,3 @@ class ExampleScreen extends StatelessWidget {
     );
   }
 }
-

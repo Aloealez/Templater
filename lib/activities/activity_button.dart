@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Ekran główny z przyciskami aktywności
+// Ekran aktywności
 class ActivitiesScreen extends StatelessWidget {
   const ActivitiesScreen({super.key});
 
@@ -126,44 +126,34 @@ class ActivityButton extends StatelessWidget {
   final String text1;
   final String text2;
   final double fontSize;
-  final Widget? onTapRoute;
-  final Color? leftColorGradient;
-  final Color? rightColorGradient;
-  final double zero;
+  final String exerciseName;
+  final Color leftColorGradient;
+  final Color rightColorGradient;
+  final bool star;
+  final List<String> plan;
   final bool blocked;
   final double textWidth;
-  final bool title;
-  final bool star;
-  final bool forceStar;
-  final String exerciseName;
-  final String skill;
-  final List<String> plan;
+  final double zero;
 
-  ActivityButton(
-    BuildContext context, {
+  const ActivityButton({
     required this.img,
     required this.text1,
     required this.text2,
     required this.fontSize,
-    this.onTapRoute,
-    this.leftColorGradient,
-    this.rightColorGradient,
-    this.zero = 1,
-    this.blocked = false,
-    this.textWidth = 0.45,
-    this.title = false,
-    this.star = false,
-    this.forceStar = false,
-    this.exerciseName = "",
-    this.skill = "",
-    this.plan = const [],
-    super.key,
+    required this.exerciseName,
+    required this.leftColorGradient,
+    required this.rightColorGradient,
+    required this.star,
+    required this.plan,
+    required this.blocked,
+    required this.textWidth,
+    required this.zero,
   });
 
   @override
   Widget build(BuildContext context) {
-    Color color1 = leftColorGradient ?? Theme.of(context).colorScheme.primary;
-    Color color2 = rightColorGradient ?? Theme.of(context).colorScheme.secondary;
+    Color color1 = leftColorGradient;
+    Color color2 = rightColorGradient;
 
     Size size = MediaQuery.of(context).size;
 
@@ -208,7 +198,7 @@ class ActivityButton extends StatelessWidget {
             height: 0.115 * size.height,
             child: Stack(
               children: [
-                if ((star && plan.contains(exerciseName)) || forceStar)
+                if ((star && plan.contains(exerciseName)))
                   Align(
                     alignment: const Alignment(0.98, -0.85),
                     child: Transform.rotate(
@@ -231,12 +221,7 @@ class ActivityButton extends StatelessWidget {
                         height: 0.115 * size.height,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: FadeInImage(
-                            placeholder: AssetImage('assets/$img.png'),
-                            image: AssetImage('assets/$img.png'),
-                            fit: BoxFit.cover,
-                            fadeInDuration: const Duration(milliseconds: 200),
-                          ),
+                          child: Image.asset('assets/$img.png'),
                         ),
                       ),
                       SizedBox(width: 0.025 * size.width),

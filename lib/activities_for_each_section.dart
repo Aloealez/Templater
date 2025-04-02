@@ -11,8 +11,8 @@ import 'package:brainace_pro/memory/working_memory.dart';
 import 'package:brainace_pro/linguistic/scrabble.dart';
 import 'package:brainace_pro/logical_thinking/sudoku.dart';
 import 'package:brainace_pro/logical_thinking/2048/game_2048.dart';
-import 'package:brainace_pro/sats/start_sats_math.dart';
-import 'package:brainace_pro/sats/start_sats_quiz.dart';
+import 'package:brainace_pro/sats/start_sats_math.dart' as satsMath;
+import 'package:brainace_pro/sats/start_sats_quiz.dart' as satsQuiz;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/attention/short_term_concentration.dart';
@@ -35,7 +35,6 @@ var memoryBaseList = [
   [Faces, "Faces", 5],
   [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
 ];
-
 
 var memoryAllList = [
   'Memory',
@@ -103,7 +102,6 @@ var linguisticBaseList = [
   [const Hangman(), "Hangman", 5],
   [const Wordly(), "Wordly", 5],
 ];
-
 
 var linguisticAllList = [
   'Memory',
@@ -294,7 +292,8 @@ var sectionTimes = {
   'Game2048': 5,
   'SudokuGame': 10,
   'InvestingMenu': 15,
-  for (var type in SatsQuestionSubcategories.typesList) type: 5, // we give 1 minute for each SATs question (on average)
+  for (var type in SatsQuestionSubcategories.typesList)
+    type: 5, // we give 1 minute for each SATs question (on average)
 };
 
 var sectionNames = {
@@ -322,7 +321,8 @@ var sectionNames = {
   'WorkingMemory': 'Working memory',
   'MemoryGame1': 'Memory Game',
   'InvestingMenu': 'Short Learning Course',
-  for (var type in SatsQuestionSubcategories.typesList) type: SatsQuestionSubcategories.fromString(type).getName(),
+  for (var type in SatsQuestionSubcategories.typesList)
+    type: SatsQuestionSubcategories.fromString(type).getName(),
 };
 
 Map<String, Widget Function(BuildContext)> sectionActivities = {
@@ -353,16 +353,22 @@ Map<String, Widget Function(BuildContext)> sectionActivities = {
   'InvestingMenu': activityInvestingMenu,
 
   // for (var type in SatsQuestionSubcategories.typesList) type: SatsQuestionSubcategories.fromString(type).getName(),
-  for (var type in SatsQuestionSubcategories.typesList.sublist(0, 10)) type: (context) => StartSatsQuiz(subcategory: SatsQuestionSubcategories.fromString(type)),
-  for (var type in SatsQuestionSubcategories.typesList.sublist(10)) type: (context) => StartSatsMath(subcategory: SatsQuestionSubcategories.fromString(type)),
+  for (var type in SatsQuestionSubcategories.typesList.sublist(0, 10))
+    type: (context) => satsQuiz.StartSatsQuiz(
+          subcategory: SatsQuestionSubcategories.fromString(type),
+        ),
+  for (var type in SatsQuestionSubcategories.typesList.sublist(10))
+    type: (context) => satsMath.StartSatsMath(
+          subcategory: SatsQuestionSubcategories.fromString(type),
+        ),
 
-  'Sport' : activitySport,
-  'Yoga' : activityYoga,
-  'SelfReflection' : activitySelfReflection,
-  'Outdoor time' : activityMeme,
-  'Meditation' : activityMeditation,
-  'Meme' : activityMeme,
-} ;
+  'Sport': activitySport,
+  'Yoga': activityYoga,
+  'SelfReflection': activitySelfReflection,
+  'Outdoor time': activityMeme,
+  'Meditation': activityMeditation,
+  'Meme': activityMeme,
+};
 
 var wellbeing = [
   'Sport / Yoga',
