@@ -38,16 +38,16 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
 );
 
 Future<void> setThemeColor(SharedPreferences? prefs, Brightness brightness,
-    String colorKey, Color? color) async {
+    String colorKey, Color? color,) async {
   if (prefs != null) {
     print("Setting color $colorKey to $color");
     if (color == null) {
       await prefs.remove(
-          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
+          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
     } else {
       await prefs.setInt(
           "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
-          color.value);
+          color.value,);
     }
   } else {
     print("setThemeColor() Prefs is null");
@@ -64,7 +64,7 @@ Color getThemeColor(
     colorNum = null;
   } else {
     colorNum = prefs.getInt(
-        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
   }
 
   Color color = Color(0xFF000000);

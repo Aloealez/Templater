@@ -9,7 +9,7 @@ class LevelTest extends StatefulWidget {
   final int testTime;
   final FutureBuilder? nextRouteBuilder;
   final Widget Function(BuildContext context,
-      {required bool initialTest, required bool endingTest}) testRouteBuilder;
+      {required bool initialTest, required bool endingTest,}) testRouteBuilder;
   final String? testTimeDescription;
   final String testActivitiesDescription;
   final String testScoreDescription;

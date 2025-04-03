@@ -240,7 +240,7 @@ class _Home extends State<Home> with RouteAware {
         i < questionsSubcategories.length && currentTime < trainingTime;
         i++) {
           print(
-              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},");
+              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},",);
           if (SatsQuestionSubcategories.typesList
               .sublist(10)
               .contains(questionsSubcategories[i])) {

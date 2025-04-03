@@ -22,15 +22,15 @@ class ActivityButton extends StatelessWidget {
   final String skill;
   final List<String> plan;
 
-  ActivityButton(
+  const ActivityButton(
       BuildContext context, {
         required this.img,
         required this.text1,
         required this.text2,
         required this.fontSize,
         this.onTapRoute,
-        this.leftColorGradient = null,
-        this.rightColorGradient = null,
+        this.leftColorGradient,
+        this.rightColorGradient,
         this.zero = 1,
         this.blocked = false,
         this.textWidth = 0.45,
@@ -108,16 +108,10 @@ class ActivityButton extends StatelessWidget {
                 if ((star && plan.contains(exerciseName)) || forceStar)
                   Align(
                     alignment: Alignment(0.98, -0.85),
-                    child: Transform.rotate(
-                      angle: dart_math.pi / 0.07,
-                      child: DecoratedIcon(
-                        icon: Icon(
-                          Icons.star,
-                          color: const Color.fromARGB(255, 255, 208, 0),
-                          size: 0.05 * size.height,
-                        ),
-                        decoration: const IconDecoration(border: IconBorder()),
-                      ),
+                    child: Icon(
+                      Icons.star_rounded,
+                      color: const Color.fromARGB(255, 255, 208, 0),
+                      size: 0.036 * size.height,
                     ),
                   ),
                 Align(
@@ -177,7 +171,7 @@ class ActivityButton extends StatelessWidget {
           ),
           SizedBox(height: 0.025 * size.height),
         ],
-      )
+      ),
     );
   }
 }

@@ -2,7 +2,6 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:brainace_pro/attention/equations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../home.dart';
 import '../quiz/quiz_model.dart';
 

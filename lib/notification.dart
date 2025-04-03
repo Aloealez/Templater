@@ -2,6 +2,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 //import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_quizzes/flutter_quizzes.dart';
 
 
 class NotificationService {
@@ -90,7 +91,6 @@ class NotificationService {
         body,
         scheduledTime,
         notificationDetails,
-        uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         matchDateTimeComponents: DateTimeComponents.dateAndTime,
         //matchDateTimeComponents: DateTimeComponents.time,
         // androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,

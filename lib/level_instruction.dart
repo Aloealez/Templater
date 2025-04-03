@@ -27,7 +27,7 @@ class LevelInstruction extends StatefulWidget {
     this.testScoreDescription = "We will use your score to personalize your app experience.",
     this.initialTest = false,
     this.endingTest = false,
-    this.exercise = null,
+    this.exercise,
     super.key,
   });
 
@@ -85,22 +85,21 @@ class _LevelInstructionState extends State<LevelInstruction> {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 0.02 * size.height),
-                      if (widget.testTime != null)
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.access_time, size: size.width * 0.097, color: Theme.of(context).colorScheme.primaryContainer.withAlpha(200)),
-                            SizedBox(width: 0.02 * size.width),
-                            Text(
-                              // "${widget.testTime} minute${widget.testTime != 1 ? 's' : ''}",
-                              widget.testTime!,
-                              style: TextStyle(
-                                fontSize: 0.029 * size.height,
-                                height: 1.3,
-                              ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.access_time, size: size.width * 0.097, color: Theme.of(context).colorScheme.primaryContainer.withAlpha(200)),
+                          SizedBox(width: 0.02 * size.width),
+                          Text(
+                            // "${widget.testTime} minute${widget.testTime != 1 ? 's' : ''}",
+                            widget.testTime,
+                            style: TextStyle(
+                              fontSize: 0.029 * size.height,
+                              height: 1.3,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

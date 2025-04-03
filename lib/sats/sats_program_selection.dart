@@ -1,4 +1,3 @@
-import 'package:brainace_pro/buttons.dart';
 import 'package:brainace_pro/quiz/math_quiz_model.dart';
 import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +6,6 @@ import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../app_bar.dart';
 import '../home.dart';
-import '../language_level_selection.dart';
 import '../level_test.dart';
 import '../quiz/quiz_model.dart';
 
@@ -361,7 +359,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               15,
                               testRouteBuilder: (BuildContext context,
                                       {required bool initialTest,
-                                      required bool endingTest}) =>
+                                      required bool endingTest,}) =>
                                   FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
@@ -381,7 +379,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                               questions,
                                           Map<String, bool> answers,
                                           bool initialTest,
-                                          bool endingTest) {
+                                          bool endingTest,) {
                                         SharedPreferences.getInstance()
                                             .then((prefs) {
                                           Map<String, List<String>>
@@ -399,11 +397,11 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                      "scores_questionsLast") ??
+                                                      "scores_questionsLast",) ??
                                                   List<String>.generate(
                                                       SatsQuestionSubcategories
                                                           .typesList.length,
-                                                      (index) => "-1");
+                                                      (index) => "-1",);
 
                                           for (int i = 0;
                                               i <
@@ -449,7 +447,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
 
                                             prefs.setStringList(
                                                 "scores_questionsLast",
-                                                savedProgressQuestionScores);
+                                                savedProgressQuestionScores,);
                                           }
                                         });
                                       },
@@ -661,14 +659,14 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               15,
                               testRouteBuilder: (BuildContext context,
                                       {required bool initialTest,
-                                      required bool endingTest}) =>
+                                      required bool endingTest,}) =>
                                   FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
                                   if (snapshot.connectionState ==
                                       ConnectionState.waiting) {
                                     return Center(
-                                        child: CircularProgressIndicator());
+                                        child: CircularProgressIndicator(),);
                                   } else {
                                     return QuizModel(
                                       "R&W - Exercise {}",
@@ -680,7 +678,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                               questions,
                                           Map<String, bool> answers,
                                           bool initialTest,
-                                          bool endingTest) {
+                                          bool endingTest,) {
                                         SharedPreferences.getInstance()
                                             .then((prefs) {
                                           Map<String, List<String>>
@@ -698,11 +696,11 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                      "scores_questionsLast") ??
+                                                      "scores_questionsLast",) ??
                                                   List<String>.generate(
                                                       SatsQuestionSubcategories
                                                           .typesList.length,
-                                                      (index) => "-1");
+                                                      (index) => "-1",);
 
                                           for (int i = 0;
                                               i <
@@ -748,7 +746,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
 
                                             prefs.setStringList(
                                                 "scores_questionsLast",
-                                                savedProgressQuestionScores);
+                                                savedProgressQuestionScores,);
                                           }
                                         });
                                       },
@@ -886,16 +884,16 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               10,
                               testRouteBuilder: (BuildContext context,
                                       {required bool initialTest,
-                                      required bool endingTest}) =>
+                                      required bool endingTest,}) =>
                                   FutureBuilder(
                                 future: questionsF,
                                 builder: (context, snapshot) {
                                   print(
-                                      "future questions: ${questions.length}");
+                                      "future questions: ${questions.length}",);
                                   if (snapshot.connectionState ==
                                       ConnectionState.waiting) {
                                     return Center(
-                                        child: CircularProgressIndicator());
+                                        child: CircularProgressIndicator(),);
                                   } else {
                                     return MathQuizModel(
                                       "R&W - Exercise {}",
@@ -907,7 +905,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                               questions,
                                           Map<String, bool> answers,
                                           bool initialTest,
-                                          bool endingTest) {
+                                          bool endingTest,) {
                                         SharedPreferences.getInstance()
                                             .then((prefs) {
                                           Map<String, List<String>>
@@ -925,11 +923,11 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                      "scores_questionsLast") ??
+                                                      "scores_questionsLast",) ??
                                                   List<String>.generate(
                                                       SatsQuestionSubcategories
                                                           .typesList.length,
-                                                      (index) => "-1");
+                                                      (index) => "-1",);
 
                                           for (int i = 0;
                                               i <
@@ -975,7 +973,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
 
                                             prefs.setStringList(
                                                 "scores_questionsLast",
-                                                savedProgressQuestionScores);
+                                                savedProgressQuestionScores,);
                                           }
                                         });
                                       },

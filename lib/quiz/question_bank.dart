@@ -41,7 +41,7 @@ class QuestionBank {
   Future<List<String>> assetQuestionList(
       String questionSubcategory,
       ) async {
-    List<String> assets = await getAssets('$questionAssetPath/${questionSubcategory}');
+    List<String> assets = await getAssets('$questionAssetPath/$questionSubcategory');
     print("Assets: $assets");
     return assets;
   }
@@ -61,7 +61,7 @@ class QuestionBank {
           continue;
         }
         lastId = id;
-        String questionStr = await rootBundle.loadString('$questionAssetPath/${questionSubcategory}/$id', cache: false);
+        String questionStr = await rootBundle.loadString('$questionAssetPath/$questionSubcategory/$id', cache: false);
         QuizQuestionData question = QuizQuestionData.fromJsonDifficulty(jsonDecode(questionStr), SatsQuestionDifficulty.difficultyEasy);
         question.subcategoryStr = questionSubcategory;
         await setSavedQuestion(question, questionSubcategory, id);
@@ -72,7 +72,7 @@ class QuestionBank {
       }
       await setSavedQuestionIds(questionSubcategory, savedQuestionIds);
     } catch (error) {
-      print("loadFromAssets(${questionSubcategory}) Question: ${questionSubcategory}/${lastId}  error: $error");
+      print("loadFromAssets($questionSubcategory) Question: $questionSubcategory/$lastId  error: $error");
     }
   }
 
@@ -94,7 +94,7 @@ class QuestionBank {
       List<String> questionIds = response.body.split(",,");
       return questionIds.isEmpty ? null : questionIds;
     } catch (error) {
-      print("getQuestionListFromBackend(${questionSubcategory}) error: $error");
+      print("getQuestionListFromBackend($questionSubcategory) error: $error");
       return null;
     }
   }
@@ -121,7 +121,7 @@ class QuestionBank {
       // question.subcategory = questionSubcategory;
       return question;
     } catch (error) {
-      print("getQuestionFromBackend(${questionSubcategory}) error: $error");
+      print("getQuestionFromBackend($questionSubcategory) error: $error");
       return null;
     }
   }
@@ -203,7 +203,7 @@ class QuestionBank {
       String questionSubcategory, {
         int? limit,
       }) async {
-    print("Updating questions for ${questionSubcategory}.");
+    print("Updating questions for $questionSubcategory.");
     await loadFromAssets(questionSubcategory, limit: limit);
     return await updateQuestionsFromBackend(questionSubcategory, limit: limit);
   }
@@ -250,7 +250,7 @@ class QuestionBank {
       await setUsedQuestionsIds(questionSubcategory, usedQuestionIds);
     }
     if (questions.length < limit) {
-      print("Using questions from other difficulty levels. ${questionSubcategory}");
+      print("Using questions from other difficulty levels. $questionSubcategory");
       questions.addAll(await getQuestions(questionSubcategory, limit - questions.length, markAsUsed, avoidUsed));
     }
     return questions;

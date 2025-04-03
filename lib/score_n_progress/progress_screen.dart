@@ -9,7 +9,6 @@ import 'package:brainace_pro/widgets/port_home_tasks_widget_config.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:brainace_pro/activities_for_each_section.dart';
 
-import '../home.dart';
 
 class ProgressScreen extends StatefulWidget {
   final bool points;
@@ -99,11 +98,11 @@ class _ProgressScreen extends State<ProgressScreen>
 
     if (widget.maxScore != null) {
       prefs.setString(
-          "lastMaxScore_${widget.exercise}", widget.maxScore.toString());
+          "lastMaxScore_${widget.exercise}", widget.maxScore.toString(),);
       lastMaxScore = widget.maxScore!;
     } else {
       lastMaxScore = double.parse(
-          prefs.getString("lastMaxScore_${widget.exercise}") ?? "1");
+          prefs.getString("lastMaxScore_${widget.exercise}") ?? "1",);
     }
 
     List<String> timestamps = prefs.getStringList(
@@ -191,7 +190,7 @@ class _ProgressScreen extends State<ProgressScreen>
   @override
   Widget build(BuildContext context) {
     print(
-        "widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: ${lastMaxScore}");
+        "widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: $lastMaxScore",);
     Size size = MediaQuery.of(context).size;
     print("widget.userScore: ${widget.userScore}");
 
@@ -343,7 +342,7 @@ class _ProgressScreen extends State<ProgressScreen>
                               LineSeries<ChartData, DateTime>(
                                 onPointTap: (ChartPointDetails details) {
                                   debugPrint(
-                                      "onPointTap wywołany! index = ${details.pointIndex}");
+                                      "onPointTap wywołany! index = ${details.pointIndex}",);
                                   final int? index = details.pointIndex;
                                   if (index != null &&
                                       index > 0 &&

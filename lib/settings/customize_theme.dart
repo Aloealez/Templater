@@ -36,11 +36,11 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
               children: [
                 ColorPicker(
                   pickerColor: getThemeColor(
-                      prefs, Theme.of(context).brightness, colorKey),
+                      prefs, Theme.of(context).brightness, colorKey,),
                   onColorChanged: (Color color) {
                     print("Color changed to $color");
                     setThemeColor(
-                        prefs, Theme.of(context).brightness, colorKey, color)
+                        prefs, Theme.of(context).brightness, colorKey, color,)
                         .then((obj) {
                       if (context.mounted) {
                         MyApp.of(context).reloadTheme();
@@ -75,7 +75,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
               ),
               onPressed: () {
                 setThemeColor(
-                    prefs, Theme.of(context).brightness, colorKey, null)
+                    prefs, Theme.of(context).brightness, colorKey, null,)
                     .then((obj) {
                   Navigator.of(context).pop();
                   if (context.mounted) {
@@ -207,7 +207,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                       ),
                       child: const Text(
                         'Reset to Default Colors',
-                        style: TextStyle(fontSize: 20, color: const Color(0xFF7D509F)),
+                        style: TextStyle(fontSize: 20, color: Color(0xFF7D509F)),
                       ),
                     ),
                   ],

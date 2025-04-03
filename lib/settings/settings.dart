@@ -191,7 +191,7 @@ class _Settings extends State<Settings> {
                   SizedBox(height: size.height * 0.03),
                   element(context, null, "Switch Theme", 5, onTap: () {
                     MyApp.of(context).switchTheme();
-                  }),
+                  },),
                   SizedBox(height: size.height * 0.03),
                   element(context, null, "Customize Colors", 6, onTap: () {
                     Navigator.push(
@@ -201,7 +201,7 @@ class _Settings extends State<Settings> {
                         type: PageTransitionType.fade,
                       ),
                     );
-                  }),
+                  },),
                   SizedBox(height: size.height * 0.03),
                 ],
               ),

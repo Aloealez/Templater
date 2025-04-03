@@ -2,7 +2,6 @@ import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/theme/theme_colors.dart';
 import 'package:brainace_pro/well_being/meme_data.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tex/flutter_tex.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'title_page.dart';
 import 'package:flutter/services.dart';

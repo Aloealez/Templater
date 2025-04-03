@@ -740,7 +740,7 @@ class _Game2048State extends State<Game2048> {
                             ),
                           ),
                         );
-                      }).toList(),
+                      }),
                     ],
                   ),
                 ),

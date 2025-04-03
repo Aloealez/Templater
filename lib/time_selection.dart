@@ -7,7 +7,6 @@ import 'package:page_transition/page_transition.dart';
 import 'app_bar.dart';
 import 'attention/short_term_concentration.dart';
 import 'home.dart';
-import 'improvement_selection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'level_test.dart';
@@ -34,7 +33,7 @@ class _TimeSelectionState extends State<TimeSelection> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String skill = prefs.getString('skill') ?? 'sats';
 
-    var route;
+    StatefulWidget route;
     if (skill == 'sats') {
       route = SatsProgramSelection();
     } else if (skill == 'memory') {
@@ -99,7 +98,7 @@ class _TimeSelectionState extends State<TimeSelection> {
   }
 
   Widget createTimeButton(BuildContext context, int time,
-      {required Color color}) {
+      {required Color color,}) {
     Size size = MediaQuery.of(context).size;
 
     return Container(
@@ -121,7 +120,7 @@ class _TimeSelectionState extends State<TimeSelection> {
           ? Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
-                    Theme.of(context).colorScheme.onPrimary),
+                    Theme.of(context).colorScheme.onPrimary,),
               ),
             )
           : InkWell(

@@ -13,7 +13,6 @@ import 'dart:math';
 import 'dart:async';
 import '../../../app_bar.dart';
 import '../initial_score_screen.dart';
-import 'dart:math' as math;
 import 'build_answer_icon.dart';
 
 class QuizModel extends StatefulWidget {
@@ -79,9 +78,9 @@ class QuizModel extends StatefulWidget {
   final int exerciseNumber;
   final String exerciseString;
   final Function(Map<String, QuizQuestionData> questions,
-      Map<String, bool> answers, bool initialTest, bool endingTest)? onEnd;
+      Map<String, bool> answers, bool initialTest, bool endingTest,)? onEnd;
   final Future Function(Map<String, QuizQuestionData> questions,
-      Map<String, bool> answers, bool initialTest, bool endingTest)? onEndAsync;
+      Map<String, bool> answers, bool initialTest, bool endingTest,)? onEndAsync;
 
   const QuizModel(
     this.title,
@@ -128,7 +127,7 @@ class _QuizModelState extends State<QuizModel> {
   late int _time;
   Map<String, String> answers = {};
   double maxScore = 0;
-  Map<String, TextEditingController> _textEditingControllers = {};
+  final Map<String, TextEditingController> _textEditingControllers = {};
   final player = AudioPlayer();
   bool forceContinue = false;
 
@@ -188,11 +187,11 @@ class _QuizModelState extends State<QuizModel> {
     } else {
       if (widget.onEnd != null) {
         widget.onEnd!(widget.questions, getCorrectBoolArray(widget.questions, answers),
-            widget.initialTest, widget.endingTest);
+            widget.initialTest, widget.endingTest,);
       }
       if (widget.onEndAsync != null) {
         widget.onEndAsync!(widget.questions, getCorrectBoolArray(widget.questions, answers),
-            widget.initialTest, widget.endingTest);
+            widget.initialTest, widget.endingTest,);
       }
 
       double score = 0;
@@ -245,7 +244,7 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   ImageIcon buildAnswerChecks(BuildContext context, String? usersAnswer,
-      String answerLetter, String questionId) {
+      String answerLetter, String questionId,) {
     Size size = MediaQuery.of(context).size;
     if (usersAnswer == null) {
       return buildAnswerIcon(
@@ -254,13 +253,13 @@ class _QuizModelState extends State<QuizModel> {
     return (usersAnswer == answerLetter ||
             widget.questions[questionId]!.correct[answerLetter]!)
         ? buildAnswerIcon(
-            context, answerLetter, true, widget.answerLayout, widget.questions, questionId, answerLetter)
+            context, answerLetter, true, widget.answerLayout, widget.questions, questionId, answerLetter,)
         : buildAnswerIcon(
-            context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter);
+            context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter,);
   }
 
   Widget buildLetterAnswer(
-      BuildContext context, String answerLetter, String questionId) {
+      BuildContext context, String answerLetter, String questionId,) {
     Size size = MediaQuery.of(context).size;
     return ListTile(
       contentPadding: EdgeInsets.only(
@@ -313,7 +312,7 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Column buildTitle(
-      BuildContext context, Size size, int questionIndex, String questionId) {
+      BuildContext context, Size size, int questionIndex, String questionId,) {
     return Column(
       children: [
         if (!widget.centerTitle)
@@ -322,7 +321,7 @@ class _QuizModelState extends State<QuizModel> {
               Padding(
                 padding: EdgeInsets.only(left: size.width / 11),
                 child: Text(
-                  "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
+                  widget.title.replaceAll("{}", "${questionIndex + 1}"),
                   style: TextStyle(fontSize: 0.023 * size.height),
                   textAlign: TextAlign.start,
                 ),
@@ -360,7 +359,7 @@ class _QuizModelState extends State<QuizModel> {
           ),
         if (widget.centerTitle)
           Text(
-            "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
+            widget.title.replaceAll("{}", "${questionIndex + 1}"),
             style: TextStyle(
               fontSize: 0.041 * size.height,
               fontWeight: FontWeight.w600,
@@ -387,7 +386,7 @@ class _QuizModelState extends State<QuizModel> {
     return widget.inlineTaskAndAnswers
         ? Row(
             children: [
-              Text("${questionId}"),
+              Text(questionId),
               SizedBox(
                 width: size.width * 0.025,
               ),
@@ -405,7 +404,7 @@ class _QuizModelState extends State<QuizModel> {
                 widget.questions[questionId]!.question,
                 style: TextStyle(
                   fontSize: textScaleFactor(
-                          widget.questions[questionId]!.question.length) *
+                          widget.questions[questionId]!.question.length,) *
                       1.1 *
                       size.width,
                   fontWeight: FontWeight.w600,
@@ -417,7 +416,7 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildBoxAnswer(
-      BuildContext context, Size size, String questionId, String answerId) {
+      BuildContext context, Size size, String questionId, String answerId,) {
     return Column(
       children: [
         SizedBox(
@@ -451,7 +450,7 @@ class _QuizModelState extends State<QuizModel> {
                               ? [Colors.green, Colors.green]
                               : [
                                   Theme.of(context).colorScheme.primary,
-                                  Theme.of(context).colorScheme.secondary
+                                  Theme.of(context).colorScheme.secondary,
                                 ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -478,7 +477,7 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildTextInput(BuildContext context, Size size, String questionId,
-      {double fontSize = 1.0}) {
+      {double fontSize = 1.0,}) {
     return Center(
       child: TextField(
         controller: _textEditingControllers[questionId],
@@ -565,7 +564,7 @@ class _QuizModelState extends State<QuizModel> {
                     i < widget.questions[questionId]!.answers.length;
                     i++)
                   buildBoxAnswer(context, size, questionId,
-                      widget.questions[questionId]!.answers.keys.elementAt(i)),
+                      widget.questions[questionId]!.answers.keys.elementAt(i),),
               ],
             )
           : widget.answerLayout == QuizModelAnswerLayout.textInput
@@ -608,7 +607,7 @@ class _QuizModelState extends State<QuizModel> {
                             ),
                           ),
                         ],
-                      ))
+                      ),)
                   : Padding(
                       padding: EdgeInsets.only(
                         right: 0.04 * size.width,
@@ -632,7 +631,7 @@ class _QuizModelState extends State<QuizModel> {
                               context,
                               widget.questions[questionId]!.answers.keys
                                   .elementAt(i),
-                              questionId),
+                              questionId,),
                       ],
                     )
                   : Container(),
@@ -640,7 +639,7 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildQuestion(
-      BuildContext context, Size size, String questionId, int questionIndex) {
+      BuildContext context, Size size, String questionId, int questionIndex,) {
     return Column(
       children: [
         widget.inlineTaskAndAnswers
@@ -648,7 +647,7 @@ class _QuizModelState extends State<QuizModel> {
                 margin: quizMargins(size),
                 child: Row(
                   children: [
-                    this.buildQuestionTask(context, size, questionId),
+                    buildQuestionTask(context, size, questionId),
                     SizedBox(width: 0.015 * size.width),
                     SizedBox(
                       width: 0.15 * size.width,
@@ -670,9 +669,9 @@ class _QuizModelState extends State<QuizModel> {
                     if (widget.showQuestionTask ||
                         widget.answerLayout == QuizModelAnswerLayout.list ||
                         widget.answerLayout == QuizModelAnswerLayout.textInput)
-                      this.buildQuestionTask(context, size, questionId),
+                      buildQuestionTask(context, size, questionId),
                     SizedBox(height: 0.01 * size.height),
-                    this.buildAnswers(context, size, questionId),
+                    buildAnswers(context, size, questionId),
                   ],
                 ),
               ),
@@ -681,11 +680,11 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildQuestions(
-      BuildContext context, Size size, String questionId, int questionIndex) {
+      BuildContext context, Size size, String questionId, int questionIndex,) {
 
     return Column(
       children: [
-        this.buildTitle(context, size, questionIndex, questionId),
+        buildTitle(context, size, questionIndex, questionId),
         SizedBox(height: 0.035 * size.height),
         if (!widget.showMultipleQuestions)
           buildQuestion(context, size, questionId, questionIndex),
@@ -694,10 +693,10 @@ class _QuizModelState extends State<QuizModel> {
             Column(
               children: [
                 buildQuestion(
-                    context, size, widget.questions.keys.elementAt(i), i),
+                    context, size, widget.questions.keys.elementAt(i), i,),
                 SizedBox(height: 0.025 * size.height),
               ],
-            )
+            ),
       ],
     );
   }
@@ -713,7 +712,7 @@ class _QuizModelState extends State<QuizModel> {
         children: [
           Align(
             alignment: Alignment(
-                Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1),
+                Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1,),
             child: Text(
               "WS",
               style: TextStyle(
@@ -733,7 +732,7 @@ class _QuizModelState extends State<QuizModel> {
                     bottom: size.height / 9,
                   ),
                   child: buildQuestions(
-                      context, size, currentQuestionId, currentQuestionIndex)),
+                      context, size, currentQuestionId, currentQuestionIndex,),),
             ),
           ),
           if (!widget.inlineTextInputButton)

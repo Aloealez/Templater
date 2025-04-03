@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'home.dart';
 import 'main.dart';
 
 AppBar appBar(

@@ -5,8 +5,6 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import 'dart:math';
 import 'package:intl/intl.dart';
 import 'package:brainace_pro/buttons.dart';
-import '/buttons.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 class AnalysisScreen extends StatefulWidget {
   final bool percent;
@@ -14,8 +12,8 @@ class AnalysisScreen extends StatefulWidget {
 
   const AnalysisScreen({
     super.key,
-    required this.percent,
-    required this.userPoints,
+    this.percent = true,
+    this.userPoints = 0,
   });
 
   @override

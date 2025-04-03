@@ -1,5 +1,4 @@
 import 'package:audioplayers/audioplayers.dart';
-import 'package:brainace_pro/animated_time_bar.dart';
 import 'package:brainace_pro/margins.dart';
 import 'package:flutter_html_as_text/flutter_html_as_text.dart';
 import 'package:brainace_pro/animated_progress_bar.dart';
@@ -13,15 +12,13 @@ import 'dart:math';
 import 'dart:async';
 import '../../../app_bar.dart';
 import '../initial_score_screen.dart';
-import 'dart:math' as math;
 import 'build_answer_icon.dart';
-import 'package:flutter_tex/flutter_tex.dart';
 import 'package:latext/latext.dart';
 
 class GraphWidget extends StatelessWidget {
   final List<dynamic> graphs;
 
-  const GraphWidget({Key? key, required this.graphs}) : super(key: key);
+  const GraphWidget({super.key, required this.graphs});
 
   @override
   Widget build(BuildContext context) {
@@ -400,7 +397,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             ? HtmlAsTextSpan(
                 "${widget.questions[questionId]?.answers[answerLetter]}",
                 fontSize: textScaleFactor(
-                        widget.questions[questionId]!.question.length) *
+                        widget.questions[questionId]!.question.length,) *
                     0.95 *
                     size.width,
               )
@@ -411,13 +408,13 @@ class _MathQuizModelState extends State<MathQuizModel> {
                               .length,
                         ) *
                         1.3 *
-                        size.width
+                        size.width,
                 ),
                 laTeXCode: Text(
                   widget.questions[questionId]!.answers[answerLetter]!,
                   style: TextStyle(
                     fontSize: textScaleFactor(
-                            widget.questions[questionId]!.question.length) *
+                            widget.questions[questionId]!.question.length,) *
                         1.2 *
                         size.width,
                     color: Theme.of(context).colorScheme.onSurface,
@@ -473,7 +470,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             Padding(
               padding: EdgeInsets.only(left: size.width / 11),
               child: Text(
-                "${widget.title}".replaceAll("{}", "${questionIndex + 1}"),
+                widget.title.replaceAll("{}", "${questionIndex + 1}"),
                 style: TextStyle(fontSize: 0.023 * size.height),
                 textAlign: TextAlign.start,
               ),
@@ -687,7 +684,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
           margin: quizMargins(size),
           child: Column(
             children: [
-              this.buildQuestionTask(context, size, questionId),
+              buildQuestionTask(context, size, questionId),
               SizedBox(height: 0.01 * size.height),
               widget.questions[questionId]!
                               .answers
@@ -719,7 +716,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
   ) {
     return Column(
       children: [
-        this.buildTitle(context, size, questionIndex, questionId),
+        buildTitle(context, size, questionIndex, questionId),
         SizedBox(height: 0.035 * size.height),
         if (!widget.showMultipleQuestions)
           buildQuestion(context, size, questionId, questionIndex),

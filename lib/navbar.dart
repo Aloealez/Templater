@@ -1,5 +1,4 @@
 import 'package:brainace_pro/activities/activities.dart';
-import 'package:brainace_pro/analysis/analysis_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home.dart';
@@ -7,6 +6,7 @@ import 'score_n_progress/progress.dart';
 import 'activities/brain_train_activities.dart';
 import 'settings/settings.dart';
 import 'package:page_transition/page_transition.dart';
+import './analysis/analysis_screen.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});
@@ -49,9 +49,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               );
             } else if (index == 1) {
               return const Progress();
-            // } else if (index == 3) {
-            //  return const AnalysisScreen();
             } else if (index == 3) {
+             return const AnalysisScreen();
+            } else if (index == 4) {
               return const Settings();
             } else {
               return FutureBuilder(
@@ -99,8 +99,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             buildMenuIcon(0, "Activities"),
             buildMenuIcon(1, "Progress"),
             buildMenuIcon(2, "Home"),
-            // buildMenuIcon(3, "Analysis"),
-            buildMenuIcon(3, "Settings"),
+            buildMenuIcon(3, "Analysis"),
+            buildMenuIcon(4, "Settings"),
           ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,

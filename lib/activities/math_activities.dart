@@ -1,6 +1,5 @@
 import 'package:brainace_pro/activities/activity_button.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:brainace_pro/sats/start_sats_quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:brainace_pro/navbar.dart';
@@ -86,16 +85,9 @@ class _MathActivitiesState extends State<MathActivities> {
               child: Text(
                 "Your Activities",
                 style: TextStyle(
-                  fontSize: size.width / 12,
+                  fontSize: size.width / 9,
                   fontWeight: FontWeight.bold,
                 ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Center(
-              child: Text(
-                "Day $day - ${formattedDate.toString()}",
-                style: TextStyle(fontSize: size.width / 17),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -116,16 +108,10 @@ class _MathActivitiesState extends State<MathActivities> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Transform.rotate(
-                              angle: math.pi / 0.07,
-                              child: DecoratedIcon(
-                                icon: Icon(
-                                  Icons.star,
-                                  color: const Color.fromARGB(255, 255, 208, 0),
-                                  size: 0.036 * size.height,
-                                ),
-                                decoration: const IconDecoration(border: IconBorder()),
-                              ),
+                            Icon(
+                              Icons.star_rounded,
+                              color: const Color.fromARGB(255, 255, 208, 0),
+                              size: 0.036 * size.height,
                             ),
                             SizedBox(width: 0.02 * size.width),
                             Text(

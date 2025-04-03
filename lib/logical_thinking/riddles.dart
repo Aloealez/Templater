@@ -1,18 +1,14 @@
 import 'package:brainace_pro/level_instruction.dart';
-import 'package:brainace_pro/memory/memory_game1.dart';
 import 'package:brainace_pro/quiz/quiz_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:yaml/yaml.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import '../memory/memory_game2.dart';
-import '../score_n_progress/progress_screen.dart';
-import 'package:brainace_pro/buttons.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 import '/home.dart';
-import '../app_bar.dart';
 import '../title_page.dart';
 
 class RiddlesTest extends StatefulWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import '../../app_bar.dart';
 import 'content.dart';
-import '../../investing/helper_fn.dart';
+import 'package:flutter_quizzes/flutter_quizzes.dart';
 
 class Poems extends StatefulWidget {
   const Poems({super.key});

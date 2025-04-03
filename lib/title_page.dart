@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'buttons.dart';
 import 'home.dart';
-import 'dart:math';
 
 class TitlePage extends StatefulWidget {
   const TitlePage({super.key, required this.title});
