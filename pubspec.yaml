@@ -139,7 +139,156 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-#    - family: OpenSans
+    - family: SFPro
+      fonts:
+        # Display Fonts
+        - asset: assets/fonts/SF-Pro-Display-Black.otf
+          weight: 900
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-BlackItalic.otf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Bold.otf
+          weight: 700
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Heavy.otf
+          weight: 800
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-HeavyItalic.otf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Light.otf
+          weight: 300
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-LightItalic.otf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Medium.otf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-MediumItalic.otf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Regular.otf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-RegularItalic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Semibold.otf
+          weight: 600
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-SemiboldItalic.otf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Thin.otf
+          weight: 100
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-ThinItalic.otf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display-Ultralight.otf
+          weight: 200
+          style: normal
+        - asset: assets/fonts/SF-Pro-Display-UltralightItalic.otf
+          weight: 200
+          style: italic
+
+        # Rounded Fonts
+        - asset: assets/fonts/SF-Pro-Rounded-Black.otf
+          weight: 900
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Bold.otf
+          weight: 700
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Heavy.otf
+          weight: 800
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Light.otf
+          weight: 300
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Medium.otf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Regular.otf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Semibold.otf
+          weight: 600
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Thin.otf
+          weight: 100
+          style: normal
+        - asset: assets/fonts/SF-Pro-Rounded-Ultralight.otf
+          weight: 200
+          style: normal
+
+        # Text Fonts
+        - asset: assets/fonts/SF-Pro-Text-Black.otf
+          weight: 900
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-BlackItalic.otf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Bold.otf
+          weight: 700
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Heavy.otf
+          weight: 800
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-HeavyItalic.otf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Light.otf
+          weight: 300
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-LightItalic.otf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-MediumItalic.otf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-RegularItalic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Semibold.otf
+          weight: 600
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-SemiboldItalic.otf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Thin.otf
+          weight: 100
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-ThinItalic.otf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/SF-Pro-Text-Ultralight.otf
+          weight: 200
+          style: normal
+        - asset: assets/fonts/SF-Pro-Text-UltralightItalic.otf
+          weight: 200
+          style: italic
+
+        # General Fonts
+        - asset: assets/fonts/SF-Pro-Italic.ttf
+          style: italic
+        - asset: assets/fonts/SF-Pro.ttf
+          style: normal
+
+    #    - family: OpenSans
 #      fonts:
 #        - asset: assets/fonts/OpenSans-Regular.ttf
 #          style: normal
@@ -193,58 +342,6 @@ flutter:
     #    - family: Arial
     #      fonts:
     #        - asset: assets/fonts/Arial.ttf
-    - family: OpenSauceOne
-      fonts:
-        - asset: assets/fonts/OpenSauceOne-Medium.ttf
-          style: normal
-        - asset: assets/fonts/OpenSauceOne-Bold.ttf
-#          style: bold
-        - asset: assets/fonts/OpenSauceOne-MediumItalic.ttf
-          style: italic
-    - family: OpenSauceSans
-      fonts:
-        - asset: assets/fonts/OpenSauceSans-Regular.ttf
-          style: normal
-        - asset: assets/fonts/OpenSauceSans-Bold.ttf
-          weight: 700
-        - asset: assets/fonts/OpenSauceSans-Italic.ttf
-          style: italic
-    - family: OpenSauceTwo
-      fonts:
-        - asset: assets/fonts/OpenSauceTwo-Regular.ttf
-          style: normal
-        - asset: assets/fonts/OpenSauceTwo-Italic.ttf
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-Light.ttf
-          weight: 300
-        - asset: assets/fonts/OpenSauceTwo-LightItalic.ttf
-          weight: 300
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/OpenSauceTwo-MediumItalic.ttf
-          weight: 500
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/OpenSauceTwo-SemiBoldItalic.ttf
-          weight: 600
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-Bold.ttf
-          weight: 700
-        - asset: assets/fonts/OpenSauceTwo-BoldItalic.ttf
-          weight: 700
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-ExtraBold.ttf
-          weight: 800
-        - asset: assets/fonts/OpenSauceTwo-ExtraBoldItalic.ttf
-          weight: 800
-          style: italic
-        - asset: assets/fonts/OpenSauceTwo-Black.ttf
-          weight: 900
-        - asset: assets/fonts/OpenSauceTwo-BlackItalic.ttf
-          weight: 900
-          style: italic
     - family: Horizon
       fonts:
         - asset: "assets/Horizon-updated/Horizon.otf"
