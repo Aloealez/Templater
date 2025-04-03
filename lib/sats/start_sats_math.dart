@@ -1,4 +1,3 @@
-import 'package:brainace_pro/quiz/math_coming_soon.dart';
 import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../app_bar.dart';
 import 'dart:math' as math;
 import '../home.dart';
-import '../quiz/quiz_model.dart';
 import '../quiz/math_quiz_model.dart';
 
 class StartSatsMath extends StatefulWidget {

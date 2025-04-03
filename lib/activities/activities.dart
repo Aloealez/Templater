@@ -1,64 +1,35 @@
-import 'package:brainace_pro/activities/math_activities.dart';
-import 'package:brainace_pro/activities/reading_writing_activities.dart';
-import 'package:brainace_pro/activities/brain_train_activities.dart';
-import 'package:brainace_pro/quiz/math_coming_soon.dart';
-import 'package:brainace_pro/sats/start_sats_math.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:brainace_pro/navbar.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:brainace_pro/activities_for_each_section.dart';
-import 'package:icon_decoration/icon_decoration.dart';
-import 'dart:math' as math;
-import 'package:flutter_quizzes/src/sats/sats_question_types_rw.dart';
-import 'package:brainace_pro/quiz/math_coming_soon.dart';
 
-import '../margins.dart';
-import 'activity_button.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Activities(),
+    );
+  }
+}
 
 class Activities extends StatefulWidget {
   const Activities({super.key});
 
   @override
-  State<Activities> createState() => _Activities();
+  _Activities createState() => _Activities();
 }
 
 class _Activities extends State<Activities> {
   List<String> plan = [];
-
-  Widget createActivity2(
-    BuildContext context,
-    String img,
-    String txt1,
-    String txt2,
-    Widget route,
-    String activityName, {
-    double fontSize = 1,
-    double zero = 1,
-  }) {
-    Size size = MediaQuery.of(context).size;
-
-    if (skillAllLists[skill] != null && skillAllLists[skill]!.contains(activityName)) {
-      return ActivityButton(
-        context,
-        img: "activities/$img",
-        text1: txt1,
-        text2: txt2,
-        fontSize: 0.023 * size.height * fontSize,
-        onTapRoute: route,
-        zero: zero,
-        blocked: false,
-        textWidth: 0.45,
-        title: false,
-        star: true,
-        exerciseName: activityName,
-        skill: skill,
-        plan: plan,
-      );
-    }
-
-    return const SizedBox();
-  }
+  int day = 1;
+  late SharedPreferences prefs;
+  String skill = "attention";
 
   Future<void> getPlan() async {
     prefs = await SharedPreferences.getInstance();
@@ -67,151 +38,95 @@ class _Activities extends State<Activities> {
       setState(() {
         plan = newPlan;
       });
-      return;
     }
   }
-
-  int day = 1;
-  late SharedPreferences prefs;
-  String skill = "attention";
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
     setState(() {
-      if (prefs.getString('skill') != null) {
-        skill = prefs.getString('skill')!;
-      } else {
-        skill = "attention";
-      }
+      skill = prefs.getString('skill') ?? "attention";
     });
   }
 
   Future<void> calcDay() async {
-    DateTime firstDay = DateTime.now();
-    DateTime today = DateTime.now();
     prefs = await SharedPreferences.getInstance();
-    String beginningDate = prefs.getString('beginning_date')!;
-    firstDay = DateTime.parse(beginningDate);
-
-    setState(() {
-      day = today.difference(firstDay).inDays + 1;
-    });
+    String beginningDate = prefs.getString('beginning_date') ?? '';
+    if (beginningDate.isNotEmpty) {
+      DateTime firstDay = DateTime.parse(beginningDate);
+      DateTime today = DateTime.now();
+      setState(() {
+        day = today.difference(firstDay).inDays + 1;
+      });
+    }
   }
 
   @override
   void initState() {
     super.initState();
+    getPlan();
     getSkill();
     calcDay();
-    getPlan();
   }
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    DateTime now = DateTime.now();
-    var formatter = DateFormat('E. dd MMM');
-    String formattedDate = formatter.format(now);
-
     return Scaffold(
-      body: Container(
-        margin: activitiesMargins(size),
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF77528A),
+        title: const Text(
+          'Moje Aktywności',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(height: 0.005 * size.height),
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Center(
               child: Text(
                 "Your Activities",
                 style: TextStyle(
-                  fontSize: size.width / 12,
+                  fontSize: size.width / 9,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
-            Center(
-              child: Text(
-                "Day $day - ${formattedDate.toString()}",
-                style: TextStyle(fontSize: size.width / 17),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 0.015 * size.height),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView(
-                padding: EdgeInsets.only(
-                  top: 0.02 * size.height, // space between "Do Today" and activities list
-                ),
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(
-                      left: size.width / 20,
-                      right: size.width / 20,
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Transform.rotate(
-                              angle: math.pi / 0.07,
-                              child: DecoratedIcon(
-                                icon: Icon(
-                                  Icons.star,
-                                  color: const Color.fromARGB(255, 255, 208, 0),
-                                  size: 0.036 * size.height,
-                                ),
-                                decoration: const IconDecoration(border: IconBorder()),
-                              ),
-                            ),
-                            SizedBox(width: 0.02 * size.width),
-                            Text(
-                              "Do Today",
-                              style: TextStyle(
-                                fontSize: 0.023 * size.height,
-                                color: Theme.of(context).colorScheme.onSurface,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 0.03 * size.height),
-                        ActivityButton(
-                          context,
-                          img: "activities/maths_section",
-                          text1: "Math",
-                          text2: "",
-                          fontSize: 0.023 * size.height * 1,
-                          onTapRoute: const MathActivities(),
-                          // onTapRoute: StartSatsMath(
-                          //   subcategory: SatsQuestionSubcategories(ESatsQuestionSubcategories.NonlinearFunctions),
-                          // ),
-                          forceStar: false,
-                        ),
-                        // SizedBox(height: 0.02 * size.height),
-                        ActivityButton(
-                          context,
-                          img: "activities/reading_writing_section",
-                          text1: "Reading &",
-                          text2: "Writing",
-                          fontSize: 0.023 * size.height * 1,
-                          onTapRoute: const ReadingWritingActivities(),
-                          forceStar: true,
-                        ),
-                        // SizedBox(height: 0.01 * size.height),
-                        ActivityButton(
-                          context,
-                          img: "activities/brain_train_section",
-                          text1: "Brain Train",
-                          text2: "Section",
-                          fontSize: 0.023 * size.height * 1,
-                          onTapRoute: const BrainTrainActivities(),
-                        ),
-                      ],
-                    ),
+                  ActivityButton(
+                    text1: "SAT Exam Prep",
+                    text2: "Improve your skills!",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF77528A),
+                    gradientColor2: const Color(0xFF6F699D),
+                    onTapRoute: ExampleScreen(title: "SAT Exam Prep"),
+                  ),
+                  const SizedBox(height: 20),
+                  ActivityButton(
+                    text1: "Memory Mastery",
+                    text2: "Sharpen your memory!",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF6F699D),
+                    gradientColor2: const Color(0xFF5E548E),
+                    onTapRoute: ExampleScreen(title: "Memory Mastery"),
+                  ),
+                  const SizedBox(height: 20),
+                  ActivityButton(
+                    text1: "Focus Training",
+                    text2: "Enhance concentration",
+                    fontSize: 18.0,
+                    gradientColor1: const Color(0xFF524A7E),
+                    gradientColor2: const Color(0xFF3D3A6B),
+                    onTapRoute: ExampleScreen(title: "Focus Training"),
                   ),
                 ],
               ),
@@ -219,7 +134,111 @@ class _Activities extends State<Activities> {
           ],
         ),
       ),
-      bottomNavigationBar: const MyBottomNavigationBar(),
+    );
+  }
+}
+
+class ActivityButton extends StatelessWidget {
+  final String text1;
+  final String text2;
+  final double fontSize;
+  final Widget? onTapRoute;
+  final Color gradientColor1;
+  final Color gradientColor2;
+
+  const ActivityButton({
+    required this.text1,
+    required this.text2,
+    required this.fontSize,
+    this.onTapRoute,
+    this.gradientColor1 = const Color(0xFF77528A),
+    this.gradientColor2 = const Color(0xFF6F699D),
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        if (onTapRoute != null) {
+          Navigator.push(
+            context,
+            PageTransition(
+              type: PageTransitionType.fade,
+              child: onTapRoute!,
+              reverseDuration: const Duration(milliseconds: 100),
+            ),
+          );
+        }
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25.0),
+          gradient: LinearGradient(
+            colors: [gradientColor1, gradientColor2],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              blurRadius: 8,
+              offset: const Offset(4, 4),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              text1,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            if (text2.isNotEmpty)
+              Text(
+                text2,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.8),
+                  fontSize: fontSize * 0.9,
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ExampleScreen extends StatelessWidget {
+  final String title;
+
+  const ExampleScreen({required this.title, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF77528A),
+        title: Text(
+          title,
+          style: const TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Center(
+        child: Text(
+          "Welcome to $title!",
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        ),
+      ),
     );
   }
 }

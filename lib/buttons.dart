@@ -30,7 +30,9 @@ class _StartButtonState extends State<StartButton> {
   Future<void> initMemory() async {
     prefs = await SharedPreferences.getInstance();
     await prefs.remove('plan');
-    prefs.setString('beginning_date', DateTime(now.year, now.month, now.day).toString(),
+    prefs.setString(
+      'beginning_date',
+      DateTime(now.year, now.month, now.day).toString(),
     );
   }
 
@@ -43,8 +45,8 @@ class _StartButtonState extends State<StartButton> {
           context,
           MaterialPageRoute(
             builder: (context) => ImprovementSelection(
-              // widget.text,
-            ),
+                // widget.text,
+                ),
           ),
         );
       },
@@ -58,7 +60,7 @@ class _StartButtonState extends State<StartButton> {
           color: hovered
               ? Theme.of(context).colorScheme.tertiaryFixed
               : Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(45),
+          borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
               color: Theme.of(context).colorScheme.shadow,
@@ -113,7 +115,7 @@ class _InstructionsButtonState extends State<InstructionsButton> {
       style: ElevatedButton.styleFrom(
         backgroundColor: Theme.of(context).colorScheme.surface,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(20),
         ),
       ),
       child: Text(
@@ -136,7 +138,7 @@ class RedirectButton extends StatefulWidget {
   final void Function() onClick;
   final bool clearAllWindows;
   final Color? color;
-final double fontScale;
+  final double fontScale;
 
   const RedirectButton({
     super.key,
@@ -163,6 +165,7 @@ class _RedirectButtonState extends State<RedirectButton> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return InkWell(
       onHover: (value) {
         if (widget.requirement) {
@@ -213,13 +216,14 @@ class _RedirectButtonState extends State<RedirectButton> {
         }
       },
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: size.width / 50),
         decoration: BoxDecoration(
           color: toRed
               ? Theme.of(context).colorScheme.error
               : hovered
                   ? Theme.of(context).colorScheme.tertiaryFixed
                   : widget.color ?? Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(69),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
               color: Theme.of(context).colorScheme.shadow,
@@ -236,8 +240,8 @@ class _RedirectButtonState extends State<RedirectButton> {
                   child: Text(
                     widget.text,
                     style: TextStyle(
-                        fontSize: widget.width / 15 * widget.fontScale,
-                        fontWeight: FontWeight.w600,
+                      fontSize: widget.width / 15 * widget.fontScale,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
@@ -277,11 +281,9 @@ class ImprovementButton extends StatefulWidget {
     super.key,
     required this.text,
     required this.width,
-    required this.img,
     required this.name,
     required this.color,
-  });
-
+  }) : img = '';
   @override
   State<ImprovementButton> createState() => _ImprovementButtonState();
 }
@@ -293,26 +295,16 @@ class _ImprovementButtonState extends State<ImprovementButton> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     late SharedPreferences prefs;
-    //initMemory();
+    // initMemory();
     return SizedBox(
       //flex: 1,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: size.width / 6,
-            width: size.width / 6,
-            child: Image.asset(
-              "assets/improvement_selection/${widget.img}",
-              height: size.width / 6,
-            ),
-          ),
-          SizedBox(
-            width: size.width / 40,
-          ),
-          SizedBox(
             height: size.height / 15,
-            width: size.width * 0.6,
+            width: size.width * 0.8,
             child: InkWell(
               onHover: (value) {
                 setState(() {
@@ -343,7 +335,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
               child: Container(
                 width: widget.width * 0.5,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(20),
                   // gradient: LinearGradient(
                   //   begin: Alignment.topLeft,
                   //   end: Alignment.bottomRight,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 ColorScheme defaultLightColors = const ColorScheme.light(
   primary: Color(0xFF8D97FC),
   onPrimary: Color(0xFFFFFFFF),
@@ -15,18 +14,16 @@ ColorScheme defaultLightColors = const ColorScheme.light(
   onSurface: Color(0xFF000000),
   error: Color.fromARGB(255, 238, 51, 38),
   shadow: Color.fromARGB(70, 6, 13, 104),
-
   primaryFixed: Color(0xFF5E17EB),
   primaryFixedDim: Color(0xFF0E148D),
 );
 
-
 ColorScheme defaultDarkColors = const ColorScheme.dark(
-  primary: Color(0xFF6b418d),
+  primary: Color(0xFF4C2E64),
   onPrimary: Color(0xFFFFFFFF),
-  secondary: Color(0xFF7D509D),
+  secondary: Color(0xFF4C2E64),
   onSecondary: Color(0xFFFFFFFF),
-  tertiary: Color(0xFFB83197),
+  tertiary: Color(0xFF3C4688),
   onTertiary: Color(0xFFFFFFFF),
   primaryContainer: Color(0xFFE7D1FF),
   onPrimaryContainer: Color(0xFF000000),
@@ -34,80 +31,114 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
   onSurface: Color(0xFFFFFFFF),
   error: Color.fromARGB(255, 234, 31, 17),
   shadow: Color.fromARGB(0, 0, 0, 0),
-
   primaryFixedDim: Color(0xFFECA0FF),
   secondaryContainer: Color(0xff652f8f),
   tertiaryFixed: Color.fromARGB(255, 102, 148, 190),
   onTertiaryFixed: Colors.white,
 );
 
-
-Future<void> setThemeColor(SharedPreferences? prefs, Brightness brightness, String colorKey, Color? color) async {
+Future<void> setThemeColor(SharedPreferences? prefs, Brightness brightness,
+    String colorKey, Color? color) async {
   if (prefs != null) {
     print("Setting color $colorKey to $color");
     if (color == null) {
-      await prefs.remove("theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
+      await prefs.remove(
+          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
     } else {
-      await prefs.setInt("theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey", color.value);
+      await prefs.setInt(
+          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+          color.value);
     }
   } else {
     print("setThemeColor() Prefs is null");
   }
 }
 
-
-Color getThemeColor(SharedPreferences? prefs, Brightness brightness, String colorKey,) {
+Color getThemeColor(
+  SharedPreferences? prefs,
+  Brightness brightness,
+  String colorKey,
+) {
   int? colorNum;
   if (prefs == null) {
     colorNum = null;
   } else {
-    colorNum = prefs.getInt("theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
+    colorNum = prefs.getInt(
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey");
   }
 
   Color color = Color(0xFF000000);
   if (colorNum == null) {
     switch (colorKey) {
       case "primary":
-        color = brightness == Brightness.dark ? defaultDarkColors.primary : defaultLightColors.primary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.primary
+            : defaultLightColors.primary;
         break;
       case "onPrimary":
-        color = brightness == Brightness.dark ? defaultDarkColors.onPrimary : defaultLightColors.onPrimary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.onPrimary
+            : defaultLightColors.onPrimary;
         break;
       case "secondary":
-        color = brightness == Brightness.dark ? defaultDarkColors.secondary : defaultLightColors.secondary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.secondary
+            : defaultLightColors.secondary;
         break;
       case "onSecondary":
-        color = brightness == Brightness.dark ? defaultDarkColors.onSecondary : defaultLightColors.onSecondary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.onSecondary
+            : defaultLightColors.onSecondary;
         break;
       case "tertiary":
-        color = brightness == Brightness.dark ? defaultDarkColors.tertiary : defaultLightColors.tertiary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.tertiary
+            : defaultLightColors.tertiary;
         break;
       case "onTertiary":
-        color = brightness == Brightness.dark ? defaultDarkColors.onTertiary : defaultLightColors.onTertiary;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.onTertiary
+            : defaultLightColors.onTertiary;
         break;
       case "primaryContainer":
-        color = brightness == Brightness.dark ? defaultDarkColors.primaryContainer : defaultLightColors.primaryContainer;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.primaryContainer
+            : defaultLightColors.primaryContainer;
         break;
       case "onPrimaryContainer":
-        color = brightness == Brightness.dark ? defaultDarkColors.onPrimaryContainer : defaultLightColors.onPrimaryContainer;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.onPrimaryContainer
+            : defaultLightColors.onPrimaryContainer;
         break;
       case "surface":
-        color = brightness == Brightness.dark ? defaultDarkColors.surface : defaultLightColors.surface;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.surface
+            : defaultLightColors.surface;
         break;
       case "onSurface":
-        color = brightness == Brightness.dark ? defaultDarkColors.onSurface : defaultLightColors.onSurface;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.onSurface
+            : defaultLightColors.onSurface;
         break;
       case "error":
-        color = brightness == Brightness.dark ? defaultDarkColors.error : defaultLightColors.error;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.error
+            : defaultLightColors.error;
         break;
       case "shadow":
-        color = brightness == Brightness.dark ? defaultDarkColors.shadow : defaultLightColors.shadow;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.shadow
+            : defaultLightColors.shadow;
         break;
       case "primaryFixed":
-        color = brightness == Brightness.dark ? defaultDarkColors.primaryFixed : defaultLightColors.primaryFixed;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.primaryFixed
+            : defaultLightColors.primaryFixed;
         break;
       case "primaryFixedDim":
-        color = brightness == Brightness.dark ? defaultDarkColors.primaryFixedDim : defaultLightColors.primaryFixedDim;
+        color = brightness == Brightness.dark
+            ? defaultDarkColors.primaryFixedDim
+            : defaultLightColors.primaryFixedDim;
         break;
     }
   } else {
@@ -116,7 +147,6 @@ Color getThemeColor(SharedPreferences? prefs, Brightness brightness, String colo
 
   return color;
 }
-
 
 ColorScheme createDarkColorScheme(SharedPreferences? prefs) {
   Brightness brightness = Brightness.dark;
@@ -137,7 +167,6 @@ ColorScheme createDarkColorScheme(SharedPreferences? prefs) {
     shadow: getThemeColor(prefs, brightness, "shadow"),
   );
 }
-
 
 ColorScheme createLightColorScheme(SharedPreferences? prefs) {
   Brightness brightness = Brightness.light;

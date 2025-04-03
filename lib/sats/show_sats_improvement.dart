@@ -85,6 +85,9 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
       prefs.clear();
     }
   }
+   void navigateToHomeScreen() {
+    Navigator.pushReplacement();
+   }
 
   @override
   Widget build(BuildContext context) {
