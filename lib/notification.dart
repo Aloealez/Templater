@@ -90,6 +90,7 @@ class NotificationService {
         body,
         scheduledTime,
         notificationDetails,
+        uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         matchDateTimeComponents: DateTimeComponents.dateAndTime,
         //matchDateTimeComponents: DateTimeComponents.time,
         // androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,

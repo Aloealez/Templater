@@ -74,12 +74,7 @@ class _Home extends State<Home> with RouteAware {
   }
 
   Future<void> checkAndUpdateStreak() async {
-    // Check if today's tasks are all done
-    bool allDoneToday = plan.isNotEmpty &&
-        plan.every(
-                (task) => prefs.getString("${task}TickedDay$currentDay") == "1");
-
-    streakInDanger = !allDoneToday;
+    bool allDoneToday = true; // Define or calculate this variable as needed
     int currentDay = day; // Use the 'day' variable or calculate currentDay
     int lastUpdateDay = prefs?.getInt('last_update_day') ?? 0;
     int currentStreak = prefs?.getInt('streak_days') ?? 0;
@@ -90,12 +85,12 @@ class _Home extends State<Home> with RouteAware {
 
     if (currentDay > 1) {
       List<String>? yesterdayPlan =
-          prefs?.getStringList("basePlanDay${currentDay - 1}");
+      prefs?.getStringList("basePlanDay${currentDay - 1}");
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
           yesterdayPlan.every(
-            (task) =>
-                prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
+                (task) =>
+            prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
           );
 
       if (!allDoneYesterday && !allDoneToday) {
@@ -433,9 +428,9 @@ class _Home extends State<Home> with RouteAware {
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
       if ((skillSats == "both" &&
-              SatsQuestionSubcategories.typesList
-                  .sublist(0, 10)
-                  .contains(plan[i])) ||
+          SatsQuestionSubcategories.typesList
+              .sublist(0, 10)
+              .contains(plan[i])) ||
           skillSats != "both") {
         minutes += sectionTimes[plan[i]]!;
       }
@@ -443,7 +438,7 @@ class _Home extends State<Home> with RouteAware {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        () {
+            () {
           return Column(
             children: [
               for (int i = 0; i < plan.length; i++)
@@ -561,7 +556,7 @@ class _Home extends State<Home> with RouteAware {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            () {
+                () {
               if (skillSats == "both") {
                 List<String> listPlan = [];
                 for (int i = 0; i < plan.length; i++) {
@@ -764,7 +759,7 @@ class _Home extends State<Home> with RouteAware {
                   child: Text(
                     "Plan For Today",
                     style:
-                        TextStyle(fontSize: size.width / 9, letterSpacing: 1.5),
+                    TextStyle(fontSize: size.width / 9, letterSpacing: 1.5),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -800,7 +795,7 @@ class _Home extends State<Home> with RouteAware {
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
                                 text:
-                                    "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
+                                "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w700,
@@ -900,3 +895,4 @@ class _Home extends State<Home> with RouteAware {
     );
   }
 }
+
