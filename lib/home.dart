@@ -558,17 +558,6 @@ class _Home extends State<Home> with RouteAware {
           children: [
                 () {
               if (skillSats == "both") {
-                List<String> listPlan = [];
-                for (int i = 0; i < plan.length; i++) {
-                  if (skillSats == "both" &&
-                      !SatsQuestionSubcategories.typesList.sublist(10).contains(
-                        plan[i],
-                      )) {
-                    continue;
-                  }
-                  listPlan.add(plan[i]);
-                }
-                print("ListPlan: $listPlan");
                 return Column(
                   children: [
                     for (int i = 0; i < plan.length; i++)
@@ -640,57 +629,7 @@ class _Home extends State<Home> with RouteAware {
                   ],
                 );
               } else {
-                return Column(
-                  children: [
-                    for (int i = 0; i < wellbeing.length; i++)
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            wellBeingTicked[i] = !wellBeingTicked[i];
-                            if (wellBeingTicked[i]) {
-                              points += wellbeingTimes[wellbeing[i]]!;
-                            } else {
-                              points -= wellbeingTimes[wellbeing[i]]!;
-                            }
-                            calcValues();
-                          });
-                          setWellBeingTicked();
-                          updatePoints();
-                        },
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: size.width / 15,
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: size.width / 12,
-                                    child: Icon(
-                                      wellBeingTicked[i]
-                                          ? Icons.circle
-                                          : Icons.circle_outlined,
-                                      size: size.width / 15,
-                                      color: const Color(0xff51ceda),
-                                    ),
-                                  ),
-                                  SizedBox(width: size.width / 40),
-                                  Flexible(
-                                    child: Text(
-                                      wellbeing[i],
-                                      style: TextStyle(
-                                        fontSize: size.width / 22,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 0.01 * size.height),
-                          ],
-                        ),
-                      ),
-                  ],
-                );
+                return Container();
               }
             }(),
           ],
