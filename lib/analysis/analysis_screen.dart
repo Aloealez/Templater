@@ -1,198 +1,295 @@
+import 'package:brainace_pro/score_n_progress/score_axis.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 import '/navbar.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'dart:math';
 import 'package:intl/intl.dart';
 import 'package:brainace_pro/buttons.dart';
+import 'yourProgress_screen.dart';
 
 class AnalysisScreen extends StatefulWidget {
-  final bool percent;
-  final double userPoints;
+  final double initScore;
+  final Map<String, dynamic> questions;
 
-  const AnalysisScreen({
-    super.key,
-    this.percent = true,
-    this.userPoints = 0,
-  });
+  AnalysisScreen({required this.initScore, required this.questions});
 
   @override
-  State<AnalysisScreen> createState() => _AnalysisScreenState();
+  _AnalysisScreenState createState() => _AnalysisScreenState();
 }
 
+late SharedPreferences prefs;
+
 class _AnalysisScreenState extends State<AnalysisScreen> {
-  late double userLevel;
-  bool isTextVisible = false;
-
-  late List<_ChartData> data;
-  late TooltipBehavior _tooltip;
-
-  List<double> normalDistr(double start, double end, double step, {double mu = 0, double sigma = 1.5}) {
-    return List.generate(
-      ((end - start) / step).ceil(),
-      (index) {
-        double x = start + index * step;
-        return (1 / (sigma * sqrt(2 * pi))) *
-            exp((-1 * pow((x - mu), 2)) / (2 * pow(sigma, 2)));
-      },
-    );
-  }
-
-  double getDailyUserLevel() {
-    final String today = DateFormat('yyyy-MM-dd').format(DateTime.now());
-    final Random random = Random(today.hashCode);
-    return (random.nextInt(151) + 150) / 1000;
-  }
-
   @override
   void initState() {
     super.initState();
-    userLevel = getDailyUserLevel();
+    _initializePreferences();
+  }
 
-    Future.delayed(const Duration(milliseconds: 300), () {
-      setState(() {
-        isTextVisible = true;
-      });
+  String userScores = "0"; // Default value
+
+  Future<void> _initializePreferences() async {
+    prefs = await SharedPreferences.getInstance();
+    String? userScore =
+        (prefs != null ? prefs.getString("scores_questionsLast") : null) ?? "0";
+    setState(() {
+      userScores = userScore ?? "0";
     });
-
-    List<double> distribution = normalDistr(-5, 5, 0.05);
-    data = List.generate(
-      distribution.length,
-      (index) => _ChartData(index.toString(), distribution[index]),
-    );
-
-    _tooltip = TooltipBehavior(enable: true);
   }
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-        child: Stack(
-          children: <Widget>[
-            _buildCenteredContent(size),
-            _buildBottomButton(size),
+        width: size.width,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(height: 40),
+            buildTitle("Current Score Prediction", size),
+            const SizedBox(height: 20),
+            buildScoreContainer(size),
+            const SizedBox(height: 30),
+            buildTitle("Your Progress", size),
+            const SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        Progress(),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return ScaleTransition(
+                        scale: Tween<double>(begin: 0.8, end: 1.0)
+                            .animate(animation),
+                        child: child,
+                      );
+                    },
+                  ),
+                );
+              },
+              child: buildProgressContainer(context, size),
+            ),
+            const SizedBox(height: 30),
+            buildTitle("Weak Points And Strengths", size),
+            const SizedBox(height: 20),
+            buildWeaknessContainer(),
           ],
         ),
       ),
-      bottomNavigationBar: const MyBottomNavigationBar(),
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 
-  Widget _buildCenteredContent(Size size) {
-    return Align(
-      alignment: Alignment.center,
+  Widget buildTitle(String title, Size size) {
+    return Text(
+      title,
+      style: TextStyle(
+        fontSize: size.width / 20,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+
+  Widget buildScoreContainer(Size size) {
+    return Container(
+      width: containerWidth,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+      ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          _buildAnimatedText(
-            text: "Great Job 🥳",
-            fontSize: size.width / 12,
+          Container(
+            child: Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: userScores,
+                    style: TextStyle(
+                      fontSize: size.width / 10,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontFamily: "open sans",
+                    ),
+                  ),
+                  TextSpan(
+                    text: "/ 1600 composite",
+                    style: TextStyle(fontSize: size.width / 16),
+                  ),
+                ],
+              ),
+            ),
           ),
-          _buildAnimatedText(
-            text: widget.percent
-                ? "You got [${widget.userPoints.toStringAsFixed(1)}%]."
-                : "You got [${widget.userPoints.toStringAsFixed(0)}] points.",
-            fontSize: size.width / 15,
-          ),
-          _buildChart(size),
-          _buildComparisonText(size),
+          SizedBox(height: 8),
+          buildScoreText("0", "0", size),
         ],
       ),
     );
   }
 
-  Widget _buildAnimatedText({required String text, required double fontSize}) {
-    return AnimatedOpacity(
-      opacity: isTextVisible ? 1.0 : 0.0,
-      duration: const Duration(milliseconds: 300),
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: fontSize,
-          color: Theme.of(context).colorScheme.primaryFixedDim,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildChart(Size size) {
-    return SizedBox(
-      height: size.height / 5,
-      child: SfCartesianChart(
-        primaryXAxis: CategoryAxis(
-          majorTickLines: const MajorTickLines(size: 0),
-          axisLine: AxisLine(
-            width: 2,
-            color: Theme.of(context).colorScheme.primaryFixedDim,
-          ),
-        ),
-        primaryYAxis: NumericAxis(
-          minimum: 0,
-          maximum: 0.4,
-          majorTickLines: const MajorTickLines(size: 0),
-        ),
-        tooltipBehavior: _tooltip,
-        series: <CartesianSeries<_ChartData, String>>[
-          AreaSeries<_ChartData, String>(
-            dataSource: data.sublist(0, (data.length * userLevel).floor()),
-            xValueMapper: (_ChartData data, _) => data.x,
-            yValueMapper: (_ChartData data, _) => data.y,
-            color: Theme.of(context).colorScheme.secondaryContainer.withAlpha(79),
-          ),
-          LineSeries<_ChartData, String>(
-            dataSource: data,
-            xValueMapper: (_ChartData data, _) => data.x,
-            yValueMapper: (_ChartData data, _) => data.y,
-            color: Theme.of(context).colorScheme.primaryFixedDim,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildComparisonText(Size size) {
-    return Column(
+  Widget buildScoreText(String primary, String secondary, Size size) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildAnimatedText(
-          text: "You got a better score than ${(userLevel * 100).toStringAsFixed(1)}% of the users.",
-          fontSize: size.width / 20,
+        Text.rich(
+          TextSpan(
+            children: [
+              TextSpan(
+                text: primary,
+                style: TextStyle(
+                  fontSize: size.width / 10,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              TextSpan(
+                text: "\tMath",
+                style: TextStyle(fontSize: size.width / 16),
+              ),
+            ],
+          ),
         ),
-        SizedBox(height: size.height / 20),
-        _buildAnimatedText(
-          text: "${(100 - (userLevel * 100)).toStringAsFixed(1)}% of the app users got a better score than you.",
-          fontSize: size.width / 20,
+        const SizedBox(width: 20),
+        Text.rich(
+          TextSpan(
+            children: [
+              TextSpan(
+                text: secondary,
+                style: TextStyle(
+                  fontSize: size.width / 10,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              TextSpan(
+                text: "\tR&W",
+                style: TextStyle(
+                  fontSize: size.width / 16,
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
   }
 
-  Widget _buildBottomButton(Size size) {
-    return Positioned(
-      bottom: 50,
-      left: 0,
-      right: 0,
-      child: Center(
-        child: SizedBox(
-          width: size.width * 0.75,
-          height: size.height * 0.05,
-          child: RedirectButton(
-            text: 'Continue',
-            width: size.width,
-          ),
+  Widget buildProgressContainer(BuildContext context, Size size) {
+    return Container(
+      width: containerWidth,
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        decoration: BoxDecoration(
+          border: Border(left: BorderSide(color: Colors.white, width: 2)),
+        ),
+        child: Column(
+          children: [
+            buildProgressBar(context, "Before", 500),
+            SizedBox(height: size.height / 40),
+            buildProgressBar(context, "Now", 160),
+          ],
         ),
       ),
     );
   }
+
+  Widget buildProgressBar(BuildContext context, String label, int score) {
+    final size = MediaQuery.of(context).size;
+    double progress = score / 1600;
+
+    return Container(
+      width: containerWidth,
+      height: size.height / 30,
+      child: Row(
+        children: [
+          Container(
+            width: containerWidth * progress,
+            height: size.height / 30,
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ),
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.only(left: 8),
+            child: Text(
+              score.toString(),
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(color: Colors.black, fontSize: 14),
+            ),
+          ),
+          SizedBox(width: size.width / 20),
+          Text(
+            label,
+            style:
+                TextStyle(fontFamily: 'opensan', fontWeight: FontWeight.w700),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildWeaknessContainer() {
+    return Container(
+      width: containerWidth,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          buildWeakPoint(Icons.sentiment_very_satisfied, "Great"),
+          buildWeakPoint(Icons.person, "Weak"),
+        ],
+      ),
+    );
+  }
+
+  Widget buildWeakPoint(IconData icon, String label) {
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 30,
+          backgroundColor: Colors.white24,
+          child: Icon(icon, size: 30, color: Colors.white),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          ),
+        ),
+      ],
+    );
+  }
 }
 
-class _ChartData {
-  _ChartData(this.x, this.y);
-
-  final String x;
-  final double y;
-}
+const double containerWidth = 300;
+const double containerHeight = 200;
