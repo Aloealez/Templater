@@ -1,5 +1,6 @@
 import 'package:brainace_pro/score_n_progress/score_axis.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 import '/navbar.dart';
@@ -9,34 +10,66 @@ import 'package:intl/intl.dart';
 import 'package:brainace_pro/buttons.dart';
 import 'yourProgress_screen.dart';
 
-class AnalysisScreen extends StatefulWidget {
-  final double initScore;
-  final Map<String, dynamic> questions;
 
-  AnalysisScreen({required this.initScore, required this.questions});
+class AnalysisScreen extends StatefulWidget {
+
+  const AnalysisScreen({super.key});
 
   @override
   _AnalysisScreenState createState() => _AnalysisScreenState();
 }
 
-late SharedPreferences prefs;
-
 class _AnalysisScreenState extends State<AnalysisScreen> {
+  late SharedPreferences prefs;
+  int scoreMath = 0;
+  int scoreRW = 0;
+
+  Future<Map<String, double>> GetSatsPoints() async {
+    List<String> questionSubcategoriesPointsStr =
+        prefs.getStringList("scores_questionsLast") ??
+            List<String>.generate(
+              SatsQuestionSubcategories.typesList.length,
+                  (index) => "-1",
+            );
+    print("questionSubcategoriesPointsStr: $questionSubcategoriesPointsStr");
+    List<String> questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
+    Map<String, double> questionsSubcategoriesPoints = {
+      for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
+        SatsQuestionSubcategories.typesList[i]:
+        double.parse(questionSubcategoriesPointsStr[i]),
+    };
+    return questionsSubcategoriesPoints;
+  }
+
   @override
   void initState() {
     super.initState();
-    _initializePreferences();
+    _initScores();
   }
 
-  String userScores = "0"; // Default value
-
-  Future<void> _initializePreferences() async {
+  Future<void> _initScores() async {
     prefs = await SharedPreferences.getInstance();
-    String? userScore =
-        (prefs != null ? prefs.getString("scores_questionsLast") : null) ?? "0";
-    setState(() {
-      userScores = userScore ?? "0";
-    });
+    var scores = await GetSatsPoints();
+
+    for (var i = 0; i < 10; i++) {
+      int score = (scores[SatsQuestionSubcategories.typesList[i]] ?? 0).toInt();
+      if (score > 0) {
+        scoreRW += score;
+      }
+    }
+    for (var i = 10; i < SatsQuestionSubcategories.typesList.length; i++) {
+      int score = (scores[SatsQuestionSubcategories.typesList[i]] ?? 0).toInt();
+      if (score > 0) {
+        scoreMath += score;
+      }
+    }
+    scoreMath = (scoreMath * 800 / (19 * 4)).round();
+    scoreRW = (scoreRW * 800 / (10 * 5)).round();
+
+    print("Score Math: $scoreMath");
+    print("Score RW: $scoreRW");
+
+    setState(() {});
   }
 
   @override
@@ -118,12 +151,11 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: userScores,
+                    text: "${scoreRW + scoreMath}",
                     style: TextStyle(
                       fontSize: size.width / 10,
                       color: Colors.white,
                       fontWeight: FontWeight.w800,
-                      fontFamily: "open sans",
                     ),
                   ),
                   TextSpan(
@@ -149,7 +181,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: primary,
+                text: "${scoreMath}",
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w800,
@@ -167,7 +199,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: secondary,
+                text: "${scoreRW}",
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w800,
@@ -207,7 +239,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           children: [
             buildProgressBar(context, "Before", 500),
             SizedBox(height: size.height / 40),
-            buildProgressBar(context, "Now", 160),
+            buildProgressBar(context, "Now", scoreMath + scoreRW),
           ],
         ),
       ),

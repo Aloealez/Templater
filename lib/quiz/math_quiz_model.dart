@@ -332,12 +332,18 @@ class _MathQuizModelState extends State<MathQuizModel> {
     String questionId,
   ) {
     Size size = MediaQuery.of(context).size;
-    if (usersAnswer == null) {
-      return Text(
+    return Container(
+      margin: EdgeInsets.only(
+        left: size.width * 0.035,
+      ),
+      child:
+      Text(
         "${answerLetter}.",
         style: TextStyle(
             color: Theme.of(context).colorScheme.onSurface, fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.4 * size.width),
-      );
+      ),
+    );
+    if (usersAnswer == null) {
       return buildAnswerIcon(
         context,
         answerLetter,
@@ -377,11 +383,20 @@ class _MathQuizModelState extends State<MathQuizModel> {
     print("Answer letter: ${widget.questions[questionId]!.answers[answerLetter]}");
     Size size = MediaQuery.of(context).size;
     return Card(
-      color: Color(0xFF260F30),
+      margin: EdgeInsets.only(
+        top: size.height * 0.015,
+      ),
+      color: selectedOption == null ? Color(0xDD260F30) :
+      widget.questions[questionId]!.correct[answerLetter]! ? Colors.green :
+      selectedOption == answerLetter ? Colors.red :
+      Color(0xDD260F30),
+      // !(selectedOption == answerLetter || widget.questions[questionId]!.correct[answerLetter]!) ?  :
+      // ( ??= false) ? Colors.green : Colors.red,
+          // : Colors.red,
       child: ListTile(
         contentPadding: EdgeInsets.only(
           left: 0.008 * size.width,
-          right: 0.012 * size.width,
+          right: 0.025 * size.width,
         ),
         leading: buildAnswerChecks(
           context,
@@ -621,46 +636,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
     );
   }
 
-  Widget _buildMultiColumnAnswers(
-    BuildContext context,
-    Size size,
-    String questionId,
-  ) {
-    return Container(
-      // margin: quizMargins(size),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              children: [
-                for (int i = 0; i < widget.questions[questionId]!.answers.length / 2; i++)
-                  buildLetterAnswer(
-                    context,
-                    widget.questions[questionId]!.answers.keys.elementAt(i),
-                    questionId,
-                  ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                for (int i = (widget.questions[questionId]!.answers.length / 2).toInt(); i < widget.questions[questionId]!.answers.length; i++)
-                  buildLetterAnswer(
-                    context,
-                    widget.questions[questionId]!.answers.keys.elementAt(i),
-                    questionId,
-                  ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget buildQuestion(
     BuildContext context,
     Size size,
@@ -675,11 +650,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             children: [
               buildQuestionTask(context, size, questionId),
               SizedBox(height: 0.01 * size.height),
-              widget.questions[questionId]!.answers.values.elementAt(0).length -
-                          widget.questions[questionId]!.answers.values.elementAt(0).allMatches("\$").length * 4 <
-                      10
-                  ? _buildMultiColumnAnswers(context, size, questionId)
-                  : _buildSingleColumnAnswers(context, size, questionId),
+              _buildSingleColumnAnswers(context, size, questionId),
             ],
           ),
         ),

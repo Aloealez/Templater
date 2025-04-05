@@ -50,6 +50,9 @@ class _StartSatsMathState extends State<StartSatsMath> {
       await questionBank.init();
       questionBank.updateQuestions(widget.subcategory.string, limit: 4);
       questions = await questionBank.getQuestions(widget.subcategory.string, 4, true, true, difficulty: difficulty);
+      for (int i = 0; i < questions.length; i++) {
+        questions[questions.keys.elementAt(i)]!.subcategory = widget.subcategory;
+      }
       print("got questions: ${questions.length}");
     }();
 
@@ -112,16 +115,21 @@ class _StartSatsMathState extends State<StartSatsMath> {
                                     String questionSubcategory = SatsQuestionSubcategories.typesList.elementAt(i);
                                     int score = -1;
                                     for (String questionId in questions.keys) {
+                                      print("question subcategory: ${questions[questionId]!.subcategory?.string}   $questionSubcategory");
                                       if (questions[questionId]!.subcategory?.string == questionSubcategory) {
+                                        print("Answers: $answers");
                                         if (answers[questionId] ?? false) {
                                           score = score == -1 ? 1 : score + 1;
+                                          print("Score: $score");
                                         }
                                       }
                                     }
                                     if (score > -1) {
                                       savedQuestionScores[questionSubcategory]?.add(score.toString());
                                     }
+                                    print("Before: $questionSubcategory, $score");
                                     savedProgressQuestionScores[i] = score >= 0.0 ? score.toString() : savedProgressQuestionScores[i];
+                                    print("After: $questionSubcategory, ${savedProgressQuestionScores[i]}");
 
                                     prefs.setStringList("scores_questions_$questionSubcategory", savedQuestionScores[questionSubcategory]!,);
 
