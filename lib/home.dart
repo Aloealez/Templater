@@ -35,6 +35,7 @@ class _Home extends State<Home> with RouteAware {
   int procent = 0;
   int streakDays = 0;
   bool streakInDanger = false;
+  double auria = 0.0;
 
   double summ = 100.0;
   double value = 40.0;
@@ -60,6 +61,7 @@ class _Home extends State<Home> with RouteAware {
     DateTime firstDay = DateTime.now();
     DateTime today = DateTime.now();
     prefs ??= await SharedPreferences.getInstance();
+    auria = prefs?.getDouble('auria') ?? 0.0;
     if (prefs == null) {
       throw Exception("Failed to initialize SharedPreferences");
     }
@@ -806,7 +808,7 @@ class _Home extends State<Home> with RouteAware {
                               ),
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
-                                text: "32 Auria",
+                                text: "${auria.floor()} Auria",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w700,

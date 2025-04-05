@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../app_bar.dart';
 import 'dart:math' as math;
 import '../home.dart';
+import '../quiz/math_quiz_model.dart';
 import '../quiz/quiz_model.dart';
 
 class StartSatsQuiz extends StatefulWidget {
@@ -96,10 +97,11 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                           if (snapshot.connectionState == ConnectionState.waiting) {
                             return Center(child: CircularProgressIndicator());
                           } else {
-                            return QuizModel(
+                            return MathQuizModel(
                               "Exercise",
                               "R&W",
                               300,
+                              htmlFormat: 0,
                               page: Home(),
                               onEnd: (Map<String, QuizQuestionData> questions, Map<String, bool> answers, bool initialTest, bool endingTest) {
                                 SharedPreferences.getInstance().then((prefs) {

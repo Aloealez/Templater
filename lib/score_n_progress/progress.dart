@@ -147,7 +147,7 @@ class _Progress extends State<Progress> {
       height: 60,
       child: AnimatedCircularChart(
         key: keys[dayNum],
-        size: Size(75, 75),
+        size: Size(80, 80),
         initialChartData: _generateChartData(dayNum),
         holeRadius: 10,
         chartType: CircularChartType.Radial,
@@ -158,7 +158,6 @@ class _Progress extends State<Progress> {
           fontSize: 0.022 * size.height,
           color: Theme.of(context).colorScheme.onSurface,
           fontWeight: FontWeight.bold,
-          fontFamily: 'opensans',
         ),
       ),
     );
@@ -169,12 +168,14 @@ class _Progress extends State<Progress> {
     return Column(
       children: [
         Row(
+          spacing: size.width * 0.02,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            for (int j = 1; j <= 5; ++j) buildChart(context, (i - 1) * 5 + j),
+            for (int j = 1; j <= 5; ++j)
+              buildChart(context, (i - 1) * 5 + j),
           ],
         ),
-        SizedBox(height: 0.001 * size.height),
+        SizedBox(height: 0.012 * size.height),
       ],
     );
   }
@@ -207,7 +208,6 @@ class _Progress extends State<Progress> {
                     style: TextStyle(
                       fontSize: size.width / 9,
                       fontWeight: FontWeight.w500,
-                      fontFamily: 'OpenSans',
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -217,14 +217,13 @@ class _Progress extends State<Progress> {
                     "100% means you did\nall of your tasks 🙂",
                     style: TextStyle(
                       fontSize: size.width / 23,
-                      fontFamily: 'OpenSans',
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 0.04 * size.height),
+            SizedBox(height: 0.05 * size.height),
             buildChartColumn(context),
           ],
         ),

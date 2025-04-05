@@ -57,7 +57,6 @@ ImageIcon buildAnswerIcon(
         ? Colors.green
         : Colors.red
         : Theme.of(context).colorScheme.onSurface,
-    // size: 0.062 * MediaQuery.of(context).size.width,
     size: textScaleFactor(questions[questionId]!.question.length) *
         MediaQuery.of(context).size.width *
         1.7,
