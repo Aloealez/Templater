@@ -15,7 +15,9 @@ AppBar appBar(
     backgroundColor: Theme.of(context).colorScheme.surface.withOpacity(0),
     leading: canReturn
         ? IconButton(
-            color: (!meditation) ? Theme.of(context).colorScheme.onSurface : Colors.white,
+            color: (!meditation)
+                ? Theme.of(context).colorScheme.onSurface
+                : Colors.white,
             icon: const Icon(Icons.close),
             onPressed: () {
               // if (route == null) {
@@ -31,7 +33,7 @@ AppBar appBar(
               if (screen != null) {
                 Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(builder: (context) => screen),
-                      (Route<dynamic> route) => false,
+                  (Route<dynamic> route) => false,
                 );
                 return;
               }
@@ -45,6 +47,8 @@ AppBar appBar(
                 );
               }
             },
+            splashRadius: 1,
+            highlightColor: Colors.white.withOpacity(0.1),
           )
         : null,
     title: Row(
