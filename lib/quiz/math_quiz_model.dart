@@ -543,7 +543,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                     1.1 *
                     size.width,
                 color: Theme.of(context).colorScheme.onSurface,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
               ),
             ),
           );
@@ -601,7 +601,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: size.width * 0.07,
-                    fontWeight: FontWeight.w800,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

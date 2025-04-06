@@ -173,7 +173,7 @@ class _TimeSelectionState extends State<TimeSelection> {
                 "Pick Your Daily",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -181,7 +181,7 @@ class _TimeSelectionState extends State<TimeSelection> {
                 "Practice Time",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                     height: 0.9,
                 ),
                 textAlign: TextAlign.center,

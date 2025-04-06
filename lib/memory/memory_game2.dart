@@ -223,7 +223,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
                     "${flipped.toString()} Cards Flipped",
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.start,
                   ),
@@ -238,7 +238,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
                     "${_time.toString()} s",
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.start,
                   ),

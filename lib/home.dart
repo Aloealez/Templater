@@ -737,7 +737,7 @@ class _Home extends State<Home> with RouteAware {
                                 "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w600,
                                   letterSpacing: size.width * 0.001,
                                   color: streakInDanger
                                       ? const Color(0xfff8b4b4)
@@ -774,7 +774,7 @@ class _Home extends State<Home> with RouteAware {
                                 text: "$procent%",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w600,
                                   color: Color(0xff4961c5),
                                   letterSpacing: size.width * 0.001,
                                 ),
@@ -809,7 +809,7 @@ class _Home extends State<Home> with RouteAware {
                                 text: "${auria.floor()} Auria",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w600,
                                   color: Color(0xff59cfb7),
                                   letterSpacing: size.width * 0.001,
                                 ),

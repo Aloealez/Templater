@@ -142,7 +142,7 @@ class _Game2048State extends State<Game2048> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: size.width / 15,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                       color: Theme.of(context).brightness == Brightness.light
                           ? Colors.black
                           : Colors.white,
@@ -494,7 +494,7 @@ class _Game2048State extends State<Game2048> {
                         "2048",
                         style: TextStyle(
                           fontSize: size.width / 8,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       const InstructionsButton(Info2048()),
@@ -528,7 +528,7 @@ class _Game2048State extends State<Game2048> {
                                 "SCORE\n$score",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w800,
+                                  fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                   shadows: [
                                     Shadow(
@@ -563,7 +563,7 @@ class _Game2048State extends State<Game2048> {
                                 "BEST\n$bestScore",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w800,
+                                  fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                   shadows: [
                                     Shadow(
@@ -733,7 +733,7 @@ class _Game2048State extends State<Game2048> {
                                 tile.value == 0 ? "" : "${tile.value}",
                                 style: TextStyle(
                                   fontSize: tileSize / 3,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                 ),
                               ),

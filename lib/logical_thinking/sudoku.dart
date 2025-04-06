@@ -178,7 +178,7 @@ class _SudokuGame extends State<SudokuGame> {
             indx.toString(),
             style: TextStyle(
               fontSize: 0.07 * size.width,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               color: (Theme.of(context).brightness == Brightness.light)
                   ? Theme.of(context).colorScheme.primary
                   : Theme.of(context).colorScheme.onSurface,
@@ -260,7 +260,7 @@ class _SudokuGame extends State<SudokuGame> {
                             style: TextStyle(
                               fontSize: 0.06 * min(size.width, size.height),
                               color: Colors.white,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],

@@ -66,7 +66,7 @@ class _Wordly extends State<Wordly> {
           style: TextStyle(
             color: Colors.white,
             fontSize: 0.04 * size.height,
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
@@ -201,7 +201,7 @@ class _Wordly extends State<Wordly> {
                           text: "You Lose!\n\n",
                           style: TextStyle(
                             fontSize: size.width / 20,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w600,
                           ),
                           children: <TextSpan>[
                             TextSpan(
@@ -213,7 +213,7 @@ class _Wordly extends State<Wordly> {
                             TextSpan(
                               text: '"$noun"',
                               style: TextStyle(
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 fontSize: size.width / 20,
                               ),
                             ),
@@ -256,7 +256,7 @@ class _Wordly extends State<Wordly> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: size.width / 25,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),

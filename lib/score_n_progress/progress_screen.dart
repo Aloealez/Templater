@@ -266,7 +266,7 @@ class _ProgressScreen extends State<ProgressScreen>
                       style: TextStyle(
                         fontSize: size.width / 18,
                         color: Theme.of(context).colorScheme.onSurface,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),

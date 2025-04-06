@@ -157,7 +157,7 @@ class _Progress extends State<Progress> {
         labelStyle: TextStyle(
           fontSize: 0.022 * size.height,
           color: Theme.of(context).colorScheme.onSurface,
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );
@@ -207,7 +207,7 @@ class _Progress extends State<Progress> {
                     "Consistency",
                     style: TextStyle(
                       fontSize: size.width / 9,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.center,
                   ),

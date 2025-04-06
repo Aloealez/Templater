@@ -85,7 +85,7 @@ GestureDetector createDay(
                                   'Check internet connection',
                                   style: TextStyle(
                                     fontSize: 16,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
@@ -154,7 +154,7 @@ class _Sport extends State<Sport> {
                     "Sport",
                     style: TextStyle(
                       fontSize: size.width / 8,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -197,7 +197,7 @@ class _Sport extends State<Sport> {
                               'Variety',
                               style: TextStyle(
                                 fontSize: 0.022 * size.height,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.italic,
                                 height: 1,
                               ),
@@ -215,7 +215,7 @@ class _Sport extends State<Sport> {
                               'Consistency',
                               style: TextStyle(
                                 fontSize: 0.022 * size.height,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 fontStyle: FontStyle.italic,
                                 height: 1,
                               ),

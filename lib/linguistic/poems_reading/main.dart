@@ -46,7 +46,7 @@ class _Poems extends State<Poems> {
                     poems[poemIndex]["title"].toString(),
                     style: TextStyle(
                       fontSize: 0.07 * size.width,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.center,
                   ),

@@ -75,7 +75,7 @@ class BookDescriptionPage extends StatelessWidget {
                                   "Reviews",
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                                 Text(
@@ -99,7 +99,7 @@ class BookDescriptionPage extends StatelessWidget {
                                         "Genre",
                                         style: TextStyle(
                                           fontSize: 18,
-                                          fontWeight: FontWeight.w700,
+                                          fontWeight: FontWeight.w600,
                                         ),
                                       ),
                                       Text(
@@ -122,7 +122,7 @@ class BookDescriptionPage extends StatelessWidget {
                                   "Time",
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                                 Text(

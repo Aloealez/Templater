@@ -76,7 +76,7 @@ class _Reading extends State<Reading> {
                 "Attention",
                 style: TextStyle(
                   fontSize: size.width / 8,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -128,7 +128,7 @@ class _Reading extends State<Reading> {
                 Text(
                   "Today I Read a Book",
                   style: TextStyle(
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
                     fontSize: 0.025 * size.height,
                   ),
                 ),
@@ -161,7 +161,7 @@ class _Reading extends State<Reading> {
               style: TextStyle(
                 fontSize: 0.025 * size.height,
                 color: Theme.of(context).colorScheme.onSurface,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(height: 0.015 * size.height),

@@ -152,7 +152,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                           color: Theme.of(context).colorScheme.onSurface,
                           fontSize: size.width * 0.085,
                           decoration: TextDecoration.none,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                         ),
                         children: [
                           TextSpan(text: 'Choose Sections\nTo Prepare For'),

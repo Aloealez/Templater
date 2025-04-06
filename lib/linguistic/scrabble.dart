@@ -197,7 +197,7 @@ class _Scrabble extends State<Scrabble> {
                     ),
                   ],
                   fontSize: (size.width * 0.14) / 2,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                   color: Colors.white,
                   decoration: TextDecoration.none,
                 ),
@@ -259,7 +259,7 @@ class _Scrabble extends State<Scrabble> {
               letter,
               style: TextStyle(
                 fontSize: (size.width * 0.14) / 2,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
                 color: Colors.white,
                 decoration: TextDecoration.none,
               ),
@@ -301,7 +301,7 @@ class _Scrabble extends State<Scrabble> {
                   "Scrabble",
                   style: TextStyle(
                     fontSize: 0.048 * size.height,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

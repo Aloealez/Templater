@@ -67,7 +67,7 @@ class _ProgressState extends State<Progress> {
                     style: TextStyle(
                       fontSize: 22,
                       color: Colors.white,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   if (isOpen) ...[

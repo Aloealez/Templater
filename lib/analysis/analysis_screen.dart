@@ -121,7 +121,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
       style: TextStyle(
         fontSize: size.width / 20,
         color: Colors.white,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w600,
       ),
     );
   }
@@ -150,7 +150,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                     style: TextStyle(
                       fontSize: size.width / 10,
                       color: Colors.white,
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   TextSpan(
@@ -179,7 +179,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                 text: "$scoreMath",
                 style: TextStyle(
                   fontSize: size.width / 10,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               TextSpan(
@@ -197,7 +197,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                 text: "$scoreRW",
                 style: TextStyle(
                   fontSize: size.width / 10,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               TextSpan(

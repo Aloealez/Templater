@@ -142,7 +142,7 @@ class ActivityButton extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context).colorScheme.onPrimary,
                                 fontSize: fontSize,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 height: 1.2,
                                 fontStyle: (title) ? FontStyle.italic : FontStyle.normal,
                               ),
@@ -156,7 +156,7 @@ class ActivityButton extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context).colorScheme.onPrimary,
                                 fontSize: zero * fontSize,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 height: 1.2,
                               ),
                             ),

@@ -55,7 +55,7 @@ class _Classic extends State<Classic> {
                   "CLASSIC",
                   style: TextStyle(
                     fontSize: size.width / 8,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
                     height: 1.2,
                   ),
                   textAlign: TextAlign.center,

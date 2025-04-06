@@ -48,7 +48,7 @@ class PortHomeTasksWidget extends StatelessWidget {
               "BeSmart List",
               style: TextStyle(
                 color: Colors.white,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w600,
                 fontSize: size.width / 8,
                 fontFamily: "OpenSauceOne",
               ),
@@ -77,7 +77,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                       sectionNames[plan[i]]!,
                       style: TextStyle(
                         fontSize: size.width / 11,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w600,
                         fontFamily: "OpenSauceOne",
                       ),
                     ),

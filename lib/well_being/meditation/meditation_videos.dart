@@ -67,7 +67,7 @@ class _VideoListItemState extends State<VideoListItem> {
                           'Check internet connection',
                           style: TextStyle(
                             fontSize: 16,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w600,
                             color: Theme.of(context)
                                 .colorScheme
                                 .onSurface

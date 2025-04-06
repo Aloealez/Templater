@@ -48,7 +48,7 @@ class _SudokuInfo extends State<SudokuInfo> {
                   TextSpan(
                     text: 'time will be measured ',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                       fontStyle: FontStyle.italic,
                     ),
                   ),

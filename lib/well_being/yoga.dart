@@ -39,7 +39,7 @@ class _Yoga extends State<Yoga> {
                     "Yoga",
                     style: TextStyle(
                       fontSize: size.width / 8,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.center,
                   ),

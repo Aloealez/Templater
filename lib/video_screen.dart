@@ -114,7 +114,7 @@ class _VideoScreenState extends State<VideoScreen> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: size.width / 16,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
@@ -190,7 +190,7 @@ class _VideoScreenState extends State<VideoScreen> {
                         "Skip",
                         style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.onSecondary,
                         ),
                       ),

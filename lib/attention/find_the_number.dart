@@ -85,7 +85,7 @@ class _FindTheNumber extends State<FindTheNumber> {
             randomNumbers[i][j].toString(),
             style: TextStyle(
               fontSize: MediaQuery.of(context).size.width / 12,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               //color: Colors.white,
             ),
           ),
@@ -188,7 +188,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                     excludedNumber.toString(),
                     style: TextStyle(
                       fontSize: 0.07 * size.height,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   const Spacer(),
@@ -202,7 +202,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                     "${_time.toString()} s",
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.start,
                   ),

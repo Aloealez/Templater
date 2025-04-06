@@ -362,7 +362,7 @@ class _QuizModelState extends State<QuizModel> {
             widget.title.replaceAll("{}", "${questionIndex + 1}"),
             style: TextStyle(
               fontSize: 0.041 * size.height,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
             ),
             textAlign: TextAlign.center,
           ),
@@ -394,7 +394,7 @@ class _QuizModelState extends State<QuizModel> {
                 widget.questions[questionId]!.question,
                 style: TextStyle(
                   fontSize: size.width * 0.035,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],
@@ -407,7 +407,7 @@ class _QuizModelState extends State<QuizModel> {
                           widget.questions[questionId]!.question.length,) *
                       1.1 *
                       size.width,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
               )
             : QuizQuestionTask(
@@ -464,7 +464,7 @@ class _QuizModelState extends State<QuizModel> {
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: size.width * 0.07,
-                    fontWeight: FontWeight.w800,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

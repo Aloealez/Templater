@@ -108,7 +108,7 @@ class _ReadingStreak extends State<ReadingStreak> {
                 "Your Reading Streak",
                 style: TextStyle(
                   fontSize: size.width / 12,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,
               ),
