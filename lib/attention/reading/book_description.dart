@@ -40,7 +40,7 @@ class BookDescriptionPage extends StatelessWidget {
               Text(
                 title,
                 style:
-                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
               ),
               SizedBox(height: size.height / 64),
               Text(
@@ -75,7 +75,7 @@ class BookDescriptionPage extends StatelessWidget {
                                   "Reviews",
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Text(
@@ -99,7 +99,7 @@ class BookDescriptionPage extends StatelessWidget {
                                         "Genre",
                                         style: TextStyle(
                                           fontSize: 18,
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                       Text(
@@ -122,7 +122,7 @@ class BookDescriptionPage extends StatelessWidget {
                                   "Time",
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 Text(

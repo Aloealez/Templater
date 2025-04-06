@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app_bar.dart';
 import 'time_selection.dart';
@@ -30,8 +31,11 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
         // Navigator.pop(context);
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => const TimeSelection(),
+          PageTransition(
+            type: PageTransitionType.fade,
+            child: const TimeSelection(),
+            reverseDuration: const Duration(milliseconds: 100),
+            opaque: false,
           ),
         );
       },
@@ -90,7 +94,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
                 "Select Your",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
                 textAlign: TextAlign.center,
@@ -100,8 +104,9 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
                 "English Level",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                   color: Theme.of(context).colorScheme.onSurface,
+                    height: 0.7
                 ),
                 textAlign: TextAlign.center,
               ),

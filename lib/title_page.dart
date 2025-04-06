@@ -28,9 +28,7 @@ class _TitlePageState extends State<TitlePage>
       duration: const Duration(seconds: 5),
       vsync: this,
     );
-    // )..repeat(reverse: false);
     _animation = Tween<double>(begin: 0.0, end: 2.0).animate(_controller);
-
     initData();
   }
 
@@ -62,84 +60,84 @@ class _TitlePageState extends State<TitlePage>
     return Scaffold(
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(
-            left: size.width / 10,
-            right: size.width / 10,
-          ),
+          margin: EdgeInsets.symmetric(horizontal: size.width / 10),
           child: Stack(
             children: <Widget>[
               Align(
-                alignment: Alignment(0, -0.2),
-                child: ShaderMask(
-                  shaderCallback: (bounds) => LinearGradient(
-                    colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ).createShader(bounds),
-                  child: Text(
-                    "Welcome",
-                    style: TextStyle(
-                      fontFamily: 'OleoScriptSwashCaps',
-                      fontSize: 60.0,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
+                alignment: const Alignment(0, -0.2),
+                // Wrap the Welcome text with RotationTransition animated by _animation
+                child: RotationTransition(
+                  turns: _animation,
+                  child: ShaderMask(
+                    shaderCallback: (bounds) => LinearGradient(
+                      colors: [const Color(0xffA7E2FF), const Color(0xffDC92FF)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ).createShader(bounds),
+                    child: const Text(
+                      "Welcome",
+                      style: TextStyle(
+                        fontFamily: 'OleoScriptSwashCaps',
+                        fontSize: 60.0,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
               ),
               Align(
-                alignment: Alignment(0, -0.05),
-                child: Text(
+                alignment: const Alignment(0, -0.05),
+                child: const Text(
                   "Prepare for your SAT exam the smart way!",
                   style: TextStyle(
                     fontFamily: 'Open',
                     fontSize: 20.0,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
               Align(
-                alignment: Alignment(0, 0.81),
+                alignment: const Alignment(0, 0.81),
                 child: SizedBox(
                   height: size.height * 0.06,
                   width: size.width * 0.72,
                   child: firstTime
                       ? StartButton(
-                          text: "Choose A Program",
-                          width: size.width,
-                          tooltip: 'Smart Decision!',
-                        )
+                    text: "Choose A Program",
+                    width: size.width,
+                    tooltip: 'Smart Decision!',
+                  )
                       : RedirectButton(
-                          route: FutureBuilder(
-                            future: initSharedPrefs(),
-                            builder: (context, snapshot) {
-                              if (snapshot.connectionState ==
-                                  ConnectionState.waiting) {
-                                return const CircularProgressIndicator();
-                              } else if (prefs.getString('skill') == 'sats') {
-                                return const Home();
-                              } else {
-                                return const Home();
-                              }
-                            },
-                          ),
-                          text: 'Continue',
-                          width: size.width,
-                          color: Color(0xff4c2f65),
-                        ),
+                    route: FutureBuilder(
+                      future: initSharedPrefs(),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return const CircularProgressIndicator();
+                        } else {
+                          return const Home();
+                        }
+                      },
+                    ),
+                    text: 'Continue',
+                    width: size.width,
+                    color: const Color(0xff4c2f65),
+                  ),
                 ),
               ),
               Align(
-                alignment: Alignment(0, 0.93),
+                alignment: const Alignment(0, 0.93),
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     style: Theme.of(context).textTheme.bodyMedium,
                     children: <TextSpan>[
                       TextSpan(
-                        text: "By using our App, you agree to our\n",
+                        text:
+                        "By using our App, you agree to our\n",
                         style: TextStyle(
                           fontSize: 0.015 * size.height,
                           color: Theme.of(context)
@@ -163,7 +161,8 @@ class _TitlePageState extends State<TitlePage>
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const TermsOfService(),
+                                builder: (context) =>
+                                const TermsOfService(),
                               ),
                             );
                           },

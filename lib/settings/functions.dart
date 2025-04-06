@@ -1,5 +1,6 @@
 import 'package:brainace_pro/score_n_progress/finish_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:brainace_pro/title_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -36,7 +37,7 @@ Future<void> popUp(
                       TextSpan(
                         text: txtBold,
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           fontSize: size.width / 20,
                         ),
                       ),
@@ -68,7 +69,7 @@ Future<void> popUp(
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
@@ -91,7 +92,7 @@ Future<void> popUp(
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
@@ -111,8 +112,11 @@ void endProgram(BuildContext context) {
     if (context.mounted) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => const Finish(),
+        PageTransition(
+          type: PageTransitionType.fade,
+          child: Finish(),
+          reverseDuration: const Duration(milliseconds: 100),
+          opaque: false,
         ),
       );
     }
@@ -143,7 +147,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       TextSpan(
                         text: 'scores will be lost.',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           fontSize: size.width / 20,
                         ),
                       ),
@@ -174,7 +178,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
@@ -208,7 +212,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),

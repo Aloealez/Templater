@@ -32,6 +32,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         context,
         PageTransition(
           type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 300),
           child: () {
             if (index == 0) {
               // return const Activities();

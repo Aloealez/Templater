@@ -207,7 +207,7 @@ class _Hangman extends State<Hangman> {
                           style: TextStyle(
                             fontSize: size.width / 10,
                             letterSpacing: 7,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                             fontFamily: 'Monospace',
                             color: (Theme.of(context).brightness ==
                                     Brightness.dark)

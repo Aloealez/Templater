@@ -91,8 +91,8 @@ class _Progress extends State<Progress> {
   }
 
   List<CircularStackEntry> _generateChartData(int dayNum) {
-    Color? dialColor = Theme.of(context).colorScheme.secondary;
-    Color? dialColor2 = Theme.of(context).colorScheme.secondary.withOpacity(1);
+    Color? dialColor = Color(0xffAD2194);
+    Color? dialColor2 = Theme.of(context).colorScheme.primary;
     Color? dialColor3 = (Theme.of(context).brightness == Brightness.light)
         ? const Color(0xffAD2194)
         : const Color(0xff4C1C5F);
@@ -157,7 +157,7 @@ class _Progress extends State<Progress> {
         labelStyle: TextStyle(
           fontSize: 0.022 * size.height,
           color: Theme.of(context).colorScheme.onSurface,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );

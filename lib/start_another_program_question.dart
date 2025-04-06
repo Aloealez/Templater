@@ -74,7 +74,7 @@ class _StartAnotherProgramState extends State<StartAnotherProgram> {
               "Would you like to continue the same 30 Day Brain Improvement Program?",
               style: TextStyle(
                 fontSize: size.width / 12,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const Spacer(),

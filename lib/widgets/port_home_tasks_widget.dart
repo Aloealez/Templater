@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -76,7 +78,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                       sectionNames[plan[i]]!,
                       style: TextStyle(
                         fontSize: size.width / 11,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         fontFamily: "OpenSauceOne",
                       ),
                     ),

@@ -68,7 +68,7 @@ class _Riddles extends State<Riddles> {
                   ),
                   TextSpan(
                     text: "8 minutes to solve as many riddles as you can.",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
@@ -86,28 +86,28 @@ class _Riddles extends State<Riddles> {
                   ),
                   TextSpan(
                     text: "correct answer ",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: "you will ",
                   ),
                   TextSpan(
                     text: "get 5 points, ",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: "for each ",
                   ),
                   TextSpan(
                     text: "wrong answer ",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: "you will ",
                   ),
                   TextSpan(
                     text: "loose 2 points.",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
@@ -125,7 +125,7 @@ class _Riddles extends State<Riddles> {
                   ),
                   TextSpan(
                     text: "CONTINUE",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: ".\"",

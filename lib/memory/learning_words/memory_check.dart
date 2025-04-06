@@ -99,8 +99,6 @@ class _Memory2 extends State<Memory2> {
 
   @override
   Widget build(BuildContext context) {
-    print("Picked: $picked");
-    print("Defs: $defs");
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: appBar(context, ""),

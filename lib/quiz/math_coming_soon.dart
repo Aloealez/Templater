@@ -515,7 +515,7 @@
 //                 Text(
 //                   "${question['task'] ?? ""}",
 //                   style: const TextStyle(
-//                       fontSize: 18, fontWeight: FontWeight.bold),
+//                       fontSize: 18, fontWeight: FontWeight.w500),
 //                 ),
 //                 const SizedBox(height: 12),
 //                 if (question['graph'] != null)

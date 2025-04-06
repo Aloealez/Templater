@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'main.dart';
 
 AppBar appBar(
@@ -32,7 +33,12 @@ AppBar appBar(
               // }
               if (screen != null) {
                 Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (context) => screen),
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    child: screen,
+                    reverseDuration: const Duration(milliseconds: 100),
+                    opaque: false,
+                  ),
                   (Route<dynamic> route) => false,
                 );
                 return;
@@ -41,8 +47,11 @@ AppBar appBar(
               if (route != null) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => route,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    child: route,
+                    reverseDuration: const Duration(milliseconds: 100),
+                    opaque: false,
                   ),
                 );
               }
@@ -51,28 +60,5 @@ AppBar appBar(
             highlightColor: Colors.white.withOpacity(0.1),
           )
         : null,
-    title: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: TextStyle(fontSize: size.width / 16),
-        ),
-        (!meditation)
-            ? ElevatedButton(
-                onPressed: () {
-                  MyApp.of(context).switchTheme();
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.surface,
-                  foregroundColor: Colors.yellow,
-                ),
-                child: const Icon(
-                  Icons.wb_sunny_outlined,
-                ),
-              )
-            : const SizedBox(),
-      ],
-    ),
   );
 }

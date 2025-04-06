@@ -79,6 +79,8 @@ class _StartSatsMathState extends State<StartSatsMath> {
                     widget.subcategory.getName(),
                     style: TextStyle(fontSize: 0.039 * size.height),
                     textAlign: TextAlign.center,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),

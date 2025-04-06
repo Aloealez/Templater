@@ -72,7 +72,7 @@ class _LevelTestState extends State<LevelTest> {
               "Level Test 🥰",
               style: TextStyle(
                 fontSize: 0.055 * size.height,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
             ),

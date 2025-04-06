@@ -251,7 +251,6 @@ class _WorkingMemory extends State<WorkingMemory> {
                 width: size.width * 0.75,
                 child: RedirectButton(
                   onClick: () {
-                    print("working memory score: $score");
                     if (score == 1) {
                       saveStreak(1);
                     } else {

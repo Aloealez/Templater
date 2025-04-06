@@ -380,7 +380,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
     String answerLetter,
     String questionId,
   ) {
-    print("Answer letter: ${widget.questions[questionId]!.answers[answerLetter]}");
     Size size = MediaQuery.of(context).size;
     return Card(
       margin: EdgeInsets.only(
@@ -526,8 +525,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-    print("Question task: ${widget.questions[questionId]}");
-    print("Question task: ${widget.questions[questionId]!.question}");
     return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
         ? QuizQuestionTask(
             question: widget.questions[questionId]!,
@@ -546,7 +543,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                     1.1 *
                     size.width,
                 color: Theme.of(context).colorScheme.onSurface,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
               ),
             ),
           );

@@ -144,10 +144,12 @@ class ActivityButton extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context).colorScheme.onPrimary,
                                 fontSize: fontSize,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 height: 1.2,
                                 fontStyle: (title) ? FontStyle.italic : FontStyle.normal,
                               ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                             ),
                             text2 == ""
                                 ? const SizedBox(width: 0, height: 0)
@@ -156,7 +158,7 @@ class ActivityButton extends StatelessWidget {
                               style: TextStyle(
                                 color: Theme.of(context).colorScheme.onPrimary,
                                 fontSize: zero * fontSize,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 height: 1.2,
                               ),
                             ),

@@ -128,7 +128,7 @@ class _Reading extends State<Reading> {
                 Text(
                   "Today I Read a Book",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                     fontSize: 0.025 * size.height,
                   ),
                 ),

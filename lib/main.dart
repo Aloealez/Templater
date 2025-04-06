@@ -93,14 +93,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    print("State: $state");
     if (state == AppLifecycleState.resumed) {
       precacheAllF = precacheAll();
     }
   }
 
   Future<void> myAppPrecacheImage(String assetName) async {
-    print("precacheImage: $assetName");
     await precacheImage(
       AssetImage(assetName),
       context,
@@ -198,7 +196,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       myAppPrecacheImage("assets/activities/$activity");
     }
 
-    print("Memes cache, prefs: $prefs");
     if (prefs != null) {
       MemeData.updateTodayMemes(prefs!, MemeData.MEMES_PER_DAY, context: context);
     }

@@ -43,10 +43,11 @@ class _StartButtonState extends State<StartButton> {
         initMemory();
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => ImprovementSelection(
-                // widget.text,
-                ),
+          PageTransition(
+            type: PageTransitionType.fade,
+            child: ImprovementSelection(),
+            reverseDuration: const Duration(milliseconds: 100),
+            opaque: true,
           ),
         );
       },
@@ -78,7 +79,7 @@ class _StartButtonState extends State<StartButton> {
               style: TextStyle(
                 fontSize: widget.width / 18,
                 color: const Color.fromARGB(255, 224, 246, 255),
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -107,8 +108,11 @@ class _InstructionsButtonState extends State<InstructionsButton> {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => widget.functionToRun,
+          PageTransition(
+            type: PageTransitionType.fade,
+            child: widget.functionToRun,
+            reverseDuration: const Duration(milliseconds: 100),
+            opaque: true,
           ),
         );
       },
@@ -182,7 +186,12 @@ class _RedirectButtonState extends State<RedirectButton> {
           if (widget.route != null) {
             if (widget.clearAllWindows) {
               Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => widget.route!),
+                PageTransition(
+                  type: PageTransitionType.fade,
+                  child: widget.route!,
+                  reverseDuration: const Duration(milliseconds: 100),
+                  opaque: false,
+                ),
                 (Route<dynamic> route) => false,
               );
             } else {
@@ -191,8 +200,11 @@ class _RedirectButtonState extends State<RedirectButton> {
               }
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => widget.route!,
+                PageTransition(
+                  type: PageTransitionType.fade,
+                  child: widget.route,
+                  reverseDuration: const Duration(milliseconds: 100),
+                  opaque: true,
                 ),
               );
             }
@@ -241,7 +253,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                     widget.text,
                     style: TextStyle(
                       fontSize: widget.width / 15 * widget.fontScale,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -252,7 +264,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                   style: TextStyle(
                     fontSize: widget.width / 18 * widget.fontScale,
                     color: Colors.white,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -336,15 +348,6 @@ class _ImprovementButtonState extends State<ImprovementButton> {
                 width: widget.width * 0.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  // gradient: LinearGradient(
-                  //   begin: Alignment.topLeft,
-                  //   end: Alignment.bottomRight,
-                  //   colors: <Color>[
-                  //     Theme.of(context).colorScheme.primary,
-                  //     Theme.of(context).colorScheme.secondary,
-                  //   ],
-                  //   tileMode: TileMode.decal,
-                  // ),
                   color: widget.color,
                   boxShadow: [
                     BoxShadow(

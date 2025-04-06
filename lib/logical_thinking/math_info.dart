@@ -68,7 +68,7 @@ class _LogicalThinking extends State<LogicalThinking> {
                   ),
                   TextSpan(
                     text: "SAT Math with CALCULATOR",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: " Part.",
@@ -89,7 +89,7 @@ class _LogicalThinking extends State<LogicalThinking> {
                   ),
                   TextSpan(
                     text: "350 seconds",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: ".",
@@ -110,7 +110,7 @@ class _LogicalThinking extends State<LogicalThinking> {
                   ),
                   TextSpan(
                     text: "CONTINUE\"",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   TextSpan(
                     text: ".",

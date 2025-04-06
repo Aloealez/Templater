@@ -1,6 +1,10 @@
 import 'dart:async';
+import 'dart:convert';
+import './widgets/port_home_tasks_widget.dart';
+import 'widgets/port_home_tasks_widget_config.dart';
 import 'package:flutter/material.dart';
 import 'package:home_widget/home_widget.dart';
+import 'package:http/http.dart' as http;
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:circular_chart_flutter/circular_chart_flutter.dart';
@@ -13,6 +17,8 @@ import 'score_n_progress/finish_screen.dart';
 import '/memory/faces.dart';
 import 'package:brainace_pro/notification.dart';
 import 'main.dart';
+import './quiz/question_bank.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -53,8 +59,19 @@ class _Home extends State<Home> with RouteAware {
   void didPopNext() {
     super.didPopNext();
     print("Home widget is now the top widget");
+
+    NotificationService.scheduleAllNotifications();
+
+    // Update any widget tasks
+    WidgetsBinding.instance.addPostFrameCallback((timestamp) {
+      PortHomeTasksWidgetConfig.initialize().then((value) {
+        callHomeWidgetUpdate();
+      });
+    });
+
     readMemory();
     updateEmoji();
+    updatePoints();
   }
 
   Future<void> calcDay() async {
@@ -76,10 +93,13 @@ class _Home extends State<Home> with RouteAware {
   }
 
   Future<void> checkAndUpdateStreak() async {
-    bool allDoneToday = true; // Define or calculate this variable as needed
     int currentDay = day; // Use the 'day' variable or calculate currentDay
     int lastUpdateDay = prefs?.getInt('last_update_day') ?? 0;
     int currentStreak = prefs?.getInt('streak_days') ?? 0;
+
+    bool allDoneToday = plan.isNotEmpty &&
+        plan.every(
+                (task) => prefs?.getString("${task}TickedDay$currentDay") == "1");
 
     setState(() {
       streakInDanger = !allDoneToday;
@@ -148,30 +168,6 @@ class _Home extends State<Home> with RouteAware {
     prefs?.setStringList("wellBeingTickedDay$day", newWellBeingTickedString);
   }
 
-  Future<void> getWellBeingTicked() async {
-    prefs = await SharedPreferences.getInstance();
-    int newPoints = points;
-
-    List<String> newWellBeingTickedString =
-        prefs?.getStringList('wellBeingTickedDay$day') ?? [];
-    List<bool> newWellBeingTicked = [false, false, false, false];
-
-    for (int i = 0; i < newWellBeingTickedString.length; i++) {
-      newWellBeingTicked[i] = (newWellBeingTickedString[i] == "1");
-      if (newWellBeingTicked[i]) {
-        newPoints += wellbeingTimes[wellbeing[i]]!;
-      }
-    }
-    if (newWellBeingTicked.isEmpty) {
-      newWellBeingTicked = [false, false, false, false];
-    }
-
-    setState(() {
-      wellBeingTicked = newWellBeingTicked;
-      points = newPoints;
-    });
-  }
-
   var skillBaseList = [
     [Faces, "Faces", 10],
   ];
@@ -231,11 +227,9 @@ class _Home extends State<Home> with RouteAware {
           return 0;
         }
       });
-      print("QuestionSubcategories: $questionsSubcategories");
 
       int timePerSatQuestion = 5;
       if (skillSats == "both") {
-        print("Both");
         int currentMathTime = 0;
         int currentRWTime = 0;
         for (int i = 0;
@@ -254,7 +248,6 @@ class _Home extends State<Home> with RouteAware {
           } else if (SatsQuestionSubcategories.typesList
               .sublist(0, 10)
               .contains(questionsSubcategories[i])) {
-            print("Reading & Writing: $currentRWTime < ${trainingTime / 2}");
             if (currentRWTime < trainingTime / 2) {
               newPlan.add(questionsSubcategories[i]);
               currentTime += timePerSatQuestion;
@@ -316,7 +309,7 @@ class _Home extends State<Home> with RouteAware {
   Future<void> getBasePlanTicked() async {
     prefs = await SharedPreferences.getInstance();
     List<String> newBasePlanTicked = List.filled(plan.length, "0");
-    int newPoints = points;
+    int newPoints = 0;
 
     for (int i = 0; i < plan.length; ++i) {
       newBasePlanTicked[i] = prefs?.getString("${plan[i]}TickedDay$day") ?? "0";
@@ -352,8 +345,11 @@ class _Home extends State<Home> with RouteAware {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(
-            builder: (context) => const Finish(),
+          PageTransition(
+            type: PageTransitionType.fade,
+            child: Finish(),
+            reverseDuration: const Duration(milliseconds: 100),
+            opaque: false,
           ),
         );
       }
@@ -362,7 +358,6 @@ class _Home extends State<Home> with RouteAware {
 
     // If day < 30, continue the normal plan logic
     await getSkill();
-    await getWellBeingTicked();
     await createPlan();
     await getBasePlanTicked();
 
@@ -421,7 +416,10 @@ class _Home extends State<Home> with RouteAware {
   }
 
   Future<void> updatePoints() async {
+    calcValues();
+    checkScores();
     prefs = await SharedPreferences.getInstance();
+    print("Setting points: ${points}");
     prefs?.setInt("pointsDay$day", points);
   }
 
@@ -675,6 +673,7 @@ class _Home extends State<Home> with RouteAware {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+    print("Home widget is now the top widget");
     updatePoints();
 
     DateTime now = DateTime.now();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import '/buttons.dart';
@@ -47,8 +48,11 @@ class _ShowImprovement extends State<ShowImprovement>
     if (page != null) {
       Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (context) => page,
+        PageTransition(
+          type: PageTransitionType.fade,
+          child: page,
+          reverseDuration: const Duration(milliseconds: 100),
+          opaque: false,
         ),
       );
     }
@@ -165,7 +169,7 @@ class _ShowImprovement extends State<ShowImprovement>
                         ),
                         TextSpan(
                           text: "$improvementrate%",
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.w500),
                         ),
                       ],
                     ),

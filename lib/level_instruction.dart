@@ -80,7 +80,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
                         widget.testName,
                         style: TextStyle(
                           fontSize: 0.041 * size.height,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                         textAlign: TextAlign.center,
                       ),

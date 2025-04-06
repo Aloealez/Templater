@@ -127,7 +127,7 @@ class _Activities extends State<Activities> {
                 "Your Activities",
                 style: TextStyle(
                   fontSize: size.width / 9,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -159,7 +159,7 @@ class _Activities extends State<Activities> {
                               style: TextStyle(
                                 fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ],

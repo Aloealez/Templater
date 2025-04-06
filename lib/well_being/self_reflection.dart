@@ -37,7 +37,7 @@ class _SelfReflection extends State<SelfReflection> {
                     TextSpan(
                       text: txt1,
                       style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     TextSpan(
@@ -108,7 +108,7 @@ class _SelfReflection extends State<SelfReflection> {
                     TextSpan(
                       text:
                           'leading to personal growth and a greater sense of fulfillment.',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),

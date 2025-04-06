@@ -79,6 +79,8 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                     widget.subcategory.getName(),
                     style: TextStyle(fontSize: 0.039 * size.height),
                     textAlign: TextAlign.center,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),

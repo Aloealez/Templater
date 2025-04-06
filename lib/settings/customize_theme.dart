@@ -120,7 +120,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
             style: TextStyle(
               color: textColor ?? Theme.of(context).colorScheme.onPrimary,
               fontSize: size.width * 0.051,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
             ),
           ),
         ),
@@ -150,71 +150,56 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: appBar(
-        context,
-        "Customise Colors",
-      ),
-      body: Center(
-        child: FutureBuilder(
-          future: prefsF,
-          builder: (context, snapshot) {
-            prefs = snapshot.data as SharedPreferences?;
-            return SingleChildScrollView(
-              child: Container(
-                margin: EdgeInsets.only(
-                  left: size.width / 10,
-                  right: size.width / 10,
+      appBar: appBar(context, "Customise Colors"),
+      body: Padding(
+        padding: EdgeInsets.only(left: size.width / 10, right: size.width / 10, top : size.height / 20),
+        child: Column(
+          children: [
+            _buildColorTile(
+              label: 'Background',
+              colorKey: "surface",
+              textColor: Theme.of(context).colorScheme.onSurface,
+            ),
+            const SizedBox(height: 30),
+            _buildColorTile(
+              label: 'Primary',
+              colorKey: "primary",
+            ),
+            const SizedBox(height: 30),
+            _buildColorTile(
+              label: 'Secondary',
+              colorKey: "secondary",
+            ),
+            const SizedBox(height: 30),
+            _buildColorTile(
+              label: 'Accent',
+              colorKey: "tertiary",
+            ),
+            const SizedBox(height: 30),
+            _buildColorTile(
+              label: 'Contrast',
+              colorKey: "primaryContainer",
+              textColor: Theme.of(context).colorScheme.onPrimaryContainer,
+            ),
+            // Spacer will push the button to the vertical center of any remaining space.
+            const Spacer(),
+            Center(
+              child: ElevatedButton(
+                onPressed: resetToDefaultColors,
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.black,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildColorTile(
-                      label: 'Background',
-                      colorKey: "surface",
-                      textColor: Theme.of(context).colorScheme.onSurface,
-                    ),
-                    const SizedBox(height: 30),
-                    _buildColorTile(
-                      label: 'Primary',
-                      colorKey: "primary",
-                    ),
-                    const SizedBox(height: 30),
-                    _buildColorTile(
-                      label: 'Secondary',
-                      colorKey: "secondary",
-                    ),
-                    const SizedBox(height: 30),
-                    _buildColorTile(
-                      label: 'Accent',
-                      colorKey: "tertiary",
-                    ),
-                    const SizedBox(height: 30),
-                    _buildColorTile(
-                      label: 'Contrast',
-                      colorKey: "primaryContainer",
-                      textColor:
-                      Theme.of(context).colorScheme.onPrimaryContainer,
-                    ),
-                    const SizedBox(height: 40),
-                    ElevatedButton(
-                      onPressed: resetToDefaultColors,
-                      style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: size.width * 0.08,
-                          vertical: size.height * 0.02,
-                        ),
-                        foregroundColor: Colors.black,
-                      ),
-                      child: const Text(
-                        'Reset to Default Colors',
-                        style: TextStyle(fontSize: 20, color: Color(0xFF7D509F)),
-                      ),
-                    ),
-                  ],
+                child: const Text(
+                  'Reset to Default Colors',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color(0xFF7D509F),
+                  ),
                 ),
               ),
-            );
-          },
+            ),
+            const Spacer(),
+          ],
         ),
       ),
     );

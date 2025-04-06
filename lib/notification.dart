@@ -104,11 +104,8 @@ class NotificationService {
   }
 
   static Future<bool> isNotificationScheduled(int id) async {
-    print("Checking if notification is scheduled");
     final List<PendingNotificationRequest> pendingNotificationRequests = await flutterLocalNotificationsPlugin.pendingNotificationRequests();
-    print("Pending notifications: $pendingNotificationRequests");
     for (var request in pendingNotificationRequests) {
-      print("Request: ${request.id} ${request.title} ${request.body}");
       if (request.id == id) {
         return true;
       }
@@ -117,9 +114,7 @@ class NotificationService {
   }
 
   static Future<void> scheduleAllNotifications() async {
-    print("Scheduling instant notifications");
     if (!(await isNotificationScheduled(40))) {
-      print("Scheduling rotating notifications");
       for (int i = 0; i < rotatingNotifications.length; i++) {
         DateTime now = DateTime.now();
         DateTime selectedTime = DateTime(now.year, now.month, now.day + i + 1, 7, 0); // Next day at 7 a.m.
