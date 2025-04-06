@@ -79,7 +79,7 @@ class _StartButtonState extends State<StartButton> {
               style: TextStyle(
                 fontSize: widget.width / 18,
                 color: const Color.fromARGB(255, 224, 246, 255),
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),
@@ -253,7 +253,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                     widget.text,
                     style: TextStyle(
                       fontSize: widget.width / 15 * widget.fontScale,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),
@@ -264,7 +264,7 @@ class _RedirectButtonState extends State<RedirectButton> {
                   style: TextStyle(
                     fontSize: widget.width / 18 * widget.fontScale,
                     color: Colors.white,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ),

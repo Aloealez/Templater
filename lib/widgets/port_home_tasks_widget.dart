@@ -77,7 +77,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                       sectionNames[plan[i]]!,
                       style: TextStyle(
                         fontSize: size.width / 11,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                         fontFamily: "OpenSauceOne",
                       ),
                     ),

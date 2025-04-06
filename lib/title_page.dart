@@ -94,7 +94,7 @@ class _TitlePageState extends State<TitlePage>
                   style: TextStyle(
                     fontFamily: 'Open',
                     fontSize: 20.0,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center,

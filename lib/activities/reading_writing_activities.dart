@@ -84,7 +84,7 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
                 "Your Activities",
                 style: TextStyle(
                   fontSize: size.width / 9,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -117,7 +117,7 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
                               style: TextStyle(
                                 fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w700,
                               ),
                             ),
                           ],

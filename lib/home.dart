@@ -695,11 +695,14 @@ class _Home extends State<Home> with RouteAware {
                   child: Text(
                     "Plan For Today",
                     style:
-                    TextStyle(fontSize: size.width / 9, letterSpacing: 1.5),
+                    TextStyle(fontSize: size.width / 9, 
+                    letterSpacing: 1.5, 
+                    height: 0.9,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 0.01 * size.height),
+                SizedBox(height: 0.025 * size.height),
                 Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

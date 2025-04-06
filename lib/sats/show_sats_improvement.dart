@@ -169,7 +169,7 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
                         ),
                         TextSpan(
                           text: "$improvementrate%",
-                          style: const TextStyle(fontWeight: FontWeight.w500),
+                          style: const TextStyle(fontWeight: FontWeight.w700),
                         ),
                       ],
                     ),

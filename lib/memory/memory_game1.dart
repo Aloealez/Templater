@@ -55,21 +55,21 @@ class _MemoryGame1 extends State<MemoryGame1> {
                     children: const <TextSpan>[
                       TextSpan(
                         text: 'with a set of face-down cards, each featuring a matching pair. ',
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                       TextSpan(
                         text: 'The objective is to ',
                       ),
                       TextSpan(
                         text: 'flip over two cards at a time, attempting to find matching pairs ',
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                       TextSpan(
                         text: 'by remembering the locations of previously revealed cards, with the goal of successfully matching all pairs ',
                       ),
                       TextSpan(
                         text: 'in the fewest moves possible.',
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),

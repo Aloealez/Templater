@@ -37,7 +37,7 @@ Future<void> popUp(
                       TextSpan(
                         text: txtBold,
                         style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           fontSize: size.width / 20,
                         ),
                       ),
@@ -69,7 +69,7 @@ Future<void> popUp(
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -92,7 +92,7 @@ Future<void> popUp(
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -147,7 +147,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       TextSpan(
                         text: 'scores will be lost.',
                         style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           fontSize: size.width / 20,
                         ),
                       ),
@@ -178,7 +178,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -212,7 +212,7 @@ Future<void> restartAppButton(BuildContext context) async {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),

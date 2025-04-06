@@ -55,7 +55,7 @@ class _Business extends State<Business> {
                   "BUSINESS",
                   style: TextStyle(
                     fontSize: size.width / 8,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                     height: 1.2,
                   ),
                   textAlign: TextAlign.center,

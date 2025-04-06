@@ -59,7 +59,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: size.width * 0.064,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               onPressed: () => Navigator.of(context).pop(),
@@ -70,7 +70,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.secondary,
                   fontSize: size.width * 0.064,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               onPressed: () {
@@ -120,7 +120,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
             style: TextStyle(
               color: textColor ?? Theme.of(context).colorScheme.onPrimary,
               fontSize: size.width * 0.051,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),

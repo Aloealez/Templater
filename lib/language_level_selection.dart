@@ -94,7 +94,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
                 "Select Your",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                   color: Theme.of(context).colorScheme.onSurface,
                 ),
                 textAlign: TextAlign.center,
@@ -104,7 +104,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
                 "English Level",
                 style: TextStyle(
                   fontSize: size.width / 13,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                   color: Theme.of(context).colorScheme.onSurface,
                     height: 0.7,
                 ),

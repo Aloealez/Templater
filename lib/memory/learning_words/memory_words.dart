@@ -78,7 +78,7 @@ class _MemoryWordsState extends State<MemoryWords> {
                 TextSpan(text: '${idx + 1}. '),
                 TextSpan(
                   text: word,
-                  style: const TextStyle(fontWeight: FontWeight.w500),
+                  style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 TextSpan(text: ' - $definition'),
               ],

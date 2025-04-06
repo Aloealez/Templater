@@ -76,7 +76,7 @@ class _Faces extends State<Faces> {
                   "Have you seen this face before?",
                   style: TextStyle(
                     fontSize: size.width / 20,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                   ),
                   textAlign: TextAlign.center,
                 ),

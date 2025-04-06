@@ -48,7 +48,7 @@ class _SudokuInfo extends State<SudokuInfo> {
                   TextSpan(
                     text: 'time will be measured ',
                     style: TextStyle(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w700,
                       fontStyle: FontStyle.italic,
                     ),
                   ),
@@ -70,22 +70,22 @@ class _SudokuInfo extends State<SudokuInfo> {
                 children: const <TextSpan>[
                   TextSpan(
                     text: 'correctly filled puzzle ',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(text: 'completed under 15 minutes you will '),
                   TextSpan(
                     text: 'get 1 point, ',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(text: 'for each '),
                   TextSpan(
                     text: 'wrongly filled puzzle ',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(text: 'you will '),
                   TextSpan(
                     text: 'lose 1 point.',
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                 ],
               ),

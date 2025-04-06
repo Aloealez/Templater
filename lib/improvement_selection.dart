@@ -37,7 +37,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                         "Choose",
                         style: TextStyle(
                           fontSize: size.width / 10,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           color: Theme.of(context).colorScheme.onSurface,
                         ),
                         textAlign: TextAlign.center,
@@ -46,7 +46,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                         "Your Program",
                         style: TextStyle(
                           fontSize: size.width / 11,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           color: Theme.of(context).colorScheme.onSurface,
                             height: 0.7,
                         ),

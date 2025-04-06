@@ -32,7 +32,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
             padding: EdgeInsets.only(left: 0.01 * size.width),
             child: Text(
               "Text 1",
-              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w700),
             ),
           ),
         if (widget.question.text != null)
@@ -49,7 +49,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
             padding: EdgeInsets.only(left: 0.01 * size.width),
             child: Text(
               "Text 2",
-              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w700),
             ),
           ),
         if (doubleText)

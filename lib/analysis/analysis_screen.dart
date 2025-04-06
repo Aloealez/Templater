@@ -121,7 +121,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
       style: TextStyle(
         fontSize: size.width / 20,
         color: Colors.white,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w700,
       ),
     );
   }

@@ -180,7 +180,7 @@ class _Hangman extends State<Hangman> {
                           '$mistakes ${mistakes == 1 ? 'letter' : 'letters'} mistaken',
                           style: TextStyle(
                             fontSize: size.width / 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: (Theme.of(context).brightness ==
                                     Brightness.dark)
                                 ? Colors.white
@@ -207,7 +207,7 @@ class _Hangman extends State<Hangman> {
                           style: TextStyle(
                             fontSize: size.width / 10,
                             letterSpacing: 7,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Monospace',
                             color: (Theme.of(context).brightness ==
                                     Brightness.dark)

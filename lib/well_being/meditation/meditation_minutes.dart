@@ -171,7 +171,7 @@ class _MeditationMinutes extends State<MeditationMinutes> {
                           ),
                           TextSpan(
                             text: 'time',
-                            style: TextStyle(fontWeight: FontWeight.w500),
+                            style: TextStyle(fontWeight: FontWeight.w700),
                           ),
                           TextSpan(text: ' would you like to meditate for ?'),
                         ],

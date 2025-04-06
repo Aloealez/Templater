@@ -108,7 +108,7 @@ class _ReadingComprehension extends State<ReadingComprehension> {
                             title.toString(),
                             style: TextStyle(
                               fontSize: size.width / 25,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w700,
                             ),
                             textAlign: TextAlign.center,
                           ),

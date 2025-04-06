@@ -67,7 +67,7 @@ class _VideoListItemState extends State<VideoListItem> {
                           'Check internet connection',
                           style: TextStyle(
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: Theme.of(context)
                                 .colorScheme
                                 .onSurface
@@ -198,7 +198,7 @@ class _MeditationVideos extends State<MeditationVideos> {
                           ),
                           TextSpan(
                             text: 'rain animation',
-                            style: TextStyle(fontWeight: FontWeight.w500),
+                            style: TextStyle(fontWeight: FontWeight.w700),
                           ),
                           TextSpan(text: ' would you like to meditate?'),
                         ],
