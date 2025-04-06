@@ -1,13 +1,8 @@
-import 'package:brainace_pro/score_n_progress/score_axis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 import '/navbar.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
-import 'dart:math';
-import 'package:intl/intl.dart';
-import 'package:brainace_pro/buttons.dart';
 import 'yourProgress_screen.dart';
 
 
@@ -181,7 +176,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: "${scoreMath}",
+                text: "$scoreMath",
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w800,
@@ -199,7 +194,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: "${scoreRW}",
+                text: "$scoreRW",
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w800,
@@ -250,7 +245,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
     final size = MediaQuery.of(context).size;
     double progress = score / 1600;
 
-    return Container(
+    return SizedBox(
       width: containerWidth,
       height: size.height / 30,
       child: Row(

@@ -48,7 +48,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                           fontSize: size.width / 11,
                           fontWeight: FontWeight.w500,
                           color: Theme.of(context).colorScheme.onSurface,
-                            height: 0.7
+                            height: 0.7,
                         ),
                         textAlign: TextAlign.center,
                       ),

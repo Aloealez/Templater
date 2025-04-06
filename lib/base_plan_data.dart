@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:circular_chart_flutter/circular_chart_flutter.dart';
 import 'activities_for_each_section.dart';
-import './widgets/port_home_tasks_widget.dart';
 import './widgets/port_home_tasks_widget_config.dart';
 import 'dart:math';
 import '/memory/faces.dart';

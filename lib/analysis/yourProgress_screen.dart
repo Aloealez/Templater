@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-import '/navbar.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
-import 'dart:math';
-import 'package:intl/intl.dart';
-import 'package:brainace_pro/buttons.dart';
 import 'package:brainace_pro/app_bar.dart';
 
 class Progress extends StatefulWidget {
+  const Progress({super.key});
+
   @override
   _ProgressState createState() => _ProgressState();
 }
@@ -111,7 +107,7 @@ class _ProgressState extends State<Progress> {
             ],
           ),
           Text("$percentage% Correct",
-              style: TextStyle(color: Colors.white70, fontSize: 12)),
+              style: TextStyle(color: Colors.white70, fontSize: 12),),
         ],
       ),
     );

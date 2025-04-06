@@ -338,9 +338,9 @@ class _MathQuizModelState extends State<MathQuizModel> {
       ),
       child:
       Text(
-        "${answerLetter}.",
+        "$answerLetter.",
         style: TextStyle(
-            color: Theme.of(context).colorScheme.onSurface, fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.4 * size.width),
+            color: Theme.of(context).colorScheme.onSurface, fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.4 * size.width,),
       ),
     );
     if (usersAnswer == null) {

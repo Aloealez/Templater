@@ -1,5 +1,4 @@
 import 'package:brainace_pro/home.dart';
-import 'package:brainace_pro/main.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '/navbar.dart';

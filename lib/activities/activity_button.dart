@@ -1,8 +1,6 @@
 import 'package:brainace_pro/activities_for_each_section.dart';
 import 'package:flutter/material.dart';
-import 'package:icon_decoration/icon_decoration.dart';
 import 'package:page_transition/page_transition.dart';
-import 'dart:math' as dart_math;
 
 class ActivityButton extends StatelessWidget {
   final String img;

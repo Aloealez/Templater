@@ -1,17 +1,11 @@
 import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:brainace_pro/activities/reading_writing_activities.dart';
 import 'package:brainace_pro/activities/brain_train_activities.dart';
-import 'package:brainace_pro/quiz/math_coming_soon.dart';
-import 'package:brainace_pro/sats/start_sats_math.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:brainace_pro/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:brainace_pro/activities_for_each_section.dart';
-import 'package:icon_decoration/icon_decoration.dart';
-import 'dart:math' as math;
-import 'package:flutter_quizzes/src/sats/sats_question_types_rw.dart';
-import 'package:brainace_pro/quiz/math_coming_soon.dart';
 
 import '../margins.dart';
 import 'activity_button.dart';

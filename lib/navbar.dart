@@ -6,7 +6,6 @@ import 'score_n_progress/progress.dart';
 import 'activities/brain_train_activities.dart';
 import 'settings/settings.dart';
 import 'package:page_transition/page_transition.dart';
-import './analysis/analysis_screen.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});

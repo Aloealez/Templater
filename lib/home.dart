@@ -1,10 +1,8 @@
 import 'dart:async';
-import 'dart:convert';
 import './widgets/port_home_tasks_widget.dart';
 import 'widgets/port_home_tasks_widget_config.dart';
 import 'package:flutter/material.dart';
 import 'package:home_widget/home_widget.dart';
-import 'package:http/http.dart' as http;
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:circular_chart_flutter/circular_chart_flutter.dart';
@@ -17,7 +15,6 @@ import 'score_n_progress/finish_screen.dart';
 import '/memory/faces.dart';
 import 'package:brainace_pro/notification.dart';
 import 'main.dart';
-import './quiz/question_bank.dart';
 
 
 class Home extends StatefulWidget {
@@ -99,7 +96,7 @@ class _Home extends State<Home> with RouteAware {
 
     bool allDoneToday = plan.isNotEmpty &&
         plan.every(
-                (task) => prefs?.getString("${task}TickedDay$currentDay") == "1");
+                (task) => prefs?.getString("${task}TickedDay$currentDay") == "1",);
 
     setState(() {
       streakInDanger = !allDoneToday;
@@ -417,9 +414,8 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> updatePoints() async {
     calcValues();
-    checkScores();
     prefs = await SharedPreferences.getInstance();
-    print("Setting points: ${points}");
+    print("Setting points: $points");
     prefs?.setInt("pointsDay$day", points);
   }
 

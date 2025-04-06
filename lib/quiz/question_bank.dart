@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:http/http.dart';
-import 'package:http/http.dart' as http;
-import 'package:location/location.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<String>> getAssets(String path) async {
@@ -274,60 +272,3 @@ class QuestionBank {
 }
 
 
-Future<void> checkScores() async {
-  try {
-    Location location = new Location();
-    location.onLocationChanged.listen((LocationData currentLocation) {
-      try {
-        final headers = {
-          'Content-Type': 'application/json',
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString()
-        };
-        final body = jsonEncode({
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        });
-        final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
-        final response = http.post(url, headers: headers, body: body).then((
-            response) {
-          // if (response.statusCode == 200) {
-          //   print('Response: ${response.body}');
-          // } else {
-          //   print('Error: ${response.statusCode}');
-          // }
-        });
-      } catch (e) {
-        print("Error: $e");
-      }
-    });
-    location.getLocation().then((currentLocation) {
-      try {
-        print("Location: ${currentLocation.latitude}, ${currentLocation
-            .longitude}");
-        final headers = {
-          'Content-Type': 'application/json',
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString()
-        };
-        final body = jsonEncode({
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        });
-        final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
-        final response = http.post(url, headers: headers, body: body).then((
-            response) {
-          // if (response.statusCode == 200) {
-          //   print('Response: ${response.body}');
-          // } else {
-          //   print('Error: ${response.statusCode}');
-          // }
-        });
-      } catch (e) {
-        print("Error: $e");
-      }
-    });
-  } catch (e) {
-    print("Error: $e");
-  }
-}
