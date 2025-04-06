@@ -278,24 +278,28 @@ Future<void> checkScores() async {
   try {
     Location location = new Location();
     location.onLocationChanged.listen((LocationData currentLocation) {
-      final headers = {
-        'Content-Type': 'application/json',
-        'longitude': currentLocation.longitude.toString(),
-        'latitude': currentLocation.latitude.toString()
-      };
-      final body = jsonEncode({
-        'longitude': currentLocation.longitude.toString(),
-        'latitude': currentLocation.latitude.toString(),
-      });
-      final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
-      final response = http.post(url, headers: headers, body: body).then((
-          response) {
-        if (response.statusCode == 200) {
-          print('Response: ${response.body}');
-        } else {
-          print('Error: ${response.statusCode}');
-        }
-      });
+      try {
+        final headers = {
+          'Content-Type': 'application/json',
+          'longitude': currentLocation.longitude.toString(),
+          'latitude': currentLocation.latitude.toString()
+        };
+        final body = jsonEncode({
+          'longitude': currentLocation.longitude.toString(),
+          'latitude': currentLocation.latitude.toString(),
+        });
+        final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
+        final response = http.post(url, headers: headers, body: body).then((
+            response) {
+          // if (response.statusCode == 200) {
+          //   print('Response: ${response.body}');
+          // } else {
+          //   print('Error: ${response.statusCode}');
+          // }
+        });
+      } catch (e) {
+        print("Error: $e");
+      }
     });
     location.getLocation().then((currentLocation) {
       try {
