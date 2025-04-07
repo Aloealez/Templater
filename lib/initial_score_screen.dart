@@ -91,185 +91,195 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
     final size = MediaQuery.of(context).size;
     print("dataLength: ${data.length}, userLevel: $userLevel");
 
-    final double maxY = data.map((d) => d.y).reduce(math.max);
-    final apexIndex = data.indexWhere((d) => d.y == maxY);
-
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          Container(
-            margin: EdgeInsets.only(
-              left: size.width / 10,
-              right: size.width / 10,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(height: size.height * 0.15),
-                AnimatedOpacity(
-                  opacity: isTextVisible ? 1.0 : 0.0,
-                  duration: const Duration(milliseconds: 300),
-                  child: Text(
-                    "Amazing!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'OleoScriptSwashCaps',
-                      fontSize: size.width / 6,
-                      fontWeight: FontWeight.bold,
-                      foreground: Paint()
-                        ..shader = const LinearGradient(
-                          colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
-                        ).createShader(
-                          const Rect.fromLTWH(0, 0, 200, 70),
+          Align(
+            alignment: Alignment(0, -0.55),
+            child: Container(
+              margin: EdgeInsets.only(
+                left: size.width / 10,
+                right: size.width / 10,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AnimatedOpacity(
+                      opacity: isTextVisible ? 1.0 : 0.0,
+                      duration: const Duration(milliseconds: 300),
+                      child: Text(
+                        "Amazing!",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'OleoScriptSwashCaps',
+                          fontSize: size.width / 6,
+                          fontWeight: FontWeight.bold,
+                          foreground: Paint()
+                            ..shader = const LinearGradient(
+                              colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
+                            ).createShader(
+                              const Rect.fromLTWH(0, 0, 200, 70),
+                            ),
                         ),
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                AnimatedOpacity(
-                  opacity: isTextVisible ? 1.0 : 0.0,
-                  duration: const Duration(milliseconds: 300),
-                  child: Text(
-                    "You got ${widget.userScore.toStringAsFixed(0)} "
-                        "out of ${widget.maxScore.toStringAsFixed(0)} questions right.",
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: size.width * 0.75,
-                  height: size.height * 0.4,
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment(0, 0),
-                        child: SfCartesianChart(
-                          plotAreaBorderWidth: 0,
-                          primaryXAxis: CategoryAxis(
-                            majorTickLines: const MajorTickLines(size: 0),
-                            majorGridLines: const MajorGridLines(width: 0),
-                            axisLine: AxisLine(
-                              width: 0,
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .primaryFixedDim,
-                            ),
-                            labelStyle: const TextStyle(fontSize: 0),
-                          ),
-                          primaryYAxis: NumericAxis(
-                            minimum: 0,
-                            maximum: 0.4,
-                            interval: 100,
-                            majorTickLines: const MajorTickLines(size: 0),
-                            majorGridLines: const MajorGridLines(width: 0),
-                            axisLine: const AxisLine(width: 0),
-                            labelStyle: const TextStyle(fontSize: 0),
-                          ),
-                          tooltipBehavior: _tooltip,
-                          series: <CartesianSeries<_ChartData, String>>[
-                            AreaSeries<_ChartData, String>(
-                              dataSource: data.sublist(0, (math.min(data.length - 1, data.length * userLevel)).floor()),
-                              xValueMapper: (_ChartData data, _) => data.x,
-                              yValueMapper: (_ChartData data, _) => data.y,
-                              name: 'Gold',
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryContainer
-                                  .withAlpha(79),
-                            ),
-                            LineSeries<_ChartData, String>(
-                              dataSource: data,
-                              xValueMapper: (_ChartData data, _) => data.x,
-                              yValueMapper: (_ChartData data, _) => data.y,
-                              name: 'Gold',
-                              color: Theme.of(context).colorScheme.primaryFixedDim,
-                              width: 3,
-                            ),
-                            LineSeries<_ChartData, String>(
-                              dataSource: [
-                                _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).round()].x, 0),
-                                _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).round()].x,
-                                    data[(math.min(data.length - 1, data.length * userLevel)).round()].y),
-                              ],
-                              xValueMapper: (_ChartData data, _) => data.x,
-                              yValueMapper: (_ChartData data, _) => data.y,
-                              name: 'Gold',
-                              color: Theme.of(context).colorScheme.primaryFixedDim,
-                              width: 3,
-                            ),
-                            LineSeries<_ChartData, String>(
-                              dataSource: [
-                                _ChartData(data.first.x, 0),
-                                _ChartData(data.last.x, 0)
-                              ],
-                              xValueMapper: (_ChartData data, _) => data.x,
-                              yValueMapper: (_ChartData data, _) => data.y,
-                              name: 'Gold',
-                              color: Theme.of(context).colorScheme.primaryFixedDim,
-                              width: 5.5,
-                            ),
-                            ScatterSeries<_ChartData, String>(
-                              dataSource: [
-                                _ChartData(data[(data.length * 0.63).toInt()].x,
-                                    data[(data.length * 0.63).toInt()].y, 'Good Score'),
-                              ],
-                              xValueMapper: (_ChartData d, _) => d.x,
-                              yValueMapper: (_ChartData d, _) => d.y,
-                              dataLabelMapper: (_ChartData d, _) => d.label,
-                              markerSettings: const MarkerSettings(
-                                isVisible: true,
-                                shape: DataMarkerType.circle,
-                                color: Colors.white,
-                                borderColor: Colors.white,
-                              ),
-                              dataLabelSettings: const DataLabelSettings(
-                                isVisible: true,
-                                textStyle: TextStyle(
-                                  color: Colors.white,
-                                ),
-                                labelAlignment: ChartDataLabelAlignment.top,
-                              ),
-                            ),
-                            ScatterSeries<_ChartData, String>(
-                              dataSource: [
-                                _ChartData(
-                                    data[math.min(data.length - 1, data.length * userLevel).floor()].x,
-                                    0,
-                                    'Your Score'),
-                              ],
-                              xValueMapper: (_ChartData d, _) => d.x,
-                              yValueMapper: (_ChartData d, _) => d.y,
-                              dataLabelMapper: (_ChartData d, _) => d.label,
-                              markerSettings: const MarkerSettings(
-                                isVisible: true,
-                                shape: DataMarkerType.circle,
-                                color: Colors.white,
-                                borderColor: Colors.white,
-                              ),
-                              dataLabelSettings: const DataLabelSettings(
-                                isVisible: true,
-                                textStyle: TextStyle(
-                                  color: Colors.white,
-                                ),
-                                labelAlignment: ChartDataLabelAlignment.top,
-                              ),
-                            ),
-                          ],
+                    SizedBox(height: size.height * 0.01),
+                    AnimatedOpacity(
+                      opacity: isTextVisible ? 1.0 : 0.0,
+                      duration: const Duration(milliseconds: 300),
+                      child: Text(
+                        "You got ${widget.userScore.toStringAsFixed(0)} "
+                            "out of ${widget.maxScore.toStringAsFixed(0)} questions right.",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
                         ),
-                      )
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                SizedBox(height: size.height * 0.05),
-              ],
+                      ),
+                    ),
+                  ]
+              ),
             ),
           ),
+
+                Align(
+                  alignment: Alignment(0, 0),
+                  child:SizedBox(
+                    width: size.width * 0.8,
+                    height: size.height * 0.45,
+                    child: SfCartesianChart(
+                      plotAreaBorderWidth: 0,
+                      primaryXAxis: CategoryAxis(
+                        majorTickLines: const MajorTickLines(size: 0),
+                        majorGridLines: const MajorGridLines(width: 0),
+                        axisLine: AxisLine(
+                          width: 0,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .primaryFixedDim,
+                        ),
+                        labelStyle: const TextStyle(fontSize: 0),
+                      ),
+                      primaryYAxis: NumericAxis(
+                        minimum: 0,
+                        maximum: 0.4,
+                        interval: 100,
+                        majorTickLines: const MajorTickLines(size: 0),
+                        majorGridLines: const MajorGridLines(width: 0),
+                        axisLine: const AxisLine(width: 0),
+                        labelStyle: const TextStyle(fontSize: 0),
+                      ),
+                      tooltipBehavior: _tooltip,
+                      series: <CartesianSeries<_ChartData, String>>[
+                        AreaSeries<_ChartData, String>(
+                          dataSource: data.sublist(0, (math.min(data.length - 1, data.length * userLevel)).floor()),
+                          xValueMapper: (_ChartData data, _) => data.x,
+                          yValueMapper: (_ChartData data, _) => data.y,
+                          name: 'Gold',
+                          color: Theme.of(context).colorScheme.secondaryContainer.withAlpha(179),
+                          // gradient: LinearGradient(
+                          //   colors: [Color(0xFFCA80DD).withAlpha(150), Colors.transparent],
+                          //   begin: Alignment.topCenter,
+                          //   end: Alignment.bottomCenter,
+                          // ),
+                          // pointColorMapper: (_ChartData p, i) {
+                          //   var value = (double.parse(p.x) - (double.parse(data[(data.length / 2).toInt()].x))).abs();
+                          //   value += (p.y - (data[(data.length / 2).toInt()].y)).abs();
+                          //   value = value * value * value;
+                          //   value = value / 10000;
+                          //   if (value > 255) {
+                          //     value = 255;
+                          //   }
+                          //   if (value < 0) {
+                          //     value = 0;
+                          //   }
+                          //   // print("Value: $value i $i");
+                          //   return Color(0xFFCA80DD).withAlpha(value.toInt());
+                          // },
+                        ),
+                        LineSeries<_ChartData, String>(
+                          dataSource: data,
+                          xValueMapper: (_ChartData data, _) => data.x,
+                          yValueMapper: (_ChartData data, _) => data.y,
+                          name: 'Gold',
+                          color: Theme.of(context).colorScheme.primaryFixedDim,
+                          width: 3,
+                        ),
+                        LineSeries<_ChartData, String>(
+                          dataSource: [
+                            _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).floor()].x, 0),
+                            _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).floor()].x,
+                                data[(math.min(data.length - 1, data.length * userLevel)).floor()].y),
+                          ],
+                          xValueMapper: (_ChartData data, _) => data.x,
+                          yValueMapper: (_ChartData data, _) => data.y,
+                          name: 'Gold',
+                          color: Theme.of(context).colorScheme.primaryFixedDim,
+                          width: 3,
+                        ),
+                        LineSeries<_ChartData, String>(
+                          dataSource: [
+                            _ChartData(data.first.x, 0),
+                            _ChartData(data.last.x, 0)
+                          ],
+                          xValueMapper: (_ChartData data, _) => data.x,
+                          yValueMapper: (_ChartData data, _) => data.y,
+                          name: 'Gold',
+                          color: Theme.of(context).colorScheme.primaryFixedDim,
+                          width: 5.5,
+                        ),
+                        ScatterSeries<_ChartData, String>(
+                          dataSource: [
+                            _ChartData(data[(data.length * 0.63).toInt()].x,
+                                data[(data.length * 0.63).toInt()].y, 'Good Score'),
+                          ],
+                          xValueMapper: (_ChartData d, _) => d.x,
+                          yValueMapper: (_ChartData d, _) => d.y,
+                          dataLabelMapper: (_ChartData d, _) => d.label,
+                          markerSettings: const MarkerSettings(
+                            isVisible: true,
+                            shape: DataMarkerType.circle,
+                            color: Colors.white,
+                            borderColor: Colors.white,
+                          ),
+                          dataLabelSettings: const DataLabelSettings(
+                            isVisible: true,
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                            ),
+                            labelAlignment: ChartDataLabelAlignment.top,
+                          ),
+                        ),
+                        ScatterSeries<_ChartData, String>(
+                          dataSource: [
+                            _ChartData(
+                                data[math.min(data.length - 1, data.length * userLevel).floor()].x,
+                                0,
+                                'Your Score'),
+                          ],
+                          xValueMapper: (_ChartData d, _) => d.x,
+                          yValueMapper: (_ChartData d, _) => d.y,
+                          dataLabelMapper: (_ChartData d, _) => d.label,
+                          markerSettings: const MarkerSettings(
+                            isVisible: true,
+                            shape: DataMarkerType.circle,
+                            color: Colors.white,
+                            borderColor: Colors.white,
+                          ),
+                          dataLabelSettings: const DataLabelSettings(
+                            isVisible: true,
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                            ),
+                            labelAlignment: ChartDataLabelAlignment.top,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
           Positioned(
             bottom: 50,
             left: 0,
