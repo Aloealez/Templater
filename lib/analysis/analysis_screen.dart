@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:brainace_pro/theme/theme_colors.dart';
 import 'dart:async';
 import '/navbar.dart';
 import 'yourProgress_screen.dart';
 
-
 class AnalysisScreen extends StatefulWidget {
-
   const AnalysisScreen({super.key});
 
   @override
@@ -18,20 +17,22 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
   late SharedPreferences prefs;
   int scoreMath = 0;
   int scoreRW = 0;
+  Color hoverColor = Colors.white24;
 
   Future<Map<String, double>> GetSatsPoints() async {
     List<String> questionSubcategoriesPointsStr =
         prefs.getStringList("scores_questionsLast") ??
             List<String>.generate(
               SatsQuestionSubcategories.typesList.length,
-                  (index) => "-1",
+              (index) => "-1",
             );
     print("questionSubcategoriesPointsStr: $questionSubcategoriesPointsStr");
-    List<String> questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
+    List<String> questionsSubcategories =
+        List.from(SatsQuestionSubcategories.typesList);
     Map<String, double> questionsSubcategoriesPoints = {
       for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
         SatsQuestionSubcategories.typesList[i]:
-        double.parse(questionSubcategoriesPointsStr[i]),
+            double.parse(questionSubcategoriesPointsStr[i]),
     };
     return questionsSubcategoriesPoints;
   }
@@ -85,25 +86,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
             const SizedBox(height: 30),
             buildTitle("Your Progress", size),
             const SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) =>
-                        Progress(),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return ScaleTransition(
-                        scale: Tween<double>(begin: 0.8, end: 1.0)
-                            .animate(animation),
-                        child: child,
-                      );
-                    },
-                  ),
-                );
-              },
-              child: buildProgressContainer(context, size),
-            ),
+            buildProgressContainer(context, size),
             const SizedBox(height: 30),
             buildTitle("Weak Points And Strengths", size),
             const SizedBox(height: 20),
@@ -131,11 +114,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
       width: containerWidth,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: Theme.of(context).colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -218,11 +197,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
       width: containerWidth,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: Theme.of(context).colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Container(
@@ -243,6 +218,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
 
   Widget buildProgressBar(BuildContext context, String label, int score) {
     final size = MediaQuery.of(context).size;
+    final score = scoreRW + scoreMath;
     double progress = score / 1600;
 
     return SizedBox(
@@ -280,40 +256,75 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
       width: containerWidth,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF6A0DAD), Color(0xFF8A2BE2)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: Theme.of(context).colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          buildWeakPoint(Icons.sentiment_very_satisfied, "Great"),
-          buildWeakPoint(Icons.person, "Weak"),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      CombinedProgress(Progress: true, Weak: false),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    return ScaleTransition(
+                      scale: Tween<double>(begin: 0.8, end: 1.0)
+                          .animate(animation),
+                      child: child,
+                    );
+                  },
+                ),
+              );
+            },
+            child: buildWeakPoint(Icons.sentiment_very_satisfied, "Great"),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      CombinedProgress(Progress: false, Weak: true),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    return ScaleTransition(
+                      scale: Tween<double>(begin: 0.8, end: 1.0)
+                          .animate(animation),
+                      child: child,
+                    );
+                  },
+                ),
+              );
+            },
+            child: buildWeakPoint(Icons.person_rounded, "Weak"),
+          ),
         ],
       ),
     );
   }
 
   Widget buildWeakPoint(IconData icon, String label) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: Colors.white24,
-          child: Icon(icon, size: 30, color: Colors.white),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 16,
-            color: Colors.white,
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white24,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, size: 50, color: Colors.white),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.white,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

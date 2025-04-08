@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:brainace_pro/quiz/question_bank.dart';
+
 import './widgets/port_home_tasks_widget.dart';
 import 'widgets/port_home_tasks_widget_config.dart';
 import 'package:flutter/material.dart';
@@ -74,6 +76,7 @@ class _Home extends State<Home> with RouteAware {
   Future<void> calcDay() async {
     DateTime firstDay = DateTime.now();
     DateTime today = DateTime.now();
+    checkScores();
     prefs ??= await SharedPreferences.getInstance();
     auria = prefs?.getDouble('auria') ?? 0.0;
     if (prefs == null) {
@@ -197,6 +200,7 @@ class _Home extends State<Home> with RouteAware {
     // Otherwise, generate a new plan
     int currentTime = 0;
     skillBaseList = List.from(skillBaseLists[skill]!);
+    print("SKill base ${skill} list: $skillBaseList");
 
     // Example for "sats" skill
     if (skill == "sats") {
@@ -293,6 +297,7 @@ class _Home extends State<Home> with RouteAware {
     while (currentTime < trainingTime && skillBaseList.isNotEmpty) {
       int el = rng.nextInt(skillBaseList.length);
       newPlan.add(skillBaseList[el].toList()[1].toString());
+      print("Added to plan: ${skillBaseList[el].toList()[1]}");
       currentTime += skillBaseList[el].toList()[2] as int;
       skillBaseList.removeAt(el);
     }

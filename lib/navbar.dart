@@ -5,6 +5,7 @@ import 'home.dart';
 import 'score_n_progress/progress.dart';
 import 'activities/brain_train_activities.dart';
 import 'settings/settings.dart';
+import 'analysis/analysis_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
@@ -19,7 +20,7 @@ int _selectedIndex = 2;
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   late SharedPreferences prefs;
 
-  Future<void> initSharedPrefs () async {
+  Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
   }
 
@@ -36,35 +37,35 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             if (index == 0) {
               // return const Activities();
               return FutureBuilder(
-                  future: initSharedPrefs(),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator();
-                    } else if (prefs.getString('skill') == 'sats') {
-                      return Activities();
-                    } else {
-                      return BrainTrainActivities();
-                    }
-                  },
+                future: initSharedPrefs(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const CircularProgressIndicator();
+                  } else if (prefs.getString('skill') == 'sats') {
+                    return Activities();
+                  } else {
+                    return BrainTrainActivities();
+                  }
+                },
               );
             } else if (index == 1) {
               return const Progress();
-            // } else if (index == 3) {
-             // return const AnalysisScreen();
             } else if (index == 3) {
+              return const AnalysisScreen();
+            } else if (index == 4) {
               return const Settings();
             } else {
               return FutureBuilder(
-                  future: initSharedPrefs(),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const CircularProgressIndicator();
-                    } else if (prefs.getString('skill') == 'sats') {
-                      return const Home();
-                    } else {
-                      return const Home();
-                    }
-                  },
+                future: initSharedPrefs(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const CircularProgressIndicator();
+                  } else if (prefs.getString('skill') == 'sats') {
+                    return const Home();
+                  } else {
+                    return const Home();
+                  }
+                },
               );
             }
           }(),
@@ -88,22 +89,33 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             ),
           ),
         ),
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Theme.of(context).colorScheme.surface,
-          selectedFontSize: 0,
-          unselectedFontSize: 0,
-          unselectedItemColor: Theme.of(context).colorScheme.secondary,
-          selectedItemColor: Theme.of(context).colorScheme.onSurface,
-          items: [
-            buildMenuIcon(0, "Activities"),
-            buildMenuIcon(1, "Progress"),
-            buildMenuIcon(2, "Home"),
-            // buildMenuIcon(3, "Analysis"),
-            buildMenuIcon(3, "Settings"),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
+        child: Theme(
+          data: Theme.of(context).copyWith(
+            splashFactory: NoSplash.splashFactory,
+            highlightColor: Colors.transparent,
+          ),
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            elevation: 0,
+            selectedFontSize: 0,
+            unselectedFontSize: 0,
+            unselectedItemColor: Theme.of(context).colorScheme.secondary,
+            selectedItemColor: Theme.of(context).colorScheme.onSurface,
+            items: [
+              buildMenuIcon(0, "Activities"),
+              buildMenuIcon(1, "Progress"),
+              buildMenuIcon(2, "Home"),
+              buildMenuIcon(3, "Analysis"),
+              buildMenuIcon(4, "Settings"),
+            ],
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
+            selectedIconTheme: IconThemeData(
+              color: Theme.of(context).colorScheme.primaryContainer,
+              size: 30,
+            ),
+          ),
         ),
       ),
     );
@@ -112,9 +124,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   BottomNavigationBarItem buildMenuIcon(int index, String name) {
     Size size = MediaQuery.of(context).size;
     return BottomNavigationBarItem(
-      icon: Padding(padding: EdgeInsets.only(
-        top: size.height / 120,
-      ),
+      icon: Padding(
+        padding: EdgeInsets.only(
+          top: size.height / 120,
+        ),
         child: Stack(
           children: [
             ImageIcon(
@@ -123,7 +136,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               ),
               // color: Theme.of(context).colorScheme.secondary,
               size: _selectedIndex == index ? 30 : 28,
-              color: _selectedIndex == index ? Theme.of(context).colorScheme.primaryContainer : Theme.of(context).colorScheme.primary,
+              color: _selectedIndex == index
+                  ? Theme.of(context).colorScheme.primaryContainer
+                  : Theme.of(context).colorScheme.primary,
             ),
             SizedBox(height: 0.02 * size.height),
           ],
