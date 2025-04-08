@@ -24,6 +24,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
 
   void _showCupertinoColorPicker(String colorKey) {
     Size size = MediaQuery.of(context).size;
+    Color selectedColor = getThemeColor(prefs, Theme.of(context).brightness, colorKey,);
     showCupertinoModalPopup(
       context: context,
       builder: (BuildContext context) {
@@ -39,14 +40,15 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                       prefs, Theme.of(context).brightness, colorKey,),
                   onColorChanged: (Color color) {
                     print("Color changed to $color");
-                    setThemeColor(
-                        prefs, Theme.of(context).brightness, colorKey, color,)
-                        .then((obj) {
-                      if (context.mounted) {
-                        MyApp.of(context).reloadTheme();
-                      }
-                    });
-                    setState(() {});
+                    selectedColor = color;
+                    // setThemeColor(
+                    //     prefs, Theme.of(context).brightness, colorKey, color,)
+                    //     .then((obj) {
+                    //   if (context.mounted) {
+                    //     // MyApp.of(context).reloadTheme();
+                    //   }
+                    // });
+                    // setState(() {});
                   },
                 ),
               ],
@@ -62,7 +64,14 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              onPressed: () => Navigator.of(context).pop(),
+              onPressed: () {
+        setThemeColor(prefs, Theme.of(context).brightness, colorKey, selectedColor,).then((obj) {
+          if (context.mounted) {
+            MyApp.of(context).reloadTheme();
+          }
+        });
+                Navigator.of(context).pop();
+                },
             ),
             CupertinoActionSheetAction(
               child: Text(
@@ -151,7 +160,14 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: appBar(context, "Customise Colors"),
-      body: Padding(
+      body: FutureBuilder(
+    future: prefsF,
+    builder: (context, snapshot) {
+    prefs = snapshot.data as SharedPreferences?;
+    if (snapshot.connectionState == ConnectionState.waiting) {
+    return const Center(child: CircularProgressIndicator());
+    }
+    return Padding(
         padding: EdgeInsets.only(left: size.width / 10, right: size.width / 10, top : size.height / 20),
         child: Column(
           children: [
@@ -201,6 +217,8 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
             const Spacer(),
           ],
         ),
+    );
+    }
       ),
     );
   }
