@@ -13,11 +13,9 @@ import 'navbar.dart';
 import 'activities_for_each_section.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'dart:math';
-import 'score_n_progress/finish_screen.dart';
 import '/memory/faces.dart';
 import 'package:brainace_pro/notification.dart';
 import 'main.dart';
-
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -99,7 +97,8 @@ class _Home extends State<Home> with RouteAware {
 
     bool allDoneToday = plan.isNotEmpty &&
         plan.every(
-                (task) => prefs?.getString("${task}TickedDay$currentDay") == "1",);
+          (task) => prefs?.getString("${task}TickedDay$currentDay") == "1",
+        );
 
     setState(() {
       streakInDanger = !allDoneToday;
@@ -107,12 +106,12 @@ class _Home extends State<Home> with RouteAware {
 
     if (currentDay > 1) {
       List<String>? yesterdayPlan =
-      prefs?.getStringList("basePlanDay${currentDay - 1}");
+          prefs?.getStringList("basePlanDay${currentDay - 1}");
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
           yesterdayPlan.every(
-                (task) =>
-            prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
+            (task) =>
+                prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
           );
 
       if (!allDoneYesterday && !allDoneToday) {
@@ -208,14 +207,14 @@ class _Home extends State<Home> with RouteAware {
           prefs?.getStringList("scores_questionsLast") ??
               List<String>.generate(
                 SatsQuestionSubcategories.typesList.length,
-                    (index) => "-1",
+                (index) => "-1",
               );
       List<String> questionsSubcategories;
       questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
           SatsQuestionSubcategories.typesList[i]:
-          double.parse(questionSubcategoriesPointsStr[i]),
+              double.parse(questionSubcategoriesPointsStr[i]),
       };
       questionsSubcategories.sort((a, b) {
         if (questionsSubcategoriesPoints[a]! >
@@ -234,10 +233,11 @@ class _Home extends State<Home> with RouteAware {
         int currentMathTime = 0;
         int currentRWTime = 0;
         for (int i = 0;
-        i < questionsSubcategories.length && currentTime < trainingTime;
-        i++) {
+            i < questionsSubcategories.length && currentTime < trainingTime;
+            i++) {
           print(
-              "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},",);
+            "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},",
+          );
           if (SatsQuestionSubcategories.typesList
               .sublist(10)
               .contains(questionsSubcategories[i])) {
@@ -258,8 +258,8 @@ class _Home extends State<Home> with RouteAware {
         }
       } else {
         for (int i = 0;
-        i < questionsSubcategories.length && currentTime < trainingTime;
-        i++) {
+            i < questionsSubcategories.length && currentTime < trainingTime;
+            i++) {
           if (skillSats == "math" &&
               SatsQuestionSubcategories.typesList
                   .sublist(10)
@@ -342,22 +342,6 @@ class _Home extends State<Home> with RouteAware {
   Future<void> readMemory() async {
     await calcDay();
 
-    // Show the final screen if day >= 30, but do NOT reset progress.
-    if (day >= 30) {
-      if (mounted) {
-        Navigator.pushReplacement(
-          context,
-          PageTransition(
-            type: PageTransitionType.fade,
-            child: Finish(),
-            reverseDuration: const Duration(milliseconds: 100),
-            opaque: false,
-          ),
-        );
-      }
-      return;
-    }
-
     // If day < 30, continue the normal plan logic
     await getSkill();
     await createPlan();
@@ -374,7 +358,7 @@ class _Home extends State<Home> with RouteAware {
 
     String? lastUpdateDateStr = prefs?.getString('last_emoji_update_date');
     DateTime? lastUpdateDate =
-    lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
+        lastUpdateDateStr != null ? DateTime.parse(lastUpdateDateStr) : null;
 
     if (lastUpdateDate == null ||
         currentDate.difference(lastUpdateDate).inDays >= 1) {
@@ -429,9 +413,9 @@ class _Home extends State<Home> with RouteAware {
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
       if ((skillSats == "both" &&
-          SatsQuestionSubcategories.typesList
-              .sublist(0, 10)
-              .contains(plan[i])) ||
+              SatsQuestionSubcategories.typesList
+                  .sublist(0, 10)
+                  .contains(plan[i])) ||
           skillSats != "both") {
         minutes += sectionTimes[plan[i]]!;
       }
@@ -439,14 +423,14 @@ class _Home extends State<Home> with RouteAware {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-            () {
+        () {
           return Column(
             children: [
               for (int i = 0; i < plan.length; i++)
                 if ((skillSats == "both" &&
-                    SatsQuestionSubcategories.typesList
-                        .sublist(0, 10)
-                        .contains(plan[i])) ||
+                        SatsQuestionSubcategories.typesList
+                            .sublist(0, 10)
+                            .contains(plan[i])) ||
                     skillSats != "both")
                   Column(
                     children: [
@@ -459,7 +443,7 @@ class _Home extends State<Home> with RouteAware {
                                 type: PageTransitionType.fade,
                                 child: (sectionActivities[plan[i]]!(context)),
                                 reverseDuration:
-                                const Duration(milliseconds: 100),
+                                    const Duration(milliseconds: 100),
                                 opaque: false,
                               ),
                             );
@@ -557,7 +541,7 @@ class _Home extends State<Home> with RouteAware {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-                () {
+            () {
               if (skillSats == "both") {
                 return Column(
                   children: [
@@ -575,7 +559,7 @@ class _Home extends State<Home> with RouteAware {
                                   type: PageTransitionType.fade,
                                   child: (sectionActivities[plan[i]]!(context)),
                                   reverseDuration:
-                                  const Duration(milliseconds: 100),
+                                      const Duration(milliseconds: 100),
                                   opaque: false,
                                 ),
                               );
@@ -699,10 +683,10 @@ class _Home extends State<Home> with RouteAware {
                 Center(
                   child: Text(
                     "Plan For Today",
-                    style:
-                    TextStyle(fontSize: size.width / 9, 
-                    letterSpacing: 1.5, 
-                    height: 0.9,
+                    style: TextStyle(
+                      fontSize: size.width / 9,
+                      letterSpacing: 1.5,
+                      height: 0.9,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -739,7 +723,7 @@ class _Home extends State<Home> with RouteAware {
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
                                 text:
-                                "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
+                                    "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,
@@ -839,4 +823,3 @@ class _Home extends State<Home> with RouteAware {
     );
   }
 }
-

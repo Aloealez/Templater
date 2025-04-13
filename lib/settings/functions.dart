@@ -1,20 +1,20 @@
-import 'package:brainace_pro/score_n_progress/finish_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:brainace_pro/title_page.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../home.dart';
 
 import '../main.dart';
 
 Future<void> popUp(
-    BuildContext context,
-    String txt,
-    String txtBold,
-    String txt2,
-    String question,
-    Function fn,
-    ) async {
+  BuildContext context,
+  String txt,
+  String txtBold,
+  String txt2,
+  String question,
+  Function fn,
+) async {
   Size size = MediaQuery.of(context).size;
   await showDialog(
     context: context,
@@ -57,7 +57,7 @@ Future<void> popUp(
               ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 style: ButtonStyle(
-                  backgroundColor: WidgetStateProperty.all(
+                  backgroundColor: MaterialStateProperty.all(
                     Theme.of(context).colorScheme.primary,
                   ),
                 ),
@@ -106,23 +106,6 @@ Future<void> popUp(
   );
 }
 
-void endProgram(BuildContext context) {
-  // Instead of resetting, just navigate to the final screen
-  SharedPreferences.getInstance().then((prefs) {
-    if (context.mounted) {
-      Navigator.pushReplacement(
-        context,
-        PageTransition(
-          type: PageTransitionType.fade,
-          child: Finish(),
-          reverseDuration: const Duration(milliseconds: 100),
-          opaque: false,
-        ),
-      );
-    }
-  });
-}
-
 Future<void> restartAppButton(BuildContext context) async {
   Size size = MediaQuery.of(context).size;
   await showDialog(
@@ -139,7 +122,7 @@ Future<void> restartAppButton(BuildContext context) async {
                 RichText(
                   text: TextSpan(
                     text:
-                    'By restarting the program, you will return to the welcome screen. Your ',
+                        'By restarting the program, you will return to the welcome screen. Your ',
                     style: TextStyle(
                       fontSize: size.width / 20,
                     ),
@@ -193,7 +176,7 @@ Future<void> restartAppButton(BuildContext context) async {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                          const TitlePage(title: 'BrainAce.pro'),
+                              const TitlePage(title: 'BrainAce.pro'),
                         ),
                       );
                     }

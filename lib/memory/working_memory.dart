@@ -10,6 +10,7 @@ import '../score_n_progress/progress_screen.dart';
 import '../app_bar.dart';
 import '../score_n_progress/show_improvement.dart';
 import '../title_page.dart';
+import 'package:brainace_pro/theme/theme_colors.dart';
 
 class WorkingMemory extends StatefulWidget {
   final bool initialTest;
@@ -22,10 +23,10 @@ class WorkingMemory extends StatefulWidget {
   });
 
   static WorkingMemory routeBuilder(
-      BuildContext context, {
-        required bool initialTest,
-        required bool endingTest,
-      }) {
+    BuildContext context, {
+    required bool initialTest,
+    required bool endingTest,
+  }) {
     return WorkingMemory(
       initialTest: initialTest,
       endingTest: endingTest,
@@ -70,6 +71,7 @@ class _WorkingMemory extends State<WorkingMemory> {
   late YoutubePlayerController _controller;
   TextEditingController textController = TextEditingController();
   double score = 0;
+  int selectedScore = -1;
 
   int level = 0;
   int streak = 0;
@@ -155,7 +157,7 @@ class _WorkingMemory extends State<WorkingMemory> {
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Center(
                     child: Text(
@@ -189,8 +191,8 @@ class _WorkingMemory extends State<WorkingMemory> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                        child: YoutubePlayer(
-                          controller: _controller,
+                      child: YoutubePlayer(
+                        controller: _controller,
                       ),
                     ),
                   ),
@@ -198,49 +200,60 @@ class _WorkingMemory extends State<WorkingMemory> {
                     height: size.height / 25,
                   ),
                   Text(
-                    "Write yout score BELOW.",
+                    "Select your score.",
                     style: TextStyle(fontSize: size.width / 24),
                   ),
                   SizedBox(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 8,
-                      ),
-                      child: TextField(
-                        controller: textController,
-                        style: TextStyle(fontSize: size.width / 24),
-                        keyboardType: TextInputType.numberWithOptions(
-                          decimal: true,
-                        ),
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                          TextInputFormatter.withFunction((oldValue, newValue) {
-                            String text = newValue.text;
-                            if (text.isEmpty || int.parse(text) <= 3) {
-                              score = double.parse(text);
-                              setState(() {
-
-                              });
-                              return newValue;
-                            }
-                            return oldValue;
-                          }),
-                        ],
-                        maxLines: 1,
-                        decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 0,
-                            horizontal: 12,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          hintText: "",
-                        ),
-                      ),
-                    ),
+                    height: size.height / 50,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(4, (index) {
+                      bool isSelected = selectedScore == index;
+                      return GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedScore = index;
+                            score = index.toDouble();
+                          });
+                        },
+                        child: AnimatedContainer(
+                          alignment: Alignment.center,
+                          height: size.height / 20,
+                          width: size.width / 7,
+                          duration: Duration(milliseconds: 200),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? Theme.of(context).colorScheme.primary
+                                : Colors.transparent,
+                            borderRadius: BorderRadius.circular(20),
+                            border: isSelected
+                                ? null
+                                : Border.all(width: 2, color: Colors.white),
+                            boxShadow: isSelected
+                                ? [
+                                    BoxShadow(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary
+                                          .withOpacity(0.6),
+                                      blurRadius: 10,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ]
+                                : [],
+                          ),
+                          child: Text(
+                            index.toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  )
                 ],
               ),
               SizedBox(

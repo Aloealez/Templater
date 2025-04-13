@@ -58,7 +58,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
           child: Text(
             levelName,
             style: TextStyle(
-              fontSize: size.width / 19,
+              fontSize: size.width / 16,
               color: Theme.of(context).colorScheme.onSecondary,
               shadows: <Shadow>[
                 Shadow(
@@ -86,55 +86,55 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
             right: size.width / 40,
             top: size.height / 69,
           ),
-              child: Column(
-                children: <Widget>[
-                  Column(
-                    children: [
-                      Text(
-                        "Select Your",
-                        style: TextStyle(
-                          fontSize: size.width / 10,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        "English Level",
-                        style: TextStyle(
-                          fontSize: size.width / 10,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).colorScheme.onSurface,
-                            height: 0.7,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+          child: Column(
+            children: <Widget>[
+              Column(
+                children: [
+                  Text(
+                    "Select Your",
+                    style: TextStyle(
+                      fontSize: size.width / 10,
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-          // child: Column(
-          //   mainAxisAlignment: MainAxisAlignment.start,
-          //   crossAxisAlignment: CrossAxisAlignment.center,
-          //   children: <Widget>[
-          //     Text(
-          //       "Select Your",
-          //       style: TextStyle(
-          //         fontSize: size.width / 10,
-          //         fontWeight: FontWeight.w600,
-          //         color: Theme.of(context).colorScheme.onSurface,
-          //       ),
-          //       textAlign: TextAlign.center,
-          //     ),
-          //     SizedBox(height: 0.06 * size.height),
-          //     Text(
-          //       "English Level",
-          //       style: TextStyle(
-          //         fontSize: size.width / 10,
-          //         fontWeight: FontWeight.w600,
-          //         color: Theme.of(context).colorScheme.onSurface,
-          //           height: 0.7,
-          //       ),
-          //       textAlign: TextAlign.center,
-          //     ),
+                  Text(
+                    "English Level",
+                    style: TextStyle(
+                      fontSize: size.width / 10,
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).colorScheme.onSurface,
+                      height: 0.7,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              // child: Column(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   crossAxisAlignment: CrossAxisAlignment.center,
+              //   children: <Widget>[
+              //     Text(
+              //       "Select Your",
+              //       style: TextStyle(
+              //         fontSize: size.width / 10,
+              //         fontWeight: FontWeight.w600,
+              //         color: Theme.of(context).colorScheme.onSurface,
+              //       ),
+              //       textAlign: TextAlign.center,
+              //     ),
+              //     SizedBox(height: 0.06 * size.height),
+              //     Text(
+              //       "English Level",
+              //       style: TextStyle(
+              //         fontSize: size.width / 10,
+              //         fontWeight: FontWeight.w600,
+              //         color: Theme.of(context).colorScheme.onSurface,
+              //           height: 0.7,
+              //       ),
+              //       textAlign: TextAlign.center,
+              //     ),
               SizedBox(height: 0.07 * size.height),
               levelSelectionButton(
                 context,

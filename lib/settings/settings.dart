@@ -19,12 +19,12 @@ class _Settings extends State<Settings> {
   List<bool> highlighted = [false, false, false, false, false, false, false];
 
   Widget element(
-      BuildContext context,
-      Widget? route,
-      String text,
-      int index, {
-        void Function()? onTap,
-      }) {
+    BuildContext context,
+    Widget? route,
+    String text,
+    int index, {
+    void Function()? onTap,
+  }) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
@@ -39,15 +39,6 @@ class _Settings extends State<Settings> {
             '',
             'Would you like to restart the App?',
             restartApp,
-          );
-        } else if (index == 3) {
-          popUp(
-            context,
-            'By ending the program, you will ',
-            'receive a final test, ',
-            'and then you can continue or go back to home.',
-            'Do you want to end the Program now?',
-            endProgram,
           );
         } else if (index == 4) {
           Site.launch();
@@ -172,31 +163,23 @@ class _Settings extends State<Settings> {
                   SizedBox(height: size.height * 0.03),
                   element(context, null, "Reset The App", 2),
                   SizedBox(height: size.height * 0.03),
-                  element(
-                    context,
-                    const ShowImprovement(
-                      title: "Attention",
-                      description: "Exercise 2 - Long Term Concentration",
-                      exercise: 2,
-                      yourScore: 1.0,
-                      maximum: 10,
-                      page: Home(),
-                    ),
-                    "End The Program",
-                    3,
-                  ),
-                  SizedBox(height: size.height * 0.03),
                   element(context, const SizedBox(), "Our Website", 4),
                   SizedBox(height: size.height * 0.03),
-                  element(context, null, "Customize Colors", 6, onTap: () {
-                    Navigator.push(
-                      context,
-                      PageTransition(
-                        child: const CustomizeTheme(),
-                        type: PageTransitionType.fade,
-                      ),
-                    );
-                  },),
+                  element(
+                    context,
+                    null,
+                    "Customize Colors",
+                    6,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child: const CustomizeTheme(),
+                          type: PageTransitionType.fade,
+                        ),
+                      );
+                    },
+                  ),
                   SizedBox(height: size.height * 0.03),
                 ],
               ),
