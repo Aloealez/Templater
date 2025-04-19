@@ -1,4 +1,3 @@
-import 'package:brainace_pro/home.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '/navbar.dart';
@@ -6,7 +5,6 @@ import 'customize_theme.dart';
 import 'tos.dart';
 import 'contact.dart';
 import 'functions.dart';
-import '../score_n_progress/show_improvement.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});

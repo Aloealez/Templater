@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:brainace_pro/title_page.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../home.dart';
 
 import '../main.dart';
 
@@ -57,7 +55,7 @@ Future<void> popUp(
               ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     Theme.of(context).colorScheme.primary,
                   ),
                 ),

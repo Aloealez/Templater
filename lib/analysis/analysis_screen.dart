@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:brainace_pro/theme/theme_colors.dart';
 import 'dart:async';
 import '/navbar.dart';
 import 'yourProgress_screen.dart';
