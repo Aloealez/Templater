@@ -27,7 +27,7 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
   onTertiary: Color(0xFFFFFFFF),
   primaryContainer: Color(0xFFE7D1FF),
   onPrimaryContainer: Color(0xFF000000),
-  surface: Color(0xFF131313),
+  surface: Color(0xFF030303),
   onSurface: Color(0xFFFFFFFF),
   error: Color.fromARGB(255, 234, 31, 17),
   shadow: Color.fromARGB(0, 0, 0, 0),
@@ -37,17 +37,23 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
   onTertiaryFixed: Colors.white,
 );
 
-Future<void> setThemeColor(SharedPreferences? prefs, Brightness brightness,
-    String colorKey, Color? color,) async {
+Future<void> setThemeColor(
+  SharedPreferences? prefs,
+  Brightness brightness,
+  String colorKey,
+  Color? color,
+) async {
   if (prefs != null) {
     print("Setting color $colorKey to $color");
     if (color == null) {
       await prefs.remove(
-          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+      );
     } else {
       await prefs.setInt(
-          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
-          color.value,);
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+        color.value,
+      );
     }
   } else {
     print("setThemeColor() Prefs is null");
@@ -64,7 +70,8 @@ Color getThemeColor(
     colorNum = null;
   } else {
     colorNum = prefs.getInt(
-        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
+      "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+    );
   }
 
   Color color = Color(0xFF000000);
