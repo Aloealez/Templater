@@ -462,7 +462,7 @@ class _Home extends State<Home> with RouteAware {
                           child: Row(
                             children: [
                               SizedBox(
-                                width: size.width / 15,
+                                width: size.width / 10,
                                 child: Icon(
                                   (basePlanTicked[i] == "1")
                                       ? Icons.square_rounded
@@ -580,7 +580,7 @@ class _Home extends State<Home> with RouteAware {
                                 child: Row(
                                   children: [
                                     SizedBox(
-                                      width: size.width / 12,
+                                      width: size.width / 10,
                                       child: Icon(
                                         (basePlanTicked[i] == "1")
                                             ? Icons.square_rounded
