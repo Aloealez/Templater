@@ -1,10 +1,10 @@
 {
   "answers": {
-    "A": "(\\frac{-61}{2}, 0)",
-    "B": "(\\frac{-59}{2}, 0)",
-    "C": "(\\frac{-57}{2}, 0)",
-    "D": "(\\frac{59}{2}, 0)"
-  },
+    "A": "$\\left( \\frac{-61}{2}, 0 \\right)$",
+    "B": "$\\left( \\frac{-59}{2}, 0 \\right)$",
+    "C": "$\\left( \\frac{-57}{2}, 0 \\right)$",
+    "D": "$\\left( \\frac{59}{2}, 0 \\right)$"
+},
   "correct": {
     "A": false,
     "B": true,
