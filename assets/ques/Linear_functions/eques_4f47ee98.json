@@ -1,9 +1,9 @@
 {
   "answers": {
-    "A": "$\\left( \\frac{41}{3},, 0 \\right)$",
+    "A": "$\\left( \\frac{41}{3}, 0 \\right)$",
     "B": "$\\left( \\frac{-41}{3}, 0 \\right)$",
     "C": "$\\left( \\frac{-44}{3}, 0 \\right)$",
-    "D": "$\\left( \\frac{-38}{3} 0 \\right)$"
+    "D": "$\\left( \\frac{-38}{3}, 0 \\right)$"
 },
   "correct": {
     "A": false,
