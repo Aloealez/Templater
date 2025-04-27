@@ -21,18 +21,19 @@ class _Activities extends State<Activities> {
   List<String> plan = [];
 
   Widget createActivity2(
-      BuildContext context,
-      String img,
-      String txt1,
-      String txt2,
-      Widget route,
-      String activityName, {
-        double fontSize = 1,
-        double zero = 1,
-      }) {
+    BuildContext context,
+    String img,
+    String txt1,
+    String txt2,
+    Widget route,
+    String activityName, {
+    double fontSize = 1,
+    double zero = 1,
+  }) {
     Size size = MediaQuery.of(context).size;
 
-    if (skillAllLists[skill] != null && skillAllLists[skill]!.contains(activityName)) {
+    if (skillAllLists[skill] != null &&
+        skillAllLists[skill]!.contains(activityName)) {
       return ActivityButton(
         context,
         img: "activities/$img",
@@ -129,7 +130,8 @@ class _Activities extends State<Activities> {
             Expanded(
               child: ListView(
                 padding: EdgeInsets.only(
-                  top: 0.02 * size.height, // space between "Do Today" and activities list
+                  top: 0.02 *
+                      size.height, // space between "Do Today" and activities list
                 ),
                 children: [
                   Container(
@@ -164,7 +166,7 @@ class _Activities extends State<Activities> {
                           img: "activities/maths_section",
                           text1: "Mathematics",
                           text2: "Section",
-                          fontSize: 0.03 * size.height * 1,
+                          fontSize: 0.026 * size.height * 1,
                           onTapRoute: const MathActivities(),
                           // onTapRoute: StartSatsMath(
                           //   subcategory: SatsQuestionSubcategories(ESatsQuestionSubcategories.NonlinearFunctions),
@@ -177,7 +179,7 @@ class _Activities extends State<Activities> {
                           img: "activities/reading_writing_section",
                           text1: "Reading &",
                           text2: "Writing Section",
-                          fontSize: 0.03 * size.height * 1,
+                          fontSize: 0.026 * size.height * 1,
                           onTapRoute: const ReadingWritingActivities(),
                           forceStar: true,
                         ),
@@ -187,7 +189,7 @@ class _Activities extends State<Activities> {
                           img: "activities/brain_train_section",
                           text1: "Brain Train",
                           text2: "Section",
-                          fontSize: 0.03 * size.height * 1,
+                          fontSize: 0.026 * size.height * 1,
                           onTapRoute: const BrainTrainActivities(),
                         ),
                       ],
@@ -203,4 +205,3 @@ class _Activities extends State<Activities> {
     );
   }
 }
-
