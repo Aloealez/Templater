@@ -8,8 +8,11 @@ import 'home.dart';
 class LevelTest extends StatefulWidget {
   final int testTime;
   final FutureBuilder? nextRouteBuilder;
-  final Widget Function(BuildContext context,
-      {required bool initialTest, required bool endingTest,}) testRouteBuilder;
+  final Widget Function(
+    BuildContext context, {
+    required bool initialTest,
+    required bool endingTest,
+  }) testRouteBuilder;
   final String? testTimeDescription;
   final String testActivitiesDescription;
   final String testScoreDescription;
@@ -113,6 +116,7 @@ class _LevelTestState extends State<LevelTest> {
                 top: size.height / 30,
                 left: size.width / 15,
                 right: size.width / 30,
+                bottom: size.height / 30,
               ),
               margin: EdgeInsets.only(
                 left: size.width / 10,
