@@ -38,7 +38,7 @@ class _SatsProgramButtonState extends State<SatsProgramButton> {
     late SharedPreferences prefs;
     return SizedBox(
       height: widget.height,
-      width: size.width * 0.9,
+      width: size.width * 0.75,
       child: InkWell(
         onHover: (value) {
           setState(() {
@@ -84,7 +84,7 @@ class _SatsProgramButtonState extends State<SatsProgramButton> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontSize: size.width / 20,
+                fontSize: size.width / 16,
                 color: Colors.white,
                 shadows: <Shadow>[
                   Shadow(
@@ -137,30 +137,23 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
               )
             : Container(
                 margin: EdgeInsets.only(
-                  left: size.width / 10,
-                  right: size.width / 10,
-                  top: size.height / 35,
+                  left: size.width / 40,
+                  right: size.width / 40,
+                  top: size.height / 69,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.onSurface,
-                          fontSize: size.width * 0.085,
-                          decoration: TextDecoration.none,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: 'Choose Sections\nTo Prepare For',
-                            style: TextStyle(fontSize: size.width / 16),
-                          ),
-                        ],
+                    Text(
+                      "Choose Sections\nTo Prepare For",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSurface,
+                        fontSize: size.width / 12,
+                        decoration: TextDecoration.none,
+                        fontWeight: FontWeight.w600,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: size.height * 0.08),
                     SatsProgramButton(

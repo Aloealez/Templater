@@ -97,8 +97,11 @@ class _TimeSelectionState extends State<TimeSelection> {
     );
   }
 
-  Widget createTimeButton(BuildContext context, int time,
-      {required Color color,}) {
+  Widget createTimeButton(
+    BuildContext context,
+    int time, {
+    required Color color,
+  }) {
     Size size = MediaQuery.of(context).size;
 
     return Container(
@@ -120,7 +123,8 @@ class _TimeSelectionState extends State<TimeSelection> {
           ? Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
-                    Theme.of(context).colorScheme.onPrimary,),
+                  Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             )
           : InkWell(
@@ -172,7 +176,7 @@ class _TimeSelectionState extends State<TimeSelection> {
               Text(
                 "Pick Your Daily",
                 style: TextStyle(
-                  fontSize: size.width / 13,
+                  fontSize: size.width / 12,
                   fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,
@@ -180,9 +184,9 @@ class _TimeSelectionState extends State<TimeSelection> {
               Text(
                 "Practice Time",
                 style: TextStyle(
-                  fontSize: size.width / 13,
+                  fontSize: size.width / 12,
                   fontWeight: FontWeight.w600,
-                    height: 0.9,
+                  height: 0.9,
                 ),
                 textAlign: TextAlign.center,
               ),

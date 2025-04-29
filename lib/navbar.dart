@@ -50,9 +50,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               );
             } else if (index == 1) {
               return const Progress();
+              // } else if (index == 3) {
+              //   return const AnalysisScreen();
             } else if (index == 3) {
-              return const AnalysisScreen();
-            } else if (index == 4) {
               return const Settings();
             } else {
               return FutureBuilder(
@@ -106,8 +106,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               buildMenuIcon(0, "Activities"),
               buildMenuIcon(1, "Progress"),
               buildMenuIcon(2, "Home"),
-              buildMenuIcon(3, "Analysis"),
-              buildMenuIcon(4, "Settings"),
+              // buildMenuIcon(3, "Analysis"),
+              buildMenuIcon(3, "Settings"),
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
