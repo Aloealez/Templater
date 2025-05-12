@@ -1,0 +1,19 @@
+{
+    "ID": "67ab7e3d",
+    "category": "Geometry",
+    "Difficulty": "Hard",
+    "task": "In the figure, AC = CD. The measure of angle EBC is 40°, and the measure of angle ACD is 100°. What is the value of x?\n\nNote: Figure not drawn to scale.",
+    "explanation": "<b>Step 1:</b> Since AC = CD, triangle ACD is isosceles with ∠CAD = ∠CDA.<br><b>Step 2:</b> 180° - 100° = 80° (remaining angles in triangle ACD)<br><b>Step 3:</b> ∠CDA = 80° ÷ 2 = 40°<br><b>Step 4:</b> In triangle BDE: 180° - 40° - 40° = 100°<br><b>Step 5:</b> x = 180° - 100° = 80° (supplementary angles)<br><br><b>Common mistakes:</b><br>- Subtracting given angles directly: 100° - 40° = 60°<br>- Forgetting supplementary angles: 100°<br>- Using only triangle ACD: 80°",
+    "answers":{
+        "A": 40,
+        "B": 100,
+        "C": 80,
+        "D": 60
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    }
+}
