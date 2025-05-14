@@ -1,0 +1,26 @@
+{
+    "ID": "2c3b5a12",
+    "category": "Algebraic Word Problems",
+    "Difficulty": "Hard",
+    "task": "Hector used a tool called an auger to remove corn from a storage bin at a constant rate. The bin contained 33,200 bushels of corn when Hector began to use the auger. After 6 hours of using the auger, 21,580 bushels of corn remained in the bin. If the auger continues to remove corn at this rate, what is the total number of hours Hector will have been using the auger when 11,620 bushels of corn remain in the bin?",
+    "answers": {
+        "A": "11",
+        "B": "6",
+        "C": "3",
+        "D": "5"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "table": null,
+    "explanation": "<b>Step 1:</b> Calculate removal rate<br>Removed in first period: 33,200 - 21,580 = 11,620 bushels<br>Rate: 11,620 ÷ 6 = 1,937 bushels/hour<br><br><b>Step 2:</b> Set up equation<br>Initial amount - (rate × time) = remaining<br>33,200 - 1,937x = 11,620<br><br><b>Step 3:</b> Solve for x<br>33,200 - 11,620 = 1,937x<br>21,580 ÷ 1,937 = 11 hours<br><br><b>Common mistakes:</b><br>- Dividing remaining by rate: 11,620 ÷ 1,937 ≈ 3<br>- Proportional time error: 6 × (35% ÷ 65%) ≈ 5<br>- Incorrect rate calculation: Using wrong rate gives ≈ 6 hours"
+}
