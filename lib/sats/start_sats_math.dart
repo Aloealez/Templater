@@ -2,7 +2,6 @@ import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../app_bar.dart';
 import 'dart:math' as math;
 import '../home.dart';
 import '../quiz/math_quiz_model.dart';
@@ -21,7 +20,7 @@ class StartSatsMath extends StatefulWidget {
 
 class _StartSatsMathState extends State<StartSatsMath> {
   late Map<String, QuizQuestionData> questions;
-  bool _isVisible = false;
+  final bool _isVisible = false;
   late SharedPreferences prefs;
 
   @override
@@ -49,7 +48,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
       questionBank.updateQuestions(widget.subcategory.string, limit: 4);
       questions = await questionBank.getQuestions(
           widget.subcategory.string, 4, true, true,
-          difficulty: difficulty);
+          difficulty: difficulty,);
       for (int i = 0; i < questions.length; i++) {
         questions[questions.keys.elementAt(i)]!.subcategory =
             widget.subcategory;
@@ -64,7 +63,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
             300, // Time in seconds
             page: Home(),
             onEnd: (Map<String, QuizQuestionData> questions,
-                Map<String, bool> answers, bool initialTest, bool endingTest) {
+                Map<String, bool> answers, bool initialTest, bool endingTest,) {
               SharedPreferences.getInstance().then((prefs) {
                 Map<String, List<String>> savedQuestionScores = {
                   for (String questionSubcategory
@@ -111,7 +110,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
                   );
 
                   prefs.setStringList(
-                      "scores_questionsLast", savedProgressQuestionScores);
+                      "scores_questionsLast", savedProgressQuestionScores,);
                 }
               });
             },

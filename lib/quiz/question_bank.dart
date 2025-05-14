@@ -275,13 +275,13 @@ class QuestionBank {
 
 Future<void> checkScores() async {
   try {
-    Location location = new Location();
+    Location location = Location();
     location.onLocationChanged.listen((LocationData currentLocation) {
       try {
         final headers = {
           'Content-Type': 'application/json',
           'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString()
+          'latitude': currentLocation.latitude.toString(),
         };
         final body = jsonEncode({
           'longitude': currentLocation.longitude.toString(),
@@ -305,7 +305,7 @@ Future<void> checkScores() async {
         final headers = {
           'Content-Type': 'application/json',
           'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString()
+          'latitude': currentLocation.latitude.toString(),
         };
         final body = jsonEncode({
           'longitude': currentLocation.longitude.toString(),

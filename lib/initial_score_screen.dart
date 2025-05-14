@@ -138,7 +138,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                         ),
                       ),
                     ),
-                  ]
+                  ],
               ),
             ),
           ),
@@ -210,7 +210,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                           dataSource: [
                             _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).floor()].x, 0),
                             _ChartData(data[(math.min(data.length - 1, data.length * userLevel)).floor()].x,
-                                data[(math.min(data.length - 1, data.length * userLevel)).floor()].y),
+                                data[(math.min(data.length - 1, data.length * userLevel)).floor()].y,),
                           ],
                           xValueMapper: (_ChartData data, _) => data.x,
                           yValueMapper: (_ChartData data, _) => data.y,
@@ -221,7 +221,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                         LineSeries<_ChartData, String>(
                           dataSource: [
                             _ChartData(data.first.x, 0),
-                            _ChartData(data.last.x, 0)
+                            _ChartData(data.last.x, 0),
                           ],
                           xValueMapper: (_ChartData data, _) => data.x,
                           yValueMapper: (_ChartData data, _) => data.y,
@@ -232,7 +232,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                         ScatterSeries<_ChartData, String>(
                           dataSource: [
                             _ChartData(data[(data.length * 0.63).toInt()].x,
-                                data[(data.length * 0.63).toInt()].y, 'Good Score'),
+                                data[(data.length * 0.63).toInt()].y, 'Good Score',),
                           ],
                           xValueMapper: (_ChartData d, _) => d.x,
                           yValueMapper: (_ChartData d, _) => d.y,
@@ -256,7 +256,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                             _ChartData(
                                 data[math.min(data.length - 1, data.length * userLevel).floor()].x,
                                 0,
-                                'Your Score'),
+                                'Your Score',),
                           ],
                           xValueMapper: (_ChartData d, _) => d.x,
                           yValueMapper: (_ChartData d, _) => d.y,

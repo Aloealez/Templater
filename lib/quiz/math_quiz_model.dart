@@ -442,7 +442,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                         widget.questions[questionId]!.answers[answerLetter]!
                             .length,
                       ) *
-                      1.3 *
+                      1.13 *
                       size.width,
                 ),
                 laTeXCode: Text(
@@ -557,21 +557,32 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-    final questionContent = widget.questions[questionId]!.question;
-
-    return (widget.htmlFormat != -1 &&
-            widget.htmlFormat <= currentQuestionIndex)
+    return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
         ? QuizQuestionTask(
-            question: widget.questions[questionId]!,
-          )
+      question: widget.questions[questionId]!,
+    )
         : LaTexT(
-            equationStyle: TextStyle(
-              fontSize: 0.06 * size.width,
-            ),
-            laTeXCode: Text(
-              questionContent.replaceAll('\n', r'\n'),
-            ),
-          );
+      equationStyle: TextStyle(
+        fontSize: textScaleFactor(
+          widget.questions[questionId]!.question.length,
+        ) *
+            1.16 *
+            size.width,
+      ),
+      laTeXCode: Text(
+        widget.questions[questionId]!.question,
+        softWrap: true,
+        style: TextStyle(
+          fontSize: textScaleFactor(
+            widget.questions[questionId]!.question.length,
+          ) *
+              1.1 *
+              size.width,
+          color: Theme.of(context).colorScheme.onSurface,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
   }
 
   Widget buildBoxAnswer(

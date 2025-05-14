@@ -15,10 +15,10 @@ class CombinedProgress extends StatelessWidget {
   final bool Weak;
 
   const CombinedProgress({
-    Key? key,
+    super.key,
     required this.Progress,
     required this.Weak,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +35,14 @@ class CombinedProgress extends StatelessWidget {
 }
 
 class ProgressWidget extends StatefulWidget {
-  const ProgressWidget({Key? key}) : super(key: key);
+  const ProgressWidget({super.key});
 
   @override
   _ProgressState createState() => _ProgressState();
 }
 
 class WeakWidget extends StatefulWidget {
-  const WeakWidget({Key? key}) : super(key: key);
+  const WeakWidget({super.key});
 
   @override
   _WeakState createState() => _WeakState();

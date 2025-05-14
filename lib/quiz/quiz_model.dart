@@ -302,7 +302,7 @@ class _QuizModelState extends State<QuizModel> {
           right: 0.025 * size.width,
         ),
         leading: buildAnswerChecks(
-            context, selectedOption, answerLetter, questionId),
+            context, selectedOption, answerLetter, questionId,),
         title: HtmlAsTextSpan(
           "${widget.questions[questionId]?.answers[answerLetter]}",
           // fontSize: 0.0155 * size.height,

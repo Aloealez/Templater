@@ -199,7 +199,7 @@ class _Home extends State<Home> with RouteAware {
     // Otherwise, generate a new plan
     int currentTime = 0;
     skillBaseList = List.from(skillBaseLists[skill]!);
-    print("SKill base ${skill} list: $skillBaseList");
+    print("SKill base $skill list: $skillBaseList");
 
     // Example for "sats" skill
     if (skill == "sats") {

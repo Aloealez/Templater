@@ -218,7 +218,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
           ],
         ),
     );
-    }
+    },
       ),
     );
   }

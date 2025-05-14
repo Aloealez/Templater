@@ -1,7 +1,6 @@
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../app_bar.dart';
 import 'dart:math' as math;
 import '../home.dart';
 import '../quiz/math_quiz_model.dart';
@@ -59,7 +58,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
       questionBank.updateQuestions(widget.subcategory, limit: 5);
       questions = await questionBank.getQuestions(
           widget.subcategory, 5, true, true,
-          difficulty: difficulty);
+          difficulty: difficulty,);
 
       // Navigate after fetching questions
       if (mounted) {
@@ -76,7 +75,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
               onEnd: (Map<String, QuizQuestionData> questions,
                   Map<String, bool> answers,
                   bool initialTest,
-                  bool endingTest) {
+                  bool endingTest,) {
                 SharedPreferences.getInstance().then((prefs) {
                   Map<String, List<String>> savedQuestionScores = {
                     for (String questionSubcategory
@@ -122,7 +121,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                     );
 
                     prefs.setStringList(
-                        "scores_questionsLast", savedProgressQuestionScores);
+                        "scores_questionsLast", savedProgressQuestionScores,);
                   }
                 });
               },
