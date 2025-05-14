@@ -55,12 +55,15 @@ class _GraphPainter extends CustomPainter {
       }
     }
     const margin = 8.0;
-    double scaleX = (size.width - 2 * margin) / ((maxX - minX) == 0 ? 1 : (maxX - minX));
-    double scaleY = (size.height - 2 * margin) / ((maxY - minY) == 0 ? 1 : (maxY - minY));
+    double scaleX =
+        (size.width - 2 * margin) / ((maxX - minX) == 0 ? 1 : (maxX - minX));
+    double scaleY =
+        (size.height - 2 * margin) / ((maxY - minY) == 0 ? 1 : (maxY - minY));
 
     Offset convertPoint(dynamic point) {
       double x = ((point[0] as num).toDouble() - minX) * scaleX + margin;
-      double y = size.height - (((point[1] as num).toDouble() - minY) * scaleY + margin);
+      double y = size.height -
+          (((point[1] as num).toDouble() - minY) * scaleY + margin);
       return Offset(x, y);
     }
 
@@ -94,7 +97,8 @@ class _GraphPainter extends CustomPainter {
         lineColorList[2],
         lineColorList[3],
       );
-      final lineThickness = (graph['line_thickness'] as num?)?.toDouble() ?? 1.0;
+      final lineThickness =
+          (graph['line_thickness'] as num?)?.toDouble() ?? 1.0;
       final linePaint = Paint()
         ..color = lineColor
         ..strokeWidth = lineThickness
@@ -113,7 +117,8 @@ class _GraphPainter extends CustomPainter {
         pointColorList[2],
         pointColorList[3],
       );
-      final pointThickness = (graph['point_thickness'] as num?)?.toDouble() ?? 0.0;
+      final pointThickness =
+          (graph['point_thickness'] as num?)?.toDouble() ?? 0.0;
       final pointPaint = Paint()
         ..color = pointColor
         ..style = PaintingStyle.fill;
@@ -222,7 +227,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
   void initState() {
     _time = widget.time;
     currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
-    selectedOption = widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
+    selectedOption =
+        widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
 
     super.initState();
     for (var questionId in widget.questions.keys) {
@@ -241,19 +247,24 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   void handleContinue() {
-    if (widget.answerLayout == QuizModelAnswerLayout.textInput && !widget.showMultipleQuestions) {
+    if (widget.answerLayout == QuizModelAnswerLayout.textInput &&
+        !widget.showMultipleQuestions) {
       setState(() {
         answers[currentQuestionId] = selectedOption!;
       });
       // _textInputController.clear();
     }
-    if (currentQuestionIndex < widget.questions.length - 1 && _time > 0 && !widget.showMultipleQuestions && !forceContinue) {
+    if (currentQuestionIndex < widget.questions.length - 1 &&
+        _time > 0 &&
+        !widget.showMultipleQuestions &&
+        !forceContinue) {
       if (selectedOption != null) {
         setState(
           () {
             selectedOption = null;
             currentQuestionIndex++;
-            currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
+            currentQuestionId =
+                widget.questions.keys.elementAt(currentQuestionIndex);
           },
         );
       }
@@ -281,15 +292,19 @@ class _MathQuizModelState extends State<MathQuizModel> {
         if (answers[questionId] == null) {
           continue;
         }
-        if (widget.questions[questionId]!.correct[answers[questionId]] ?? false) {
-          score += widget.questions[questionId]!.score[answers[questionId]] ?? 0;
+        if (widget.questions[questionId]!.correct[answers[questionId]] ??
+            false) {
+          score +=
+              widget.questions[questionId]!.score[answers[questionId]] ?? 0;
           SharedPreferences.getInstance().then((prefs) {
             double auria = prefs.getDouble('auria') ?? 0.0;
             auria += 1;
             prefs.setDouble('auria', auria);
           });
         } else if (widget.questions[questionId]!.scoreIncorrect != null) {
-          score += widget.questions[questionId]!.scoreIncorrect![answers[questionId]] ?? 0;
+          score += widget.questions[questionId]!
+                  .scoreIncorrect![answers[questionId]] ??
+              0;
         }
       }
 
@@ -336,11 +351,15 @@ class _MathQuizModelState extends State<MathQuizModel> {
       margin: EdgeInsets.only(
         left: size.width * 0.035,
       ),
-      child:
-      Text(
+      child: Text(
         "$answerLetter.",
         style: TextStyle(
-            color: Theme.of(context).colorScheme.onSurface, fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.4 * size.width,),
+          color: Theme.of(context).colorScheme.onSurface,
+          fontSize:
+              textScaleFactor(widget.questions[questionId]!.question.length) *
+                  1.4 *
+                  size.width,
+        ),
       ),
     );
     if (usersAnswer == null) {
@@ -354,7 +373,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
         answerLetter,
       );
     }
-    return (usersAnswer == answerLetter || widget.questions[questionId]!.correct[answerLetter]!)
+    return (usersAnswer == answerLetter ||
+            widget.questions[questionId]!.correct[answerLetter]!)
         ? buildAnswerIcon(
             context,
             answerLetter,
@@ -385,13 +405,16 @@ class _MathQuizModelState extends State<MathQuizModel> {
       margin: EdgeInsets.only(
         top: size.height * 0.015,
       ),
-      color: selectedOption == null ? Color(0xDD260F30) :
-      widget.questions[questionId]!.correct[answerLetter]! ? Colors.green :
-      selectedOption == answerLetter ? Colors.red :
-      Color(0xDD260F30),
+      color: selectedOption == null
+          ? Theme.of(context).colorScheme.primary.withOpacity(0.8)
+          : widget.questions[questionId]!.correct[answerLetter]!
+              ? Colors.green
+              : selectedOption == answerLetter
+                  ? Colors.red
+                  : Theme.of(context).colorScheme.primary.withOpacity(0.8),
       // !(selectedOption == answerLetter || widget.questions[questionId]!.correct[answerLetter]!) ?  :
       // ( ??= false) ? Colors.green : Colors.red,
-          // : Colors.red,
+      // : Colors.red,
       child: ListTile(
         contentPadding: EdgeInsets.only(
           left: 0.008 * size.width,
@@ -403,7 +426,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
           answerLetter,
           questionId,
         ),
-        title: (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
+        title: (widget.htmlFormat != -1 &&
+                widget.htmlFormat <= currentQuestionIndex)
             ? HtmlAsTextSpan(
                 "${widget.questions[questionId]?.answers[answerLetter]}",
                 fontSize: textScaleFactor(
@@ -415,7 +439,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
             : LaTexT(
                 equationStyle: TextStyle(
                   fontSize: textScaleFactor(
-                        widget.questions[questionId]!.answers[answerLetter]!.length,
+                        widget.questions[questionId]!.answers[answerLetter]!
+                            .length,
                       ) *
                       1.3 *
                       size.width,
@@ -488,9 +513,16 @@ class _MathQuizModelState extends State<MathQuizModel> {
             ),
             SizedBox(width: 0.018 * size.width),
             InkWell(
-              child: Image.asset(
-                Theme.of(context).brightness == Brightness.dark ? "assets/help_icon_dark.png" : "assets/help_icon_light.png",
-                width: 0.056 * size.width,
+              child: Container(
+                width: 0.08 * size.width,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                ),
+                child: Icon(
+                  Icons.question_mark_rounded,
+                  color: Colors.white,
+                ),
               ),
               onTap: () {
                 ReportQuestionDialog(
@@ -525,7 +557,10 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-    return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
+    final questionContent = widget.questions[questionId]!.question;
+
+    return (widget.htmlFormat != -1 &&
+            widget.htmlFormat <= currentQuestionIndex)
         ? QuizQuestionTask(
             question: widget.questions[questionId]!,
           )
@@ -534,17 +569,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
               fontSize: 0.06 * size.width,
             ),
             laTeXCode: Text(
-              widget.questions[questionId]!.question,
-              softWrap: true,
-              style: TextStyle(
-                fontSize: textScaleFactor(
-                      widget.questions[questionId]!.question.length,
-                    ) *
-                    1.1 *
-                    size.width,
-                color: Theme.of(context).colorScheme.onSurface,
-                fontWeight: FontWeight.w600,
-              ),
+              questionContent.replaceAll('\n', r'\n'),
             ),
           );
   }
@@ -593,7 +618,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(35), // for pill-like corners
+                borderRadius:
+                    BorderRadius.circular(35), // for pill-like corners
               ),
               child: Center(
                 child: Text(
@@ -665,7 +691,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
       children: [
         buildTitle(context, size, questionIndex, questionId),
         SizedBox(height: 0.035 * size.height),
-        if (!widget.showMultipleQuestions) buildQuestion(context, size, questionId, questionIndex),
+        if (!widget.showMultipleQuestions)
+          buildQuestion(context, size, questionId, questionIndex),
         if (widget.showMultipleQuestions)
           for (int i = 0; i < widget.questions.length; i++)
             Column(
@@ -737,7 +764,9 @@ class _MathQuizModelState extends State<MathQuizModel> {
                     width: size.width,
                     requirement: widget.requireAnswer
                         ? (selectedOption != null && selectedOption != "")
-                        : widget.answerLayout == QuizModelAnswerLayout.list || widget.answerLayout == QuizModelAnswerLayout.boxes
+                        : widget.answerLayout == QuizModelAnswerLayout.list ||
+                                widget.answerLayout ==
+                                    QuizModelAnswerLayout.boxes
                             ? selectedOption != null
                             : true,
                   ),
