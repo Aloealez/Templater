@@ -146,19 +146,26 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Choose Sections\nTo Prepare For",
+                      "Choose Sections",
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.onSurface,
                         fontSize: size.width / 12,
-                        decoration: TextDecoration.none,
                         fontWeight: FontWeight.w600,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: size.height * 0.08),
+                    Text(
+                      "To Prepare For",
+                      style: TextStyle(
+                        fontSize: size.width / 12,
+                        fontWeight: FontWeight.w600,
+                        height: 0.7,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: size.height * 0.0791),
                     SatsProgramButton(
                       text: "Both Sections",
-                      height: size.height * 0.07,
+                      height: size.height * 0.0834,
                       color: Theme.of(context).colorScheme.tertiary,
                       name: "both",
                       onTap: () {
@@ -788,7 +795,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     SizedBox(height: size.height / 30),
                     SatsProgramButton(
                       text: "Only Math Section",
-                      height: size.height * 0.07,
+                      height: size.height * 0.0834,
                       color: Theme.of(context).colorScheme.secondary,
                       name: "math",
                       onTap: () {

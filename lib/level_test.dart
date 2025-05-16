@@ -120,7 +120,7 @@ class _LevelTestState extends State<LevelTest> {
               ),
               margin: EdgeInsets.only(
                 left: size.width / 10,
-                right: size.width / 10,
+                right: size.width / 9,
                 bottom: size.height / 15,
               ),
               child: Scrollbar(

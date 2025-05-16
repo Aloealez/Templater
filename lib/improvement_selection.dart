@@ -54,7 +54,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                       ),
                     ],
                   ),
-                  SizedBox(height: size.height * 0.06),
+                  SizedBox(height: size.height * 0.0792),
                   ImprovementButton(
                     text: "📚 SATs Prep",
                     width: size.width,
