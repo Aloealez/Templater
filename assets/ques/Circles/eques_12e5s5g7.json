@@ -2,7 +2,7 @@
     "ID": "12e5s5g7",
     "category": "Geometry",
     "Difficulty": "Hard",
-    "task": "In the figure, AC = CD. The measure of angle EBC is 50°, and the measure of angle ACD is 108°. What is the value of x?\n\nNote: Figure not drawn to scale.",
+    "task": "In the figure, AC = CD. The measure of angle EBC is 50°, and the measure of angle ACD is 108°. What is the value of x?",
     "explanation": "<b>Step 1:</b> Since AC = CD, triangle ACD is isosceles with ∠CAD = ∠CDA.<br><b>Step 2:</b> 180° - 108° = 72° (remaining angles in triangle ACD)<br><b>Step 3:</b> ∠CDA = 72° ÷ 2 = 36°<br><b>Step 4:</b> In triangle BDE: 180° - 50° - 36° = 94°<br><b>Step 5:</b> x = 180° - 94° = 86° (supplementary angles)<br><br><b>Common mistakes:</b><br>- Subtracting given angles directly: 108° - 50° = 58°<br>- Forgetting supplementary angles: 94°<br>- Using only triangle ACD: 72°",
     "answers": {
         "A": 86,
