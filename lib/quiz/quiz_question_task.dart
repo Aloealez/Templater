@@ -62,7 +62,13 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
         // Second section - primary text - conditionally padded
         if (widget.question.text != null)
           Padding(
-            padding: EdgeInsets.only(left: leftPadding),
+            padding: EdgeInsets.only(
+              left: doubleText
+                  ? 0.03 * size.width
+                  : hasIntroduction
+                      ? 0.03 * size.width
+                      : 0.01 * size.width,
+            ),
             child: HtmlAsTextSpan(
               widget.question.text!,
               fontSize: 0.0175 * size.height,
