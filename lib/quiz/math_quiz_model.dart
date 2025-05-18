@@ -557,32 +557,35 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-    return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
+    return (widget.htmlFormat != -1 &&
+            widget.htmlFormat <= currentQuestionIndex)
         ? QuizQuestionTask(
-      question: widget.questions[questionId]!,
-    )
+            question: widget.questions[questionId]!,
+          )
         : LaTexT(
-      equationStyle: TextStyle(
-        fontSize: textScaleFactor(
-          widget.questions[questionId]!.question.length,
-        ) *
-            1.16 *
-            size.width,
-      ),
-      laTeXCode: Text(
-        widget.questions[questionId]!.question,
-        softWrap: true,
-        style: TextStyle(
-          fontSize: textScaleFactor(
-            widget.questions[questionId]!.question.length,
-          ) *
-              1.1 *
-              size.width,
-          color: Theme.of(context).colorScheme.onSurface,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    );
+            equationStyle: TextStyle(
+              fontSize: textScaleFactor(
+                    widget.questions[questionId]!.question.length,
+                  ) *
+                  1.16 *
+                  size.width,
+            ),
+            laTeXCode: Text(
+              widget.questions[questionId]!.question
+                  .replaceAll('\n', '\\n')
+                  .replaceAll(r'\n', '\\n'),
+              softWrap: true,
+              style: TextStyle(
+                fontSize: textScaleFactor(
+                      widget.questions[questionId]!.question.length,
+                    ) *
+                    1.1 *
+                    size.width,
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          );
   }
 
   Widget buildBoxAnswer(
