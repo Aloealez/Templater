@@ -86,7 +86,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
               top: 0.005 * size.height,
             ),
             child: HtmlAsTextSpan(
-              widget.question.text2!,
+              widget.question.text2!.replaceAll("Text 2:", ""),
               fontSize: 0.0175 * size.height,
             ),
           ),
