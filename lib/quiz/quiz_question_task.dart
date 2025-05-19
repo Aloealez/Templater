@@ -60,7 +60,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
                   isCrossText || hasIntro ? 0.03 * size.width : 0 * size.width,
             ),
             child: HtmlAsTextSpan(
-              widget.question.text!.replaceAll("Text 1", ""),
+              widget.question.text!.replaceAll("Text 1:", ""),
               fontSize: 0.0175 * size.height,
             ),
           ),
