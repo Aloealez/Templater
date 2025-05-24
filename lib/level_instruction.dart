@@ -37,6 +37,9 @@ class LevelInstruction extends StatefulWidget {
 
 class _LevelInstructionState extends State<LevelInstruction> {
   late SharedPreferences prefs;
+  late Map<String, SatsQuestion> questions;
+
+  final String category = "rw";
 
   Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
@@ -46,7 +49,20 @@ class _LevelInstructionState extends State<LevelInstruction> {
   @override
   void initState() {
     super.initState();
-    initSharedPrefs(); // Initialize shared preferences
+    initSharedPrefs(); // Ensure shared preferences are initialized
+  }
+
+  void _navigateToNextRoute() {
+    try {
+      if (widget.nextRouteBuilder != null) {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => widget.nextRouteBuilder!));
+      } else {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest)));
+      }
+    } catch (e) {
+      print("Error navigating to next route: $e");
+      // Optionally show a dialog or snackbar to inform the user
+    }
   }
 
   @override
@@ -78,7 +94,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
                         widget.testName,
                         style: TextStyle(
                           fontSize: 0.041 * size.height,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -160,131 +176,11 @@ class _LevelInstructionState extends State<LevelInstruction> {
               children: [
                 SizedBox(
                   height: widget.exercise == null ? size.height * 0.065 : size.height * 0.064,
-                  width: widget.exercise == null ? size.width * 0.80 : size.width * 0.32,
-                  child: GestureDetector(
-                    onTap: () async {
-                      // Get the future from your testRouteBuilder's FutureBuilder
-                      final futureBuilder = widget.nextRouteBuilder ??
-                        widget.testRouteBuilder(
-                          context,
-                          initialTest: widget.initialTest,
-                          endingTest: widget.endingTest,
-                        );
-
-                      // If it's a FutureBuilder, get its future and await it
-                      if (futureBuilder is FutureBuilder) {
-                        try {
-                          final result = await futureBuilder.future;
-
-                          // Check if the result is valid
-                          if (result != null && result.length > 0) {
-                            final alreadyDone = result.length > 3 && result[3] == true;
-
-                            if (result.length > 2 && result[2] != null) {
-                              // Show error dialog
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text('Error'),
-                                  content: Text(result[2]),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () => Navigator.of(context).pop(),
-                                      child: Text('OK'),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            } else if (alreadyDone) {
-                              // Show dialog if already completed
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text('Already Completed'),
-                                  content: Text('You have already completed today\'s riddle.'),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () => Navigator.of(context).pop(),
-                                      child: Text('Okay'),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            } else if (result[0] == null) {
-                              // Show error dialog if no riddle is available
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text('Error'),
-                                  content: Text('No riddle is available for today.'),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () => Navigator.of(context).pop(),
-                                      child: Text('OK'),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            } else {
-                              // Navigate to the quiz page
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => futureBuilder.builder(context, AsyncSnapshot.withData(ConnectionState.done, result)),
-                                ),
-                              );
-                            }
-                          }
-                        } catch (e) {
-                          // Handle unexpected errors
-                          showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              title: Text('Error'),
-                              content: Text('An unexpected error occurred.'),
-                              actions: [
-                                TextButton(
-                                  onPressed: () => Navigator.of(context).pop(),
-                                  child: Text('OK'),
-                                ),
-                              ],
-                            ),
-                          );
-                        }
-                      } else {
-                        // Directly navigate to the riddle of the day if not using FutureBuilder
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => futureBuilder,
-                          ),
-                        );
-                      }
-                    },
-                    child: Container(
-                      width: size.width,
-                      padding: EdgeInsets.symmetric(horizontal: size.width / 10),
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primary,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Theme.of(context).colorScheme.shadow,
-                            spreadRadius: 2,
-                            blurRadius: 5,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Start',
-                          style: TextStyle(
-                            fontSize: size.width / 18,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
+                  width: widget.exercise == null ? size.width * 0.71 : size.width * 0.29,
+                  child: RedirectButton(
+                    text: 'Start',
+                    width: size.width,
+                    route: widget.nextRouteBuilder ?? widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest), // Use the navigation method
                   ),
                 ),
                 if (widget.exercise != null) SizedBox(width: 0.054 * size.width),
