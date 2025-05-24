@@ -290,12 +290,12 @@ class _QuizModelState extends State<QuizModel> {
         top: size.height * 0.015,
       ),
       color: selectedOption == null
-          ? Color(0xDD260F30)
+          ? Theme.of(context).colorScheme.primary.withOpacity(0.6)
           : widget.questions[questionId]!.correct[answerLetter]!
               ? Colors.green
               : selectedOption == answerLetter
                   ? Colors.red
-                  : Color(0xDD260F30),
+                  : Theme.of(context).colorScheme.primary.withOpacity(0.6),
       child: ListTile(
         contentPadding: EdgeInsets.only(
           left: 0.008 * size.width,
@@ -368,12 +368,17 @@ class _QuizModelState extends State<QuizModel> {
               ),
               SizedBox(width: 0.018 * size.width),
               InkWell(
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? "assets/help_icon_dark.png"
-                      : "assets/help_icon_light.png",
-                  width: 0.056 * size.width,
+                child: Container(
+                width: 0.08 * size.width,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.8),
                 ),
+                child: Icon(
+                  Icons.question_mark_rounded,
+                  color: Colors.white,
+                ),
+              ),
                 onTap: () {
                   ReportQuestionDialog(
                     context,
