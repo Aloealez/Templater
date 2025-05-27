@@ -112,7 +112,7 @@ class SatsProgramSelection extends StatefulWidget {
 class _SatsProgramSelectionState extends State<SatsProgramSelection> {
   bool startedLevelTest = false;
   late SharedPreferences prefs;
-  final String category = "rw";
+  final String category = 'rw';
   Future<void>? questionsF;
   late Map<String, QuizQuestionData> questions;
 
@@ -125,7 +125,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: startedLevelTest
             ? Center(
@@ -146,7 +146,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Choose Sections",
+                      'Choose Sections',
                       style: TextStyle(
                         fontSize: size.width / 12,
                         fontWeight: FontWeight.w600,
@@ -154,7 +154,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                      "To Prepare For",
+                      'To Prepare For',
                       style: TextStyle(
                         fontSize: size.width / 12,
                         fontWeight: FontWeight.w600,
@@ -164,10 +164,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     ),
                     SizedBox(height: size.height * 0.0791),
                     SatsProgramButton(
-                      text: "Both Sections",
+                      text: 'Both Sections',
                       height: size.height * 0.0834,
                       color: Theme.of(context).colorScheme.tertiary,
-                      name: "both",
+                      name: 'both',
                       onTap: () {
                         setState(() {
                           startedLevelTest = true;
@@ -323,27 +323,27 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               difficulty: SatsQuestionDifficulty.difficultyHard,
                             ),
                           );
-                          print("mixed questions rw: ${tempQuestions.length}");
+                          print('mixed questions rw: ${tempQuestions.length}');
                           for (int j = 0; j < tempQuestions.length; j++) {
                             String i = tempQuestions.keys.elementAt(j);
                             questions[i] = QuizQuestionData(
                               {
-                                "A": tempQuestions[i]!.A,
-                                "B": tempQuestions[i]!.B,
-                                "C": tempQuestions[i]!.C,
-                                "D": tempQuestions[i]!.D,
+                                'A': tempQuestions[i]!.A,
+                                'B': tempQuestions[i]!.B,
+                                'C': tempQuestions[i]!.C,
+                                'D': tempQuestions[i]!.D,
                               },
                               {
-                                "A": tempQuestions[i]!.correct == "A",
-                                "B": tempQuestions[i]!.correct == "B",
-                                "C": tempQuestions[i]!.correct == "C",
-                                "D": tempQuestions[i]!.correct == "D",
+                                'A': tempQuestions[i]!.correct == 'A',
+                                'B': tempQuestions[i]!.correct == 'B',
+                                'C': tempQuestions[i]!.correct == 'C',
+                                'D': tempQuestions[i]!.correct == 'D',
                               },
                               {
-                                "A": tempQuestions[i]!.difficulty.getScore(),
-                                "B": tempQuestions[i]!.difficulty.getScore(),
-                                "C": tempQuestions[i]!.difficulty.getScore(),
-                                "D": tempQuestions[i]!.difficulty.getScore(),
+                                'A': tempQuestions[i]!.difficulty.getScore(),
+                                'B': tempQuestions[i]!.difficulty.getScore(),
+                                'C': tempQuestions[i]!.difficulty.getScore(),
+                                'D': tempQuestions[i]!.difficulty.getScore(),
                               },
                               introduction: tempQuestions[i]?.introduction,
                               text: tempQuestions[i]?.text,
@@ -375,8 +375,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                     );
                                   } else {
                                     return MathQuizModel(
-                                      "Sats - Exercise {}",
-                                      "Sats",
+                                      'Sats - Exercise {}',
+                                      'Sats',
                                       900,
                                       page: Home(),
                                       initialTest: true,
@@ -395,7 +395,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     .typesList)
                                               questionSubcategory:
                                                   prefs.getStringList(
-                                                        "scores_questions_$questionSubcategory",
+                                                        'scores_questions_$questionSubcategory',
                                                       ) ??
                                                       [],
                                           };
@@ -403,12 +403,12 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                    "scores_questionsLast",
+                                                    'scores_questionsLast',
                                                   ) ??
                                                   List<String>.generate(
                                                     SatsQuestionSubcategories
                                                         .typesList.length,
-                                                    (index) => "-1",
+                                                    (index) => '-1',
                                                   );
 
                                           for (int i = 0;
@@ -448,13 +448,13 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     i];
 
                                             prefs.setStringList(
-                                              "scores_questions_$questionSubcategory",
+                                              'scores_questions_$questionSubcategory',
                                               savedQuestionScores[
                                                   questionSubcategory]!,
                                             );
 
                                             prefs.setStringList(
-                                              "scores_questionsLast",
+                                              'scores_questionsLast',
                                               savedProgressQuestionScores,
                                             );
                                           }
@@ -462,7 +462,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                       },
                                       htmlFormat: 5,
                                       description:
-                                          "The test will comprise of 5 Math, and 5 Reading and Writing Questions.",
+                                          'The test will comprise of 5 Math, and 5 Reading and Writing Questions.',
                                       exerciseNumber: 0,
                                       questions: questions,
                                       oldName: questions.values
@@ -477,9 +477,9 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               ),
                               initialTest: true,
                               testActivitiesDescription:
-                                  "The test will comprise of 5 Reading and Writing Questions, and 5 Math Questions.\n\nYou can use the graphic calculator.",
+                                  'The test will comprise of 5 Reading and Writing Questions, and 5 Math Questions.\n\nYou can use the graphic calculator.',
                               testScoreDescription:
-                                  "We will use your score to personalize your app experience.",
+                                  'We will use your score to personalize your app experience.',
                             ),
                           ),
                         );
@@ -487,10 +487,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     ),
                     SizedBox(height: size.height / 30),
                     SatsProgramButton(
-                      text: "Only Reading &\nWriting Section",
+                      text: 'Only Reading &\nWriting Section',
                       height: size.height * 0.1,
                       color: Theme.of(context).colorScheme.secondary,
-                      name: "rw",
+                      name: 'rw',
                       onTap: () {
                         setState(() {
                           startedLevelTest = true;
@@ -634,22 +634,22 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                             String i = tempQuestions.keys.elementAt(j);
                             questions[i] = QuizQuestionData(
                               {
-                                "A": tempQuestions[i]!.A,
-                                "B": tempQuestions[i]!.B,
-                                "C": tempQuestions[i]!.C,
-                                "D": tempQuestions[i]!.D,
+                                'A': tempQuestions[i]!.A,
+                                'B': tempQuestions[i]!.B,
+                                'C': tempQuestions[i]!.C,
+                                'D': tempQuestions[i]!.D,
                               },
                               {
-                                "A": tempQuestions[i]!.correct == "A",
-                                "B": tempQuestions[i]!.correct == "B",
-                                "C": tempQuestions[i]!.correct == "C",
-                                "D": tempQuestions[i]!.correct == "D",
+                                'A': tempQuestions[i]!.correct == 'A',
+                                'B': tempQuestions[i]!.correct == 'B',
+                                'C': tempQuestions[i]!.correct == 'C',
+                                'D': tempQuestions[i]!.correct == 'D',
                               },
                               {
-                                "A": tempQuestions[i]!.difficulty.getScore(),
-                                "B": tempQuestions[i]!.difficulty.getScore(),
-                                "C": tempQuestions[i]!.difficulty.getScore(),
-                                "D": tempQuestions[i]!.difficulty.getScore(),
+                                'A': tempQuestions[i]!.difficulty.getScore(),
+                                'B': tempQuestions[i]!.difficulty.getScore(),
+                                'C': tempQuestions[i]!.difficulty.getScore(),
+                                'D': tempQuestions[i]!.difficulty.getScore(),
                               },
                               introduction: tempQuestions[i]?.introduction,
                               text: tempQuestions[i]?.text,
@@ -681,8 +681,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                     );
                                   } else {
                                     return QuizModel(
-                                      "R&W - Exercise {}",
-                                      "R&W",
+                                      'R&W - Exercise {}',
+                                      'R&W',
                                       900,
                                       page: Home(),
                                       initialTest: true,
@@ -701,7 +701,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     .typesList)
                                               questionSubcategory:
                                                   prefs.getStringList(
-                                                        "scores_questions_$questionSubcategory",
+                                                        'scores_questions_$questionSubcategory',
                                                       ) ??
                                                       [],
                                           };
@@ -709,12 +709,12 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                    "scores_questionsLast",
+                                                    'scores_questionsLast',
                                                   ) ??
                                                   List<String>.generate(
                                                     SatsQuestionSubcategories
                                                         .typesList.length,
-                                                    (index) => "-1",
+                                                    (index) => '-1',
                                                   );
 
                                           for (int i = 0;
@@ -754,20 +754,20 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     i];
 
                                             prefs.setStringList(
-                                              "scores_questions_$questionSubcategory",
+                                              'scores_questions_$questionSubcategory',
                                               savedQuestionScores[
                                                   questionSubcategory]!,
                                             );
 
                                             prefs.setStringList(
-                                              "scores_questionsLast",
+                                              'scores_questionsLast',
                                               savedProgressQuestionScores,
                                             );
                                           }
                                         });
                                       },
                                       description:
-                                          "The test will comprise of 10 Reading and Writing Questions.",
+                                          'The test will comprise of 10 Reading and Writing Questions.',
                                       exerciseNumber: 0,
                                       questions: questions,
                                       oldName: questions.values
@@ -784,9 +784,9 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               ),
                               initialTest: true,
                               testActivitiesDescription:
-                                  "The test will comprise of 10 Reading and Writing Questions.",
+                                  'The test will comprise of 10 Reading and Writing Questions.',
                               testScoreDescription:
-                                  "We will use your score to personalize your app experience.",
+                                  'We will use your score to personalize your app experience.',
                             ),
                           ),
                         );
@@ -794,10 +794,10 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                     ),
                     SizedBox(height: size.height / 30),
                     SatsProgramButton(
-                      text: "Only Math Section",
+                      text: 'Only Math Section',
                       height: size.height * 0.0834,
                       color: Theme.of(context).colorScheme.secondary,
-                      name: "math",
+                      name: 'math',
                       onTap: () {
                         setState(() {
                           startedLevelTest = true;
@@ -891,7 +891,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                   SatsQuestionDifficulty.difficultyMedium,
                             ),
                           );
-                          print("questions: ${questions.length}");
+                          print('questions: ${questions.length}');
                         }();
                         Navigator.of(context).push(
                           PageTransition(
@@ -907,7 +907,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                 future: questionsF,
                                 builder: (context, snapshot) {
                                   print(
-                                    "future questions: ${questions.length}",
+                                    'future questions: ${questions.length}',
                                   );
                                   if (snapshot.connectionState ==
                                       ConnectionState.waiting) {
@@ -916,8 +916,8 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                     );
                                   } else {
                                     return MathQuizModel(
-                                      "R&W - Exercise {}",
-                                      "R&W",
+                                      'R&W - Exercise {}',
+                                      'R&W',
                                       600,
                                       page: Home(),
                                       initialTest: true,
@@ -936,7 +936,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     .typesList)
                                               questionSubcategory:
                                                   prefs.getStringList(
-                                                        "scores_questions_$questionSubcategory",
+                                                        'scores_questions_$questionSubcategory',
                                                       ) ??
                                                       [],
                                           };
@@ -944,12 +944,12 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                           List<String>
                                               savedProgressQuestionScores =
                                               prefs.getStringList(
-                                                    "scores_questionsLast",
+                                                    'scores_questionsLast',
                                                   ) ??
                                                   List<String>.generate(
                                                     SatsQuestionSubcategories
                                                         .typesList.length,
-                                                    (index) => "-1",
+                                                    (index) => '-1',
                                                   );
 
                                           for (int i = 0;
@@ -989,20 +989,20 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                                                     i];
 
                                             prefs.setStringList(
-                                              "scores_questions_$questionSubcategory",
+                                              'scores_questions_$questionSubcategory',
                                               savedQuestionScores[
                                                   questionSubcategory]!,
                                             );
 
                                             prefs.setStringList(
-                                              "scores_questionsLast",
+                                              'scores_questionsLast',
                                               savedProgressQuestionScores,
                                             );
                                           }
                                         });
                                       },
                                       description:
-                                          "The test will comprise of 6 Math Questions.",
+                                          'The test will comprise of 6 Math Questions.',
                                       exerciseNumber: 0,
                                       questions: questions,
                                       oldName: questions.values
@@ -1017,9 +1017,9 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                               ),
                               initialTest: true,
                               testActivitiesDescription:
-                                  "The test will comprise of 6 Math Questions.\n\nYou can use the graphic calculator.",
+                                  'The test will comprise of 6 Math Questions.\n\nYou can use the graphic calculator.',
                               testScoreDescription:
-                                  "We will use your score to personalize your app experience.",
+                                  'We will use your score to personalize your app experience.',
                             ),
                           ),
                         );

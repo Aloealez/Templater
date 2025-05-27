@@ -20,7 +20,7 @@ class ShowSatsImprovement extends StatefulWidget {
     required this.maximum,
     required this.page,
     this.lastin = false,
-    this.subtitle = "",
+    this.subtitle = '',
   });
 
   final String title;
@@ -72,8 +72,8 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
         0;
     setState(() {
       chartData = [
-        ChartDataImprovement("day 1", oldscore),
-        ChartDataImprovement("day 30", widget.yourScore),
+        ChartDataImprovement('day 1', oldscore),
+        ChartDataImprovement('day 30', widget.yourScore),
       ];
       if (oldscore == 0) {
         if (widget.yourScore == 0) {
@@ -112,7 +112,7 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
                   ),
                   children: [
                     TextSpan(
-                      text: "Your Progress",
+                      text: 'Your Progress',
                       style: TextStyle(
                         fontSize: size.width / 8,
                       ),
@@ -165,10 +165,10 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
                       ),
                       children: [
                         const TextSpan(
-                          text: "You have improved by ",
+                          text: 'You have improved by ',
                         ),
                         TextSpan(
-                          text: "$improvementrate%",
+                          text: '$improvementrate%',
                           style: const TextStyle(fontWeight: FontWeight.w700),
                         ),
                       ],
@@ -178,7 +178,7 @@ class _ShowSatsImprovement extends State<ShowSatsImprovement>
                     height: size.height / 30,
                   ),
                   Text(
-                    "Well Done 🎉",
+                    'Well Done 🎉',
                     style: TextStyle(
                       fontSize: size.width / 16,
                     ),

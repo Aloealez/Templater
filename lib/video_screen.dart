@@ -88,7 +88,7 @@ class _VideoScreenState extends State<VideoScreen> {
     double cinemaBarOffset = 0.0;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: Container(
           margin: EdgeInsets.zero,
@@ -109,7 +109,7 @@ class _VideoScreenState extends State<VideoScreen> {
                     color: const Color(0xFF777799),
                     child: Center(
                       child: Text(
-                        "TedEd Cinema",
+                        'TedEd Cinema',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -129,7 +129,7 @@ class _VideoScreenState extends State<VideoScreen> {
                 height: (size.height - cinemaBarHeight) / 2,
                 curve: Curves.ease,
                 child: Image.asset(
-                  "assets/video/curtainleftKalina.png",
+                  'assets/video/curtainleftKalina.png',
                   fit: BoxFit.contain,
                 ),
               ),
@@ -141,7 +141,7 @@ class _VideoScreenState extends State<VideoScreen> {
                 height: (size.height - cinemaBarHeight) / 2,
                 curve: Curves.ease,
                 child: Image.asset(
-                  "assets/video/curtainrightKalina.png",
+                  'assets/video/curtainrightKalina.png',
                   fit: BoxFit.contain,
                 ),
               ),
@@ -150,7 +150,7 @@ class _VideoScreenState extends State<VideoScreen> {
                 child: Transform.scale(
                   scale: 2.0,
                   child: Image.asset(
-                    "assets/video/audience.png",
+                    'assets/video/audience.png',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -187,7 +187,7 @@ class _VideoScreenState extends State<VideoScreen> {
                         color: Theme.of(context).colorScheme.onSecondary,
                       ),
                       label: Text(
-                        "Skip",
+                        'Skip',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w600,

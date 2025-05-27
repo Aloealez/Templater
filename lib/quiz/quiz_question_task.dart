@@ -21,11 +21,11 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    bool _hasText(String? value) => value != null && value.trim().isNotEmpty;
+    bool hasText(String? value) => value != null && value.trim().isNotEmpty;
 
-    final hasIntro = _hasText(widget.question.introduction);
-    final hasText1 = _hasText(widget.question.text);
-    final hasText2 = _hasText(widget.question.text2);
+    final hasIntro = hasText(widget.question.introduction);
+    final hasText1 = hasText(widget.question.text);
+    final hasText2 = hasText(widget.question.text2);
     final isCrossText = hasText1 && hasText2;
 
     return Column(
@@ -46,7 +46,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
             Padding(
               padding: EdgeInsets.only(left: 0.01 * size.width),
               child: Text(
-                "Text 1",
+                'Text 1',
                 style: TextStyle(
                   fontSize: 0.015 * size.height,
                   fontWeight: FontWeight.w700,
@@ -60,7 +60,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
                   isCrossText || hasIntro ? 0.03 * size.width : 0 * size.width,
             ),
             child: HtmlAsTextSpan(
-              widget.question.text!.replaceAll("Text 1:", ""),
+              widget.question.text!.replaceAll('Text 1:', ''),
               fontSize: 0.0175 * size.height,
             ),
           ),
@@ -73,7 +73,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
             Padding(
               padding: EdgeInsets.only(left: 0.01 * size.width),
               child: Text(
-                "Text 2",
+                'Text 2',
                 style: TextStyle(
                   fontSize: 0.015 * size.height,
                   fontWeight: FontWeight.w700,
@@ -86,7 +86,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
               top: 0.005 * size.height,
             ),
             child: HtmlAsTextSpan(
-              widget.question.text2!.replaceAll("Text 2:", ""),
+              widget.question.text2!.replaceAll('Text 2:', ''),
               fontSize: 0.0175 * size.height,
             ),
           ),
@@ -95,7 +95,7 @@ class _QuizQuestionTaskState extends State<QuizQuestionTask> {
 
         // Final Question
         HtmlAsTextSpan(
-          "<b>${widget.question.question}</b>",
+          '<b>${widget.question.question}</b>',
           fontSize: 0.0175 * size.height,
         ),
       ],

@@ -35,9 +35,9 @@ class ReadingComprehension extends StatefulWidget {
 }
 
 class _ReadingComprehension extends State<ReadingComprehension> {
-  String title = "";
-  String author = "";
-  String text = "";
+  String title = '';
+  String author = '';
+  String text = '';
   var rng = Random();
   dynamic tasks;
 
@@ -50,7 +50,7 @@ class _ReadingComprehension extends State<ReadingComprehension> {
       int test = rng.nextInt(11);
 
       final file = await rootBundle.loadString('assets/linguistic/reading_comprehension.yaml');
-      tasks = loadYaml(file)["tests"][test];
+      tasks = loadYaml(file)['tests'][test];
       // for (var i = 0; i < tasks[0]["questions"].length; i++) {
         // newQuestions.add(tasks[0]["questions"][i]["question"]);
         // newCorrect.add(tasks[0]["questions"][i]["correct_answer"]);
@@ -62,12 +62,12 @@ class _ReadingComprehension extends State<ReadingComprehension> {
       // }
 
       setState(() {
-        title = tasks[0]["title"];
-        author = tasks[0]["author"];
-        text = tasks[0]["text"];
+        title = tasks[0]['title'];
+        author = tasks[0]['author'];
+        text = tasks[0]['text'];
       });
     } catch (e) {
-      print("Error: $e");
+      print('Error: $e');
     }
   }
 
@@ -84,7 +84,7 @@ class _ReadingComprehension extends State<ReadingComprehension> {
     return tasks == null
         ? const Center(child: CircularProgressIndicator())
         : Scaffold(
-            appBar: appBar(context, ""),
+            appBar: appBar(context, ''),
             body: Container(
               width: size.width * 0.9,
               height: size.height * 0.9,
@@ -113,7 +113,7 @@ class _ReadingComprehension extends State<ReadingComprehension> {
                             textAlign: TextAlign.center,
                           ),
                           Text(
-                            "by $author",
+                            'by $author',
                             style: TextStyle(fontSize: size.width / 30),
                           ),
                           SizedBox(
@@ -139,8 +139,8 @@ class _ReadingComprehension extends State<ReadingComprehension> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => QuizModel(
-                                    "Linguistic",
-                                    "Linguistic",
+                                    'Linguistic',
+                                    'Linguistic',
                                     60,
                                     initialTest: widget.initialTest,
                                     endingTest: widget.endingTest,
@@ -151,34 +151,34 @@ class _ReadingComprehension extends State<ReadingComprehension> {
                                         : widget.endingTest
                                         ? const TitlePage(title: 'BrainAce.pro',)
                                         : const Home(),
-                                    description: "Exercise 2 - Reading Comprehension",
-                                    oldName: "reading_comprehension",
+                                    description: 'Exercise 2 - Reading Comprehension',
+                                    oldName: 'reading_comprehension',
                                     exerciseNumber: 2,
-                                    exerciseString: "ReadingComprehension",
+                                    exerciseString: 'ReadingComprehension',
                                     questions: {
-                                      for (int i = 0; i < tasks[0]["questions"].length; ++i)
-                                        "$i": () {
+                                      for (int i = 0; i < tasks[0]['questions'].length; ++i)
+                                        '$i': () {
                                           Map<String, String> answers = {};
                                           answers = {
-                                            "A": tasks[0]["questions"][i]["answers"][0].toString(),
-                                            "B": tasks[0]["questions"][i]["answers"][1].toString(),
-                                            if (tasks[0]["questions"][i]["answers"].length >= 3) "C": tasks[0]["questions"][i]["answers"][2].toString(),
-                                            if (tasks[0]["questions"][i]["answers"].length >= 4) "D": tasks[0]["questions"][i]["answers"][3].toString(),
+                                            'A': tasks[0]['questions'][i]['answers'][0].toString(),
+                                            'B': tasks[0]['questions'][i]['answers'][1].toString(),
+                                            if (tasks[0]['questions'][i]['answers'].length >= 3) 'C': tasks[0]['questions'][i]['answers'][2].toString(),
+                                            if (tasks[0]['questions'][i]['answers'].length >= 4) 'D': tasks[0]['questions'][i]['answers'][3].toString(),
                                           };
                                           Map<String, bool> correct = {
-                                            "A": tasks[0]["questions"][i]["correct_answer"] == 0,
-                                            "B": tasks[0]["questions"][i]["correct_answer"] == 1,
-                                            "C": tasks[0]["questions"][i]["correct_answer"] == 2,
-                                            "D": tasks[0]["questions"][i]["correct_answer"] == 3,
+                                            'A': tasks[0]['questions'][i]['correct_answer'] == 0,
+                                            'B': tasks[0]['questions'][i]['correct_answer'] == 1,
+                                            'C': tasks[0]['questions'][i]['correct_answer'] == 2,
+                                            'D': tasks[0]['questions'][i]['correct_answer'] == 3,
                                           };
                                           return QuizQuestionData(
                                             answers,
                                             correct,
                                             {
-                                              "A": 1,
-                                              "B": 1,
-                                              "C": 1,
-                                              "D": 1,
+                                              'A': 1,
+                                              'B': 1,
+                                              'C': 1,
+                                              'D': 1,
                                             },
                                             question: "${tasks[0]["questions"][i]["question"]}",
                                           );

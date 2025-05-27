@@ -40,11 +40,11 @@ class _LogicalThinking extends State<LogicalThinking> {
               child: Column(
                 children: [
                   Text(
-                    "Logical",
+                    'Logical',
                     style: TextStyle(fontSize: 0.08 * size.height),
                   ),
                   Text(
-                    "Thinking",
+                    'Thinking',
                     style: TextStyle(fontSize: 0.035 * size.height),
                   ),
                 ],
@@ -52,7 +52,7 @@ class _LogicalThinking extends State<LogicalThinking> {
             ),
             SizedBox(height: 0.03 * size.height),
             Text(
-              "Exercise 1 - Math practice",
+              'Exercise 1 - Math practice',
               style: TextStyle(fontSize: 0.025 * size.height),
             ),
             SizedBox(height: 0.04 * size.height),
@@ -64,14 +64,14 @@ class _LogicalThinking extends State<LogicalThinking> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "In this exercises you will complete part of the ",
+                    text: 'In this exercises you will complete part of the ',
                   ),
                   TextSpan(
-                    text: "SAT Math with CALCULATOR",
+                    text: 'SAT Math with CALCULATOR',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: " Part.",
+                    text: ' Part.',
                   ),
                 ],
               ),
@@ -85,14 +85,14 @@ class _LogicalThinking extends State<LogicalThinking> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "You will have ",
+                    text: 'You will have ',
                   ),
                   TextSpan(
-                    text: "350 seconds",
+                    text: '350 seconds',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: ".",
+                    text: '.',
                   ),
                 ],
               ),
@@ -106,14 +106,14 @@ class _LogicalThinking extends State<LogicalThinking> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "When ready click \"",
+                    text: 'When ready click "',
                   ),
                   TextSpan(
-                    text: "CONTINUE\"",
+                    text: 'CONTINUE"',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: ".",
+                    text: '.',
                   ),
                 ],
               ),
@@ -124,7 +124,7 @@ class _LogicalThinking extends State<LogicalThinking> {
                 height: size.height * 0.05,
                 width: size.width * 0.75,
                 child: RedirectButton(
-                  route: const Text("nie"),
+                  route: const Text('nie'),
                   text: 'Continue',
                   width: size.width,
                 ),

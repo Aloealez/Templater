@@ -61,7 +61,7 @@ class _Reading extends State<Reading> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 10,
@@ -73,7 +73,7 @@ class _Reading extends State<Reading> {
           children: <Widget>[
             Center(
               child: Text(
-                "Attention",
+                'Attention',
                 style: TextStyle(
                   fontSize: size.width / 8,
                   fontWeight: FontWeight.w600,
@@ -83,14 +83,14 @@ class _Reading extends State<Reading> {
             ),
             Center(
               child: Text(
-                "Book Reading Out Loud",
+                'Book Reading Out Loud',
                 style: TextStyle(fontSize: size.width / 18),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(height: 0.02 * size.height),
             Text(
-              "We won’t check if you read books, but you will be able to put a tick each day you do 😉",
+              'We won’t check if you read books, but you will be able to put a tick each day you do 😉',
               style: TextStyle(fontSize: size.width / 25),
             ),
             SizedBox(height: 0.02 * size.height),
@@ -126,7 +126,7 @@ class _Reading extends State<Reading> {
                 ),
                 SizedBox(width: 0.03 * size.width),
                 Text(
-                  "Today I Read a Book",
+                  'Today I Read a Book',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 0.025 * size.height,
@@ -172,18 +172,18 @@ class _Reading extends State<Reading> {
                     children: [
                       ActivityButton(
                         context,
-                        img: "attention/reading/classic",
-                        text1: "Classic",
-                        text2: "Novels",
+                        img: 'attention/reading/classic',
+                        text1: 'Classic',
+                        text2: 'Novels',
                         fontSize: 0.021 * size.height,
                         onTapRoute: const Classic(),
                         textWidth: 0.35,
                       ),
                       ActivityButton(
                         context,
-                        img: "attention/reading/business",
-                        text1: "Business and",
-                        text2: "Money",
+                        img: 'attention/reading/business',
+                        text1: 'Business and',
+                        text2: 'Money',
                         fontSize: 0.021 * size.height,
                         onTapRoute: const Business(),
                         leftColorGradient: const Color.fromARGB(255, 143, 0, 226),
@@ -192,9 +192,9 @@ class _Reading extends State<Reading> {
                       ),
                       ActivityButton(
                         context,
-                        img: "attention/reading/personal_development",
-                        text1: "Personal",
-                        text2: "Development",
+                        img: 'attention/reading/personal_development',
+                        text1: 'Personal',
+                        text2: 'Development',
                         fontSize: 0.021 * size.height,
                         onTapRoute: const PersonalDevelopment(),
                         leftColorGradient: const Color.fromARGB(255, 221, 65, 221),

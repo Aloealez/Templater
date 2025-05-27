@@ -19,7 +19,7 @@ class _MathActivitiesState extends State<MathActivities> {
 
   Future<void> getPlan() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
+    List<String> newPlan = prefs.getStringList('basePlanDay$day') ?? [];
     if (newPlan.isNotEmpty) {
       setState(() {
         plan = newPlan;
@@ -30,7 +30,7 @@ class _MathActivitiesState extends State<MathActivities> {
 
   int day = 1;
   late SharedPreferences prefs;
-  String skill = "attention";
+  String skill = 'attention';
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
@@ -38,7 +38,7 @@ class _MathActivitiesState extends State<MathActivities> {
       if (prefs.getString('skill') != null) {
         skill = prefs.getString('skill')!;
       } else {
-        skill = "attention";
+        skill = 'attention';
       }
     });
   }
@@ -81,7 +81,7 @@ class _MathActivitiesState extends State<MathActivities> {
             SizedBox(height: 0.005 * size.height),
             Center(
               child: Text(
-                "Your Activities",
+                'Your Activities',
                 style: TextStyle(
                   fontSize: size.width / 9,
                   fontWeight: FontWeight.w600,
@@ -113,7 +113,7 @@ class _MathActivitiesState extends State<MathActivities> {
                             ),
                             SizedBox(width: 0.02 * size.width),
                             Text(
-                              "Do Today",
+                              'Do Today',
                               style: TextStyle(
                                 fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
@@ -126,9 +126,9 @@ class _MathActivitiesState extends State<MathActivities> {
                         for (String questionSubcategory in SatsQuestionSubcategories.typesList.sublist(10))
                           ActivityButton(
                             context,
-                            img: "activities/$questionSubcategory",
+                            img: 'activities/$questionSubcategory',
                             text1: SatsQuestionSubcategories.fromString(questionSubcategory).getName(),
-                            text2: "",
+                            text2: '',
                             fontSize: 0.023 * size.height * 1,
                             // onTapRoute: StartSatsQuiz(subcategory: SatsQuestionSubcategories.fromString(questionSubcategory)),
                             zero: 1,

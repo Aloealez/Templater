@@ -10,11 +10,11 @@ import '/memory/faces.dart';
 
 class BasePlanData {
   late SharedPreferences prefs;
-  String skill = "";
+  String skill = '';
   int trainingTime = 0;
   var rng = Random();
   List<String> plan = [];
-  List<String> basePlanTicked = ["0", "0", "0", "0"];
+  List<String> basePlanTicked = ['0', '0', '0', '0'];
   int day = 1;
   List<bool> wellBeingTicked = [false, false, false, false];
   int points = 0;
@@ -62,12 +62,12 @@ class BasePlanData {
   Future<void> setWellBeingTicked() async {
     prefs = await SharedPreferences.getInstance();
 
-    List<String> newWellBeingTickedString = ["0", "0", "0", "0"];
+    List<String> newWellBeingTickedString = ['0', '0', '0', '0'];
 
     for (int i = 0; i < wellBeingTicked.length; i++) {
-      newWellBeingTickedString[i] = (wellBeingTicked[i] ? "1" : "0");
+      newWellBeingTickedString[i] = (wellBeingTicked[i] ? '1' : '0');
     }
-    prefs.setStringList("wellBeingTickedDay$day", newWellBeingTickedString);
+    prefs.setStringList('wellBeingTickedDay$day', newWellBeingTickedString);
   }
 
   Future<void> getWellBeingTicked() async {
@@ -81,7 +81,7 @@ class BasePlanData {
 
     for (int i = 0; i < newWellBeingTickedString.length; i++) {
       newWellBeingTicked[i] =
-      (newWellBeingTickedString[i] == "1" ? true : false);
+      (newWellBeingTickedString[i] == '1' ? true : false);
       if (newWellBeingTicked[i]) {
         newPoints += wellbeingTimes[wellbeing[i]]!;
       }
@@ -95,7 +95,7 @@ class BasePlanData {
   }
 
   var skillBaseList = [
-    [Faces, "Faces", 10],
+    [Faces, 'Faces', 10],
   ];
 
   Future<void> getSkill() async {
@@ -109,7 +109,7 @@ class BasePlanData {
 
   Future<void> createPlan() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
+    List<String> newPlan = prefs.getStringList('basePlanDay$day') ?? [];
     if (newPlan.isNotEmpty) {
       plan = newPlan;
       return;
@@ -117,8 +117,8 @@ class BasePlanData {
     skillBaseList = List.from(skillBaseLists[skill]!);
     int currentTime = 0;
 
-    if (skill == "sats") {
-      List<String> questionSubcategoriesPointsStr = prefs.getStringList("scores_questionsLast") ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => "-1");
+    if (skill == 'sats') {
+      List<String> questionSubcategoriesPointsStr = prefs.getStringList('scores_questionsLast') ?? List<String>.generate(SatsQuestionSubcategories.typesList.length, (index) => '-1');
       List<String> questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
       Map<String, double> questionsSubcategoriesPoints = {
         for (int i = 0; i < questionSubcategoriesPointsStr.length; i++)
@@ -161,18 +161,18 @@ class BasePlanData {
       currentTime += skillBaseList[el].toList()[2] as int;
       skillBaseList.removeAt(el);
     }
-    prefs.setStringList("basePlanDay$day", newPlan);
+    prefs.setStringList('basePlanDay$day', newPlan);
     plan = newPlan;
   }
 
   Future<void> getBasePlanTicked() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newBasePlanTicked = List.generate(plan.length, (index) => "0");
+    List<String> newBasePlanTicked = List.generate(plan.length, (index) => '0');
     int newPoints = points;
 
     for (int i = 0; i < plan.length; ++i) {
-      newBasePlanTicked[i] = prefs.getString("${plan[i]}TickedDay$day") ?? "0";
-      if (newBasePlanTicked[i] == "1") {
+      newBasePlanTicked[i] = prefs.getString('${plan[i]}TickedDay$day') ?? '0';
+      if (newBasePlanTicked[i] == '1') {
         newPoints += sectionTimes[plan[i]]!;
       }
     }
@@ -221,7 +221,7 @@ class BasePlanData {
 
   Future<void> updatePoints() async {
     prefs = await SharedPreferences.getInstance();
-    prefs.setInt("pointsDay$day", points);
+    prefs.setInt('pointsDay$day', points);
   }
 
   // Widget createBaseProgram(

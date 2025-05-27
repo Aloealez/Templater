@@ -13,10 +13,10 @@ FutureBuilder correctAWordBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String level = prefs.getString("level") ?? "cpe";
-      Map<String, QuizQuestionData> questions = await convertToRandomQuestions("correct_a_word", level, 3);
+      String level = prefs.getString('level') ?? 'cpe';
+      Map<String, QuizQuestionData> questions = await convertToRandomQuestions('correct_a_word', level, 3);
       for (String key in questions.keys) {
-        questions[key]?.question += "\n\nFind the misspelled word (Warning: There might not be one).";
+        questions[key]?.question += '\n\nFind the misspelled word (Warning: There might not be one).';
       }
       return questions;
     }(),
@@ -27,8 +27,8 @@ FutureBuilder correctAWordBuilder(
         );
       }
       return QuizModel(
-        "Correct a Word",
-        "Correct a Word",
+        'Correct a Word',
+        'Correct a Word',
         120,
         answerLayout : QuizModelAnswerLayout.textInput,
         singleTextQuestion: true,
@@ -43,10 +43,10 @@ FutureBuilder correctAWordBuilder(
             ? strongConcentrationBuilder(
             initialTest: false, endingTest: true,)
             : Home(),
-        description: "Exercise 2 - spelling mistakes",
-        oldName: "long_term_concentration",
+        description: 'Exercise 2 - spelling mistakes',
+        oldName: 'long_term_concentration',
         exerciseNumber: 0,
-        exerciseString: "SpellingMistakes",
+        exerciseString: 'SpellingMistakes',
         questions: snapshot.data!,
       );
     },

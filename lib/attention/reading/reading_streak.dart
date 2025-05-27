@@ -93,7 +93,7 @@ class _ReadingStreak extends State<ReadingStreak> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 10,
@@ -105,7 +105,7 @@ class _ReadingStreak extends State<ReadingStreak> {
           children: <Widget>[
             Center(
               child: Text(
-                "Your Reading Streak",
+                'Your Reading Streak',
                 style: TextStyle(
                   fontSize: size.width / 12,
                   fontWeight: FontWeight.w600,

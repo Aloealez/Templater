@@ -39,7 +39,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
                   pickerColor: getThemeColor(
                       prefs, Theme.of(context).brightness, colorKey,),
                   onColorChanged: (Color color) {
-                    print("Color changed to $color");
+                    print('Color changed to $color');
                     selectedColor = color;
                     // setThemeColor(
                     //     prefs, Theme.of(context).brightness, colorKey, color,)
@@ -141,11 +141,11 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
   Future<void> resetToDefaultColors() async {
     if (prefs != null) {
       final brightness = Theme.of(context).brightness;
-      await setThemeColor(prefs, brightness, "surface", null);
-      await setThemeColor(prefs, brightness, "primary", null);
-      await setThemeColor(prefs, brightness, "secondary", null);
-      await setThemeColor(prefs, brightness, "tertiary", null);
-      await setThemeColor(prefs, brightness, "primaryContainer", null);
+      await setThemeColor(prefs, brightness, 'surface', null);
+      await setThemeColor(prefs, brightness, 'primary', null);
+      await setThemeColor(prefs, brightness, 'secondary', null);
+      await setThemeColor(prefs, brightness, 'tertiary', null);
+      await setThemeColor(prefs, brightness, 'primaryContainer', null);
       if (context.mounted) {
         MyApp.of(context).reloadTheme();
       }
@@ -159,7 +159,7 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: appBar(context, "Customise Colors"),
+      appBar: appBar(context, 'Customise Colors'),
       body: FutureBuilder(
     future: prefsF,
     builder: (context, snapshot) {
@@ -173,28 +173,28 @@ class _CustomizeThemeState extends State<CustomizeTheme> {
           children: [
             _buildColorTile(
               label: 'Background',
-              colorKey: "surface",
+              colorKey: 'surface',
               textColor: Theme.of(context).colorScheme.onSurface,
             ),
             const SizedBox(height: 30),
             _buildColorTile(
               label: 'Primary',
-              colorKey: "primary",
+              colorKey: 'primary',
             ),
             const SizedBox(height: 30),
             _buildColorTile(
               label: 'Secondary',
-              colorKey: "secondary",
+              colorKey: 'secondary',
             ),
             const SizedBox(height: 30),
             _buildColorTile(
               label: 'Accent',
-              colorKey: "tertiary",
+              colorKey: 'tertiary',
             ),
             const SizedBox(height: 30),
             _buildColorTile(
               label: 'Contrast',
-              colorKey: "primaryContainer",
+              colorKey: 'primaryContainer',
               textColor: Theme.of(context).colorScheme.onPrimaryContainer,
             ),
             // Spacer will push the button to the vertical center of any remaining space.

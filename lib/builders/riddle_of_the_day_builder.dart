@@ -16,33 +16,33 @@ FutureBuilder riddleOfTheDayBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      List<String> lastScores = prefs.getStringList("riddle_of_the_day_scores") ?? ["0"];
+      List<String> lastScores = prefs.getStringList('riddle_of_the_day_scores') ?? ['0'];
       String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
       Map<String, QuizQuestionData>? todayQuestion;
       String? error;
 
       // Check if the last date is different from today
-      if (prefs.getString("lastDateTime_riddle_of_the_day") != date) {
-        await prefs.setString("lastDateTime_riddle_of_the_day", date);
+      if (prefs.getString('lastDateTime_riddle_of_the_day') != date) {
+        await prefs.setString('lastDateTime_riddle_of_the_day', date);
 
         // Fetch a new question ID
         try {
-          String todayQuestionId = (await getRandomQuestions("riddle_of_the_day", "default", 1)).keys.last;
-          await prefs.setString("todayQuestionId_riddle_of_the_day", todayQuestionId);
+          String todayQuestionId = (await getRandomQuestions('riddle_of_the_day', 'default', 1)).keys.last;
+          await prefs.setString('todayQuestionId_riddle_of_the_day', todayQuestionId);
         } catch (e) {
-          error = "Failed to fetch a new riddle. Please try again later.";
+          error = 'Failed to fetch a new riddle. Please try again later.';
           return [null, lastScores, error, false];
         }
       }
 
-      String todayQuestionId = prefs.getString("todayQuestionId_riddle_of_the_day") ?? "-1";
+      String todayQuestionId = prefs.getString('todayQuestionId_riddle_of_the_day') ?? '-1';
 
       // Load questions from asset
       String data;
       try {
-        data = await loadQuestionsAsset("riddle_of_the_day", "default");
+        data = await loadQuestionsAsset('riddle_of_the_day', 'default');
       } catch (e) {
-        error = "Failed to load riddles. Please check your connection.";
+        error = 'Failed to load riddles. Please check your connection.';
         return [null, lastScores, error, false];
       }
 
@@ -54,16 +54,16 @@ FutureBuilder riddleOfTheDayBuilder(
       print('Today\'s question ID: $todayQuestionId');
 
       // Check if the question ID exists
-      if (todayQuestion != null && todayQuestion.containsKey(todayQuestionId)) {
+      if (todayQuestion.containsKey(todayQuestionId)) {
         todayQuestion = {
           todayQuestionId: todayQuestion[todayQuestionId]!,
         };
       } else {
         todayQuestion = null;
-        error = "No riddle found for today. Please try again later.";
+        error = 'No riddle found for today. Please try again later.';
       }
 
-      String lastDoneDate = prefs.getString("lastDone_riddle_of_the_day") ?? "";
+      String lastDoneDate = prefs.getString('lastDone_riddle_of_the_day') ?? '';
       bool alreadyDone = lastDoneDate == date;
       if (alreadyDone) {
         return [null, lastScores, null, true]; // true means already done
@@ -84,7 +84,7 @@ FutureBuilder riddleOfTheDayBuilder(
       }
       // Only show ProgressScreen if already done
       if (snapshot.data != null && snapshot.data!.length > 3 && snapshot.data![3] == true) {
-        return ProgressScreen(maxScore: snapshot.data![1].length.toDouble(), exercise: "RiddleOfTheDay");
+        return ProgressScreen(maxScore: snapshot.data![1].length.toDouble(), exercise: 'RiddleOfTheDay');
       }
       // If no question and not already done, show error
       if (snapshot.data![0] == null) {
@@ -94,8 +94,8 @@ FutureBuilder riddleOfTheDayBuilder(
       }
       // Otherwise, show the quiz
       return QuizModel(
-        "Riddle Of The Day",
-        "RiddleOfTheDay",
+        'Riddle Of The Day',
+        'RiddleOfTheDay',
         60 * 15,
         answerLayout: QuizModelAnswerLayout.textInput,
         centerTitle: true,
@@ -107,15 +107,15 @@ FutureBuilder riddleOfTheDayBuilder(
         initScore: double.parse(snapshot.data![1].last),
         initMaxScore: 0,
         page: Home(),
-        description: "Riddle Of The Day",
-        oldName: "riddle_of_the_day",
+        description: 'Riddle Of The Day',
+        oldName: 'riddle_of_the_day',
         exerciseNumber: 0,
-        exerciseString: "RiddleOfTheDay",
+        exerciseString: 'RiddleOfTheDay',
         questions: snapshot.data![0],
         onEnd: (score, maxScore, x, y) async {
           SharedPreferences prefs = await SharedPreferences.getInstance();
           String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
-          await prefs.setString("lastDone_riddle_of_the_day", date);
+          await prefs.setString('lastDone_riddle_of_the_day', date);
         },
       );
     },

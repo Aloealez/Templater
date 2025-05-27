@@ -25,9 +25,9 @@ class LevelTest extends StatefulWidget {
     required this.testRouteBuilder,
     this.testTimeDescription,
     this.testActivitiesDescription =
-        "The test will comprise two activities, through which we will assess your listening and reading levels in English.",
+        'The test will comprise two activities, through which we will assess your listening and reading levels in English.',
     this.testScoreDescription =
-        "We will use your score to personalize your app experience.",
+        'We will use your score to personalize your app experience.',
     this.initialTest = true,
     this.endingTest = false,
     super.key,
@@ -41,11 +41,11 @@ class _LevelTestState extends State<LevelTest> {
   late SharedPreferences prefs;
   late Map<String, SatsQuestion> questions;
 
-  final String category = "rw";
+  final String category = 'rw';
 
   Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
-    print("Initialized shared preferences.");
+    print('Initialized shared preferences.');
   }
 
   @override
@@ -66,13 +66,13 @@ class _LevelTestState extends State<LevelTest> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
             alignment: Alignment(0, -0.95),
             child: Text(
-              "Level Test 🥰",
+              'Level Test 🥰',
               style: TextStyle(
                 fontSize: 0.055 * size.height,
                 fontWeight: FontWeight.w600,
@@ -147,7 +147,7 @@ class _LevelTestState extends State<LevelTest> {
                         textAlign: TextAlign.left,
                       ),
                     Text(
-                      "Some Instructions",
+                      'Some Instructions',
                       style: TextStyle(
                         fontSize: 0.035 * size.height,
                         height: 1,

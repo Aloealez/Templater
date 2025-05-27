@@ -36,7 +36,7 @@ class _Activities extends State<Activities> {
         skillAllLists[skill]!.contains(activityName)) {
       return ActivityButton(
         context,
-        img: "activities/$img",
+        img: 'activities/$img',
         text1: txt1,
         text2: txt2,
         fontSize: 0.023 * size.height * fontSize,
@@ -57,7 +57,7 @@ class _Activities extends State<Activities> {
 
   Future<void> getPlan() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newPlan = prefs.getStringList("basePlanDay$day") ?? [];
+    List<String> newPlan = prefs.getStringList('basePlanDay$day') ?? [];
     if (newPlan.isNotEmpty) {
       setState(() {
         plan = newPlan;
@@ -68,7 +68,7 @@ class _Activities extends State<Activities> {
 
   int day = 1;
   late SharedPreferences prefs;
-  String skill = "attention";
+  String skill = 'attention';
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
@@ -76,7 +76,7 @@ class _Activities extends State<Activities> {
       if (prefs.getString('skill') != null) {
         skill = prefs.getString('skill')!;
       } else {
-        skill = "attention";
+        skill = 'attention';
       }
     });
   }
@@ -119,7 +119,7 @@ class _Activities extends State<Activities> {
             SizedBox(height: 0.005 * size.height),
             Center(
               child: Text(
-                "Your Activities",
+                'Your Activities',
                 style: TextStyle(
                   fontSize: size.width / 9,
                   fontWeight: FontWeight.w600,
@@ -151,7 +151,7 @@ class _Activities extends State<Activities> {
                             ),
                             SizedBox(width: 0.02 * size.width),
                             Text(
-                              "Do Today",
+                              'Do Today',
                               style: TextStyle(
                                 fontSize: 0.023 * size.height,
                                 color: Theme.of(context).colorScheme.onSurface,
@@ -163,9 +163,9 @@ class _Activities extends State<Activities> {
                         SizedBox(height: 0.06 * size.height),
                         ActivityButton(
                           context,
-                          img: "activities/maths_section",
-                          text1: "Mathematics",
-                          text2: "Section",
+                          img: 'activities/maths_section',
+                          text1: 'Mathematics',
+                          text2: 'Section',
                           fontSize: 0.026 * size.height * 1,
                           onTapRoute: const MathActivities(),
                           // onTapRoute: StartSatsMath(
@@ -176,9 +176,9 @@ class _Activities extends State<Activities> {
                         // SizedBox(height: 0.02 * size.height),
                         ActivityButton(
                           context,
-                          img: "activities/reading_writing_section",
-                          text1: "Reading &",
-                          text2: "Writing Section",
+                          img: 'activities/reading_writing_section',
+                          text1: 'Reading &',
+                          text2: 'Writing Section',
                           fontSize: 0.026 * size.height * 1,
                           onTapRoute: const ReadingWritingActivities(),
                           forceStar: true,
@@ -186,9 +186,9 @@ class _Activities extends State<Activities> {
                         // SizedBox(height: 0.01 * size.height),
                         ActivityButton(
                           context,
-                          img: "activities/brain_train_section",
-                          text1: "Brain Train",
-                          text2: "Section",
+                          img: 'activities/brain_train_section',
+                          text1: 'Brain Train',
+                          text2: 'Section',
                           fontSize: 0.026 * size.height * 1,
                           onTapRoute: const BrainTrainActivities(),
                         ),

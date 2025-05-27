@@ -26,7 +26,7 @@ class _MemeState extends State<Meme> with WidgetsBindingObserver {
     if (mounted) {
       memes = await MemeData.updateTodayMemes(prefs!, MemeData.MEMES_PER_DAY, context: context);
     }
-    print("Memes: ${memes.map((e) => e.id)}");
+    print('Memes: ${memes.map((e) => e.id)}');
   }
 
   @override
@@ -45,7 +45,7 @@ class _MemeState extends State<Meme> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    print("State: $state");
+    print('State: $state');
     if (state == AppLifecycleState.resumed) {
       memesF = updateMemesList();
     }
@@ -53,10 +53,10 @@ class _MemeState extends State<Meme> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    print("Rebuilding memes...");
+    print('Rebuilding memes...');
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: FutureBuilder(
         future: memesF,
         builder: (context, snapshot) {
@@ -72,7 +72,7 @@ class _MemeState extends State<Meme> with WidgetsBindingObserver {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Warning",
+                Text('Warning',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primaryFixedDim,
                       fontSize: size.width / 15,

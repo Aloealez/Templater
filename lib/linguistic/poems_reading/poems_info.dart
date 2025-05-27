@@ -24,7 +24,7 @@ class _PoemsInfo extends State<PoemsInfo> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 15,
@@ -37,27 +37,27 @@ class _PoemsInfo extends State<PoemsInfo> {
           children: <Widget>[
             Center(
               child: Text(
-                "Linguistic",
+                'Linguistic',
                 style: TextStyle(fontSize: 0.14 * size.width),
                 textAlign: TextAlign.center,
               ),
             ),
             Center(
               child: Text(
-                "Intelligence",
+                'Intelligence',
                 style: TextStyle(fontSize: 0.08 * size.width),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(height: 0.04 * size.height),
             Text(
-              " Exercise 1 -  Poems Reading Out-Loud",
+              ' Exercise 1 -  Poems Reading Out-Loud',
               style: TextStyle(fontSize: 0.05 * size.width),
               textAlign: TextAlign.start,
             ),
             SizedBox(height: 0.07 * size.height),
             Text(
-              "Poem for today : )",
+              'Poem for today : )',
               style: TextStyle(fontSize: size.height / 30),
             ),
             const Spacer(),

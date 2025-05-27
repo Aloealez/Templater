@@ -24,8 +24,8 @@ class ProgressScreen extends StatefulWidget {
     this.userScore,
     this.maxScore,
     required this.exercise,
-    this.txt = "You Received",
-    this.pointAlternative = "Points",
+    this.txt = 'You Received',
+    this.pointAlternative = 'Points',
     final bool showAsPercentage = false,
   });
 
@@ -98,19 +98,19 @@ class _ProgressScreen extends State<ProgressScreen>
 
     if (widget.maxScore != null) {
       prefs.setString(
-          "lastMaxScore_${widget.exercise}", widget.maxScore.toString(),);
+          'lastMaxScore_${widget.exercise}', widget.maxScore.toString(),);
       lastMaxScore = widget.maxScore!;
     } else {
       lastMaxScore = double.parse(
-          prefs.getString("lastMaxScore_${widget.exercise}") ?? "1",);
+          prefs.getString('lastMaxScore_${widget.exercise}') ?? '1',);
     }
 
     List<String> timestamps = prefs.getStringList(
-          "timestamps_${widget.exercise}",
+          'timestamps_${widget.exercise}',
         ) ??
         [];
     List<String> scores = prefs.getStringList(
-          "${widget.exercise}_scores",
+          '${widget.exercise}_scores',
         ) ??
         [];
 
@@ -119,8 +119,8 @@ class _ProgressScreen extends State<ProgressScreen>
       scores.add(widget.userScore.toString());
     }
 
-    print("scores: $scores");
-    print("timestamps: $timestamps");
+    print('scores: $scores');
+    print('timestamps: $timestamps');
     if (scores.isNotEmpty) {
       lastUserScore = double.parse(scores.last);
     } else {
@@ -128,8 +128,8 @@ class _ProgressScreen extends State<ProgressScreen>
     }
 
     if (newScores) {
-      prefs.setStringList("timestamps_${widget.exercise}", timestamps);
-      prefs.setStringList("${widget.exercise}_scores", scores);
+      prefs.setStringList('timestamps_${widget.exercise}', timestamps);
+      prefs.setStringList('${widget.exercise}_scores', scores);
     }
 
     for (int i = 0; i < scores.length; i++) {
@@ -142,7 +142,7 @@ class _ProgressScreen extends State<ProgressScreen>
     }
 
     if (newScores) {
-      await prefs.setString("${widget.exercise}TickedDay$day", "1");
+      await prefs.setString('${widget.exercise}TickedDay$day', '1');
     }
 
     callHomeWidgetUpdate();
@@ -164,14 +164,14 @@ class _ProgressScreen extends State<ProgressScreen>
         "${basePlanData.basePlanTicked[i] == "1" ? "◉" : "○"}:${sectionNames[basePlanData.plan[i]]}",
       );
       print(
-        "plan[$i] ${basePlanData.plan[i]} ${sectionNames[basePlanData.plan[i]]} ${basePlanData.basePlanTicked[i]}",
+        'plan[$i] ${basePlanData.plan[i]} ${sectionNames[basePlanData.plan[i]]} ${basePlanData.basePlanTicked[i]}',
       );
     }
 
-    HomeWidget.saveWidgetData("plan_title", "BeSmart List");
-    HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
+    HomeWidget.saveWidgetData('plan_title', 'BeSmart List');
+    HomeWidget.saveWidgetData('plan_tasks', widgetItems.join(','));
     HomeWidget.updateWidget(
-      androidName: "TodoHomeScreenWidget",
+      androidName: 'TodoHomeScreenWidget',
     );
 
     // here it should be different, why?
@@ -190,9 +190,9 @@ class _ProgressScreen extends State<ProgressScreen>
   @override
   Widget build(BuildContext context) {
     print(
-        "widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: $lastMaxScore",);
+        'widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: $lastMaxScore',);
     Size size = MediaQuery.of(context).size;
-    print("widget.userScore: ${widget.userScore}");
+    print('widget.userScore: ${widget.userScore}');
 
     DateTimeAxis xAxis = DateTimeAxis(
       isVisible: false,
@@ -210,7 +210,7 @@ class _ProgressScreen extends State<ProgressScreen>
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Stack(
           children: [
-            appBar(context, ""),
+            appBar(context, ''),
             Positioned.fill(
               top: kToolbarHeight,
               child: ConfettiWidget(
@@ -248,7 +248,7 @@ class _ProgressScreen extends State<ProgressScreen>
               child: Column(
                 children: [
                   Text(
-                    "Great Job 🥳",
+                    'Great Job 🥳',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: size.width / 12,
@@ -261,7 +261,7 @@ class _ProgressScreen extends State<ProgressScreen>
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      "Your Accuracy Is Now Equal To ${lastMaxScore > 0 ? (lastUserScore * 100 / lastMaxScore).round() : 0}%",
+                      'Your Accuracy Is Now Equal To ${lastMaxScore > 0 ? (lastUserScore * 100 / lastMaxScore).round() : 0}%',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: size.width / 18,
@@ -342,7 +342,7 @@ class _ProgressScreen extends State<ProgressScreen>
                               LineSeries<ChartData, DateTime>(
                                 onPointTap: (ChartPointDetails details) {
                                   debugPrint(
-                                      "onPointTap wywołany! index = ${details.pointIndex}",);
+                                      'onPointTap wywołany! index = ${details.pointIndex}',);
                                   final int? index = details.pointIndex;
                                   if (index != null &&
                                       index > 0 &&
@@ -393,24 +393,24 @@ class _ProgressScreen extends State<ProgressScreen>
                                         .toString()
                                         .padLeft(2, '0');
                                     return lastMaxScore > 0
-                                        ? "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month"
-                                        : "0%\n$day.$month";
+                                        ? '${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month'
+                                        : '0%\n$day.$month';
                                   } else if (index == chartData.length - 1) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month";
+                                    return '${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month';
                                   } else if (_tappedIndex == index) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return "${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month";
+                                    return '${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month';
                                   }
-                                  return "";
+                                  return '';
                                 },
                               ),
                             ],

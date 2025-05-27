@@ -32,7 +32,7 @@ class _SudokuGame extends State<SudokuGame> {
     prefs = await SharedPreferences.getInstance();
 
     List<String> scores = prefs.getStringList(
-          "sudoku_scores",
+          'sudoku_scores',
         ) ??
         [];
 
@@ -135,7 +135,7 @@ class _SudokuGame extends State<SudokuGame> {
                   builder: (context) => ProgressScreen(
                     userScore: lastScore.toDouble(),
                     maxScore: 20.0,
-                    txt: "You now have",
+                    txt: 'You now have',
                     exercise: 'SudokuGame',
                   ),
                 ),
@@ -199,7 +199,7 @@ class _SudokuGame extends State<SudokuGame> {
     }
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -267,7 +267,7 @@ class _SudokuGame extends State<SudokuGame> {
                       ),
                       SizedBox(width: 0.03 * size.width),
                       Text(
-                        "Points",
+                        'Points',
                         style: TextStyle(
                           fontSize: 0.05 * min(size.width, size.height),
                         ),
@@ -277,7 +277,7 @@ class _SudokuGame extends State<SudokuGame> {
                 ],
               ),
               Text(
-                "Level 1",
+                'Level 1',
                 style: TextStyle(
                   fontSize: 0.05 * size.width,
                 ),

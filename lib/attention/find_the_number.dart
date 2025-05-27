@@ -126,7 +126,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                   child: ProgressScreen(
                     userScore: score.toDouble(),
                     maxScore: 10,
-                    exercise: "FindTheNumber",
+                    exercise: 'FindTheNumber',
                   ),
                   reverseDuration: const Duration(milliseconds: 100),
                   opaque: true,
@@ -143,7 +143,7 @@ class _FindTheNumber extends State<FindTheNumber> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           width: size.width * 0.9,
@@ -159,7 +159,7 @@ class _FindTheNumber extends State<FindTheNumber> {
             children: <Widget>[
               Center(
                 child: Text(
-                  "Attention",
+                  'Attention',
                   style: TextStyle(
                     fontSize: size.width / 8,
                   ),
@@ -170,7 +170,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                 height: size.height / 50,
               ),
               Text(
-                "Exercise 1 - Find The Number",
+                'Exercise 1 - Find The Number',
                 style: TextStyle(fontSize: size.width / 20),
               ),
               SizedBox(
@@ -180,7 +180,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                 children: [
                   const SizedBox(width: 30.0),
                   Text(
-                    "Find",
+                    'Find',
                     style: TextStyle(fontSize: size.width / 20),
                   ),
                   SizedBox(width: 0.05 * size.width),
@@ -199,7 +199,7 @@ class _FindTheNumber extends State<FindTheNumber> {
                   ),
                   const SizedBox(width: 10.0),
                   Text(
-                    "${_time.toString()} s",
+                    '${_time.toString()} s',
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
                       fontWeight: FontWeight.w600,

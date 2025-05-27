@@ -27,7 +27,7 @@ class _Hangman extends State<Hangman> {
   int act = 0;
   int actRow = 0;
   int mistakes = 0;
-  String password = "";
+  String password = '';
   final guessedKeys = <String>[];
   final guessedKeys2 = <String>[];
   final notGuessedKeys = <String>[];
@@ -61,8 +61,8 @@ class _Hangman extends State<Hangman> {
                   builder: (context) => ProgressScreen(
                     userScore: mistakes.toDouble(),
                     maxScore: 8,
-                    txt: "You got",
-                    pointAlternative: "letters wrong",
+                    txt: 'You got',
+                    pointAlternative: 'letters wrong',
                     exercise: 'Hangman',
                   ),
                 ),
@@ -118,8 +118,8 @@ class _Hangman extends State<Hangman> {
   List<List<String>> letters =
       List.generate(7, (i) => List.generate(7, (j) => ''));
 
-  String noun = "";
-  String currentWord = "";
+  String noun = '';
+  String currentWord = '';
 
   String repeat(String s, int times) {
     return List.filled(times, s).join('');
@@ -154,7 +154,7 @@ class _Hangman extends State<Hangman> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(

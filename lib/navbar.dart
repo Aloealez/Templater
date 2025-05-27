@@ -102,11 +102,11 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             unselectedItemColor: Theme.of(context).colorScheme.secondary,
             selectedItemColor: Theme.of(context).colorScheme.onSurface,
             items: [
-              buildMenuIcon(0, "Activities"),
-              buildMenuIcon(1, "Progress"),
-              buildMenuIcon(2, "Home"),
+              buildMenuIcon(0, 'Activities'),
+              buildMenuIcon(1, 'Progress'),
+              buildMenuIcon(2, 'Home'),
               // buildMenuIcon(3, "Analysis"),
-              buildMenuIcon(3, "Settings"),
+              buildMenuIcon(3, 'Settings'),
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
@@ -131,7 +131,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           children: [
             ImageIcon(
               AssetImage(
-                "assets/navbar_icons/${name.toLowerCase()}.png",
+                'assets/navbar_icons/${name.toLowerCase()}.png',
               ),
               // color: Theme.of(context).colorScheme.secondary,
               size: _selectedIndex == index ? 30 : 28,
@@ -143,7 +143,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           ],
         ),
       ),
-      label: "",
+      label: '',
     );
   }
 }

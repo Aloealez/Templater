@@ -20,12 +20,12 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
 
   Future<Map<String, double>> GetSatsPoints() async {
     List<String> questionSubcategoriesPointsStr =
-        prefs.getStringList("scores_questionsLast") ??
+        prefs.getStringList('scores_questionsLast') ??
             List<String>.generate(
               SatsQuestionSubcategories.typesList.length,
-              (index) => "-1",
+              (index) => '-1',
             );
-    print("questionSubcategoriesPointsStr: $questionSubcategoriesPointsStr");
+    print('questionSubcategoriesPointsStr: $questionSubcategoriesPointsStr');
     List<String> questionsSubcategories =
         List.from(SatsQuestionSubcategories.typesList);
     Map<String, double> questionsSubcategoriesPoints = {
@@ -61,8 +61,8 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
     scoreMath = (scoreMath * 800 / (19 * 4)).round();
     scoreRW = (scoreRW * 800 / (10 * 5)).round();
 
-    print("Score Math: $scoreMath");
-    print("Score RW: $scoreRW");
+    print('Score Math: $scoreMath');
+    print('Score RW: $scoreRW');
 
     setState(() {});
   }
@@ -79,15 +79,15 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 40),
-            buildTitle("Current Score Prediction", size),
+            buildTitle('Current Score Prediction', size),
             const SizedBox(height: 20),
             buildScoreContainer(size),
             const SizedBox(height: 30),
-            buildTitle("Your Progress", size),
+            buildTitle('Your Progress', size),
             const SizedBox(height: 20),
             buildProgressContainer(context, size),
             const SizedBox(height: 30),
-            buildTitle("Weak Points And Strengths", size),
+            buildTitle('Weak Points And Strengths', size),
             const SizedBox(height: 20),
             buildWeaknessContainer(),
           ],
@@ -124,7 +124,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: "${scoreRW + scoreMath}",
+                    text: '${scoreRW + scoreMath}',
                     style: TextStyle(
                       fontSize: size.width / 10,
                       color: Colors.white,
@@ -132,7 +132,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                     ),
                   ),
                   TextSpan(
-                    text: "/ 1600 composite",
+                    text: '/ 1600 composite',
                     style: TextStyle(fontSize: size.width / 16),
                   ),
                 ],
@@ -140,7 +140,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
             ),
           ),
           SizedBox(height: 8),
-          buildScoreText("0", "0", size),
+          buildScoreText('0', '0', size),
         ],
       ),
     );
@@ -154,14 +154,14 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: "$scoreMath",
+                text: '$scoreMath',
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w600,
                 ),
               ),
               TextSpan(
-                text: "\tMath",
+                text: '\tMath',
                 style: TextStyle(fontSize: size.width / 16),
               ),
             ],
@@ -172,14 +172,14 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
           TextSpan(
             children: [
               TextSpan(
-                text: "$scoreRW",
+                text: '$scoreRW',
                 style: TextStyle(
                   fontSize: size.width / 10,
                   fontWeight: FontWeight.w600,
                 ),
               ),
               TextSpan(
-                text: "\tR&W",
+                text: '\tR&W',
                 style: TextStyle(
                   fontSize: size.width / 16,
                 ),
@@ -206,9 +206,9 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
         ),
         child: Column(
           children: [
-            buildProgressBar(context, "Before", 500),
+            buildProgressBar(context, 'Before', 500),
             SizedBox(height: size.height / 40),
-            buildProgressBar(context, "Now", scoreMath + scoreRW),
+            buildProgressBar(context, 'Now', scoreMath + scoreRW),
           ],
         ),
       ),
@@ -278,7 +278,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                 ),
               );
             },
-            child: buildWeakPoint(Icons.sentiment_very_satisfied, "Great"),
+            child: buildWeakPoint(Icons.sentiment_very_satisfied, 'Great'),
           ),
           GestureDetector(
             onTap: () {
@@ -297,7 +297,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
                 ),
               );
             },
-            child: buildWeakPoint(Icons.person_rounded, "Weak"),
+            child: buildWeakPoint(Icons.person_rounded, 'Weak'),
           ),
         ],
       ),

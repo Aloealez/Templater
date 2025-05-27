@@ -31,7 +31,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
       double minScore = 69;
       for (var subcategory in SatsQuestionSubcategories.typesList) {
         List<String> savedScores = prefs.getStringList(
-              "${subcategory}_scores",
+              '${subcategory}_scores',
             ) ??
             [];
         double lastScore =
@@ -58,8 +58,8 @@ class _StartSatsMathState extends State<StartSatsMath> {
         context,
         MaterialPageRoute(
           builder: (context) => MathQuizModel(
-            "Exercise 1 - Math", // Title
-            "Math", // Exercise Name
+            'Exercise 1 - Math', // Title
+            'Math', // Exercise Name
             300, // Time in seconds
             page: Home(),
             onEnd: (Map<String, QuizQuestionData> questions,
@@ -69,17 +69,17 @@ class _StartSatsMathState extends State<StartSatsMath> {
                   for (String questionSubcategory
                       in SatsQuestionSubcategories.typesList)
                     questionSubcategory: prefs.getStringList(
-                          "scores_questions_$questionSubcategory",
+                          'scores_questions_$questionSubcategory',
                         ) ??
                         [],
                 };
 
                 List<String> savedProgressQuestionScores = prefs.getStringList(
-                      "scores_questionsLast",
+                      'scores_questionsLast',
                     ) ??
                     List<String>.generate(
                       SatsQuestionSubcategories.typesList.length,
-                      (index) => "-1",
+                      (index) => '-1',
                     );
 
                 for (int i = 0;
@@ -105,17 +105,17 @@ class _StartSatsMathState extends State<StartSatsMath> {
                       : savedProgressQuestionScores[i];
 
                   prefs.setStringList(
-                    "scores_questions_$questionSubcategory",
+                    'scores_questions_$questionSubcategory',
                     savedQuestionScores[questionSubcategory]!,
                   );
 
                   prefs.setStringList(
-                      "scores_questionsLast", savedProgressQuestionScores,);
+                      'scores_questionsLast', savedProgressQuestionScores,);
                 }
               });
             },
             description:
-                "The test will comprise of 10 Reading and Writing Questions.",
+                'The test will comprise of 10 Reading and Writing Questions.',
             exerciseNumber: 0,
             questions: questions,
             oldName: questions.values.elementAt(0).subcategoryStr!,

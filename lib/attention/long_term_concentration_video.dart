@@ -44,7 +44,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
       enableKeyboard: false,
     ),
   );
-  late String videoId = "";
+  late String videoId = '';
   late int exerciseId = 0;
 
   late dynamic tasks;
@@ -59,9 +59,9 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
   void chooseVideo() async {
     final file = await rootBundle.loadString('assets/attention/long_term_concentration_test.yaml');
     final newExerciseId = Random().nextInt(13);
-    final newVideoId = loadYaml(file)["tests"][newExerciseId]["video_id"];
-    _controller.loadVideo("https://www.youtube.com/watch?v=$newVideoId");
-    tasks = loadYaml(file)["tests"][newExerciseId]["questions"];
+    final newVideoId = loadYaml(file)['tests'][newExerciseId]['video_id'];
+    _controller.loadVideo('https://www.youtube.com/watch?v=$newVideoId');
+    tasks = loadYaml(file)['tests'][newExerciseId]['questions'];
 
     setState(() {
       videoId = newVideoId;
@@ -78,7 +78,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
   void readData() async {
     try {
     } catch (e) {
-      print("Error: $e");
+      print('Error: $e');
     }
   }
 
@@ -88,7 +88,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
     return videoId.isEmpty
         ? const Center(child: CircularProgressIndicator())
         : Scaffold(
-            appBar: appBar(context, ""),
+            appBar: appBar(context, ''),
             body: Container(
               width: size.width * 0.9,
               height: size.height * 0.9,
@@ -105,7 +105,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                     children: <Widget>[
                       Center(
                         child: Text(
-                          "Attention",
+                          'Attention',
                           style: TextStyle(
                             fontSize: size.width / 8,
                           ),
@@ -113,7 +113,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                         ),
                       ),
                       Text(
-                        "Exercise 2 - Long Term Concentration",
+                        'Exercise 2 - Long Term Concentration',
                         style: TextStyle(
                           fontSize: size.width / 18,
                         ),
@@ -123,7 +123,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                         height: size.height / 25,
                       ),
                       Text(
-                        "Do the following listening exercise.",
+                        'Do the following listening exercise.',
                         style: TextStyle(fontSize: size.width / 26),
                       ),
                       SizedBox(
@@ -136,7 +136,7 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                         height: size.height / 50,
                       ),
                       Text(
-                        "While listening we recommend you make notes.",
+                        'While listening we recommend you make notes.',
                         style: TextStyle(fontSize: size.width / 26),
                       ),
                     ],
@@ -152,8 +152,8 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                       //   endingTest: widget.endingTest,
                       // ),
                       route: QuizModel(
-                        "Attention",
-                        "Attention",
+                        'Attention',
+                        'Attention',
                         120,
                         initialTest: widget.initialTest,
                         endingTest: widget.endingTest,
@@ -164,34 +164,34 @@ class _LongTermConcentrationVideo extends State<LongTermConcentrationVideo> {
                             : widget.endingTest
                             ? strongConcentrationBuilder(initialTest: false, endingTest: true)
                             : strongConcentrationBuilder(initialTest: false, endingTest: false),
-                        description: "Exercise 2 - Long Term Concentration",
-                        oldName: "long_term_concentration",
+                        description: 'Exercise 2 - Long Term Concentration',
+                        oldName: 'long_term_concentration',
                         exerciseNumber: 2,
-                        exerciseString: "LongTermConcentrationVideo",
+                        exerciseString: 'LongTermConcentrationVideo',
                         questions: {
                           for (int i = 0; i < 10; ++i)
-                            "$i": () {
+                            '$i': () {
                               Map<String, String> answers = {};
                               answers = {
-                                "A": tasks[i]["answers"][0].toString(),
-                                "B": tasks[i]["answers"][1].toString(),
-                                if (tasks[i]["answers"].length >= 3) "C": tasks[i]["answers"][2].toString(),
-                                if (tasks[i]["answers"].length >= 4) "D": tasks[i]["answers"][3].toString(),
+                                'A': tasks[i]['answers'][0].toString(),
+                                'B': tasks[i]['answers'][1].toString(),
+                                if (tasks[i]['answers'].length >= 3) 'C': tasks[i]['answers'][2].toString(),
+                                if (tasks[i]['answers'].length >= 4) 'D': tasks[i]['answers'][3].toString(),
                               };
                               Map<String, bool> correct = {
-                                "A": tasks[i]["correct_answer"] == 0,
-                                "B": tasks[i]["correct_answer"] == 1,
-                                "C": tasks[i]["correct_answer"] == 2,
-                                "D": tasks[i]["correct_answer"] == 3,
+                                'A': tasks[i]['correct_answer'] == 0,
+                                'B': tasks[i]['correct_answer'] == 1,
+                                'C': tasks[i]['correct_answer'] == 2,
+                                'D': tasks[i]['correct_answer'] == 3,
                               };
                               return QuizQuestionData(
                                 answers,
                                 correct,
                                 {
-                                  "A": 1,
-                                  "B": 1,
-                                  "C": 1,
-                                  "D": 1,
+                                  'A': 1,
+                                  'B': 1,
+                                  'C': 1,
+                                  'D': 1,
                                 },
                                 question: "${tasks[i]["question"]}",
                               );

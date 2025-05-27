@@ -41,7 +41,7 @@ SfLinearGauge scoreAxis(
         value: yourScore,
         offset: 30,
         position: LinearElementPosition.outside,
-        child: const Text("Your\nScore"),
+        child: const Text('Your\nScore'),
       ),
       LinearWidgetPointer(
         value: yourScore,
@@ -59,7 +59,7 @@ SfLinearGauge scoreAxis(
         value: meanScore,
         offset: 30,
         position: LinearElementPosition.outside,
-        child: const Text("Mean\nScore"),
+        child: const Text('Mean\nScore'),
       ),
     ],
     maximum: maximum,

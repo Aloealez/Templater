@@ -12,8 +12,8 @@ FutureBuilder vocabularyBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String level = prefs.getString("level") ?? "cpe";
-      return await convertToRandomQuestions("vocabulary", level, 10);
+      String level = prefs.getString('level') ?? 'cpe';
+      return await convertToRandomQuestions('vocabulary', level, 10);
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {
@@ -21,10 +21,10 @@ FutureBuilder vocabularyBuilder(
           child: CircularProgressIndicator(),
         );
       }
-      print("questions: ${snapshot.connectionState} ${snapshot.data}");
+      print('questions: ${snapshot.connectionState} ${snapshot.data}');
       return QuizModel(
-        "Vocabulary",
-        "Vocabulary",
+        'Vocabulary',
+        'Vocabulary',
         79,
         answerLayout : QuizModelAnswerLayout.list,
         initialTest: initialTest,
@@ -33,10 +33,10 @@ FutureBuilder vocabularyBuilder(
         initMaxScore: 0,
         singleTextQuestion: true,
         page: Home(),
-        description: "Vocabulary",
-        oldName: "vocabulary",
+        description: 'Vocabulary',
+        oldName: 'vocabulary',
         exerciseNumber: 0,
-        exerciseString: "Vocabulary",
+        exerciseString: 'Vocabulary',
         questions: snapshot.data!,
       );
     },

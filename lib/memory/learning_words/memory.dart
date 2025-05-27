@@ -23,7 +23,7 @@ class _Memory extends State<Memory> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 10,
@@ -34,7 +34,7 @@ class _Memory extends State<Memory> {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "Memory",
+                'Memory',
                 style: TextStyle(fontSize: 0.06 * size.height),
                 textAlign: TextAlign.center,
               ),
@@ -44,13 +44,13 @@ class _Memory extends State<Memory> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Exercise 1 - Learning",
+                  'Exercise 1 - Learning',
                   style: TextStyle(fontSize: 0.025 * size.height),
                   textAlign: TextAlign.start,
                 ),
                 SizedBox(height: 0.02 * size.height),
                 Text(
-                  "In this exercises you will be given 5 minutes to learn as many words as you can. When you are ready to start, click CONTINUE.",
+                  'In this exercises you will be given 5 minutes to learn as many words as you can. When you are ready to start, click CONTINUE.',
                   style: TextStyle(fontSize: 0.02 * size.height),
                   textAlign: TextAlign.start,
                 ),

@@ -27,7 +27,7 @@ class BookDescriptionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.symmetric(
           horizontal: size.width / 10,
@@ -72,14 +72,14 @@ class BookDescriptionPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Reviews",
+                                  'Reviews',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                                 Text(
-                                  "$audienceReview/5",
+                                  '$audienceReview/5',
                                   style: const TextStyle(fontSize: 18),
                                 ),
                               ],
@@ -96,7 +96,7 @@ class BookDescriptionPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       const Text(
-                                        "Genre",
+                                        'Genre',
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w600,
@@ -119,7 +119,7 @@ class BookDescriptionPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Time",
+                                  'Time',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,

@@ -215,7 +215,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
   double score = 0;
   String? selectedOption;
   int currentQuestionIndex = 0;
-  String currentQuestionId = "";
+  String currentQuestionId = '';
   late Timer _timer;
   late int _time;
   Map<String, String> answers = {};
@@ -228,7 +228,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
     _time = widget.time;
     currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
     selectedOption =
-        widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
+        widget.answerLayout == QuizModelAnswerLayout.textInput ? '' : null;
 
     super.initState();
     for (var questionId in widget.questions.keys) {
@@ -352,7 +352,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
         left: size.width * 0.035,
       ),
       child: Text(
-        "$answerLetter.",
+        '$answerLetter.',
         style: TextStyle(
           color: Theme.of(context).colorScheme.onSurface,
           fontSize:
@@ -429,7 +429,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
         title: (widget.htmlFormat != -1 &&
                 widget.htmlFormat <= currentQuestionIndex)
             ? HtmlAsTextSpan(
-                "${widget.questions[questionId]?.answers[answerLetter]}",
+                '${widget.questions[questionId]?.answers[answerLetter]}',
                 fontSize: textScaleFactor(
                       widget.questions[questionId]!.question.length,
                     ) *
@@ -506,7 +506,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             Padding(
               padding: EdgeInsets.only(left: size.width / 11),
               child: Text(
-                widget.title.replaceAll("{}", "${questionIndex + 1}"),
+                widget.title.replaceAll('{}', '${questionIndex + 1}'),
                 style: TextStyle(fontSize: 0.023 * size.height),
                 textAlign: TextAlign.start,
               ),
@@ -540,7 +540,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             // ),
             // const SizedBox(width: 10.0),
             Text(
-              "${_time.toString()}s",
+              '${_time.toString()}s',
               style: TextStyle(fontSize: size.width / 20),
               textAlign: TextAlign.start,
             ),
@@ -573,7 +573,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             laTeXCode: Text(
               widget.questions[questionId]!.question
                   .replaceAll('\n', '\\n')
-                  .replaceAll(r'\n\n', "\\n"),
+                  .replaceAll(r'\n\n', '\\n'),
               softWrap: true,
               style: TextStyle(
                 fontSize: textScaleFactor(
@@ -729,7 +729,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
@@ -738,7 +738,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
               Random().nextDouble() * 2 - 1,
             ),
             child: Text(
-              "WS",
+              'WS',
               style: TextStyle(
                 fontSize: size.width / 279,
                 color: Colors.white.withOpacity(0.3),
@@ -777,7 +777,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                     text: 'Continue',
                     width: size.width,
                     requirement: widget.requireAnswer
-                        ? (selectedOption != null && selectedOption != "")
+                        ? (selectedOption != null && selectedOption != '')
                         : widget.answerLayout == QuizModelAnswerLayout.list ||
                                 widget.answerLayout ==
                                     QuizModelAnswerLayout.boxes

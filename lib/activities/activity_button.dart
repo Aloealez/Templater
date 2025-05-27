@@ -35,8 +35,8 @@ class ActivityButton extends StatelessWidget {
         this.title = false,
         this.star = false,
         this.forceStar = false,
-        this.exerciseName = "",
-        this.skill = "",
+        this.exerciseName = '',
+        this.skill = '',
         this.plan = const [],
         super.key,
       });
@@ -149,7 +149,7 @@ class ActivityButton extends StatelessWidget {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            text2 == ""
+                            text2 == ''
                                 ? const SizedBox(width: 0, height: 0)
                                 : Text(
                               text2,

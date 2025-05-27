@@ -33,7 +33,7 @@ class _Faces extends State<Faces> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           width: size.width * 0.9,
@@ -50,7 +50,7 @@ class _Faces extends State<Faces> {
                 children: <Widget>[
                   Center(
                     child: Text(
-                      "Memory",
+                      'Memory',
                       style: TextStyle(
                         fontSize: size.width / 12,
                       ),
@@ -62,7 +62,7 @@ class _Faces extends State<Faces> {
                   ),
                   Center(
                     child: Text(
-                      "Exercise 1 - Faces memory ",
+                      'Exercise 1 - Faces memory ',
                       style: TextStyle(fontSize: size.width / 20),
                     ),
                   ),
@@ -73,7 +73,7 @@ class _Faces extends State<Faces> {
               ),
               Center(
                 child: Text(
-                  "Have you seen this face before?",
+                  'Have you seen this face before?',
                   style: TextStyle(
                     fontSize: size.width / 20,
                     fontWeight: FontWeight.w600,
@@ -149,9 +149,9 @@ class _Faces extends State<Faces> {
                           }
                         });
                       },
-                      heroTag: "yesButton", // Assign a unique tag
+                      heroTag: 'yesButton', // Assign a unique tag
                       child: const Text(
-                        "Yes",
+                        'Yes',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
@@ -189,9 +189,9 @@ class _Faces extends State<Faces> {
                           }
                         });
                       },
-                      heroTag: "noButton", // Assign a unique tag
+                      heroTag: 'noButton', // Assign a unique tag
                       child: const Text(
-                        "No",
+                        'No',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,

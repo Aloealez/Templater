@@ -145,7 +145,7 @@ class _Settings extends State<Settings> {
               SizedBox(height: 0.1 * size.height),
               Center(
                 child: Text(
-                  "Settings",
+                  'Settings',
                   style: TextStyle(
                     fontSize: size.width / 8,
                   ),
@@ -155,18 +155,18 @@ class _Settings extends State<Settings> {
               SizedBox(height: 0.05 * size.height),
               Column(
                 children: [
-                  element(context, const TermsOfService(), "Terms of Use", 0),
+                  element(context, const TermsOfService(), 'Terms of Use', 0),
                   SizedBox(height: size.height * 0.03),
-                  element(context, const Contact(), "Contact Us", 1),
+                  element(context, const Contact(), 'Contact Us', 1),
                   SizedBox(height: size.height * 0.03),
-                  element(context, null, "Reset The App", 2),
+                  element(context, null, 'Reset The App', 2),
                   SizedBox(height: size.height * 0.03),
-                  element(context, const SizedBox(), "Our Website", 4),
+                  element(context, const SizedBox(), 'Our Website', 4),
                   SizedBox(height: size.height * 0.03),
                   element(
                     context,
                     null,
-                    "Customize Colors",
+                    'Customize Colors',
                     6,
                     onTap: () {
                       Navigator.push(

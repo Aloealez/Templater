@@ -28,11 +28,11 @@ import 'builders/strong_concentration_builder.dart';
 import 'builders/vocabulary_builder.dart';
 
 var memoryBaseList = [
-  [Memory, "Memory", 10],
-  [WorkingMemory, "WorkingMemory", 5],
-  [MemoryGame1, "MemoryGame1", 5],
-  [Faces, "Faces", 5],
-  [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
+  [Memory, 'Memory', 10],
+  [WorkingMemory, 'WorkingMemory', 5],
+  [MemoryGame1, 'MemoryGame1', 5],
+  [Faces, 'Faces', 5],
+  [LongTermConcentrationVideo, 'LongTermConcentrationVideo', 10],
 ];
 
 var memoryAllList = [
@@ -56,12 +56,12 @@ var memoryAllList = [
 ];
 
 var attentionBaseList = [
-  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
-  [ShortTermConcentration, "ShortTermConcentration", 5],
-  [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
-  [Memory, "Memory", 10],
-  [MemoryGame1, "MemoryGame1", 5],
-  [FindTheNumber, "FindTheNumber", 5],
+  [strongConcentrationBuilder, 'StrongConcentrationDesc', 5],
+  [ShortTermConcentration, 'ShortTermConcentration', 5],
+  [LongTermConcentrationVideo, 'LongTermConcentrationVideo', 10],
+  [Memory, 'Memory', 10],
+  [MemoryGame1, 'MemoryGame1', 5],
+  [FindTheNumber, 'FindTheNumber', 5],
 ];
 
 var attentionAllList = [
@@ -85,21 +85,21 @@ var attentionAllList = [
 ];
 
 var linguisticBaseList = [
-  [Memory, "Memory", 10],
-  [PoemsInfo, "PoemsInfo", 5],
-  [ReadingComprehension, "ReadingComprehension", 10],
-  [ListeningComprehensionVideo, "ListeningComprehensionVideo", 10],
-  [0, "SpellingMistakes", 5],
+  [Memory, 'Memory', 10],
+  [PoemsInfo, 'PoemsInfo', 5],
+  [ReadingComprehension, 'ReadingComprehension', 10],
+  [ListeningComprehensionVideo, 'ListeningComprehensionVideo', 10],
+  [0, 'SpellingMistakes', 5],
   // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
-  [correctAWordBuilder, "CorrectAWord", 5],
-  [grammarMcqBuilder, "Grammar", 5],
-  [0, "SpellingMistakes", 5],
+  [correctAWordBuilder, 'CorrectAWord', 5],
+  [grammarMcqBuilder, 'Grammar', 5],
+  [0, 'SpellingMistakes', 5],
   // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
-  [vocabularyBuilder, "Vocabulary", 5],
-  [idiomsBuilder, "Idioms", 5],
-  [const Scrabble(iteration: 1, allPoints: 0), "Scrabble", 5],
-  [const Hangman(), "Hangman", 5],
-  [const Wordly(), "Wordly", 5],
+  [vocabularyBuilder, 'Vocabulary', 5],
+  [idiomsBuilder, 'Idioms', 5],
+  [const Scrabble(iteration: 1, allPoints: 0), 'Scrabble', 5],
+  [const Hangman(), 'Hangman', 5],
+  [const Wordly(), 'Wordly', 5],
 ];
 
 var linguisticAllList = [
@@ -129,12 +129,12 @@ var linguisticAllList = [
 ];
 
 var logicalBaseList = [
-  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
-  [const Riddles(), "Riddles", 10],
-  [riddleOfTheDayBuilder, "RiddleOfTheDay", 3],
-  [const Game2048(), "Game2048", 5],
-  [const SudokuGame(), "SudokuGame", 10],
-  [const InvestingMenu(), "InvestingMenu", 15],
+  [strongConcentrationBuilder, 'StrongConcentrationDesc', 5],
+  [const Riddles(), 'Riddles', 10],
+  [riddleOfTheDayBuilder, 'RiddleOfTheDay', 3],
+  [const Game2048(), 'Game2048', 5],
+  [const SudokuGame(), 'SudokuGame', 10],
+  [const InvestingMenu(), 'InvestingMenu', 15],
 ];
 
 var logicalAllList = [
@@ -157,13 +157,13 @@ var logicalAllList = [
 ];
 
 var gamesBaseList = [
-  [const Scrabble(iteration: 1, allPoints: 0), "Scrabble", 5],
-  [const Hangman(), "Hangman", 5],
-  [const Wordly(), "Wordly", 5],
-  [const Game2048(), "Game2048", 5],
-  [const SudokuGame(), "SudokuGame", 5],
-  [const FindTheNumber(), "FindTheNumber", 5],
-  [MemoryGame1, "MemoryGame1", 5],
+  [const Scrabble(iteration: 1, allPoints: 0), 'Scrabble', 5],
+  [const Hangman(), 'Hangman', 5],
+  [const Wordly(), 'Wordly', 5],
+  [const Game2048(), 'Game2048', 5],
+  [const SudokuGame(), 'SudokuGame', 5],
+  [const FindTheNumber(), 'FindTheNumber', 5],
+  [MemoryGame1, 'MemoryGame1', 5],
 ];
 
 var gamesAllList = [
@@ -183,34 +183,34 @@ var gamesAllList = [
 ];
 
 var satsBaseList = [
-  [Memory, "Memory", 10],
-  [WorkingMemory, "WorkingMemory", 5],
-  [MemoryGame1, "MemoryGame1", 5],
-  [Faces, "Faces", 5],
-  [LongTermConcentrationVideo, "LongTermConcentrationVideo", 10],
-  [strongConcentrationBuilder, "StrongConcentrationDesc", 5],
-  [ShortTermConcentration, "ShortTermConcentration", 5],
-  [FindTheNumber, "FindTheNumber", 5],
-  [PoemsInfo, "PoemsInfo", 5],
-  [ReadingComprehension, "ReadingComprehension", 10],
-  [ListeningComprehensionVideo, "ListeningComprehensionVideo", 10],
-  [0, "SpellingMistakes", 5],
+  [Memory, 'Memory', 10],
+  [WorkingMemory, 'WorkingMemory', 5],
+  [MemoryGame1, 'MemoryGame1', 5],
+  [Faces, 'Faces', 5],
+  [LongTermConcentrationVideo, 'LongTermConcentrationVideo', 10],
+  [strongConcentrationBuilder, 'StrongConcentrationDesc', 5],
+  [ShortTermConcentration, 'ShortTermConcentration', 5],
+  [FindTheNumber, 'FindTheNumber', 5],
+  [PoemsInfo, 'PoemsInfo', 5],
+  [ReadingComprehension, 'ReadingComprehension', 10],
+  [ListeningComprehensionVideo, 'ListeningComprehensionVideo', 10],
+  [0, 'SpellingMistakes', 5],
   // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
-  [correctAWordBuilder, "CorrectAWord", 5],
-  [grammarMcqBuilder, "Grammar", 5],
-  [0, "SpellingMistakes", 5],
+  [correctAWordBuilder, 'CorrectAWord', 5],
+  [grammarMcqBuilder, 'Grammar', 5],
+  [0, 'SpellingMistakes', 5],
   // [const SpellingMistakes(exerciseId: 0), "SpellingMistakes", 5],
-  [vocabularyBuilder, "Vocabulary", 5],
-  [idiomsBuilder, "Idioms", 5],
-  [const Scrabble(iteration: 1, allPoints: 0), "Scrabble", 5],
-  [const Hangman(), "Hangman", 5],
-  [const Wordly(), "Wordly", 5],
-  [const Riddles(), "Riddles", 10],
-  [riddleOfTheDayBuilder, "RiddleOfTheDay", 3],
-  [const Game2048(), "Game2048", 5],
-  [const SudokuGame(), "SudokuGame", 10],
-  [const InvestingMenu(), "InvestingMenu", 15],
-  [const FindTheNumber(), "FindTheNumber", 5],
+  [vocabularyBuilder, 'Vocabulary', 5],
+  [idiomsBuilder, 'Idioms', 5],
+  [const Scrabble(iteration: 1, allPoints: 0), 'Scrabble', 5],
+  [const Hangman(), 'Hangman', 5],
+  [const Wordly(), 'Wordly', 5],
+  [const Riddles(), 'Riddles', 10],
+  [riddleOfTheDayBuilder, 'RiddleOfTheDay', 3],
+  [const Game2048(), 'Game2048', 5],
+  [const SudokuGame(), 'SudokuGame', 10],
+  [const InvestingMenu(), 'InvestingMenu', 15],
+  [const FindTheNumber(), 'FindTheNumber', 5],
 ];
 
 var satsAllList = [

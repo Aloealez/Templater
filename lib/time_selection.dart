@@ -42,9 +42,9 @@ class _TimeSelectionState extends State<TimeSelection> {
         testRouteBuilder: MemoryWords.routeBuilder,
         initialTest: true,
         testActivitiesDescription:
-            "The test will comprise two activities. In the first, we will assess your learning ability, and in the second, your working memory.",
+            'The test will comprise two activities. In the first, we will assess your learning ability, and in the second, your working memory.',
         testScoreDescription:
-            "We will use your score to personalize your app experience.",
+            'We will use your score to personalize your app experience.',
       );
     } else if (skill == 'attention') {
       route = LevelTest(
@@ -52,9 +52,9 @@ class _TimeSelectionState extends State<TimeSelection> {
         testRouteBuilder: ShortTermConcentration.routeBuilder,
         initialTest: true,
         testActivitiesDescription:
-            "The test will comprise two activities, during which we will assess your short-term and long-term concentration abilities.",
+            'The test will comprise two activities, during which we will assess your short-term and long-term concentration abilities.',
         testScoreDescription:
-            "We will use your score to personalize your app experience.",
+            'We will use your score to personalize your app experience.',
       );
     } else if (skill == 'linguistic') {
       route = LevelTest(
@@ -64,9 +64,9 @@ class _TimeSelectionState extends State<TimeSelection> {
         testRouteBuilder: ListeningComprehensionVideo.routeBuilder,
         initialTest: true,
         testActivitiesDescription:
-            "The test will comprise two activities, through which we will assess your listening and reading levels in English.",
+            'The test will comprise two activities, through which we will assess your listening and reading levels in English.',
         testScoreDescription:
-            "We will use your score to personalize your app experience.",
+            'We will use your score to personalize your app experience.',
       );
     } else if (skill == 'logical') {
       route = LevelTest(
@@ -74,9 +74,9 @@ class _TimeSelectionState extends State<TimeSelection> {
         testRouteBuilder: RiddlesTest.routeBuilder,
         initialTest: true,
         testActivitiesDescription:
-            "In this you will have 8 minutes to solve as many riddles as you can.",
+            'In this you will have 8 minutes to solve as many riddles as you can.',
         testScoreDescription:
-            "We will use your score to personalize your app experience.",
+            'We will use your score to personalize your app experience.',
       );
     } else if (skill == 'games') {
       route = Home();
@@ -139,7 +139,7 @@ class _TimeSelectionState extends State<TimeSelection> {
               },
               child: Center(
                 child: Text(
-                  "$time minutes",
+                  '$time minutes',
                   style: TextStyle(
                     fontSize: size.width / 16,
                     color: Colors.white,
@@ -161,7 +161,7 @@ class _TimeSelectionState extends State<TimeSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
@@ -174,7 +174,7 @@ class _TimeSelectionState extends State<TimeSelection> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text(
-                "Pick Your Daily",
+                'Pick Your Daily',
                 style: TextStyle(
                   fontSize: size.width / 12,
                   fontWeight: FontWeight.w600,
@@ -182,7 +182,7 @@ class _TimeSelectionState extends State<TimeSelection> {
                 textAlign: TextAlign.center,
               ),
               Text(
-                "Practice Time",
+                'Practice Time',
                 style: TextStyle(
                   fontSize: size.width / 12,
                   fontWeight: FontWeight.w600,

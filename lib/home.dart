@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:brainace_pro/quiz/question_bank.dart';
 
 import './widgets/port_home_tasks_widget.dart';
 import 'widgets/port_home_tasks_widget_config.dart';
@@ -26,12 +25,12 @@ class Home extends StatefulWidget {
 
 class _Home extends State<Home> with RouteAware {
   SharedPreferences? prefs;
-  String skill = "";
-  String skillSats = "";
+  String skill = '';
+  String skillSats = '';
   int trainingTime = 0;
   var rng = Random();
   List<String> plan = [];
-  List<String> basePlanTicked = ["0", "0", "0", "0"];
+  List<String> basePlanTicked = ['0', '0', '0', '0'];
   int day = 1;
   List<bool> wellBeingTicked = [false, false, false, false];
   int points = 0;
@@ -55,7 +54,7 @@ class _Home extends State<Home> with RouteAware {
   @override
   void didPopNext() {
     super.didPopNext();
-    print("Home widget is now the top widget");
+    print('Home widget is now the top widget');
 
     NotificationService.scheduleAllNotifications();
 
@@ -74,11 +73,10 @@ class _Home extends State<Home> with RouteAware {
   Future<void> calcDay() async {
     DateTime firstDay = DateTime.now();
     DateTime today = DateTime.now();
-    checkScores();
     prefs ??= await SharedPreferences.getInstance();
     auria = prefs?.getDouble('auria') ?? 0.0;
     if (prefs == null) {
-      throw Exception("Failed to initialize SharedPreferences");
+      throw Exception('Failed to initialize SharedPreferences');
     }
     if (prefs?.getString('beginning_date') != null) {
       firstDay = DateTime.parse(prefs!.getString('beginning_date')!);
@@ -97,7 +95,7 @@ class _Home extends State<Home> with RouteAware {
 
     bool allDoneToday = plan.isNotEmpty &&
         plan.every(
-          (task) => prefs?.getString("${task}TickedDay$currentDay") == "1",
+          (task) => prefs?.getString('${task}TickedDay$currentDay') == '1',
         );
 
     setState(() {
@@ -106,12 +104,12 @@ class _Home extends State<Home> with RouteAware {
 
     if (currentDay > 1) {
       List<String>? yesterdayPlan =
-          prefs?.getStringList("basePlanDay${currentDay - 1}");
+          prefs?.getStringList('basePlanDay${currentDay - 1}');
       bool allDoneYesterday = yesterdayPlan != null &&
           yesterdayPlan.isNotEmpty &&
           yesterdayPlan.every(
             (task) =>
-                prefs?.getString("${task}TickedDay${currentDay - 1}") == "1",
+                prefs?.getString('${task}TickedDay${currentDay - 1}') == '1',
           );
 
       if (!allDoneYesterday && !allDoneToday) {
@@ -159,22 +157,22 @@ class _Home extends State<Home> with RouteAware {
   Future<void> setWellBeingTicked() async {
     prefs = await SharedPreferences.getInstance();
 
-    List<String> newWellBeingTickedString = ["0", "0", "0", "0"];
+    List<String> newWellBeingTickedString = ['0', '0', '0', '0'];
 
     for (int i = 0; i < wellBeingTicked.length; i++) {
-      newWellBeingTickedString[i] = (wellBeingTicked[i] ? "1" : "0");
+      newWellBeingTickedString[i] = (wellBeingTicked[i] ? '1' : '0');
     }
-    prefs?.setStringList("wellBeingTickedDay$day", newWellBeingTickedString);
+    prefs?.setStringList('wellBeingTickedDay$day', newWellBeingTickedString);
   }
 
   var skillBaseList = [
-    [Faces, "Faces", 10],
+    [Faces, 'Faces', 10],
   ];
 
   Future<void> getSkill() async {
     prefs = await SharedPreferences.getInstance();
-    String newSkill = prefs?.getString('skill') ?? "";
-    String newSkillSats = prefs?.getString('skill_sats') ?? "";
+    String newSkill = prefs?.getString('skill') ?? '';
+    String newSkillSats = prefs?.getString('skill_sats') ?? '';
     int newTrainingTime = prefs?.getInt('training_time') ?? 0;
 
     setState(() {
@@ -186,7 +184,7 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> createPlan() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newPlan = prefs?.getStringList("basePlanDay$day") ?? [];
+    List<String> newPlan = prefs?.getStringList('basePlanDay$day') ?? [];
 
     // If we've already stored the plan for today, just use it
     if (newPlan.isNotEmpty) {
@@ -199,15 +197,15 @@ class _Home extends State<Home> with RouteAware {
     // Otherwise, generate a new plan
     int currentTime = 0;
     skillBaseList = List.from(skillBaseLists[skill]!);
-    print("SKill base $skill list: $skillBaseList");
+    print('SKill base $skill list: $skillBaseList');
 
     // Example for "sats" skill
-    if (skill == "sats") {
+    if (skill == 'sats') {
       List<String> questionSubcategoriesPointsStr =
-          prefs?.getStringList("scores_questionsLast") ??
+          prefs?.getStringList('scores_questionsLast') ??
               List<String>.generate(
                 SatsQuestionSubcategories.typesList.length,
-                (index) => "-1",
+                (index) => '-1',
               );
       List<String> questionsSubcategories;
       questionsSubcategories = List.from(SatsQuestionSubcategories.typesList);
@@ -229,14 +227,14 @@ class _Home extends State<Home> with RouteAware {
       });
 
       int timePerSatQuestion = 5;
-      if (skillSats == "both") {
+      if (skillSats == 'both') {
         int currentMathTime = 0;
         int currentRWTime = 0;
         for (int i = 0;
             i < questionsSubcategories.length && currentTime < trainingTime;
             i++) {
           print(
-            "comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},",
+            'comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},',
           );
           if (SatsQuestionSubcategories.typesList
               .sublist(10)
@@ -260,13 +258,13 @@ class _Home extends State<Home> with RouteAware {
         for (int i = 0;
             i < questionsSubcategories.length && currentTime < trainingTime;
             i++) {
-          if (skillSats == "math" &&
+          if (skillSats == 'math' &&
               SatsQuestionSubcategories.typesList
                   .sublist(10)
                   .contains(questionsSubcategories[i])) {
             newPlan.add(questionsSubcategories[i]);
             currentTime += timePerSatQuestion;
-          } else if (skillSats == "rw" &&
+          } else if (skillSats == 'rw' &&
               SatsQuestionSubcategories.typesList
                   .sublist(0, 10)
                   .contains(questionsSubcategories[i])) {
@@ -297,12 +295,12 @@ class _Home extends State<Home> with RouteAware {
     while (currentTime < trainingTime && skillBaseList.isNotEmpty) {
       int el = rng.nextInt(skillBaseList.length);
       newPlan.add(skillBaseList[el].toList()[1].toString());
-      print("Added to plan: ${skillBaseList[el].toList()[1]}");
+      print('Added to plan: ${skillBaseList[el].toList()[1]}');
       currentTime += skillBaseList[el].toList()[2] as int;
       skillBaseList.removeAt(el);
     }
 
-    prefs?.setStringList("basePlanDay$day", newPlan);
+    prefs?.setStringList('basePlanDay$day', newPlan);
     setState(() {
       plan = newPlan;
     });
@@ -310,12 +308,12 @@ class _Home extends State<Home> with RouteAware {
 
   Future<void> getBasePlanTicked() async {
     prefs = await SharedPreferences.getInstance();
-    List<String> newBasePlanTicked = List.filled(plan.length, "0");
+    List<String> newBasePlanTicked = List.filled(plan.length, '0');
     int newPoints = 0;
 
     for (int i = 0; i < plan.length; ++i) {
-      newBasePlanTicked[i] = prefs?.getString("${plan[i]}TickedDay$day") ?? "0";
-      if (newBasePlanTicked[i] == "1") {
+      newBasePlanTicked[i] = prefs?.getString('${plan[i]}TickedDay$day') ?? '0';
+      if (newBasePlanTicked[i] == '1') {
         newPoints += sectionTimes[plan[i]]!;
       }
     }
@@ -353,7 +351,7 @@ class _Home extends State<Home> with RouteAware {
   Future<void> updateEmoji() async {
     prefs = await SharedPreferences.getInstance();
 
-    List<String> emojis = ["😄", "😁", "😊", "😀", "🥰", "🙂"];
+    List<String> emojis = ['😄', '😁', '😊', '😀', '🥰', '🙂'];
     DateTime currentDate = DateTime.now();
 
     String? lastUpdateDateStr = prefs?.getString('last_emoji_update_date');
@@ -376,7 +374,7 @@ class _Home extends State<Home> with RouteAware {
 
   Future<String> getEmoji() async {
     prefs = await SharedPreferences.getInstance();
-    return prefs?.getString('wellbeing_emoji') ?? "😄";
+    return prefs?.getString('wellbeing_emoji') ?? '😄';
   }
 
   @override
@@ -404,19 +402,19 @@ class _Home extends State<Home> with RouteAware {
   Future<void> updatePoints() async {
     calcValues();
     prefs = await SharedPreferences.getInstance();
-    print("Setting points: $points");
-    prefs?.setInt("pointsDay$day", points);
+    print('Setting points: $points');
+    prefs?.setInt('pointsDay$day', points);
   }
 
   Widget createBaseProgram(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
-      if ((skillSats == "both" &&
+      if ((skillSats == 'both' &&
               SatsQuestionSubcategories.typesList
                   .sublist(0, 10)
                   .contains(plan[i])) ||
-          skillSats != "both") {
+          skillSats != 'both') {
         minutes += sectionTimes[plan[i]]!;
       }
     }
@@ -427,11 +425,11 @@ class _Home extends State<Home> with RouteAware {
           return Column(
             children: [
               for (int i = 0; i < plan.length; i++)
-                if ((skillSats == "both" &&
+                if ((skillSats == 'both' &&
                         SatsQuestionSubcategories.typesList
                             .sublist(0, 10)
                             .contains(plan[i])) ||
-                    skillSats != "both")
+                    skillSats != 'both')
                   Column(
                     children: [
                       InkWell(
@@ -464,7 +462,7 @@ class _Home extends State<Home> with RouteAware {
                               SizedBox(
                                 width: size.width / 10,
                                 child: Icon(
-                                  (basePlanTicked[i] == "1")
+                                  (basePlanTicked[i] == '1')
                                       ? Icons.square_rounded
                                       : Icons.crop_square_outlined,
                                   size: size.width / 14.7,
@@ -474,12 +472,12 @@ class _Home extends State<Home> with RouteAware {
                               SizedBox(width: size.width / 35),
                               Flexible(
                                 child: Text(
-                                  "${sectionNames[plan[i]]}",
+                                  '${sectionNames[plan[i]]}',
                                   style: TextStyle(
-                                    decoration: (basePlanTicked[i] == "1")
+                                    decoration: (basePlanTicked[i] == '1')
                                         ? TextDecoration.lineThrough
                                         : TextDecoration.none,
-                                    color: (basePlanTicked[i] == "1")
+                                    color: (basePlanTicked[i] == '1')
                                         ? Colors.grey
                                         : Colors.white,
                                     fontSize: size.width / 22,
@@ -508,10 +506,10 @@ class _Home extends State<Home> with RouteAware {
       );
     }
 
-    HomeWidget.saveWidgetData("plan_title", "BeSmart List");
-    HomeWidget.saveWidgetData("plan_tasks", widgetItems.join(','));
+    HomeWidget.saveWidgetData('plan_title', 'BeSmart List');
+    HomeWidget.saveWidgetData('plan_tasks', widgetItems.join(','));
     HomeWidget.updateWidget(
-      androidName: "TodoHomeScreenWidget",
+      androidName: 'TodoHomeScreenWidget',
     );
 
     // For larger devices
@@ -529,7 +527,7 @@ class _Home extends State<Home> with RouteAware {
     Size size = MediaQuery.of(context).size;
     int minutes = 0;
     for (int i = 0; i < plan.length; ++i) {
-      if (skillSats == "both" &&
+      if (skillSats == 'both' &&
           SatsQuestionSubcategories.typesList.sublist(10).contains(plan[i])) {
         minutes += sectionTimes[plan[i]]!;
       }
@@ -537,16 +535,16 @@ class _Home extends State<Home> with RouteAware {
     return FutureBuilder<String>(
       future: getEmoji(),
       builder: (context, snapshot) {
-        String emoji = snapshot.data ?? "😄";
+        String emoji = snapshot.data ?? '😄';
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             () {
-              if (skillSats == "both") {
+              if (skillSats == 'both') {
                 return Column(
                   children: [
                     for (int i = 0; i < plan.length; i++)
-                      if (skillSats == "both" &&
+                      if (skillSats == 'both' &&
                           SatsQuestionSubcategories.typesList
                               .sublist(10)
                               .contains(plan[i]))
@@ -582,7 +580,7 @@ class _Home extends State<Home> with RouteAware {
                                     SizedBox(
                                       width: size.width / 10,
                                       child: Icon(
-                                        (basePlanTicked[i] == "1")
+                                        (basePlanTicked[i] == '1')
                                             ? Icons.square_rounded
                                             : Icons.crop_square_rounded,
                                         size: size.width / 14.7,
@@ -592,12 +590,12 @@ class _Home extends State<Home> with RouteAware {
                                     SizedBox(width: size.width / 40),
                                     Flexible(
                                       child: Text(
-                                        "${sectionNames[plan[i]]}",
+                                        '${sectionNames[plan[i]]}',
                                         style: TextStyle(
-                                          decoration: (basePlanTicked[i] == "1")
+                                          decoration: (basePlanTicked[i] == '1')
                                               ? TextDecoration.lineThrough
                                               : TextDecoration.none,
-                                          color: (basePlanTicked[i] == "1")
+                                          color: (basePlanTicked[i] == '1')
                                               ? Colors.grey
                                               : Colors.white,
                                           fontSize: size.width / 22,
@@ -658,7 +656,7 @@ class _Home extends State<Home> with RouteAware {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    print("Home widget is now the top widget");
+    print('Home widget is now the top widget');
     updatePoints();
 
     DateTime now = DateTime.now();
@@ -682,7 +680,7 @@ class _Home extends State<Home> with RouteAware {
               children: [
                 Center(
                   child: Text(
-                    "Plan For Today",
+                    'Plan For Today',
                     style: TextStyle(
                       fontSize: size.width / 9,
                       letterSpacing: 1.5,
@@ -724,7 +722,7 @@ class _Home extends State<Home> with RouteAware {
                               TextSpan(
                                 text: streakDays > 0
                                     ? "$streakDays ${streakDays == 1 ? "Day" : "Days"}"
-                                    : "0 days",
+                                    : '0 days',
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,
@@ -761,7 +759,7 @@ class _Home extends State<Home> with RouteAware {
                               ),
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
-                                text: "$procent%",
+                                text: '$procent%',
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,
@@ -796,7 +794,7 @@ class _Home extends State<Home> with RouteAware {
                               ),
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
-                                text: "${auria.floor()} Auria",
+                                text: '${auria.floor()} Auria',
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,

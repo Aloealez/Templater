@@ -286,7 +286,7 @@ class _Scrabble extends State<Scrabble> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
@@ -298,7 +298,7 @@ class _Scrabble extends State<Scrabble> {
               Align(
                 alignment: Alignment(0, -0.95),
                 child: Text(
-                  "Scrabble",
+                  'Scrabble',
                   style: TextStyle(
                     fontSize: 0.048 * size.height,
                     fontWeight: FontWeight.w600,
@@ -334,7 +334,7 @@ class _Scrabble extends State<Scrabble> {
                       style: TextStyle(fontSize: 0.02 * size.height),
                     ),
                     Text(
-                      "This Word is worth: $roundPoints points.",
+                      'This Word is worth: $roundPoints points.',
                       style: TextStyle(fontSize: 0.02 * size.height),
                     ),
                     SizedBox(height: 0.07 * size.height),

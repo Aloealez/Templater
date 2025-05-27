@@ -7,10 +7,8 @@ import 'colors.dart';
 import '/score_n_progress/progress_screen.dart';
 import 'info_2048.dart';
 
-/// Kierunki ruchu
 enum Direction { up, down, left, right }
 
-/// Klasa opisująca pojedynczy kafelek
 class TileData {
   int id;
   int value;
@@ -45,24 +43,18 @@ class Game2048 extends StatefulWidget {
 }
 
 class _Game2048State extends State<Game2048> {
-  /// Używane do zapisu i odczytu najlepszego wyniku
   late SharedPreferences prefs;
 
-  /// Rozmiar planszy (4×4)
   final int boardSize = 4;
 
-  /// Lista kafelków w grze
   List<TileData> _tileData = [];
 
-  /// Poprzedni stan gry (do cofnięcia – undo)
   List<TileData> _prevTileData = [];
 
-  /// Liczniki punktów
   int score = 0;
   int prevScore = 0;
   int bestScore = 0;
 
-  /// ID kafelka – unikatowy identyfikator (rosnący)
   int _tileIdCounter = 0;
 
   @override
@@ -73,28 +65,24 @@ class _Game2048State extends State<Game2048> {
     restartGame();
   }
 
-  /// Pobranie instancji SharedPreferences i wczytanie bestScore
   Future<void> initMemory() async {
     prefs = await SharedPreferences.getInstance();
     setState(() {
-      bestScore = prefs.getInt("bestScore") ?? 0;
+      bestScore = prefs.getInt('bestScore') ?? 0;
     });
   }
 
-  /// Resetowanie flag merged (przed każdym ruchem)
   void resetMergedFlags() {
     for (var tile in _tileData) {
       tile.merged = false;
     }
   }
 
-  /// Zapamiętanie stanu (lista kafelków + score) przed ruchem
   void saveState() {
     _prevTileData = _tileData.map((t) => t.copy()).toList();
     prevScore = score;
   }
 
-  /// Cofnięcie ruchu
   void undoMove() {
     setState(() {
       _tileData = _prevTileData.map((t) => t.copy()).toList();
@@ -102,7 +90,6 @@ class _Game2048State extends State<Game2048> {
     });
   }
 
-  /// Restart gry – czyści stan, generuje 2 kafelki początkowe, zachowuje bestScore
   void restartGame() {
     setState(() {
       _tileData.clear();
@@ -114,7 +101,6 @@ class _Game2048State extends State<Game2048> {
     });
   }
 
-  /// Funkcja wyświetlająca dialog końca gry
   void showGameOverDialog() {
     showDialog(
       context: context,
@@ -138,7 +124,7 @@ class _Game2048State extends State<Game2048> {
                 children: [
                   SizedBox(height: size.height / 25),
                   Text(
-                    "You lose!",
+                    'You lose!',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: size.width / 15,
@@ -203,8 +189,6 @@ class _Game2048State extends State<Game2048> {
     );
   }
 
-  /// Sprawdza, czy nie ma już wolnych pól *i* żadnych możliwych ruchów
-  /// Jeśli tak – koniec gry
   bool noAvailableMoves() {
     // Czy plansza jest pełna (brak wolnych pól)?
     for (int row = 0; row < boardSize; row++) {
@@ -455,7 +439,7 @@ class _Game2048State extends State<Game2048> {
     if (moved) {
       setState(() {
         bestScore = max(bestScore, score);
-        prefs.setInt("bestScore", bestScore);
+        prefs.setInt('bestScore', bestScore);
       });
       Future.delayed(const Duration(milliseconds: 300), () {
         generateNewTile();
@@ -474,7 +458,7 @@ class _Game2048State extends State<Game2048> {
     final tileSize = (boardSizePx / 4) - 12 - (12 / 4);
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
@@ -491,7 +475,7 @@ class _Game2048State extends State<Game2048> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        "2048",
+                        '2048',
                         style: TextStyle(
                           fontSize: size.width / 8,
                           fontWeight: FontWeight.w600,
@@ -525,7 +509,7 @@ class _Game2048State extends State<Game2048> {
                             ),
                             child: Center(
                               child: Text(
-                                "SCORE\n$score",
+                                'SCORE\n$score',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
@@ -560,7 +544,7 @@ class _Game2048State extends State<Game2048> {
                             ),
                             child: Center(
                               child: Text(
-                                "BEST\n$bestScore",
+                                'BEST\n$bestScore',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
@@ -730,7 +714,7 @@ class _Game2048State extends State<Game2048> {
                             ),
                             child: Center(
                               child: Text(
-                                tile.value == 0 ? "" : "${tile.value}",
+                                tile.value == 0 ? '' : '${tile.value}',
                                 style: TextStyle(
                                   fontSize: tileSize / 3,
                                   fontWeight: FontWeight.w600,

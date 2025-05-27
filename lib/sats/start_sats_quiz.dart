@@ -40,7 +40,7 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
       double minScore = 69;
       for (var subcategory in SatsQuestionSubcategories.typesList) {
         List<String> savedScores = prefs.getStringList(
-              "${subcategory}_scores",
+              '${subcategory}_scores',
             ) ??
             <String>[];
         [];
@@ -67,8 +67,8 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
           context,
           MaterialPageRoute(
             builder: (context) => MathQuizModel(
-              "Exercise",
-              "R&W",
+              'Exercise',
+              'R&W',
               300,
               htmlFormat: 0,
               page: Home(),
@@ -81,16 +81,16 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                     for (String questionSubcategory
                         in SatsQuestionSubcategories.typesList)
                       questionSubcategory: prefs.getStringList(
-                            "scores_questions_$questionSubcategory",
+                            'scores_questions_$questionSubcategory',
                           ) ??
                           [],
                   };
 
                   List<String> savedProgressQuestionScores =
-                      prefs.getStringList("scores_questionsLast") ??
+                      prefs.getStringList('scores_questionsLast') ??
                           List<String>.generate(
                             SatsQuestionSubcategories.typesList.length,
-                            (index) => "-1",
+                            (index) => '-1',
                           );
 
                   for (int i = 0;
@@ -116,17 +116,17 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                         : savedProgressQuestionScores[i];
 
                     prefs.setStringList(
-                      "scores_questions_$questionSubcategory",
+                      'scores_questions_$questionSubcategory',
                       savedQuestionScores[questionSubcategory]!,
                     );
 
                     prefs.setStringList(
-                        "scores_questionsLast", savedProgressQuestionScores,);
+                        'scores_questionsLast', savedProgressQuestionScores,);
                   }
                 });
               },
               description:
-                  "The test will comprise of 10 Reading and Writing Questions.",
+                  'The test will comprise of 10 Reading and Writing Questions.',
               exerciseNumber: 0,
               questions: () {
                 Map<String, QuizQuestionData> newQuestions = {};
@@ -134,22 +134,22 @@ class _StartSatsQuiz extends State<StartSatsQuiz> {
                   String i = questions.keys.elementAt(j);
                   newQuestions[i] = QuizQuestionData(
                     {
-                      "A": questions[i]!.A,
-                      "B": questions[i]!.B,
-                      "C": questions[i]!.C,
-                      "D": questions[i]!.D,
+                      'A': questions[i]!.A,
+                      'B': questions[i]!.B,
+                      'C': questions[i]!.C,
+                      'D': questions[i]!.D,
                     },
                     {
-                      "A": questions[i]!.correct == "A",
-                      "B": questions[i]!.correct == "B",
-                      "C": questions[i]!.correct == "C",
-                      "D": questions[i]!.correct == "D",
+                      'A': questions[i]!.correct == 'A',
+                      'B': questions[i]!.correct == 'B',
+                      'C': questions[i]!.correct == 'C',
+                      'D': questions[i]!.correct == 'D',
                     },
                     {
-                      "A": questions[i]!.difficulty.getScore(),
-                      "B": questions[i]!.difficulty.getScore(),
-                      "C": questions[i]!.difficulty.getScore(),
-                      "D": questions[i]!.difficulty.getScore(),
+                      'A': questions[i]!.difficulty.getScore(),
+                      'B': questions[i]!.difficulty.getScore(),
+                      'C': questions[i]!.difficulty.getScore(),
+                      'D': questions[i]!.difficulty.getScore(),
                     },
                     introduction: questions[i]?.introduction,
                     text: questions[i]?.text,

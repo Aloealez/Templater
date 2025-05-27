@@ -111,40 +111,40 @@ class MeditationVideos extends StatefulWidget {
 class _MeditationVideos extends State<MeditationVideos> {
   List<List<String>> videoAssets = [
     [
-      "https://www.youtube.com/watch?v=jMPO6-Sxtuw",
-      "https://www.youtube.com/watch?v=AnOuNPoEwOk",
-      "https://www.youtube.com/watch?v=IQeV5bdXqgU",
-      "https://www.youtube.com/watch?v=n3Y95_w9qvA",
+      'https://www.youtube.com/watch?v=jMPO6-Sxtuw',
+      'https://www.youtube.com/watch?v=AnOuNPoEwOk',
+      'https://www.youtube.com/watch?v=IQeV5bdXqgU',
+      'https://www.youtube.com/watch?v=n3Y95_w9qvA',
     ],
     [
-      "https://www.youtube.com/watch?v=1iIuE4QCIC0",
-      "https://www.youtube.com/watch?v=W-KltSK4MQE",
-      "https://www.youtube.com/watch?v=qpRDLXn8ZEI",
-      "https://www.youtube.com/watch?v=5gCy3b3swT4",
+      'https://www.youtube.com/watch?v=1iIuE4QCIC0',
+      'https://www.youtube.com/watch?v=W-KltSK4MQE',
+      'https://www.youtube.com/watch?v=qpRDLXn8ZEI',
+      'https://www.youtube.com/watch?v=5gCy3b3swT4',
     ],
     [
-      "https://www.youtube.com/watch?v=AtFx_qEkqV4",
-      "https://www.youtube.com/watch?v=BDXL5usQlvw",
-      "https://www.youtube.com/watch?v=GBT0Te_78CU",
-      "https://www.youtube.com/watch?v=PRRi2vAxUQA",
+      'https://www.youtube.com/watch?v=AtFx_qEkqV4',
+      'https://www.youtube.com/watch?v=BDXL5usQlvw',
+      'https://www.youtube.com/watch?v=GBT0Te_78CU',
+      'https://www.youtube.com/watch?v=PRRi2vAxUQA',
     ],
     [
-      "https://www.youtube.com/watch?v=Gsepsq5FWfE",
-      "https://www.youtube.com/watch?v=lkl2QH196vs",
-      "https://www.youtube.com/watch?v=h1wvvFvL9oM",
-      "https://www.youtube.com/watch?v=a3gmfSGNSB8",
+      'https://www.youtube.com/watch?v=Gsepsq5FWfE',
+      'https://www.youtube.com/watch?v=lkl2QH196vs',
+      'https://www.youtube.com/watch?v=h1wvvFvL9oM',
+      'https://www.youtube.com/watch?v=a3gmfSGNSB8',
     ],
     [
-      "https://www.youtube.com/watch?v=vcagtZoDcmk",
-      "https://www.youtube.com/watch?v=WHhccZZlc74",
-      "https://www.youtube.com/watch?v=MhjhkmhFs4o",
-      "https://www.youtube.com/watch?v=31RXIywS5-w",
+      'https://www.youtube.com/watch?v=vcagtZoDcmk',
+      'https://www.youtube.com/watch?v=WHhccZZlc74',
+      'https://www.youtube.com/watch?v=MhjhkmhFs4o',
+      'https://www.youtube.com/watch?v=31RXIywS5-w',
     ],
     [
-      "https://www.youtube.com/watch?v=1Ctj3kubpNw",
-      "https://www.youtube.com/watch?v=fe-VZd1sFTU",
-      "https://www.youtube.com/watch?v=fe-VZd1sFTU",
-      "https://www.youtube.com/watch?v=Yi6oaWtKzBk",
+      'https://www.youtube.com/watch?v=1Ctj3kubpNw',
+      'https://www.youtube.com/watch?v=fe-VZd1sFTU',
+      'https://www.youtube.com/watch?v=fe-VZd1sFTU',
+      'https://www.youtube.com/watch?v=Yi6oaWtKzBk',
     ]
   ];
 
@@ -153,7 +153,7 @@ class _MeditationVideos extends State<MeditationVideos> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -170,7 +170,7 @@ class _MeditationVideos extends State<MeditationVideos> {
                 children: [
                   Center(
                     child: Text(
-                      "Meditation",
+                      'Meditation',
                       style: TextStyle(
                         fontSize: size.width / 8,
                       ),

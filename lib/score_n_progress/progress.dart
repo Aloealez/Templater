@@ -205,7 +205,7 @@ class _Progress extends State<Progress> {
               children: <Widget>[
                 Center(
                   child: Text(
-                    "Consistency",
+                    'Consistency',
                     style: TextStyle(
                       fontSize: size.width / 9,
                       fontWeight: FontWeight.w600,
@@ -215,7 +215,7 @@ class _Progress extends State<Progress> {
                 ),
                 Center(
                   child: Text(
-                    "100% means you did\nall of your tasks 🙂",
+                    '100% means you did\nall of your tasks 🙂',
                     style: TextStyle(
                       fontSize: size.width / 23,
                     ),

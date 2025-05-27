@@ -14,10 +14,10 @@ FutureBuilder grammarMcqBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String level = prefs.getString("level") ?? "cpe";
-      Map<String, QuizQuestionData> questions = await convertToRandomQuestions("grammar", level, 10);
+      String level = prefs.getString('level') ?? 'cpe';
+      Map<String, QuizQuestionData> questions = await convertToRandomQuestions('grammar', level, 10);
       for (String key in questions.keys) {
-        questions[key]?.question += "\n\nWhich choice completes the text, so that it conforms to the rules of standard written English?";
+        questions[key]?.question += '\n\nWhich choice completes the text, so that it conforms to the rules of standard written English?';
       }
       return questions;
     }(),
@@ -28,8 +28,8 @@ FutureBuilder grammarMcqBuilder(
         );
       }
       return QuizModel(
-        "Grammar",
-        "Grammar",
+        'Grammar',
+        'Grammar',
         60,
         initialTest: initialTest,
         endingTest: endingTest,
@@ -37,10 +37,10 @@ FutureBuilder grammarMcqBuilder(
         initScore: 0,
         initMaxScore: 0,
         page: Home(),
-        description: "Grammar MCQ Test",
-        oldName: "grammar_mcq",
+        description: 'Grammar MCQ Test',
+        oldName: 'grammar_mcq',
         exerciseNumber: 0,
-        exerciseString: "Grammar",
+        exerciseString: 'Grammar',
         questions: snapshot.data!,
       );
     },

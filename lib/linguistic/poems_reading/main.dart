@@ -28,7 +28,7 @@ class _Poems extends State<Poems> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -43,7 +43,7 @@ class _Poems extends State<Poems> {
               children: <Widget>[
                 Center(
                   child: Text(
-                    poems[poemIndex]["title"].toString(),
+                    poems[poemIndex]['title'].toString(),
                     style: TextStyle(
                       fontSize: 0.07 * size.width,
                       fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class _Poems extends State<Poems> {
                 ),
                 createDivider(context),
                 Text(
-                  poems[poemIndex]["content"].toString(),
+                  poems[poemIndex]['content'].toString(),
                   style: TextStyle(
                       fontSize: size.height / 60, height: size.height / 500,),
                   textAlign: TextAlign.justify,

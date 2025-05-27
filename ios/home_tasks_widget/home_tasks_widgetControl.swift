@@ -1,9 +1,3 @@
-////
-////  home_tasks_widgetControl.swift
-////  home_tasks_widget
-////
-////  Created by Weronika Sioda on 17/10/2024.
-////
 //
 //import AppIntents
 //import SwiftUI

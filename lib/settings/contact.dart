@@ -14,7 +14,7 @@ class _Contact extends State<Contact> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 7,
@@ -25,7 +25,7 @@ class _Contact extends State<Contact> {
           children: [
             Center(
               child: Text(
-                "Contact Us",
+                'Contact Us',
                 style: TextStyle(
                   fontSize: size.width / 10,
                 ),

@@ -77,7 +77,7 @@ class _TitlePageState extends State<TitlePage>
                     end: Alignment.bottomRight,
                   ).createShader(bounds),
                   child: Text(
-                    "Welcome",
+                    'Welcome',
                     style: TextStyle(
                       fontFamily: 'OleoScriptSwashCaps',
                       fontSize: 60.0,
@@ -90,7 +90,7 @@ class _TitlePageState extends State<TitlePage>
               Align(
                 alignment: Alignment(0, -0.05),
                 child: Text(
-                  "Prepare for your SAT exam the smart way!",
+                  'Prepare for your SAT exam the smart way!',
                   style: TextStyle(
                     fontFamily: 'Open',
                     fontSize: 20.0,
@@ -107,7 +107,7 @@ class _TitlePageState extends State<TitlePage>
                   width: size.width * 0.72,
                   child: firstTime
                       ? StartButton(
-                    text: "Choose A Program",
+                    text: 'Choose A Program',
                     width: size.width,
                     tooltip: 'Smart Decision!',
                   )
@@ -139,7 +139,7 @@ class _TitlePageState extends State<TitlePage>
                     style: Theme.of(context).textTheme.bodyMedium,
                     children: <TextSpan>[
                       TextSpan(
-                        text: "By using our App, you agree to our\n",
+                        text: 'By using our App, you agree to our\n',
                         style: TextStyle(
                           fontSize: 0.015 * size.height,
                           color: Theme.of(context)
@@ -149,7 +149,7 @@ class _TitlePageState extends State<TitlePage>
                         ),
                       ),
                       TextSpan(
-                        text: "Terms of Service",
+                        text: 'Terms of Service',
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 0.015 * size.height,

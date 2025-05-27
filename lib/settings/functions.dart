@@ -63,7 +63,7 @@ Future<void> popUp(
                   width: size.width / 8,
                   child: Center(
                     child: Text(
-                      "No",
+                      'No',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
@@ -86,7 +86,7 @@ Future<void> popUp(
                   width: size.width / 8,
                   child: Center(
                     child: Text(
-                      "Yes",
+                      'Yes',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
@@ -155,7 +155,7 @@ Future<void> restartAppButton(BuildContext context) async {
                   width: size.width / 8,
                   child: Center(
                     child: Text(
-                      "No",
+                      'No',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
@@ -189,7 +189,7 @@ Future<void> restartAppButton(BuildContext context) async {
                   width: size.width / 8,
                   child: Center(
                     child: Text(
-                      "Yes",
+                      'Yes',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: size.width / 25,
@@ -229,7 +229,7 @@ class Site {
   static void launch() {
     launchUrl(
       Uri.parse(
-        "https://braintrain-by-wk.shorthandstories.com/thebraintrainapp/index.html#article",
+        'https://braintrain-by-wk.shorthandstories.com/thebraintrainapp/index.html#article',
       ),
     );
   }

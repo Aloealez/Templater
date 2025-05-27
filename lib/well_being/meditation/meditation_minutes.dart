@@ -126,7 +126,7 @@ class _MeditationMinutes extends State<MeditationMinutes> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -143,7 +143,7 @@ class _MeditationMinutes extends State<MeditationMinutes> {
                 children: [
                   Center(
                     child: Text(
-                      "Meditation",
+                      'Meditation',
                       style: TextStyle(
                         fontSize: size.width / 8,
                       ),

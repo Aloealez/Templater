@@ -23,8 +23,8 @@ class LevelInstruction extends StatefulWidget {
     this.nextRouteBuilder,
     required this.testRouteBuilder,
     this.testTimeDescription,
-    this.testActivitiesDescription = "The test will comprise of 10 Reading and Writing Questions.",
-    this.testScoreDescription = "We will use your score to personalize your app experience.",
+    this.testActivitiesDescription = 'The test will comprise of 10 Reading and Writing Questions.',
+    this.testScoreDescription = 'We will use your score to personalize your app experience.',
     this.initialTest = false,
     this.endingTest = false,
     this.exercise,
@@ -39,11 +39,11 @@ class _LevelInstructionState extends State<LevelInstruction> {
   late SharedPreferences prefs;
   late Map<String, SatsQuestion> questions;
 
-  final String category = "rw";
+  final String category = 'rw';
 
   Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
-    print("Initialized shared preferences.");
+    print('Initialized shared preferences.');
   }
 
   @override
@@ -60,7 +60,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
         Navigator.push(context, MaterialPageRoute(builder: (context) => widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest)));
       }
     } catch (e) {
-      print("Error navigating to next route: $e");
+      print('Error navigating to next route: $e');
       // Optionally show a dialog or snackbar to inform the user
     }
   }
@@ -70,7 +70,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
