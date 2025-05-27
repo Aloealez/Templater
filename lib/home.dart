@@ -722,8 +722,9 @@ class _Home extends State<Home> with RouteAware {
                               ),
                               WidgetSpan(child: SizedBox(width: 5)),
                               TextSpan(
-                                text:
-                                    "$streakDays ${streakDays == 1 ? "Day" : "Days"}",
+                                text: streakDays > 0
+                                    ? "$streakDays ${streakDays == 1 ? "Day" : "Days"}"
+                                    : "0 days",
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,

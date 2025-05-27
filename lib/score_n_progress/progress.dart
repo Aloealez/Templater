@@ -51,9 +51,10 @@ class _Progress extends State<Progress> {
 
   Future<void> getValues() async {
     prefs = await SharedPreferences.getInstance();
+    int safeTrainingTime = trainingTime == 0 ? 1 : trainingTime;
     for (int i = 1; i <= 30; ++i) {
       int points = prefs.getInt('pointsDay$i') ?? 0;
-      int procent = int.parse((points / trainingTime * 100).toStringAsFixed(0));
+      int procent = int.parse((points / safeTrainingTime * 100).toStringAsFixed(0));
 
       setState(() {
         value[i] = min(procent.toDouble(), 100);
