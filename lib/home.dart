@@ -54,7 +54,6 @@ class _Home extends State<Home> with RouteAware {
   @override
   void didPopNext() {
     super.didPopNext();
-    print('Home widget is now the top widget');
 
     NotificationService.scheduleAllNotifications();
 
@@ -197,7 +196,6 @@ class _Home extends State<Home> with RouteAware {
     // Otherwise, generate a new plan
     int currentTime = 0;
     skillBaseList = List.from(skillBaseLists[skill]!);
-    print('SKill base $skill list: $skillBaseList');
 
     // Example for "sats" skill
     if (skill == 'sats') {
@@ -233,9 +231,6 @@ class _Home extends State<Home> with RouteAware {
         for (int i = 0;
             i < questionsSubcategories.length && currentTime < trainingTime;
             i++) {
-          print(
-            'comp: ${SatsQuestionSubcategories.typesList.sublist(10)}  ${questionsSubcategories[i]},',
-          );
           if (SatsQuestionSubcategories.typesList
               .sublist(10)
               .contains(questionsSubcategories[i])) {
@@ -295,7 +290,6 @@ class _Home extends State<Home> with RouteAware {
     while (currentTime < trainingTime && skillBaseList.isNotEmpty) {
       int el = rng.nextInt(skillBaseList.length);
       newPlan.add(skillBaseList[el].toList()[1].toString());
-      print('Added to plan: ${skillBaseList[el].toList()[1]}');
       currentTime += skillBaseList[el].toList()[2] as int;
       skillBaseList.removeAt(el);
     }
@@ -402,7 +396,6 @@ class _Home extends State<Home> with RouteAware {
   Future<void> updatePoints() async {
     calcValues();
     prefs = await SharedPreferences.getInstance();
-    print('Setting points: $points');
     prefs?.setInt('pointsDay$day', points);
   }
 
@@ -656,7 +649,6 @@ class _Home extends State<Home> with RouteAware {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    print('Home widget is now the top widget');
     updatePoints();
 
     DateTime now = DateTime.now();
