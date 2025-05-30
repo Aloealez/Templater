@@ -8,17 +8,17 @@
   "correct": {
     "A": false,
     "B": false,
-    "C": true,
-    "D": false
+    "C": false,
+    "D": true
   },
   "score": {
     "A": 0.0,
     "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
+    "C": 0.0,
+    "D": 1.0
   },
   "task": "What value of $ p $ is the solution of the equation below?\n\n$ 4(p + 3) + 2(p - 7) = 3p $",
-  "explanation": "Choice C is correct.\n\nOne way to solve the equation $ 4(p + 3) + 2(p - 7) = 3p $ is to first distribute the terms outside the parentheses:\n\n$ 4p + 12 + 2p - 14 = 3p $\n\nNext, combine like terms on the left side:\n$ (4p + 2p) + (12 - 14) = 3p $\n$ 6p + -2 = 3p $\n\nSubtracting 6p from both sides:\n$ -2 = 3p - 6p $\n$ -2 = (-3)p $\n\nDividing both sides by -3:\n$ p = \\frac{-2}{-3} $\n\nThus, the correct value of $ p $ is **$ \\frac{2}{3} $**, which is equivalent to **0.67**.",
+  "explanation": "Choice D is correct.\n\nOne way to solve the equation $ 4(p + 3) + 2(p - 7) = 3p $ is to first distribute the terms outside the parentheses:\n\n$ 4p + 12 + 2p - 14 = 3p $\n\nNext, combine like terms on the left side:\n$ (4p + 2p) + (12 - 14) = 3p $\n$ 6p + -2 = 3p $\n\nSubtracting 6p from both sides:\n$ -2 = 3p - 6p $\n$ -2 = (-3)p $\n\nDividing both sides by -3:\n$ p = \\frac{-2}{3} $\n\nThus, the correct value of $ p $ is **$ \\frac{-2}{3} $**, which is equivalent to **-0.67**.",
   "category": "Algebraic Equations",
   "difficulty": "Medium",
   "table": null,
