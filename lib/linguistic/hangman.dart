@@ -59,11 +59,12 @@ class _Hangman extends State<Hangman> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProgressScreen(
-                    userScore: mistakes.toDouble(),
+                    userScore: blocked.map((row) => row.where((e) => e).length).reduce((a, b) => a + b).toDouble(),
                     maxScore: 8,
                     txt: 'You got',
                     pointAlternative: 'letters wrong',
                     exercise: 'Hangman',
+                    showAsPercentage: false,
                   ),
                 ),
               );

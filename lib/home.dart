@@ -114,6 +114,8 @@ class _Home extends State<Home> with RouteAware {
       if (!allDoneYesterday && !allDoneToday) {
       } else if (!allDoneYesterday && allDoneToday) {
         if (lastUpdateDay != currentDay) {
+          await prefs?.setInt('streak_days', 1);
+          currentStreak = 1;
           await prefs?.setInt('last_update_day', currentDay);
         }
       } else if (allDoneYesterday) {

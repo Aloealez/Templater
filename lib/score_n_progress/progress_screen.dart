@@ -17,6 +17,7 @@ class ProgressScreen extends StatefulWidget {
   final String txt;
   final String pointAlternative;
   final String exercise;
+  final bool showAsPercentage;
 
   const ProgressScreen({
     super.key,
@@ -26,7 +27,7 @@ class ProgressScreen extends StatefulWidget {
     required this.exercise,
     this.txt = 'You Received',
     this.pointAlternative = 'Points',
-    final bool showAsPercentage = false,
+    this.showAsPercentage = true,
   });
 
   @override
@@ -189,10 +190,7 @@ class _ProgressScreen extends State<ProgressScreen>
 
   @override
   Widget build(BuildContext context) {
-    print(
-        'widget.exercise: ${widget.exercise} widget.userScore: ${widget.userScore} maxScore: $lastMaxScore',);
     Size size = MediaQuery.of(context).size;
-    print('widget.userScore: ${widget.userScore}');
 
     DateTimeAxis xAxis = DateTimeAxis(
       isVisible: false,
@@ -261,7 +259,8 @@ class _ProgressScreen extends State<ProgressScreen>
                   SizedBox(
                     width: size.width / 1.75,
                     child: Text(
-                      'Your Accuracy Is Now Equal To ${lastMaxScore > 0 ? (lastUserScore * 100 / lastMaxScore).round() : 0}%',
+                      widget.showAsPercentage ? 'Your Accuracy Is Now Equal To ${lastMaxScore > 0 ? (lastUserScore * 100 / lastMaxScore).round() : 0}%' :
+                      'Your Accuracy Is Now Equal To ${lastUserScore.round()}',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: size.width / 18,
@@ -392,23 +391,23 @@ class _ProgressScreen extends State<ProgressScreen>
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return lastMaxScore > 0
+                                    return widget.showAsPercentage ? (lastMaxScore > 0
                                         ? '${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month'
-                                        : '0%\n$day.$month';
+                                        : '0%\n$day.$month') : "${data.score.round()}\n$day.$month";
                                   } else if (index == chartData.length - 1) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return '${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month';
+                                    return widget.showAsPercentage ? ('${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month') : "${data.score.round()}\n$day.$month";
                                   } else if (_tappedIndex == index) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return '${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month';
+                                    return widget.showAsPercentage ? ('${(data.score.round() / lastMaxScore * 100).round()}${widget.showAsPercentage}\n$day.$month') : "${data.score.round()}\n$day.$month";
                                   }
                                   return '';
                                 },
