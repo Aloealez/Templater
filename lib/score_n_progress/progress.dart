@@ -50,30 +50,39 @@ class _Progress extends State<Progress> {
   }
 
   Future<void> getValues() async {
-    prefs = await SharedPreferences.getInstance();
-    int safeTrainingTime = trainingTime == 0 ? 1 : trainingTime;
-    for (int i = 1; i <= 30; ++i) {
-      int points = prefs.getInt('pointsDay$i') ?? 0;
-      int procent = int.parse((points / safeTrainingTime * 100).toStringAsFixed(0));
+  prefs = await SharedPreferences.getInstance();
+  int safeTrainingTime = trainingTime == 0 ? 1 : trainingTime;
+  for (int i = 1; i <= 30; ++i) {
+    int points = prefs.getInt('pointsDay$i') ?? 0;
+    int procent = points > 0
+        ? int.parse((points / safeTrainingTime * 100).toStringAsFixed(0))
+        : 0;
 
-      setState(() {
+    setState(() {
+      if (points > 0) {
         value[i] = min(procent.toDouble(), 100);
         value2[i] = 100 - value[i];
-        List<CircularStackEntry> data = _generateChartData(i);
-        keys[i].currentState!.updateData(data);
-      });
-    }
+      } else {
+        value[i] = 0;      // Not filled
+        value2[i] = 100;   // Fully empty
+      }
+      List<CircularStackEntry> data = _generateChartData(i);
+      keys[i].currentState!.updateData(data);
+    });
   }
+}
 
   Future<void> getValues2() async {
-    prefs = await SharedPreferences.getInstance();
-    Future.delayed(const Duration(milliseconds: 500), () {
-      for (int i = 1; i <= 30; ++i) {
-        int points = prefs.getInt('pointsDay$i') ?? 0;
-        int procent =
-            int.parse((points / trainingTime * 100).toStringAsFixed(0));
+  prefs = await SharedPreferences.getInstance();
+  Future.delayed(const Duration(milliseconds: 500), () {
+    for (int i = 1; i <= 30; ++i) {
+      int points = prefs.getInt('pointsDay$i') ?? 0;
+      int procent = points > 0
+          ? int.parse((points / trainingTime * 100).toStringAsFixed(0))
+          : 0;
 
-        setState(() {
+      setState(() {
+        if (points > 0) {
           if (procent >= 200) {
             value[i] = 100;
             value2[i] = 0;
@@ -83,13 +92,18 @@ class _Progress extends State<Progress> {
             value2[i] = 100 - value[i];
             value3[i] = (procent > 100) ? procent % 100 : 0;
           }
+        } else {
+          value[i] = 0;
+          value2[i] = 100;
+          value3[i] = 0;
+        }
 
-          List<CircularStackEntry> data = _generateChartData(i);
-          keys[i].currentState!.updateData(data);
-        });
-      }
-    });
-  }
+        List<CircularStackEntry> data = _generateChartData(i);
+        keys[i].currentState!.updateData(data);
+      });
+    }
+  });
+}
 
   List<CircularStackEntry> _generateChartData(int dayNum) {
     Color? dialColor = Color(0xffAD2194);

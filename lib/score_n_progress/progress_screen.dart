@@ -149,9 +149,11 @@ class _ProgressScreen extends State<ProgressScreen>
     callHomeWidgetUpdate();
 
     if (newScores) {
-      setState(() {
-        chartData = newChartData;
-      });
+      if (mounted) {
+        setState(() {
+          chartData = newChartData;
+        });
+      }
     }
   }
 
@@ -400,7 +402,11 @@ class _ProgressScreen extends State<ProgressScreen>
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return widget.showAsPercentage ? ('${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month') : "${data.score.round()}\n$day.$month";
+                                    return widget.showAsPercentage
+                                        ? (lastMaxScore > 0
+                                            ? '${(data.score.round() / lastMaxScore * 100).round()}%\nNow\n$day.$month'
+                                            : '0%\nNow\n$day.$month')
+                                        : '${data.score.round()}\n$day.$month';
                                   } else if (_tappedIndex == index) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');

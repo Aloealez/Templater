@@ -191,17 +191,9 @@ class BasePlanData {
   }
 
   Future<void> readMemory() async {
-    await calcDay().then((_) {
-      if (day >= 30) {
-        // Navigator.pop(context);
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => const Finish(),
-        //   ),
-        // );
-      }
-    });
+    await calcDay();
+    points = 0;
+
     await getSkill();
     await getWellBeingTicked();
     await createPlan();
@@ -220,9 +212,12 @@ class BasePlanData {
   }
 
   Future<void> updatePoints() async {
-    prefs = await SharedPreferences.getInstance();
+  prefs = await SharedPreferences.getInstance();
+  if (points > 0) {
     prefs.setInt('pointsDay$day', points);
   }
+  // Do NOT remove the key if points == 0
+}
 
   // Widget createBaseProgram(
   //     BuildContext context,
