@@ -69,6 +69,7 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
   late YoutubePlayerController _controller;
   TextEditingController textController = TextEditingController();
   double score = 0;
+  int selectedScore = -1;
 
   int level = 0;
   int streak = 0;
@@ -197,44 +198,59 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                     height: size.height / 25,
                   ),
                   Text(
-                    'Write yout score BELOW.',
+                    'Select You\'r score.',
                     style: TextStyle(fontSize: size.width / 24),
                   ),
                   SizedBox(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 8,
-                      ),
-                      child: TextField(
-                        controller: textController,
-                        style: TextStyle(fontSize: size.width / 24),
-                        keyboardType: TextInputType.numberWithOptions(
-                          decimal: true,
-                        ),
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                          TextInputFormatter.withFunction((oldValue, newValue) {
-                            String text = newValue.text;
-                            if (text.isEmpty || (int.tryParse(text) != null && int.parse(text) >= 0 && int.parse(text) <= 3)) {
-                              score = text.isNotEmpty ? double.parse(text) : 0.0; // Ensure score is updated properly
-                              return newValue;
-                            }
-                            return oldValue; // Reject invalid inputs
-                          }),
-                        ],
-                        maxLines: 1,
-                        decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 0,
-                            horizontal: 12,
-                          ),
-                          border: OutlineInputBorder(
+                    height: size.height / 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(4, (index) {
+                      bool isSelected = selectedScore == index;
+                      return GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedScore = index;
+                            score = index.toDouble();
+                          });
+                        },
+                        child: AnimatedContainer(
+                          alignment: Alignment.center,
+                          height: size.height / 20,
+                          width: size.width / 7,
+                          duration: Duration(milliseconds: 200),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? Theme.of(context).colorScheme.primary
+                                : Colors.transparent,
                             borderRadius: BorderRadius.circular(20),
+                            border: isSelected
+                                ? null
+                                : Border.all(width: 2, color: Colors.white),
+                            boxShadow: isSelected
+                                ? [
+                                    BoxShadow(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary
+                                          .withOpacity(0.6),
+                                      blurRadius: 10,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ]
+                                : [],
+                          ),
+                          child: Text(
+                            index.toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
-                      ),
-                    ),
+                      );
+                    }),
                   ),
                 ],
               ),

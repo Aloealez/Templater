@@ -714,7 +714,7 @@ class _Home extends State<Home> with RouteAware {
                               TextSpan(
                                 text: streakDays > 0
                                     ? "${streakDays == 0 ? 1 : streakDays} ${streakDays == 1 || streakDays == 0 ? "Day" : "Days"}"
-                                    : "O days",
+                                    : 'O days',
                                 style: TextStyle(
                                   fontSize: size.width / 25,
                                   fontWeight: FontWeight.w600,
