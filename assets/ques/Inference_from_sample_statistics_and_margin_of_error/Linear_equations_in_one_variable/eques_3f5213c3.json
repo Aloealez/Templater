@@ -1,5 +1,5 @@
 {
-  "equation": "if $4x + 19 = 55$, what is the value of $x$",
+  "task": "if $4x + 19 = 55$, what is the value of $x$",
   "choices": {
     "A": 14,
     "B": 10,
