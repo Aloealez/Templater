@@ -71,6 +71,9 @@ class _MathActivitiesState extends State<MathActivities> {
     var formatter = DateFormat('E. dd MMM');
     String formattedDate = formatter.format(now);
 
+    var subcategories = SatsQuestionSubcategories.typesList.sublist(10);
+    subcategories.removeWhere((item) => item == "Two-variable_data_Models_and_scatterplots");
+
     return Scaffold(
       body: Container(
         margin: activitiesMargins(size),
@@ -123,7 +126,7 @@ class _MathActivitiesState extends State<MathActivities> {
                           ],
                         ),
                         SizedBox(height: 0.03 * size.height),
-                        for (String questionSubcategory in SatsQuestionSubcategories.typesList.sublist(10))
+                        for (String questionSubcategory in subcategories)
                           ActivityButton(
                             context,
                             img: 'activities/$questionSubcategory',
