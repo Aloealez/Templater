@@ -1,5 +1,5 @@
 {
-  "Task": "if $4x + 31 = 55$, what is the value of $x$",
+  "equation": "if $4x + 31 = 55$, what is the value of $x$",
   "choices": {
     "A": 7,
     "B": 5,

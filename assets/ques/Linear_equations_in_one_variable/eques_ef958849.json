@@ -1,5 +1,5 @@
 {
-  "Task": "If $2x = -4$, what is the value of 6x - 1?",
+  "equation": "If $2x = -4$, what is the value of 6x - 1?",
   "choices": {
     "A": -13,
     "B": -20,

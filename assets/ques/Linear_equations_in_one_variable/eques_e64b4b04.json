@@ -1,5 +1,5 @@
 {
-  "Task": "If $x - 2 = -6$, what is the value of 3x - 5?",
+  "equation": "If $x - 2 = -6$, what is the value of 3x - 5?",
   "choices": {
     "A": -17,
     "B": -24,

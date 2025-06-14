@@ -1,5 +1,5 @@
 {
-  "Task": "if $5x + 45 = 15$, what is the value of $x$",
+  "equation": "if $5x + 45 = 15$, what is the value of $x$",
   "choices": {
     "A": -9,
     "B": -1,

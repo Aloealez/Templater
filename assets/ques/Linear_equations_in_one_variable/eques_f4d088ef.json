@@ -1,5 +1,5 @@
 {
-  "Task": "if $4x + 26 = -10$, what is the value of $x$",
+  "equation": "if $4x + 26 = -10$, what is the value of $x$",
   "choices": {
     "A": -8,
     "B": -9,
