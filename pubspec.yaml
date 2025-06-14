@@ -41,6 +41,7 @@ dependencies:
       url: https://github.com/sur950/any_link_preview.git
   youtube_player_iframe: ^5.2.1
   path_provider: ">=2.1.5"
+  url_launcher: ">=6.3.1"
   geekyants_flutter_gauges: ">=1.0.4"
   liquid_swipe:
     git:
@@ -61,8 +62,8 @@ dependencies:
   syncfusion_flutter_charts:
   material_design_icons_flutter:
   linear_progress_bar:
-  url_launcher: ">=6.3.1"
   bulleted_list:
+  latext: ^0.5.0
   flutter_svg: ">=2.0.17"
   video_player: ">=2.9.2"
   flutter_html_as_text:
@@ -73,6 +74,7 @@ dependencies:
   flip_card:
     git:
       url: https://github.com/BrunoJurkovic/flip_card.git
+  smooth_page_indicator:
   sudoku_dart:
     git:
       url: https://github.com/einsitang/sudoku-dart.git
@@ -86,7 +88,6 @@ dependencies:
 #  flick_video_player:
 #    git:
 #      url: https://github.com/GeekyAnts/flick-video-player.git
-  smooth_page_indicator:
   widget_zoom: ^0.0.4
   audioplayers:
   flutter_markdown:
@@ -98,7 +99,6 @@ dependencies:
   animated_text_kit: ">=4.2.3"
   flutter_glow:
   page_transition: ">=2.2.1"
-  icon_decoration:
   home_widget:
   davinci:
     git:
@@ -110,9 +110,8 @@ dependencies:
   flutter_colorpicker: ">=1.1.0"
   permission_handler: ">=11.3.1"
   flutter_tex: ^5.0.5
-  latext: ^0.5.0
+  icon_decoration:
   simple_gradient_text: 1.3.0
-  location:
 
 dependency_overrides:
   webview_flutter_wkwebview: ^3.18.4
