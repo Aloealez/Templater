@@ -1,0 +1,43 @@
+{
+  "answers": {
+    "A": "$ x + 1 $",
+    "B": "$ 3x $",
+    "C": "$ 4x - 4 $",
+    "D": "$ 2x - 2 $"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "Some values of the linear function $ f $ are shown in the table below. Which of the following defines $ f $?",
+  "explanation": "The function $ f(x) $ is linear, so it has the form $ f(x) = mx + b $. The slope $ m $ represents the change in $ f(x) $ for each unit increase in $ x $. Using the values from the table, we calculate the slope: \n$ m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{5 - 3}{4 - 2} = 1 $. Next, we solve for $ b $ by substituting one of the given points, e.g., $ (2, 3) $, into the equation: \n$ 3 = 1 \times 2 + b $. Solving for $ b $, we get: \n$ b = 3 - (1 \times 2) = 1 $. Thus, the correct function is $ f(x) = x + 1 $.",
+  "category": "Linear Equations",
+  "difficulty": "Easy",
+  "table": [
+    [
+      "$x$",
+      "$f(x)$"
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "id": "46eaef31"
+}

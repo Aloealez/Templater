@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $(x, y)$:\n$$ -7x + 8y = -8\n $$$$ -3x -6y = 17\n $$",
+  "answers": {
+    "A": "(-4/3, -13/6)",
+    "B": "(-5/6, -13/6)",
+    "C": "(-13/6, -4/3)",
+    "D": "(-4/3, -5/3)"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "We solve the system using elimination or substitution. The determinant is computed as -7 * -6 - 8 * -3 = 66, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-4/3, -13/6)$.",
+  "category": "Systems of Equations - Solving for (x, y)",
+  "difficulty": "Medium",
+  "id": "f644b5b6"
+}

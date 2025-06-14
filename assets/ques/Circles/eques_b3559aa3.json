@@ -1,0 +1,19 @@
+{
+  "task": "The measure of angle $ R $ is $ \\frac{4}{3}\u03c0 $ radians. The measure of angle $ T $ is $ \\frac{5}{3}\u03c0 $ radians greater than the measure of angle $ R $. What is the measure of angle $ T $, in degrees?",
+  "answers": {
+    "A": "240",
+    "B": "540",
+    "C": "300",
+    "D": "1080"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The measure of angle $ R is \\frac{4}{3}\u03c0 $ radians, and angle $ T $ is $ \\frac{5}{3}\u03c0 $ radians greater. Thus, the measure of angle T is:\n\n$ \\frac{4}{3}\u03c0 + \\frac{5}{3}\u03c0 = \\frac{3}{1}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{3}{1}\u03c0 \u00d7 (180/\u03c0) = 540 $ degrees.\n\nThus, the correct answer is $ 540 $ degrees.",
+  "category": "Geometry - Radians and Degrees",
+  "difficulty": "Medium",
+  "id": "b3559aa3"
+}

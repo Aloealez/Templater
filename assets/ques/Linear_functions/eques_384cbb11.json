@@ -1,0 +1,13 @@
+{
+  "question": "The function $f$ is defined by $f(x) = 10x$. For what value of $x$ does $f(x) = 190$$?",
+  "choices": {
+    "A": 19,
+    "B": 24,
+    "C": 21,
+    "D": 22
+  },
+  "correct_answer": "A",
+  "difficulty": "Easy",
+  "explanation": "**Rationale**\n\nSubstituting $190$ for $f(x)$ in the function equation gives:\n$190 = 10x$.\n\nDividing both sides by 10 yields:\n$x = 19$.\n\nTherefore, the correct answer is **19**.",
+  "id": "384cbb11"
+}

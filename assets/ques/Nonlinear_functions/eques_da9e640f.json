@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 16 times its width. The function $y = (16w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square inches, and $y > 0$. Which of the following is the best interpretation of 16w in this context?",
+  "answers": {
+    "A": "The difference between the length and the width of the rectangle, in inches",
+    "B": "The length of the rectangle, in inches",
+    "C": "The width of the rectangle, in inches",
+    "D": "The area of the rectangle, in square inches"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the rectangle's length is 16 times its width, we define its length as 16w. This means that 16w represents the length of the rectangle, in inches.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "da9e640f"
+}

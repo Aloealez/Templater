@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "8",
+    "B": "5",
+    "C": "15",
+    "D": "6"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "In the given equation, $ a $ is a constant. If the equation has infinitely many solutions, what is the value of $ a $?\n\n$$ 5x + 20 = a(x + 4) $$",
+  "explanation": "Choice B is correct.\n\nAn equation with one variable, $ x $, has infinitely many solutions only when both sides of the equation are equal for all values of $ x $. The given equation is:\n\n$ 5x + 20 = a(x + 4) $\n\nExpanding the right-hand side:\n$ ax + a(4) = ax + 20 $\n\nFor the equation to have infinitely many solutions, the expressions on both sides must be identical. This means the coefficients of $ x $ and the constant terms must match:\n\n- Coefficients: $ 5 = a $  \u2192 **So, $ a = 5 $.**\n- Constant terms: $ 20 = 20 $, which is already true.\n\nThus, the correct value of $ a $ is **5**.",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "6b73732f"
+}

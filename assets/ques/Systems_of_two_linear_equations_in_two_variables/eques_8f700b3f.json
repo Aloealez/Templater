@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n $$ $$ \n$$\\frac{2}{2} y = -6$$\n$$x - \\frac{-3}{2} y = -4$$",
+  "answers": {
+    "A": "$6$",
+    "B": "$4$",
+    "C": "$\\frac{1}{3}$",
+    "D": "$5$"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = $-6. Substituting into the second equation and solving for $x$ gives $x = $5. Thus, the correct answer is $5$.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "8f700b3f"
+}

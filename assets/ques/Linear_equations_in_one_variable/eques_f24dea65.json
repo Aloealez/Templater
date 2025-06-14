@@ -1,0 +1,13 @@
+{
+  "Task": "if $4x + 31 = 55$, what is the value of $x$",
+  "choices": {
+    "A": 7,
+    "B": 5,
+    "C": 6,
+    "D": 3
+  },
+  "correct_answer": "B",
+  "difficulty": "Easy",
+  "explanation": "\nRationle\nThe correct answer is 6. It's given that $4x + 31 = 55$.  To solve for $x$, we need to isolate the variable. First, add 31 to both sides: $4x = 86$. Then, divide by 4: $x = 21.5$. This simplifies to $x = 6$.",
+  "id": "f24dea65"
+}

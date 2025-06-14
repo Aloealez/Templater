@@ -1,0 +1,19 @@
+{
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 -10x + 10\n $$$$ y \u2264 1x + 11\n $$",
+  "answers": {
+    "A": "(2, 3)",
+    "B": "(4, -1)",
+    "C": "(4, -3)",
+    "D": "(1, -5)"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both $ y \u2264 -10x + 10 $ and $ y \u2264 1x + 11 $, making $ (1, -5) $ the correct choice.",
+  "category": "Linear Inequalities - System Solutions",
+  "difficulty": "Medium",
+  "id": "816530bd"
+}

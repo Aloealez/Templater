@@ -1,0 +1,14 @@
+{
+  "category": "Algebra",
+  "Difficulty": "Easy",
+  "task": "Solve for x: 2x + 3 = 7",
+  "choices": {
+    "A": "2",
+    "B": -1,
+    "C": 5,
+    "D": 4
+  },
+  "correct_answer": "A",
+  "explanation": "Step 1: Subtract 3 from both sides: 2x = 7 - 3 = 4<br>Step 2: Divide by 2: x = 4 \u00f7 2 = 2",
+  "id": "fc70f35f"
+}

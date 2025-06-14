@@ -1,0 +1,19 @@
+{
+  "task": "From a population of 85171 people, 971 were chosen at random and surveyed about a new product launch. Based on the survey, it is estimated that 28% of people in the population support it, with an associated margin of error of 4%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+  "answers": {
+    "A": "20953",
+    "B": "971",
+    "C": "485",
+    "D": "28182"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "It's given that an estimated 28% of people in the population support a new product launch, with a margin of error of 4%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 24% and 32% of the population. Multiplying these percentages by the total population (85171) gives a range of 20441 to 27254. Since 20953 falls within this range, it is a plausible answer.",
+  "category": "Inference from Sample Statistics and Margin of Error",
+  "difficulty": "Medium",
+  "id": "c5296160"
+}

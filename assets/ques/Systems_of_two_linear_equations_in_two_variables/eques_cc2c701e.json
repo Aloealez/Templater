@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $(x, y)$:\n$$ -10x + 7y = 3\n $$$$ -10x -1y = -4\n $$",
+  "answers": {
+    "A": "(13/16, 7/8)",
+    "B": "(5/16, 7/8)",
+    "C": "(5/16, 11/8)",
+    "D": "(7/8, 5/16)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "We solve the system using elimination or substitution. The determinant is computed as -10 * -1 - 7 * -10 = 80, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (5/16, 7/8)$.",
+  "category": "Systems of Equations - Solving for (x, y)",
+  "difficulty": "Medium",
+  "id": "cc2c701e"
+}

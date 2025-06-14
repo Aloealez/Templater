@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ 9x + 8 $",
+    "B": "$ 3x - 5 $",
+    "C": "$ 5x - 5 $",
+    "D": "$ 3x + 5 $"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "What is the equation of the line that passes through the point $ (0, -5) $ and is parallel to the graph of $ y = 3x + 5 $ in the xy-plane?",
+  "explanation": "Choice B is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 3x + 5 $, it must have the same slope, which is $ 3 $. \nGiven that the new line passes through $ (0, -5) $, the y-intercept is $ -5 $. \nThus, the equation of the new line is $ y = 3x - 5 $.",
+  "category": "Linear Equations in Two Variables",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "68183675"
+}

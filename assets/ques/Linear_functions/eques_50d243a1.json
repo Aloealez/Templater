@@ -1,0 +1,26 @@
+{
+  "task": "The function f is defined by $f(x) = 79x + 91$.\nWhat is the value of $f(x)$ when $x = 5$?",
+  "answers": {
+    "A": "496",
+    "B": "500",
+    "C": "447",
+    "D": "486"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "explanation": "Insert 5 into the function: f(x) = 79 * 5 + 91 = 395 + 91 = 486. So the correct answer is 486.",
+  "category": "Linear Functions",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "50d243a1"
+}

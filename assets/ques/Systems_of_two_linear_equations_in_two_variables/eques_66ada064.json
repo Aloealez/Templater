@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "(30, 10)",
+    "B": "(10, 30)",
+    "C": "(13, 30)",
+    "D": "(10, 35)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "Solve the system of equations:\n$ y = 14x -110 $\n$ y = 30 $\nWhat is the solution $ (x, y) $ to the system?",
+  "explanation": "Choice B is correct. The second equation in the system is $ y = 30 $. Substituting $ 30 $ for $ y $ in the first equation gives:\n$ 30 = 14x -110 $.\nAdding $ 110 $ to both sides results in:\n$ 140 = 14x $.\nDividing by $ 14 $ gives $ x = 10 $.\nTherefore, the solution to the system is $ (10, 30) $.",
+  "category": "Systems of Linear Equations",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "66ada064"
+}

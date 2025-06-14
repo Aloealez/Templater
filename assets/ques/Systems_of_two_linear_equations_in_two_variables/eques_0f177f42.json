@@ -1,0 +1,19 @@
+{
+  "task": "Solve the system of equations for $x$:\n $$ $$ \n$$\\frac{-2}{2} y = -4$$\n$$x - \\frac{-1}{2} y = 2$$",
+  "answers": {
+    "A": "$0$",
+    "B": "$-1$",
+    "C": "$\\frac{3}{2}$",
+    "D": "$1$"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "First, solve for $y$ from the first equation: $y = $4. Substituting into the second equation and solving for $x$ gives $x = $0. Thus, the correct answer is $0$.",
+  "category": "Systems of Equations",
+  "difficulty": "Medium",
+  "id": "0f177f42"
+}

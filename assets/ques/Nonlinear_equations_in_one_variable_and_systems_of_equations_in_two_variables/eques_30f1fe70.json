@@ -1,0 +1,19 @@
+{
+  "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\\n$$ y = 1x + 1 $$\\n$$ y = x^2 + 2x + -2 $$",
+  "answers": {
+    "A": "1",
+    "B": "3",
+    "C": "2",
+    "D": "-1"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Setting the given equations equal to each other: $ 1x + 1 = x^2 + 2x + -2 $. Rearrange into quadratic form: $ x^2 + (1)x + (-3) = 0 $. The discriminant is 13. Solving for $x$, we get possible values: [1, -2]. Only one of these values is listed as an answer choice, making 1 the correct answer.",
+  "category": "Nonlinear Systems - Solving for x",
+  "difficulty": "Medium",
+  "id": "30f1fe70"
+}

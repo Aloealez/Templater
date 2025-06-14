@@ -1,0 +1,13 @@
+{
+  "Task": "if $4x + 19 = 55$, what is the value of $x$",
+  "choices": {
+    "A": 14,
+    "B": 10,
+    "C": 6,
+    "D": 9
+  },
+  "correct_answer": "D",
+  "difficulty": "Easy",
+  "explanation": "\nRationle\nThe correct answer is 9. It's given that $4x + 19 = 55$.  To solve for $x$, we need to isolate the variable. First, add 19 to both sides: $4x = 74$. Then, divide by 4: $x = 18.5$. This simplifies to $x = 9$.",
+  "id": "3f5213c3"
+}

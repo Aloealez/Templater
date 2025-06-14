@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "350",
+    "B": "330",
+    "C": "7",
+    "D": "340"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "A model predicts that a certain horse weighed 340 pounds when it was born and that the horse gained 7 pounds per days in its early life.\n\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted pounds of the horse $ x $ days after birth, and $ a $ and $ b $ are constants.\n\nWhat is the value of $ a $? ",
+  "explanation": "Choice D is correct.\n\nFor a certain horse, it's given that a model predicts the horse weighed 340 pounds when it was born and gained 7 pounds per days in its early life.\n\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the horse after $ x $ days.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per days.\n\nSince $ a $ represents the weight of the horse at birth, the value of $ a $ is **340 pounds**.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "19dea2a4"
+}

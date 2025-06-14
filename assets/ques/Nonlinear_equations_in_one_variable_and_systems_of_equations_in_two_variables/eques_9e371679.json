@@ -1,0 +1,14 @@
+{
+  "category": "Algebra",
+  "Difficulty": "Hard",
+  "task": "Solve the system:\n1) y = 1x + 1\n2) y = 2x\u00b2 + -16x + 31",
+  "choices": {
+    "A": "(x, y) = (3, 4) and (5, 6)",
+    "B": "No solution",
+    "C": "(x, y) = (3, 5)",
+    "D": "(x, y) = (3, 4) only"
+  },
+  "correct_answer": "A",
+  "explanation": "<b>Step 1:</b> Set equations equal: 1x + 1 = 2x\u00b2 + -16x + 31<br><b>Step 2:</b> Rearrange to standard quadratic form: 2x\u00b2 + -17x + 30 = 0<br><b>Step 3:</b> Solve using factoring/quadratic formula: x = 3, 5<br><b>Step 4:</b> Find corresponding y-values using linear equation",
+  "id": "9e371679"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 21 to $m$ is equivalent to the ratio 22 to 176. What is the value of $m$?",
+  "answers": {
+    "A": "291",
+    "B": "168",
+    "C": "131",
+    "D": "193"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{21}{m} = \frac{22}{176}$. Cross multiplying gives: 21 \u00d7 176 = 22 \u00d7 m. Solving for $m$, we get $m = 168$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "7ed38f2c"
+}

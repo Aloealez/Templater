@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "8.3",
+    "B": "7.8",
+    "C": "6.24",
+    "D": "6.8"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "According to a model, the head width, in inches, of a bumblebee can be estimated by adding 0.8 to 5 times the bumblebee's weight, in grams.\n\nAccording to the model, what would be the head width, in inches, of a bumblebee that has a body weight of 1.4 grams?",
+  "explanation": "Choice B is correct.\n\nAccording to the model, the head width of a bumblebee can be estimated using the equation:\n$ y = 0.8 + 5x $\n\nLet $ x $ represent the body weight, in grams, and let $ y $ represent the head width, in inches.\n\nSubstituting 1.4 grams for $ x $:\n$ y = 0.8 + 5(1.4) $\n$ y = 0.8 + 7.0 $\n$ y = 7.8 $\n\nTherefore, a bumblebee with a body weight of 1.4 grams has an estimated head width of 7.8 inches.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "416130d0"
+}

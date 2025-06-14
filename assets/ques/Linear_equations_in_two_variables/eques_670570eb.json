@@ -1,0 +1,19 @@
+{
+  "task": "Line k is defined by the equation $ 4y + -14x = 44 $. Line w is perpendicular to line k in the xy-plane. What is the slope of line w?",
+  "answers": {
+    "A": "\\frac{7}{2}",
+    "B": "\\frac{2}{7}",
+    "C": "\\frac{-7}{2}",
+    "D": "\\frac{-2}{7}"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The given equation of line k is rewritten in slope-intercept form as $ y = \\frac{7}{2}x + b $. This means the slope of line k is \\frac{7}{2}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{7}{2} is \\frac{-2}{7}. Thus, the slope of line w is \\frac{-2}{7}.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "670570eb"
+}

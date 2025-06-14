@@ -1,0 +1,19 @@
+{
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 -5x + -7\n $$$$ y \u2264 -3x + 13\n $$",
+  "answers": {
+    "A": "(-2, 3)",
+    "B": "(1, 5)",
+    "C": "(5, -1)",
+    "D": "(-1, 4)"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both $ y \u2264 -5x + -7 $ and $ y \u2264 -3x + 13 $, making $ (-2, 3) $ the correct choice.",
+  "category": "Linear Inequalities - System Solutions",
+  "difficulty": "Medium",
+  "id": "ffdbf8aa"
+}

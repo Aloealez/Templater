@@ -1,0 +1,94 @@
+{
+  "answers": {
+    "A": [
+      [
+        "$x$",
+        "$y$"
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        176
+      ],
+      [
+        4,
+        353
+      ]
+    ],
+    "B": [
+      [
+        "$x$",
+        "$y$"
+      ],
+      [
+        0,
+        -9
+      ],
+      [
+        2,
+        184
+      ],
+      [
+        4,
+        362
+      ]
+    ],
+    "C": [
+      [
+        "$x$",
+        "$y$"
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        171
+      ],
+      [
+        4,
+        369
+      ]
+    ],
+    "D": [
+      [
+        "$x$",
+        "$y$"
+      ],
+      [
+        0,
+        -3
+      ],
+      [
+        2,
+        179
+      ],
+      [
+        4,
+        361
+      ]
+    ]
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "Which table gives three values of $ x $ and their corresponding values of $ y $ for the given equation?\ny = 91x - 3",
+  "explanation": "Choice D is correct. Substituting $ x = 0 $ into the equation $ y = 91x - 3 $ gives:\n$ y = 91(0) + -3 = -3 $.\nSubstituting $ x = 2 $ gives $ y = 91(2) + -3 = 179 $.\nSubstituting $ x = 4 $ gives $ y = 91(4) + -3 = 361 $.\nThus, the correct table is the one that contains these values.",
+  "category": "Linear Equations in Two Variables",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "12820150"
+}

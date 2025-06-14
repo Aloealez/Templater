@@ -1,0 +1,19 @@
+{
+  "task": "The measure of angle $ R $ is $ \\frac{1}{1}\u03c0 $ radians. The measure of angle $ T $ is $ \\frac{1}{2}\u03c0 $ radians greater than the measure of angle $ R $. What is the measure of angle $ T $, in degrees?",
+  "answers": {
+    "A": "270",
+    "B": "540",
+    "C": "90",
+    "D": "180"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The measure of angle $ R is \\frac{1}{1}\u03c0 $ radians, and angle $ T $ is $ \\frac{1}{2}\u03c0 $ radians greater. Thus, the measure of angle T is:\n\n$ \\frac{1}{1}\u03c0 + \\frac{1}{2}\u03c0 = \\frac{3}{2}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{3}{2}\u03c0 \u00d7 (180/\u03c0) = 270 $ degrees.\n\nThus, the correct answer is $ 270 $ degrees.",
+  "category": "Geometry - Radians and Degrees",
+  "difficulty": "Medium",
+  "id": "dc8f70ba"
+}

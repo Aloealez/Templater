@@ -1,0 +1,19 @@
+{
+  "task": "A rectangle has a length that is 20 times its width. The function $y = (20w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square inches, and $y > 0$. Which of the following is the best interpretation of 20w in this context?",
+  "answers": {
+    "A": "The width of the rectangle, in inches",
+    "B": "The area of the rectangle, in square inches",
+    "C": "The length of the rectangle, in inches",
+    "D": "The difference between the length and the width of the rectangle, in inches"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "Since the rectangle's length is 20 times its width, we define its length as 20w. This means that 20w represents the length of the rectangle, in inches.",
+  "category": "Nonlinear Functions - Geometric Interpretation",
+  "difficulty": "Medium",
+  "id": "19d0fb7b"
+}

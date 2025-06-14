@@ -1,0 +1,25 @@
+{
+  "answers": {
+    "A": "$ c = 2m $\n$ c + m = 30 $",
+    "B": "$ m = 2c $\n$ c + m = 35 $",
+    "C": "$ c = 35m $\n$ c + m = 4 $",
+    "D": "$ c = 2m $\n$ c + m = 35 $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "task": "Connor has $c$ dollars, and Maria has $m$ dollars. Connor has 2 times as many dollars as Maria, and together they have a total of 35 dollars. Which system of equations represents this situation?",
+  "explanation": "Choice D is correct. Since Connor has 2 times as many dollars as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 35 dollars, we set up:\n$ c + m = 35 $.\nThis forms the correct system of equations.",
+  "category": "Systems of Equations",
+  "difficulty": "Easy",
+  "id": "733501b2"
+}

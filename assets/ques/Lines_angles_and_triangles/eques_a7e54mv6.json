@@ -1,0 +1,19 @@
+{
+  "ID": "a7e54mv6",
+  "task": "Two nearby lampposts are perpendicular to the ground, which is flat. One of the lampposts is 10 feet tall and has a shadow that is 7 feet long. At the same time, the shadow of the other lamppost is 3 feet long. How tall, in feet, is the other lamppost? (Assume that at a given point in time, the right triangles formed by the lampposts and their respective shadows are similar.)",
+  "answers": {
+    "A": "6.29",
+    "B": "2.29",
+    "C": "4.29",
+    "D": "5.79"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "explanation": "The correct answer is 4.29. Since the triangles are similar, the proportion is:\n10/7 = x/3.\nSolving for x gives: x = (10 \u00d7 3) / 7 = 4.29 feet.",
+  "category": "Geometry - Similar Triangles",
+  "difficulty": "Medium"
+}

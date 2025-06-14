@@ -1,0 +1,19 @@
+{
+  "task": "Marc Bu plans to rent a boat. The rental cost is $61 per week, and he must also pay a fixed cost of $23. Marc Bu wants to spend no more than $264. If the rental is available only for whole weeks, what is the maximum number of weeks Marc Bu can rent a boat? Which of the following equations properly represents this situation?",
+  "answers": {
+    "A": "61h \u2264 264",
+    "B": "61h + 32 \u2264 264",
+    "C": "61h + 23 \u2265 264",
+    "D": "61h + 23 \u2264 264"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Choice D is correct. The equation 61h + 23 \u2264 264 represents the given situation. Subtracting 23 from both sides and dividing by 61 gives h \u2264 3. Since the rental is available only in whole weeks, the maximum weeks Marc Bu can rent is 3.",
+  "category": "Inequalities - Budgeting",
+  "difficulty": "Easy",
+  "id": "8a365844"
+}

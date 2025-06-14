@@ -1,0 +1,13 @@
+{
+  "equation": "$4(4x - 2) = 56$",
+  "choices": {
+    "A": "$4x - 5 = 11$",
+    "B": "$4x + 3 = 11$",
+    "C": "$4x = 17$",
+    "D": "$4x - 2 = 14$"
+  },
+  "correct_answer": "D",
+  "difficulty": "Easy",
+  "explanation": "\nRationale\nChoice D is correct. Dividing each side of the given equation by 4 yields $4x - 2 = 14$. Therefore, the equation $4x - 2 = 14$ is equivalent to the given equation and has the same solution.",
+  "id": "2052e8dd"
+}

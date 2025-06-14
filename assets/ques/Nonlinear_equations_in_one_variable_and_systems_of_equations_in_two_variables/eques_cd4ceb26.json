@@ -1,0 +1,14 @@
+{
+  "category": "Algebra",
+  "Difficulty": "Hard",
+  "task": "Solve the system:\n1) y = 1x + 4\n2) y = 1x\u00b2 + -6x + 9",
+  "choices": {
+    "A": "No solution",
+    "B": "(x, y) = (1, 5) only",
+    "C": "(x, y) = (1, 5) and (5, 9)",
+    "D": "(x, y) = (1, 5)"
+  },
+  "correct_answer": "C",
+  "explanation": "<b>Step 1:</b> Set equations equal: 1x + 4 = 1x\u00b2 + -6x + 9<br><b>Step 2:</b> Rearrange to standard quadratic form: 1x\u00b2 + -7x + 5 = 0<br><b>Step 3:</b> Solve using factoring/quadratic formula: x = 1, 5<br><b>Step 4:</b> Find corresponding y-values using linear equation",
+  "id": "cd4ceb26"
+}

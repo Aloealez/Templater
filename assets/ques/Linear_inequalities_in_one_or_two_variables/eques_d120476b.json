@@ -1,0 +1,19 @@
+{
+  "task": "The minimum value of $x$ is 18 less than 5 times another number $n$. Which inequality shows the possible values of $x$?",
+  "answers": {
+    "A": "x \u2264 5n - 18",
+    "B": "x \u2265 5n - 18",
+    "C": "x \u2264 18 - 5n",
+    "D": "x \u2265 18 - 5n"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the statement describes 18 less than 5 times n, we write 5n - 18 to express that relationship. If the statement mentions a minimum value, we use \u2265, and if it mentions a maximum, we use \u2264. Thus, the correct inequality is x \u2265 5n - 18.",
+  "category": "Linear Inequalities - Expression Formation",
+  "difficulty": "Medium",
+  "id": "d120476b"
+}

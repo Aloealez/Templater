@@ -1,0 +1,29 @@
+{
+  "answers": {
+    "A": "$ 5x + 6y = 78 $\\n$ 4x + 2y = 135 $",
+    "B": "$ 6x + 5y = 135 $\\n$ 3x + 3y = 78 $",
+    "C": "$ 6x + 5y = 78 $\\n$ 3x + 3y = 135 $",
+    "D": "$ 7x + 4y = 78 $\\n$ 2x + 4y = 135 $"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0,
+    "D": 0.0
+  },
+  "task": "Daniel and Liam purchased pens and erasers from a store. The price of each pen was the same, and the price of each eraser was the same. Daniel purchased 6 pens and 5 erasers for $78, and Liam purchased 3 pens and 3 erasers for $135. Which of the following systems of linear equations represents this situation, if $ x $ represents the price of each pen and $ y $ represents the price of each eraser?",
+  "explanation": [
+    "Choice C is correct. The total cost of pens and erasers purchased by Daniel is modeled by the equation:\n$ 6x + 5y = 78 $.\nSimilarly, the total cost of pens and erasers purchased by Liam is:\n$ 3x + 3y = 135 $.\nThus, the correct system of equations is:\n$ 6x + 5y = 78 $",
+    "$ 3x + 3y = 135 $."
+  ],
+  "category": "Systems of Linear Equations",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "45a67cf5"
+}

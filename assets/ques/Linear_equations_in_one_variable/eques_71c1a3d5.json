@@ -1,0 +1,13 @@
+{
+  "Task": "if $5x + 45 = 15$, what is the value of $x$",
+  "choices": {
+    "A": -9,
+    "B": -1,
+    "C": -6,
+    "D": -5
+  },
+  "correct_answer": "B",
+  "difficulty": "Easy",
+  "explanation": "\nRationle\nThe correct answer is -6. It's given that $5x + 45 = 15$.  To solve for $x$, we need to isolate the variable. First, add 45 to both sides: $5x = 60$. Then, divide by 5: $x = 12.0$. This simplifies to $x = -6$.",
+  "id": "71c1a3d5"
+}

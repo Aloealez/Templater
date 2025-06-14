@@ -1,0 +1,26 @@
+{
+  "task": "The function f is defined by $f(x) = 40x + 61$.\nWhat is the value of $f(x)$ when $x = 3$?",
+  "answers": {
+    "A": "165",
+    "B": "216",
+    "C": "134",
+    "D": "181"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "explanation": "Insert 3 into the function: f(x) = 40 * 3 + 61 = 120 + 61 = 181. So the correct answer is 181.",
+  "category": "Linear Functions",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "89a9befa"
+}

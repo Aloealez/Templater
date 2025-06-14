@@ -1,0 +1,26 @@
+{
+  "task": "A veterinarian recommends that each day a certain rabbit should eat 17 calories per pound of the rabbit's weight plus an additional 8 calories. Which equation represents this situation, where $c$ is the total number of calories the veterinarian recommends the rabbit should eat each day if the rabbit's weight is $x$ pounds?",
+  "answers": {
+    "A": "c = 19x",
+    "B": "c = 17x",
+    "C": "c = 8x + 17",
+    "D": "c = 17x + 8"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "score": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 1.0
+  },
+  "explanation": "The rabbit needs 17 calories for each pound it weighs, which is represented by 17x. Then, an additional 8 calories are added. So the equation is: $c = 17x + 8$.",
+  "category": "Linear Equations",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "8b127808"
+}

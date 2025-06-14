@@ -1,0 +1,13 @@
+{
+  "Task": "if $4x + 47 = 43$, what is the value of $x$",
+  "choices": {
+    "A": -6,
+    "B": -1,
+    "C": 0,
+    "D": -4
+  },
+  "correct_answer": " ",
+  "difficulty": "Easy",
+  "explanation": "\nRationle\nThe correct answer is -1. It's given that $4x + 47 = 43$.  To solve for $x$, we need to isolate the variable. First, add 47 to both sides: $4x = 90$. Then, divide by 4: $x = 22.5$. This simplifies to $x = -1$.",
+  "id": "c6d7e65e"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "On a car trip, Daniel and Michael each traveled for part of the trip, and the total distance they traveled was under 295 meters. Daniel traveled at an average speed of 28 meters per hour, and Michael traveled at an average speed of 35 meters per hour. Which of the following inequalities represents this situation, where $r$ is the number of hours Daniel traveled and $j$ is the number of hours Michael traveled?",
+  "answers": {
+    "A": "28r + 35j < 295",
+    "B": "35r + 28j > 295",
+    "C": "35r + 28j < 295",
+    "D": "28r + 35j > 295"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "It's given that Daniel traveled at an average speed of 28 meters per hour and traveled for $r$ hours. Multiplying 28 by $r$ gives the distance Daniel traveled: $28r$. Similarly, Michael traveled at an average speed of 35 meters per hour for $j$ hours, yielding a distance of $35j$. The total distance must be less than 295, leading to the inequality $28r + 35j < 295$.",
+  "category": "Inequalities - Distance and Speed",
+  "difficulty": "Medium",
+  "id": "7bf2e5ad"
+}

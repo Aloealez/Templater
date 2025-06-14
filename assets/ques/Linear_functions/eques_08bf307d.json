@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "f(x) = 12x + 9",
+    "B": "f(x) = 9x + 4",
+    "C": "f(x) = 10x + 4",
+    "D": "f(x) = 9x + 14"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "In the xy-plane, the graph of the linear function $ f $ contains the points $ (0, 4) $ and $ (7, 67) $. Which equation defines $ f $, where $ y = f(x) $? ",
+  "explanation": "Choice B is correct.\n\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $ m $ represents the slope and $ (0, b) $ represents the y-intercept.\n\nIt's given that the graph contains the points $ (0, 4) $ and $ (7, 67) $, meaning that the y-intercept is $ b = 4 $.\n\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{67 - 4}{7 - 0} = 9 $\n\nSubstituting $ m = 9 $ and $ b = 4 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 9x + 4 $.",
+  "category": "Linear Functions",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "08bf307d"
+}

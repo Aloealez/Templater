@@ -1,0 +1,26 @@
+{
+  "task": "The function f is defined by $f(x) = 20x + 72$.\nWhat is the value of $f(x)$ when $x = 0$?",
+  "answers": {
+    "A": "86",
+    "B": "72",
+    "C": "97",
+    "D": "37"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "explanation": "Insert 0 into the function: f(x) = 20 * 0 + 72 = 0 + 72 = 72. So the correct answer is 72.",
+  "category": "Linear Functions",
+  "difficulty": "Easy",
+  "table": null,
+  "id": "a428bc28"
+}

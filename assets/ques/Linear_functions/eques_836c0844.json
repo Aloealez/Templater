@@ -1,0 +1,13 @@
+{
+  "question": "The function $f$ is defined by $f(x) = 8x$. For what value of $x$ does $f(x) = 72$$?",
+  "choices": {
+    "A": 9,
+    "B": 8,
+    "C": 4,
+    "D": 11
+  },
+  "correct_answer": "A",
+  "difficulty": "Easy",
+  "explanation": "**Rationale**\n\nSubstituting $72$ for $f(x)$ in the function equation gives:\n$72 = 8x$.\n\nDividing both sides by 8 yields:\n$x = 9$.\n\nTherefore, the correct answer is **9**.",
+  "id": "836c0844"
+}

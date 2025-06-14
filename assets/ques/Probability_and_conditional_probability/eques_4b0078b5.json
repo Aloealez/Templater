@@ -1,0 +1,19 @@
+{
+  "task": "In a bag, there are 37 purple beads, 9 black beads, 35 white beads, and 21 blue beads. If one of these beads is selected at random, what is the probability of selecting a beads that is neither white nor blue?",
+  "answers": {
+    "A": "\\frac{30}{102}",
+    "B": "\\frac{72}{102}",
+    "C": "\\frac{21}{102}",
+    "D": "\\frac{9}{102}"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "There are a total of 102 beads in the bag. If the beads is neither white nor blue, then it must be either blue or black. The probability of selecting one of these is (21 + 9)/102, which in LaTeX style is \\frac{30}{102}. Thus, the probability is \\frac{30}{102}.",
+  "category": "Probability and Conditional Probability",
+  "difficulty": "Medium",
+  "id": "4b0078b5"
+}

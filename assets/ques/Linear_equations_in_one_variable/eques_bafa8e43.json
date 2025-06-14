@@ -1,0 +1,13 @@
+{
+  "question": "A rocket contained $467282$ kilograms (kg) of propellant before launch. Exactly $22$ seconds after launch, $343256$ kg of this propellant remained. On average, approximately how much propellant, in kg, did the rocket burn each second after launch?",
+  "choices": {
+    "A": 6637,
+    "B": 3637,
+    "C": 7637,
+    "D": 5637
+  },
+  "correct_answer": "D",
+  "difficulty": "Easy",
+  "explanation": "**Rationale**\nIt's given that the rocket contained $467282$ kg of propellant before launch and had $343256$ kg remaining after $22$ seconds.\nFinding the difference between the initial and remaining fuel gives:\n$467282 - 343256 = 124026$ kg burned in 22 seconds.\nDividing by the number of seconds gives:\n $$ \\frac{124026}{22} = 5637') $$ kg per second.\nThus, the correct answer is **5637 kg per second**.",
+  "id": "bafa8e43"
+}

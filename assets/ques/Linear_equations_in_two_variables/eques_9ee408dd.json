@@ -1,0 +1,19 @@
+{
+  "task": "A line passes through the points $(5, 19)$ and $(-20, 3)$ in the xy-plane. What is the slope of the line?",
+  "answers": {
+    "A": "\\frac{17}{25}",
+    "B": "\\frac{8}{13}",
+    "C": "\\frac{14}{25}",
+    "D": "\\frac{16}{25}"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The correct answer is $\\frac{16}{25}$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \\frac{3 - 19}{-20 - 5} = \\frac{16}{25}$. Thus, the correct answer is \\frac{16}{25}, or approximately 0.64 in decimal form.",
+  "category": "Linear Equations - Slope Calculation",
+  "difficulty": "Medium",
+  "id": "9ee408dd"
+}

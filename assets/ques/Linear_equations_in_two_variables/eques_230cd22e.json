@@ -1,0 +1,19 @@
+{
+  "task": "Line $k$ is defined by the equation $y = \\frac{1}{10}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
+  "answers": {
+    "A": "\\(\\frac{1}{10}\\)",
+    "B": "\\(\\frac{-10}{1}\\)",
+    "C": "\\(\\frac{2}{21}\\)",
+    "D": "\\(\\frac{-1}{10}\\)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The equation of line $k$ is given as $y = \\frac{1}{10}x + b$, so its slope is $ \\frac{1}{10} $. For a perpendicular line, the slope is the negative reciprocal of $ \\frac{1}{10} $, which is \\(\\frac{-10}{1}\\). Thus, the correct answer is \\(\\frac{-10}{1}\\).",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "230cd22e"
+}

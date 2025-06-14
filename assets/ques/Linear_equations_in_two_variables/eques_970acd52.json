@@ -1,0 +1,19 @@
+{
+  "task": "A line passes through the points $(13, -14)$ and $(-20, 6)$ in the xy-plane. What is the slope of the line?",
+  "answers": {
+    "A": "\\frac{-19}{33}",
+    "B": "\\frac{-20}{33}",
+    "C": "\\frac{-5}{8}",
+    "D": "\\frac{-6}{11}"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "The correct answer is $\\frac{-20}{33}$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \\frac{6 - -14}{-20 - 13} = \\frac{-20}{33}$. Thus, the correct answer is \\frac{-20}{33}, or approximately -0.606 in decimal form.",
+  "category": "Linear Equations - Slope Calculation",
+  "difficulty": "Medium",
+  "id": "970acd52"
+}

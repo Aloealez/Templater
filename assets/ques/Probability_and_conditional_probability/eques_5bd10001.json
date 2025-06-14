@@ -1,0 +1,19 @@
+{
+  "task": "The ratio 43 to $m$ is equivalent to the ratio 11 to 66. What is the value of $m$?",
+  "answers": {
+    "A": "258",
+    "B": "271",
+    "C": "322",
+    "D": "182"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{43}{m} = \\frac{11}{66}$. Cross multiplying gives: 43 \u00d7 66 = 11 \u00d7 m. Solving for $m$, we get $m = 258$.",
+  "category": "Ratios and Proportions",
+  "difficulty": "Medium",
+  "id": "5bd10001"
+}

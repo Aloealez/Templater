@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "$ -1 $",
+    "B": "$ \\frac{-4}{3} $",
+    "C": "$ \\frac{-1}{2} $",
+    "D": "$ 1 $"
+  },
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "What value of $ p $ is the solution of the equation below?\n$$ 2(p + 7) + 5(p - 2) = 3p $$",
+  "explanation": "Choice A is correct.\n\nOne way to solve the equation $ 2(p + 7) + 5(p - 2) = 3p $ is to first distribute the terms outside the parentheses:\n\n$ 2p + 14 + 5p - 10 = 3p $\n\nNext, combine like terms on the left side:\n$ (2p + 5p) + (14 - 10) = 3p $\n$ 7p + 4 = 3p $\n\nSubtracting 7p from both sides:\n$ 4 = 3p - 7p $\n$ 4 = (-4)p $\n\nDividing both sides by -4:\n$ p = \\frac{4}{-4} $\n\nThus, the correct value of $ p $ is **$ \\frac{-1}{1} $**, which is equivalent to **-1.00**.",
+  "category": "Algebraic Equations",
+  "difficulty": "Medium",
+  "table": null,
+  "id": "0d4c34bc"
+}

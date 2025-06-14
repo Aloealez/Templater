@@ -1,0 +1,19 @@
+{
+  "task": "If $p = 3x + 4$ and $v = x + 5$, which of the following is equivalent to $p v - 2 p + v$?",
+  "answers": {
+    "A": "$$3x^2 + 18x + 20$$",
+    "B": "$$3x^2 + 17x + 14$$",
+    "C": "$$3x^2 + 11x + 14$$",
+    "D": "$$3x^2 + 14x + 17$$"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Substituting $p$ and $v$ into the given expression: $ (3x + 4)(x + 5) - 2(3x + 4) + x + 5 $. Expanding yields: $ 3x^2 + 15x + 4x + 20 - 6x - 8 + x + 5 $. Combining like terms, we get: $ $3x^2 + 14x + 17$ $, which is the correct answer.",
+  "category": "Equivalent Expressions - Expanding and Simplifying",
+  "difficulty": "Medium",
+  "id": "5038d0b4"
+}

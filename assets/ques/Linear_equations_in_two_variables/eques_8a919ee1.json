@@ -1,0 +1,19 @@
+{
+  "task": "Line p is defined by the equation $ 10y + -1x = 190 $. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
+  "answers": {
+    "A": "\\frac{-1}{10}",
+    "B": "\\frac{1}{10}",
+    "C": "\\frac{10}{1}",
+    "D": "\\frac{-10}{1}"
+  },
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "The given equation of line p is rewritten in slope-intercept form as $ y = \\frac{1}{10}x + b $. This means the slope of line p is \\frac{1}{10}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{1}{10} is \\frac{-10}{1}. Thus, the slope of line r is \\frac{-10}{1}.",
+  "category": "Linear Equations - Perpendicular Slopes",
+  "difficulty": "Medium",
+  "id": "8a919ee1"
+}

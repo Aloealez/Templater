@@ -1,0 +1,26 @@
+{
+  "answers": {
+    "A": "(3.8, 0)",
+    "B": "(0.8, 0)",
+    "C": "(-3.2, 0)",
+    "D": "(-4.2, 0)"
+  },
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "score": {
+    "A": 0.0,
+    "B": 1.0,
+    "C": 0.0,
+    "D": 0.0
+  },
+  "task": "The graph of a linear function f is shown, where y = f(x). What is the x-intercept of the graph of f?",
+  "explanation": "The x-intercept is the point where the graph intersects the x-axis, i.e., where y = 0. Using the equation of the line y = 5x + (-4), we set y = 0 and solve for x: x = -(-4)/5 = 0.8. Thus, the correct answer is the x-intercept: (0.8, 0).",
+  "category": "Graphing Linear Equations",
+  "difficulty": "Easy",
+  "graph": [],
+  "id": "76415543"
+}
