@@ -77,10 +77,18 @@ class QuizModel extends StatefulWidget {
   final String oldName;
   final int exerciseNumber;
   final String exerciseString;
-  final Function(Map<String, QuizQuestionData> questions,
-      Map<String, bool> answers, bool initialTest, bool endingTest,)? onEnd;
-  final Future Function(Map<String, QuizQuestionData> questions,
-      Map<String, bool> answers, bool initialTest, bool endingTest,)? onEndAsync;
+  final Function(
+    Map<String, QuizQuestionData> questions,
+    Map<String, bool> answers,
+    bool initialTest,
+    bool endingTest,
+  )? onEnd;
+  final Future Function(
+    Map<String, QuizQuestionData> questions,
+    Map<String, bool> answers,
+    bool initialTest,
+    bool endingTest,
+  )? onEndAsync;
 
   const QuizModel(
     this.title,
@@ -107,7 +115,7 @@ class QuizModel extends StatefulWidget {
     this.onEndAsync,
     this.answerLayout = QuizModelAnswerLayout.list,
     this.inlineTaskAndAnswers = false,
-    this.hintText = "Enter your answer",
+    this.hintText = 'Enter your answer',
     this.inputTextNumbersOnly = false,
     this.requireAnswer = false,
     this.music,
@@ -122,7 +130,7 @@ class _QuizModelState extends State<QuizModel> {
   double score = 0;
   String? selectedOption;
   int currentQuestionIndex = 0;
-  String currentQuestionId = "";
+  String currentQuestionId = '';
   late Timer _timer;
   late int _time;
   Map<String, String> answers = {};
@@ -136,7 +144,7 @@ class _QuizModelState extends State<QuizModel> {
     _time = widget.time;
     currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
     selectedOption =
-        widget.answerLayout == QuizModelAnswerLayout.textInput ? "" : null;
+        widget.answerLayout == QuizModelAnswerLayout.textInput ? '' : null;
 
     super.initState();
     for (var questionId in widget.questions.keys) {
@@ -155,11 +163,7 @@ class _QuizModelState extends State<QuizModel> {
     startTimer();
   }
 
-
-
   void handleContinue() {
-
-
     if (widget.answerLayout == QuizModelAnswerLayout.textInput &&
         !widget.showMultipleQuestions) {
       setState(() {
@@ -176,7 +180,7 @@ class _QuizModelState extends State<QuizModel> {
           () {
             selectedOption =
                 widget.answerLayout == QuizModelAnswerLayout.textInput
-                    ? ""
+                    ? ''
                     : null;
             currentQuestionIndex++;
             currentQuestionId =
@@ -186,12 +190,20 @@ class _QuizModelState extends State<QuizModel> {
       }
     } else {
       if (widget.onEnd != null) {
-        widget.onEnd!(widget.questions, getCorrectBoolArray(widget.questions, answers),
-            widget.initialTest, widget.endingTest,);
+        widget.onEnd!(
+          widget.questions,
+          getCorrectBoolArray(widget.questions, answers),
+          widget.initialTest,
+          widget.endingTest,
+        );
       }
       if (widget.onEndAsync != null) {
-        widget.onEndAsync!(widget.questions, getCorrectBoolArray(widget.questions, answers),
-            widget.initialTest, widget.endingTest,);
+        widget.onEndAsync!(
+          widget.questions,
+          getCorrectBoolArray(widget.questions, answers),
+          widget.initialTest,
+          widget.endingTest,
+        );
       }
 
       double score = 0;
@@ -243,47 +255,71 @@ class _QuizModelState extends State<QuizModel> {
     }
   }
 
-  ImageIcon buildAnswerChecks(BuildContext context, String? usersAnswer,
-      String answerLetter, String questionId,) {
+  Widget buildAnswerChecks(
+    BuildContext context,
+    String? usersAnswer,
+    String answerLetter,
+    String questionId,
+  ) {
     Size size = MediaQuery.of(context).size;
-    if (usersAnswer == null) {
-      return buildAnswerIcon(
-          context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter,);
-    }
-    return (usersAnswer == answerLetter ||
-            widget.questions[questionId]!.correct[answerLetter]!)
-        ? buildAnswerIcon(
-            context, answerLetter, true, widget.answerLayout, widget.questions, questionId, answerLetter,)
-        : buildAnswerIcon(
-            context, answerLetter, false, widget.answerLayout, widget.questions, questionId, answerLetter,);
+    return Container(
+      margin: EdgeInsets.only(
+        left: size.width * 0.035,
+      ),
+      child: Text(
+        '$answerLetter.',
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onSurface,
+          fontSize:
+              textScaleFactor(widget.questions[questionId]!.question.length) *
+                  1.4 *
+                  size.width,
+        ),
+      ),
+    );
   }
 
   Widget buildLetterAnswer(
-      BuildContext context, String answerLetter, String questionId,) {
+    BuildContext context,
+    String answerLetter,
+    String questionId,
+  ) {
     Size size = MediaQuery.of(context).size;
-    return ListTile(
-      contentPadding: EdgeInsets.only(
-        left: 0.008 * size.width,
-        right: 0.012 * size.width,
+    return Card(
+      margin: EdgeInsets.only(
+        top: size.height * 0.015,
       ),
-      leading:
-          buildAnswerChecks(context, selectedOption, answerLetter, questionId),
-      title: HtmlAsTextSpan(
-        "${widget.questions[questionId]?.answers[answerLetter]}",
-        // fontSize: 0.0155 * size.height,
-        fontSize:
-            textScaleFactor(widget.questions[questionId]!.question.length) *
-                0.95 *
-                size.width,
+      color: selectedOption == null
+          ? Theme.of(context).colorScheme.primary.withOpacity(0.6)
+          : widget.questions[questionId]!.correct[answerLetter]!
+              ? Colors.green
+              : selectedOption == answerLetter
+                  ? Colors.red
+                  : Theme.of(context).colorScheme.primary.withOpacity(0.6),
+      child: ListTile(
+        contentPadding: EdgeInsets.only(
+          left: 0.008 * size.width,
+          right: 0.025 * size.width,
+        ),
+        leading: buildAnswerChecks(
+            context, selectedOption, answerLetter, questionId,),
+        title: HtmlAsTextSpan(
+          '${widget.questions[questionId]?.answers[answerLetter]}',
+          // fontSize: 0.0155 * size.height,
+          fontSize:
+              textScaleFactor(widget.questions[questionId]!.question.length) *
+                  0.95 *
+                  size.width,
+        ),
+        onTap: selectedOption == null
+            ? () {
+                setState(() {
+                  selectedOption = answerLetter;
+                  answers[questionId] = selectedOption!;
+                });
+              }
+            : null,
       ),
-      onTap: selectedOption == null
-          ? () {
-              setState(() {
-                selectedOption = answerLetter;
-                answers[questionId] = selectedOption!;
-              });
-            }
-          : null,
     );
   }
 
@@ -312,7 +348,11 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Column buildTitle(
-      BuildContext context, Size size, int questionIndex, String questionId,) {
+    BuildContext context,
+    Size size,
+    int questionIndex,
+    String questionId,
+  ) {
     return Column(
       children: [
         if (!widget.centerTitle)
@@ -321,19 +361,24 @@ class _QuizModelState extends State<QuizModel> {
               Padding(
                 padding: EdgeInsets.only(left: size.width / 11),
                 child: Text(
-                  widget.title.replaceAll("{}", "${questionIndex + 1}"),
+                  widget.title.replaceAll('{}', '${questionIndex + 1}'),
                   style: TextStyle(fontSize: 0.023 * size.height),
                   textAlign: TextAlign.start,
                 ),
               ),
               SizedBox(width: 0.018 * size.width),
               InkWell(
-                child: Image.asset(
-                  Theme.of(context).brightness == Brightness.dark
-                      ? "assets/help_icon_dark.png"
-                      : "assets/help_icon_light.png",
-                  width: 0.056 * size.width,
+                child: Container(
+                width: 0.08 * size.width,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Theme.of(context).colorScheme.primary.withOpacity(0.8),
                 ),
+                child: Icon(
+                  Icons.question_mark_rounded,
+                  color: Colors.white,
+                ),
+              ),
                 onTap: () {
                   ReportQuestionDialog(
                     context,
@@ -350,7 +395,7 @@ class _QuizModelState extends State<QuizModel> {
               // ),
               // const SizedBox(width: 10.0),
               Text(
-                "${_time.toString()}s",
+                '${_time.toString()}s',
                 style: TextStyle(fontSize: size.width / 20),
                 textAlign: TextAlign.start,
               ),
@@ -359,7 +404,7 @@ class _QuizModelState extends State<QuizModel> {
           ),
         if (widget.centerTitle)
           Text(
-            widget.title.replaceAll("{}", "${questionIndex + 1}"),
+            widget.title.replaceAll('{}', '${questionIndex + 1}'),
             style: TextStyle(
               fontSize: 0.041 * size.height,
               fontWeight: FontWeight.w600,
@@ -404,7 +449,8 @@ class _QuizModelState extends State<QuizModel> {
                 widget.questions[questionId]!.question,
                 style: TextStyle(
                   fontSize: textScaleFactor(
-                          widget.questions[questionId]!.question.length,) *
+                        widget.questions[questionId]!.question.length,
+                      ) *
                       1.1 *
                       size.width,
                   fontWeight: FontWeight.w600,
@@ -416,7 +462,11 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildBoxAnswer(
-      BuildContext context, Size size, String questionId, String answerId,) {
+    BuildContext context,
+    Size size,
+    String questionId,
+    String answerId,
+  ) {
     return Column(
       children: [
         SizedBox(
@@ -476,8 +526,12 @@ class _QuizModelState extends State<QuizModel> {
     );
   }
 
-  Widget buildTextInput(BuildContext context, Size size, String questionId,
-      {double fontSize = 1.0,}) {
+  Widget buildTextInput(
+    BuildContext context,
+    Size size,
+    String questionId, {
+    double fontSize = 1.0,
+  }) {
     return Center(
       child: TextField(
         controller: _textEditingControllers[questionId],
@@ -488,13 +542,12 @@ class _QuizModelState extends State<QuizModel> {
             try {
               value = double.parse(value.replaceAll(',', '.')).toString();
             } catch (e) {
-              value = "";
+              value = '';
             }
           }
           for (int i = 0;
               i < widget.questions[questionId]!.answers.length;
               i++) {
-
             if (widget.questions[questionId]?.answers.values.elementAt(i) ==
                 value) {
               setState(() {
@@ -515,7 +568,7 @@ class _QuizModelState extends State<QuizModel> {
           color: Theme.of(context).colorScheme.onSurface,
         ),
         decoration: InputDecoration(
-          hintText: "",
+          hintText: '',
           hintStyle: TextStyle(
             color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
           ),
@@ -563,8 +616,12 @@ class _QuizModelState extends State<QuizModel> {
                 for (int i = 0;
                     i < widget.questions[questionId]!.answers.length;
                     i++)
-                  buildBoxAnswer(context, size, questionId,
-                      widget.questions[questionId]!.answers.keys.elementAt(i),),
+                  buildBoxAnswer(
+                    context,
+                    size,
+                    questionId,
+                    widget.questions[questionId]!.answers.keys.elementAt(i),
+                  ),
               ],
             )
           : widget.answerLayout == QuizModelAnswerLayout.textInput
@@ -597,7 +654,7 @@ class _QuizModelState extends State<QuizModel> {
                               width: size.width,
                               requirement: widget.requireAnswer
                                   ? (selectedOption != null &&
-                                      selectedOption != "")
+                                      selectedOption != '')
                                   : widget.answerLayout ==
                                               QuizModelAnswerLayout.list ||
                                           widget.answerLayout ==
@@ -607,7 +664,8 @@ class _QuizModelState extends State<QuizModel> {
                             ),
                           ),
                         ],
-                      ),)
+                      ),
+                    )
                   : Padding(
                       padding: EdgeInsets.only(
                         right: 0.04 * size.width,
@@ -628,10 +686,11 @@ class _QuizModelState extends State<QuizModel> {
                             i < widget.questions[questionId]!.answers.length;
                             i++)
                           buildLetterAnswer(
-                              context,
-                              widget.questions[questionId]!.answers.keys
-                                  .elementAt(i),
-                              questionId,),
+                            context,
+                            widget.questions[questionId]!.answers.keys
+                                .elementAt(i),
+                            questionId,
+                          ),
                       ],
                     )
                   : Container(),
@@ -639,7 +698,11 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildQuestion(
-      BuildContext context, Size size, String questionId, int questionIndex,) {
+    BuildContext context,
+    Size size,
+    String questionId,
+    int questionIndex,
+  ) {
     return Column(
       children: [
         widget.inlineTaskAndAnswers
@@ -680,8 +743,11 @@ class _QuizModelState extends State<QuizModel> {
   }
 
   Widget buildQuestions(
-      BuildContext context, Size size, String questionId, int questionIndex,) {
-
+    BuildContext context,
+    Size size,
+    String questionId,
+    int questionIndex,
+  ) {
     return Column(
       children: [
         buildTitle(context, size, questionIndex, questionId),
@@ -693,7 +759,11 @@ class _QuizModelState extends State<QuizModel> {
             Column(
               children: [
                 buildQuestion(
-                    context, size, widget.questions.keys.elementAt(i), i,),
+                  context,
+                  size,
+                  widget.questions.keys.elementAt(i),
+                  i,
+                ),
                 SizedBox(height: 0.025 * size.height),
               ],
             ),
@@ -705,16 +775,17 @@ class _QuizModelState extends State<QuizModel> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
             alignment: Alignment(
-                Random().nextDouble() * 2 - 1, Random().nextDouble() * 2 - 1,),
+              Random().nextDouble() * 2 - 1,
+              Random().nextDouble() * 2 - 1,
+            ),
             child: Text(
-              "WS",
+              'WS',
               style: TextStyle(
                 fontSize: size.width / 279,
                 color: Colors.white.withOpacity(0.3),
@@ -725,14 +796,19 @@ class _QuizModelState extends State<QuizModel> {
             alignment: Alignment(0, -1),
             child: SingleChildScrollView(
               child: Container(
-                  width: size.width * 0.9,
-                  margin: EdgeInsets.only(
-                    left: size.height / 50,
-                    right: size.height / 50,
-                    bottom: size.height / 9,
-                  ),
-                  child: buildQuestions(
-                      context, size, currentQuestionId, currentQuestionIndex,),),
+                width: size.width * 0.9,
+                margin: EdgeInsets.only(
+                  left: size.height / 50,
+                  right: size.height / 50,
+                  bottom: size.height / 9,
+                ),
+                child: buildQuestions(
+                  context,
+                  size,
+                  currentQuestionId,
+                  currentQuestionIndex,
+                ),
+              ),
             ),
           ),
           if (!widget.inlineTextInputButton)
@@ -749,12 +825,12 @@ class _QuizModelState extends State<QuizModel> {
                       text: 'Continue',
                       width: size.width,
                       requirement: widget.requireAnswer
-                          ? (selectedOption != null && selectedOption != "")
+                          ? (selectedOption != null && selectedOption != '')
                           : widget.answerLayout == QuizModelAnswerLayout.list ||
-                          widget.answerLayout ==
-                              QuizModelAnswerLayout.boxes
-                          ? selectedOption != null
-                          : true,
+                                  widget.answerLayout ==
+                                      QuizModelAnswerLayout.boxes
+                              ? selectedOption != null
+                              : true,
                     ),
                   ),
                   SizedBox(width: 0.054 * size.width),

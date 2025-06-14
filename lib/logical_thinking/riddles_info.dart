@@ -40,11 +40,11 @@ class _Riddles extends State<Riddles> {
               child: Column(
                 children: [
                   Text(
-                    "Logical",
+                    'Logical',
                     style: TextStyle(fontSize: 0.08 * size.height),
                   ),
                   Text(
-                    "Thinking",
+                    'Thinking',
                     style: TextStyle(fontSize: 0.035 * size.height),
                   ),
                 ],
@@ -52,7 +52,7 @@ class _Riddles extends State<Riddles> {
             ),
             SizedBox(height: 0.03 * size.height),
             Text(
-              "Exercise 1 - Math riddles",
+              'Exercise 1 - Math riddles',
               style: TextStyle(fontSize: 0.025 * size.height),
             ),
             SizedBox(height: 0.04 * size.height),
@@ -64,10 +64,10 @@ class _Riddles extends State<Riddles> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "In this exercises you will complete part of the ",
+                    text: 'In this exercises you will complete part of the ',
                   ),
                   TextSpan(
-                    text: "8 minutes to solve as many riddles as you can.",
+                    text: '8 minutes to solve as many riddles as you can.',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                 ],
@@ -82,31 +82,31 @@ class _Riddles extends State<Riddles> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "For each ",
+                    text: 'For each ',
                   ),
                   TextSpan(
-                    text: "correct answer ",
+                    text: 'correct answer ',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: "you will ",
+                    text: 'you will ',
                   ),
                   TextSpan(
-                    text: "get 5 points, ",
+                    text: 'get 5 points, ',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: "for each ",
+                    text: 'for each ',
                   ),
                   TextSpan(
-                    text: "wrong answer ",
+                    text: 'wrong answer ',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: "you will ",
+                    text: 'you will ',
                   ),
                   TextSpan(
-                    text: "loose 2 points.",
+                    text: 'loose 2 points.',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                 ],
@@ -121,14 +121,14 @@ class _Riddles extends State<Riddles> {
                 ),
                 children: const [
                   TextSpan(
-                    text: "When ready click \"",
+                    text: 'When ready click "',
                   ),
                   TextSpan(
-                    text: "CONTINUE",
+                    text: 'CONTINUE',
                     style: TextStyle(fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: ".\"",
+                    text: '."',
                   ),
                 ],
               ),

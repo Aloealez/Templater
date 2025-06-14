@@ -13,8 +13,8 @@ FutureBuilder idiomsBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String level = prefs.getString("level") ?? "cpe";
-      return await convertToRandomQuestions("idioms", level, 10);
+      String level = prefs.getString('level') ?? 'cpe';
+      return await convertToRandomQuestions('idioms', level, 10);
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {
@@ -23,8 +23,8 @@ FutureBuilder idiomsBuilder(
         );
       }
       return QuizModel(
-        "Idioms",
-        "Idioms",
+        'Idioms',
+        'Idioms',
         60,
         initialTest: initialTest,
         endingTest: endingTest,
@@ -32,10 +32,10 @@ FutureBuilder idiomsBuilder(
         initMaxScore: 0,
         singleTextQuestion: true,
         page: Home(),
-        description: "Idioms, expressions, and phrasal verbs.",
-        oldName: "idioms",
+        description: 'Idioms, expressions, and phrasal verbs.',
+        oldName: 'idioms',
         exerciseNumber: 0,
-        exerciseString: "Idioms",
+        exerciseString: 'Idioms',
         questions: snapshot.data!,
       );
     },

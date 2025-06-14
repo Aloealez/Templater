@@ -45,12 +45,12 @@ class PortHomeTasksWidget extends StatelessWidget {
           SizedBox(height: size.height / 12),
           Flexible(
             child: Text(
-              "BeSmart List",
+              'BeSmart List',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
                 fontSize: size.width / 8,
-                fontFamily: "OpenSauceOne",
+                fontFamily: 'OpenSauceOne',
               ),
             ),
           ),
@@ -64,7 +64,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                   height: size.height / 10,
                   child: Icon(
                     size: size.width / 8,
-                    basePlanTicked[i] == "1" ? Icons.check_circle_rounded : Icons.circle_outlined,
+                    basePlanTicked[i] == '1' ? Icons.check_circle_rounded : Icons.circle_outlined,
                     //basePlanTicked[i] == "1" ? "◉" : "○",
                     color: Colors.white,
                   ),
@@ -78,7 +78,7 @@ class PortHomeTasksWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: size.width / 11,
                         fontWeight: FontWeight.w600,
-                        fontFamily: "OpenSauceOne",
+                        fontFamily: 'OpenSauceOne',
                       ),
                     ),
                   ),

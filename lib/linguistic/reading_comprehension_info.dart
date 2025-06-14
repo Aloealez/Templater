@@ -22,7 +22,7 @@ class _ReadingComprehensionInfo extends State<ReadingComprehensionInfo> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 15,
@@ -35,27 +35,27 @@ class _ReadingComprehensionInfo extends State<ReadingComprehensionInfo> {
           children: <Widget>[
             Center(
               child: Text(
-                "Linguistic",
+                'Linguistic',
                 style: TextStyle(fontSize: 0.14 * size.width),
                 textAlign: TextAlign.center,
               ),
             ),
             Center(
               child: Text(
-                "Intelligence",
+                'Intelligence',
                 style: TextStyle(fontSize: 0.08 * size.width),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(height: 0.04 * size.height),
             Text(
-              " Exercise 2 - Reading Comprehension",
+              ' Exercise 2 - Reading Comprehension',
               style: TextStyle(fontSize: 0.05 * size.width),
               textAlign: TextAlign.start,
             ),
             SizedBox(height: 0.04 * size.height),
             Text(
-              "In this exercise, you will be presented with a passage of 500-900 words, followed by 10 multiple-choice questions. You will be able to go back to the reading passage at any time. When you are ready to start, click CONTINUE.",
+              'In this exercise, you will be presented with a passage of 500-900 words, followed by 10 multiple-choice questions. You will be able to go back to the reading passage at any time. When you are ready to start, click CONTINUE.',
               style: TextStyle(fontSize: size.height / 50),
             ),
             const Spacer(),

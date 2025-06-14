@@ -345,7 +345,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
                 );
               },
               child: Container(
-                width: widget.width * 0.5,
+                width: size.width * 0.75,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: widget.color,
@@ -362,7 +362,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
                   child: Text(
                     widget.text,
                     style: TextStyle(
-                      fontSize: widget.width / 16,
+                      fontSize: widget.width / 16.5,
                       color: Colors.white,
                       shadows: <Shadow>[
                         Shadow(

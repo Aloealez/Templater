@@ -27,7 +27,7 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
   onTertiary: Color(0xFFFFFFFF),
   primaryContainer: Color(0xFFE7D1FF),
   onPrimaryContainer: Color(0xFF000000),
-  surface: Color(0xFF131313),
+  surface: Color(0xFF030303),
   onSurface: Color(0xFFFFFFFF),
   error: Color.fromARGB(255, 234, 31, 17),
   shadow: Color.fromARGB(0, 0, 0, 0),
@@ -37,20 +37,26 @@ ColorScheme defaultDarkColors = const ColorScheme.dark(
   onTertiaryFixed: Colors.white,
 );
 
-Future<void> setThemeColor(SharedPreferences? prefs, Brightness brightness,
-    String colorKey, Color? color,) async {
+Future<void> setThemeColor(
+  SharedPreferences? prefs,
+  Brightness brightness,
+  String colorKey,
+  Color? color,
+) async {
   if (prefs != null) {
-    print("Setting color $colorKey to $color");
+    print('Setting color $colorKey to $color');
     if (color == null) {
       await prefs.remove(
-          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+      );
     } else {
       await prefs.setInt(
-          "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
-          color.value,);
+        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+        color.value,
+      );
     }
   } else {
-    print("setThemeColor() Prefs is null");
+    print('setThemeColor() Prefs is null');
   }
 }
 
@@ -64,78 +70,79 @@ Color getThemeColor(
     colorNum = null;
   } else {
     colorNum = prefs.getInt(
-        "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",);
+      "theme_colorScheme_${brightness == Brightness.dark ? "dark" : "light"}_$colorKey",
+    );
   }
 
   Color color = Color(0xFF000000);
   if (colorNum == null) {
     switch (colorKey) {
-      case "primary":
+      case 'primary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.primary
             : defaultLightColors.primary;
         break;
-      case "onPrimary":
+      case 'onPrimary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.onPrimary
             : defaultLightColors.onPrimary;
         break;
-      case "secondary":
+      case 'secondary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.secondary
             : defaultLightColors.secondary;
         break;
-      case "onSecondary":
+      case 'onSecondary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.onSecondary
             : defaultLightColors.onSecondary;
         break;
-      case "tertiary":
+      case 'tertiary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.tertiary
             : defaultLightColors.tertiary;
         break;
-      case "onTertiary":
+      case 'onTertiary':
         color = brightness == Brightness.dark
             ? defaultDarkColors.onTertiary
             : defaultLightColors.onTertiary;
         break;
-      case "primaryContainer":
+      case 'primaryContainer':
         color = brightness == Brightness.dark
             ? defaultDarkColors.primaryContainer
             : defaultLightColors.primaryContainer;
         break;
-      case "onPrimaryContainer":
+      case 'onPrimaryContainer':
         color = brightness == Brightness.dark
             ? defaultDarkColors.onPrimaryContainer
             : defaultLightColors.onPrimaryContainer;
         break;
-      case "surface":
+      case 'surface':
         color = brightness == Brightness.dark
             ? defaultDarkColors.surface
             : defaultLightColors.surface;
         break;
-      case "onSurface":
+      case 'onSurface':
         color = brightness == Brightness.dark
             ? defaultDarkColors.onSurface
             : defaultLightColors.onSurface;
         break;
-      case "error":
+      case 'error':
         color = brightness == Brightness.dark
             ? defaultDarkColors.error
             : defaultLightColors.error;
         break;
-      case "shadow":
+      case 'shadow':
         color = brightness == Brightness.dark
             ? defaultDarkColors.shadow
             : defaultLightColors.shadow;
         break;
-      case "primaryFixed":
+      case 'primaryFixed':
         color = brightness == Brightness.dark
             ? defaultDarkColors.primaryFixed
             : defaultLightColors.primaryFixed;
         break;
-      case "primaryFixedDim":
+      case 'primaryFixedDim':
         color = brightness == Brightness.dark
             ? defaultDarkColors.primaryFixedDim
             : defaultLightColors.primaryFixedDim;
@@ -151,39 +158,39 @@ Color getThemeColor(
 ColorScheme createDarkColorScheme(SharedPreferences? prefs) {
   Brightness brightness = Brightness.dark;
   return ColorScheme.dark(
-    primary: getThemeColor(prefs, brightness, "primary"),
-    onPrimary: getThemeColor(prefs, brightness, "onPrimary"),
-    secondary: getThemeColor(prefs, brightness, "secondary"),
-    onSecondary: getThemeColor(prefs, brightness, "onSecondary"),
-    tertiary: getThemeColor(prefs, brightness, "tertiary"),
-    onTertiary: getThemeColor(prefs, brightness, "onTertiary"),
-    primaryContainer: getThemeColor(prefs, brightness, "primaryContainer"),
-    onPrimaryContainer: getThemeColor(prefs, brightness, "onPrimaryContainer"),
-    primaryFixed: getThemeColor(prefs, brightness, "primaryFixed"),
-    primaryFixedDim: getThemeColor(prefs, brightness, "primaryFixedDim"),
-    surface: getThemeColor(prefs, brightness, "surface"),
-    onSurface: getThemeColor(prefs, brightness, "onSurface"),
-    error: getThemeColor(prefs, brightness, "error"),
-    shadow: getThemeColor(prefs, brightness, "shadow"),
+    primary: getThemeColor(prefs, brightness, 'primary'),
+    onPrimary: getThemeColor(prefs, brightness, 'onPrimary'),
+    secondary: getThemeColor(prefs, brightness, 'secondary'),
+    onSecondary: getThemeColor(prefs, brightness, 'onSecondary'),
+    tertiary: getThemeColor(prefs, brightness, 'tertiary'),
+    onTertiary: getThemeColor(prefs, brightness, 'onTertiary'),
+    primaryContainer: getThemeColor(prefs, brightness, 'primaryContainer'),
+    onPrimaryContainer: getThemeColor(prefs, brightness, 'onPrimaryContainer'),
+    primaryFixed: getThemeColor(prefs, brightness, 'primaryFixed'),
+    primaryFixedDim: getThemeColor(prefs, brightness, 'primaryFixedDim'),
+    surface: getThemeColor(prefs, brightness, 'surface'),
+    onSurface: getThemeColor(prefs, brightness, 'onSurface'),
+    error: getThemeColor(prefs, brightness, 'error'),
+    shadow: getThemeColor(prefs, brightness, 'shadow'),
   );
 }
 
 ColorScheme createLightColorScheme(SharedPreferences? prefs) {
   Brightness brightness = Brightness.light;
   return ColorScheme.light(
-    primary: getThemeColor(prefs, brightness, "primary"),
-    onPrimary: getThemeColor(prefs, brightness, "onPrimary"),
-    secondary: getThemeColor(prefs, brightness, "secondary"),
-    onSecondary: getThemeColor(prefs, brightness, "onSecondary"),
-    tertiary: getThemeColor(prefs, brightness, "tertiary"),
-    onTertiary: getThemeColor(prefs, brightness, "onTertiary"),
-    primaryContainer: getThemeColor(prefs, brightness, "primaryContainer"),
-    onPrimaryContainer: getThemeColor(prefs, brightness, "onPrimaryContainer"),
-    primaryFixed: getThemeColor(prefs, brightness, "primaryFixed"),
-    primaryFixedDim: getThemeColor(prefs, brightness, "primaryFixedDim"),
-    surface: getThemeColor(prefs, brightness, "surface"),
-    onSurface: getThemeColor(prefs, brightness, "onSurface"),
-    error: getThemeColor(prefs, brightness, "error"),
-    shadow: getThemeColor(prefs, brightness, "shadow"),
+    primary: getThemeColor(prefs, brightness, 'primary'),
+    onPrimary: getThemeColor(prefs, brightness, 'onPrimary'),
+    secondary: getThemeColor(prefs, brightness, 'secondary'),
+    onSecondary: getThemeColor(prefs, brightness, 'onSecondary'),
+    tertiary: getThemeColor(prefs, brightness, 'tertiary'),
+    onTertiary: getThemeColor(prefs, brightness, 'onTertiary'),
+    primaryContainer: getThemeColor(prefs, brightness, 'primaryContainer'),
+    onPrimaryContainer: getThemeColor(prefs, brightness, 'onPrimaryContainer'),
+    primaryFixed: getThemeColor(prefs, brightness, 'primaryFixed'),
+    primaryFixedDim: getThemeColor(prefs, brightness, 'primaryFixedDim'),
+    surface: getThemeColor(prefs, brightness, 'surface'),
+    onSurface: getThemeColor(prefs, brightness, 'onSurface'),
+    error: getThemeColor(prefs, brightness, 'error'),
+    shadow: getThemeColor(prefs, brightness, 'shadow'),
   );
 }

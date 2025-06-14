@@ -1,10 +1,10 @@
 {
   "answers": {
-    "A": "(\\frac{74}{6}, 0)",
-    "B": "(\\frac{-68}{6}, 0)",
-    "C": "(\\frac{-80}{6}, 0)",
-    "D": "(\\frac{-74}{6}, 0)"
-  },
+    "A": "$\\left( \\frac{74}{6}, 0 \\right)$",
+    "B": "$\\left( \\frac{-68}{6}, 0 \\right)$",
+    "C": "$\\left( \\frac{-80}{6}, 0 \\right)$",
+    "D": "$\\left( \\frac{-74}{6}, 0 \\right)$"
+},
   "correct": {
     "A": false,
     "B": false,

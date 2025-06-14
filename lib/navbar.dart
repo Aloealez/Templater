@@ -5,7 +5,6 @@ import 'home.dart';
 import 'score_n_progress/progress.dart';
 import 'activities/brain_train_activities.dart';
 import 'settings/settings.dart';
-import 'analysis/analysis_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
@@ -50,9 +49,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               );
             } else if (index == 1) {
               return const Progress();
+              // } else if (index == 3) {
+              //   return const AnalysisScreen();
             } else if (index == 3) {
-              return const AnalysisScreen();
-            } else if (index == 4) {
               return const Settings();
             } else {
               return FutureBuilder(
@@ -103,11 +102,11 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             unselectedItemColor: Theme.of(context).colorScheme.secondary,
             selectedItemColor: Theme.of(context).colorScheme.onSurface,
             items: [
-              buildMenuIcon(0, "Activities"),
-              buildMenuIcon(1, "Progress"),
-              buildMenuIcon(2, "Home"),
-              buildMenuIcon(3, "Analysis"),
-              buildMenuIcon(4, "Settings"),
+              buildMenuIcon(0, 'Activities'),
+              buildMenuIcon(1, 'Progress'),
+              buildMenuIcon(2, 'Home'),
+              // buildMenuIcon(3, "Analysis"),
+              buildMenuIcon(3, 'Settings'),
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
@@ -132,7 +131,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           children: [
             ImageIcon(
               AssetImage(
-                "assets/navbar_icons/${name.toLowerCase()}.png",
+                'assets/navbar_icons/${name.toLowerCase()}.png',
               ),
               // color: Theme.of(context).colorScheme.secondary,
               size: _selectedIndex == index ? 30 : 28,
@@ -144,7 +143,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           ],
         ),
       ),
-      label: "",
+      label: '',
     );
   }
 }

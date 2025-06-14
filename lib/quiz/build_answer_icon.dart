@@ -38,18 +38,18 @@ ImageIcon buildAnswerIcon(
     ) {
   return ImageIcon(
     coloredIcon
-        ? answerLetter == "A"
+        ? answerLetter == 'A'
         ? AssetImage('assets/icons/a_filled.png')
-        : answerLetter == "B"
+        : answerLetter == 'B'
         ? AssetImage('assets/icons/b_filled.png')
-        : answerLetter == "C"
+        : answerLetter == 'C'
         ? AssetImage('assets/icons/c_filled.png')
         : AssetImage('assets/icons/d_filled.png')
-        : answerLetter == "A"
+        : answerLetter == 'A'
         ? AssetImage('assets/icons/a_outlined.png')
-        : answerLetter == "B"
+        : answerLetter == 'B'
         ? AssetImage('assets/icons/b_outlined.png')
-        : answerLetter == "C"
+        : answerLetter == 'C'
         ? AssetImage('assets/icons/c_outlined.png')
         : AssetImage('assets/icons/d_outlined.png'),
     color: coloredIcon

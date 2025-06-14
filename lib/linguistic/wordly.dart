@@ -165,7 +165,7 @@ class _Wordly extends State<Wordly> {
 
   Future<bool> lookupWord(BuildContext context) async {
     Size size = MediaQuery.of(context).size;
-    String word = "";
+    String word = '';
     for (int i = 1; i <= 5; ++i) {
       word += letters[(act - act % 6) ~/ 6][i];
     }
@@ -198,7 +198,7 @@ class _Wordly extends State<Wordly> {
                     children: <Widget>[
                       RichText(
                         text: TextSpan(
-                          text: "You Lose!\n\n",
+                          text: 'You Lose!\n\n',
                           style: TextStyle(
                             fontSize: size.width / 20,
                             fontWeight: FontWeight.w600,
@@ -252,7 +252,7 @@ class _Wordly extends State<Wordly> {
                         width: size.width / 8,
                         child: Center(
                           child: Text(
-                            "OK",
+                            'OK',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: size.width / 25,
@@ -280,17 +280,17 @@ class _Wordly extends State<Wordly> {
   void tappedKey(BuildContext context, int row, int indx) {
     setState(
       () {
-        if (qwerty[row][indx] == "DEL") {
+        if (qwerty[row][indx] == 'DEL') {
           if (act % 6 > 0) {
-            letters[(act - act % 6) ~/ 6][act % 6] = "";
+            letters[(act - act % 6) ~/ 6][act % 6] = '';
             --act;
           }
-        } else if (qwerty[row][indx] == "ENTER") {
+        } else if (qwerty[row][indx] == 'ENTER') {
           handleEnter(context);
         } else if (act % 6 == 5 &&
-            letters[(act - act % 6) ~/ 6][act % 6] != "") {
+            letters[(act - act % 6) ~/ 6][act % 6] != '') {
         } else if (letters[((act + 1) - (act + 1) % 6) ~/ 6][(act + 1) % 6] ==
-            "") {
+            '') {
           if (act % 6 != 5) ++act;
           letters[(act - act % 6) ~/ 6][act % 6] = qwerty[row][indx];
         }
@@ -313,7 +313,7 @@ class _Wordly extends State<Wordly> {
 
   final wordGenerator = WordGenerator();
 
-  String noun = "";
+  String noun = '';
 
   @override
   void initState() {
@@ -328,7 +328,7 @@ class _Wordly extends State<Wordly> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -347,7 +347,7 @@ class _Wordly extends State<Wordly> {
                   ),
                   Center(
                     child: Text(
-                      "Wordly",
+                      'Wordly',
                       style: TextStyle(
                         fontSize: size.width / 8,
                       ),

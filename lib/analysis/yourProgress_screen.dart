@@ -28,7 +28,7 @@ class CombinedProgress extends StatelessWidget {
             ? const ProgressWidget()
             : Weak
                 ? const WeakWidget()
-                : const Text("No data selected"),
+                : const Text('No data selected'),
       ),
     );
   }
@@ -60,14 +60,14 @@ class _ProgressState extends State<ProgressWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context, "Your Progress"),
+      appBar: appBar(context, 'Your Progress'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            buildAnimatedContainer(0, "Mathematics"),
+            buildAnimatedContainer(0, 'Mathematics'),
             const SizedBox(height: 20),
-            buildAnimatedContainer2(1, "Reading & Writing"),
+            buildAnimatedContainer2(1, 'Reading & Writing'),
           ],
         ),
       ),
@@ -119,9 +119,9 @@ class _ProgressState extends State<ProgressWidget> {
                       children: [
                         if (isOpen) ...[
                           const SizedBox(height: 12),
-                          buildProgressBar("Algebra", 54),
-                          buildProgressBar("Advanced Math", 72),
-                          buildProgressBar("Geometry &\nTrigonometry", 100),
+                          buildProgressBar('Algebra', 54),
+                          buildProgressBar('Advanced Math', 72),
+                          buildProgressBar('Geometry &\nTrigonometry', 100),
                         ],
                       ],
                     ),
@@ -180,9 +180,9 @@ class _ProgressState extends State<ProgressWidget> {
                       children: [
                         if (isOpen) ...[
                           const SizedBox(height: 12),
-                          buildProgressBar("Reading", 54),
-                          buildProgressBar("Summary", 72),
-                          buildProgressBar("Geometry &\nTrigonometry", 100),
+                          buildProgressBar('Reading', 54),
+                          buildProgressBar('Summary', 72),
+                          buildProgressBar('Geometry &\nTrigonometry', 100),
                         ],
                       ],
                     ),
@@ -227,7 +227,7 @@ class _ProgressState extends State<ProgressWidget> {
               ),
               SizedBox(width: 10),
               Text(
-                "$percentage% Correct",
+                '$percentage% Correct',
                 style: TextStyle(color: Colors.white70, fontSize: 12),
               ),
             ],
@@ -250,14 +250,14 @@ class _WeakState extends State<WeakWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context, "Your Progress"),
+      appBar: appBar(context, 'Your Progress'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            buildAnimatedContainer(3, "Mathematics"),
+            buildAnimatedContainer(3, 'Mathematics'),
             const SizedBox(height: 20),
-            buildAnimatedContainer2(4, "Reading & Writing"),
+            buildAnimatedContainer2(4, 'Reading & Writing'),
           ],
         ),
       ),
@@ -309,9 +309,9 @@ class _WeakState extends State<WeakWidget> {
                       children: [
                         if (isOpen) ...[
                           const SizedBox(height: 12),
-                          buildProgressBar("Algebra", 54),
-                          buildProgressBar("Advanced Math", 72),
-                          buildProgressBar("Geometry &\nTrigonometry", 100),
+                          buildProgressBar('Algebra', 54),
+                          buildProgressBar('Advanced Math', 72),
+                          buildProgressBar('Geometry &\nTrigonometry', 100),
                         ],
                       ],
                     ),
@@ -370,9 +370,9 @@ class _WeakState extends State<WeakWidget> {
                       children: [
                         if (isOpen) ...[
                           const SizedBox(height: 12),
-                          buildProgressBar("Reading", 54),
-                          buildProgressBar("Summary", 72),
-                          buildProgressBar("Geometry &\nTrigonometry", 100),
+                          buildProgressBar('Reading', 54),
+                          buildProgressBar('Summary', 72),
+                          buildProgressBar('Geometry &\nTrigonometry', 100),
                         ],
                       ],
                     ),
@@ -417,7 +417,7 @@ class _WeakState extends State<WeakWidget> {
               ),
               SizedBox(width: 10),
               Text(
-                "$percentage% Correct",
+                '$percentage% Correct',
                 style: TextStyle(color: Colors.white70, fontSize: 12),
               ),
             ],

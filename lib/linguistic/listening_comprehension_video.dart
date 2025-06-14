@@ -45,7 +45,7 @@ class _Video extends State<ListeningComprehensionVideo> {
       enableKeyboard: false,
     ),
   );
-  late String videoId = "";
+  late String videoId = '';
   late int exerciseId;
 
   late dynamic tasks;
@@ -72,7 +72,7 @@ class _Video extends State<ListeningComprehensionVideo> {
 
       final file = await rootBundle
           .loadString('assets/attention/long_term_concentration_test.yaml');
-      tasks = loadYaml(file)["tests"][exerciseId]["questions"];
+      tasks = loadYaml(file)['tests'][exerciseId]['questions'];
 
       // for (var i = 0; i < tasks.length; i++) {
       //   newQuestions.add(tasks[i]["question"]);
@@ -89,15 +89,15 @@ class _Video extends State<ListeningComprehensionVideo> {
       //   answers = newAnswers;
       // });
     } catch (e) {
-      print("Error: $e");
+      print('Error: $e');
     }
   }
 
   void chooseVideo() async {
     final file = await rootBundle
         .loadString('assets/attention/long_term_concentration_test.yaml');
-    final newVideoId = loadYaml(file)["tests"][exerciseId]["video_id"];
-    _controller.loadVideo("https://www.youtube.com/watch?v=$newVideoId");
+    final newVideoId = loadYaml(file)['tests'][exerciseId]['video_id'];
+    _controller.loadVideo('https://www.youtube.com/watch?v=$newVideoId');
 
     setState(() {
       videoId = newVideoId;
@@ -110,7 +110,7 @@ class _Video extends State<ListeningComprehensionVideo> {
     return videoId.isEmpty
         ? const Center(child: CircularProgressIndicator())
         : Scaffold(
-            appBar: appBar(context, ""),
+            appBar: appBar(context, ''),
             body: SingleChildScrollView(
               child: Container(
                 width: size.width * 0.9,
@@ -136,13 +136,13 @@ class _Video extends State<ListeningComprehensionVideo> {
                               ),
                               children: [
                                 TextSpan(
-                                  text: "Linguistic\n",
+                                  text: 'Linguistic\n',
                                   style: TextStyle(
                                     fontSize: size.width / 8,
                                   ),
                                 ),
                                 TextSpan(
-                                  text: "Intelligence",
+                                  text: 'Intelligence',
                                   style: TextStyle(
                                     fontSize: size.width / 16,
                                   ),
@@ -156,14 +156,14 @@ class _Video extends State<ListeningComprehensionVideo> {
                           height: size.height / 50,
                         ),
                         Text(
-                          "Exercise 1 - Listening Comprehension",
+                          'Exercise 1 - Listening Comprehension',
                           style: TextStyle(fontSize: size.width / 22),
                         ),
                         SizedBox(
                           height: size.height / 20,
                         ),
                         Text(
-                          "Do the following listening exercise.",
+                          'Do the following listening exercise.',
                           style: TextStyle(fontSize: size.width / 24),
                         ),
                         SizedBox(
@@ -176,7 +176,7 @@ class _Video extends State<ListeningComprehensionVideo> {
                           height: size.height / 50,
                         ),
                         Text(
-                          "While listening we recommend you make notes.",
+                          'While listening we recommend you make notes.',
                           style: TextStyle(fontSize: size.width / 26),
                         ),
                       ],
@@ -194,8 +194,8 @@ class _Video extends State<ListeningComprehensionVideo> {
                           //   exerciseId: exerciseId,
                           // ),
                           route: QuizModel(
-                            "Linguistic",
-                            "Linguistic",
+                            'Linguistic',
+                            'Linguistic',
                             60,
                             initialTest: widget.initialTest,
                             endingTest: widget.endingTest,
@@ -206,34 +206,34 @@ class _Video extends State<ListeningComprehensionVideo> {
                                 : widget.endingTest
                                 ? const ReadingComprehensionInfo(endingTest: true)
                                 : const ReadingComprehensionInfo(),
-                            description: "Exercise 1 - Listening Comprehension",
-                            oldName: "listening_comprehension",
+                            description: 'Exercise 1 - Listening Comprehension',
+                            oldName: 'listening_comprehension',
                             exerciseNumber: 2,
-                            exerciseString: "ListeningComprehensionVideo",
+                            exerciseString: 'ListeningComprehensionVideo',
                             questions: {
                               for (int i = 0; i < tasks.length; ++i)
-                                "$i": () {
+                                '$i': () {
                                   Map<String, String> answers = {};
                                   answers = {
-                                    "A": tasks[i]["answers"][0].toString(),
-                                    "B": tasks[i]["answers"][1].toString(),
-                                    if (tasks[i]["answers"].length >= 3) "C": tasks[i]["answers"][2].toString(),
-                                    if (tasks[i]["answers"].length >= 4) "D": tasks[i]["answers"][3].toString(),
+                                    'A': tasks[i]['answers'][0].toString(),
+                                    'B': tasks[i]['answers'][1].toString(),
+                                    if (tasks[i]['answers'].length >= 3) 'C': tasks[i]['answers'][2].toString(),
+                                    if (tasks[i]['answers'].length >= 4) 'D': tasks[i]['answers'][3].toString(),
                                   };
                                   Map<String, bool> correct = {
-                                    "A": tasks[i]["correct_answer"] == 0,
-                                    "B": tasks[i]["correct_answer"] == 1,
-                                    "C": tasks[i]["correct_answer"] == 2,
-                                    "D": tasks[i]["correct_answer"] == 3,
+                                    'A': tasks[i]['correct_answer'] == 0,
+                                    'B': tasks[i]['correct_answer'] == 1,
+                                    'C': tasks[i]['correct_answer'] == 2,
+                                    'D': tasks[i]['correct_answer'] == 3,
                                   };
                                   return QuizQuestionData(
                                     answers,
                                     correct,
                                     {
-                                      "A": 1,
-                                      "B": 1,
-                                      "C": 1,
-                                      "D": 1,
+                                      'A': 1,
+                                      'B': 1,
+                                      'C': 1,
+                                      'D': 1,
                                     },
                                     question: "${tasks[i]["question"]}",
                                   );

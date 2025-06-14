@@ -13,8 +13,8 @@ FutureBuilder spellingMistakesBuilder(
   return FutureBuilder(
     future: () async {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      String level = prefs.getString("level") ?? "cpe";
-      return await convertToRandomQuestions("spelling_mistakes", level, 10);
+      String level = prefs.getString('level') ?? 'cpe';
+      return await convertToRandomQuestions('spelling_mistakes', level, 10);
     }(),
     builder: (context, snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {
@@ -23,8 +23,8 @@ FutureBuilder spellingMistakesBuilder(
         );
       }
       return QuizModel(
-        "Spelling",
-        "Spelling",
+        'Spelling',
+        'Spelling',
         60,
         answerLayout: QuizModelAnswerLayout.boxes,
         centerTitle: true,
@@ -42,10 +42,10 @@ FutureBuilder spellingMistakesBuilder(
                 ? strongConcentrationBuilder(
                     initialTest: false, endingTest: true,)
                 : Home(),
-        description: "Exercise 2 - spelling mistakes",
-        oldName: "long_term_concentration",
+        description: 'Exercise 2 - spelling mistakes',
+        oldName: 'long_term_concentration',
         exerciseNumber: 0,
-        exerciseString: "SpellingMistakes",
+        exerciseString: 'SpellingMistakes',
         questions: snapshot.data!,
       );
     },

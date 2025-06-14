@@ -15,7 +15,7 @@ class _MemoryGame1 extends State<MemoryGame1> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 15,
@@ -28,13 +28,13 @@ class _MemoryGame1 extends State<MemoryGame1> {
           children: <Widget>[
             Center(
               child: Text(
-                "Memory",
+                'Memory',
                 style: TextStyle(fontSize: 0.06 * size.height),
                 textAlign: TextAlign.center,
               ),
             ),
             Text(
-              "Exercise 1 - Memory Game",
+              'Exercise 1 - Memory Game',
               style: TextStyle(fontSize: 0.025 * size.height),
               textAlign: TextAlign.start,
             ),

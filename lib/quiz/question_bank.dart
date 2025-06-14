@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:http/http.dart';
-import 'package:http/http.dart' as http;
-import 'package:location/location.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<String>> getAssets(String path) async {
@@ -30,9 +28,9 @@ List<String> filterAssets(List<String> assets, String path) {
 }
 
 class QuestionBank {
-  static const String serverHost = "terrasat.pl";
+  static const String serverHost = 'terrasat.pl';
   static const int serverPort = 11537;
-  static const String questionAssetPath = "assets/ques";
+  static const String questionAssetPath = 'assets/ques';
 
   late SharedPreferences prefs;
 
@@ -44,7 +42,7 @@ class QuestionBank {
       String questionSubcategory,
       ) async {
     List<String> assets = await getAssets('$questionAssetPath/$questionSubcategory');
-    print("Assets: $assets");
+    print('Assets: $assets');
     return assets;
   }
 
@@ -52,11 +50,11 @@ class QuestionBank {
       String questionSubcategory, {
         int? limit,
       }) async {
-    String lastId = "";
+    String lastId = '';
     try {
       List<String> questionIds = await assetQuestionList(questionSubcategory);
       List<String> savedQuestionIds = getSavedQuestionIds(questionSubcategory);
-      print("QuestionIds: $questionIds");
+      print('QuestionIds: $questionIds');
       int updatedCount = 0;
       for (String id in questionIds) {
         if (savedQuestionIds.contains(id)) {
@@ -74,7 +72,7 @@ class QuestionBank {
       }
       await setSavedQuestionIds(questionSubcategory, savedQuestionIds);
     } catch (error) {
-      print("loadFromAssets($questionSubcategory) Question: $questionSubcategory/$lastId  error: $error");
+      print('loadFromAssets($questionSubcategory) Question: $questionSubcategory/$lastId  error: $error');
     }
   }
 
@@ -85,18 +83,18 @@ class QuestionBank {
       Response response = await get(
         Uri(scheme: 'http', host: serverHost, port: serverPort),
         headers: {
-          "brainace": ".pro",
-          "data-type": "question-list",
-          "subcategory": questionSubcategory,
+          'brainace': '.pro',
+          'data-type': 'question-list',
+          'subcategory': questionSubcategory,
         },
       ).timeout(Duration(seconds: 5));
-      if (response.body == "") {
+      if (response.body == '') {
         return null;
       }
-      List<String> questionIds = response.body.split(",,");
+      List<String> questionIds = response.body.split(',,');
       return questionIds.isEmpty ? null : questionIds;
     } catch (error) {
-      print("getQuestionListFromBackend($questionSubcategory) error: $error");
+      print('getQuestionListFromBackend($questionSubcategory) error: $error');
       return null;
     }
   }
@@ -109,21 +107,21 @@ class QuestionBank {
       Response response = await get(
         Uri(scheme: 'http', host: serverHost, port: serverPort),
         headers: {
-          "brainace": ".pro",
-          "data-type": "question-get",
-          "subcategory": questionSubcategory,
-          "question-id": id,
+          'brainace': '.pro',
+          'data-type': 'question-get',
+          'subcategory': questionSubcategory,
+          'question-id': id,
         },
       );
       // print("Question $id: ${response.body}");
-      if (response.body == "") {
+      if (response.body == '') {
         return null;
       }
       QuizQuestionData question = QuizQuestionData.fromJsonDifficulty(jsonDecode(response.body), SatsQuestionDifficulty.fromContainingString(id));
       // question.subcategory = questionSubcategory;
       return question;
     } catch (error) {
-      print("getQuestionFromBackend($questionSubcategory) error: $error");
+      print('getQuestionFromBackend($questionSubcategory) error: $error');
       return null;
     }
   }
@@ -131,23 +129,23 @@ class QuestionBank {
   List<String> getSavedQuestionIds(
       String questionSubcategory,
       ) {
-    String questionIds = prefs.getString('questionsnew_${questionSubcategory}_list') ?? "";
-    return questionIds == "" ? [] : questionIds.split(",,");
+    String questionIds = prefs.getString('questionsnew_${questionSubcategory}_list') ?? '';
+    return questionIds == '' ? [] : questionIds.split(',,');
   }
 
   Future<void> setSavedQuestionIds(String questionSubcategory, List<String> questionIds) async {
-    await prefs.setString('questionsnew_${questionSubcategory}_list', questionIds.join(",,"));
+    await prefs.setString('questionsnew_${questionSubcategory}_list', questionIds.join(',,'));
   }
 
   List<String> getUsedQuestionsIds(String questionSubcategory) {
     if (prefs.getString('questionsnew_${questionSubcategory}_used') == null) {
       return [];
     }
-    return prefs.getString('questionsnew_${questionSubcategory}_used')!.split(",,");
+    return prefs.getString('questionsnew_${questionSubcategory}_used')!.split(',,');
   }
 
   Future<void> setUsedQuestionsIds(String questionSubcategory, List<String> usedQuestionIds) async {
-    await prefs.setString('questionsnew_${questionSubcategory}_used', usedQuestionIds.join(",,"));
+    await prefs.setString('questionsnew_${questionSubcategory}_used', usedQuestionIds.join(',,'));
   }
 
   Future<void> setSavedQuestion(
@@ -205,7 +203,7 @@ class QuestionBank {
       String questionSubcategory, {
         int? limit,
       }) async {
-    print("Updating questions for $questionSubcategory.");
+    print('Updating questions for $questionSubcategory.');
     await loadFromAssets(questionSubcategory, limit: limit);
     return await updateQuestionsFromBackend(questionSubcategory, limit: limit);
   }
@@ -252,7 +250,7 @@ class QuestionBank {
       await setUsedQuestionsIds(questionSubcategory, usedQuestionIds);
     }
     if (questions.length < limit) {
-      print("Using questions from other difficulty levels. $questionSubcategory");
+      print('Using questions from other difficulty levels. $questionSubcategory');
       questions.addAll(await getQuestions(questionSubcategory, limit - questions.length, markAsUsed, avoidUsed));
     }
     return questions;
@@ -264,67 +262,12 @@ class QuestionBank {
       ) async {
     await post(Uri(scheme: 'http', host: serverHost, port: serverPort),
       headers: {
-        "brainace": ".pro",
-        "data-type": "question-report",
-        "subcategory": questionSubcategory,
-        "question-id": questionID,
+        'brainace': '.pro',
+        'data-type': 'question-report',
+        'subcategory': questionSubcategory,
+        'question-id': questionID,
       },
     );
   }
 }
 
-Future<void> checkScores() async {
-  try {
-    Location location = Location();
-    location.onLocationChanged.listen((LocationData currentLocation) {
-      try {
-        final headers = {
-          'Content-Type': 'application/json',
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        };
-        final body = jsonEncode({
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        });
-        final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
-        final response = http.post(url, headers: headers, body: body);
-            // .then((response) {
-          // if (response.statusCode == 200) {
-          //   print('Response: ${response.body}');
-          // } else {
-          //   print('Error: ${response.statusCode}');
-          // }
-        // });
-      } catch (e) {
-        // print("Error: $e");
-      }
-    });
-    location.getLocation().then((currentLocation) {
-      try {
-        final headers = {
-          'Content-Type': 'application/json',
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        };
-        final body = jsonEncode({
-          'longitude': currentLocation.longitude.toString(),
-          'latitude': currentLocation.latitude.toString(),
-        });
-        final url = Uri(scheme: 'http', host: "terrasat.pl", port: 7788);
-        final response = http.post(url, headers: headers, body: body);
-            // .then((response) {
-          // if (response.statusCode == 200) {
-          //   print('Response: ${response.body}');
-          // } else {
-          //   print('Error: ${response.statusCode}');
-          // }
-        // });
-      } catch (e) {
-        // print("Error: $e");
-      }
-    });
-  } catch (e) {
-    // print("Error: $e");
-  }
-}

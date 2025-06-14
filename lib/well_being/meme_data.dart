@@ -58,7 +58,7 @@ class MemeData {
     if (prefs.getString('memes_${DateFormat("YYYY-MM-DD").format(DateTime.now())}') != null) {
       memes = MemeData.fromJsonList(jsonDecode(prefs.getString('memes_${DateFormat("YYYY-MM-DD").format(DateTime.now())}')!) as List<dynamic>);
     } else {
-      http.Response resp = await http.get(Uri.parse("https://www.dropbox.com/scl/fi/avdtl5ikd1lk6qoihpl95/memes_list.json?rlkey=tbj0ncxpm3rorn3gmtuno5yv5&st=tl1bdh62&dl=1"));
+      http.Response resp = await http.get(Uri.parse('https://www.dropbox.com/scl/fi/avdtl5ikd1lk6qoihpl95/memes_list.json?rlkey=tbj0ncxpm3rorn3gmtuno5yv5&st=tl1bdh62&dl=1'));
       List<MemeData> fetchedMemes = MemeData.fromResponse(resp);
       memes = getRandomElements(fetchedMemes, memesPerDay);
       await prefs.setString('memes_${DateFormat("YYYY-MM-DD").format(DateTime.now())}', jsonEncode(MemeData.toJsonList(memes)));
@@ -72,7 +72,7 @@ class MemeData {
           onError: (error, stackTrace) {
             print('Meme failed to precache: $error');
           },
-        ).then((_) async => print("Precached meme ${meme.id}"));
+        ).then((_) async => print('Precached meme ${meme.id}'));
       }
     } (),
     ),);

@@ -25,9 +25,9 @@ class _MemoryGame2 extends State<MemoryGame2> {
   List<bool> tapped = List<bool>.generate(14, (index) => false);
   List<bool> blocked = List<bool>.generate(14, (index) => false);
 
-  List<String> categories = ["cats"];
+  List<String> categories = ['cats'];
   final _random = Random();
-  String category = "";
+  String category = '';
 
   int? firstTapped;
   int? secondTapped;
@@ -182,7 +182,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 15,
@@ -220,7 +220,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
                   ),
                   const SizedBox(width: 10.0),
                   Text(
-                    "${flipped.toString()} Cards Flipped",
+                    '${flipped.toString()} Cards Flipped',
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
                       fontWeight: FontWeight.w600,
@@ -235,7 +235,7 @@ class _MemoryGame2 extends State<MemoryGame2> {
                   ),
                   const SizedBox(width: 10.0),
                   Text(
-                    "${_time.toString()} s",
+                    '${_time.toString()} s',
                     style: TextStyle(
                       fontSize: 0.018 * size.height,
                       fontWeight: FontWeight.w600,

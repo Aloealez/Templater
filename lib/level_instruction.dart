@@ -23,8 +23,8 @@ class LevelInstruction extends StatefulWidget {
     this.nextRouteBuilder,
     required this.testRouteBuilder,
     this.testTimeDescription,
-    this.testActivitiesDescription = "The test will comprise of 10 Reading and Writing Questions.",
-    this.testScoreDescription = "We will use your score to personalize your app experience.",
+    this.testActivitiesDescription = 'The test will comprise of 10 Reading and Writing Questions.',
+    this.testScoreDescription = 'We will use your score to personalize your app experience.',
     this.initialTest = false,
     this.endingTest = false,
     this.exercise,
@@ -39,16 +39,30 @@ class _LevelInstructionState extends State<LevelInstruction> {
   late SharedPreferences prefs;
   late Map<String, SatsQuestion> questions;
 
-  final String category = "rw";
+  final String category = 'rw';
 
   Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
-    print("Initialized shared preferences.");
+    print('Initialized shared preferences.');
   }
 
   @override
   void initState() {
     super.initState();
+    initSharedPrefs(); // Ensure shared preferences are initialized
+  }
+
+  void _navigateToNextRoute() {
+    try {
+      if (widget.nextRouteBuilder != null) {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => widget.nextRouteBuilder!));
+      } else {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest)));
+      }
+    } catch (e) {
+      print('Error navigating to next route: $e');
+      // Optionally show a dialog or snackbar to inform the user
+    }
   }
 
   @override
@@ -56,7 +70,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
@@ -80,7 +94,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
                         widget.testName,
                         style: TextStyle(
                           fontSize: 0.041 * size.height,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -91,7 +105,6 @@ class _LevelInstructionState extends State<LevelInstruction> {
                           Icon(Icons.access_time, size: size.width * 0.097, color: Theme.of(context).colorScheme.primaryContainer.withAlpha(200)),
                           SizedBox(width: 0.02 * size.width),
                           Text(
-                            // "${widget.testTime} minute${widget.testTime != 1 ? 's' : ''}",
                             widget.testTime,
                             style: TextStyle(
                               fontSize: 0.029 * size.height,
@@ -167,7 +180,7 @@ class _LevelInstructionState extends State<LevelInstruction> {
                   child: RedirectButton(
                     text: 'Start',
                     width: size.width,
-                    route: widget.nextRouteBuilder ?? widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest),
+                    route: widget.nextRouteBuilder ?? widget.testRouteBuilder(context, initialTest: widget.initialTest, endingTest: widget.endingTest), // Use the navigation method
                   ),
                 ),
                 if (widget.exercise != null) SizedBox(width: 0.054 * size.width),
@@ -176,9 +189,9 @@ class _LevelInstructionState extends State<LevelInstruction> {
                     height: size.height * 0.064,
                     width: size.width * 0.45,
                     child: RedirectButton(
-                        text: 'Progress',
-                        width: size.width,
-                        route: ProgressScreen(exercise: widget.exercise!),
+                      text: 'Progress',
+                      width: size.width,
+                      route: ProgressScreen(exercise: widget.exercise!),
                     ),
                   ),
               ],

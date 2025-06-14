@@ -105,95 +105,95 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       onError: (error, stackTrace) {
         print('Image failed to load: $error');
       },
-    ).then((_) async => print("Precached image $assetName"));
+    ).then((_) async => print('Precached image $assetName'));
   }
 
   Future<void> precacheAll() async {
-    for (String answer in ["A", "B", "C", "D"]) {
-      myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_filled.png");
+    for (String answer in ['A', 'B', 'C', 'D']) {
+      myAppPrecacheImage('assets/icons/${answer.toLowerCase()}_filled.png');
     }
-    for (String answer in ["A", "B", "C", "D"]) {
-      myAppPrecacheImage("assets/icons/${answer.toLowerCase()}_outlined.png");
+    for (String answer in ['A', 'B', 'C', 'D']) {
+      myAppPrecacheImage('assets/icons/${answer.toLowerCase()}_outlined.png');
     }
 
-    myAppPrecacheImage("assets/brain.png");
-    myAppPrecacheImage("assets/help_icon_dark.png");
-    myAppPrecacheImage("assets/help_icon_light.png");
+    myAppPrecacheImage('assets/brain.png');
+    myAppPrecacheImage('assets/help_icon_dark.png');
+    myAppPrecacheImage('assets/help_icon_light.png');
 
     // precache setting images
-    for (String settings in ["terms_of_use", "contact_us", "reset_the_app", "end_the_program", "our_website", "switch_theme", "customize_colors"]) {
-      myAppPrecacheImage("assets/settings/$settings.png");
+    for (String settings in ['terms_of_use', 'contact_us', 'reset_the_app', 'end_the_program', 'our_website', 'switch_theme', 'customize_colors']) {
+      myAppPrecacheImage('assets/settings/$settings.png');
     }
 
     // navbar icons
-    for (String navbar in ["activities", "analysis", "home", "progress", "settings"]) {
-      myAppPrecacheImage("assets/navbar_icons/$navbar.png");
+    for (String navbar in ['activities', 'analysis', 'home', 'progress', 'settings']) {
+      myAppPrecacheImage('assets/navbar_icons/$navbar.png');
     }
 
-    for (String improvementSelection in ["fun", "attention", "linguistic", "logical", "memory", "sats"]) {
-      myAppPrecacheImage("assets/improvement_selection/${improvementSelection}_dark.png");
-      myAppPrecacheImage("assets/improvement_selection/${improvementSelection}_light.png");
+    for (String improvementSelection in ['fun', 'attention', 'linguistic', 'logical', 'memory', 'sats']) {
+      myAppPrecacheImage('assets/improvement_selection/${improvementSelection}_dark.png');
+      myAppPrecacheImage('assets/improvement_selection/${improvementSelection}_light.png');
     }
 
     for (String satsSubcategory in SatsQuestionSubcategories.typesList) {
-      myAppPrecacheImage("assets/sats/start_images/$satsSubcategory.png");
+      myAppPrecacheImage('assets/sats/start_images/$satsSubcategory.png');
     }
 
     List<String> activitiesImages = [
-      "2048.png",
-      "Boundaries.png",
-      "brain_train_section.png",
-      "Central-Ideas-and-Details.png",
-      "vocabulary.png",
-      "Command-of-Evidence.png",
-      "correct_a_word.png",
-      "Cross-Text-Connections.png",
-      "data_analysis.png",
-      "faces_memory.png",
-      "find_the_image.png",
-      "find_the_number.png",
-      "find_the_word.png",
-      "Form-Structure-and-Sense.png",
-      "good_deed.png",
-      "grammar.png",
-      "hangman.png",
-      "idioms.png",
-      "Inferences.png",
-      "investing.png",
-      "learning_course.png",
-      "learning_words.png",
-      "listening.png",
-      "long_term_concentration.png",
-      "math.png",
-      "maths_section.png",
-      "meditation.png",
-      "memes.png",
-      "memory_game.png",
-      "poems.png",
-      "reading.png",
-      "reading_comprehension.png",
-      "reading_out_loud.png",
-      "reading_writing_section.png",
-      "Rhetorical-Synthesis.png",
-      "riddles.png",
-      "riddle_of_the_day.png",
-      "scrabble.png",
-      "seaquance_backwards.png",
-      "self_reflection.png",
-      "short_term_concentration.png",
-      "spelling.png",
-      "sport.png",
-      "strong_concentration.png",
-      "sudoku.png",
-      "Text-Structure-and-Purpose.png",
-      "Transitions.png",
-      "wordly.png",
-      "Words-in-Context.png",
-      "working_memory.png",
-      "yoga.png",
+      '2048.png',
+      'Boundaries.png',
+      'brain_train_section.png',
+      'Central-Ideas-and-Details.png',
+      'vocabulary.png',
+      'Command-of-Evidence.png',
+      'correct_a_word.png',
+      'Cross-Text-Connections.png',
+      'data_analysis.png',
+      'faces_memory.png',
+      'find_the_image.png',
+      'find_the_number.png',
+      'find_the_word.png',
+      'Form-Structure-and-Sense.png',
+      'good_deed.png',
+      'grammar.png',
+      'hangman.png',
+      'idioms.png',
+      'Inferences.png',
+      'investing.png',
+      'learning_course.png',
+      'learning_words.png',
+      'listening.png',
+      'long_term_concentration.png',
+      'math.png',
+      'maths_section.png',
+      'meditation.png',
+      'memes.png',
+      'memory_game.png',
+      'poems.png',
+      'reading.png',
+      'reading_comprehension.png',
+      'reading_out_loud.png',
+      'reading_writing_section.png',
+      'Rhetorical-Synthesis.png',
+      'riddles.png',
+      'riddle_of_the_day.png',
+      'scrabble.png',
+      'seaquance_backwards.png',
+      'self_reflection.png',
+      'short_term_concentration.png',
+      'spelling.png',
+      'sport.png',
+      'strong_concentration.png',
+      'sudoku.png',
+      'Text-Structure-and-Purpose.png',
+      'Transitions.png',
+      'wordly.png',
+      'Words-in-Context.png',
+      'working_memory.png',
+      'yoga.png',
     ];
     for (String activity in activitiesImages) {
-      myAppPrecacheImage("assets/activities/$activity");
+      myAppPrecacheImage('assets/activities/$activity');
     }
 
     if (prefs != null) {

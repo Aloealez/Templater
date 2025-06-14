@@ -8,8 +8,11 @@ import 'home.dart';
 class LevelTest extends StatefulWidget {
   final int testTime;
   final FutureBuilder? nextRouteBuilder;
-  final Widget Function(BuildContext context,
-      {required bool initialTest, required bool endingTest,}) testRouteBuilder;
+  final Widget Function(
+    BuildContext context, {
+    required bool initialTest,
+    required bool endingTest,
+  }) testRouteBuilder;
   final String? testTimeDescription;
   final String testActivitiesDescription;
   final String testScoreDescription;
@@ -22,9 +25,9 @@ class LevelTest extends StatefulWidget {
     required this.testRouteBuilder,
     this.testTimeDescription,
     this.testActivitiesDescription =
-        "The test will comprise two activities, through which we will assess your listening and reading levels in English.",
+        'The test will comprise two activities, through which we will assess your listening and reading levels in English.',
     this.testScoreDescription =
-        "We will use your score to personalize your app experience.",
+        'We will use your score to personalize your app experience.',
     this.initialTest = true,
     this.endingTest = false,
     super.key,
@@ -38,11 +41,11 @@ class _LevelTestState extends State<LevelTest> {
   late SharedPreferences prefs;
   late Map<String, SatsQuestion> questions;
 
-  final String category = "rw";
+  final String category = 'rw';
 
   Future<void> initSharedPrefs() async {
     prefs = await SharedPreferences.getInstance();
-    print("Initialized shared preferences.");
+    print('Initialized shared preferences.');
   }
 
   @override
@@ -63,13 +66,13 @@ class _LevelTestState extends State<LevelTest> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Stack(
         children: [
           Align(
             alignment: Alignment(0, -0.95),
             child: Text(
-              "Level Test 🥰",
+              'Level Test 🥰',
               style: TextStyle(
                 fontSize: 0.055 * size.height,
                 fontWeight: FontWeight.w600,
@@ -113,10 +116,11 @@ class _LevelTestState extends State<LevelTest> {
                 top: size.height / 30,
                 left: size.width / 15,
                 right: size.width / 30,
+                bottom: size.height / 30,
               ),
               margin: EdgeInsets.only(
                 left: size.width / 10,
-                right: size.width / 10,
+                right: size.width / 9,
                 bottom: size.height / 15,
               ),
               child: Scrollbar(
@@ -143,7 +147,7 @@ class _LevelTestState extends State<LevelTest> {
                         textAlign: TextAlign.left,
                       ),
                     Text(
-                      "Some Instructions",
+                      'Some Instructions',
                       style: TextStyle(
                         fontSize: 0.035 * size.height,
                         height: 1,

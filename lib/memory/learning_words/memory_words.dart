@@ -111,7 +111,7 @@ class _MemoryWordsState extends State<MemoryWords> {
   late Timer _timer;
   List<Map<String, String>> b1 = [];
   List<Map<String, String>> picked = [];
-  String level = "";
+  String level = '';
 
   Future<List<Map<String, String>>> getWordDefinitions() async {
     String data = await rootBundle.loadString('assets/words_n_defs.xml');
@@ -162,7 +162,7 @@ class _MemoryWordsState extends State<MemoryWords> {
 
   Future<void> initMemory() async {
     prefs = await SharedPreferences.getInstance();
-    level = prefs.getString('level') ?? "pet";
+    level = prefs.getString('level') ?? 'pet';
     b1 = await getWordDefinitions();
     picked = getRandomElements(b1);
     setState(() {});
@@ -186,7 +186,7 @@ class _MemoryWordsState extends State<MemoryWords> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: picked.isEmpty
           ? const Center(child: CircularProgressIndicator())
           : Container(
@@ -200,7 +200,7 @@ class _MemoryWordsState extends State<MemoryWords> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        "Memory",
+                        'Memory',
                         style: TextStyle(fontSize: 0.06 * size.height),
                         textAlign: TextAlign.center,
                       ),
@@ -212,7 +212,7 @@ class _MemoryWordsState extends State<MemoryWords> {
                         Row(
                           children: [
                             Text(
-                              "Exercise 1.1 - Learning",
+                              'Exercise 1.1 - Learning',
                               style: TextStyle(fontSize: 0.021 * size.height),
                               textAlign: TextAlign.start,
                             ),
@@ -224,7 +224,7 @@ class _MemoryWordsState extends State<MemoryWords> {
                             ),
                             SizedBox(width: 10.0),
                             Text(
-                              "${_remainingTime.toString()}s",
+                              '${_remainingTime.toString()}s',
                               style: TextStyle(fontSize: 0.02 * size.height),
                               textAlign: TextAlign.start,
                             ),
@@ -255,7 +255,7 @@ class _MemoryWordsState extends State<MemoryWords> {
                             ),
                           );
                         },
-                        text: "Skip",
+                        text: 'Skip',
                         width: size.width * 0.75,
                       ),
                     ),

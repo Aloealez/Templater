@@ -37,31 +37,31 @@ class ShortTermConcentration extends StatefulWidget {
 
 List<List<String>> films = [
   [
-    "https://www.youtube.com/watch?v=_kDrRWlIkjw",
-    "https://www.youtube.com/watch?v=pNjxyFp-RfM",
-    "https://www.youtube.com/watch?v=3D4CUXMp3BY",
-    "https://www.youtube.com/watch?v=pEmAnuEU5PE",
-    "https://www.youtube.com/watch?v=MmnwHH6IFuY",
-    "https://www.youtube.com/watch?v=lvvBh8Na-wY",
-    "https://www.youtube.com/watch?v=02jqF0-Qmho",
+    'https://www.youtube.com/watch?v=_kDrRWlIkjw',
+    'https://www.youtube.com/watch?v=pNjxyFp-RfM',
+    'https://www.youtube.com/watch?v=3D4CUXMp3BY',
+    'https://www.youtube.com/watch?v=pEmAnuEU5PE',
+    'https://www.youtube.com/watch?v=MmnwHH6IFuY',
+    'https://www.youtube.com/watch?v=lvvBh8Na-wY',
+    'https://www.youtube.com/watch?v=02jqF0-Qmho',
   ],
   [
-    "https://www.youtube.com/watch?v=VExEBel_bnk",
-    "https://www.youtube.com/watch?v=Cs8HyHVVWsU",
-    "https://www.youtube.com/watch?v=l7NZfY-WZio",
-    "https://www.youtube.com/watch?v=h6sKvWSfvms",
-    "https://www.youtube.com/watch?v=n1YIqTO-URo",
-    "https://www.youtube.com/watch?v=r0qoeH8Eiqs",
-    "https://www.youtube.com/watch?v=XL7XyJWfC5w",
+    'https://www.youtube.com/watch?v=VExEBel_bnk',
+    'https://www.youtube.com/watch?v=Cs8HyHVVWsU',
+    'https://www.youtube.com/watch?v=l7NZfY-WZio',
+    'https://www.youtube.com/watch?v=h6sKvWSfvms',
+    'https://www.youtube.com/watch?v=n1YIqTO-URo',
+    'https://www.youtube.com/watch?v=r0qoeH8Eiqs',
+    'https://www.youtube.com/watch?v=XL7XyJWfC5w',
   ],
   [
-    "https://www.youtube.com/watch?v=FsOasNc9bt4",
-    "https://www.youtube.com/watch?v=1fKSp6eOYMM",
-    "https://www.youtube.com/watch?v=43CQBJ73GWg",
-    "https://www.youtube.com/watch?v=6125jY_z054",
-    "https://www.youtube.com/watch?v=MXaUcoWmWOc",
-    "https://www.youtube.com/watch?v=44F10ML4k3A",
-    "https://www.youtube.com/watch?v=kdl3XdSiTLA",
+    'https://www.youtube.com/watch?v=FsOasNc9bt4',
+    'https://www.youtube.com/watch?v=1fKSp6eOYMM',
+    'https://www.youtube.com/watch?v=43CQBJ73GWg',
+    'https://www.youtube.com/watch?v=6125jY_z054',
+    'https://www.youtube.com/watch?v=MXaUcoWmWOc',
+    'https://www.youtube.com/watch?v=44F10ML4k3A',
+    'https://www.youtube.com/watch?v=kdl3XdSiTLA',
   ],
 ];
 
@@ -69,6 +69,7 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
   late YoutubePlayerController _controller;
   TextEditingController textController = TextEditingController();
   double score = 0;
+  int selectedScore = -1;
 
   int level = 0;
   int streak = 0;
@@ -140,7 +141,7 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
 
     _controller.loadVideo(video);
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           width: size.width * 0.9,
@@ -158,7 +159,7 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                 children: <Widget>[
                   Center(
                     child: Text(
-                      "Attention",
+                      'Attention',
                       style: TextStyle(
                         fontSize: size.width / 8,
                       ),
@@ -169,14 +170,14 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                     height: size.height / 50,
                   ),
                   Text(
-                    "Exercise 1 - Short Term Concentration",
+                    'Exercise 1 - Short Term Concentration',
                     style: TextStyle(fontSize: size.width / 20),
                   ),
                   SizedBox(
                     height: size.height / 25,
                   ),
                   Text(
-                    "Follow the instructions in the video.",
+                    'Follow the instructions in the video.',
                     style: TextStyle(fontSize: size.width / 24),
                   ),
                   SizedBox(
@@ -197,44 +198,59 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                     height: size.height / 25,
                   ),
                   Text(
-                    "Write yout score BELOW.",
+                    'Select You\'r score.',
                     style: TextStyle(fontSize: size.width / 24),
                   ),
                   SizedBox(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 8,
-                      ),
-                      child: TextField(
-                        controller: textController,
-                        style: TextStyle(fontSize: size.width / 24),
-                        keyboardType: TextInputType.numberWithOptions(
-                          decimal: true,
-                        ),
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                          TextInputFormatter.withFunction((oldValue, newValue) {
-                            String text = newValue.text;
-                            if (text.isEmpty || (int.tryParse(text) != null && int.parse(text) >= 0 && int.parse(text) <= 3)) {
-                              score = text.isNotEmpty ? double.parse(text) : 0.0; // Ensure score is updated properly
-                              return newValue;
-                            }
-                            return oldValue; // Reject invalid inputs
-                          }),
-                        ],
-                        maxLines: 1,
-                        decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 0,
-                            horizontal: 12,
-                          ),
-                          border: OutlineInputBorder(
+                    height: size.height / 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(4, (index) {
+                      bool isSelected = selectedScore == index;
+                      return GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedScore = index;
+                            score = index.toDouble();
+                          });
+                        },
+                        child: AnimatedContainer(
+                          alignment: Alignment.center,
+                          height: size.height / 20,
+                          width: size.width / 7,
+                          duration: Duration(milliseconds: 200),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? Theme.of(context).colorScheme.primary
+                                : Colors.transparent,
                             borderRadius: BorderRadius.circular(20),
+                            border: isSelected
+                                ? null
+                                : Border.all(width: 2, color: Colors.white),
+                            boxShadow: isSelected
+                                ? [
+                                    BoxShadow(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary
+                                          .withOpacity(0.6),
+                                      blurRadius: 10,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ]
+                                : [],
+                          ),
+                          child: Text(
+                            index.toString(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
-                      ),
-                    ),
+                      );
+                    }),
                   ),
                 ],
               ),
@@ -254,8 +270,8 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                   },
                   route: (widget.initialTest)
                       ? InitialScoreScreen(
-                          title: "Attention",
-                          description: "Exercise 1 - Short Term Concentration",
+                          title: 'Attention',
+                          description: 'Exercise 1 - Short Term Concentration',
                           exercise: 2,
                           userScore: score,
                           maxScore: 3,
@@ -263,8 +279,8 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                         )
                       : (widget.endingTest
                           ? ShowImprovement(
-                              title: "Attention",
-                              description: "Exercise 1 - Short Term Concentration",
+                              title: 'Attention',
+                              description: 'Exercise 1 - Short Term Concentration',
                               exercise: 2,
                               yourScore: score,
                               maximum: 3,
@@ -273,7 +289,7 @@ class _ShortTermConcentration extends State<ShortTermConcentration> {
                           : ProgressScreen(
                               userScore: score,
                               maxScore: 3,
-                              exercise: "ShortTermConcentration",
+                              exercise: 'ShortTermConcentration',
                             )),
                   text: 'Continue',
                   width: size.width,

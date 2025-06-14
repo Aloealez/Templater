@@ -89,7 +89,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    print("dataLength: ${data.length}, userLevel: $userLevel");
+    print('dataLength: ${data.length}, userLevel: $userLevel');
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -109,7 +109,7 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                       opacity: isTextVisible ? 1.0 : 0.0,
                       duration: const Duration(milliseconds: 300),
                       child: Text(
-                        "Amazing!",
+                        'Amazing!',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'OleoScriptSwashCaps',
@@ -129,8 +129,8 @@ class _InitialScoreScreenState extends State<InitialScoreScreen> {
                       opacity: isTextVisible ? 1.0 : 0.0,
                       duration: const Duration(milliseconds: 300),
                       child: Text(
-                        "You got ${widget.userScore.toStringAsFixed(0)} "
-                            "out of ${widget.maxScore.toStringAsFixed(0)} questions right.",
+                        'You got ${widget.userScore.toStringAsFixed(0)} '
+                            'out of ${widget.maxScore.toStringAsFixed(0)} questions right.',
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 20,

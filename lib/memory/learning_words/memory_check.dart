@@ -101,7 +101,7 @@ class _Memory2 extends State<Memory2> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           width: size.width * 0.9,
@@ -118,7 +118,7 @@ class _Memory2 extends State<Memory2> {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Memory",
+                    'Memory',
                     style: TextStyle(fontSize: 0.06 * size.height),
                     textAlign: TextAlign.center,
                   ),
@@ -128,13 +128,13 @@ class _Memory2 extends State<Memory2> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Exercise 1.1 - Learning",
+                      'Exercise 1.1 - Learning',
                       style: TextStyle(fontSize: 0.025 * size.height),
                       textAlign: TextAlign.start,
                     ),
                     SizedBox(height: 0.02 * size.height),
                     Text(
-                      "Now write down as many words as you remember. ",
+                      'Now write down as many words as you remember. ',
                       style: TextStyle(fontSize: 0.02 * size.height),
                       textAlign: TextAlign.start,
                     ),
@@ -148,8 +148,8 @@ class _Memory2 extends State<Memory2> {
                     width: size.width * 0.75,
                     child: RedirectButton(
                       route: QuizModel(
-                        "Memory {}",
-                        "Memory",
+                        'Memory {}',
+                        'Memory',
                         60,
                         initialTest: widget.initialTest,
                         endingTest: widget.endingTest,
@@ -161,15 +161,15 @@ class _Memory2 extends State<Memory2> {
                             : widget.endingTest
                                 ? const WorkingMemory(endingTest: true)
                                 : const WorkingMemory(),
-                        description: "Exercise 1 - Learning",
-                        oldName: "learning_words",
+                        description: 'Exercise 1 - Learning',
+                        oldName: 'learning_words',
                         exerciseNumber: 1,
-                        exerciseString: "Memory",
+                        exerciseString: 'Memory',
                         questions: {
                           for (int i = 0; i < 10; ++i)
-                            "$i": () {
+                            '$i': () {
                               Map<String, String> answers = {};
-                              for (String key in ["A", "B", "C", "D"]) {
+                              for (String key in ['A', 'B', 'C', 'D']) {
                                 int random = Random().nextInt(picked.length);
                                 while (random == i || answers.values.contains(picked[random].values.first)) {
                                   random = Random().nextInt(picked.length);
@@ -185,12 +185,12 @@ class _Memory2 extends State<Memory2> {
                                 answers,
                                 correct,
                                 {
-                                  "A": 1,
-                                  "B": 1,
-                                  "C": 1,
-                                  "D": 1,
+                                  'A': 1,
+                                  'B': 1,
+                                  'C': 1,
+                                  'D': 1,
                                 },
-                                question: "Choose the definition: ${picked[i].keys.first}",
+                                question: 'Choose the definition: ${picked[i].keys.first}',
                               );
                             }(),
                         },

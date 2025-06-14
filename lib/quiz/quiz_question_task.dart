@@ -5,60 +5,99 @@ import 'package:flutter/material.dart';
 class QuizQuestionTask extends StatefulWidget {
   final QuizQuestionData question;
 
-  const QuizQuestionTask({super.key,
+  const QuizQuestionTask({
+    super.key,
     required this.question,
-});
+  });
 
   @override
   State<QuizQuestionTask> createState() => _QuizQuestionTaskState();
 }
 
 class _QuizQuestionTaskState extends State<QuizQuestionTask> {
+  bool showIntroduction = true;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    bool doubleText = widget.question.text != null && widget.question.text2 != null;
+    bool hasText(String? value) => value != null && value.trim().isNotEmpty;
+
+    final hasIntro = hasText(widget.question.introduction);
+    final hasText1 = hasText(widget.question.text);
+    final hasText2 = hasText(widget.question.text2);
+    final isCrossText = hasText1 && hasText2;
 
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (widget.question.introduction != null)
-          HtmlAsTextSpan(widget.question.introduction!, fontSize: 0.0175 * size.height),
-        if (widget.question.introduction != null) SizedBox(height: 0.005 * size.height),
-        if (doubleText)
+        // Intro section
+        if (showIntroduction && hasIntro) ...[
+          HtmlAsTextSpan(
+            widget.question.introduction!,
+            fontSize: 0.0175 * size.height,
+          ),
+          SizedBox(height: 0.005 * size.height),
+        ],
+
+        // Text 1 section
+        if (hasText1) ...[
+          if (isCrossText)
+            Padding(
+              padding: EdgeInsets.only(left: 0.01 * size.width),
+              child: Text(
+                'Text 1',
+                style: TextStyle(
+                  fontSize: 0.015 * size.height,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
           Padding(
-            padding: EdgeInsets.only(left: 0.01 * size.width),
-            child: Text(
-              "Text 1",
-              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w700),
+            padding: EdgeInsets.only(
+              top: (!hasIntro && !isCrossText) ? 0 : 0.005 * size.height,
+              left:
+                  isCrossText || hasIntro ? 0.03 * size.width : 0 * size.width,
+            ),
+            child: HtmlAsTextSpan(
+              widget.question.text!.replaceAll('Text 1:', ''),
+              fontSize: 0.0175 * size.height,
             ),
           ),
-        if (widget.question.text != null)
+          SizedBox(height: 0.015 * size.height),
+        ],
+
+        // Text 2 section
+        if (hasText2) ...[
+          if (isCrossText)
+            Padding(
+              padding: EdgeInsets.only(left: 0.01 * size.width),
+              child: Text(
+                'Text 2',
+                style: TextStyle(
+                  fontSize: 0.015 * size.height,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
           Padding(
-            padding: EdgeInsets.only(left: 0.03 * size.width),
-            // child: RichText(
-            //   text: parseHtmlToTextSpan(context, question.text!, fontSize: 0.0175 * size.height),
-            // ),
-            child: HtmlAsTextSpan(widget.question.text!, fontSize: 0.0175 * size.height),
-          ),
-        if (doubleText) SizedBox(height: 0.015 * size.height),
-        if (doubleText)
-          Padding(
-            padding: EdgeInsets.only(left: 0.01 * size.width),
-            child: Text(
-              "Text 2",
-              style: TextStyle(fontSize: 0.015 * size.height, fontWeight: FontWeight.w700),
+            padding: EdgeInsets.only(
+              left: 0.03 * size.width,
+              top: 0.005 * size.height,
+            ),
+            child: HtmlAsTextSpan(
+              widget.question.text2!.replaceAll('Text 2:', ''),
+              fontSize: 0.0175 * size.height,
             ),
           ),
-        if (doubleText)
-          Padding(
-            padding: EdgeInsets.only(left: 0.03 * size.width),
-            child: HtmlAsTextSpan(widget.question.text2!, fontSize: 0.0175 * size.height),
-          ),
-        SizedBox(height: 0.02 * size.height),
-        HtmlAsTextSpan("<b>${widget.question.question}</b>", fontSize: 0.0175 * size.height),
+          SizedBox(height: 0.015 * size.height),
+        ],
+
+        // Final Question
+        HtmlAsTextSpan(
+          '<b>${widget.question.question}</b>',
+          fontSize: 0.0175 * size.height,
+        ),
       ],
     );
   }

@@ -12,7 +12,7 @@ class _Info2048 extends State<Info2048> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 15,
@@ -21,7 +21,7 @@ class _Info2048 extends State<Info2048> {
           top: size.height / 20,
         ),
         child: Text(
-          "Swipe your finger to move the tiles on the board. When two tiles with the same number touch, they merge into one, doubling their value. Keep merging tiles to reach the 2048 tile. The game ends when no more moves are possible.",
+          'Swipe your finger to move the tiles on the board. When two tiles with the same number touch, they merge into one, doubling their value. Keep merging tiles to reach the 2048 tile. The game ends when no more moves are possible.',
           style: TextStyle(
             fontSize: 0.02 * size.height,
           ),

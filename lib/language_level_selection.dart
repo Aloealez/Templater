@@ -78,7 +78,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Center(
         child: Container(
           margin: EdgeInsets.only(
@@ -91,18 +91,18 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
               Column(
                 children: [
                   Text(
-                    "Select Your",
+                    'Select Your',
                     style: TextStyle(
-                      fontSize: size.width / 10,
+                      fontSize: size.width / 12,
                       fontWeight: FontWeight.w600,
                       color: Theme.of(context).colorScheme.onSurface,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   Text(
-                    "English Level",
+                    'English Level',
                     style: TextStyle(
-                      fontSize: size.width / 10,
+                      fontSize: size.width / 12,
                       fontWeight: FontWeight.w600,
                       color: Theme.of(context).colorScheme.onSurface,
                       height: 0.7,
@@ -135,32 +135,32 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
               //       ),
               //       textAlign: TextAlign.center,
               //     ),
-              SizedBox(height: 0.07 * size.height),
+              SizedBox(height: size.height * 0.08),
               levelSelectionButton(
                 context,
-                "cpe",
-                "Native Speaker",
+                'cpe',
+                'Native Speaker',
                 color: Theme.of(context).colorScheme.tertiary,
               ),
-              SizedBox(height: 0.03 * size.height),
+              SizedBox(height: size.height / 30),
               levelSelectionButton(
                 context,
-                "cae",
-                "Advanced (C1)",
+                'cae',
+                'Advanced (C1)',
                 color: Theme.of(context).colorScheme.primary,
               ),
-              SizedBox(height: 0.03 * size.height),
+              SizedBox(height: size.height / 30),
               levelSelectionButton(
                 context,
-                "pet",
-                "Intermediate (B1+)",
+                'pet',
+                'Intermediate (B1+)',
                 color: Theme.of(context).colorScheme.primary,
               ),
-              SizedBox(height: 0.03 * size.height),
+              SizedBox(height: size.height / 30),
               levelSelectionButton(
                 context,
-                "fce",
-                "Beginner (A1-A2)",
+                'fce',
+                'Beginner (A1-A2)',
                 color: Theme.of(context).colorScheme.primary,
               ),
             ],

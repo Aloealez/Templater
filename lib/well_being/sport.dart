@@ -136,7 +136,7 @@ class _Sport extends State<Sport> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 20,
@@ -151,7 +151,7 @@ class _Sport extends State<Sport> {
               children: <Widget>[
                 Center(
                   child: Text(
-                    "Sport",
+                    'Sport',
                     style: TextStyle(
                       fontSize: size.width / 8,
                       fontWeight: FontWeight.w600,
@@ -161,7 +161,7 @@ class _Sport extends State<Sport> {
                 ),
                 Center(
                   child: Text(
-                    "10 DAY PLAN",
+                    '10 DAY PLAN',
                     style: TextStyle(fontSize: size.width / 17),
                     textAlign: TextAlign.center,
                   ),
@@ -180,7 +180,7 @@ class _Sport extends State<Sport> {
                     child: Column(
                       children: [
                         Text(
-                          "When exercising remember about: ",
+                          'When exercising remember about: ',
                           style: TextStyle(
                             fontSize: size.width / 22,
                             fontStyle: FontStyle.italic,
@@ -189,7 +189,7 @@ class _Sport extends State<Sport> {
                         Row(
                           children: [
                             const Text(
-                              "\u2022",
+                              '\u2022',
                               style: TextStyle(fontSize: 30, height: 0.8),
                             ),
                             SizedBox(width: 0.02 * size.width),
@@ -207,7 +207,7 @@ class _Sport extends State<Sport> {
                         Row(
                           children: [
                             const Text(
-                              "\u2022",
+                              '\u2022',
                               style: TextStyle(fontSize: 30, height: 0.8),
                             ),
                             SizedBox(width: 0.02 * size.width),

@@ -20,7 +20,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -34,67 +34,67 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
                   Column(
                     children: [
                       Text(
-                        "Choose",
+                        'Choose',
                         style: TextStyle(
-                          fontSize: size.width / 10,
+                          fontSize: size.width / 12,
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.onSurface,
                         ),
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        "Your Program",
+                        'Your Program',
                         style: TextStyle(
-                          fontSize: size.width / 10,
+                          fontSize: size.width / 12,
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.onSurface,
-                            height: 0.7,
+                          height: 0.7,
                         ),
                         textAlign: TextAlign.center,
                       ),
                     ],
                   ),
-                  SizedBox(height: size.height * 0.06),
+                  SizedBox(height: size.height * 0.0792),
                   ImprovementButton(
-                    text: "📚 SATs Prep",
+                    text: '📚 SATs Prep',
                     width: size.width,
                     color: Theme.of(context).colorScheme.tertiary,
-                    name: "sats",
+                    name: 'sats',
                   ),
                   SizedBox(height: size.height / 40),
                   ImprovementButton(
-                    text: "🧠 Memory",
+                    text: '🧠 Memory',
                     width: size.width,
                     color: Theme.of(context).colorScheme.secondary,
-                    name: "memory",
+                    name: 'memory',
                   ),
                   SizedBox(height: size.height / 40),
                   ImprovementButton(
-                    text: "💡 Attention",
+                    text: '💡 Attention',
                     width: size.width,
                     color: Theme.of(context).colorScheme.secondary,
-                    name: "attention",
+                    name: 'attention',
                   ),
                   SizedBox(height: size.height / 40),
                   ImprovementButton(
-                    text: "💬 Linguistic",
+                    text: '💬 Linguistic',
                     width: size.width,
                     color: Theme.of(context).colorScheme.secondary,
-                    name: "linguistic",
+                    name: 'linguistic',
                   ),
                   SizedBox(height: size.height / 40),
                   ImprovementButton(
-                    text: "🧩 Logical Thinking",
+                    text: '🧩 Logical Thinking',
                     width: size.width,
                     color: Theme.of(context).colorScheme.secondary,
-                    name: "logical",
+                    name: 'logical',
                   ),
                   SizedBox(height: size.height / 40),
                   ImprovementButton(
-                    text: "🦄 Just fun",
+                    text: '🦄 Just fun',
                     width: size.width,
                     color: Theme.of(context).colorScheme.secondary,
-                    name: "games",
+                    name: 'games',
                   ),
                   SizedBox(height: size.height / 40),
                 ],

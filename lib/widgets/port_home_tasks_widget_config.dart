@@ -20,10 +20,10 @@ class PortHomeTasksWidgetConfig {
       openFilePreview: true,
     );
     final directory = await getApplicationSupportDirectory();
-    File tempFile = File("${directory.path}/${DateTime.now().toIso8601String()}.png");
+    File tempFile = File('${directory.path}/${DateTime.now().toIso8601String()}.png');
     await tempFile.writeAsBytes(bytes);
 
-    print("directory.path: ${directory.path}");
+    print('directory.path: ${directory.path}');
 
     await HomeWidget.saveWidgetData('filename', tempFile.path);
     // await HomeWidget.updateWidget(

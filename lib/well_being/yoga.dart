@@ -20,7 +20,7 @@ class _Yoga extends State<Yoga> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: Container(
         margin: EdgeInsets.only(
           left: size.width / 20,
@@ -36,7 +36,7 @@ class _Yoga extends State<Yoga> {
               children: <Widget>[
                 Center(
                   child: Text(
-                    "Yoga",
+                    'Yoga',
                     style: TextStyle(
                       fontSize: size.width / 8,
                       fontWeight: FontWeight.w600,
@@ -46,7 +46,7 @@ class _Yoga extends State<Yoga> {
                 ),
                 Center(
                   child: Text(
-                    "10 DAY PLAN",
+                    '10 DAY PLAN',
                     style: TextStyle(fontSize: size.width / 17),
                     textAlign: TextAlign.center,
                   ),

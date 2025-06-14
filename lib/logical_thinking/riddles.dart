@@ -76,14 +76,14 @@ class _RiddlesTest extends State<RiddlesTest> {
       List<int> newCorrectAnswers = [];
       List<List<String>> newAnswers = [];
       final file = await rootBundle.loadString('assets/logical_thinking/riddles.yaml');
-      tasks = loadYaml(file)["questions"]["${difficulty}points"];
+      tasks = loadYaml(file)['questions']['${difficulty}points'];
       for (var i = 0; i < tasks.length; i++) {
-        newQuestions.add(tasks[i]["question"]);
+        newQuestions.add(tasks[i]['question']);
 
-        newCorrectAnswers.add(tasks[i]["correct_answer"]);
+        newCorrectAnswers.add(tasks[i]['correct_answer']);
 
         newAnswers.add([]);
-        for (var answer in tasks[i]["answers"]) {
+        for (var answer in tasks[i]['answers']) {
           newAnswers[newAnswers.length - 1].add(answer.toString());
         }
       }
@@ -94,7 +94,7 @@ class _RiddlesTest extends State<RiddlesTest> {
         answers = newAnswers;
       });
     } catch (e) {
-      print("Error: $e");
+      print('Error: $e');
     }
   }
 
@@ -124,19 +124,19 @@ class _RiddlesTest extends State<RiddlesTest> {
     return tasks == null
         ? const Center(child: CircularProgressIndicator())
         : LevelInstruction(
-        "Riddles",
-        testTime: "8 minutes",
-        exercise: "Riddles",
-        testActivitiesDescription: "In this exercise, you will be given a series of riddles to solve. You will have 4 minutes.",
-        testScoreDescription: "For each correct answer you get 5 points, and for each wrong answer you will loose 2 points.",
+        'Riddles',
+        testTime: '8 minutes',
+        exercise: 'Riddles',
+        testActivitiesDescription: 'In this exercise, you will be given a series of riddles to solve. You will have 4 minutes.',
+        testScoreDescription: 'For each correct answer you get 5 points, and for each wrong answer you will loose 2 points.',
         nextRouteBuilder: FutureBuilder(future: () async {} (), builder:
           (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const CircularProgressIndicator();
           }
               return QuizModel(
-                "Riddles - {}",
-                "Riddles",
+                'Riddles - {}',
+                'Riddles',
                 240,
                 initialTest: widget.initialTest,
                 endingTest: widget.endingTest,
@@ -147,28 +147,28 @@ class _RiddlesTest extends State<RiddlesTest> {
                     ? const Home()
                     : widget.endingTest
                     ? const TitlePage(
-                  title: "BrainAce.pro",
+                  title: 'BrainAce.pro',
                 )
                     : const Home(),
-                description: "Exercise 1 - Short Term Concentration",
-                oldName: "long_term_concentration",
+                description: 'Exercise 1 - Short Term Concentration',
+                oldName: 'long_term_concentration',
                 exerciseNumber: 1,
-                exerciseString: "Riddles",
+                exerciseString: 'Riddles',
                 questions: {
                   for (int i = 0; i < numberOfQuestions; ++i)
-                    "$i": () {
+                    '$i': () {
                       Map<String, String> answers = {};
                       answers = {
-                        "A": tasks[i]["answers"][0].toString(),
-                        "B": tasks[i]["answers"][1].toString(),
-                        if (tasks[i]["answers"].length >= 3) "C": tasks[i]["answers"][2].toString(),
-                        if (tasks[i]["answers"].length >= 4) "D": tasks[i]["answers"][3].toString(),
+                        'A': tasks[i]['answers'][0].toString(),
+                        'B': tasks[i]['answers'][1].toString(),
+                        if (tasks[i]['answers'].length >= 3) 'C': tasks[i]['answers'][2].toString(),
+                        if (tasks[i]['answers'].length >= 4) 'D': tasks[i]['answers'][3].toString(),
                       };
                       Map<String, bool> correct = {
-                        "A": tasks[i]["correct_answer"] == 0,
-                        "B": tasks[i]["correct_answer"] == 1,
-                        "C": tasks[i]["correct_answer"] == 2,
-                        "D": tasks[i]["correct_answer"] == 3,
+                        'A': tasks[i]['correct_answer'] == 0,
+                        'B': tasks[i]['correct_answer'] == 1,
+                        'C': tasks[i]['correct_answer'] == 2,
+                        'D': tasks[i]['correct_answer'] == 3,
                       };
                       return QuizQuestionData(
                         answers,

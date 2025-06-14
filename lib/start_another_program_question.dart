@@ -71,7 +71,7 @@ class _StartAnotherProgramState extends State<StartAnotherProgram> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
-              "Would you like to continue the same 30 Day Brain Improvement Program?",
+              'Would you like to continue the same 30 Day Brain Improvement Program?',
               style: TextStyle(
                 fontSize: size.width / 12,
                 fontWeight: FontWeight.w600,
@@ -81,8 +81,8 @@ class _StartAnotherProgramState extends State<StartAnotherProgram> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                timeButton(context, "No"),
-                timeButton(context, "Yes"),
+                timeButton(context, 'No'),
+                timeButton(context, 'Yes'),
               ],
             ),
             const Spacer(),

@@ -59,7 +59,7 @@ class _SelfReflection extends State<SelfReflection> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: appBar(context, ""),
+      appBar: appBar(context, ''),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(
@@ -76,7 +76,7 @@ class _SelfReflection extends State<SelfReflection> {
                 children: <Widget>[
                   Center(
                     child: Text(
-                      "SELF-REFLECTION",
+                      'SELF-REFLECTION',
                       style: TextStyle(
                         fontSize: size.width / 12,
                       ),
