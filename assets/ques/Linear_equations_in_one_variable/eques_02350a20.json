@@ -1,5 +1,5 @@
 {
-  "equation": "If $x + 4 = 2$, what is the value of 3x + 7?",
+  "task": "If $x + 4 = 2$, what is the value of 3x + 7?",
   "choices": {
     "A": 1,
     "B": 6,

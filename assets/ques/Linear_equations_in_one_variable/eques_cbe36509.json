@@ -1,5 +1,5 @@
 {
-  "equation": "if $5x + 34 = -6$, what is the value of $x$",
+  "task": "if $5x + 34 = -6$, what is the value of $x$",
   "choices": {
     "A": -8,
     "B": -9,
