@@ -18,9 +18,10 @@
     "D": 1.0
   },
   "task": "In the given equation, $ a $ is a constant. If the equation has infinitely many solutions, what is the value of $ a $?\n\n$$ 4x + 20 = a(x + 5) $$",
-  "explanation": "Choice D is correct.\n\nAn equation with one variable, $ x $, has infinitely many solutions only when both sides of the equation are equal for all values of $ x $. The given equation is:\n\n$ 4x + 20 = a(x + 5) $\n\nExpanding the right-hand side:\n$ ax + a(5) = ax + 20 $\n\nFor the equation to have infinitely many solutions, the expressions on both sides must be identical. This means the coefficients of $ x $ and the constant terms must match:\n\n- Coefficients: $ 4 = a $  \u2192 **So, $ a = 4 $.**\n- Constant terms: $ 20 = 20 $, which is already true.\n\nThus, the correct value of $ a $ is **4**.",
+  "explanation": "Choice D is correct.\n\nAn equation with one variable, $ x $, has infinitely many solutions only when both sides of the equation are equal for all values of $ x $. The given equation is:\n\n$ 4x + 20 = a(x + 5) $\n\nExpanding the right-hand side:\n$ ax + a(5) = ax + 20 $\n\nFor the equation to have infinitely many solutions, the expressions on both sides must be identical. This means the coefficients of $ x $ and the constant terms must match:\n\n- Coefficients: $ 4 = a $  → **So, $ a = 4 $.**\n- Constant terms: $ 20 = 20 $, which is already true.\n\nThus, the correct value of $ a $ is **4**.",
   "category": "Algebraic Equations",
   "difficulty": "Medium",
   "table": null,
-  "id": "d32a9d37"
+  "id": "d32a9d37",
+  "subcategory": "Linear_equations_in_one_variable"
 }

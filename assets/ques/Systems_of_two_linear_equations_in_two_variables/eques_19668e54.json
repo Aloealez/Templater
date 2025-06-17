@@ -21,5 +21,6 @@
   "explanation": "Choice A is correct. Janek played a virtual competition where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 29 coins and 10 stars, scoring 624 points.\nThe second time, Janek collected 34 coins and 15 stars, scoring 769 points.\nSetting up the system of equations, we have:\n$ 29c + 10s = 624 $\n$ 34c + 15s = 769 $\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "19668e54"
+  "id": "19668e54",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

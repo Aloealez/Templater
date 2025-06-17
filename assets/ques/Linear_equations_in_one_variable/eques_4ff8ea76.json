@@ -13,7 +13,8 @@
     "B": true,
     "C": false,
     "D": false
-  }, 
-  "explanation": "Step 1: Calculate removal rate\nRemoved in first period: 45,000 - 31,050 = 13,950 bushels\nRate: 13,950 \u00f7 5 = 2,790 bushels/hour\n\nStep 2: Set up equation\nInitial amount - (rate \u00d7 time) = remaining\n45,000 - 2,790x = 13,500\n\nStep 3: Solve for x\n45,000 - 13,500 = 2,790x\n31,500 \u00f7 2,790 = 11 hours\n\nCommon mistakes:\n- Dividing remaining by rate: 13,500 \u00f7 2,790 \u2248 8\n- Proportional time error: 5 \u00d7 (30% \u00f7 69%) \u2248 2\n- Incorrect rate calculation: Using wrong rate gives \u2248 4 hours",
-  "id": "4ff8ea76"
+  },
+  "explanation": "Step 1: Calculate removal rate\nRemoved in first period: 45,000 - 31,050 = 13,950 bushels\nRate: 13,950 ÷ 5 = 2,790 bushels/hour\n\nStep 2: Set up equation\nInitial amount - (rate × time) = remaining\n45,000 - 2,790x = 13,500\n\nStep 3: Solve for x\n45,000 - 13,500 = 2,790x\n31,500 ÷ 2,790 = 11 hours\n\nCommon mistakes:\n- Dividing remaining by rate: 13,500 ÷ 2,790 ≈ 8\n- Proportional time error: 5 × (30% ÷ 69%) ≈ 2\n- Incorrect rate calculation: Using wrong rate gives ≈ 4 hours",
+  "id": "4ff8ea76",
+  "subcategory": "Linear_equations_in_one_variable"
 }

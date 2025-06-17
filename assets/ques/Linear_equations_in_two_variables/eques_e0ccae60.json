@@ -18,9 +18,10 @@
     "D": 0.0
   },
   "task": "Daniel bought party hats and cupcakes for $125. Each party hats cost $4, and each cupcakes cost $1. If Daniel bought 10 party hats, how many cupcakes did Daniel buy?",
-  "explanation": "Choice C is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on party hats:\n$4 \times 10 = $40.\nNext, we subtract this amount from the total cost: $125 - $40 = $85.\nSince each cupcakes costs $1, we divide: $85 \u00f7 $1 = 85.\nThus, Daniel bought 85 cupcakes.",
+  "explanation": "Choice C is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on party hats:\n$4 \times 10 = $40.\nNext, we subtract this amount from the total cost: $125 - $40 = $85.\nSince each cupcakes costs $1, we divide: $85 ÷ $1 = 85.\nThus, Daniel bought 85 cupcakes.",
   "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
-  "id": "e0ccae60"
+  "id": "e0ccae60",
+  "subcategory": "Linear_equations_in_two_variables"
 }

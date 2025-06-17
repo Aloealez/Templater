@@ -1,10 +1,10 @@
 {
   "task": "During a cross-country trip, Aleksander Iskra traveled a minimum of 2372 kilometers and a maximum of 2878 kilometers. Which inequality represents this situation, where $d$ is a possible distance, in kilometers, that Aleksander Iskra traveled?",
   "answers": {
-    "A": "d \u2264 2372",
-    "B": "d \u2265 2878",
-    "C": "2878 \u2264 d \u2264 3494",
-    "D": "2372 \u2264 d \u2264 2878"
+    "A": "d ≤ 2372",
+    "B": "d ≥ 2878",
+    "C": "2878 ≤ d ≤ 3494",
+    "D": "2372 ≤ d ≤ 2878"
   },
   "correct": {
     "A": false,
@@ -12,8 +12,9 @@
     "C": false,
     "D": true
   },
-  "explanation": "Choice D is correct. It's given that during a cross-country trip, Aleksander Iskra traveled a minimum of 2372 kilometers and a maximum of 2878 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 2372 \u2264 d \u2264 2878.",
+  "explanation": "Choice D is correct. It's given that during a cross-country trip, Aleksander Iskra traveled a minimum of 2372 kilometers and a maximum of 2878 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 2372 ≤ d ≤ 2878.",
   "category": "Inequalities - Distance",
   "difficulty": "Easy",
-  "id": "05c3ddae"
+  "id": "05c3ddae",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

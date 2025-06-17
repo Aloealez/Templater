@@ -15,5 +15,6 @@
   "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from medical doctors at private colleges in New York, the largest population to which the results can be generalized is All medical doctors at private colleges in New York. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
   "category": "Evaluating Statistical Claims: Observational Studies and Experiments",
   "difficulty": "Medium",
-  "id": "effc53a0"
+  "id": "effc53a0",
+  "subcategory": "Evaluating_statistical_claims_Observational_studies_and_experiments"
 }

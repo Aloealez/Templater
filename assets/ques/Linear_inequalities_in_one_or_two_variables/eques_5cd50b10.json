@@ -15,5 +15,6 @@
   "explanation": "The tree starts at 318 pounds and grows between 3.98 and 5.32 pounds per day. The inequality describing this scenario is: $ 318 + 3.98 \times d < w < 318 + 5.32 \times d $. Substituting 201 for $d$ gives: $ 1118 < w < 1387 $.",
   "category": "Linear Inequalities - Growth Over Time",
   "difficulty": "Medium",
-  "id": "5cd50b10"
+  "id": "5cd50b10",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

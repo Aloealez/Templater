@@ -6,7 +6,7 @@
     "C": -61,
     "D": -67
   },
-  "correct" : {
+  "correct": {
     "A": true,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "\nRationale\nThe correct answer is -64. It's given that $5x - 9 = -24$. Multiplying each side of this equation by 3 yields $15x - 27 = -72$. Subtracting -8 from each side gives the final value of 15x - 19 = -64.",
-  "id": "bf576a40"
+  "id": "bf576a40",
+  "subcategory": "Linear_equations_in_one_variable"
 }

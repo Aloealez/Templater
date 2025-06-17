@@ -15,5 +15,6 @@
   "explanation": "There are a total of 74 beads in the bag. If the beads is neither orange nor black, then it must be either red or black. The probability of selecting one of these is (8 + 22)/74, which in LaTeX style is \\frac{30}{74}. Thus, the probability is \\frac{30}{74}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "673c01a6"
+  "id": "673c01a6",
+  "subcategory": "Probability_and_conditional_probability"
 }

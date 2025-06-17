@@ -6,7 +6,7 @@
     "C": 11,
     "D": 6
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $90$ for $f(x)$ in the function equation gives:\n$90 = 15x$.\n\nDividing both sides by 15 yields:\n$x = 6$.\n\nTherefore, the correct answer is **6**.",
-  "id": "7d492644"
+  "id": "7d492644",
+  "subcategory": "Linear_functions"
 }

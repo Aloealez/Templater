@@ -21,5 +21,6 @@
   "explanation": "Choice C is correct. Since Connor has 6 times as many apples as Maria, we set up the equation:\n$ c = 6m $.\nSince together they have a total of 25 apples, we set up:\n$ c + m = 25 $.\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "0263adda"
+  "id": "0263adda",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

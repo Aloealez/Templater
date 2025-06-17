@@ -14,5 +14,6 @@
   },
   "difficulty": "Hard",
   "explanation": "Choice 0.5 is correct. \nThe number a is 42% greater than b, which means a = b * (1 + 42/100).\nThe number c is 65% less than a, which means c = a * (1 - 65/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 42/100) * (1 - 65/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 42/100) * (1 - 65/100)) * 100.\nThis simplifies to 0.5%, which is the final answer.",
-  "id": "cc8ab3c4"
+  "id": "cc8ab3c4",
+  "subcategory": "Percentages"
 }

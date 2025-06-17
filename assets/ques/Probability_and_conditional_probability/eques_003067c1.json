@@ -15,5 +15,6 @@
   "explanation": "There are a total of 104 cards in the bag. If the cards is neither black nor blue, then it must be either white or black. The probability of selecting one of these is (22 + 34)/104, which in LaTeX style is \\frac{56}{104}. Thus, the probability is \\frac{56}{104}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "003067c1"
+  "id": "003067c1",
+  "subcategory": "Probability_and_conditional_probability"
 }

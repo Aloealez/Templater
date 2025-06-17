@@ -15,5 +15,6 @@
   "explanation": "There are a total of 102 beads in the bag. If the beads is neither white nor blue, then it must be either blue or black. The probability of selecting one of these is (21 + 9)/102, which in LaTeX style is \\frac{30}{102}. Thus, the probability is \\frac{30}{102}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "4b0078b5"
+  "id": "4b0078b5",
+  "subcategory": "Probability_and_conditional_probability"
 }

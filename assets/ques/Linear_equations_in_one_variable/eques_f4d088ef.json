@@ -6,7 +6,7 @@
     "C": -12,
     "D": -4
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": true,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "The correct answer is -9. It's given that $4x + 26 = -10$. To solve for $x$, subtract 26 from both sides: $4x = -10 - 26 = -36$. Then, divide both sides by 4: $x = \\frac{-36}{4} = -9$.",
-  "id": "f4d088ef"
+  "id": "f4d088ef",
+  "subcategory": "Linear_equations_in_one_variable"
 }

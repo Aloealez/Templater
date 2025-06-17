@@ -21,5 +21,6 @@
   "explanation": "Choice A is correct. Aleksander Piech played a virtual competition where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Aleksander Piech played, he collected 29 coins and 15 stars, scoring 884 points.\nThe second time, Aleksander Piech collected 38 coins and 20 stars, scoring 1066 points.\nSetting up the system of equations, we have:\n$ 29c + 15s = 884 $\n$ 38c + 20s = 1066 $\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "ae299481"
+  "id": "ae299481",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

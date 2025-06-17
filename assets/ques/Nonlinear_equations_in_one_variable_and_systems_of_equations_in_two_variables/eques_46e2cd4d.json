@@ -1,7 +1,7 @@
 {
   "category": "Algebra",
   "Difficulty": "Hard",
-  "task": "Solve for x: \u221a(4x + 15) = 3",
+  "task": "Solve for x: √(4x + 15) = 3",
   "answers": {
     "A": "x = 21",
     "B": "x = -1.5",
@@ -14,6 +14,7 @@
     "C": false,
     "D": false
   },
-  "explanation": "$Step 1:$ Square both sides: 4x + 15 = 3\u00b2 = 9\n$Step 2:$ Subtract 15: 4x = 9 - 15 = -6\n$Step 3:$ Divide by 4: x = -6/4 = -1.5",
-  "id": "46e2cd4d"
+  "explanation": "$Step 1:$ Square both sides: 4x + 15 = 3² = 9\n$Step 2:$ Subtract 15: 4x = 9 - 15 = -6\n$Step 3:$ Divide by 4: x = -6/4 = -1.5",
+  "id": "46e2cd4d",
+  "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

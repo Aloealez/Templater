@@ -6,7 +6,7 @@
     "C": 804,
     "D": 823
   },
-  "correct" :{
+  "correct": {
     "A": false,
     "B": false,
     "C": true,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nIt's given that at the beginning of the 1st week, there was $$500$$ in the savings account. Michael deposits $$38$$ at the end of each week.\n\nTo find the total amount at the end of 8 weeks, we use the equation:\n$500 + 8(38) = 804$$.\n\nThus, the correct answer is **$804$**.",
-  "id": "d23de800"
+  "id": "d23de800",
+  "subcategory": "Linear_functions"
 }

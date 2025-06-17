@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{21}{m} = \\frac{22}{176}$. Cross multiplying gives: 21 \u00d7 176 = 22 \u00d7 m. Solving for $m$, we get $m = 168$.",
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{21}{m} = \\frac{22}{176}$. Cross multiplying gives: 21 × 176 = 22 × m. Solving for $m$, we get $m = 168$.",
   "category": "Ratios and Proportions",
   "difficulty": "Medium",
-  "id": "7ed38f2c"
+  "id": "7ed38f2c",
+  "subcategory": "Probability_and_conditional_probability"
 }

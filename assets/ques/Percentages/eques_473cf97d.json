@@ -15,5 +15,6 @@
   "explanation": "Since $k$ is 21% greater than 100, we calculate: $k = 100 + (21/100) \times 100$. This simplifies to $k = 121.0$. We also know $k = 100r$, so solving for $r$: $r = 121.0 / 100 = 1.21$.",
   "category": "Percentages and Proportions",
   "difficulty": "Medium",
-  "id": "473cf97d"
+  "id": "473cf97d",
+  "subcategory": "Percentages"
 }

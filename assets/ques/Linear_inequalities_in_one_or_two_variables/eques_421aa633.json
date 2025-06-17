@@ -1,5 +1,5 @@
 {
-  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 10x + -13\n $$$$ y \u2264 -5x + 5\n $$",
+  "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y ≤ 10x + -13\n $$$$ y ≤ -5x + 5\n $$",
   "answers": {
     "A": "(2, 0)",
     "B": "(-2, -1)",
@@ -12,8 +12,9 @@
     "C": true,
     "D": false
   },
-  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both $ y \u2264 10x + -13 $ and $ y \u2264 -5x + 5 $, making $ (2, -8) $ the correct choice.",
+  "explanation": "The solutions to the system of inequalities are all ordered pairs $(x, y)$ that satisfy both inequalities. A correct solution satisfies both $ y ≤ 10x + -13 $ and $ y ≤ -5x + 5 $, making $ (2, -8) $ the correct choice.",
   "category": "Linear Inequalities - System Solutions",
   "difficulty": "Medium",
-  "id": "421aa633"
+  "id": "421aa633",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

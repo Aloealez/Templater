@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{123}{m} = \\frac{26}{208}$. Cross multiplying gives: 123 \u00d7 208 = 26 \u00d7 m. Solving for $m$, we get $m = 984$.",
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{123}{m} = \\frac{26}{208}$. Cross multiplying gives: 123 × 208 = 26 × m. Solving for $m$, we get $m = 984$.",
   "category": "Ratios and Proportions",
   "difficulty": "Medium",
-  "id": "51c13f2c"
+  "id": "51c13f2c",
+  "subcategory": "Probability_and_conditional_probability"
 }

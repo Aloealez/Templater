@@ -15,5 +15,6 @@
   "explanation": "The correct answer is $\\frac{-1}{14}$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \\frac{18 - 20}{12 - -16} = \\frac{-1}{14}$. Thus, the correct answer is \\frac{-1}{14}, or approximately -0.071 in decimal form.",
   "category": "Linear Equations - Slope Calculation",
   "difficulty": "Medium",
-  "id": "760e6bd2"
+  "id": "760e6bd2",
+  "subcategory": "Linear_equations_in_two_variables"
 }

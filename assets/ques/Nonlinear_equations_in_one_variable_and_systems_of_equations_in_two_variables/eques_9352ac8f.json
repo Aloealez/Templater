@@ -1,7 +1,7 @@
 {
   "category": "Algebra",
   "Difficulty": "Hard",
-  "task": "Solve for x: 2x\u00b2 + 2x + 8 = 0",
+  "task": "Solve for x: 2x² + 2x + 8 = 0",
   "answers": {
     "A": "x = -4.0",
     "B": "No real solutions",
@@ -14,6 +14,7 @@
     "C": false,
     "D": false
   },
-  "explanation": "$Step 1:$ Identify coefficients: a = 2, b = 2, c = 8\n$Step 2:$ Calculate discriminant: b\u00b2 - 4ac = 2\u00b2 - 4(2)(8) = -60\n$Step 3:$ No real solutions (negative discriminant)",
-  "id": "9352ac8f"
+  "explanation": "$Step 1:$ Identify coefficients: a = 2, b = 2, c = 8\n$Step 2:$ Calculate discriminant: b² - 4ac = 2² - 4(2)(8) = -60\n$Step 3:$ No real solutions (negative discriminant)",
+  "id": "9352ac8f",
+  "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

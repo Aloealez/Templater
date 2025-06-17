@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{108}{m} = \frac{7}{14}$. Cross multiplying gives: 108 \u00d7 14 = 7 \u00d7 m. Solving for $m$, we get $m = 216$.",
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\frac{108}{m} = \frac{7}{14}$. Cross multiplying gives: 108 × 14 = 7 × m. Solving for $m$, we get $m = 216$.",
   "category": "Ratios and Proportions",
   "difficulty": "Medium",
-  "id": "4e915193"
+  "id": "4e915193",
+  "subcategory": "Ratios_rates_proportional_relationships_and_units"
 }

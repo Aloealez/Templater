@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $72$ for $f(x)$ in the function equation gives:\n$72 = 9x$.\n\nDividing both sides by 9 yields:\n$x = 8$.\n\nTherefore, the correct answer is **8**.",
-  "id": "eb915984"
+  "id": "eb915984",
+  "subcategory": "Linear_functions"
 }

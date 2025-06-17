@@ -1,10 +1,10 @@
 {
   "task": "Max Ku plans to rent a jet ski. The rental cost is $28 per hour, and he must also pay a fixed cost of $10. Max Ku wants to spend no more than $234. If the rental is available only for whole hours, what is the maximum number of hours Max Ku can rent a jet ski? Which of the following equations properly represents this situation?",
   "answers": {
-    "A": "28h \u2264 234",
-    "B": "28h + 10 \u2264 234",
-    "C": "28h + 10 \u2265 234",
-    "D": "28h + 17 \u2264 234"
+    "A": "28h ≤ 234",
+    "B": "28h + 10 ≤ 234",
+    "C": "28h + 10 ≥ 234",
+    "D": "28h + 17 ≤ 234"
   },
   "correct": {
     "A": false,
@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Choice B is correct. The equation 28h + 10 \u2264 234 represents the given situation. Subtracting 10 from both sides and dividing by 28 gives h \u2264 8. Since the rental is available only in whole hours, the maximum hours Max Ku can rent is 8.",
+  "explanation": "Choice B is correct. The equation 28h + 10 ≤ 234 represents the given situation. Subtracting 10 from both sides and dividing by 28 gives h ≤ 8. Since the rental is available only in whole hours, the maximum hours Max Ku can rent is 8.",
   "category": "Inequalities - Budgeting",
   "difficulty": "Easy",
-  "id": "5516cef5"
+  "id": "5516cef5",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

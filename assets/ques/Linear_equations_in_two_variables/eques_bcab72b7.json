@@ -15,5 +15,6 @@
   "explanation": "The given equation of line p is rewritten in slope-intercept form as $ y = \\frac{5}{1}x + b $. This means the slope of line p is \\frac{5}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{5}{1} is \\frac{-1}{5}. Thus, the slope of line r is \\frac{-1}{5}.",
   "category": "Linear Equations - Perpendicular Slopes",
   "difficulty": "Medium",
-  "id": "bcab72b7"
+  "id": "bcab72b7",
+  "subcategory": "Linear_equations_in_two_variables"
 }

@@ -1,10 +1,10 @@
 {
   "task": "Aleksander Iskra plans to rent a bike. The rental cost is $80 per month, and he must also pay a fixed cost of $25. Aleksander Iskra wants to spend no more than $419. If the rental is available only for whole months, what is the maximum number of months Aleksander Iskra can rent a bike? Which of the following equations properly represents this situation?",
   "answers": {
-    "A": "80h + 31 \u2264 419",
-    "B": "80h + 25 \u2264 419",
-    "C": "80h + 25 \u2265 419",
-    "D": "80h \u2264 419"
+    "A": "80h + 31 ≤ 419",
+    "B": "80h + 25 ≤ 419",
+    "C": "80h + 25 ≥ 419",
+    "D": "80h ≤ 419"
   },
   "correct": {
     "A": false,
@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Choice B is correct. The equation 80h + 25 \u2264 419 represents the given situation. Subtracting 25 from both sides and dividing by 80 gives h \u2264 4. Since the rental is available only in whole months, the maximum months Aleksander Iskra can rent is 4.",
+  "explanation": "Choice B is correct. The equation 80h + 25 ≤ 419 represents the given situation. Subtracting 25 from both sides and dividing by 80 gives h ≤ 4. Since the rental is available only in whole months, the maximum months Aleksander Iskra can rent is 4.",
   "category": "Inequalities - Budgeting",
   "difficulty": "Easy",
-  "id": "68ff74e1"
+  "id": "68ff74e1",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

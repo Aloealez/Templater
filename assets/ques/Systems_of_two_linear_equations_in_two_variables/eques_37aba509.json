@@ -15,5 +15,6 @@
   "explanation": "First, solve for $y$ from the first equation: $y = $4. Substituting into the second equation and solving for $x$ gives $x = $10. Thus, the correct answer is $10$.",
   "category": "Systems of Equations",
   "difficulty": "Medium",
-  "id": "37aba509"
+  "id": "37aba509",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

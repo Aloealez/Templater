@@ -18,9 +18,10 @@
     "D": 0.0
   },
   "task": "Sophia bought party hats and stickers for $139. Each party hats cost $2, and each stickers cost $1. If Sophia bought 10 party hats, how many stickers did Sophia buy?",
-  "explanation": "Choice C is correct. To determine how many stickers Sophia bought, we first calculate the amount spent on party hats:\n$2 \times 10 = $20.\nNext, we subtract this amount from the total cost: $139 - $20 = $119.\nSince each stickers costs $1, we divide: $119 \u00f7 $1 = 119.\nThus, Sophia bought 119 stickers.",
+  "explanation": "Choice C is correct. To determine how many stickers Sophia bought, we first calculate the amount spent on party hats:\n$2 \times 10 = $20.\nNext, we subtract this amount from the total cost: $139 - $20 = $119.\nSince each stickers costs $1, we divide: $119 ÷ $1 = 119.\nThus, Sophia bought 119 stickers.",
   "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
-  "id": "28f7e5ed"
+  "id": "28f7e5ed",
+  "subcategory": "Linear_equations_in_two_variables"
 }

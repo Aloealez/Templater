@@ -21,5 +21,6 @@
   "explanation": "Choice B is correct. Since Connor has 2 times as many dollars as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 46 dollars, we set up:\n$ c + m = 46 $.\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "c835f35a"
+  "id": "c835f35a",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

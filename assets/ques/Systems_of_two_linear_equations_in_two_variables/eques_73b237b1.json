@@ -15,5 +15,6 @@
   "explanation": "First, solve for $y$ from the first equation: $y = $\\frac{-18}{5}. Substituting into the second equation and solving for $x$ gives $x = $\\frac{26}{5}. Thus, the correct answer is $\\frac{26}{5}$.",
   "category": "Systems of Equations",
   "difficulty": "Medium",
-  "id": "73b237b1"
+  "id": "73b237b1",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

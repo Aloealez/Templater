@@ -15,5 +15,6 @@
   "explanation": "Each equation is written in slope-intercept form, $y = mx + b$, where $m$ is the slope. If the slopes are different, the graphs will intersect at exactly one point. If the slopes are the same but the y-intercepts are different, the graphs are parallel and never intersect. If the slopes and y-intercepts are the same, the graphs are identical and have infinitely many intersection points. In some cases, depending on the system type, there may be exactly two intersections.",
   "category": "Systems of Equations - Intersection Points",
   "difficulty": "Medium",
-  "id": "7671ce06"
+  "id": "7671ce06",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

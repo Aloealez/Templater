@@ -15,5 +15,6 @@
   "explanation": "It's given that Sophia traveled at an average speed of 57 miles per hour and traveled for $r$ hours. Multiplying 57 by $r$ gives the distance Sophia traveled: $57r$. Similarly, Liam traveled at an average speed of 34 miles per hour for $j$ hours, yielding a distance of $34j$. The total distance must be less than 197, leading to the inequality $57r + 34j < 197$.",
   "category": "Inequalities - Distance and Speed",
   "difficulty": "Medium",
-  "id": "0f2671dd"
+  "id": "0f2671dd",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

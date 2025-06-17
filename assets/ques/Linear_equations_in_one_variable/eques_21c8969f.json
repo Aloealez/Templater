@@ -6,13 +6,14 @@
     "C": 4263,
     "D": 2263
   },
-  "correct" : {
-    "A" : false,
-    "B" : false,
-    "C" : true,
-    "D" : false
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\nIt's given that the rocket contained $426634$ kg of propellant before launch and had $337100$ kg remaining after $21$ seconds.\nFinding the difference between the initial and remaining fuel gives:\n$426634 - 337100 = 89534$ kg burned in 21 seconds.\nDividing by the number of seconds gives:\n $$ \\frac{89534}{21} = 4263') $$ kg per second.\nThus, the correct answer is **4263 kg per second**.",
-  "id": "21c8969f"
+  "id": "21c8969f",
+  "subcategory": "Linear_equations_in_one_variable"
 }

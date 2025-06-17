@@ -6,7 +6,7 @@
     "C": -11,
     "D": 4
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": true,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubtracting 40 from both sides of the equation $2p + 40 = 28$ gives $2p = -12$.\nDividing both sides by 2 results in $1p = -6$.\nTherefore, the correct answer is **-6**.",
-  "id": "ef164f15"
+  "id": "ef164f15",
+  "subcategory": "Linear_equations_in_one_variable"
 }

@@ -15,5 +15,6 @@
   "explanation": "Since the rectangle's length is 8 times its width, we define its length as 8w. This means that 8w represents the length of the rectangle, in feet.",
   "category": "Nonlinear Functions - Geometric Interpretation",
   "difficulty": "Medium",
-  "id": "df4c870e"
+  "id": "df4c870e",
+  "subcategory": "Nonlinear_functions"
 }

@@ -6,7 +6,7 @@
     "C": 21,
     "D": 22
   },
-  "correct" : {
+  "correct": {
     "A": true,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $190$ for $f(x)$ in the function equation gives:\n$190 = 10x$.\n\nDividing both sides by 10 yields:\n$x = 19$.\n\nTherefore, the correct answer is **19**.",
-  "id": "384cbb11"
+  "id": "384cbb11",
+  "subcategory": "Linear_functions"
 }

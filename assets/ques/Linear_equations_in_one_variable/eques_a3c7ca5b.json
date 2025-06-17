@@ -6,7 +6,7 @@
     "C": 90,
     "D": 100
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": true,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nAdding 35 to both sides of the equation $5p - 35 = 415$ gives $5p = 450$.\nDividing both sides by 5 results in $1p = 90$.\nTherefore, the correct answer is **90**.",
-  "id": "a3c7ca5b"
+  "id": "a3c7ca5b",
+  "subcategory": "Linear_equations_in_one_variable"
 }

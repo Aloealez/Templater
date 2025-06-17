@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nFor the given equation $8x + k = 8x -15$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 8x from both sides results in $k = -15$.\nThus, the equation holds for **all** values of $x$ if and only if $k = -15$.\nTherefore, the correct answer is **-15**.",
-  "id": "dfbf8c44"
+  "id": "dfbf8c44",
+  "subcategory": "Linear_equations_in_one_variable"
 }

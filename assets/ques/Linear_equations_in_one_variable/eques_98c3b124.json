@@ -6,7 +6,7 @@
     "C": "$x - 7 = 5$",
     "D": "$x - 5 = 0$"
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "\nRationale\nChoice D is correct. Dividing each side of the given equation by 7 yields $x - 5 = 0$. Therefore, the equation $x - 5 = 0$ is equivalent to the given equation and has the same solution.",
-  "id": "98c3b124"
+  "id": "98c3b124",
+  "subcategory": "Linear_equations_in_one_variable"
 }

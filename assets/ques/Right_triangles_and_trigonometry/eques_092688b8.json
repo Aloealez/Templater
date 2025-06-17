@@ -3,8 +3,8 @@
   "answers": {
     "A": "$ 33 $",
     "B": "$ 1090 $",
-    "C": "1\u221a1090",
-    "D": "$ 6\u221a90 $"
+    "C": "1√1090",
+    "D": "$ 6√90 $"
   },
   "correct": {
     "A": false,
@@ -12,8 +12,9 @@
     "C": true,
     "D": false
   },
-  "explanation": "The correct answer is 1\u221a1090. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(19)\u00b2 + (27)\u00b2 = c\u00b2\n361 + 729 = 1090 = c\u00b2\nTaking the square root: \u221a1090 = c.\nThe simplified radical form of \u221a1090 is 1\u221a1090, so the hypotenuse is 1\u221a1090 cm.",
+  "explanation": "The correct answer is 1√1090. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(19)² + (27)² = c²\n361 + 729 = 1090 = c²\nTaking the square root: √1090 = c.\nThe simplified radical form of √1090 is 1√1090, so the hypotenuse is 1√1090 cm.",
   "category": "Geometry - Pythagorean Theorem",
   "difficulty": "Medium",
-  "id": "092688b8"
+  "id": "092688b8",
+  "subcategory": "Right_triangles_and_trigonometry"
 }

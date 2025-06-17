@@ -15,5 +15,6 @@
   "explanation": "Since the rectangle's length is 3 times its width, we define its length as 3w. This means that 3w represents the length of the rectangle, in inches.",
   "category": "Nonlinear Functions - Geometric Interpretation",
   "difficulty": "Medium",
-  "id": "765f82dc"
+  "id": "765f82dc",
+  "subcategory": "Nonlinear_functions"
 }

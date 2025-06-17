@@ -15,5 +15,6 @@
   "explanation": "The given equation of line k is rewritten in slope-intercept form as $ y = \\frac{7}{2}x + b $. This means the slope of line k is \\frac{7}{2}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{7}{2} is \\frac{-2}{7}. Thus, the slope of line w is \\frac{-2}{7}.",
   "category": "Linear Equations - Perpendicular Slopes",
   "difficulty": "Medium",
-  "id": "670570eb"
+  "id": "670570eb",
+  "subcategory": "Linear_equations_in_two_variables"
 }

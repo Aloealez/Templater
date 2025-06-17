@@ -6,7 +6,7 @@
     "C": 18,
     "D": 19
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": true,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $252$ for $f(x)$ in the function equation gives:\n$252 = 14x$.\n\nDividing both sides by 14 yields:\n$x = 18$.\n\nTherefore, the correct answer is **18**.",
-  "id": "67b00658"
+  "id": "67b00658",
+  "subcategory": "Linear_functions"
 }

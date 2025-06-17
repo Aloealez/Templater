@@ -15,5 +15,6 @@
   "explanation": "We solve the system using elimination or substitution. The determinant is computed as 8 * -8 - (-1) * -7 = -71, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-36/71, -4/71)$.",
   "category": "Systems of Equations - Solving for (x, y)",
   "difficulty": "Medium",
-  "id": "71dfbc62"
+  "id": "71dfbc62",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

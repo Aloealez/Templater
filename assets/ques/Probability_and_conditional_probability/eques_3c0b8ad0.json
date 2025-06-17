@@ -15,5 +15,6 @@
   "explanation": "There are a total of 84 marbles in the bag. If the marbles is neither orange nor red, then it must be either yellow or red. The probability of selecting one of these is (12 + 34)/84, which in LaTeX style is \\frac{46}{84}. Thus, the probability is \\frac{46}{84}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "3c0b8ad0"
+  "id": "3c0b8ad0",
+  "subcategory": "Probability_and_conditional_probability"
 }

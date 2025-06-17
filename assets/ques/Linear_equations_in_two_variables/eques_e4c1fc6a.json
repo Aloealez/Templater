@@ -15,5 +15,6 @@
   "explanation": "The equation of line $k$ is given as $y = \\frac{-2}{1}x + b$, so its slope is $ \\frac{-2}{1} $. For a perpendicular line, the slope is the negative reciprocal of $ \\frac{-2}{1} $, which is \\(\\frac{1}{2}\\). Thus, the correct answer is \\(\\frac{1}{2}\\).",
   "category": "Linear Equations - Perpendicular Slopes",
   "difficulty": "Medium",
-  "id": "e4c1fc6a"
+  "id": "e4c1fc6a",
+  "subcategory": "Linear_equations_in_two_variables"
 }

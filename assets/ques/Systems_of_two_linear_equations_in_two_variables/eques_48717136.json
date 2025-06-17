@@ -21,5 +21,6 @@
   "explanation": "Choice A is correct. Since Connor has 2 times as many marbles as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 26 marbles, we set up:\n$ c + m = 26 $.\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "48717136"
+  "id": "48717136",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

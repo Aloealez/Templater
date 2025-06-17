@@ -18,9 +18,10 @@
     "D": 0.0
   },
   "task": "Daniel bought books and cupcakes for $104. Each books cost $4, and each cupcakes cost $3. If Daniel bought 11 books, how many cupcakes did Daniel buy?",
-  "explanation": "Choice A is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on books:\n$4 \times 11 = $44.\nNext, we subtract this amount from the total cost: $104 - $44 = $60.\nSince each cupcakes costs $3, we divide: $60 \u00f7 $3 = 20.\nThus, Daniel bought 20 cupcakes.",
+  "explanation": "Choice A is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on books:\n$4 \times 11 = $44.\nNext, we subtract this amount from the total cost: $104 - $44 = $60.\nSince each cupcakes costs $3, we divide: $60 ÷ $3 = 20.\nThus, Daniel bought 20 cupcakes.",
   "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
-  "id": "5255f43f"
+  "id": "5255f43f",
+  "subcategory": "Linear_equations_in_two_variables"
 }

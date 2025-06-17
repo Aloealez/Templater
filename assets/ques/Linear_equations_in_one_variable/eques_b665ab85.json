@@ -6,7 +6,7 @@
     "C": 4412,
     "D": 3412
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": true,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\nIt's given that the rocket contained $460770$ kg of propellant before launch and had $346035$ kg remaining after $26$ seconds.\nFinding the difference between the initial and remaining fuel gives:\n$460770 - 346035 = 114735$ kg burned in 26 seconds.\nDividing by the number of seconds gives:\n $$ \\frac{114735}{26} = 4412') $$ kg per second.\nThus, the correct answer is **4412 kg per second**.",
-  "id": "b665ab85"
+  "id": "b665ab85",
+  "subcategory": "Linear_equations_in_one_variable"
 }

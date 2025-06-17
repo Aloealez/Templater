@@ -15,5 +15,6 @@
   "explanation": "First, solve for $y$ from the first equation: $y = $-6. Substituting into the second equation and solving for $x$ gives $x = $5. Thus, the correct answer is $5$.",
   "category": "Systems of Equations",
   "difficulty": "Medium",
-  "id": "8f700b3f"
+  "id": "8f700b3f",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

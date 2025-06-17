@@ -15,5 +15,6 @@
   "explanation": "Since the rectangle's length is 13 times its width, we define its length as 13w. This means that 13w represents the length of the rectangle, in meters.",
   "category": "Nonlinear Functions - Geometric Interpretation",
   "difficulty": "Medium",
-  "id": "b6f9aa1c"
+  "id": "b6f9aa1c",
+  "subcategory": "Nonlinear_functions"
 }

@@ -16,5 +16,6 @@
   "category": "Line of Best Fit - Slope Estimation",
   "difficulty": "Medium",
   "image": "scatterplot.png",
-  "id": "41c150bf"
+  "id": "41c150bf",
+  "subcategory": "Two-variable_data_Models_and_scatterplots"
 }

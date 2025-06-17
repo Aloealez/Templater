@@ -15,5 +15,6 @@
   "explanation": "It's given that an estimated 39% of people in the population support an election candidate, with a margin of error of 2%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 37% and 41% of the population. Multiplying these percentages by the total population (62934) gives a range of 23285 to 25802. Since 24116 falls within this range, it is a plausible answer.",
   "category": "Inference from Sample Statistics and Margin of Error",
   "difficulty": "Medium",
-  "id": "45752527"
+  "id": "45752527",
+  "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
 }

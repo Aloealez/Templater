@@ -15,5 +15,6 @@
   "explanation": "It's given that Sophia traveled at an average speed of 55 miles per hour and traveled for $r$ hours. Multiplying 55 by $r$ gives the distance Sophia traveled: $55r$. Similarly, Jessica traveled at an average speed of 32 miles per hour for $j$ hours, yielding a distance of $32j$. The total distance must be less than 405, leading to the inequality $55r + 32j < 405$.",
   "category": "Inequalities - Distance and Speed",
   "difficulty": "Medium",
-  "id": "fa626c31"
+  "id": "fa626c31",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

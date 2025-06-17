@@ -18,9 +18,10 @@
     "D": 0.0
   },
   "task": "Sophia bought books and cupcakes for $114. Each books cost $5, and each cupcakes cost $1. If Sophia bought 9 books, how many cupcakes did Sophia buy?",
-  "explanation": "Choice A is correct. To determine how many cupcakes Sophia bought, we first calculate the amount spent on books:\n$5 \times 9 = $45.\nNext, we subtract this amount from the total cost: $114 - $45 = $69.\nSince each cupcakes costs $1, we divide: $69 \u00f7 $1 = 69.\nThus, Sophia bought 69 cupcakes.",
+  "explanation": "Choice A is correct. To determine how many cupcakes Sophia bought, we first calculate the amount spent on books:\n$5 \times 9 = $45.\nNext, we subtract this amount from the total cost: $114 - $45 = $69.\nSince each cupcakes costs $1, we divide: $69 ÷ $1 = 69.\nThus, Sophia bought 69 cupcakes.",
   "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
-  "id": "37b302f1"
+  "id": "37b302f1",
+  "subcategory": "Linear_equations_in_two_variables"
 }

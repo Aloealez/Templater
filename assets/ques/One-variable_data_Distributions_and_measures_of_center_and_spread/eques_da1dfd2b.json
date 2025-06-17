@@ -15,5 +15,6 @@
   "explanation": "To satisfy the condition where mean and median are equal, $x$ must be chosen so that: the middle value (median) of the ordered set is equal to the mean (sum of all values divided by 5). For the given numbers [10, 10, 18, 20], the possible values of $x$ that satisfy this condition are: []. Since None satisfies this condition, it is the correct answer.",
   "category": "Mean and Median Relationship",
   "difficulty": "Medium",
-  "id": "da1dfd2b"
+  "id": "da1dfd2b",
+  "subcategory": "One-variable_data_Distributions_and_measures_of_center_and_spread"
 }

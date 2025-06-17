@@ -6,7 +6,7 @@
     "C": 3736,
     "D": 2736
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\nIt's given that the rocket contained $427271$ kg of propellant before launch and had $345171$ kg remaining after $30$ seconds.\nFinding the difference between the initial and remaining fuel gives:\n$427271 - 345171 = 82100$ kg burned in 30 seconds.\nDividing by the number of seconds gives:\n $$ \\frac{82100}{30} = 2736') $$ kg per second.\nThus, the correct answer is **2736 kg per second**.",
-  "id": "a8678424"
+  "id": "a8678424",
+  "subcategory": "Linear_equations_in_one_variable"
 }

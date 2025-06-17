@@ -6,7 +6,7 @@
     "C": "$2x + 4 = 16$",
     "D": "$2x + 3 = 6$"
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": true,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "\nRationale\nChoice B is correct. Dividing each side of the given equation by 7 yields $2x + 1 = 11$. Therefore, the equation $2x + 1 = 11$ is equivalent to the given equation and has the same solution.",
-  "id": "a17ee712"
+  "id": "a17ee712",
+  "subcategory": "Linear_equations_in_one_variable"
 }

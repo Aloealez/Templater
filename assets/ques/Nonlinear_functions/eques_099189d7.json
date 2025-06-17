@@ -15,5 +15,6 @@
   "explanation": "Since the rectangle's length is 19 times its width, we define its length as 19w. This means that 19w represents the length of the rectangle, in meters.",
   "category": "Nonlinear Functions - Geometric Interpretation",
   "difficulty": "Medium",
-  "id": "099189d7"
+  "id": "099189d7",
+  "subcategory": "Nonlinear_functions"
 }

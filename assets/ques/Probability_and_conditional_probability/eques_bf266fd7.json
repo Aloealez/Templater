@@ -12,8 +12,9 @@
     "C": false,
     "D": true
   },
-  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{147}{m} = \\frac{34}{306}$. Cross multiplying gives: 147 \u00d7 306 = 34 \u00d7 m. Solving for $m$, we get $m = 1323$.",
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{147}{m} = \\frac{34}{306}$. Cross multiplying gives: 147 × 306 = 34 × m. Solving for $m$, we get $m = 1323$.",
   "category": "Ratios and Proportions",
   "difficulty": "Medium",
-  "id": "bf266fd7"
+  "id": "bf266fd7",
+  "subcategory": "Probability_and_conditional_probability"
 }

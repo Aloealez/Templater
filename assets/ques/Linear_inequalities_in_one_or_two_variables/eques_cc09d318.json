@@ -14,5 +14,6 @@
   },
   "difficulty": "Hard",
   "explanation": "The correct answer is 27. \nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\nof the individual tickets, $3.41. If n tickets costing $3.41 each are purchased in one month the inequality 89 < 3.41n represents this situation. \nDividing both sides of the inequality by 3.41yields 26.099706744868033 < n, which is equivalent to n > 26.099706744868033. Since only a whole number of tickets can be purchased, \nit follows that 27 is the minimum number of trips",
-  "id": "cc09d318"
+  "id": "cc09d318",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

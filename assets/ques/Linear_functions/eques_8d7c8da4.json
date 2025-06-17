@@ -6,7 +6,7 @@
     "C": 9,
     "D": 5
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $55$ for $f(x)$ in the function equation gives:\n$55 = 11x$.\n\nDividing both sides by 11 yields:\n$x = 5$.\n\nTherefore, the correct answer is **5**.",
-  "id": "8d7c8da4"
+  "id": "8d7c8da4",
+  "subcategory": "Linear_functions"
 }

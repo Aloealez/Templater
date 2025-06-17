@@ -15,5 +15,6 @@
   "explanation": "We solve the system using elimination or substitution. The determinant is computed as -7 * -6 - 8 * -3 = 66, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-4/3, -13/6)$.",
   "category": "Systems of Equations - Solving for (x, y)",
   "difficulty": "Medium",
-  "id": "f644b5b6"
+  "id": "f644b5b6",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

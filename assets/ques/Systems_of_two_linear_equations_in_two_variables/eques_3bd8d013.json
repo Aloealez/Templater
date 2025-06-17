@@ -21,5 +21,6 @@
   "explanation": "Choice A is correct. Janek played an arcade challenge where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 28 coins and 7 stars, scoring 777 points.\nThe second time, Janek collected 31 coins and 9 stars, scoring 909 points.\nSetting up the system of equations, we have:\n$ 28c + 7s = 777 $\n$ 31c + 9s = 909 $\nThis forms the correct system of equations.",
   "category": "Systems of Equations",
   "difficulty": "Easy",
-  "id": "3bd8d013"
+  "id": "3bd8d013",
+  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

@@ -15,5 +15,6 @@
   "explanation": "Since $k$ is 16% greater than 67, we calculate: $k = 67 + (16/100) \times 67$. This simplifies to $k = 77.72$. We also know $k = 67r$, so solving for $r$: $r = 77.72 / 67 = 1.16$.",
   "category": "Percentages and Proportions",
   "difficulty": "Medium",
-  "id": "50d7a95d"
+  "id": "50d7a95d",
+  "subcategory": "Percentages"
 }

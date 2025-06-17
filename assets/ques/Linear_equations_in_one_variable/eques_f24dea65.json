@@ -6,7 +6,7 @@
     "C": 6,
     "D": 3
   },
-  "correct" : {
+  "correct": {
     "A": false,
     "B": false,
     "C": true,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "The correct answer is 6. It's given that $4x + 31 = 55$. To solve for $x$, subtract 31 from both sides: $4x = 55 - 31 = 24$. Then, divide both sides by 4: $x = \\frac{24}{4} = 6$.",
-  "id": "f24dea65"
+  "id": "f24dea65",
+  "subcategory": "Linear_equations_in_one_variable"
 }

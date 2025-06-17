@@ -15,5 +15,6 @@
   "explanation": "There are a total of 72 balls in the bag. If the balls is neither red nor orange, then it must be either blue or orange. The probability of selecting one of these is (16 + 13)/72, which in LaTeX style is \\frac{29}{72}. Thus, the probability is \\frac{29}{72}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "3a5a39ea"
+  "id": "3a5a39ea",
+  "subcategory": "Probability_and_conditional_probability"
 }

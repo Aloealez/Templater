@@ -15,5 +15,6 @@
   "explanation": "To satisfy the condition where mean and median are equal, $x$ must be chosen so that: the middle value (median) of the ordered set is equal to the mean (sum of all values divided by 5). For the given numbers [10, 13, 14, 19], the possible values of $x$ that satisfy this condition are: [9, 14]. Since 14 satisfies this condition, it is the correct answer.",
   "category": "Mean and Median Relationship",
   "difficulty": "Medium",
-  "id": "172d280d"
+  "id": "172d280d",
+  "subcategory": "Nonlinear_functions"
 }

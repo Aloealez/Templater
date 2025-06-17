@@ -15,5 +15,6 @@
   "explanation": "The given equation of line t is rewritten in slope-intercept form as $ y = \\frac{14}{9}x + b $. This means the slope of line t is \\frac{14}{9}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{14}{9} is \\frac{-9}{14}. Thus, the slope of line j is \\frac{-9}{14}.",
   "category": "Linear Equations - Perpendicular Slopes",
   "difficulty": "Medium",
-  "id": "3e1f522f"
+  "id": "3e1f522f",
+  "subcategory": "Linear_equations_in_two_variables"
 }

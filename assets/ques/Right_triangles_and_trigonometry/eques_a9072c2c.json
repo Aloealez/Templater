@@ -2,9 +2,9 @@
   "task": "A right triangle has legs with lengths of $ 24 $ centimeters and $ 25 $ centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
   "answers": {
     "A": "$ 34 $",
-    "B": "$ 5\u221a48 $",
+    "B": "$ 5√48 $",
     "C": "$ 1201 $",
-    "D": "1\u221a1201"
+    "D": "1√1201"
   },
   "correct": {
     "A": false,
@@ -12,8 +12,9 @@
     "C": false,
     "D": true
   },
-  "explanation": "The correct answer is 1\u221a1201. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(24)\u00b2 + (25)\u00b2 = c\u00b2\n576 + 625 = 1201 = c\u00b2\nTaking the square root: \u221a1201 = c.\nThe simplified radical form of \u221a1201 is 1\u221a1201, so the hypotenuse is 1\u221a1201 cm.",
+  "explanation": "The correct answer is 1√1201. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(24)² + (25)² = c²\n576 + 625 = 1201 = c²\nTaking the square root: √1201 = c.\nThe simplified radical form of √1201 is 1√1201, so the hypotenuse is 1√1201 cm.",
   "category": "Geometry - Pythagorean Theorem",
   "difficulty": "Medium",
-  "id": "a9072c2c"
+  "id": "a9072c2c",
+  "subcategory": "Right_triangles_and_trigonometry"
 }

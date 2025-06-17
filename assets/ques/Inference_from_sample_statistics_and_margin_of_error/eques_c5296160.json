@@ -15,5 +15,6 @@
   "explanation": "It's given that an estimated 28% of people in the population support a new product launch, with a margin of error of 4%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 24% and 32% of the population. Multiplying these percentages by the total population (85171) gives a range of 20441 to 27254. Since 20953 falls within this range, it is a plausible answer.",
   "category": "Inference from Sample Statistics and Margin of Error",
   "difficulty": "Medium",
-  "id": "c5296160"
+  "id": "c5296160",
+  "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
 }

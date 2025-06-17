@@ -6,7 +6,7 @@
     "C": 14.65,
     "D": 15.65
   },
-  "correct" : {
+  "correct": {
     "A": true,
     "B": false,
     "C": false,
@@ -14,5 +14,6 @@
   },
   "difficulty": "Hard",
   "explanation": "Choice 0.65 is correct. \nThe number a is 55% greater than b, which means a = b * (1 + 55/100).\nThe number c is 58% less than a, which means c = a * (1 - 58/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 55/100) * (1 - 58/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 55/100) * (1 - 58/100)) * 100.\nThis simplifies to 0.65%, which is the final answer.",
-  "id": "e4d3a71c"
+  "id": "e4d3a71c",
+  "subcategory": "Percentages"
 }

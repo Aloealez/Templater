@@ -15,5 +15,6 @@
   "explanation": "The plant starts at 120 kilograms and grows between 1.73 and 3.41 kilograms per day. The inequality describing this scenario is: $ 120 + 1.73 \times d < w < 120 + 3.41 \times d $. Substituting 324 for $d$ gives: $ 681 < w < 1225 $.",
   "category": "Linear Inequalities - Growth Over Time",
   "difficulty": "Medium",
-  "id": "f6df9089"
+  "id": "f6df9089",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

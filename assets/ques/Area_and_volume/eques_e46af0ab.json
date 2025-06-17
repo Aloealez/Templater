@@ -13,6 +13,7 @@
     "D": false
   },
   "difficulty": "Hard",
-  "explanation": "Choice 42.92 is correct. \nIt\u2019s given that the length of each side of a scale model is 0.51 times the length of the corresponding side of the actual floor of a ballroom. Therefore, the area of the scale model is 42.92",
-  "id": "e46af0ab"
+  "explanation": "Choice 42.92 is correct. \nIt’s given that the length of each side of a scale model is 0.51 times the length of the corresponding side of the actual floor of a ballroom. Therefore, the area of the scale model is 42.92",
+  "id": "e46af0ab",
+  "subcategory": "Area_and_volume"
 }

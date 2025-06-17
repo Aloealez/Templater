@@ -18,9 +18,10 @@
     "D": 0.0
   },
   "task": "Daniel bought pencils and candles for $87. Each pencils cost $5, and each candles cost $3. If Daniel bought 15 pencils, how many candles did Daniel buy?",
-  "explanation": "Choice C is correct. To determine how many candles Daniel bought, we first calculate the amount spent on pencils:\n$5 \times 15 = $75.\nNext, we subtract this amount from the total cost: $87 - $75 = $12.\nSince each candles costs $3, we divide: $12 \u00f7 $3 = 4.\nThus, Daniel bought 4 candles.",
+  "explanation": "Choice C is correct. To determine how many candles Daniel bought, we first calculate the amount spent on pencils:\n$5 \times 15 = $75.\nNext, we subtract this amount from the total cost: $87 - $75 = $12.\nSince each candles costs $3, we divide: $12 ÷ $3 = 4.\nThus, Daniel bought 4 candles.",
   "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
-  "id": "45505fe0"
+  "id": "45505fe0",
+  "subcategory": "Linear_equations_in_two_variables"
 }

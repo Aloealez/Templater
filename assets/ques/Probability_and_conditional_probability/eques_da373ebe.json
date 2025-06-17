@@ -12,8 +12,9 @@
     "C": false,
     "D": false
   },
-  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{189}{m} = \\frac{47}{376}$. Cross multiplying gives: 189 \u00d7 376 = 47 \u00d7 m. Solving for $m$, we get $m = 1512$.",
+  "explanation": "Since the two ratios are equivalent, we set up the proportion: $\\frac{189}{m} = \\frac{47}{376}$. Cross multiplying gives: 189 × 376 = 47 × m. Solving for $m$, we get $m = 1512$.",
   "category": "Ratios and Proportions",
   "difficulty": "Medium",
-  "id": "da373ebe"
+  "id": "da373ebe",
+  "subcategory": "Probability_and_conditional_probability"
 }

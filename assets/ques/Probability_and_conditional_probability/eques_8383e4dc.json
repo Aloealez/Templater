@@ -15,5 +15,6 @@
   "explanation": "There are a total of 117 cubes in the bag. If the cubes is neither green nor yellow, then it must be either orange or red. The probability of selecting one of these is (6 + 39)/117, which in LaTeX style is \\frac{45}{117}. Thus, the probability is \\frac{45}{117}.",
   "category": "Probability and Conditional Probability",
   "difficulty": "Medium",
-  "id": "8383e4dc"
+  "id": "8383e4dc",
+  "subcategory": "Probability_and_conditional_probability"
 }

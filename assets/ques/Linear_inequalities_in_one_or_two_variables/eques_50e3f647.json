@@ -15,5 +15,6 @@
   "explanation": "It's given that Emily traveled at an average speed of 36 meters per hour and traveled for $r$ hours. Multiplying 36 by $r$ gives the distance Emily traveled: $36r$. Similarly, Jessica traveled at an average speed of 51 meters per hour for $j$ hours, yielding a distance of $51j$. The total distance must be less than 192, leading to the inequality $36r + 51j < 192$.",
   "category": "Inequalities - Distance and Speed",
   "difficulty": "Medium",
-  "id": "50e3f647"
+  "id": "50e3f647",
+  "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

@@ -14,5 +14,6 @@
   },
   "difficulty": "Easy",
   "explanation": "\nRationale\nChoice D is correct. Dividing each side of the given equation by 8 yields $4x + 9 = -23$. Therefore, the equation $4x + 9 = -23$ is equivalent to the given equation and has the same solution.",
-  "id": "eaff71e7"
+  "id": "eaff71e7",
+  "subcategory": "Linear_equations_in_one_variable"
 }

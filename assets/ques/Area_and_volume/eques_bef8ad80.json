@@ -1,5 +1,5 @@
 {
-  "task": "A triangular prism has a height of 7 centimeters (cm) and a volume of 70 cm\u00b3. What is the area, in cm\u00b2, of the base of the prism? (The volume of a triangular prism is equal to B \u00d7 h, where B is the area of the base and h is the height of the prism.)",
+  "task": "A triangular prism has a height of 7 centimeters (cm) and a volume of 70 cm³. What is the area, in cm², of the base of the prism? (The volume of a triangular prism is equal to B × h, where B is the area of the base and h is the height of the prism.)",
   "answers": {
     "A": "34",
     "B": "7",
@@ -12,8 +12,9 @@
     "C": false,
     "D": true
   },
-  "explanation": "The correct answer is 10. The volume of a triangular prism is given by V = B \u00d7 h. Since the volume is 70 cm\u00b3 and the height is 7 cm, we solve for B: 70 = B \u00d7 7. Dividing both sides by 7, we get B = 10. Thus, the area of the base is 10 cm\u00b2.",
+  "explanation": "The correct answer is 10. The volume of a triangular prism is given by V = B × h. Since the volume is 70 cm³ and the height is 7 cm, we solve for B: 70 = B × 7. Dividing both sides by 7, we get B = 10. Thus, the area of the base is 10 cm².",
   "category": "Geometry - Volume of Prisms",
   "difficulty": "Medium",
-  "id": "bef8ad80"
+  "id": "bef8ad80",
+  "subcategory": "Area_and_volume"
 }
