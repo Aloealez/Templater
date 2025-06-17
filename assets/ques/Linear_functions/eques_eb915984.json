@@ -1,12 +1,17 @@
 {
   "question": "The function $f$ is defined by $f(x) = 9x$. For what value of $x$ does $f(x) = 72$$?",
-  "choices": {
+  "answers": {
     "A": 3,
     "B": 11,
     "C": 7,
     "D": 8
   },
-  "correct_answer": "D",
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $72$ for $f(x)$ in the function equation gives:\n$72 = 9x$.\n\nDividing both sides by 9 yields:\n$x = 8$.\n\nTherefore, the correct answer is **8**.",
   "id": "eb915984"

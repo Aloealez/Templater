@@ -1,12 +1,17 @@
 {
   "question": "A local transit company sells a monthly pass for $88 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost $(1.25, 2.82, 3.26) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
-  "choices": {
+  "answers": {
     "A": 24,
     "B": 27,
     "C": 23,
     "D": 25
   },
-  "correct_answer": "B",
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Hard",
   "explanation": "The correct answer is 27. \nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\nof the individual tickets, $3.26. If n tickets costing $3.26 each are purchased in one month the inequality 88 < 3.26n represents this situation. \nDividing both sides of the inequality by 3.26yields 26.993865030674847 < n, which is equivalent to n > 26.993865030674847. Since only a whole number of tickets can be purchased, \nit follows that 27 is the minimum number of trips",
   "id": "97f93fa5"

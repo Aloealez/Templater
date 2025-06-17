@@ -2,7 +2,7 @@
   "category": "Algebra",
   "Difficulty": "Hard",
   "task": "Hector used a tool called an auger to remove corn from a storage bin at a constant rate. The bin contained 45,000 bushels of corn when Hector began to use the auger. After 5 hours of using the auger, 31,050 bushels of corn remained in the bin. If the auger continues to remove corn at this rate, what is the total number of hours Hector will have been using the auger when 13,500 bushels of corn remain in the bin?",
-  "choices": {
+  "answers": {
     "A": "2",
     "B": "11",
     "C": "4",

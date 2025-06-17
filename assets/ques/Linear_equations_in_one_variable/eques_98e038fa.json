@@ -1,12 +1,17 @@
 {
   "task": "$4(3x - 10) = -88$",
-  "choices": {
+  "answers": {
     "A": "$3x - 10 = -22$",
     "B": "$3x - 13 = -27$",
     "C": "$3x - 5 = -27$",
     "D": "$3x - 8 = -19$"
   },
-  "correct_answer": "A",
+  "correct" : {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "\nRationale\nChoice A is correct. Dividing each side of the given equation by 4 yields $3x - 10 = -22$. Therefore, the equation $3x - 10 = -22$ is equivalent to the given equation and has the same solution.",
   "id": "98e038fa"

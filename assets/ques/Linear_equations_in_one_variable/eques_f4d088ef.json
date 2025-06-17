@@ -1,13 +1,18 @@
 {
   "task": "if $4x + 26 = -10$, what is the value of $x$",
-  "choices": {
+  "answers": {
     "A": -8,
     "B": -9,
     "C": -12,
     "D": -4
   },
-  "correct_answer": " ",
+  "correct" : {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Easy",
-  "explanation": "\nRationle\nThe correct answer is -9. It's given that $4x + 26 = -10$.  To solve for $x$, we need to isolate the variable. First, add 26 to both sides: $4x = 16$. Then, divide by 4: $x = 4.0$. This simplifies to $x = -9$.",
+  "explanation": "The correct answer is -9. It's given that $4x + 26 = -10$. To solve for $x$, subtract 26 from both sides: $4x = -10 - 26 = -36$. Then, divide both sides by 4: $x = \\frac{-36}{4} = -9$.",
   "id": "f4d088ef"
 }

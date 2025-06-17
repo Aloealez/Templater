@@ -1,12 +1,17 @@
 {
   "task": "If $2x = -4$, what is the value of 6x - 1?",
-  "choices": {
+  "answers": {
     "A": -13,
     "B": -20,
     "C": -10,
     "D": -6
   },
-  "correct_answer": "A",
+  "correct" : {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "\nRationale\nThe correct answer is -13. It's given that $2x = -4$. Multiplying each side of this equation by 3 yields $6x = -12$. Subtracting 1 from each side gives the final value of 6x - 1 = -13.",
   "id": "ef958849"

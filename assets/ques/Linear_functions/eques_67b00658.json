@@ -1,12 +1,17 @@
 {
   "question": "The function $f$ is defined by $f(x) = 14x$. For what value of $x$ does $f(x) = 252$$?",
-  "choices": {
+  "answers": {
     "A": 23,
     "B": 15,
     "C": 18,
     "D": 19
   },
-  "correct_answer": "C",
+  "correct" : {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $252$ for $f(x)$ in the function equation gives:\n$252 = 14x$.\n\nDividing both sides by 14 yields:\n$x = 18$.\n\nTherefore, the correct answer is **18**.",
   "id": "67b00658"

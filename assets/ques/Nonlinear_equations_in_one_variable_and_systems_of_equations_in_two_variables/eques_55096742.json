@@ -2,13 +2,18 @@
   "category": "Algebra",
   "Difficulty": "Easy",
   "task": "Solve for x: 1x + 1 = 5",
-  "choices": {
+  "answers": {
     "A": "4",
     "B": 5,
     "C": 1,
     "D": 6
   },
-  "correct_answer": "A",
-  "explanation": "Step 1: Subtract 1 from both sides: 1x = 5 - 1 = 4<br>Step 2: Divide by 1: x = 4 \u00f7 1 = 4",
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Step 1: Subtract 1 from both sides: 1x = 5 - 1 = 4\nStep 2: Divide by 1: x = 4 \u00f7 1 = 4",
   "id": "55096742"
 }

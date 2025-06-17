@@ -1,12 +1,17 @@
 {
   "question": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\n\nEquation: $4x + k = 4x + 7$",
-  "choices": {
+  "answers": {
     "A": 2,
     "B": 7,
     "C": -3,
     "D": 12
   },
-  "correct_answer": "B",
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nFor the given equation $4x + k = 4x + 7$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 4x from both sides results in $k = 7$.\nThus, the equation holds for **all** values of $x$ if and only if $k = 7$.\nTherefore, the correct answer is **7**.",
   "id": "a93fb5c2"

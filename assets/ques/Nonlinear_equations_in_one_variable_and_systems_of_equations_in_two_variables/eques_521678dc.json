@@ -2,13 +2,18 @@
   "category": "Algebra",
   "Difficulty": "Hard",
   "task": "Solve for x: 4x\u00b2 + 10x + 6 = 0",
-  "choices": {
+  "answers": {
     "A": "x = 2.45",
     "B": "x = -1.0 or x = -1.5",
     "C": "x = -0.6",
     "D": "x = -2.5"
   },
-  "correct_answer": "B",
-  "explanation": "<b>Step 1:</b> Identify coefficients: a = 4, b = 10, c = 6<br><b>Step 2:</b> Calculate discriminant: b\u00b2 - 4ac = 10\u00b2 - 4(4)(6) = 4<br><b>Step 3:</b> Quadratic formula: x = [-b \u00b1 \u221a(discriminant)] / (2a)<br><b>Step 4:</b> Solutions: x = [-10 + \u221a4]/8 \u2248 -1.0<br>&nbsp;&nbsp;&nbsp;&nbsp;x = [-10 - \u221a4]/8 \u2248 -1.5",
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "$Step 1:$ Identify coefficients: a = 4, b = 10, c = 6\n$Step 2:$ Calculate discriminant: b\u00b2 - 4ac = 10\u00b2 - 4(4)(6) = 4\n$Step 3:$ Quadratic formula: x = [-b \u00b1 \u221a(discriminant)] / (2a)\n$Step 4:$ Solutions: x = [-10 + \u221a4]/8 \u2248 -1.0\n&nbsp;&nbsp;&nbsp;&nbsp;x = [-10 - \u221a4]/8 \u2248 -1.5",
   "id": "521678dc"
 }

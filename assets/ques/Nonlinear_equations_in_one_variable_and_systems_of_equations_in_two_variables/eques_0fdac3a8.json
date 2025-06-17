@@ -2,13 +2,18 @@
   "category": "Algebra",
   "Difficulty": "Easy",
   "task": "Solve the system:\n1) x + y = 4\n2) x - y = -2",
-  "choices": {
+  "answers": {
     "A": "(x, y) = (2, 2)",
     "B": "No solution",
     "C": "(x, y) = (3, 1)",
     "D": "(x, y) = (1, 3)"
   },
-  "correct_answer": "D",
-  "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 4 + -2 \u2192 2x = 2<br>Step 2: Solve for x: x = 1<br>Step 3: Substitute into first equation: 1 + y = 4 \u2192 y = 3",
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
+  "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 4 + -2 \u2192 2x = 2\nStep 2: Solve for x: x = 1\nStep 3: Substitute into first equation: 1 + y = 4 \u2192 y = 3",
   "id": "0fdac3a8"
 }

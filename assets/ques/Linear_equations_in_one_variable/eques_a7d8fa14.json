@@ -1,12 +1,17 @@
 {
   "task": "If $2x - 1 = 3$, what is the value of 6x - 3?",
-  "choices": {
+  "answers": {
     "A": 12,
     "B": 6,
     "C": 4,
     "D": 9
   },
-  "correct_answer": "D",
+  "correct" : {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
   "difficulty": "Easy",
   "explanation": "\nRationale\nThe correct answer is 9. It's given that $2x - 1 = 3$. Multiplying each side of this equation by 3 yields $6x - 3 = 9$. Subtracting 0 from each side gives the final value of 6x - 3 = 9.",
   "id": "a7d8fa14"

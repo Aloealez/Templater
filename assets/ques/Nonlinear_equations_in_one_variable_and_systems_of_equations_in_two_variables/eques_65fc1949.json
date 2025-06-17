@@ -2,13 +2,18 @@
   "category": "Algebra",
   "Difficulty": "Easy",
   "task": "Solve the system:\n1) x + y = 6\n2) x - y = 0",
-  "choices": {
+  "answers": {
     "A": "(x, y) = (3, 3)",
     "B": "(x, y) = (4, 2)",
     "C": "No solution",
     "D": "(x, y) = (3, 3)"
   },
-  "correct_answer": "A",
-  "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 6 + 0 \u2192 2x = 6<br>Step 2: Solve for x: x = 3<br>Step 3: Substitute into first equation: 3 + y = 6 \u2192 y = 3",
+  "correct": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
+  "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 6 + 0 \u2192 2x = 6\nStep 2: Solve for x: x = 3\nStep 3: Substitute into first equation: 3 + y = 6 \u2192 y = 3",
   "id": "65fc1949"
 }

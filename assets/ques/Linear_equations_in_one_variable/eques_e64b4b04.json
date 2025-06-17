@@ -1,12 +1,17 @@
 {
   "task": "If $x - 2 = -6$, what is the value of 3x - 5?",
-  "choices": {
+  "answers": {
     "A": -17,
     "B": -24,
     "C": -20,
     "D": -10
   },
-  "correct_answer": "A",
+  "correct" : {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "\nRationale\nThe correct answer is -17. It's given that $x - 2 = -6$. Multiplying each side of this equation by 3 yields $3x - 6 = -18$. Subtracting -1 from each side gives the final value of 3x - 5 = -17.",
   "id": "e64b4b04"

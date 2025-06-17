@@ -1,12 +1,17 @@
 {
   "question": "The number a is 70% greater  than the positive number b,The number c is 14% less than aThe number  c is what percent of b?",
-  "choices": {
+  "answers": {
     "A": 2.46,
     "B": 34.46,
     "C": 4.46,
     "D": 1.46
   },
-  "correct_answer": "D",
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
   "difficulty": "Hard",
   "explanation": "Choice 1.46 is correct. \nThe number a is 70% greater than b, which means a = b * (1 + 70/100).\nThe number c is 14% less than a, which means c = a * (1 - 14/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 70/100) * (1 - 14/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 70/100) * (1 - 14/100)) * 100.\nThis simplifies to 1.46%, which is the final answer.",
   "id": "999d1c6d"

@@ -1,12 +1,17 @@
 {
   "task": "$8(4x + 9) = -184$",
-  "choices": {
+  "answers": {
     "A": "$4x + 6 = -18$",
     "B": "$4x + 7 = -20$",
     "C": "$4x + 14 = -26$",
     "D": "$4x + 9 = -23$"
   },
-  "correct_answer": "D",
+  "correct": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
   "difficulty": "Easy",
   "explanation": "\nRationale\nChoice D is correct. Dividing each side of the given equation by 8 yields $4x + 9 = -23$. Therefore, the equation $4x + 9 = -23$ is equivalent to the given equation and has the same solution.",
   "id": "eaff71e7"

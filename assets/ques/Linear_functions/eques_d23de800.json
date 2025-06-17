@@ -1,12 +1,17 @@
 {
   "question": "Michael deposits $$38$$ in a savings account at the end of each week. At the beginning of the 1st week of a year, there was $$500$$ in the savings account. How much money, in dollars, will be in the account at the end of the 8th week of that year?",
-  "choices": {
+  "answers": {
     "A": 815,
     "B": 196,
     "C": 804,
     "D": 823
   },
-  "correct_answer": "C",
+  "correct" :{
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": false
+  },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nIt's given that at the beginning of the 1st week, there was $$500$$ in the savings account. Michael deposits $$38$$ at the end of each week.\n\nTo find the total amount at the end of 8 weeks, we use the equation:\n$500 + 8(38) = 804$$.\n\nThus, the correct answer is **$804$**.",
   "id": "d23de800"

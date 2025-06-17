@@ -1,12 +1,17 @@
 {
   "question": "The function $f$ is defined by $f(x) = 15x$. For what value of $x$ does $f(x) = 90$$?",
-  "choices": {
+  "answers": {
     "A": 4,
     "B": 7,
     "C": 11,
     "D": 6
   },
-  "correct_answer": "D",
+  "correct" : {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": true
+  },
   "difficulty": "Easy",
   "explanation": "**Rationale**\n\nSubstituting $90$ for $f(x)$ in the function equation gives:\n$90 = 15x$.\n\nDividing both sides by 15 yields:\n$x = 6$.\n\nTherefore, the correct answer is **6**.",
   "id": "7d492644"

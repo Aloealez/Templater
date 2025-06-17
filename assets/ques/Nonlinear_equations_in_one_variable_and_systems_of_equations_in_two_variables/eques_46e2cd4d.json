@@ -2,13 +2,18 @@
   "category": "Algebra",
   "Difficulty": "Hard",
   "task": "Solve for x: \u221a(4x + 15) = 3",
-  "choices": {
+  "answers": {
     "A": "x = 21",
     "B": "x = -1.5",
     "C": "x = 2",
     "D": "x = 6"
   },
-  "correct_answer": "B",
-  "explanation": "<b>Step 1:</b> Square both sides: 4x + 15 = 3\u00b2 = 9<br><b>Step 2:</b> Subtract 15: 4x = 9 - 15 = -6<br><b>Step 3:</b> Divide by 4: x = -6/4 = -1.5",
+  "correct": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": false
+  },
+  "explanation": "$Step 1:$ Square both sides: 4x + 15 = 3\u00b2 = 9\n$Step 2:$ Subtract 15: 4x = 9 - 15 = -6\n$Step 3:$ Divide by 4: x = -6/4 = -1.5",
   "id": "46e2cd4d"
 }

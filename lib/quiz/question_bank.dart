@@ -62,7 +62,9 @@ class QuestionBank {
         }
         lastId = id;
         String questionStr = await rootBundle.loadString('$questionAssetPath/$questionSubcategory/$id', cache: false);
+        print("1");
         QuizQuestionData question = QuizQuestionData.fromJsonDifficulty(jsonDecode(questionStr), SatsQuestionDifficulty.difficultyEasy);
+        print("2");
         question.subcategoryStr = questionSubcategory;
         await setSavedQuestion(question, questionSubcategory, id);
         savedQuestionIds.add(id);
