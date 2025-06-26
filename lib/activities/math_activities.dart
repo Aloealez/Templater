@@ -72,7 +72,7 @@ class _MathActivitiesState extends State<MathActivities> {
     String formattedDate = formatter.format(now);
 
     var subcategories = SatsQuestionSubcategories.typesList.sublist(10);
-    subcategories.removeWhere((item) => item == "Two-variable_data_Models_and_scatterplots");
+    subcategories.removeWhere((item) => item == 'Two-variable_data_Models_and_scatterplots');
 
     return Scaffold(
       body: Container(

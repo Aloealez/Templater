@@ -553,7 +553,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
         border: TableBorder.symmetric(
             inside: BorderSide(width: 1, color: Colors.grey.shade300),
             outside: BorderSide(width: 1, color: Colors.grey.shade300),
-            borderRadius: BorderRadius.circular(13.0)),
+            borderRadius: BorderRadius.circular(13.0),),
         children: [
           // TableRow(
           //   children: ['x', 'y']
@@ -590,9 +590,9 @@ class _MathQuizModelState extends State<MathQuizModel> {
                                 ),
                               ),
                           ),
-                        ))
+                        ),)
                     .toList(),
-              )),
+              ),),
         ],
       ),
     );
@@ -608,7 +608,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
       leading: buildAnswerChecks(context, selectedOption, answerLetter, questionId),
       title: _buildTable((widget.questions[questionId]?.answers[answerLetter] as List<dynamic>)
           .map((e) => (e as List<dynamic>).map((e2) => (e2 as String)).toList())
-          .toList()),
+          .toList(),),
       // Text(
       //   "${widget.questions[questionId]?.answers[answerLetter]}",
       //   style: TextStyle(fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 0.95 * size.width,),

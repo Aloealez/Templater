@@ -29,7 +29,7 @@ class _TimeSelectionState extends State<TimeSelection> {
     super.initState();
   }
 
-  startLevelTest() async {
+  Future<void> startLevelTest() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String skill = prefs.getString('skill') ?? 'sats';
 

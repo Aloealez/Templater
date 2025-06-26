@@ -395,7 +395,7 @@ class _ProgressScreen extends State<ProgressScreen>
                                         .padLeft(2, '0');
                                     return widget.showAsPercentage ? (lastMaxScore > 0
                                         ? '${(data.score.round() / lastMaxScore * 100).round()}%\n$day.$month'
-                                        : '0%\n$day.$month') : "${data.score.round()}\n$day.$month";
+                                        : '0%\n$day.$month') : '${data.score.round()}\n$day.$month';
                                   } else if (index == chartData.length - 1) {
                                     final day =
                                         data.day.day.toString().padLeft(2, '0');
@@ -413,7 +413,7 @@ class _ProgressScreen extends State<ProgressScreen>
                                     final month = data.day.month
                                         .toString()
                                         .padLeft(2, '0');
-                                    return widget.showAsPercentage ? ('${(data.score.round() / lastMaxScore * 100).round()}${widget.showAsPercentage}\n$day.$month') : "${data.score.round()}\n$day.$month";
+                                    return widget.showAsPercentage ? ('${(data.score.round() / lastMaxScore * 100).round()}${widget.showAsPercentage}\n$day.$month') : '${data.score.round()}\n$day.$month';
                                   }
                                   return '';
                                 },
