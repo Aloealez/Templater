@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ x + y = 93 $",
-    "B": "$ y - x = 93 $",
-    "C": "$ 2x - y = 93 $",
-    "D": "$ x - y = 93 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "a school district's yearly education fund for one year was $ x $ euros. The organization budgeted $ y $ euros for a specific category and 93 euros for other expenses. Which of the following represents the relationship between $ x $ and $ y $ in this context?",
-  "explanation": "Choice D is correct. The total budget is represented by $ x $, and $ y $ represents the allocated portion. The remaining amount is 93 euros. \nSince the total budget is $ x $, subtracting the allocated budget $ y $ gives us: \n$ x - y = 93 $, which correctly represents the relationship.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "13b6b1a3",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ x + y = 93 $",
+        "B": "$ y - x = 93 $",
+        "C": "$ 2x - y = 93 $",
+        "D": "$ x - y = 93 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "a school district's yearly education fund for one year was $ x $ euros. The organization budgeted $ y $ euros for a specific category and 93 euros for other expenses. Which of the following represents the relationship between $ x $ and $ y $ in this context?",
+    "explanation": "Choice D is correct. The total budget is represented by $ x $, and $ y $ represents the allocated portion. The remaining amount is 93 euros. \nSince the total budget is $ x $, subtracting the allocated budget $ y $ gives us: \n$ x - y = 93 $, which correctly represents the relationship.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "13b6b1a3",
+    "subcategory": "Linear_equations_in_two_variables"
 }

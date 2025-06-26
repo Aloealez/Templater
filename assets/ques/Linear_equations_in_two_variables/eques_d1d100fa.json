@@ -1,20 +1,19 @@
 {
-  "task": "Line $k$ is defined by the equation $y = \\frac{15}{17}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
-  "answers": {
-    "A": "\\(\\frac{-15}{17}\\)",
-    "B": "\\(\\frac{15}{17}\\)",
-    "C": "\\(\\frac{5}{6}\\)",
-    "D": "\\(\\frac{-17}{15}\\)"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "The equation of line $k$ is given as $y = \\frac{15}{17}x + b$, so its slope is $ \\frac{15}{17} $. For a perpendicular line, the slope is the negative reciprocal of $ \\frac{15}{17} $, which is \\(\\frac{-17}{15}\\). Thus, the correct answer is \\(\\frac{-17}{15}\\).",
-  "category": "Linear Equations - Perpendicular Slopes",
-  "difficulty": "Medium",
-  "id": "d1d100fa",
-  "subcategory": "Linear_equations_in_two_variables"
+    "task": "Line $k$ is defined by the equation $y = \\frac{15}{17}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
+    "answers": {
+        "A": "\\frac{-15}{17}",
+        "B": "\\frac{15}{17}",
+        "C": "\\frac{5}{6}",
+        "D": "\\frac{-17}{15}"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "The equation of line $k$ is given as $y = \\frac{15}{17}x + b$, so its slope is $ \\frac{15}{17} $. For a perpendicular line, the slope is the negative reciprocal of $ \\frac{15}{17} $, which is \\frac{-17}{15}. Thus, the correct answer is \\frac{-17}{15}.",
+    "difficulty": "Medium",
+    "id": "d1d100fa",
+    "subcategory": "Linear_equations_in_two_variables"
 }

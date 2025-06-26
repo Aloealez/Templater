@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ \frac{1}{6}w + \frac{1}{9}r = 92 $",
-    "B": "$ 8w + 7r = 23 $",
-    "C": "$ \frac{1}{6}w + \frac{1}{9}r = 23 $",
-    "D": "$ 6w + 9r = 23 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "Wera is biking at a speed of 6 miles per hour and scooting at a speed of 9 miles per hour. She spends $ w $ hours biking and $ r $ hours scooting for a combined total of 23 miles. Which equation represents this situation?",
-  "explanation": "Choice D is correct. The total distance covered consists of two parts:\nThe distance covered while biking: $ 6 \times w $.\nThe distance covered while scooting: $ 9 \times r $.\nSince the total distance covered is 23 miles, the equation becomes:\n$ 6w + 9r = 23 $.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "9e264578",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "$\\frac{1}{6}w + \\frac{1}{9}r = 92 $",
+        "B": "$ 8w + 7r = 23 $",
+        "C": "$\\frac{1}{6}w + \\frac{1}{9}r = 23 $",
+        "D": "$ 6w + 9r = 23 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "Wera is biking at a speed of 6 miles per hour and scooting at a speed of 9 miles per hour. She spends $ w $ hours biking and $ r $ hours scooting for a combined total of 23 miles. Which equation represents this situation?",
+    "explanation": "Choice D is correct. The total distance covered consists of two parts:\nThe distance covered while biking: $ 6 \times w $.\nThe distance covered while scooting: $ 9 \times r $.\nSince the total distance covered is 23 miles, the equation becomes:\n$ 6w + 9r = 23 $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "9e264578",
+    "subcategory": "Linear_equations_in_two_variables"
 }

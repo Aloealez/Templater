@@ -1,19 +1,19 @@
 {
-  "task": "if $4x + 47 = 43$, what is the value of $x$",
-  "answers": {
-    "A": -6,
-    "B": -1,
-    "C": 0,
-    "D": -4
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "difficulty": "Easy",
-  "explanation": "The correct answer is -1. It's given that $4x + 47 = 43$. To solve for $x$, we need to isolate the variable. First, subtract 47 from both sides, It gives us: $4x = -4$. Then, divide both sides by 4: $x = \\frac{-4}{4} = -1$.",
-  "id": "c6d7e65e",
-  "subcategory": "Linear_equations_in_one_variable"
+    "task": "if $4x + 47 = 43$, what is the value of $x$",
+    "answers": {
+        "A": -6,
+        "B": -1,
+        "C": 0,
+        "D": -4
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "difficulty": "Easy",
+    "explanation": "The correct answer is -1. It's given that $4x + 47 = 43$. To solve for $x$, we need to isolate the variable. First, subtract 47 from both sides, It gives us: $4x = -4$. Then, divide both sides by 4: $x = \\frac{-4}{4} = -1$.",
+    "id": "c6d7e65e",
+    "subcategory": "Linear_equations_in_one_variable"
 }

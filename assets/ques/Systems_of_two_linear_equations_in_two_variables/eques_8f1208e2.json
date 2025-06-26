@@ -1,26 +1,25 @@
 {
-  "answers": {
-    "A": "$ 13c + 21s = 829 $\n$ 14c + 25s = 1022 $",
-    "B": "$ 21c + 13s = 829 $\n$ 25c + 14s = 1057 $",
-    "C": "$ 21c + 829s = 13 $\n$ 25c + 1022s = 14 $",
-    "D": "$ 21c + 13s = 829 $\n$ 25c + 14s = 1022 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "Janek is playing a video game. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 21 coins and 13 stars, scoring 829 points. The second time, he collected 25 coins and 14 stars, scoring 1022 points. Which system of equations can be used to determine the values of $c$ and $s$?",
-  "explanation": "Choice D is correct. Janek played a video game where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 21 coins and 13 stars, scoring 829 points.\nThe second time, Janek collected 25 coins and 14 stars, scoring 1022 points.\nSetting up the system of equations, we have:\n$ 21c + 13s = 829 $\n$ 25c + 14s = 1022 $\nThis forms the correct system of equations.",
-  "category": "Systems of Equations",
-  "difficulty": "Easy",
-  "id": "8f1208e2",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ 13c + 21s = 829 $\n$ 14c + 25s = 1022 $",
+        "B": "$ 21c + 13s = 829 $\n$ 25c + 14s = 1057 $",
+        "C": "$ 21c + 829s = 13 $\n$ 25c + 1022s = 14 $",
+        "D": "$ 21c + 13s = 829 $\n$ 25c + 14s = 1022 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "Janek is playing a video game. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 21 coins and 13 stars, scoring 829 points. The second time, he collected 25 coins and 14 stars, scoring 1022 points. Which system of equations can be used to determine the values of $c$ and $s$?",
+    "explanation": "Choice D is correct. Janek played a video game where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 21 coins and 13 stars, scoring 829 points.\nThe second time, Janek collected 25 coins and 14 stars, scoring 1022 points.\nSetting up the system of equations, we have:\n$ 21c + 13s = 829 $\n$ 25c + 14s = 1022 $\nThis forms the correct system of equations.",
+    "difficulty": "Easy",
+    "id": "8f1208e2",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

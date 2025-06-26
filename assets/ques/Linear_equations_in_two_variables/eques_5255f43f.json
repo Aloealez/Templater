@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "20",
-    "B": "22",
-    "C": "25",
-    "D": "15"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "Daniel bought books and cupcakes for $104. Each books cost $4, and each cupcakes cost $3. If Daniel bought 11 books, how many cupcakes did Daniel buy?",
-  "explanation": "Choice A is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on books:\n$4 \times 11 = $44.\nNext, we subtract this amount from the total cost: $104 - $44 = $60.\nSince each cupcakes costs $3, we divide: $60 ÷ $3 = 20.\nThus, Daniel bought 20 cupcakes.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "5255f43f",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "20",
+        "B": "22",
+        "C": "25",
+        "D": "15"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "Daniel bought books and cupcakes for 104{dollars}. Each books cost 4, {dollars}and each cupcakes cost 3. {dollars}If Daniel bought 11 books, how many cupcakes did Daniel buy?",
+    "explanation": "Choice A is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on books:\n{dollars}4 times 11 = {dollars}44.\nNext, we subtract this amount from the total cost: {dollars}104 - {dollars}44 = {dollars}60.\nSince each cupcakes costs {dollars}3, we divide: {dollars}60 \u00f7 {dollars}3 = 20.\nThus, Daniel bought 20 cupcakes.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "5255f43f",
+    "subcategory": "Linear_equations_in_two_variables"
 }

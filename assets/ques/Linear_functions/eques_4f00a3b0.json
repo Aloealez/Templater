@@ -1,27 +1,26 @@
 {
-  "task": "A veterinarian recommends that each day a certain rabbit should eat 30 calories per pound of the rabbit's weight plus an additional 17 calories. Which equation represents this situation, where $c$ is the total number of calories the veterinarian recommends the rabbit should eat each day if the rabbit's weight is $x$ pounds?",
-  "answers": {
-    "A": "c = 30x",
-    "B": "c = 39x",
-    "C": "c = 30x + 17",
-    "D": "c = 17x + 30"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "explanation": "The rabbit needs 30 calories for each pound it weighs, which is represented by 30x. Then, an additional 17 calories are added. So the equation is: $c = 30x + 17$.",
-  "category": "Linear Equations",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "4f00a3b0",
-  "subcategory": "Linear_functions"
+    "task": "A veterinarian recommends that each day a certain rabbit should eat 30 calories per pound of the rabbit's weight plus an additional 17 calories. Which equation represents this situation, where $c$ is the total number of calories the veterinarian recommends the rabbit should eat each day if the rabbit's weight is $x$ pounds?",
+    "answers": {
+        "A": "c = 30x",
+        "B": "c = 39x",
+        "C": "c = 30x + 17",
+        "D": "c = 17x + 30"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "explanation": "The rabbit needs 30 calories for each pound it weighs, which is represented by 30x. Then, an additional 17 calories are added. So the equation is: $c = 30x + 17$.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "4f00a3b0",
+    "subcategory": "Linear_functions"
 }

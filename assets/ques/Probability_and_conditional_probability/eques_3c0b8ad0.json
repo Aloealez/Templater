@@ -1,20 +1,19 @@
 {
-  "task": "In a bag, there are 12 yellow marbles, 25 white marbles, 13 orange marbles, and 34 red marbles. If one of these marbles is selected at random, what is the probability of selecting a marbles that is neither orange nor red?",
-  "answers": {
-    "A": "\\frac{12}{84}",
-    "B": "\\frac{46}{84}",
-    "C": "\\frac{34}{84}",
-    "D": "\\frac{38}{84}"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "There are a total of 84 marbles in the bag. If the marbles is neither orange nor red, then it must be either yellow or red. The probability of selecting one of these is (12 + 34)/84, which in LaTeX style is \\frac{46}{84}. Thus, the probability is \\frac{46}{84}.",
-  "category": "Probability and Conditional Probability",
-  "difficulty": "Medium",
-  "id": "3c0b8ad0",
-  "subcategory": "Probability_and_conditional_probability"
+    "task": "In a bag, there are 12 yellow marbles, 25 white marbles, 13 orange marbles, and 34 red marbles. If one of these marbles is selected at random, what is the probability of selecting a marbles that is neither orange nor red?",
+    "answers": {
+        "A": "\\frac{12}{84}",
+        "B": "\\frac{46}{84}",
+        "C": "\\frac{34}{84}",
+        "D": "\\frac{38}{84}"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "There are a total of 84 marbles in the bag. If the marbles is neither orange nor red, then it must be either yellow or red. The probability of selecting one of these is (12 + 34)/84, which in LaTeX style is \\frac{46}{84}. Thus, the probability is \\frac{46}{84}.",
+    "difficulty": "Medium",
+    "id": "3c0b8ad0",
+    "subcategory": "Probability_and_conditional_probability"
 }

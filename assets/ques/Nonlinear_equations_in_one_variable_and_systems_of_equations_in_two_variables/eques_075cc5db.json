@@ -1,20 +1,19 @@
 {
-  "category": "Algebra",
-  "Difficulty": "Easy",
-  "task": "Solve the system:\n1) x + y = 2\n2) x - y = 0",
-  "answers": {
-    "A": "(x, y) = (2, 0)",
-    "B": "(x, y) = (1, 1)",
-    "C": "(x, y) = (1, 1)",
-    "D": "No solution"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 2 + 0 → 2x = 2\nStep 2: Solve for x: x = 1\nStep 3: Substitute into first equation: 1 + y = 2 → y = 1",
-  "id": "075cc5db",
-  "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
+    "Difficulty": "Easy",
+    "task": "Solve the system:\n1) x + y = 2\n2) x - y = 0",
+    "answers": {
+        "A": "(x, y) = (2, 0)",
+        "B": "(x, y) = (1, 1)",
+        "C": "(x, y) = (1, 1)",
+        "D": "No solution"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "Step 1: Add both equations: (x+y) + (x-y) = 2 + 0 \u2192 2x = 2\nStep 2: Solve for x: x = 1\nStep 3: Substitute into first equation: 1 + y = 2 \u2192 y = 1",
+    "id": "075cc5db",
+    "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

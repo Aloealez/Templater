@@ -1,20 +1,19 @@
 {
-  "task": "The maximum value of $x$ is 5 less than 6 times another number $n$. Which inequality shows the possible values of $x$?",
-  "answers": {
-    "A": "x ≤ 5 - 6n",
-    "B": "x ≤ 6n - 5",
-    "C": "x ≥ 6n - 5",
-    "D": "x ≥ 5 - 6n"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "Since the statement describes 5 less than 6 times n, we write 6n - 5 to express that relationship. If the statement mentions a minimum value, we use ≥, and if it mentions a maximum, we use ≤. Thus, the correct inequality is x ≤ 6n - 5.",
-  "category": "Linear Inequalities - Expression Formation",
-  "difficulty": "Medium",
-  "id": "609309e2",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "The maximum value of $x$ is 5 less than 6 times another number $n$. Which inequality shows the possible values of $x$?",
+    "answers": {
+        "A": "x \u2264 5 - 6n",
+        "B": "x \u2264 6n - 5",
+        "C": "x \u2265 6n - 5",
+        "D": "x \u2265 5 - 6n"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "Since the statement describes 5 less than 6 times n, we write 6n - 5 to express that relationship. If the statement mentions a minimum value, we use \u2265, and if it mentions a maximum, we use \u2264. Thus, the correct inequality is x \u2264 6n - 5.",
+    "difficulty": "Medium",
+    "id": "609309e2",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

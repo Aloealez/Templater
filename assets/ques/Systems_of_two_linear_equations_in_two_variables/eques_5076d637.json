@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "(48, 7)",
-    "B": "(9, 48)",
-    "C": "(7, 57)",
-    "D": "(7, 48)"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "Solve the system of equations:\n$ y = 5x + 13 $\n$ y = 48 $\nWhat is the solution $ (x, y) $ to the system?",
-  "explanation": "Choice D is correct. The second equation in the system is $ y = 48 $. Substituting $ 48 $ for $ y $ in the first equation gives:\n$ 48 = 5x + 13 $.\nAdding $ -13 $ to both sides results in:\n$ 35 = 5x $.\nDividing by $ 5 $ gives $ x = 7 $.\nTherefore, the solution to the system is $ (7, 48) $.",
-  "category": "Systems of Linear Equations",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "5076d637",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "(48, 7)",
+        "B": "(9, 48)",
+        "C": "(7, 57)",
+        "D": "(7, 48)"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "Solve the system of equations:\n$ y = 5x + 13 $\n$ y = 48 $\nWhat is the solution $ (x, y) $ to the system?",
+    "explanation": "Choice D is correct. The second equation in the system is $ y = 48 $. Substituting $ 48 $ for $ y $ in the first equation gives:\n$ 48 = 5x + 13 $.\nAdding $ -13 $ to both sides results in:\n$ 35 = 5x $.\nDividing by $ 5 $ gives $ x = 7 $.\nTherefore, the solution to the system is $ (7, 48) $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "5076d637",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

@@ -1,26 +1,25 @@
 {
-  "answers": {
-    "A": "$ m = 2c $\n$ c + m = 46 $",
-    "B": "$ c = 2m $\n$ c + m = 46 $",
-    "C": "$ c = 2m $\n$ c + m = 44 $",
-    "D": "$ c = 46m $\n$ c + m = 4 $"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 1.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "Connor has $c$ dollars, and Maria has $m$ dollars. Connor has 2 times as many dollars as Maria, and together they have a total of 46 dollars. Which system of equations represents this situation?",
-  "explanation": "Choice B is correct. Since Connor has 2 times as many dollars as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 46 dollars, we set up:\n$ c + m = 46 $.\nThis forms the correct system of equations.",
-  "category": "Systems of Equations",
-  "difficulty": "Easy",
-  "id": "c835f35a",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ m = 2c $\n$ c + m = 46 $",
+        "B": "$ c = 2m $\n$ c + m = 46 $",
+        "C": "$ c = 2m $\n$ c + m = 44 $",
+        "D": "$ c = 46m $\n$ c + m = 4 $"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 1.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "Connor has $c$ dollars, and Maria has $m$ dollars. Connor has 2 times as many dollars as Maria, and together they have a total of 46 dollars. Which system of equations represents this situation?",
+    "explanation": "Choice B is correct. Since Connor has 2 times as many dollars as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 46 dollars, we set up:\n$ c + m = 46 $.\nThis forms the correct system of equations.",
+    "difficulty": "Easy",
+    "id": "c835f35a",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

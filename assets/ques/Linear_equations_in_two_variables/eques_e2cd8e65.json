@@ -1,20 +1,19 @@
 {
-  "task": "Line q is defined by the equation $ 1y + -8x = 6 $. Line l is perpendicular to line q in the xy-plane. What is the slope of line l?",
-  "answers": {
-    "A": "\\frac{1}{8}",
-    "B": "\\frac{-8}{1}",
-    "C": "\\frac{-1}{8}",
-    "D": "\\frac{8}{1}"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "The given equation of line q is rewritten in slope-intercept form as $ y = \\frac{8}{1}x + b $. This means the slope of line q is \\frac{8}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{8}{1} is \\frac{-1}{8}. Thus, the slope of line l is \\frac{-1}{8}.",
-  "category": "Linear Equations - Perpendicular Slopes",
-  "difficulty": "Medium",
-  "id": "e2cd8e65",
-  "subcategory": "Linear_equations_in_two_variables"
+    "task": "Line q is defined by the equation $ 1y + -8x = 6 $. Line l is perpendicular to line q in the xy-plane. What is the slope of line l?",
+    "answers": {
+        "A": "\\frac{1}{8}",
+        "B": "\\frac{-8}{1}",
+        "C": "\\frac{-1}{8}",
+        "D": "\\frac{8}{1}"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "The given equation of line q is rewritten in slope-intercept form as $ y = \\frac{8}{1}x + b $. This means the slope of line q is \\frac{8}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{8}{1} is \\frac{-1}{8}. Thus, the slope of line l is \\frac{-1}{8}.",
+    "difficulty": "Medium",
+    "id": "e2cd8e65",
+    "subcategory": "Linear_equations_in_two_variables"
 }

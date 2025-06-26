@@ -1,20 +1,19 @@
 {
-  "task": "If $3x - 5 = -26$, what is the value of 9x - 11?",
-  "answers": {
-    "A": -74,
-    "B": -77,
-    "C": -67,
-    "D": -71
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "difficulty": "Easy",
-  "explanation": "To solve for 9x - 11, first solve the equation 3x - 5 = -26. Add 5 to both sides: 3x = -21, then divide by 3: x = -7. Now substitute x into 9x - 11: 9(-7) - 11 = -63 - 11 = -74.",
-  "category": "Algebraic Equations",
-  "id": "0f556049",
-  "subcategory": "Linear_equations_in_one_variable"
+    "task": "If $3x - 5 = -26$, what is the value of 9x - 11?",
+    "answers": {
+        "A": -74,
+        "B": -77,
+        "C": -67,
+        "D": -71
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "difficulty": "Easy",
+    "explanation": "To solve for 9x - 11, first solve the equation 3x - 5 = -26. Add 5 to both sides: 3x = -21, then divide by 3: x = -7. Now substitute x into 9x - 11: 9(-7) - 11 = -63 - 11 = -74.",
+    "id": "0f556049",
+    "subcategory": "Linear_equations_in_one_variable"
 }

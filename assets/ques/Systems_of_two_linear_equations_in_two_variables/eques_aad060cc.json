@@ -1,20 +1,19 @@
 {
-  "task": "Solve the system of equations for $(x, y)$:\n$$ 6x + 8y = 11\n $$$$ 3x -10y = 20\n $$",
-  "answers": {
-    "A": "(-29/28, 45/14)",
-    "B": "(45/14, -15/28)",
-    "C": "(45/14, -29/28)",
-    "D": "(26/7, -29/28)"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "We solve the system using elimination or substitution. The determinant is computed as 6 * -10 - 8 * 3 = -84, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (45/14, -29/28)$.",
-  "category": "Systems of Equations - Solving for (x, y)",
-  "difficulty": "Medium",
-  "id": "aad060cc",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "task": "Solve the system of equations for $(x, y)$:\n$$ 6x + 8y = 11\n $$$$ 3x -10y = 20\n $$",
+    "answers": {
+        "A": "(-29/28, 45/14)",
+        "B": "(45/14, -15/28)",
+        "C": "(45/14, -29/28)",
+        "D": "(26/7, -29/28)"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "We solve the system using elimination or substitution. The determinant is computed as 6 * -10 - 8 * 3 = -84, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (45/14, -29/28)$.",
+    "difficulty": "Medium",
+    "id": "aad060cc",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

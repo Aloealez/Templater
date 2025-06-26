@@ -1,19 +1,19 @@
 {
-  "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\n$$10x + k = 10x -19$$",
-  "answers": {
-    "A": -9,
-    "B": -4,
-    "C": -19,
-    "D": -29
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "difficulty": "Easy",
-  "explanation": "**Rationale**\n\nFor the given equation $10x + k = 10x -19$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 10x from both sides results in $k = -19$.\nThus, the equation holds for **all** values of $x$ if and only if $k = -19$.\nTherefore, the correct answer is **-19**.",
-  "id": "2d44dec6",
-  "subcategory": "Linear_equations_in_one_variable"
+    "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\n$$10x + k = 10x -19$$",
+    "answers": {
+        "A": -9,
+        "B": -4,
+        "C": -19,
+        "D": -29
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "difficulty": "Easy",
+    "explanation": "**Rationale**\n\nFor the given equation $10x + k = 10x -19$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 10x from both sides results in $k = -19$.\nThus, the equation holds for **all** values of $x$ if and only if $k = -19$.\nTherefore, the correct answer is **-19**.",
+    "id": "2d44dec6",
+    "subcategory": "Linear_equations_in_one_variable"
 }

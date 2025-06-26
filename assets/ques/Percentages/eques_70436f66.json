@@ -1,20 +1,19 @@
 {
-  "task": "The number $k$ is 48% greater than 69. If $k$ is the product of 69 and $r$, what is the value of $r$?",
-  "answers": {
-    "A": "0.95",
-    "B": "1.48",
-    "C": "4.23",
-    "D": "3.44"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "Since $k$ is 48% greater than 69, we calculate: $k = 69 + (48/100) \times 69$. This simplifies to $k = 102.12$. We also know $k = 69r$, so solving for $r$: $r = 102.12 / 69 = 1.48$.",
-  "category": "Percentages and Proportions",
-  "difficulty": "Medium",
-  "id": "70436f66",
-  "subcategory": "Percentages"
+    "task": "The number $k$ is 48% greater than 69. If $k$ is the product of 69 and $r$, what is the value of $r$?",
+    "answers": {
+        "A": "0.95",
+        "B": "1.48",
+        "C": "4.23",
+        "D": "3.44"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "Since $k$ is 48% greater than 69, we calculate: $k = 69 + (48/100) \times 69$. This simplifies to $k = 102.12$. We also know $k = 69r$, so solving for $r$: $r = 102.12 / 69 = 1.48$.",
+    "difficulty": "Medium",
+    "id": "70436f66",
+    "subcategory": "Percentages"
 }

@@ -1,19 +1,19 @@
 {
-  "question": "A local transit company sells a monthly pass for $70 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost $(1.2, 2.64, 3.22) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
-  "answers": {
-    "A": 18,
-    "B": 23,
-    "C": 22,
-    "D": 26
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "difficulty": "Hard",
-  "explanation": "The correct answer is 22. \nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\nof the individual tickets, $3.22. If n tickets costing $3.22 each are purchased in one month the inequality 70 < 3.22n represents this situation. \nDividing both sides of the inequality by 3.22yields 21.739130434782606 < n, which is equivalent to n > 21.739130434782606. Since only a whole number of tickets can be purchased, \nit follows that 22 is the minimum number of trips",
-  "id": "7c1f6d6f",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "A local transit company sells a monthly pass for {dollars}70 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost {dollars}(1.2, 2.64, 3.22) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
+    "answers": {
+        "A": 18,
+        "B": 23,
+        "C": 22,
+        "D": 26
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "difficulty": "Hard",
+    "explanation": "The correct answer is 22. \nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\nof the individual tickets, $3.22. If n tickets costing $3.22 each are purchased in one month the inequality 70 < 3.22n represents this situation. \nDividing both sides of the inequality by 3.22yields 21.739130434782606 < n, which is equivalent to n > 21.739130434782606. Since only a whole number of tickets can be purchased, \nit follows that 22 is the minimum number of trips",
+    "id": "7c1f6d6f",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

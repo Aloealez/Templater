@@ -1,27 +1,26 @@
 {
-  "task": "The function f is defined by $f(x) = 59x + 70$.\nWhat is the value of $f(x)$ when $x = 2$?",
-  "answers": {
-    "A": "165",
-    "B": "231",
-    "C": "188",
-    "D": "163"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "explanation": "Insert 2 into the function: f(x) = 59 * 2 + 70 = 118 + 70 = 188. So the correct answer is 188.",
-  "category": "Linear Functions",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "3767047e",
-  "subcategory": "Linear_functions"
+    "task": "The function f is defined by $f(x) = 59x + 70$.\nWhat is the value of $f(x)$ when $x = 2$?",
+    "answers": {
+        "A": "165",
+        "B": "231",
+        "C": "188",
+        "D": "163"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "explanation": "Insert 2 into the function: f(x) = 59 * 2 + 70 = 118 + 70 = 188. So the correct answer is 188.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "3767047e",
+    "subcategory": "Linear_functions"
 }

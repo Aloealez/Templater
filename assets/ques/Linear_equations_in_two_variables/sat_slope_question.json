@@ -1,135 +1,135 @@
 {
-  "questions": [
-    {
-      "ID": "slope_question",
-      "answers": {
-        "A": "$\\frac{89}{4}$",
-        "B": "$\\frac{18097891}{756619}$",
-        "C": "$\\frac{3466766}{199371}$",
-        "D": "$\\frac{7612697}{289262}$"
-      },
-      "correct": {
-        "A": true,
-        "B": false,
-        "C": false,
-        "D": false
-      },
-      "score": {
-        "A": 1.0,
-        "B": 0.0,
-        "C": 0.0,
-        "D": 0.0
-      },
-      "task": "What is the slope of the graph of  $  y = \\frac{1}{4}(17x + 0) + 1x  $  in the xy-plane?",
-      "explanation": "Choice A is correct. The given equation can be simplified to $ y = \\frac{89}{4}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{89}{4} $.",
-      "category": "Linear Equations in Two Variables",
-      "difficulty": "Medium",
-      "table": null
-    },
-    {
-      "ID": "slope_question",
-      "answers": {
-        "A": "$\\frac{1437025}{229869}$",
-        "B": "$\\frac{3586645}{430087}$",
-        "C": "$\\frac{532212}{661249}$",
-        "D": "$\\frac{33}{7}$"
-      },
-      "correct": {
-        "A": false,
-        "B": false,
-        "C": false,
-        "D": true
-      },
-      "score": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 0.0,
-        "D": 1.0
-      },
-      "task": "What is the slope of the graph of  $  y = \\frac{1}{7}(19x + 0) + 2x  $  in the xy-plane?",
-      "explanation": "Choice D is correct. The given equation can be simplified to $ y = \\frac{33}{7}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{33}{7} $.",
-      "category": "Linear Equations in Two Variables",
-      "difficulty": "Medium",
-      "table": null
-    },
-    {
-      "ID": "slope_question",
-      "answers": {
-        "A": "$\\frac{12869639}{660792}$",
-        "B": "$\\frac{17815764}{984575}$",
-        "C": "$22$",
-        "D": "$\\frac{17386547}{785510}$"
-      },
-      "correct": {
-        "A": false,
-        "B": false,
-        "C": true,
-        "D": false
-      },
-      "score": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 1.0,
-        "D": 0.0
-      },
-      "task": "What is the slope of the graph of  $  y = \\frac{1}{4}(16x + 0) + 2x  $  in the xy-plane?",
-      "explanation": "Choice C is correct. The given equation can be simplified to $ y = 22x + 0 $. The slope of the graph is the coefficient of $x$, which is $ 22 $.",
-      "category": "Linear Equations in Two Variables",
-      "difficulty": "Medium",
-      "table": null
-    },
-    {
-      "ID": "slope_question",
-      "answers": {
-        "A": "$\\frac{8294693}{774924}$",
-        "B": "$\\frac{873453}{106520}$",
-        "C": "$6$",
-        "D": "$\\frac{943139}{240289}$"
-      },
-      "correct": {
-        "A": false,
-        "B": false,
-        "C": true,
-        "D": false
-      },
-      "score": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 1.0,
-        "D": 0.0
-      },
-      "task": "What is the slope of the graph of  $  y = \\frac{1}{9}(9x + 0) + 5x  $  in the xy-plane?",
-      "explanation": "Choice C is correct. The given equation can be simplified to $ y = 6x + 0 $. The slope of the graph is the coefficient of $x$, which is $ 6 $.",
-      "category": "Linear Equations in Two Variables",
-      "difficulty": "Medium",
-      "table": null
-    },
-    {
-      "ID": "slope_question",
-      "answers": {
-        "A": "$\\frac{20145119}{582937}$",
-        "B": "$\\frac{40578899}{971764}$",
-        "C": "$\\frac{196}{5}$",
-        "D": "$\\frac{33419690}{803961}$"
-      },
-      "correct": {
-        "A": false,
-        "B": false,
-        "C": true,
-        "D": false
-      },
-      "score": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 1.0,
-        "D": 0.0
-      },
-      "task": "What is the slope of the graph of  $  y = \\frac{1}{5}(12x + 0) + 8x  $  in the xy-plane?",
-      "explanation": "Choice C is correct. The given equation can be simplified to $ y = \\frac{196}{5}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{196}{5} $.",
-      "category": "Linear Equations in Two Variables",
-      "difficulty": "Medium",
-      "table": null
-    }
-  ],
-  "subcategory": "Linear_equations_in_two_variables"
+    "questions": [
+        {
+            "ID": "slope_question",
+            "answers": {
+                "A": "$\\frac{89}{4}$",
+                "B": "$\\frac{18097891}{756619}$",
+                "C": "$\\frac{3466766}{199371}$",
+                "D": "$\\frac{7612697}{289262}$"
+            },
+            "correct": {
+                "A": true,
+                "B": false,
+                "C": false,
+                "D": false
+            },
+            "score": {
+                "A": 1.0,
+                "B": 0.0,
+                "C": 0.0,
+                "D": 0.0
+            },
+            "task": "What is the slope of the graph of  $  y = \\frac{1}{4}(17x + 0) + 1x  $  in the xy-plane?",
+            "explanation": "Choice A is correct. The given equation can be simplified to $ y = \\frac{89}{4}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{89}{4} $.",
+            "category": "Linear Equations in Two Variables",
+            "difficulty": "Medium",
+            "table": null
+        },
+        {
+            "ID": "slope_question",
+            "answers": {
+                "A": "$\\frac{1437025}{229869}$",
+                "B": "$\\frac{3586645}{430087}$",
+                "C": "$\\frac{532212}{661249}$",
+                "D": "$\\frac{33}{7}$"
+            },
+            "correct": {
+                "A": false,
+                "B": false,
+                "C": false,
+                "D": true
+            },
+            "score": {
+                "A": 0.0,
+                "B": 0.0,
+                "C": 0.0,
+                "D": 1.0
+            },
+            "task": "What is the slope of the graph of  $  y = \\frac{1}{7}(19x + 0) + 2x  $  in the xy-plane?",
+            "explanation": "Choice D is correct. The given equation can be simplified to $ y = \\frac{33}{7}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{33}{7} $.",
+            "category": "Linear Equations in Two Variables",
+            "difficulty": "Medium",
+            "table": null
+        },
+        {
+            "ID": "slope_question",
+            "answers": {
+                "A": "$\\frac{12869639}{660792}$",
+                "B": "$\\frac{17815764}{984575}$",
+                "C": "$22$",
+                "D": "$\\frac{17386547}{785510}$"
+            },
+            "correct": {
+                "A": false,
+                "B": false,
+                "C": true,
+                "D": false
+            },
+            "score": {
+                "A": 0.0,
+                "B": 0.0,
+                "C": 1.0,
+                "D": 0.0
+            },
+            "task": "What is the slope of the graph of  $  y = \\frac{1}{4}(16x + 0) + 2x  $  in the xy-plane?",
+            "explanation": "Choice C is correct. The given equation can be simplified to $ y = 22x + 0 $. The slope of the graph is the coefficient of $x$, which is $ 22 $.",
+            "category": "Linear Equations in Two Variables",
+            "difficulty": "Medium",
+            "table": null
+        },
+        {
+            "ID": "slope_question",
+            "answers": {
+                "A": "$\\frac{8294693}{774924}$",
+                "B": "$\\frac{873453}{106520}$",
+                "C": "$6$",
+                "D": "$\\frac{943139}{240289}$"
+            },
+            "correct": {
+                "A": false,
+                "B": false,
+                "C": true,
+                "D": false
+            },
+            "score": {
+                "A": 0.0,
+                "B": 0.0,
+                "C": 1.0,
+                "D": 0.0
+            },
+            "task": "What is the slope of the graph of  $  y = \\frac{1}{9}(9x + 0) + 5x  $  in the xy-plane?",
+            "explanation": "Choice C is correct. The given equation can be simplified to $ y = 6x + 0 $. The slope of the graph is the coefficient of $x$, which is $ 6 $.",
+            "category": "Linear Equations in Two Variables",
+            "difficulty": "Medium",
+            "table": null
+        },
+        {
+            "ID": "slope_question",
+            "answers": {
+                "A": "$\\frac{20145119}{582937}$",
+                "B": "$\\frac{40578899}{971764}$",
+                "C": "$\\frac{196}{5}$",
+                "D": "$\\frac{33419690}{803961}$"
+            },
+            "correct": {
+                "A": false,
+                "B": false,
+                "C": true,
+                "D": false
+            },
+            "score": {
+                "A": 0.0,
+                "B": 0.0,
+                "C": 1.0,
+                "D": 0.0
+            },
+            "task": "What is the slope of the graph of  $  y = \\frac{1}{5}(12x + 0) + 8x  $  in the xy-plane?",
+            "explanation": "Choice C is correct. The given equation can be simplified to $ y = \\frac{196}{5}x + 0 $. The slope of the graph is the coefficient of $x$, which is $ \\frac{196}{5} $.",
+            "category": "Linear Equations in Two Variables",
+            "difficulty": "Medium",
+            "table": null
+        }
+    ],
+    "subcategory": "Linear_equations_in_two_variables"
 }

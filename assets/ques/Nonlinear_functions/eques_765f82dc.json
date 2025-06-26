@@ -1,20 +1,19 @@
 {
-  "task": "A rectangle has a length that is 3 times its width. The function $y = (3w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square inches, and $y > 0$. Which of the following is the best interpretation of 3w in this context?",
-  "answers": {
-    "A": "The width of the rectangle, in inches",
-    "B": "The area of the rectangle, in square inches",
-    "C": "The length of the rectangle, in inches",
-    "D": "The difference between the length and the width of the rectangle, in inches"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "Since the rectangle's length is 3 times its width, we define its length as 3w. This means that 3w represents the length of the rectangle, in inches.",
-  "category": "Nonlinear Functions - Geometric Interpretation",
-  "difficulty": "Medium",
-  "id": "765f82dc",
-  "subcategory": "Nonlinear_functions"
+    "task": "A rectangle has a length that is 3 times its width. The function $y = (3w)(w)$ represents this situation, where $y$ is the area of the rectangle, in square inches, and $y > 0$. Which of the following is the best interpretation of 3w in this context?",
+    "answers": {
+        "A": "The width of the rectangle, in inches",
+        "B": "The area of the rectangle, in square inches",
+        "C": "The length of the rectangle, in inches",
+        "D": "The difference between the length and the width of the rectangle, in inches"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "Since the rectangle's length is 3 times its width, we define its length as 3w. This means that 3w represents the length of the rectangle, in inches.",
+    "difficulty": "Medium",
+    "id": "765f82dc",
+    "subcategory": "Nonlinear_functions"
 }

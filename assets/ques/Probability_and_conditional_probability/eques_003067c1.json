@@ -1,20 +1,19 @@
 {
-  "task": "In a bag, there are 18 orange cards, 22 white cards, 34 black cards, and 30 blue cards. If one of these cards is selected at random, what is the probability of selecting a cards that is neither black nor blue?",
-  "answers": {
-    "A": "\\frac{34}{104}",
-    "B": "\\frac{48}{104}",
-    "C": "\\frac{56}{104}",
-    "D": "\\frac{22}{104}"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "There are a total of 104 cards in the bag. If the cards is neither black nor blue, then it must be either white or black. The probability of selecting one of these is (22 + 34)/104, which in LaTeX style is \\frac{56}{104}. Thus, the probability is \\frac{56}{104}.",
-  "category": "Probability and Conditional Probability",
-  "difficulty": "Medium",
-  "id": "003067c1",
-  "subcategory": "Probability_and_conditional_probability"
+    "task": "In a bag, there are 18 orange cards, 22 white cards, 34 black cards, and 30 blue cards. If one of these cards is selected at random, what is the probability of selecting a cards that is neither black nor blue?",
+    "answers": {
+        "A": "\\frac{34}{104}",
+        "B": "\\frac{48}{104}",
+        "C": "\\frac{56}{104}",
+        "D": "\\frac{22}{104}"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "There are a total of 104 cards in the bag. If the cards is neither black nor blue, then it must be either white or black. The probability of selecting one of these is (22 + 34)/104, which in LaTeX style is \\frac{56}{104}. Thus, the probability is \\frac{56}{104}.",
+    "difficulty": "Medium",
+    "id": "003067c1",
+    "subcategory": "Probability_and_conditional_probability"
 }

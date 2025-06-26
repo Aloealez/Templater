@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "The average number of units the bush's circumference increased per month.",
-    "B": "The number of months it took the bush to double its circumference.",
-    "C": "The circumference, in units, of the bush when it was 1 month old.",
-    "D": "The average number of months it takes similar bushs to grow 16 units."
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "A bush had a circumference of 3 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the bush to reach a circumference of 16 units. Which of the following is the best interpretation of the number 1 in this context?\n\n$$ 1n + 3 = 16 $$",
-  "explanation": "Choice A is correct.\n\nThe circumference of the bush at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 16 represents the circumference at the final time, and 3 represents the circumference when it was first measured. It follows that 1n represents the total circumference growth over time.\n\nSince $ n $ represents the number of months between the two measurements, the coefficient 1 must represent the average number of units the bush's circumference increased per month.\n\n",
-  "category": "Algebraic Word Problems",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "77411518",
-  "subcategory": "Linear_equations_in_one_variable"
+    "answers": {
+        "A": "The average number of units the bush's circumference increased per month.",
+        "B": "The number of months it took the bush to double its circumference.",
+        "C": "The circumference, in units, of the bush when it was 1 month old.",
+        "D": "The average number of months it takes similar bushs to grow 16 units."
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "A bush had a circumference of 3 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the bush to reach a circumference of 16 units. Which of the following is the best interpretation of the number 1 in this context?\n\n$$ 1n + 3 = 16 $$",
+    "explanation": "Choice A is correct.\n\nThe circumference of the bush at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 16 represents the circumference at the final time, and 3 represents the circumference when it was first measured. It follows that 1n represents the total circumference growth over time.\n\nSince $ n $ represents the number of months between the two measurements, the coefficient 1 must represent the average number of units the bush's circumference increased per month.\n\n",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "77411518",
+    "subcategory": "Linear_equations_in_one_variable"
 }

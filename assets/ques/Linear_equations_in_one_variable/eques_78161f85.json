@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ \\frac{5}{2} $",
-    "B": "$ \\frac{5}{3} $",
-    "C": "$ \\frac{2}{1} $",
-    "D": "$ \\frac{-2}{1} $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "What value of $ p $ is the solution of the equation below?\n$$ 1(p + 8) + 1(p - 4) = 4p $$",
-  "explanation": "Choice C is correct.\n\nOne way to solve the equation $ 1(p + 8) + 1(p - 4) = 4p $ is to first distribute the terms outside the parentheses:\n\n$ 1p + 8 + 1p - 4 = 4p $\n\nNext, combine like terms on the left side:\n$ (1p + 1p) + (8 - 4) = 4p $\n$ 2p + 4 = 4p $\n\nSubtracting 2p from both sides:\n$ 4 = 4p - 2p $\n$ 4 = (2)p $\n\nDividing both sides by 2:\n$ p = \\frac{4}{2} $\n\nThus, the correct value of $ p $ is **$ \\frac{2}{1} $**, which is equivalent to **2.00**.",
-  "category": "Algebraic Equations",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "78161f85",
-  "subcategory": "Linear_equations_in_one_variable"
+    "answers": {
+        "A": "$ \\frac{5}{2} $",
+        "B": "$ \\frac{5}{3} $",
+        "C": "$ \\frac{2}{1} $",
+        "D": "$ \\frac{-2}{1} $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "What value of $ p $ is the solution of the equation below?\n$$ 1(p + 8) + 1(p - 4) = 4p $$",
+    "explanation": "Choice C is correct.\n\nOne way to solve the equation $ 1(p + 8) + 1(p - 4) = 4p $ is to first distribute the terms outside the parentheses:\n\n$ 1p + 8 + 1p - 4 = 4p $\n\nNext, combine like terms on the left side:\n$ (1p + 1p) + (8 - 4) = 4p $\n$ 2p + 4 = 4p $\n\nSubtracting 2p from both sides:\n$ 4 = 4p - 2p $\n$ 4 = (2)p $\n\nDividing both sides by 2:\n$ p = \\frac{4}{2} $\n\nThus, the correct value of $ p $ is **$ \\frac{2}{1} $**, which is equivalent to **2.00**.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "78161f85",
+    "subcategory": "Linear_equations_in_one_variable"
 }

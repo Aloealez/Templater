@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ 10x - 8 $",
-    "B": "$ 17x + 6 $",
-    "C": "$ 9x - 8 $",
-    "D": "$ 9x + 5 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "What is the equation of the line that passes through the point $ (0, -8) $ and is parallel to the graph of $ y = 9x + 5 $ in the xy-plane?",
-  "explanation": "Choice C is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 9x + 5 $, it must have the same slope, which is $ 9 $. \nGiven that the new line passes through $ (0, -8) $, the y-intercept is $ -8 $. \nThus, the equation of the new line is $ y = 9x - 8 $.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "7385ffa3",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ 10x - 8 $",
+        "B": "$ 17x + 6 $",
+        "C": "$ 9x - 8 $",
+        "D": "$ 9x + 5 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "What is the equation of the line that passes through the point $ (0, -8) $ and is parallel to the graph of $ y = 9x + 5 $ in the xy-plane?",
+    "explanation": "Choice C is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 9x + 5 $, it must have the same slope, which is $ 9 $. \nGiven that the new line passes through $ (0, -8) $, the y-intercept is $ -8 $. \nThus, the equation of the new line is $ y = 9x - 8 $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "7385ffa3",
+    "subcategory": "Linear_equations_in_two_variables"
 }

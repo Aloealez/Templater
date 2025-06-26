@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "3.2",
-    "B": "5.04",
-    "C": "3.7",
-    "D": "4.2"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "According to a model, the length, in millimeters, of a bird can be estimated by adding 1.2 to 6 times the bird's weight, in grams.\n\nAccording to the model, what would be the length, in millimeters, of a bird that has a body weight of 0.5 grams?",
-  "explanation": "Choice D is correct.\n\nAccording to the model, the length of a bird can be estimated using the equation:\n$ y = 1.2 + 6x $\n\nLet $ x $ represent the body weight, in grams, and let $ y $ represent the length, in millimeters.\n\nSubstituting 0.5 grams for $ x $:\n$ y = 1.2 + 6(0.5) $\n$ y = 1.2 + 3.0 $\n$ y = 4.2 $\n\nTherefore, a bird with a body weight of 0.5 grams has an estimated length of 4.2 millimeters.",
-  "category": "Linear Functions",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "ca8e615e",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "3.2",
+        "B": "5.04",
+        "C": "3.7",
+        "D": "4.2"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "According to a model, the length, in millimeters, of a bird can be estimated by adding 1.2 to 6 times the bird's weight, in grams.\nAccording to the model, what would be the length, in millimeters, of a bird that has a body weight of 0.5 grams?",
+    "explanation": "Choice D is correct.\nAccording to the model, the length of a bird can be estimated using the equation:\n$ y = 1.2 + 6x $\nLet $ x $ represent the body weight, in grams, and let $ y $ represent the length, in millimeters.\nSubstituting 0.5 grams for $ x $:\n$ y = 1.2 + 6(0.5) $\n$ y = 1.2 + 3.0 $\n$ y = 4.2 $\nTherefore, a bird with a body weight of 0.5 grams has an estimated length of 4.2 millimeters.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "ca8e615e",
+    "subcategory": "Linear_functions"
 }

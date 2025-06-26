@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ 0 $",
-    "B": "$ -5 $",
-    "C": "$ 2 $",
-    "D": "$ 5 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "The function $ g $ is defined by $ g(x) = 2x - 5 $. What is the value of $ g(x) $ when $ x = 5 $?",
-  "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 5 $ can be found by substituting 5 for $ x $ in the given equation $ g(x) = 2x - 5 $. \nThis yields $ g(5) = 2(5) + -5 $, or $ g(5) = 5 $. Therefore, when $ x = 5 $, the value of $ g(x) $ is $ 5 $.",
-  "category": "Linear Equations",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "586520c3",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "$ 0 $",
+        "B": "$ -5 $",
+        "C": "$ 2 $",
+        "D": "$ 5 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "The function $ g $ is defined by $ g(x) = 2x - 5 $. What is the value of $ g(x) $ when $ x = 5 $?",
+    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 5 $ can be found by substituting 5 for $ x $ in the given equation $ g(x) = 2x - 5 $. \nThis yields $ g(5) = 2(5) + -5 $, or $ g(5) = 5 $. Therefore, when $ x = 5 $, the value of $ g(x) $ is $ 5 $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "586520c3",
+    "subcategory": "Linear_functions"
 }

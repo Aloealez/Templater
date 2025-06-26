@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ 11x - 5 $",
-    "B": "$ 7x $",
-    "C": "$ 4x - 10 $",
-    "D": "$ 4x $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "What is the equation of the line that passes through the point $ (0, 0) $ and is parallel to the graph of $ y = 4x - 10 $ in the xy-plane?",
-  "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 4x - 10 $, it must have the same slope, which is $ 4 $. \nGiven that the new line passes through $ (0, 0) $, the y-intercept is $ 0 $. \nThus, the equation of the new line is $ y = 4x $.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "46dfd57e",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ 11x - 5 $",
+        "B": "$ 7x $",
+        "C": "$ 4x - 10 $",
+        "D": "$ 4x $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "What is the equation of the line that passes through the point $ (0, 0) $ and is parallel to the graph of $ y = 4x - 10 $ in the xy-plane?",
+    "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 4x - 10 $, it must have the same slope, which is $ 4 $. \nGiven that the new line passes through $ (0, 0) $, the y-intercept is $ 0 $. \nThus, the equation of the new line is $ y = 4x $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "46dfd57e",
+    "subcategory": "Linear_equations_in_two_variables"
 }

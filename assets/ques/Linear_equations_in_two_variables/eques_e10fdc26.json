@@ -1,76 +1,28 @@
 {
   "answers": {
     "A": [
-      [
-        "$x$",
-        "$y$"
-      ],
-      [
-        0,
-        22
-      ],
-      [
-        2,
-        34
-      ],
-      [
-        4,
-        46
-      ]
+      ["$x$", "$y$"],
+      ["0", "22"],
+      ["2", "34"],
+      ["4", "46"]
     ],
     "B": [
-      [
-        "$x$",
-        "$y$"
-      ],
-      [
-        0,
-        15
-      ],
-      [
-        2,
-        33
-      ],
-      [
-        4,
-        51
-      ]
+      ["$x$", "$y$"],
+      ["0", "15"],
+      ["2", "33"],
+      ["4", "51"]
     ],
     "C": [
-      [
-        "$x$",
-        "$y$"
-      ],
-      [
-        0,
-        21
-      ],
-      [
-        2,
-        40
-      ],
-      [
-        4,
-        43
-      ]
+      ["$x$", "$y$"],
+      ["0", "21"],
+      ["2", "40"],
+      ["4", "43"]
     ],
     "D": [
-      [
-        "$x$",
-        "$y$"
-      ],
-      [
-        0,
-        7
-      ],
-      [
-        2,
-        23
-      ],
-      [
-        4,
-        59
-      ]
+      ["$x$", "$y$"],
+      ["0", "7"],
+      ["2", "23"],
+      ["4", "59"]
     ]
   },
   "correct": {
@@ -87,7 +39,6 @@
   },
   "task": "Which table gives three values of $ x $ and their corresponding values of $ y $ for the given equation?\ny = 9x + 15",
   "explanation": "Choice B is correct. Substituting $ x = 0 $ into the equation $ y = 9x + 15 $ gives:\n$ y = 9(0) + 15 = 15 $.\nSubstituting $ x = 2 $ gives $ y = 9(2) + 15 = 33 $.\nSubstituting $ x = 4 $ gives $ y = 9(4) + 15 = 51 $.\nThus, the correct table is the one that contains these values.",
-  "category": "Linear Equations in Two Variables",
   "difficulty": "Easy",
   "table": null,
   "id": "e10fdc26",

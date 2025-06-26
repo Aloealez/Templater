@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ \\frac{160}{3} $",
-    "B": "$ \\frac{175}{3} $",
-    "C": "40",
-    "D": "$ \\frac{80}{3} $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "The function $ h $ is defined by $ h(x) = 3x + 40 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
-  "explanation": "Choice D is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 40 $\n\nSetting $ y = 0 $:\n$ 0 = 3x + 40 $\nSolving for $ x $:\n$ x = -\\frac{40}{3} = -40/3 $\n\nThus, the x-intercept is $ (-40/3, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 40 = 40 $\n\nThus, the y-intercept is $ (0, 40) $.\n\nSince $ a = -40/3 $ and $ b = 40 $, the sum is:\n$ a + b = -40/3 + 40 = 80/3 $.",
-  "category": "Linear Equations",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "fa20dc7a",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "$ \\frac{160}{3} $",
+        "B": "$ \\frac{175}{3} $",
+        "C": "40",
+        "D": "$ \\frac{80}{3} $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "The function $ h $ is defined by $ h(x) = 3x + 40 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+    "explanation": "Choice D is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 40 $\nSetting $ y = 0 $:\n$ 0 = 3x + 40 $\nSolving for $ x $:\n$ x = -\\frac{40}{3} = -40/3 $\nThus, the x-intercept is $ (-40/3, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 40 = 40 $\nThus, the y-intercept is $ (0, 40) $.\nSince $ a = -40/3 $ and $ b = 40 $, the sum is:\n$ a + b = -40/3 + 40 = 80/3 $.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "fa20dc7a",
+    "subcategory": "Linear_functions"
 }

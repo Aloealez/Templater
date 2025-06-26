@@ -1,19 +1,19 @@
 {
-  "question": "What value of $p$ satisfies the equation $5p - 35 = 415$?",
-  "answers": {
-    "A": 85,
-    "B": 80,
-    "C": 90,
-    "D": 100
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "difficulty": "Easy",
-  "explanation": "**Rationale**\n\nAdding 35 to both sides of the equation $5p - 35 = 415$ gives $5p = 450$.\nDividing both sides by 5 results in $1p = 90$.\nTherefore, the correct answer is **90**.",
-  "id": "a3c7ca5b",
-  "subcategory": "Linear_equations_in_one_variable"
+    "task": "What value of $p$ satisfies the equation $5p - 35 = 415$?",
+    "answers": {
+        "A": 85,
+        "B": 80,
+        "C": 90,
+        "D": 100
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "difficulty": "Easy",
+    "explanation": "**Rationale**\n\nAdding 35 to both sides of the equation $5p - 35 = 415$ gives $5p = 450$.\nDividing both sides by 5 results in $1p = 90$.\nTherefore, the correct answer is **90**.",
+    "id": "a3c7ca5b",
+    "subcategory": "Linear_equations_in_one_variable"
 }

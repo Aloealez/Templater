@@ -1,20 +1,19 @@
 {
-  "task": "Steve Le plans to rent a jet ski. The rental cost is $23 per week, and he must also pay a fixed cost of $21. Steve Le wants to spend no more than $348. If the rental is available only for whole weeks, what is the maximum number of weeks Steve Le can rent a jet ski? Which of the following equations properly represents this situation?",
-  "answers": {
-    "A": "23h + 21 ≥ 348",
-    "B": "23h ≤ 348",
-    "C": "23h + 21 ≤ 348",
-    "D": "23h + 31 ≤ 348"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "Choice C is correct. The equation 23h + 21 ≤ 348 represents the given situation. Subtracting 21 from both sides and dividing by 23 gives h ≤ 14. Since the rental is available only in whole weeks, the maximum weeks Steve Le can rent is 14.",
-  "category": "Inequalities - Budgeting",
-  "difficulty": "Easy",
-  "id": "5898d965",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "Steve Le plans to rent a jet ski. The rental cost is {dollars}23 per week, and he must also pay a fixed cost of {dollars}21. Steve Le wants to spend no more than {dollars}348. If the rental is available only for whole weeks, what is the maximum number of weeks Steve Le can rent a jet ski? Which of the following equations properly represents this situation?",
+    "answers": {
+        "A": "23h + 21 \u2265 348",
+        "B": "23h \u2264 348",
+        "C": "23h + 21 \u2264 348",
+        "D": "23h + 31 \u2264 348"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "Choice C is correct. The equation 23h + 21 \u2264 348 represents the given situation. Subtracting 21 from both sides and dividing by 23 gives h \u2264 14. Since the rental is available only in whole weeks, the maximum weeks Steve Le can rent is 14.",
+    "difficulty": "Easy",
+    "id": "5898d965",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

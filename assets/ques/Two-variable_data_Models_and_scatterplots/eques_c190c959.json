@@ -1,21 +1,20 @@
 {
-  "task": "In the given scatterplot, a line of best fit for the data is shown. Which of the following is closest to the slope of the line of best fit shown?",
-  "answers": {
-    "A": "2.58",
-    "B": "1.84",
-    "C": "1.22",
-    "D": "3.77"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "A line in the xy-plane that passes through points $(x_1, y_1)$ and $(x_2, y_2)$ has a slope of $m = \\frac{y_2 - y_1}{x_2 - x_1}$. The line of best fit shown passes through approximately $(x_1, 0.5)$ and $(x_2, 9.7)$. Computing the slope: $m = \\frac{9.7 - 0.5}{5 - 0} = 1.84$. Thus, the closest answer choice is 1.84.",
-  "category": "Line of Best Fit - Slope Estimation",
-  "difficulty": "Medium",
-  "image": "scatterplot.png",
-  "id": "c190c959",
-  "subcategory": "Two-variable_data_Models_and_scatterplots"
+    "task": "In the given scatterplot, a line of best fit for the data is shown. Which of the following is closest to the slope of the line of best fit shown?",
+    "answers": {
+        "A": "2.58",
+        "B": "1.84",
+        "C": "1.22",
+        "D": "3.77"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "A line in the xy-plane that passes through points $(x_1, y_1)$ and $(x_2, y_2)$ has a slope of $m = \\frac{y_2 - y_1}{x_2 - x_1}$. The line of best fit shown passes through approximately $(x_1, 0.5)$ and $(x_2, 9.7)$. Computing the slope: $m = \\frac{9.7 - 0.5}{5 - 0} = 1.84$. Thus, the closest answer choice is 1.84.",
+    "difficulty": "Medium",
+    "image": "scatterplot.png",
+    "id": "c190c959",
+    "subcategory": "Two-variable_data_Models_and_scatterplots"
 }

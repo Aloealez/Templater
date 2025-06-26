@@ -1,27 +1,26 @@
 {
-  "task": "The function f is defined by $f(x) = 71x + 40$.\nWhat is the value of $f(x)$ when $x = 1$?",
-  "answers": {
-    "A": "129",
-    "B": "125",
-    "C": "127",
-    "D": "111"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "explanation": "Insert 1 into the function: f(x) = 71 * 1 + 40 = 71 + 40 = 111. So the correct answer is 111.",
-  "category": "Linear Functions",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "780bf644",
-  "subcategory": "Linear_functions"
+    "task": "The function f is defined by $f(x) = 71x + 40$.\nWhat is the value of $f(x)$ when $x = 1$?",
+    "answers": {
+        "A": "129",
+        "B": "125",
+        "C": "127",
+        "D": "111"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "explanation": "Insert 1 into the function: f(x) = 71 * 1 + 40 = 71 + 40 = 111. So the correct answer is 111.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "780bf644",
+    "subcategory": "Linear_functions"
 }

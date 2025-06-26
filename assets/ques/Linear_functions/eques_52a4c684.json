@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ -3 $",
-    "B": "$ 4 $",
-    "C": "$ -5 $",
-    "D": "$ 7 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "The function $ g $ is defined by $ g(x) = 4x - 5 $. What is the value of $ g(x) $ when $ x = 3 $?",
-  "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 3 $ can be found by substituting 3 for $ x $ in the given equation $ g(x) = 4x - 5 $. \nThis yields $ g(3) = 4(3) + -5 $, or $ g(3) = 7 $. Therefore, when $ x = 3 $, the value of $ g(x) $ is $ 7 $.",
-  "category": "Linear Equations",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "52a4c684",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "$ -3 $",
+        "B": "$ 4 $",
+        "C": "$ -5 $",
+        "D": "$ 7 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "The function $ g $ is defined by $ g(x) = 4x - 5 $. What is the value of $ g(x) $ when $ x = 3 $?",
+    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 3 $ can be found by substituting 3 for $ x $ in the given equation $ g(x) = 4x - 5 $. \nThis yields $ g(3) = 4(3) + -5 $, or $ g(3) = 7 $. Therefore, when $ x = 3 $, the value of $ g(x) $ is $ 7 $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "52a4c684",
+    "subcategory": "Linear_functions"
 }

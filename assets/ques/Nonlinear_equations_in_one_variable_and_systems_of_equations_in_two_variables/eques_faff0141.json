@@ -1,20 +1,19 @@
 {
-  "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\\n$$ y = 4x + 1 $$\\n$$ y = x^2 + 3x + -1 $$",
-  "answers": {
-    "A": "-1",
-    "B": "0",
-    "C": "4",
-    "D": "2"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "Setting the given equations equal to each other: $ 4x + 1 = x^2 + 3x + -1 $. Rearrange into quadratic form: $ x^2 + (-1)x + (-2) = 0 $. The discriminant is 9. Solving for $x$, we get possible values: [2, -1]. Only one of these values is listed as an answer choice, making 2 the correct answer.",
-  "category": "Nonlinear Systems - Solving for x",
-  "difficulty": "Medium",
-  "id": "faff0141",
-  "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
+    "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\n\n$$ y = 4x + 1 $$\n\n$$ y = x^2 + 3x + -1 $$",
+    "answers": {
+        "A": "-1",
+        "B": "0",
+        "C": "4",
+        "D": "2"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "Setting the given equations equal to each other: $ 4x + 1 = x^2 + 3x + -1 $. Rearrange into quadratic form: $ x^2 + (-1)x + (-2) = 0 $. The discriminant is 9. Solving for $x$, we get possible values: [2, -1]. Only one of these values is listed as an answer choice, making 2 the correct answer.",
+    "difficulty": "Medium",
+    "id": "faff0141",
+    "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

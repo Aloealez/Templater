@@ -1,20 +1,19 @@
 {
-  "task": "During a spring migration, Marek Bujanowicz traveled a minimum of 1647 kilometers and a maximum of 2674 kilometers. Which inequality represents this situation, where $d$ is a possible distance, in kilometers, that Marek Bujanowicz traveled?",
-  "answers": {
-    "A": "d ≤ 1647",
-    "B": "d ≥ 2674",
-    "C": "2674 ≤ d ≤ 4332",
-    "D": "1647 ≤ d ≤ 2674"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "Choice D is correct. It's given that during a spring migration, Marek Bujanowicz traveled a minimum of 1647 kilometers and a maximum of 2674 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 1647 ≤ d ≤ 2674.",
-  "category": "Inequalities - Distance",
-  "difficulty": "Easy",
-  "id": "77689fa7",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "During a spring migration, Marek Bujanowicz traveled a minimum of 1647 kilometers and a maximum of 2674 kilometers. Which inequality represents this situation, where $d$ is a possible distance, in kilometers, that Marek Bujanowicz traveled?",
+    "answers": {
+        "A": "d \u2264 1647",
+        "B": "d \u2265 2674",
+        "C": "2674 \u2264 d \u2264 4332",
+        "D": "1647 \u2264 d \u2264 2674"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "Choice D is correct. It's given that during a spring migration, Marek Bujanowicz traveled a minimum of 1647 kilometers and a maximum of 2674 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 1647 \u2264 d \u2264 2674.",
+    "difficulty": "Easy",
+    "id": "77689fa7",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

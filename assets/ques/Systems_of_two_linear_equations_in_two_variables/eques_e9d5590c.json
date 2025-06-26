@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "(17, 3)",
-    "B": "(14, 6)",
-    "C": "(15, 5)",
-    "D": "(16, 4)"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "Solve the system of equations:\n$ x + y = 20 $\n$ x = 3y $\nWhat is the solution $ (x, y) $ to the system?",
-  "explanation": "Choice C is correct. The second equation in the system is $ x = 3y $. Substituting $ 3y $ for $ x $ in the first equation gives:\n$ 3y + y = 20 $.\nFactoring out $ y $ results in:\n$ (3 + 1)y = 20 $.\nSolving for $ y $, we divide by $ 3 + 1 $:\n$ y = \\frac{20}{3 + 1} $.\nSince we set $ y = 5 $, it checks out.\nNow, substituting $ y = 5 $ into the second equation:\n$ x = 3(5) $, so $ x = 15 $.\nTherefore, the solution to the system is $ (15, 5) $.",
-  "category": "Systems of Linear Equations",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "e9d5590c",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "(17, 3)",
+        "B": "(14, 6)",
+        "C": "(15, 5)",
+        "D": "(16, 4)"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "Solve the system of equations:\n$ x + y = 20 $\n$ x = 3y $\nWhat is the solution $ (x, y) $ to the system?",
+    "explanation": "Choice C is correct. The second equation in the system is $ x = 3y $. Substituting $ 3y $ for $ x $ in the first equation gives:\n$ 3y + y = 20 $.\nFactoring out $ y $ results in:\n$ (3 + 1)y = 20 $.\nSolving for $ y $, we divide by $ 3 + 1 $:\n$ y = \\frac{20}{3 + 1} $.\nSince we set $ y = 5 $, it checks out.\nNow, substituting $ y = 5 $ into the second equation:\n$ x = 3(5) $, so $ x = 15 $.\nTherefore, the solution to the system is $ (15, 5) $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "e9d5590c",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

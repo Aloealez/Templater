@@ -1,20 +1,19 @@
 {
-  "task": "Line p is defined by the equation $ 4y + -20x = 48 $. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
-  "answers": {
-    "A": "\\frac{-1}{5}",
-    "B": "\\frac{-5}{1}",
-    "C": "\\frac{1}{5}",
-    "D": "\\frac{5}{1}"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "explanation": "The given equation of line p is rewritten in slope-intercept form as $ y = \\frac{5}{1}x + b $. This means the slope of line p is \\frac{5}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{5}{1} is \\frac{-1}{5}. Thus, the slope of line r is \\frac{-1}{5}.",
-  "category": "Linear Equations - Perpendicular Slopes",
-  "difficulty": "Medium",
-  "id": "bcab72b7",
-  "subcategory": "Linear_equations_in_two_variables"
+    "task": "Line p is defined by the equation $ 4y + -20x = 48 $. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
+    "answers": {
+        "A": "\\frac{-1}{5}",
+        "B": "\\frac{-5}{1}",
+        "C": "\\frac{1}{5}",
+        "D": "\\frac{5}{1}"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "explanation": "The given equation of line p is rewritten in slope-intercept form as $ y = \\frac{5}{1}x + b $. This means the slope of line p is \\frac{5}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{5}{1} is \\frac{-1}{5}. Thus, the slope of line r is \\frac{-1}{5}.",
+    "difficulty": "Medium",
+    "id": "bcab72b7",
+    "subcategory": "Linear_equations_in_two_variables"
 }

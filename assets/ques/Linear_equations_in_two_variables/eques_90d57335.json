@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ -\frac{1}{19} $",
-    "B": "$ -\frac{1}{9} $",
-    "C": "$ -\frac{1}{7} $",
-    "D": "$ -\frac{1}{12} $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "Line $ k $ is defined by $ y = 7x + 2 $. Line $ j $ is perpendicular to line $ k $ in the xy-plane. What is the slope of line $ j $?",
-  "explanation": "Choice C is correct. Since line $ j $ is perpendicular to line $ k $, its slope is the opposite reciprocal of the slope of line $ k $. \nThe equation for line $ k $ is given as $ y = 7x + 2 $, meaning its slope is $ 7 $. \nThe opposite reciprocal of $ 7 $ is $ -\frac{1}{7} $. \nThus, the slope of line $ j $ is $ -\frac{1}{7} $.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "90d57335",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "$-\\frac{1}{19}$",
+        "B": "$-\\frac{1}{9}$",
+        "C": "$-\\frac{1}{7}$",
+        "D": "$-\\frac{1}{12}$"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "Line $ k $ is defined by $ y = 7x + 2 $. Line $ j $ is perpendicular to line $ k $ in the xy-plane. What is the slope of line $ j $?",
+    "explanation": "Choice C is correct. Since line $ j $ is perpendicular to line $ k $, its slope is the opposite reciprocal of the slope of line $ k $. \nThe equation for line $ k $ is given as $ y = 7x + 2 $, meaning its slope is $ 7 $. \nThe opposite reciprocal of $ 7 $ is $ -\\frac{1}{7} $. \nThus, the slope of line $ j $ is $ -\\frac{1}{7} $.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "90d57335",
+    "subcategory": "Linear_equations_in_two_variables"
 }

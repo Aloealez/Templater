@@ -1,20 +1,19 @@
 {
-  "task": "From a population of 41573 people, 1097 were chosen at random and surveyed about a proposed piece of legislation. Based on the survey, it is estimated that 35% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
-  "answers": {
-    "A": "548",
-    "B": "1097",
-    "C": "13573",
-    "D": "17455"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "It's given that an estimated 35% of people in the population support a proposed piece of legislation, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 30% and 40% of the population. Multiplying these percentages by the total population (41573) gives a range of 12471 to 16629. Since 13573 falls within this range, it is a plausible answer.",
-  "category": "Inference from Sample Statistics and Margin of Error",
-  "difficulty": "Medium",
-  "id": "fa2747c4",
-  "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
+    "task": "From a population of 41573 people, 1097 were chosen at random and surveyed about a proposed piece of legislation. Based on the survey, it is estimated that 35% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+    "answers": {
+        "A": "548",
+        "B": "1097",
+        "C": "13573",
+        "D": "17455"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "It's given that an estimated 35% of people in the population support a proposed piece of legislation, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 30% and 40% of the population. Multiplying these percentages by the total population (41573) gives a range of 12471 to 16629. Since 13573 falls within this range, it is a plausible answer.",
+    "difficulty": "Medium",
+    "id": "fa2747c4",
+    "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
 }

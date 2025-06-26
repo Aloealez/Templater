@@ -1,26 +1,25 @@
 {
-  "answers": {
-    "A": "$ c = 2m $\n$ c + m = 26 $",
-    "B": "$ c = 26m $\n$ c + m = 9 $",
-    "C": "$ c = 2m $\n$ c + m = 22 $",
-    "D": "$ m = 2c $\n$ c + m = 26 $"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "Connor has $c$ marbles, and Maria has $m$ marbles. Connor has 2 times as many marbles as Maria, and together they have a total of 26 marbles. Which system of equations represents this situation?",
-  "explanation": "Choice A is correct. Since Connor has 2 times as many marbles as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 26 marbles, we set up:\n$ c + m = 26 $.\nThis forms the correct system of equations.",
-  "category": "Systems of Equations",
-  "difficulty": "Easy",
-  "id": "48717136",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ c = 2m $\n$ c + m = 26 $",
+        "B": "$ c = 26m $\n$ c + m = 9 $",
+        "C": "$ c = 2m $\n$ c + m = 22 $",
+        "D": "$ m = 2c $\n$ c + m = 26 $"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "Connor has $c$ marbles, and Maria has $m$ marbles. Connor has 2 times as many marbles as Maria, and together they have a total of 26 marbles. Which system of equations represents this situation?",
+    "explanation": "Choice A is correct. Since Connor has 2 times as many marbles as Maria, we set up the equation:\n$ c = 2m $.\nSince together they have a total of 26 marbles, we set up:\n$ c + m = 26 $.\nThis forms the correct system of equations.",
+    "difficulty": "Easy",
+    "id": "48717136",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

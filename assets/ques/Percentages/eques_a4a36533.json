@@ -1,19 +1,19 @@
 {
-  "question": "The number a is 14% greater  than the positive number b,The number c is 66% less than aThe number  c is what percent of b?",
-  "answers": {
-    "A": 18.39,
-    "B": 13.39,
-    "C": 0.39,
-    "D": 20.39
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "difficulty": "Hard",
-  "explanation": "Choice 0.39 is correct. \nThe number a is 14% greater than b, which means a = b * (1 + 14/100).\nThe number c is 66% less than a, which means c = a * (1 - 66/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 14/100) * (1 - 66/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 14/100) * (1 - 66/100)) * 100.\nThis simplifies to 0.39%, which is the final answer.",
-  "id": "a4a36533",
-  "subcategory": "Percentages"
+    "task": "The number a is 14% greater  than the positive number b,The number c is 66% less than aThe number  c is what percent of b?",
+    "answers": {
+        "A": 18.39,
+        "B": 13.39,
+        "C": 0.39,
+        "D": 20.39
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "difficulty": "Hard",
+    "explanation": "Choice 0.39 is correct. \nThe number a is 14% greater than b, which means a = b * (1 + 14/100).\nThe number c is 66% less than a, which means c = a * (1 - 66/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 14/100) * (1 - 66/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 14/100) * (1 - 66/100)) * 100.\nThis simplifies to 0.39%, which is the final answer.",
+    "id": "a4a36533",
+    "subcategory": "Percentages"
 }

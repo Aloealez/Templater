@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ \\frac{115}{4} $",
-    "B": "23",
-    "C": "$ \\frac{135}{4} $",
-    "D": "$ \\frac{69}{4} $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "task": "The function $ h $ is defined by $ h(x) = 4x + 23 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
-  "explanation": "Choice D is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 4x + 23 $\n\nSetting $ y = 0 $:\n$ 0 = 4x + 23 $\nSolving for $ x $:\n$ x = -\\frac{23}{4} = -23/4 $\n\nThus, the x-intercept is $ (-23/4, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 4(0) + 23 = 23 $\n\nThus, the y-intercept is $ (0, 23) $.\n\nSince $ a = -23/4 $ and $ b = 23 $, the sum is:\n$ a + b = -23/4 + 23 = 69/4 $.",
-  "category": "Linear Equations",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "61a188c2",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "$ \\frac{115}{4} $",
+        "B": "23",
+        "C": "$ \\frac{135}{4} $",
+        "D": "$ \\frac{69}{4} $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "task": "The function $ h $ is defined by $ h(x) = 4x + 23 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+    "explanation": "Choice D is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 4x + 23 $\nSetting $ y = 0 $:\n$ 0 = 4x + 23 $\nSolving for $ x $:\n$ x = -\\frac{23}{4} = -23/4 $\nThus, the x-intercept is $ (-23/4, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 4(0) + 23 = 23 $\nThus, the y-intercept is $ (0, 23) $.\nSince $ a = -23/4 $ and $ b = 23 $, the sum is:\n$ a + b = -23/4 + 23 = 69/4 $.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "61a188c2",
+    "subcategory": "Linear_functions"
 }

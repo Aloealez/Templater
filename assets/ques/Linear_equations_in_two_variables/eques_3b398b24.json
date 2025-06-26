@@ -1,20 +1,19 @@
 {
-  "task": "A line passes through the points $(19, 18)$ and $(-11, -12)$ in the xy-plane. What is the slope of the line?",
-  "answers": {
-    "A": "\\frac{2}{1}",
-    "B": "\\frac{3}{1}",
-    "C": "\\frac{1}{2}",
-    "D": "\\frac{1}{1}"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "The correct answer is $\\frac{1}{1}$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \\frac{-12 - 18}{-11 - 19} = \\frac{1}{1}$. Thus, the correct answer is \\frac{1}{1}, or approximately 1.0 in decimal form.",
-  "category": "Linear Equations - Slope Calculation",
-  "difficulty": "Medium",
-  "id": "3b398b24",
-  "subcategory": "Linear_equations_in_two_variables"
+    "task": "A line passes through the points $(19, 18)$ and $(-11, -12)$ in the xy-plane. What is the slope of the line?",
+    "answers": {
+        "A": "\\frac{2}{1}",
+        "B": "\\frac{3}{1}",
+        "C": "\\frac{1}{2}",
+        "D": "\\frac{1}{1}"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "The correct answer is $\\frac{1}{1}$. For a line that passes through the points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is calculated using the formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Substituting the given points, $m = \\frac{-12 - 18}{-11 - 19} = \\frac{1}{1}$. Thus, the correct answer is \\frac{1}{1}, or approximately 1.0 in decimal form.",
+    "difficulty": "Medium",
+    "id": "3b398b24",
+    "subcategory": "Linear_equations_in_two_variables"
 }

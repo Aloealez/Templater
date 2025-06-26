@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "8",
-    "B": "244",
-    "C": "254",
-    "D": "264"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "A model predicts that a certain panda weighed 254 pounds when it was born and that the panda gained 8 pounds per weeks in its early life.\n\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted pounds of the panda $ x $ weeks after birth, and $ a $ and $ b $ are constants.\n\nWhat is the value of $ a $? ",
-  "explanation": "Choice C is correct.\n\nFor a certain panda, it's given that a model predicts the panda weighed 254 pounds when it was born and gained 8 pounds per weeks in its early life.\n\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the panda after $ x $ weeks.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per weeks.\n\nSince $ a $ represents the weight of the panda at birth, the value of $ a $ is **254 pounds**.",
-  "category": "Linear Functions",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "a3b4b908",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "8",
+        "B": "244",
+        "C": "254",
+        "D": "264"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "A model predicts that a certain panda weighed 254 pounds when it was born and that the panda gained 8 pounds per weeks in its early life.\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted pounds of the panda $ x $ weeks after birth, and $ a $ and $ b $ are constants.\nWhat is the value of $ a $? ",
+    "explanation": "Choice C is correct.\nFor a certain panda, it's given that a model predicts the panda weighed 254 pounds when it was born and gained 8 pounds per weeks in its early life.\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the panda after $ x $ weeks.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per weeks.\nSince $ a $ represents the weight of the panda at birth, the value of $ a $ is **254 pounds**.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "a3b4b908",
+    "subcategory": "Linear_functions"
 }

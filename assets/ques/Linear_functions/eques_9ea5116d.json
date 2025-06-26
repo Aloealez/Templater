@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "15",
-    "B": "$ \\frac{10}{1} $",
-    "C": "$ \\frac{20}{1} $",
-    "D": "$ \\frac{22}{1} $"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 1.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "The function $ h $ is defined by $ h(x) = 3x + 15 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
-  "explanation": "Choice B is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 15 $\n\nSetting $ y = 0 $:\n$ 0 = 3x + 15 $\nSolving for $ x $:\n$ x = -\\frac{15}{3} = -5 $\n\nThus, the x-intercept is $ (-5, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 15 = 15 $\n\nThus, the y-intercept is $ (0, 15) $.\n\nSince $ a = -5 $ and $ b = 15 $, the sum is:\n$ a + b = -5 + 15 = 10 $.",
-  "category": "Linear Equations",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "9ea5116d",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "15",
+        "B": "$ \\frac{10}{1} $",
+        "C": "$ \\frac{20}{1} $",
+        "D": "$ \\frac{22}{1} $"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 1.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "The function $ h $ is defined by $ h(x) = 3x + 15 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+    "explanation": "Choice B is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 15 $\nSetting $ y = 0 $:\n$ 0 = 3x + 15 $\nSolving for $ x $:\n$ x = -\\frac{15}{3} = -5 $\nThus, the x-intercept is $ (-5, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 15 = 15 $\nThus, the y-intercept is $ (0, 15) $.\nSince $ a = -5 $ and $ b = 15 $, the sum is:\n$ a + b = -5 + 15 = 10 $.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "9ea5116d",
+    "subcategory": "Linear_functions"
 }

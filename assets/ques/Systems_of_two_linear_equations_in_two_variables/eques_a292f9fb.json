@@ -1,20 +1,19 @@
 {
-  "task": "Solve the system of equations for $(x, y)$:\n$$ 8x -10y = 4\n $$$$ -1x -4y = 4\n $$",
-  "answers": {
-    "A": "(-4/7, -5/14)",
-    "B": "(-1/14, -6/7)",
-    "C": "(-6/7, -4/7)",
-    "D": "(-4/7, -6/7)"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "We solve the system using elimination or substitution. The determinant is computed as 8 * -4 - (-10) * -1 = -42, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-4/7, -6/7)$.",
-  "category": "Systems of Equations - Solving for (x, y)",
-  "difficulty": "Medium",
-  "id": "a292f9fb",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "task": "Solve the system of equations for $(x, y)$:\n$$ 8x -10y = 4\n $$$$ -1x -4y = 4\n $$",
+    "answers": {
+        "A": "(-4/7, -5/14)",
+        "B": "(-1/14, -6/7)",
+        "C": "(-6/7, -4/7)",
+        "D": "(-4/7, -6/7)"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "We solve the system using elimination or substitution. The determinant is computed as 8 * -4 - (-10) * -1 = -42, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-4/7, -6/7)$.",
+    "difficulty": "Medium",
+    "id": "a292f9fb",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

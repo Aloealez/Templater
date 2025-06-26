@@ -1,20 +1,19 @@
 {
-  "task": "From a population of 81954 people, 1074 were chosen at random and surveyed about a new product launch. Based on the survey, it is estimated that 25% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
-  "answers": {
-    "A": "1074",
-    "B": "19457",
-    "C": "26033",
-    "D": "537"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "It's given that an estimated 25% of people in the population support a new product launch, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 20% and 30% of the population. Multiplying these percentages by the total population (81954) gives a range of 16390 to 24586. Since 19457 falls within this range, it is a plausible answer.",
-  "category": "Inference from Sample Statistics and Margin of Error",
-  "difficulty": "Medium",
-  "id": "4e741ac3",
-  "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
+    "task": "From a population of 81954 people, 1074 were chosen at random and surveyed about a new product launch. Based on the survey, it is estimated that 25% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+    "answers": {
+        "A": "1074",
+        "B": "19457",
+        "C": "26033",
+        "D": "537"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "It's given that an estimated 25% of people in the population support a new product launch, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 20% and 30% of the population. Multiplying these percentages by the total population (81954) gives a range of 16390 to 24586. Since 19457 falls within this range, it is a plausible answer.",
+    "difficulty": "Medium",
+    "id": "4e741ac3",
+    "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
 }

@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "The circumference, in units, of the vine when it was 1 week old.",
-    "B": "The average number of weeks it takes similar vines to grow 20 units.",
-    "C": "The average number of units the vine's circumference increased per week.",
-    "D": "The number of weeks it took the vine to double its circumference."
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "A vine had a circumference of 5 units when it was first measured. The equation below can be used to find how many weeks ($ n $) it took the vine to reach a circumference of 20 units. Which of the following is the best interpretation of the number 5 in this context?\n\n$$ 5n + 5 = 20 $$",
-  "explanation": "Choice C is correct.\n\nThe circumference of the vine at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 20 represents the circumference at the final time, and 5 represents the circumference when it was first measured. It follows that 5n represents the total circumference growth over time.\n\nSince $ n $ represents the number of weeks between the two measurements, the coefficient 5 must represent the average number of units the vine's circumference increased per week.",
-  "category": "Algebraic Word Problems",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "5a03df87",
-  "subcategory": "Linear_equations_in_one_variable"
+    "answers": {
+        "A": "The circumference, in units, of the vine when it was 1 week old.",
+        "B": "The average number of weeks it takes similar vines to grow 20 units.",
+        "C": "The average number of units the vine's circumference increased per week.",
+        "D": "The number of weeks it took the vine to double its circumference."
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "A vine had a circumference of 5 units when it was first measured. The equation below can be used to find how many weeks ($ n $) it took the vine to reach a circumference of 20 units. Which of the following is the best interpretation of the number 5 in this context?\n\n$$ 5n + 5 = 20 $$",
+    "explanation": "Choice C is correct.\n\nThe circumference of the vine at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 20 represents the circumference at the final time, and 5 represents the circumference when it was first measured. It follows that 5n represents the total circumference growth over time.\n\nSince $ n $ represents the number of weeks between the two measurements, the coefficient 5 must represent the average number of units the vine's circumference increased per week.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "5a03df87",
+    "subcategory": "Linear_equations_in_one_variable"
 }

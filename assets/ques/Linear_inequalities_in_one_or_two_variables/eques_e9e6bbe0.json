@@ -1,20 +1,19 @@
 {
-  "task": "Steve Le plans to rent a bike. The rental cost is $100 per day, and he must also pay a fixed cost of $22. Steve Le wants to spend no more than $291. If the rental is available only for whole days, what is the maximum number of days Steve Le can rent a bike? Which of the following equations properly represents this situation?",
-  "answers": {
-    "A": "100h + 22 ≥ 291",
-    "B": "100h + 22 ≤ 291",
-    "C": "100h ≤ 291",
-    "D": "100h + 31 ≤ 291"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "Choice B is correct. The equation 100h + 22 ≤ 291 represents the given situation. Subtracting 22 from both sides and dividing by 100 gives h ≤ 2. Since the rental is available only in whole days, the maximum days Steve Le can rent is 2.",
-  "category": "Inequalities - Budgeting",
-  "difficulty": "Easy",
-  "id": "e9e6bbe0",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "Steve Le plans to rent a bike. The rental cost is {dollars}100 per day, and he must also pay a fixed cost of {dollars}22. Steve Le wants to spend no more than {dollars}291. If the rental is available only for whole days, what is the maximum number of days Steve Le can rent a bike? Which of the following equations properly represents this situation?",
+    "answers": {
+        "A": "100h + 22 \u2265 291",
+        "B": "100h + 22 \u2264 291",
+        "C": "100h \u2264 291",
+        "D": "100h + 31 \u2264 291"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "Choice B is correct. The equation 100h + 22 \u2264 291 represents the given situation. Subtracting 22 from both sides and dividing by 100 gives h \u2264 2. Since the rental is available only in whole days, the maximum days Steve Le can rent is 2.",
+    "difficulty": "Easy",
+    "id": "e9e6bbe0",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

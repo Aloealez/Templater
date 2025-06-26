@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "$ \\frac{116}{5} $",
-    "B": "29",
-    "C": "$ \\frac{184}{5} $",
-    "D": "$ \\frac{174}{5} $"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "The function $ h $ is defined by $ h(x) = 5x + 29 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
-  "explanation": "Choice A is correct.\n\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 5x + 29 $\n\nSetting $ y = 0 $:\n$ 0 = 5x + 29 $\nSolving for $ x $:\n$ x = -\\frac{29}{5} = -29/5 $\n\nThus, the x-intercept is $ (-29/5, 0) $.\n\nThe y-intercept occurs when $ x = 0 $:\n$ y = 5(0) + 29 = 29 $\n\nThus, the y-intercept is $ (0, 29) $.\n\nSince $ a = -29/5 $ and $ b = 29 $, the sum is:\n$ a + b = -29/5 + 29 = 116/5 $.",
-  "category": "Linear Equations",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "3a1a5924",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "$ \\frac{116}{5} $",
+        "B": "29",
+        "C": "$ \\frac{184}{5} $",
+        "D": "$ \\frac{174}{5} $"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "The function $ h $ is defined by $ h(x) = 5x + 29 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $ a $ and $ b $ are constants. What is the value of $ a + b $? ",
+    "explanation": "Choice A is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 5x + 29 $\nSetting $ y = 0 $:\n$ 0 = 5x + 29 $\nSolving for $ x $:\n$ x = -\\frac{29}{5} = -29/5 $\nThus, the x-intercept is $ (-29/5, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 5(0) + 29 = 29 $\nThus, the y-intercept is $ (0, 29) $.\nSince $ a = -29/5 $ and $ b = 29 $, the sum is:\n$ a + b = -29/5 + 29 = 116/5 $.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "3a1a5924",
+    "subcategory": "Linear_functions"
 }

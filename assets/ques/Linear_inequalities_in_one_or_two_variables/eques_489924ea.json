@@ -1,20 +1,19 @@
 {
-  "task": "On a car trip, James and Michael each traveled for part of the trip, and the total distance they traveled was under 324 meters. James traveled at an average speed of 37 meters per hour, and Michael traveled at an average speed of 29 meters per hour. Which of the following inequalities represents this situation, where $r$ is the number of hours James traveled and $j$ is the number of hours Michael traveled?",
-  "answers": {
-    "A": "29r + 37j > 324",
-    "B": "29r + 37j < 324",
-    "C": "37r + 29j > 324",
-    "D": "37r + 29j < 324"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "It's given that James traveled at an average speed of 37 meters per hour and traveled for $r$ hours. Multiplying 37 by $r$ gives the distance James traveled: $37r$. Similarly, Michael traveled at an average speed of 29 meters per hour for $j$ hours, yielding a distance of $29j$. The total distance must be less than 324, leading to the inequality $37r + 29j < 324$.",
-  "category": "Inequalities - Distance and Speed",
-  "difficulty": "Medium",
-  "id": "489924ea",
-  "subcategory": "Linear_inequalities_in_one_or_two_variables"
+    "task": "On a car trip, James and Michael each traveled for part of the trip, and the total distance they traveled was under 324 meters. James traveled at an average speed of 37 meters per hour, and Michael traveled at an average speed of 29 meters per hour. Which of the following inequalities represents this situation, where $r$ is the number of hours James traveled and $j$ is the number of hours Michael traveled?",
+    "answers": {
+        "A": "29r + 37j > 324",
+        "B": "29r + 37j < 324",
+        "C": "37r + 29j > 324",
+        "D": "37r + 29j < 324"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "It's given that James traveled at an average speed of 37 meters per hour and traveled for $r$ hours. Multiplying 37 by $r$ gives the distance James traveled: $37r$. Similarly, Michael traveled at an average speed of 29 meters per hour for $j$ hours, yielding a distance of $29j$. The total distance must be less than 324, leading to the inequality $37r + 29j < 324$.",
+    "difficulty": "Medium",
+    "id": "489924ea",
+    "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

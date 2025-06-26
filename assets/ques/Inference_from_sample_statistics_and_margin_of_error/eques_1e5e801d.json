@@ -1,20 +1,19 @@
 {
-  "task": "From a population of 81487 people, 1858 were chosen at random and surveyed about a new school program. Based on the survey, it is estimated that 36% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
-  "answers": {
-    "A": "1858",
-    "B": "35371",
-    "C": "929",
-    "D": "27770"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "explanation": "It's given that an estimated 36% of people in the population support a new school program, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 31% and 41% of the population. Multiplying these percentages by the total population (81487) gives a range of 25260 to 33409. Since 27770 falls within this range, it is a plausible answer.",
-  "category": "Inference from Sample Statistics and Margin of Error",
-  "difficulty": "Medium",
-  "id": "1e5e801d",
-  "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
+    "task": "From a population of 81487 people, 1858 were chosen at random and surveyed about a new school program. Based on the survey, it is estimated that 36% of people in the population support it, with an associated margin of error of 5%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
+    "answers": {
+        "A": "1858",
+        "B": "35371",
+        "C": "929",
+        "D": "27770"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "explanation": "It's given that an estimated 36% of people in the population support a new school program, with a margin of error of 5%. Subtracting and adding the margin of error from the estimate gives an interval of plausible values: between 31% and 41% of the population. Multiplying these percentages by the total population (81487) gives a range of 25260 to 33409. Since 27770 falls within this range, it is a plausible answer.",
+    "difficulty": "Medium",
+    "id": "1e5e801d",
+    "subcategory": "Inference_from_sample_statistics_and_margin_of_error"
 }

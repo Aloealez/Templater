@@ -1,44 +1,43 @@
 {
-  "answers": {
-    "A": "$ 8x + 5 $",
-    "B": "$ 10x $",
-    "C": "$ 8x + 10 $",
-    "D": "$ 8x + 1 $"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "Some values of the linear function $ f $ are shown in the table below. Which of the following defines $ f $?",
-  "explanation": "The function $ f(x) $ is linear, so it has the form $ f(x) = mx + b $. The slope $ m $ represents the change in $ f(x) $ for each unit increase in $ x $. Using the values from the table, we calculate the slope: \n$ m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{37 - 21}{4 - 2} = 8 $. Next, we solve for $ b $ by substituting one of the given points, e.g., $ (2, 21) $, into the equation: \n$ 21 = 8 \times 2 + b $. Solving for $ b $, we get: \n$ b = 21 - (8 \times 2) = 5 $. Thus, the correct function is $ f(x) = 8x + 5 $.",
-  "category": "Linear Equations",
-  "difficulty": "Easy",
-  "table": [
-    [
-      "$x$",
-      "$f(x)$"
+    "answers": {
+        "A": "$ 8x + 5 $",
+        "B": "$ 10x $",
+        "C": "$ 8x + 10 $",
+        "D": "$ 8x + 1 $"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "Some values of the linear function $ f $ are shown in the table below. Which of the following defines $ f $?",
+    "explanation": "The function $ f(x) $ is linear, so it has the form $ f(x) = mx + b $. The slope $ m $ represents the change in $ f(x) $ for each unit increase in $ x $. Using the values from the table, we calculate the slope: \n$ m =\\frac{y_2 - y_1}{x_2 - x_1} =\\frac{37 - 21}{4 - 2} = 8 $. Next, we solve for $ b $ by substituting one of the given points, e.g., $ (2, 21) $, into the equation: \n$ 21 = 8 \times 2 + b $. Solving for $ b $, we get: \n$ b = 21 - (8 \times 2) = 5 $. Thus, the correct function is $ f(x) = 8x + 5 $.",
+    "difficulty": "Easy",
+    "table": [
+        [
+            "$x$",
+            "$f(x)$"
+        ],
+        [
+            2,
+            21
+        ],
+        [
+            4,
+            37
+        ],
+        [
+            9,
+            77
+        ]
     ],
-    [
-      2,
-      21
-    ],
-    [
-      4,
-      37
-    ],
-    [
-      9,
-      77
-    ]
-  ],
-  "id": "a2b91c2e",
-  "subcategory": "Linear_functions"
+    "id": "a2b91c2e",
+    "subcategory": "Linear_functions"
 }

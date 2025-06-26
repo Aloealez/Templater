@@ -1,20 +1,19 @@
 {
-  "task": "A triangular prism has a height of 18 centimeters (cm) and a volume of 288 cm³. What is the area, in cm², of the base of the prism? (The volume of a triangular prism is equal to B × h, where B is the area of the base and h is the height of the prism.)",
-  "answers": {
-    "A": "22",
-    "B": "16",
-    "C": "10",
-    "D": "13"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "The correct answer is 16. The volume of a triangular prism is given by V = B × h. Since the volume is 288 cm³ and the height is 18 cm, we solve for B: 288 = B × 18. Dividing both sides by 18, we get B = 16. Thus, the area of the base is 16 cm².",
-  "category": "Geometry - Volume of Prisms",
-  "difficulty": "Medium",
-  "id": "fc924ece",
-  "subcategory": "Area_and_volume"
+    "task": "A triangular prism has a height of 18 centimeters (cm) and a volume of 288 cm\u00b3. What is the area, in cm\u00b2, of the base of the prism? (The volume of a triangular prism is equal to B \u00d7 h, where B is the area of the base and h is the height of the prism.)",
+    "answers": {
+        "A": "22",
+        "B": "16",
+        "C": "10",
+        "D": "13"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "The correct answer is 16. The volume of a triangular prism is given by V = B \u00d7 h. Since the volume is 288 cm\u00b3 and the height is 18 cm, we solve for B: 288 = B \u00d7 18. Dividing both sides by 18, we get B = 16. Thus, the area of the base is 16 cm\u00b2.",
+    "difficulty": "Medium",
+    "id": "fc924ece",
+    "subcategory": "Area_and_volume"
 }

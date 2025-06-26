@@ -1,20 +1,19 @@
 {
-  "ID": "uxbnd3uq",
-  "task": "Two nearby lampposts are perpendicular to the ground, which is flat. One of the lampposts is 13 feet tall and has a shadow that is 4 feet long. At the same time, the shadow of the other lamppost is 1 feet long. How tall, in feet, is the other lamppost? (Assume that at a given point in time, the right triangles formed by the lampposts and their respective shadows are similar.)",
-  "answers": {
-    "A": "3.25",
-    "B": "5.25",
-    "C": "4.25",
-    "D": "4.75"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "explanation": "The correct answer is 3.25. Since the triangles are similar, the proportion is:\n13/4 = x/1.\nSolving for x gives: x = (13 × 1) / 4 = 3.25 feet.",
-  "category": "Geometry - Similar Triangles",
-  "difficulty": "Medium",
-  "subcategory": "Lines_angles_and_triangles"
+    "ID": "uxbnd3uq",
+    "task": "Two nearby lampposts are perpendicular to the ground, which is flat. One of the lampposts is 13 feet tall and has a shadow that is 4 feet long. At the same time, the shadow of the other lamppost is 1 feet long. How tall, in feet, is the other lamppost? (Assume that at a given point in time, the right triangles formed by the lampposts and their respective shadows are similar.)",
+    "answers": {
+        "A": "3.25",
+        "B": "5.25",
+        "C": "4.25",
+        "D": "4.75"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "explanation": "The correct answer is 3.25. Since the triangles are similar, the proportion is:\n13/4 = x/1.\nSolving for x gives: x = (13 \u00d7 1) / 4 = 3.25 feet.",
+    "difficulty": "Medium",
+    "subcategory": "Lines_angles_and_triangles"
 }

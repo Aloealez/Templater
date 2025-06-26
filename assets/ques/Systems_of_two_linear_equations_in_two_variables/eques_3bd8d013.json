@@ -1,26 +1,25 @@
 {
-  "answers": {
-    "A": "$ 28c + 7s = 777 $\n$ 31c + 9s = 909 $",
-    "B": "$ 28c + 777s = 7 $\n$ 31c + 909s = 9 $",
-    "C": "$ 28c + 7s = 777 $\n$ 31c + 9s = 919 $",
-    "D": "$ 7c + 28s = 777 $\n$ 9c + 31s = 909 $"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 1.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "Janek is playing an arcade challenge. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 28 coins and 7 stars, scoring 777 points. The second time, he collected 31 coins and 9 stars, scoring 909 points. Which system of equations can be used to determine the values of $c$ and $s$?",
-  "explanation": "Choice A is correct. Janek played an arcade challenge where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 28 coins and 7 stars, scoring 777 points.\nThe second time, Janek collected 31 coins and 9 stars, scoring 909 points.\nSetting up the system of equations, we have:\n$ 28c + 7s = 777 $\n$ 31c + 9s = 909 $\nThis forms the correct system of equations.",
-  "category": "Systems of Equations",
-  "difficulty": "Easy",
-  "id": "3bd8d013",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ 28c + 7s = 777 $\n$ 31c + 9s = 909 $",
+        "B": "$ 28c + 777s = 7 $\n$ 31c + 909s = 9 $",
+        "C": "$ 28c + 7s = 777 $\n$ 31c + 9s = 919 $",
+        "D": "$ 7c + 28s = 777 $\n$ 9c + 31s = 909 $"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "Janek is playing an arcade challenge. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 28 coins and 7 stars, scoring 777 points. The second time, he collected 31 coins and 9 stars, scoring 909 points. Which system of equations can be used to determine the values of $c$ and $s$?",
+    "explanation": "Choice A is correct. Janek played an arcade challenge where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Janek played, he collected 28 coins and 7 stars, scoring 777 points.\nThe second time, Janek collected 31 coins and 9 stars, scoring 909 points.\nSetting up the system of equations, we have:\n$ 28c + 7s = 777 $\n$ 31c + 9s = 909 $\nThis forms the correct system of equations.",
+    "difficulty": "Easy",
+    "id": "3bd8d013",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

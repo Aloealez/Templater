@@ -1,20 +1,19 @@
 {
-  "task": "Line q is defined by the equation $ 3y + -9x = 6 $. Line w is perpendicular to line q in the xy-plane. What is the slope of line w?",
-  "answers": {
-    "A": "\\frac{1}{3}",
-    "B": "\\frac{-1}{3}",
-    "C": "\\frac{-3}{1}",
-    "D": "\\frac{3}{1}"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "The given equation of line q is rewritten in slope-intercept form as $ y = \\frac{3}{1}x + b $. This means the slope of line q is \\frac{3}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{3}{1} is \\frac{-1}{3}. Thus, the slope of line w is \\frac{-1}{3}.",
-  "category": "Linear Equations - Perpendicular Slopes",
-  "difficulty": "Medium",
-  "id": "fc765fbb",
-  "subcategory": "Linear_equations_in_two_variables"
+    "task": "Line q is defined by the equation $ 3y + -9x = 6 $. Line w is perpendicular to line q in the xy-plane. What is the slope of line w?",
+    "answers": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{-1}{3}",
+        "C": "\\frac{-3}{1}",
+        "D": "\\frac{3}{1}"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "The given equation of line q is rewritten in slope-intercept form as $ y = \\frac{3}{1}x + b $. This means the slope of line q is \\frac{3}{1}. The negative reciprocal of a number is -1 divided by the number. Therefore, the negative reciprocal of \\frac{3}{1} is \\frac{-1}{3}. Thus, the slope of line w is \\frac{-1}{3}.",
+    "difficulty": "Medium",
+    "id": "fc765fbb",
+    "subcategory": "Linear_equations_in_two_variables"
 }

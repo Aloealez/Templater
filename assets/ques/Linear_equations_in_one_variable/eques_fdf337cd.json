@@ -1,19 +1,19 @@
 {
-  "question": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\n\nEquation: $6x + k = 6x + 12$",
-  "answers": {
-    "A": 12,
-    "B": 22,
-    "C": 2,
-    "D": 27
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "difficulty": "Easy",
-  "explanation": "**Rationale**\n\nFor the given equation $6x + k = 6x + 12$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 6x from both sides results in $k = 12$.\nThus, the equation holds for **all** values of $x$ if and only if $k = 12$.\nTherefore, the correct answer is **12**.",
-  "id": "fdf337cd",
-  "subcategory": "Linear_equations_in_one_variable"
+    "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\n\nEquation: $6x + k = 6x + 12$",
+    "answers": {
+        "A": 12,
+        "B": 22,
+        "C": 2,
+        "D": 27
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "difficulty": "Easy",
+    "explanation": "**Rationale**\n\nFor the given equation $6x + k = 6x + 12$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 6x from both sides results in $k = 12$.\nThus, the equation holds for **all** values of $x$ if and only if $k = 12$.\nTherefore, the correct answer is **12**.",
+    "id": "fdf337cd",
+    "subcategory": "Linear_equations_in_one_variable"
 }

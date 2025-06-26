@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "77",
-    "B": "66",
-    "C": "71",
-    "D": "80"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "Liam bought party hats and pens for $115. Each party hats cost $4, and each pens cost $1. If Liam bought 11 party hats, how many pens did Liam buy?",
-  "explanation": "Choice C is correct. To determine how many pens Liam bought, we first calculate the amount spent on party hats:\n$4 \times 11 = $44.\nNext, we subtract this amount from the total cost: $115 - $44 = $71.\nSince each pens costs $1, we divide: $71 ÷ $1 = 71.\nThus, Liam bought 71 pens.",
-  "category": "Linear Equations in Two Variables",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "7813677d",
-  "subcategory": "Linear_equations_in_two_variables"
+    "answers": {
+        "A": "77",
+        "B": "66",
+        "C": "71",
+        "D": "80"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "Liam bought party hats and pens for 115{dollars}. Each party hats cost 4{dollars}, and each pens cost 1{dollars}. If Liam bought 11 party hats, how many pens did Liam buy?",
+    "explanation": "Choice C is correct. To determine how many pens Liam bought, we first calculate the amount spent on party hats:\n$4 \times 11 = $44.\nNext, we subtract this amount from the total cost: $115 - $44 = $71.\nSince each pens costs $1, we divide: $71 \u00f7 $1 = 71.\nThus, Liam bought 71 pens.",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "7813677d",
+    "subcategory": "Linear_equations_in_two_variables"
 }

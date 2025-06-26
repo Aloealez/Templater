@@ -1,20 +1,19 @@
 {
-  "task": "Solve the system of equations for $(x, y)$:\n$$ 8x -1y = -4\n $$$$ -7x -8y = 4\n $$",
-  "answers": {
-    "A": "(-36/71, -4/71)",
-    "B": "(-1/142, -4/71)",
-    "C": "(-36/71, 63/142)",
-    "D": "(-4/71, -36/71)"
-  },
-  "correct": {
-    "A": true,
-    "B": false,
-    "C": false,
-    "D": false
-  },
-  "explanation": "We solve the system using elimination or substitution. The determinant is computed as 8 * -8 - (-1) * -7 = -71, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-36/71, -4/71)$.",
-  "category": "Systems of Equations - Solving for (x, y)",
-  "difficulty": "Medium",
-  "id": "71dfbc62",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "task": "Solve the system of equations for $(x, y)$:\n$$ 8x -1y = -4\n $$$$ -7x -8y = 4\n $$",
+    "answers": {
+        "A": "(-36/71, -4/71)",
+        "B": "(-1/142, -4/71)",
+        "C": "(-36/71, 63/142)",
+        "D": "(-4/71, -36/71)"
+    },
+    "correct": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+    },
+    "explanation": "We solve the system using elimination or substitution. The determinant is computed as 8 * -8 - (-1) * -7 = -71, which is nonzero, so a unique solution exists. Solving for $x$ and $y$, we find $(x, y) = (-36/71, -4/71)$.",
+    "difficulty": "Medium",
+    "id": "71dfbc62",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

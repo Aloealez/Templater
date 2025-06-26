@@ -1,27 +1,26 @@
 {
-  "answers": {
-    "A": "f(x) = 5x + 11",
-    "B": "f(x) = 4x + 1",
-    "C": "f(x) = 7x + 1",
-    "D": "f(x) = 4x + 6"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 1.0,
-    "C": 0.0,
-    "D": 0.0
-  },
-  "task": "In the xy-plane, the graph of the linear function $ f $ contains the points $ (0, 1) $ and $ (5, 21) $. Which equation defines $ f $, where $ y = f(x) $? ",
-  "explanation": "Choice B is correct.\n\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $ m $ represents the slope and $ (0, b) $ represents the y-intercept.\n\nIt's given that the graph contains the points $ (0, 1) $ and $ (5, 21) $, meaning that the y-intercept is $ b = 1 $.\n\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{21 - 1}{5 - 0} = 4 $\n\nSubstituting $ m = 4 $ and $ b = 1 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 4x + 1 $.",
-  "category": "Linear Functions",
-  "difficulty": "Medium",
-  "table": null,
-  "id": "f891d794",
-  "subcategory": "Linear_functions"
+    "answers": {
+        "A": "f(x) = 5x + 11",
+        "B": "f(x) = 4x + 1",
+        "C": "f(x) = 7x + 1",
+        "D": "f(x) = 4x + 6"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 1.0,
+        "C": 0.0,
+        "D": 0.0
+    },
+    "task": "In the xy-plane, the graph of the linear function $ f $ contains the points $ (0, 1) $ and $ (5, 21) $. Which equation defines $ f $, where $ y = f(x) $? ",
+    "explanation": "Choice B is correct.\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $ m $ represents the slope and $ (0, b) $ represents the y-intercept.\nIt's given that the graph contains the points $ (0, 1) $ and $ (5, 21) $, meaning that the y-intercept is $ b = 1 $.\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{21 - 1}{5 - 0} = 4 $\nSubstituting $ m = 4 $ and $ b = 1 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 4x + 1 $.",
+    "difficulty": "Medium",
+    "table": null,
+    "id": "f891d794",
+    "subcategory": "Linear_functions"
 }

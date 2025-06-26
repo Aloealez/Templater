@@ -1,27 +1,26 @@
 {
-  "task": "The function f is defined by $f(x) = 5x + b$.\nFor the linear function f, b is a constant and $f(9) = 47$.What is the value of b?",
-  "answers": {
-    "A": "31",
-    "B": "91",
-    "C": "37",
-    "D": "2"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": false,
-    "D": true
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 0.0,
-    "D": 1.0
-  },
-  "explanation": "Insert 9 in place of x.Then , multiply 9 by 5. After that subtract 45 from 47.It is equals 2Therefore b = 2",
-  "category": "Linear Functions",
-  "difficulty": "Easy",
-  "table": null,
-  "id": "869d5977",
-  "subcategory": "Linear_functions"
+    "task": "The function f is defined by $f(x) = 5x + b$.\nFor the linear function f, b is a constant and $f(9) = 47$.What is the value of b?",
+    "answers": {
+        "A": "31",
+        "B": "91",
+        "C": "37",
+        "D": "2"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": true
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 1.0
+    },
+    "explanation": "Insert 9 in place of x.Then , multiply 9 by 5. After that subtract 45 from 47.It is equals 2Therefore b = 2",
+    "difficulty": "Easy",
+    "table": null,
+    "id": "869d5977",
+    "subcategory": "Linear_functions"
 }

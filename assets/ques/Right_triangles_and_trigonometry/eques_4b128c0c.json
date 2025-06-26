@@ -1,20 +1,19 @@
 {
-  "task": "A right triangle has legs with lengths of $ 20 $ centimeters and $ 19 $ centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
-  "answers": {
-    "A": "$ 27 $",
-    "B": "1√761",
-    "C": "$ 761 $",
-    "D": "$ 6√97 $"
-  },
-  "correct": {
-    "A": false,
-    "B": true,
-    "C": false,
-    "D": false
-  },
-  "explanation": "The correct answer is 1√761. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(20)² + (19)² = c²\n400 + 361 = 761 = c²\nTaking the square root: √761 = c.\nThe simplified radical form of √761 is 1√761, so the hypotenuse is 1√761 cm.",
-  "category": "Geometry - Pythagorean Theorem",
-  "difficulty": "Medium",
-  "id": "4b128c0c",
-  "subcategory": "Right_triangles_and_trigonometry"
+    "task": "A right triangle has legs with lengths of $ 20 $ centimeters and $ 19 $ centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
+    "answers": {
+        "A": "$ 27 $",
+        "B": "1\u221a761",
+        "C": "$ 761 $",
+        "D": "$ 6\u221a97 $"
+    },
+    "correct": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+    },
+    "explanation": "The correct answer is 1\u221a761. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(20)\u00b2 + (19)\u00b2 = c\u00b2\n400 + 361 = 761 = c\u00b2\nTaking the square root: \u221a761 = c.\nThe simplified radical form of \u221a761 is 1\u221a761, so the hypotenuse is 1\u221a761 cm.",
+    "difficulty": "Medium",
+    "id": "4b128c0c",
+    "subcategory": "Right_triangles_and_trigonometry"
 }

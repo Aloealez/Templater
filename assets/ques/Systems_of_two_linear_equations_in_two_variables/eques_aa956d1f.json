@@ -1,26 +1,25 @@
 {
-  "answers": {
-    "A": "$ 21c + 6s = 840 $\n$ 23c + 10s = 1028 $",
-    "B": "$ 6c + 21s = 840 $\n$ 10c + 23s = 979 $",
-    "C": "$ 21c + 6s = 840 $\n$ 23c + 10s = 979 $",
-    "D": "$ 21c + 840s = 6 $\n$ 23c + 979s = 10 $"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "score": {
-    "A": 0.0,
-    "B": 0.0,
-    "C": 1.0,
-    "D": 0.0
-  },
-  "task": "Aleksander Piech is playing a video game. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Aleksander Piech played, he collected 21 coins and 6 stars, scoring 840 points. The second time, he collected 23 coins and 10 stars, scoring 979 points. Which system of equations can be used to determine the values of $c$ and $s$?",
-  "explanation": "Choice C is correct. Aleksander Piech played a video game where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Aleksander Piech played, he collected 21 coins and 6 stars, scoring 840 points.\nThe second time, Aleksander Piech collected 23 coins and 10 stars, scoring 979 points.\nSetting up the system of equations, we have:\n$ 21c + 6s = 840 $\n$ 23c + 10s = 979 $\nThis forms the correct system of equations.",
-  "category": "Systems of Equations",
-  "difficulty": "Easy",
-  "id": "aa956d1f",
-  "subcategory": "Systems_of_two_linear_equations_in_two_variables"
+    "answers": {
+        "A": "$ 21c + 6s = 840 $\n$ 23c + 10s = 1028 $",
+        "B": "$ 6c + 21s = 840 $\n$ 10c + 23s = 979 $",
+        "C": "$ 21c + 6s = 840 $\n$ 23c + 10s = 979 $",
+        "D": "$ 21c + 840s = 6 $\n$ 23c + 979s = 10 $"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "score": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0,
+        "D": 0.0
+    },
+    "task": "Aleksander Piech is playing a video game. In this game, players score points by collecting coins and stars. Each coin is worth $c$ points, and each star is worth $s$ points. The first time Aleksander Piech played, he collected 21 coins and 6 stars, scoring 840 points. The second time, he collected 23 coins and 10 stars, scoring 979 points. Which system of equations can be used to determine the values of $c$ and $s$?",
+    "explanation": "Choice C is correct. Aleksander Piech played a video game where points are earned by collecting coins and stars.\nEach coin is worth $c$ points, and each star is worth $s$ points. The first time Aleksander Piech played, he collected 21 coins and 6 stars, scoring 840 points.\nThe second time, Aleksander Piech collected 23 coins and 10 stars, scoring 979 points.\nSetting up the system of equations, we have:\n$ 21c + 6s = 840 $\n$ 23c + 10s = 979 $\nThis forms the correct system of equations.",
+    "difficulty": "Easy",
+    "id": "aa956d1f",
+    "subcategory": "Systems_of_two_linear_equations_in_two_variables"
 }

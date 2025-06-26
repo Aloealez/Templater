@@ -1,19 +1,19 @@
 {
-  "question": "The number a is 24% greater  than the positive number b,The number c is 46% less than aThe number  c is what percent of b?",
-  "answers": {
-    "A": 1.67,
-    "B": 14.67,
-    "C": 0.67,
-    "D": 3.67
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "difficulty": "Hard",
-  "explanation": "Choice 0.67 is correct. \nThe number a is 24% greater than b, which means a = b * (1 + 24/100).\nThe number c is 46% less than a, which means c = a * (1 - 46/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 24/100) * (1 - 46/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 24/100) * (1 - 46/100)) * 100.\nThis simplifies to 0.67%, which is the final answer.",
-  "id": "871ec034",
-  "subcategory": "Percentages"
+    "task": "The number a is 24% greater  than the positive number b,The number c is 46% less than aThe number  c is what percent of b?",
+    "answers": {
+        "A": 1.67,
+        "B": 14.67,
+        "C": 0.67,
+        "D": 3.67
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "difficulty": "Hard",
+    "explanation": "Choice 0.67 is correct. \nThe number a is 24% greater than b, which means a = b * (1 + 24/100).\nThe number c is 46% less than a, which means c = a * (1 - 46/100).\nSubstituting the expression for a into the expression for c gives:\nc = b * (1 + 24/100) * (1 - 46/100).\nTo find what percent c is of b, we calculate:\n(c / b) * 100 = ((1 + 24/100) * (1 - 46/100)) * 100.\nThis simplifies to 0.67%, which is the final answer.",
+    "id": "871ec034",
+    "subcategory": "Percentages"
 }

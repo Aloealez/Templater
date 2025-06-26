@@ -1,20 +1,19 @@
 {
-  "task": "The number $k$ is 26% greater than 87. If $k$ is the product of 87 and $r$, what is the value of $r$?",
-  "answers": {
-    "A": "1.93",
-    "B": "3.1",
-    "C": "1.26",
-    "D": "0.69"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "Since $k$ is 26% greater than 87, we calculate: $k = 87 + (26/100) \times 87$. This simplifies to $k = 109.62$. We also know $k = 87r$, so solving for $r$: $r = 109.62 / 87 = 1.26$.",
-  "category": "Percentages and Proportions",
-  "difficulty": "Medium",
-  "id": "9813e37f",
-  "subcategory": "Percentages"
+    "task": "The number $k$ is 26% greater than 87. If $k$ is the product of 87 and $r$, what is the value of $r$?",
+    "answers": {
+        "A": "1.93",
+        "B": "3.1",
+        "C": "1.26",
+        "D": "0.69"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "Since $k$ is 26% greater than 87, we calculate: $k = 87 + (26/100) \times 87$. This simplifies to $k = 109.62$. We also know $k = 87r$, so solving for $r$: $r = 109.62 / 87 = 1.26$.",
+    "difficulty": "Medium",
+    "id": "9813e37f",
+    "subcategory": "Percentages"
 }

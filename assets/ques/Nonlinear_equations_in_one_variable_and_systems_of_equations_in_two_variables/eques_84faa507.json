@@ -1,20 +1,19 @@
 {
-  "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\\n$$ y = 1x + 2 $$\\n$$ y = x^2 + 3x + 3 $$",
-  "answers": {
-    "A": "-2",
-    "B": "0",
-    "C": "-1",
-    "D": "-4"
-  },
-  "correct": {
-    "A": false,
-    "B": false,
-    "C": true,
-    "D": false
-  },
-  "explanation": "Setting the given equations equal to each other: $ 1x + 2 = x^2 + 3x + 3 $. Rearrange into quadratic form: $ x^2 + (2)x + (1) = 0 $. The discriminant is 0. Solving for $x$, we get possible values: [-1]. Only one of these values is listed as an answer choice, making -1 the correct answer.",
-  "category": "Nonlinear Systems - Solving for x",
-  "difficulty": "Medium",
-  "id": "84faa507",
-  "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
+    "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\n\n$$ y = 1x + 2 $$\n\n$$ y = x^2 + 3x + 3 $$",
+    "answers": {
+        "A": "-2",
+        "B": "0",
+        "C": "-1",
+        "D": "-4"
+    },
+    "correct": {
+        "A": false,
+        "B": false,
+        "C": true,
+        "D": false
+    },
+    "explanation": "Setting the given equations equal to each other: $ 1x + 2 = x^2 + 3x + 3 $. Rearrange into quadratic form: $ x^2 + (2)x + (1) = 0 $. The discriminant is 0. Solving for $x$, we get possible values: [-1]. Only one of these values is listed as an answer choice, making -1 the correct answer.",
+    "difficulty": "Medium",
+    "id": "84faa507",
+    "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }
