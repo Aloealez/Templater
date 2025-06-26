@@ -572,8 +572,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
             ),
             laTeXCode: Text(
               widget.questions[questionId]!.question
-                  .replaceAll('\n', '\\n')
-                  .replaceAll(r'\n\n', '\\n'),
+                  .replaceAll('{dollar}', ' Dollars'),
               softWrap: true,
               style: TextStyle(
                 fontSize: textScaleFactor(
