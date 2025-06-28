@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The measure of angle $ R is \\frac{1}{1}\u03c0 $ radians, and angle $ T $ is $ \\frac{1}{2}\u03c0 $ radians greater. Thus, the measure of angle T is:\n\n$ \\frac{1}{1}\u03c0 + \\frac{1}{2}\u03c0 = \\frac{3}{2}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{3}{2}\u03c0 \u00d7 (180/\u03c0) = 270 $ degrees.\n\nThus, the correct answer is $ 270 $ degrees.",
+    "explanation": "The measure of angle $ R is \\frac{1}{1}\u03c0 $ radians, and angle $ T $ is $ \\frac{1}{2}\u03c0 $ radians greater. Thus, the measure of angle T is:\n$ \\frac{1}{1}\u03c0 + \\frac{1}{2}\u03c0 = \\frac{3}{2}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{3}{2}\u03c0 \u00d7 (180/\u03c0) = 270 $ degrees.\nThus, the correct answer is $ 270 $ degrees.",
     "difficulty": "Medium",
     "id": "dc8f70ba",
     "subcategory": "Circles"
