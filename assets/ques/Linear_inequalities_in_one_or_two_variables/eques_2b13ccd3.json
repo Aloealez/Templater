@@ -1,5 +1,5 @@
 {
-    "task": "Steve Le plans to rent a bike. The rental cost is {dollars}40 per hour, and he must also pay a fixed cost of {dollars}8. Steve Le wants to spend no more than {dollars}385. If the rental is available only for whole hours, what is the maximum number of hours Steve Le can rent a bike? Which of the following equations properly represents this situation?",
+    "task": "Steve Le plans to rent a bike. The rental cost is Dollars40 per hour, and he must also pay a fixed cost of Dollars8. Steve Le wants to spend no more than Dollars385. If the rental is available only for whole hours, what is the maximum number of hours Steve Le can rent a bike? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "40h + 8 \u2265 385",
         "B": "40h + 18 \u2264 385",

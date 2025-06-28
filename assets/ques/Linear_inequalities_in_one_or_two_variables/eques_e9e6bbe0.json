@@ -1,5 +1,5 @@
 {
-    "task": "Steve Le plans to rent a bike. The rental cost is {dollars}100 per day, and he must also pay a fixed cost of {dollars}22. Steve Le wants to spend no more than {dollars}291. If the rental is available only for whole days, what is the maximum number of days Steve Le can rent a bike? Which of the following equations properly represents this situation?",
+    "task": "Steve Le plans to rent a bike. The rental cost is Dollars100 per day, and he must also pay a fixed cost of Dollars22. Steve Le wants to spend no more than Dollars291. If the rental is available only for whole days, what is the maximum number of days Steve Le can rent a bike? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "100h + 22 \u2265 291",
         "B": "100h + 22 \u2264 291",

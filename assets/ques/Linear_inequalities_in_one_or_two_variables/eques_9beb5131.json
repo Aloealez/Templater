@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "The child starts at 166 grams and grows between 1.09 and 2.04 grams per day. The inequality describing this scenario is: $ 166 + 1.09 \times d < w < 166 + 2.04 \times d $. Substituting 385 for $d$ gives: $ 586 < w < 951 $.",
+    "explanation": "The child starts at 166 grams and grows between 1.09 and 2.04 grams per day. The inequality describing this scenario is: $ 166 + 1.09 times d < w < 166 + 2.04 times d $. Substituting 385 for $d$ gives: $ 586 < w < 951 $.",
     "difficulty": "Medium",
     "id": "9beb5131",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

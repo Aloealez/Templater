@@ -1,5 +1,5 @@
 {
-    "task": "Steve Le plans to rent a jet ski. The rental cost is {dollars}23 per week, and he must also pay a fixed cost of {dollars}21. Steve Le wants to spend no more than {dollars}348. If the rental is available only for whole weeks, what is the maximum number of weeks Steve Le can rent a jet ski? Which of the following equations properly represents this situation?",
+    "task": "Steve Le plans to rent a jet ski. The rental cost is Dollars23 per week, and he must also pay a fixed cost of Dollars21. Steve Le wants to spend no more than Dollars348. If the rental is available only for whole weeks, what is the maximum number of weeks Steve Le can rent a jet ski? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "23h + 21 \u2265 348",
         "B": "23h \u2264 348",

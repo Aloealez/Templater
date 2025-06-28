@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "Since $k$ is 30% greater than 49, we calculate: $k = 49 + (30/100) \times 49$. This simplifies to $k = 63.7$. We also know $k = 49r$, so solving for $r$: $r = 63.7 / 49 = 1.3$.",
+    "explanation": "Since $k$ is 30% greater than 49, we calculate: $k = 49 + (30/100) times 49$. This simplifies to $k = 63.7$. We also know $k = 49r$, so solving for $r$: $r = 63.7 / 49 = 1.3$.",
     "difficulty": "Medium",
     "id": "456e1d3c",
     "subcategory": "Percentages"

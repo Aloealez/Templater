@@ -1,5 +1,5 @@
 {
-    "task": "Aleksander Iskra plans to rent a bike. The rental cost is {dollars}80 per month, and he must also pay a fixed cost of {dollars}25. Aleksander Iskra wants to spend no more than {dollars}419. If the rental is available only for whole months, what is the maximum number of months Aleksander Iskra can rent a bike? Which of the following equations properly represents this situation?",
+    "task": "Aleksander Iskra plans to rent a bike. The rental cost is Dollars80 per month, and he must also pay a fixed cost of Dollars25. Aleksander Iskra wants to spend no more than Dollars419. If the rental is available only for whole months, what is the maximum number of months Aleksander Iskra can rent a bike? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "80h + 31 \u2264 419",
         "B": "80h + 25 \u2264 419",

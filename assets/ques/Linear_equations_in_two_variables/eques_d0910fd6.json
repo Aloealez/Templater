@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Sophia is jogging at a speed of 3 miles per hour and skating at a speed of 5 miles per hour. She spends $ w $ hours jogging and $ r $ hours skating for a combined total of 25 miles. Which equation represents this situation?",
-    "explanation": "Choice A is correct. The total distance covered consists of two parts:\nThe distance covered while jogging: $ 3 \times w $.\nThe distance covered while skating: $ 5 \times r $.\nSince the total distance covered is 25 miles, the equation becomes:\n$ 3w + 5r = 25 $.",
+    "explanation": "Choice A is correct. The total distance covered consists of two parts:\nThe distance covered while jogging: $ 3 times w $.\nThe distance covered while skating: $ 5 times r $.\nSince the total distance covered is 25 miles, the equation becomes:\n$ 3w + 5r = 25 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "d0910fd6",

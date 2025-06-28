@@ -1,5 +1,5 @@
 {
-    "task": "A local transit company sells a monthly pass for {dollars}89 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost {dollars}(1.62, 2.57, 3.41) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
+    "task": "A local transit company sells a monthly pass for Dollars89 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost Dollars(1.62, 2.57, 3.41) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
     "answers": {
         "A": 32,
         "B": 28,

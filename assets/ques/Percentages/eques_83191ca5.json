@@ -12,7 +12,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "Since $k$ is 32% greater than 74, we calculate: $k = 74 + (32/100) \times 74$. This simplifies to $k = 97.68$. We also know $k = 74r$, so solving for $r$: $r = 97.68 / 74 = 1.32$.",
+    "explanation": "Since $k$ is 32% greater than 74, we calculate: $k = 74 + (32/100) times 74$. This simplifies to $k = 97.68$. We also know $k = 74r$, so solving for $r$: $r = 97.68 / 74 = 1.32$.",
     "difficulty": "Medium",
     "id": "83191ca5",
     "subcategory": "Percentages"

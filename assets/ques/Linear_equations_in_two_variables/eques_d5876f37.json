@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "Anna is jogging at a speed of 4 laps per hour and skating at a speed of 5 laps per hour. She spends $ w $ hours jogging and $ r $ hours skating for a combined total of 19 laps. Which equation represents this situation?",
-    "explanation": "Choice D is correct. The total distance covered consists of two parts:\nThe distance covered while jogging: $ 4 \times w $.\nThe distance covered while skating: $ 5 \times r $.\nSince the total distance covered is 19 laps, the equation becomes:\n$ 4w + 5r = 19 $.",
+    "explanation": "Choice D is correct. The total distance covered consists of two parts:\nThe distance covered while jogging: $ 4 times w $.\nThe distance covered while skating: $ 5 times r $.\nSince the total distance covered is 19 laps, the equation becomes:\n$ 4w + 5r = 19 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "d5876f37",
