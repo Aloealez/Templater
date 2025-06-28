@@ -1,10 +1,10 @@
 {
     "task": "Line $k$ is defined by the equation $y = \\frac{19}{12}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
     "answers": {
-        "A": "\\frac{19}{12}",
-        "B": "\\frac{19}{13}",
-        "C": "\\frac{-19}{12}",
-        "D": "\\frac{-12}{19}"
+        "A": "$\\frac{19}{12}$",
+        "B": "$\\frac{19}{13}$",
+        "C": "$\\frac{-19}{12}$",
+        "D": "$\\frac{-12}{19}$"
     },
     "correct": {
         "A": false,

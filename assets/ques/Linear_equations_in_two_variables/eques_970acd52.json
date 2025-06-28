@@ -1,10 +1,10 @@
 {
     "task": "A line passes through the points $(13, -14)$ and $(-20, 6)$ in the xy-plane. What is the slope of the line?",
     "answers": {
-        "A": "\\frac{-19}{33}",
-        "B": "\\frac{-20}{33}",
-        "C": "\\frac{-5}{8}",
-        "D": "\\frac{-6}{11}"
+        "A": "$\\frac{-19}{33}$",
+        "B": "$\\frac{-20}{33}$",
+        "C": "$\\frac{-5}{8}$",
+        "D": "$\\frac{-6}{11}$"
     },
     "correct": {
         "A": false,

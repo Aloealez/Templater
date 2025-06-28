@@ -1,10 +1,10 @@
 {
     "task": "A line passes through the points $(-20, -10)$ and $(11, -6)$ in the xy-plane. What is the slope of the line?",
     "answers": {
-        "A": "\\frac{4}{31}",
-        "B": "\\frac{3}{31}",
-        "C": "\\frac{1}{8}",
-        "D": "\\frac{2}{31}"
+        "A": "$\\frac{4}{31}$",
+        "B": "$\\frac{3}{31}$",
+        "C": "$\\frac{1}{8}$",
+        "D": "$\\frac{2}{31}$"
     },
     "correct": {
         "A": true,

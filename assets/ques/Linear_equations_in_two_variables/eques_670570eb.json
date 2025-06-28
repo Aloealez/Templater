@@ -1,10 +1,10 @@
 {
     "task": "Line k is defined by the equation $ 4y + -14x = 44 $. Line w is perpendicular to line k in the xy-plane. What is the slope of line w?",
     "answers": {
-        "A": "\\frac{7}{2}",
-        "B": "\\frac{2}{7}",
-        "C": "\\frac{-7}{2}",
-        "D": "\\frac{-2}{7}"
+        "A": "$\\frac{7}{2}$",
+        "B": "$\\frac{2}{7}$",
+        "C": "$\\frac{-7}{2}$",
+        "D": "$\\frac{-2}{7}$"
     },
     "correct": {
         "A": false,

@@ -1,10 +1,10 @@
 {
     "task": "Line q is defined by the equation $ 1y + -8x = 6 $. Line l is perpendicular to line q in the xy-plane. What is the slope of line l?",
     "answers": {
-        "A": "\\frac{1}{8}",
-        "B": "\\frac{-8}{1}",
-        "C": "\\frac{-1}{8}",
-        "D": "\\frac{8}{1}"
+        "A": "$\\frac{1}{8}$",
+        "B": "$\\frac{-8}{1}$",
+        "C": "$\\frac{-1}{8}$",
+        "D": "$\\frac{8}{1}$"
     },
     "correct": {
         "A": false,

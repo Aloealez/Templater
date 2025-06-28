@@ -1,10 +1,10 @@
 {
     "task": "Line $k$ is defined by the equation $y = \\frac{15}{17}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
     "answers": {
-        "A": "\\frac{-15}{17}",
-        "B": "\\frac{15}{17}",
-        "C": "\\frac{5}{6}",
-        "D": "\\frac{-17}{15}"
+        "A": "$\\frac{-15}{17}$",
+        "B": "$\\frac{15}{17}$",
+        "C": "$\\frac{5}{6}$",
+        "D": "$\\frac{-17}{15}$"
     },
     "correct": {
         "A": false,

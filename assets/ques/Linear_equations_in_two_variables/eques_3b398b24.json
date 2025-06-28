@@ -1,10 +1,10 @@
 {
     "task": "A line passes through the points $(19, 18)$ and $(-11, -12)$ in the xy-plane. What is the slope of the line?",
     "answers": {
-        "A": "\\frac{2}{1}",
-        "B": "\\frac{3}{1}",
-        "C": "\\frac{1}{2}",
-        "D": "\\frac{1}{1}"
+        "A": "$\\frac{2}{1}$",
+        "B": "$\\frac{3}{1}$",
+        "C": "$\\frac{1}{2}$",
+        "D": "$\\frac{1}{1}$"
     },
     "correct": {
         "A": false,

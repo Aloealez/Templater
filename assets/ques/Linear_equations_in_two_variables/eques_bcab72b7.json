@@ -1,10 +1,10 @@
 {
     "task": "Line p is defined by the equation $ 4y + -20x = 48 $. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
     "answers": {
-        "A": "\\frac{-1}{5}",
-        "B": "\\frac{-5}{1}",
-        "C": "\\frac{1}{5}",
-        "D": "\\frac{5}{1}"
+        "A": "$\\frac{-1}{5}$",
+        "B": "$\\frac{-5}{1}$",
+        "C": "$\\frac{1}{5}$",
+        "D": "$\\frac{5}{1}$"
     },
     "correct": {
         "A": true,

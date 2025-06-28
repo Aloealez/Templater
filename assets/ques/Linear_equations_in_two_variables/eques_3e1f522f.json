@@ -1,10 +1,10 @@
 {
     "task": "Line t is defined by the equation $ 9y + -14x = 18 $. Line j is perpendicular to line t in the xy-plane. What is the slope of line j?",
     "answers": {
-        "A": "\\frac{-9}{14}",
-        "B": "\\frac{9}{14}",
-        "C": "\\frac{-14}{9}",
-        "D": "\\frac{14}{9}"
+        "A": "$\\frac{-9}{14}$",
+        "B": "$\\frac{9}{14}$",
+        "C": "$\\frac{-14}{9}$",
+        "D": "$\\frac{14}{9}$"
     },
     "correct": {
         "A": true,

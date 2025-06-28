@@ -1,10 +1,10 @@
 {
     "task": "Line $k$ is defined by the equation $y = \\frac{-3}{7}x + b$. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
     "answers": {
-        "A": "\\frac{-3}{7}",
-        "B": "\\frac{7}{3}",
-        "C": "\\frac{3}{7}",
-        "D": "\\frac{-2}{5}"
+        "A": "$\\frac{-3}{7}$",
+        "B": "$\\frac{7}{3}$",
+        "C": "$\\frac{3}{7}$",
+        "D": "$\\frac{-2}{5}$"
     },
     "correct": {
         "A": false,
