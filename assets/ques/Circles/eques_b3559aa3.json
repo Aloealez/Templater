@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The measure of angle $ R is \\frac{4}{3}\u03c0 $ radians, and angle $ T $ is $ \\frac{5}{3}\u03c0 $ radians greater. Thus, the measure of angle T is:\n$ \\frac{4}{3}\u03c0 + \\frac{5}{3}\u03c0 = \\frac{3}{1}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{3}{1}\u03c0 \u00d7 (180/\u03c0) = 540 $ degrees.\nThus, the correct answer is $ 540 $ degrees.",
+    "explanation": "The measure of angle $R$ is $\\frac{4}{3}\u03c0$ radians, and angle $T$ is $\\frac{5}{3}\u03c0$ radians greater. Thus, the measure of angle T is:\\n$\\frac{4}{3}\u03c0 + \\frac{5}{3}\u03c0 = \\frac{3}{1}\u03c0$ radians.\\nTo convert to degrees, multiply by $ 180/\u03c0 $:\\n$ \\frac{3}{1}\u03c0 \u00d7 (180/\u03c0) = 540 $ degrees.\\nThus, the correct answer is $ 540 $ degrees.",
     "difficulty": "Medium",
     "id": "b3559aa3",
     "subcategory": "Circles"

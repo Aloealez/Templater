@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\nRationle\nThe correct answer is -6. It's given that $5x + 45 = 15$.  To solve for $x$, we need to isolate the variable. First, add 45 to both sides: $5x = 60$. Then, divide by 5: $x = 12.0$. This simplifies to $x = -6$.",
+    "explanation": "\\nRationle\\nThe correct answer is -6. It's given that $5x + 45 = 15$.  To solve for $x$, we need to isolate the variable. First, add 45 to both sides: $5x = 60$. Then, divide by 5: $x = 12.0$. This simplifies to $x = -6$.",
     "id": "71c1a3d5",
     "subcategory": "Linear_equations_in_one_variable"
 }

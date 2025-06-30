@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "The function $g$ is defined by $ g(x) = 2x - 5 $. What is the value of $ g(x) $ when $ x = 5 $?",
-    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 5 $ can be found by substituting 5 for $x$ in the given equation $ g(x) = 2x - 5 $. \nThis yields $ g(5) = 2(5) + -5 $, or $ g(5) = 5 $. Therefore, when $ x = 5 $, the value of $ g(x) $ is $ 5 $.",
+    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 5 $ can be found by substituting 5 for $x$ in the given equation $ g(x) = 2x - 5 $. \\nThis yields $ g(5) = 2(5) + -5 $, or $ g(5) = 5 $. Therefore, when $ x = 5 $, the value of $ g(x) $ is $ 5 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "586520c3",

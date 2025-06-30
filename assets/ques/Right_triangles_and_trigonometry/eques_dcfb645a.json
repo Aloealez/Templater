@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The correct answer is 1\u221a1205. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(23)\u00b2 + (26)\u00b2 = c\u00b2\n529 + 676 = 1205 = c\u00b2\nTaking the square root: \u221a1205 = c.\nThe simplified radical form of \u221a1205 is 1\u221a1205, so the hypotenuse is 1\u221a1205 cm.",
+    "explanation": "The correct answer is 1\u221a1205. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\\n(23)\u00b2 + (26)\u00b2 = c\u00b2\\n529 + 676 = 1205 = c\u00b2\\nTaking the square root: \u221a1205 = c.\\nThe simplified radical form of \u221a1205 is 1\u221a1205, so the hypotenuse is 1\u221a1205 cm.",
     "difficulty": "Medium",
     "id": "dcfb645a",
     "subcategory": "Right_triangles_and_trigonometry"

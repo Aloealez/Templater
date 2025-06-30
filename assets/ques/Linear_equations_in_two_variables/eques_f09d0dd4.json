@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "What is the equation of the line that passes through the point $ (0, -7) $ and is parallel to the graph of $ y = 2x + 3 $ in the xy-plane?",
-    "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $m$ is the slope and $b$ is the y-intercept. \nSince the new line is parallel to $ y = 2x + 3 $, it must have the same slope, which is $ 2 $. \nGiven that the new line passes through $ (0, -7) $, the y-intercept is $ -7 $. \nThus, the equation of the new line is $ y = 2x - 7 $.",
+    "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $m$ is the slope and $b$ is the y-intercept. \\nSince the new line is parallel to $ y = 2x + 3 $, it must have the same slope, which is $ 2 $. \\nGiven that the new line passes through $ (0, -7) $, the y-intercept is $ -7 $. \\nThus, the equation of the new line is $ y = 2x - 7 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "f09d0dd4",

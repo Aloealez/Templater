@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "a family's monthly budget for one year was $x$ euros. The organization budgeted $y$ euros for a specific category and 331 euros for other expenses. Which of the following represents the relationship between $x$ and $y$ in this context?",
-    "explanation": "Choice D is correct. The total budget is represented by $ x $, and $y$ represents the allocated portion. The remaining amount is 331 euros. \nSince the total budget is $ x $, subtracting the allocated budget $y$ gives us: \n$ x - y = 331 $, which correctly represents the relationship.",
+    "explanation": "Choice D is correct. The total budget is represented by $x$, and $y$ represents the allocated portion. The remaining amount is 331 euros. \\nSince the total budget is $x$, subtracting the allocated budget $y$ gives us: \\n$ x - y = 331 $, which correctly represents the relationship.",
     "difficulty": "Easy",
     "table": null,
     "id": "55473094",

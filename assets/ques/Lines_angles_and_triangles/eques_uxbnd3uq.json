@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The correct answer is 3.25. Since the triangles are similar, the proportion is:\n13/4 = x/1.\nSolving for x gives: x = (13 \u00d7 1) / 4 = 3.25 feet.",
+    "explanation": "The correct answer is 3.25. Since the triangles are similar, the proportion is:\\n13/4 = x/1.\\nSolving for x gives: x = (13 \u00d7 1) / 4 = 3.25 feet.",
     "difficulty": "Medium",
     "subcategory": "Lines_angles_and_triangles"
 }

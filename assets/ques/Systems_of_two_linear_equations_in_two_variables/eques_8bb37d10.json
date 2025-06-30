@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "Solve the system of equations:\n$ x + y = 7 $\n$ x = 6y $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice B is correct. The second equation in the system is $ x = 6y $. Substituting $ 6y $ for $x$ in the first equation gives:\n$ 6y + y = 7 $.\nFactoring out $y$ results in:\n$ (6 + 1)y = 7 $.\nSolving for $ y $, we divide by $ 6 + 1 $:\n$ y = \\frac{7}{6 + 1} $.\nSince we set $ y = 1 $, it checks out.\nNow, substituting $ y = 1 $ into the second equation:\n$ x = 6(1) $, so $ x = 6 $.\nTherefore, the solution to the system is $ (6, 1) $.",
+    "task": "Solve the system of equations:\\n$ x + y = 7 $\\n$ x = 6y $\\nWhat is the solution $ (x, y) $ to the system?",
+    "explanation": "Choice B is correct. The second equation in the system is $ x = 6y $. Substituting $ 6y $ for $x$ in the first equation gives:\\n$ 6y + y = 7 $.\\nFactoring out $y$ results in:\\n$ (6 + 1)y = 7 $.\\nSolving for $y$, we divide by $ 6 + 1 $:\\n$ y = \\frac{7}{6 + 1} $.\\nSince we set $ y = 1 $, it checks out.\\nNow, substituting $ y = 1 $ into the second equation:\\n$ x = 6(1) $, so $ x = 6 $.\\nTherefore, the solution to the system is $ (6, 1) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "8bb37d10",

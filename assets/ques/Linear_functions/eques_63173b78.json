@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "In the xy-plane, the graph of the linear function $f$ contains the points $ (0, 4) $ and $ (12, 88) $. Which equation defines $ f $, where $ y = f(x) $? ",
-    "explanation": "Choice B is correct.\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $m$ represents the slope and $ (0, b) $ represents the y-intercept.\nIt's given that the graph contains the points $ (0, 4) $ and $ (12, 88) $, meaning that the y-intercept is $ b = 4 $.\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{88 - 4}{12 - 0} = 7 $\nSubstituting $ m = 7 $ and $ b = 4 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 7x + 4 $.",
+    "task": "In the xy-plane, the graph of the linear function $f$ contains the points $ (0, 4) $ and $ (12, 88) $. Which equation defines $f$, where $ y = f(x) $? ",
+    "explanation": "Choice B is correct.\\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\\n$ f(x) = mx + b $, where $m$ represents the slope and $ (0, b) $ represents the y-intercept.\\nIt's given that the graph contains the points $ (0, 4) $ and $ (12, 88) $, meaning that the y-intercept is $ b = 4 $.\\nThe slope is found using the formula:\\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{88 - 4}{12 - 0} = 7 $\\nSubstituting $ m = 7 $ and $ b = 4 $ into $ f(x) = mx + b $ gives:\\n$ f(x) = 7x + 4 $.",
     "difficulty": "Medium",
     "table": null,
     "id": "63173b78",

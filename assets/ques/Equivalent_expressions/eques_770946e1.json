@@ -1,5 +1,5 @@
 {
-    "task": "If $p = 2x + 3$ and $v = x + 6$, which of the following is equivalent to $p v - 3 p + v$?",
+    "task": "If $p = 2x + 3$ and $v = x + 6$, which of the following is equivalent to $pv - 3p + v$?",
     "answers": {
         "A": "$2x^2 + 13x + 19$",
         "B": "$2x^2 + 10x + 15$",

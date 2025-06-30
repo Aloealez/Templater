@@ -1,6 +1,6 @@
 {
     "Difficulty": "Hard",
-    "task": "Solve the system:\n1) 1x + 3y = 10\n2) 1x - 3y = -8",
+    "task": "Solve the system:\\n1) 1x + 3y = 10\\n2) 1x - 3y = -8",
     "answers": {
         "A": "No solution",
         "B": "(x, y) = (3, 1)",
@@ -13,7 +13,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "$Method 1: Substitution$\n1) Solve equation 1 for y: y = (10 - 1x)/3\n2) Substitute into equation 2 and solve for x\n3) Back-substitute to find y\n$Method 2: Elimination$\n1) Multiply equations to make coefficients match\n2) Add/subtract equations to eliminate one variable\n3) Solve for remaining variable",
+    "explanation": "$Method 1: Substitution$\\n1) Solve equation 1 for y: y = (10 - 1x)/3\\n2) Substitute into equation 2 and solve for x\\n3) Back-substitute to find y\\n$Method 2: Elimination$\\n1) Multiply equations to make coefficients match\\n2) Add/subtract equations to eliminate one variable\\n3) Solve for remaining variable",
     "id": "7436c3c4",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

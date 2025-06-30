@@ -37,8 +37,8 @@
     "C": 0.0,
     "D": 0.0
   },
-  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\ny = 89x + 14",
-  "explanation": "Choice A is correct. Substituting $ x = 0 $ into the equation $ y = 89x + 14 $ gives:\n$ y = 89(0) + 14 = 14 $.\nSubstituting $ x = 2 $ gives $ y = 89(2) + 14 = 192 $.\nSubstituting $ x = 4 $ gives $ y = 89(4) + 14 = 370 $.\nThus, the correct table is the one that contains these values.",
+  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\\ny = 89x + 14",
+  "explanation": "Choice A is correct. Substituting $ x = 0 $ into the equation $ y = 89x + 14 $ gives:\\n$ y = 89(0) + 14 = 14 $.\\nSubstituting $ x = 2 $ gives $ y = 89(2) + 14 = 192 $.\\nSubstituting $ x = 4 $ gives $ y = 89(4) + 14 = 370 $.\\nThus, the correct table is the one that contains these values.",
   "difficulty": "Easy",
   "table": null,
   "id": "d0a7dfbf",

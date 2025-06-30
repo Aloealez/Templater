@@ -1,5 +1,5 @@
 {
-    "task": "If $p = 3x + 4$ and $v = x + 5$, which of the following is equivalent to $p v - 2 p + v$?",
+    "task": "If $p = 3x + 4$ and $v = x + 5$, which of the following is equivalent to $pv - 2p + v$?",
     "answers": {
         "A": "$3x^2 + 18x + 20$",
         "B": "$3x^2 + 17x + 14$",

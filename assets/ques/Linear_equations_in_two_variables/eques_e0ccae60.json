@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Daniel bought party hats and cupcakes for 125 Dollars. Each party hat costs 4 Dollars, and each cupcake costs 1 Dollar. If Daniel bought 10 party hats, how many cupcakes did Daniel buy?",
-    "explanation": "Choice C is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on party hats:\n4 Dollars times 10 = 40 Dollars.\nNext, we subtract this amount from the total cost: 125 Dollars - 40 Dollars = 85 Dollars.\nSince each cupcake costs 1 Dollar, we divide: 85 Dollars ÷ 1 Dollar = 85.\nThus, Daniel bought 85 cupcakes.",
+    "explanation": "Choice C is correct. To determine how many cupcakes Daniel bought, we first calculate the amount spent on party hats:\\n4 Dollars times 10 = 40 Dollars.\\nNext, we subtract this amount from the total cost: 125 Dollars - 40 Dollars = 85 Dollars.\\nSince each cupcake costs 1 Dollar, we divide: 85 Dollars ÷ 1 Dollar = 85.\\nThus, Daniel bought 85 cupcakes.",
     "difficulty": "Easy",
     "table": null,
     "id": "e0ccae60",

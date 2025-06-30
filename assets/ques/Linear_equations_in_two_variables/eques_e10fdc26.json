@@ -37,8 +37,8 @@
     "C": 0.0,
     "D": 0.0
   },
-  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\ny = 9x + 15",
-  "explanation": "Choice B is correct. Substituting $ x = 0 $ into the equation $ y = 9x + 15 $ gives:\n$ y = 9(0) + 15 = 15 $.\nSubstituting $ x = 2 $ gives $ y = 9(2) + 15 = 33 $.\nSubstituting $ x = 4 $ gives $ y = 9(4) + 15 = 51 $.\nThus, the correct table is the one that contains these values.",
+  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\\ny = 9x + 15",
+  "explanation": "Choice B is correct. Substituting $ x = 0 $ into the equation $ y = 9x + 15 $ gives:\\n$ y = 9(0) + 15 = 15 $.\\nSubstituting $ x = 2 $ gives $ y = 9(2) + 15 = 33 $.\\nSubstituting $ x = 4 $ gives $ y = 9(4) + 15 = 51 $.\\nThus, the correct table is the one that contains these values.",
   "difficulty": "Easy",
   "table": null,
   "id": "e10fdc26",

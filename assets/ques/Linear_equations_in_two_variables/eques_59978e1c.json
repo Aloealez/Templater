@@ -17,8 +17,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "Line $k$ is defined by $ y = 7x + 7 $. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $ j $?",
-    "explanation": "Choice C is correct. Since line $j$ is perpendicular to line $ k $, its slope is the opposite reciprocal of the slope of line $ k $. \nThe equation for line $k$ is given as $ y = 7x + 7 $, meaning its slope is $ 7 $. \nThe opposite reciprocal of $ 7 $ is $ -\\frac{1}{7} $. \nThus, the slope of line $j$ is $ -\\frac{1}{7} $.",
+    "task": "Line $k$ is defined by $ y = 7x + 7 $. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $j$?",
+    "explanation": "Choice C is correct. Since line $j$ is perpendicular to line $k$, its slope is the opposite reciprocal of the slope of line $k$. \\nThe equation for line $k$ is given as $ y = 7x + 7 $, meaning its slope is $ 7 $. \\nThe opposite reciprocal of $ 7 $ is $ -\\frac{1}{7} $. \\nThus, the slope of line $j$ is $ -\\frac{1}{7} $.",
     "difficulty": "Easy",
     "table": null,
     "id": "59978e1c",

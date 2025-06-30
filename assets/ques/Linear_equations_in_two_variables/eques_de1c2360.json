@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Sophia is swimming at a speed of 3 miles per hour and rowing at a speed of 4 miles per hour. She spends $w$ hours swimming and $r$ hours rowing for a combined total of 25 miles. Which equation represents this situation?",
-    "explanation": "Choice C is correct. The total distance covered consists of two parts:\nThe distance covered while swimming: $ 3 times w $.\nThe distance covered while rowing: $ 4 times r $.\nSince the total distance covered is 25 miles, the equation becomes:\n$ 3w + 4r = 25 $.",
+    "explanation": "Choice C is correct. The total distance covered consists of two parts:\\nThe distance covered while swimming: $ 3 times w $.\\nThe distance covered while rowing: $ 4 times r $.\\nSince the total distance covered is 25 miles, the equation becomes:\\n$ 3w + 4r = 25 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "de1c2360",

@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "The function $h$ is defined by $ h(x) = 7x + 39 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $a$ and $b$ are constants. What is the value of $ a + b $? ",
-    "explanation": "Choice B is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 7x + 39 $\nSetting $ y = 0 $:\n$ 0 = 7x + 39 $\nSolving for $ x $:\n$ x = -\\frac{39}{7} = -39/7 $\nThus, the x-intercept is $ (-39/7, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 7(0) + 39 = 39 $\nThus, the y-intercept is $ (0, 39) $.\nSince $ a = -39/7 $ and $ b = 39 $, the sum is:\n$ a + b = -39/7 + 39 = 234/7 $.",
+    "explanation": "Choice B is correct.\\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\\n$ y = 7x + 39 $\\nSetting $ y = 0 $:\\n$ 0 = 7x + 39 $\\nSolving for $x$:\\n$ x = -\\frac{39}{7} = -39/7 $\\nThus, the x-intercept is $ (-39/7, 0) $.\\nThe y-intercept occurs when $ x = 0 $:\\n$ y = 7(0) + 39 = 39 $\\nThus, the y-intercept is $ (0, 39) $.\\nSince $ a = -39/7 $ and $ b = 39 $, the sum is:\\n$ a + b = -39/7 + 39 = 234/7 $.",
     "difficulty": "Medium",
     "table": null,
     "id": "8781cfe0",

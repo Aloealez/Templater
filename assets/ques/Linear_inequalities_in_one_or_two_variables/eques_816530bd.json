@@ -1,5 +1,5 @@
 {
-    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 -10x + 10\n $$$$ y \u2264 1x + 11\n $$",
+    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\\n$$ y \u2264 -10x + 10\\n $$$$ y \u2264 1x + 11\\n $$",
     "answers": {
         "A": "(2, 3)",
         "B": "(4, -1)",

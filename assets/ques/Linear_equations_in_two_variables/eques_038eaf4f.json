@@ -37,8 +37,8 @@
     "C": 1.0,
     "D": 0.0
   },
-  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\ny = 57x + 16",
-  "explanation": "Choice C is correct. Substituting $ x = 0 $ into the equation $ y = 57x + 16 $ gives:\n$ y = 57(0) + 16 = 16 $.\nSubstituting $ x = 2 $ gives $ y = 57(2) + 16 = 130 $.\nSubstituting $ x = 4 $ gives $ y = 57(4) + 16 = 244 $.\nThus, the correct table is the one that contains these values.",
+  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\\ny = 57x + 16",
+  "explanation": "Choice C is correct. Substituting $ x = 0 $ into the equation $ y = 57x + 16 $ gives:\\n$ y = 57(0) + 16 = 16 $.\\nSubstituting $ x = 2 $ gives $ y = 57(2) + 16 = 130 $.\\nSubstituting $ x = 4 $ gives $ y = 57(4) + 16 = 244 $.\\nThus, the correct table is the one that contains these values.",
   "difficulty": "Easy",
   "table":null,
   "id": "038eaf4f",

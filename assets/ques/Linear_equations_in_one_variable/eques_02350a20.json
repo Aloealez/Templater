@@ -1,5 +1,5 @@
 {
-    "task": "If $x + 4 = 2$, what is the value of\n$$3x + 7?$$",
+    "task": "If $x + 4 = 2$, what is the value of\\n$$3x + 7?$$",
     "answers": {
         "A": "1",
         "B": "6",
@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\nRationale\nThe correct answer is 1. It's given that $x + 4 = 2$. Multiplying each side of this equation by 3 yields $3x + 12 = 6$. Subtracting 5 from each side gives the final value of 3x + 7 = 1.",
+    "explanation": "\\nRationale\\nThe correct answer is 1. It's given that $x + 4 = 2$. Multiplying each side of this equation by 3 yields $3x + 12 = 6$. Subtracting 5 from each side gives the final value of 3x + 7 = 1.",
     "id": "02350a20",
     "subcategory": "Linear_equations_in_one_variable"
 }

@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 20x + 72$.\nWhat is the value of $f(x)$ when $x = 0$?",
+    "task": "The function f is defined by $f(x) = 20x + 72$.\\nWhat is the value of $f(x)$ when $x = 0$?",
     "answers": {
         "A": "86",
         "B": "72",

@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations for $(x, y)$:\n$$ 10x + 7y = 4\n $$$$ -10x -2y = 20\n $$",
+    "task": "Solve the system of equations for $(x, y)$:\\n$$ 10x + 7y = 4\\n $$$$ -10x -2y = 20\\n $$",
     "answers": {
         "A": "$-\\frac{74}{25} , \\frac{53}{10}$",
         "B": "$\\frac{24}{5}, -\\frac{74}{25}$",

@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 66x + 59$.\nWhat is the value of $f(x)$ when $x = 8$?",
+    "task": "The function f is defined by $f(x) = 66x + 59$.\\nWhat is the value of $f(x)$ when $x = 8$?",
     "answers": {
         "A": "550",
         "B": "587",

@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 40x + 61$.\nWhat is the value of $f(x)$ when $x = 3$?",
+    "task": "The function f is defined by $f(x) = 40x + 61$.\\nWhat is the value of $f(x)$ when $x = 3$?",
     "answers": {
         "A": "165",
         "B": "216",

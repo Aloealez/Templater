@@ -1,5 +1,5 @@
 {
-    "task": "If $p = 4x + 3$ and $v = x + 7$, which of the following is equivalent to $p v - 2 p + v$?",
+    "task": "If $p = 4x + 3$ and $v = x + 7$, which of the following is equivalent to $pv - 2p + v$?",
     "answers": {
         "A": "$4x^2 + 24x + 22$",
         "B": "$4x^2 + 27x + 28$",

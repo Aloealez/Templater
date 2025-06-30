@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Step 1: Subtract 3 from both sides: 2x = 7 - 3 = 4\nStep 2: Divide by 2: x = 4 \u00f7 2 = 2",
+    "explanation": "Step 1: Subtract 3 from both sides: 2x = 7 - 3 = 4\\nStep 2: Divide by 2: x = 4 \u00f7 2 = 2",
     "id": "fc70f35f",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

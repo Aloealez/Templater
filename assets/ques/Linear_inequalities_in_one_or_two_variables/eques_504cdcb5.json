@@ -1,5 +1,5 @@
 {
-    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 -5x + 9\n $$$$ y \u2264 0x + 3\n $$",
+    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\\n$$ y \u2264 -5x + 9\\n $$$$ y \u2264 0x + 3\\n $$",
     "answers": {
         "A": "(-5, 5)",
         "B": "(0, 4)",

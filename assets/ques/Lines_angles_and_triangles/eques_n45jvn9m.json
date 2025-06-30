@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The correct answer is 12.5. Since the triangles are similar, the proportion is:\n15/6 = x/5.\nSolving for x gives: x = (15 \u00d7 5) / 6 = 12.5 feet.",
+    "explanation": "The correct answer is 12.5. Since the triangles are similar, the proportion is:\\n15/6 = x/5.\\nSolving for x gives: x = (15 \u00d7 5) / 6 = 12.5 feet.",
     "difficulty": "Medium",
     "subcategory": "Lines_angles_and_triangles"
 }

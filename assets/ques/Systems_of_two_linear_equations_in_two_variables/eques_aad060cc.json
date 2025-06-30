@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations for $(x, y)$:\n$$ 6x + 8y = 11\n $$$$ 3x -10y = 20\n $$",
+    "task": "Solve the system of equations for $(x, y)$:\\n$$ 6x + 8y = 11\\n $$$$ 3x -10y = 20\\n $$",
     "answers": {
         "A": "$(-\\frac{29}{28}, \\frac{45}{14})$",
         "B": "$(\\frac{45}{14}, -\\frac{15}{28})$",

@@ -1,9 +1,9 @@
 {
     "answers": {
-        "A": "$ 5x + 3y = 126 $\\n$ 7x + 3y = 108 $",
-        "B": "$ 6x + 2y = 126 $\\n$ 6x + 4y = 108 $",
-        "C": "$ 6x + 2y = 108 $\\n$ 6x + 4y = 126 $",
-        "D": "$ 7x + 1y = 126 $\\n$ 5x + 5y = 108 $"
+        "A": "$ 5x + 3y = 126 $\\\n$ 7x + 3y = 108 $",
+        "B": "$ 6x + 2y = 126 $\\\n$ 6x + 4y = 108 $",
+        "C": "$ 6x + 2y = 108 $\\\n$ 6x + 4y = 126 $",
+        "D": "$ 7x + 1y = 126 $\\\n$ 5x + 5y = 108 $"
     },
     "correct": {
         "A": false,
@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Liam and Daniel purchased shirts and skirts from a store. The price of each shirt was the same, and the price of each skirt was the same. Liam purchased 6 shirts and 2 skirts for 126 Dollars, and Daniel purchased 6 shirts and 4 skirts for 108 Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each shirt and $y$ represents the price of each skirt?",
-    "explanation": "Choice B is correct. The total cost of shirts and skirts purchased by Liam is modeled by the equation:\n$ 6x + 2y = 126 $.\nSimilarly, the total cost of shirts and skirts purchased by Daniel is:\n$ 6x + 4y = 108 $.\nThus, the correct system of equations is:\n$ 6x + 2y = 126 $\n$ 6x + 4y = 108 $",
+    "explanation": "Choice B is correct. The total cost of shirts and skirts purchased by Liam is modeled by the equation:\\n$ 6x + 2y = 126 $.\\nSimilarly, the total cost of shirts and skirts purchased by Daniel is:\\n$ 6x + 4y = 108 $.\\nThus, the correct system of equations is:\\n$ 6x + 2y = 126 $\\n$ 6x + 4y = 108 $",
     "difficulty": "Easy",
     "table": null,
     "id": "0afbb843",

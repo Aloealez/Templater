@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "a school district's yearly education fund for one year was $x$ euros. The organization budgeted $y$ euros for a specific category and 307 euros for other expenses. Which of the following represents the relationship between $x$ and $y$ in this context?",
-    "explanation": "Choice A is correct. The total budget is represented by $ x $, and $y$ represents the allocated portion. The remaining amount is 307 euros. \nSince the total budget is $ x $, subtracting the allocated budget $y$ gives us: \n$ x - y = 307 $, which correctly represents the relationship.",
+    "explanation": "Choice A is correct. The total budget is represented by $x$, and $y$ represents the allocated portion. The remaining amount is 307 euros. \\nSince the total budget is $x$, subtracting the allocated budget $y$ gives us: \\n$ x - y = 307 $, which correctly represents the relationship.",
     "difficulty": "Easy",
     "table": null,
     "id": "61cdd028",

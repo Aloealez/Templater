@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "According to a model, the length, in millimeters, of a bird can be estimated by adding 1.2 to 6 times the bird's weight, in grams.\nAccording to the model, what would be the length, in millimeters, of a bird that has a body weight of 0.5 grams?",
-    "explanation": "Choice D is correct.\nAccording to the model, the length of a bird can be estimated using the equation:\n$ y = 1.2 + 6x $\nLet $x$ represent the body weight, in grams, and let $y$ represent the length, in millimeters.\nSubstituting 0.5 grams for $ x $:\n$ y = 1.2 + 6(0.5) $\n$ y = 1.2 + 3.0 $\n$ y = 4.2 $\nTherefore, a bird with a body weight of 0.5 grams has an estimated length of 4.2 millimeters.",
+    "task": "According to a model, the length, in millimeters, of a bird can be estimated by adding 1.2 to 6 times the bird's weight, in grams.\\nAccording to the model, what would be the length, in millimeters, of a bird that has a body weight of 0.5 grams?",
+    "explanation": "Choice D is correct.\\nAccording to the model, the length of a bird can be estimated using the equation:\\n$ y = 1.2 + 6x $\\nLet $x$ represent the body weight, in grams, and let $y$ represent the length, in millimeters.\\nSubstituting 0.5 grams for $x$:\\n$ y = 1.2 + 6(0.5) $\\n$ y = 1.2 + 3.0 $\\n$ y = 4.2 $\\nTherefore, a bird with a body weight of 0.5 grams has an estimated length of 4.2 millimeters.",
     "difficulty": "Medium",
     "table": null,
     "id": "ca8e615e",

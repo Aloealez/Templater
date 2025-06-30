@@ -17,8 +17,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "According to a model, the height, in millimeters, of a balloon can be estimated by adding 0.8 to 5 times the balloon's weight, in grams.\nAccording to the model, what would be the height, in millimeters, of a balloon that has a body weight of 1.2 grams?",
-    "explanation": "Choice C is correct.\nAccording to the model, the height of a balloon can be estimated using the equation:\n$ y = 0.8 + 5x $\nLet $x$ represent the body weight, in grams, and let $y$ represent the height, in millimeters.\nSubstituting 1.2 grams for $ x $:\n$ y = 0.8 + 5(1.2) $\n$ y = 0.8 + 6.0 $\n$ y = 6.8 $\nTherefore, a balloon with a body weight of 1.2 grams has an estimated height of 6.8 millimeters.",
+    "task": "According to a model, the height, in millimeters, of a balloon can be estimated by adding 0.8 to 5 times the balloon's weight, in grams.\\nAccording to the model, what would be the height, in millimeters, of a balloon that has a body weight of 1.2 grams?",
+    "explanation": "Choice C is correct.\\nAccording to the model, the height of a balloon can be estimated using the equation:\\n$ y = 0.8 + 5x $\\nLet $x$ represent the body weight, in grams, and let $y$ represent the height, in millimeters.\\nSubstituting 1.2 grams for $x$:\\n$ y = 0.8 + 5(1.2) $\\n$ y = 0.8 + 6.0 $\\n$ y = 6.8 $\\nTherefore, a balloon with a body weight of 1.2 grams has an estimated height of 6.8 millimeters.",
     "difficulty": "Medium",
     "table": null,
     "id": "4d987fc0",

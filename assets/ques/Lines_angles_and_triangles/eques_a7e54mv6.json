@@ -13,7 +13,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "The correct answer is 4.29. Since the triangles are similar, the proportion is:\n10/7 = x/3.\nSolving for x gives: x = (10 \u00d7 3) / 7 = 4.29 feet.",
+    "explanation": "The correct answer is 4.29. Since the triangles are similar, the proportion is:\\n10/7 = x/3.\\nSolving for x gives: x = (10 \u00d7 3) / 7 = 4.29 feet.",
     "difficulty": "Medium",
     "subcategory": "Lines_angles_and_triangles"
 }

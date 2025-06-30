@@ -1,5 +1,5 @@
 {
-    "task": "If $5x - 9 = -24$, what is the value of\n$15x - 19$?",
+    "task": "If $5x - 9 = -24$, what is the value of\\n$15x - 19$?",
     "answers": {
         "A": "-64",
         "B": "-69",
@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\nRationale\nThe correct answer is -64. It's given that $5x - 9 = -24$. Multiplying each side of this equation by 3 yields $15x - 27 = -72$. Subtracting -8 from each side gives the final value of 15x - 19 = -64.",
+    "explanation": "\\nRationale\\nThe correct answer is -64. It's given that $5x - 9 = -24$. Multiplying each side of this equation by 3 yields $15x - 27 = -72$. Subtracting -8 from each side gives the final value of 15x - 19 = -64.",
     "id": "bf576a40",
     "subcategory": "Linear_equations_in_one_variable"
 }

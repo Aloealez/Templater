@@ -1,5 +1,5 @@
 {
-    "task": "If $p = 4x + 1$ and $v = x + 5$, which of the following is equivalent to $p v - 5 p + v$?",
+    "task": "If $p = 4x + 1$ and $v = x + 5$, which of the following is equivalent to $pv - 5p + v$?",
     "answers": {
         "A": "$4x^2 + 2x + 5$",
         "B": "$4x^2 + 0x + 4$",

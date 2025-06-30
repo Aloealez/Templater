@@ -1,5 +1,5 @@
 {
-    "task": "A local transit company sells a monthly pass for 87 Dollars that allows an unlimited number of trips of any length. \nTickets for individual trips cost (1.4, 2.91, 3.35) Dollars depending on the length of the trip.\nWhat is the minimum number of trips per month for which a monthly pass could cost less than purchasing individual tickets for trip?",
+    "task": "A local transit company sells a monthly pass for 87 Dollars that allows an unlimited number of trips of any length. \\nTickets for individual trips cost (1.4, 2.91, 3.35) Dollars depending on the length of the trip.\\nWhat is the minimum number of trips per month for which a monthly pass could cost less than purchasing individual tickets for trip?",
     "answers": {
         "A": "25",
         "B": "28",
@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Hard",
-    "explanation": "The correct answer is 26. \nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\nof the individual tickets, $3.35. If n tickets costing $3.35 each are purchased in one month the inequality 87 < 3.35n represents this situation. \nDividing both sides of the inequality by 3.35yields 25.970149253731343 < n, which is equivalent to n > 25.970149253731343. Since only a whole number of tickets can be purchased, \nit follows that 26 is the minimum number of trips",
+    "explanation": "The correct answer is 26. \\nThe minimum number of individual trips for which the cost of the monthly pass is less than the cost of individual tickets can be found by assuming the maximum cost\\nof the individual tickets, $3.35. If n tickets costing $3.35 each are purchased in one month the inequality 87 < 3.35n represents this situation. \\nDividing both sides of the inequality by 3.35yields 25.970149253731343 < n, which is equivalent to n > 25.970149253731343. Since only a whole number of tickets can be purchased, \\nit follows that 26 is the minimum number of trips",
     "id": "74f0ac93",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"
 }

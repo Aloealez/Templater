@@ -1,5 +1,5 @@
 {
-    "task": "If $p = 2x + 6$ and $v = x + 6$, which of the following is equivalent to $p v - 4 p + v$?",
+    "task": "If $p = 2x + 6$ and $v = x + 6$, which of the following is equivalent to $pv - 4p + v$?",
     "answers": {
         "A": "$2x^2 + 12x + 24$",
         "B": "$2x^2 + 11x + 18$",

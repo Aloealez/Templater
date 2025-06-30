@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations for $(x, y)$:\n$$ 8x -10y = 4\n $$$$ -1x -4y = 4\n $$",
+    "task": "Solve the system of equations for $(x, y)$:\\n$$ 8x -10y = 4\\n $$$$ -1x -4y = 4\\n $$",
     "answers": {
         "A": "$(-\\frac{4}{7}, -\\frac{5}{14})$",
         "B": "$(-\\frac{1}{14}, -\\frac{6}{7})$",

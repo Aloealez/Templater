@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 2x + b$.\nFor the linear function f, b is a constant and $f(5) = 18$.What is the value of b?",
+    "task": "The function f is defined by $f(x) = 2x + b$.\\nFor the linear function f, b is a constant and $f(5) = 18$.What is the value of b?",
     "answers": {
         "A": "23",
         "B": "69",

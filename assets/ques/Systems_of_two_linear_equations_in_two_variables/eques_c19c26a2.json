@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations for $x$:\n$$\\frac{4}{2} y = -4$$\n$$x - \\frac{-4}{2} y = -5$$",
+    "task": "Solve the system of equations for $x$:\\n$$\\frac{4}{2} y = -4$$\\n$$x - \\frac{-4}{2} y = -5$$",
     "answers": {
         "A": "$-2$",
         "B": "$0$",

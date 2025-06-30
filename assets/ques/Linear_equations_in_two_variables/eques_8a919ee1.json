@@ -1,5 +1,5 @@
 {
-    "task": "Line p is defined by the equation $ 10y + -1x = 190 $. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
+    "task": "Line p is defined by the equation $10y - x = 190$. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
     "answers": {
         "A": "$\\frac{-1}{10}$",
         "B": "$\\frac{1}{10}$",

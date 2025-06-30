@@ -1,9 +1,9 @@
 {
   "answers": {
-    "A": "$ 5x + 4y = 89 $\\n$ 5x + 4y = 187 $",
-    "B": "$ 4x + 5y = 187 $\\n$ 6x + 3y = 89 $",
-    "C": "$ 4x + 5y = 89 $\\n$ 6x + 3y = 187 $",
-    "D": "$ 3x + 6y = 89 $\\n$ 7x + 2y = 187 $"
+    "A": "$ 5x + 4y = 89 $\\\n$ 5x + 4y = 187 $",
+    "B": "$ 4x + 5y = 187 $\\\n$ 6x + 3y = 89 $",
+    "C": "$ 4x + 5y = 89 $\\\n$ 6x + 3y = 187 $",
+    "D": "$ 3x + 6y = 89 $\\\n$ 7x + 2y = 187 $"
   },
   "correct": {
     "A": false,
@@ -18,7 +18,7 @@
     "D": 0.0
   },
   "task": "Hiro and Daniel purchased chairs and tables from a store. The price of each chair was the same, and the price of each table was the same. Hiro purchased 4 chairs and 5 tables for 89 Dollars, and Daniel purchased 6 chairs and 3 tables for 187 Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each chair and $y$ represents the price of each table?",
-  "explanation": "Choice C is correct. The total cost of chairs and tables purchased by Hiro is modeled by the equation:\n$ 4x + 5y = 89 $.\nSimilarly, the total cost of chairs and tables purchased by Daniel is:\n$ 6x + 3y = 187 $.\nThus, the correct system of equations is:\n$ 4x + 5y = 89 $\n$ 6x + 3y = 187 $.",
+  "explanation": "Choice C is correct. The total cost of chairs and tables purchased by Hiro is modeled by the equation:\\n$ 4x + 5y = 89 $.\\nSimilarly, the total cost of chairs and tables purchased by Daniel is:\\n$ 6x + 3y = 187 $.\\nThus, the correct system of equations is:\\n$ 4x + 5y = 89 $\\n$ 6x + 3y = 187 $.",
   "difficulty": "Easy",
   "table": null,
   "id": "c1944022",

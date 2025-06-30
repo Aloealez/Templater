@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 4x + b$.\nFor the linear function f, b is a constant and $f(7) = 33$.What is the value of b?",
+    "task": "The function f is defined by $f(x) = 4x + b$.\\nFor the linear function f, b is a constant and $f(7) = 33$.What is the value of b?",
     "answers": {
         "A": "5",
         "B": "97",

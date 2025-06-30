@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "The function $h$ is defined by $ h(x) = 3x + 42 $. The graph of $ y = h(x) $ in the xy-plane has an x-intercept at $ (a, 0) $ and a y-intercept at $ (0, b) $, where $a$ and $b$ are constants. What is the value of $ a + b $? ",
-    "explanation": "Choice B is correct.\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\n$ y = 3x + 42 $\nSetting $ y = 0 $:\n$ 0 = 3x + 42 $\nSolving for $ x $:\n$ x = -\\frac{42}{3} = -14 $\nThus, the x-intercept is $ (-14, 0) $.\nThe y-intercept occurs when $ x = 0 $:\n$ y = 3(0) + 42 = 42 $\nThus, the y-intercept is $ (0, 42) $.\nSince $ a = -14 $ and $ b = 42 $, the sum is:\n$ a + b = -14 + 42 = 28 $.",
+    "explanation": "Choice B is correct.\\nThe x-intercept of a graph is the point where $ y = 0 $. Given that the function is defined as:\\n$ y = 3x + 42 $\\nSetting $ y = 0 $:\\n$ 0 = 3x + 42 $\\nSolving for $x$:\\n$ x = -\\frac{42}{3} = -14 $\\nThus, the x-intercept is $ (-14, 0) $.\\nThe y-intercept occurs when $ x = 0 $:\\n$ y = 3(0) + 42 = 42 $\\nThus, the y-intercept is $ (0, 42) $.\\nSince $ a = -14 $ and $ b = 42 $, the sum is:\\n$ a + b = -14 + 42 = 28 $.",
     "difficulty": "Medium",
     "table": null,
     "id": "14d7c6f8",

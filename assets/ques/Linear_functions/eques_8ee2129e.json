@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "The function $f$ is defined by $f(x) = 8x + 30 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
-    "explanation": "Choice B is correct.\nThe given function $ f(x) = 8x + 30 $ is a linear function.\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 8x + 30 $\nSolving for $ x $:\n$ 8x = -30 $\n$ x = \\frac{-30}{8} $\nThus, the x-intercept is $ $\\frac{-30}{8}$ $.",
+    "explanation": "Choice B is correct.\\nThe given function $ f(x) = 8x + 30 $ is a linear function.\\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\\n$ 0 = 8x + 30 $\\nSolving for $x$:\\n$ 8x = -30 $\\n$ x = \\frac{-30}{8} $\\nThus, the x-intercept is $ $\\frac{-30}{8}$ $.",
     "difficulty": "Medium",
     "table": null,
     "id": "8ee2129e",

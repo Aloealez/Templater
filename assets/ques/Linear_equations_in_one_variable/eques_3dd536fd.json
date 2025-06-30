@@ -17,8 +17,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "In the given equation, $b$ is a constant. If the equation has no solution, what is the value of $b$?\n$$(b - 4)x = 5$$",
-    "explanation": "Choice C is correct.\nThis equation has no solution when there is no value of $x$ that produces a true statement. Solving for $x$ by dividing both sides by $ (b - 4) $ gives:\n$ x = \\frac{5}{b - 4} $\nWhen $ (b - 4) = 0 $, the denominator is zero, making the equation undefined. Thus, for no solution to exist, we set:\n$ b - 4 = 0 $\nSolving for $b$ gives:\n$ b = 4 $\nTherefore, the equation has no solution when $ b = 4 $.",
+    "task": "In the given equation, $b$ is a constant. If the equation has no solution, what is the value of $b$?\\n$$(b - 4)x = 5$$",
+    "explanation": "Choice C is correct.\\nThis equation has no solution when there is no value of $x$ that produces a true statement. Solving for $x$ by dividing both sides by $ (b - 4) $ gives:\\n$ x = \\frac{5}{b - 4} $\\nWhen $ (b - 4) = 0 $, the denominator is zero, making the equation undefined. Thus, for no solution to exist, we set:\\n$ b - 4 = 0 $\\nSolving for $b$ gives:\\n$ b = 4 $\\nTherefore, the equation has no solution when $ b = 4 $.",
     "difficulty": "Medium",
     "table": null,
     "id": "3dd536fd",

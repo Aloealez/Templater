@@ -1,5 +1,5 @@
 {
-    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 -5x + -7\n $$$$ y \u2264 -3x + 13\n $$",
+    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\\n$$ y \u2264 -5x + -7\\n $$$$ y \u2264 -3x + 13\\n $$",
     "answers": {
         "A": "(-2, 3)",
         "B": "(1, 5)",

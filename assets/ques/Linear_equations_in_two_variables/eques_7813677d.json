@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Liam bought party hats and pens for 115 Dollars. Each party hat costs 4 Dollars, and each pen costs 1 Dollar. If Liam bought 11 party hats, how many pens did Liam buy?",
-    "explanation": "Choice C is correct. To determine how many pens Liam bought, we first calculate the amount spent on party hats:\n$4 times 11 = $44.\nNext, we subtract this amount from the total cost: $115 - $44 = $71.\nSince each pen costs $1, we divide: $71 ÷ $1 = 71.\nThus, Liam bought 71 pens.",
+    "explanation": "Choice C is correct. To determine how many pens Liam bought, we first calculate the amount spent on party hats:\\n$4 times 11 = $44.\\nNext, we subtract this amount from the total cost: $115 - $44 = $71.\\nSince each pen costs $1, we divide: $71 ÷ $1 = 71.\\nThus, Liam bought 71 pens.",
     "difficulty": "Easy",
     "table": null,
     "id": "7813677d",

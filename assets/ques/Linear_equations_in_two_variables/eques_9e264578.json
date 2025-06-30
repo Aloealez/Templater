@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "Wera is biking at a speed of 6 miles per hour and scooting at a speed of 9 miles per hour. She spends $w$ hours biking and $r$ hours scooting for a combined total of 23 miles. Which equation represents this situation?",
-    "explanation": "Choice D is correct. The total distance covered consists of two parts:\nThe distance covered while biking: $ 6 times w $.\nThe distance covered while scooting: $ 9 times r $.\nSince the total distance covered is 23 miles, the equation becomes:\n$ 6w + 9r = 23 $.",
+    "explanation": "Choice D is correct. The total distance covered consists of two parts:\\nThe distance covered while biking: $ 6 times w $.\\nThe distance covered while scooting: $ 9 times r $.\\nSince the total distance covered is 23 miles, the equation becomes:\\n$ 6w + 9r = 23 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "9e264578",

@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Sophia bought books and cupcakes for 114 Dollars. Each book costs 5 Dollars, and each cupcake costs 1 Dollar. If Sophia bought 9 books, how many cupcakes did Sophia buy?",
-    "explanation": "Choice A is correct. To determine how many cupcakes Sophia bought, we first calculate the amount spent on books:\n5 Dollars times 9 = 45 Dollars.\nNext, we subtract this amount from the total cost: 114 Dollars - 45 Dollars = 69 Dollars.\nSince each cupcake costs 1 Dollar, we divide: 69 Dollars ÷ 1 Dollar = 69.\nThus, Sophia bought 69 cupcakes.",
+    "explanation": "Choice A is correct. To determine how many cupcakes Sophia bought, we first calculate the amount spent on books:\\n5 Dollars times 9 = 45 Dollars.\\nNext, we subtract this amount from the total cost: 114 Dollars - 45 Dollars = 69 Dollars.\\nSince each cupcake costs 1 Dollar, we divide: 69 Dollars ÷ 1 Dollar = 69.\\nThus, Sophia bought 69 cupcakes.",
     "difficulty": "Easy",
     "table": null,
     "id": "37b302f1",

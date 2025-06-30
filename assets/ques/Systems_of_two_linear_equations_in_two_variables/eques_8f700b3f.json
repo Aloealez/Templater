@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations for $x$:\n $$ \\frac{2}{2} y = -6$$\n$$x - \\frac{-3}{2} y = -4$$",
+    "task": "Solve the system of equations for $x$:\\n $$ \\frac{2}{2} y = -6$$\\n$$x - \\frac{-3}{2} y = -4$$",
     "answers": {
         "A": "$6$",
         "B": "$4$",

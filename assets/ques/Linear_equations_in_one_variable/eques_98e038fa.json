@@ -1,5 +1,5 @@
 {
-    "task": "$4(3x - 10) = -88$",
+    "task": "Which of the following equations is equivalent to $4(3x - 10) = -88$?",
     "answers": {
         "A": "$3x - 10 = -22$",
         "B": "$3x - 13 = -27$",
@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\nRationale\nChoice A is correct. Dividing each side of the given equation by 4 yields $3x - 10 = -22$. Therefore, the equation $3x - 10 = -22$ is equivalent to the given equation and has the same solution.",
+    "explanation": "\\nRationale\\nChoice A is correct. Dividing each side of the given equation by 4 yields $3x - 10 = -22$. Therefore, the equation $3x - 10 = -22$ is equivalent to the given equation and has the same solution.",
     "id": "98e038fa",
     "subcategory": "Linear_equations_in_one_variable"
 }

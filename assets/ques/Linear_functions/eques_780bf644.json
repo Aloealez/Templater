@@ -1,5 +1,5 @@
 {
-    "task": "The function f is defined by $f(x) = 71x + 40$.\nWhat is the value of $f(x)$ when $x = 1$?",
+    "task": "The function f is defined by $f(x) = 71x + 40$.\\nWhat is the value of $f(x)$ when $x = 1$?",
     "answers": {
         "A": "129",
         "B": "125",

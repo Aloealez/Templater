@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The correct answer is 8.25. Since the triangles are similar, the proportion is:\n11/4 = x/3.\nSolving for x gives: x = (11 \u00d7 3) / 4 = 8.25 feet.",
+    "explanation": "The correct answer is 8.25. Since the triangles are similar, the proportion is:\\n11/4 = x/3.\\nSolving for x gives: x = (11 \u00d7 3) / 4 = 8.25 feet.",
     "difficulty": "Medium",
     "subcategory": "Lines_angles_and_triangles"
 }

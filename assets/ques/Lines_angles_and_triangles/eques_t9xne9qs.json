@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The correct answer is 8.0. Since the triangles are similar, the proportion is:\n14/7 = x/4.\nSolving for x gives: x = (14 \u00d7 4) / 7 = 8.0 feet.",
+    "explanation": "The correct answer is 8.0. Since the triangles are similar, the proportion is:\\n14/7 = x/4.\\nSolving for x gives: x = (14 \u00d7 4) / 7 = 8.0 feet.",
     "difficulty": "Medium",
     "subcategory": "Lines_angles_and_triangles"
 }

@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\nRationle\nThe correct answer is -8. It's given that $5x + 34 = -6$.  To solve for $x$, we need to isolate the variable. First, add 34 to both sides: $5x = 28$. Then, divide by 5: $x = 5.6$. This simplifies to $x = -8$.",
+    "explanation": "\\nRationle\\nThe correct answer is -8. It's given that $5x + 34 = -6$.  To solve for $x$, we need to isolate the variable. First, add 34 to both sides: $5x = 28$. Then, divide by 5: $x = 5.6$. This simplifies to $x = -8$.",
     "id": "cbe36509",
     "subcategory": "Linear_equations_in_one_variable"
 }
