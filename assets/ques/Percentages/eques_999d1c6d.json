@@ -1,10 +1,10 @@
 {
     "task": "The number a is 70% greater  than the positive number b,The number c is 14% less than aThe number  c is what percent of b?",
     "answers": {
-        "A": 2.46,
-        "B": 34.46,
-        "C": 4.46,
-        "D": 1.46
+        "A": "2.46",
+        "B": "34.46",
+        "C": "4.46",
+        "D": "1.46"
     },
     "correct": {
         "A": false,

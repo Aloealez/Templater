@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "What is the equation of the line that passes through the point $ (0, 0) $ and is parallel to the graph of $ y = x + 9 $ in the xy-plane?",
-    "explanation": "Choice C is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = x + 9 $, it must have the same slope, which is $ 1 $. \nGiven that the new line passes through $ (0, 0) $, the y-intercept is $ 0 $. \nThus, the equation of the new line is $ y = x $.",
+    "explanation": "Choice C is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $m$ is the slope and $b$ is the y-intercept. \nSince the new line is parallel to $ y = x + 9 $, it must have the same slope, which is $ 1 $. \nGiven that the new line passes through $ (0, 0) $, the y-intercept is $ 0 $. \nThus, the equation of the new line is $ y = x $.",
     "difficulty": "Easy",
     "table": null,
     "id": "09706cc0",

@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "A cactus had a circumference of 6 units when it was first measured. The equation below can be used to find how many months ($ n $) it took the cactus to reach a circumference of 11 units. Which of the following is the best interpretation of the number 1 in this context?\n$$ 1n + 6 = 11 $$",
-    "explanation": "Choice B is correct.\nThe circumference of the cactus at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 11 represents the circumference at the final time, and 6 represents the circumference when it was first measured. It follows that 1n represents the total circumference growth over time.\nSince $ n $ represents the number of months between the two measurements, the coefficient 1 must represent the average number of units the cactus's circumference increased per month.\n",
+    "task": "A cactus had a circumference of 6 units when it was first measured. The equation below can be used to find how many months ($n$) it took the cactus to reach a circumference of 11 units. Which of the following is the best interpretation of the number 1 in this context?\n$$1n + 6 = 11$$",
+    "explanation": "Choice B is correct.\nThe circumference of the cactus at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 11 represents the circumference at the final time, and 6 represents the circumference when it was first measured. It follows that 1n represents the total circumference growth over time.\nSince $n$ represents the number of months between the two measurements, the coefficient 1 must represent the average number of units the cactus's circumference increased per month.\n",
     "difficulty": "Medium",
     "table": null,
     "id": "8e91cd3f",

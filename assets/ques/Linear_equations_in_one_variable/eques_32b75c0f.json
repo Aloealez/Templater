@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "If x is the solution to the equation below, what is the value of $ x - 5 $?\n$$ 5(2x - 1) - 7 = 4(x - 5) -2 $$",
+    "task": "If $x$ is the solution to the equation below, what is the value of $x - 5$?\n$$5(2x - 1) - 7 = 4(x - 5) -2$$",
     "explanation": "Choice D is correct.\nExpanding the left-hand side:\n$ 5(2x - 1) - 7 = 10x - 5 - 7 = 10x -12 $\nExpanding the right-hand side:\n$ 4(x - 5) -2 = 4x - 20 -2 = 4x -22 $\nRewriting the equation:\n$ 10x -12 = 4x -22 $\nSubtracting 4x from both sides:\n$ (10 - 4)x = -10 $\nSolving for x:\n$ x = \\frac{-10}{6} = \\frac{-5}{3} $\nSince we need to find $ x - 5 $, we compute:\n$ x - 5 = \\frac{-20}{3} $\nThus, the correct answer is $ \\frac{-20}{3} $. ",
     "difficulty": "Medium",
     "table": null,

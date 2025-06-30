@@ -1,10 +1,10 @@
 {
     "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\nEquation: $4x + k = 4x + 11$",
     "answers": {
-        "A": 16,
-        "B": 1,
-        "C": 21,
-        "D": 11
+        "A": "16",
+        "B": "1",
+        "C": "21",
+        "D": "11"
     },
     "correct": {
         "A": false,
@@ -13,7 +13,7 @@
         "D": true
     },
     "difficulty": "Easy",
-    "explanation": "**Rationale**\nFor the given equation $4x + k = 4x + 11$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 4x from both sides results in $k = 11$.\nThus, the equation holds for **all** values of $x$ if and only if $k = 11$.\nTherefore, the correct answer is **11**.",
+    "explanation": "Rationale\nFor the given equation $4x + k = 4x + 11$ to have infinitely many solutions, both sides must be identical.\nSubtracting 4x from both sides results in $k = 11$.\nThus, the equation holds for all values of $x$ if and only if $k = 11$.\nTherefore, the correct answer is 11.",
     "id": "04f18895",
     "subcategory": "Linear_equations_in_one_variable"
 }

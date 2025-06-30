@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "The graph of a linear function f is shown, where y = f(x). What is the x-intercept of the graph of f?",
+    "task": "The graph of a linear function $f$ is shown, where $y = f(x)$. What is the x-intercept of the graph of $f$?",
     "explanation": "The x-intercept is the point where the graph intersects the x-axis, i.e., where y = 0. Using the equation of the line y = 5x + (2), we set y = 0 and solve for x: x = -(2)/5 = -0.4. Thus, the correct answer is the x-intercept: (-0.4, 0).",
     "difficulty": "Easy",
     "graph": [],

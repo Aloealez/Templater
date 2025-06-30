@@ -1,10 +1,10 @@
 {
     "task": "if $4x + 19 = 55$, what is the value of $x$",
     "answers": {
-        "A": 14,
-        "B": 10,
-        "C": 6,
-        "D": 9
+        "A": "14",
+        "B": "10",
+        "C": "6",
+        "D": "9"
     },
     "correct": {
         "A": false,

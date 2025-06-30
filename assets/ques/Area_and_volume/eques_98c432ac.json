@@ -1,10 +1,10 @@
 {
     "task": "The floor of a ballroom has an area of 223 square meters. An architect creates a scale model of the floor of the ballroom, where the length of each side of the model is 0.61 times the length of the corresponding side of the actual floor of the ballroom. What is the area, in square meters, of the scale model?",
     "answers": {
-        "A": 57.59,
-        "B": 93.59,
-        "C": 82.98,
-        "D": 116.59
+        "A": "57.59",
+        "B": "93.59",
+        "C": "82.98",
+        "D": "116.59"
     },
     "correct": {
         "A": false,

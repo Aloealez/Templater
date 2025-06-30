@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Solve the system of equations:\n$ y = 5x + 1 $\n$ y = 11 $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice C is correct. The second equation in the system is $ y = 11 $. Substituting $ 11 $ for $ y $ in the first equation gives:\n$ 11 = 5x + 1 $.\nAdding $ -1 $ to both sides results in:\n$ 10 = 5x $.\nDividing by $ 5 $ gives $ x = 2 $.\nTherefore, the solution to the system is $ (2, 11) $.",
+    "explanation": "Choice C is correct. The second equation in the system is $ y = 11 $. Substituting $ 11 $ for $y$ in the first equation gives:\n$ 11 = 5x + 1 $.\nAdding $ -1 $ to both sides results in:\n$ 10 = 5x $.\nDividing by $ 5 $ gives $ x = 2 $.\nTherefore, the solution to the system is $ (2, 11) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "2974d4fb",

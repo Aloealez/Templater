@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "The graph of a linear function f is shown, where y = f(x). What is the x-intercept of the graph of f?",
+    "task": "The graph of a linear function $f$ is shown, where $y = f(x)$. What is the x-intercept of the graph of $f$?",
     "explanation": "The x-intercept is the point where the graph intersects the x-axis, i.e., where y = 0. Using the equation of the line y = 3x + (-8), we set y = 0 and solve for x: x = -(-8)/3 = 2.67. Thus, the correct answer is the x-intercept: (2.67, 0).",
     "difficulty": "Easy",
     "graph": [],

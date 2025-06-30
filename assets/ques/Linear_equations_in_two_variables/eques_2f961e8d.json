@@ -37,7 +37,7 @@
     "C": 1.0,
     "D": 0.0
   },
-  "task": "Which table gives three values of $ x $ and their corresponding values of $ y $ for the given equation?\ny = 90x - 15",
+  "task": "Which table gives three values of $x$ and their corresponding values of $y$ for the given equation?\ny = 90x - 15",
   "explanation": "Choice C is correct. Substituting $ x = 0 $ into the equation $ y = 90x - 15 $ gives:\n$ y = 90(0) + -15 = -15 $.\nSubstituting $ x = 2 $ gives $ y = 90(2) + -15 = 165 $.\nSubstituting $ x = 4 $ gives $ y = 90(4) + -15 = 345 $.\nThus, the correct table is the one that contains these values.",
   "difficulty": "Easy",
   "table": null,

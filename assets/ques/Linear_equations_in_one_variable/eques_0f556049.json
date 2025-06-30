@@ -1,10 +1,10 @@
 {
-    "task": "If $3x - 5 = -26$, what is the value of 9x - 11?",
+    "task": "If $3x - 5 = -26$, what is the value of $9x - 11$?",
     "answers": {
-        "A": -74,
-        "B": -77,
-        "C": -67,
-        "D": -71
+        "A": "-74",
+        "B": "-77",
+        "C": "-67",
+        "D": "-71"
     },
     "correct": {
         "A": true,

@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Solve the system of equations:\n$ x + y = 40 $\n$ x = 7y $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice A is correct. The second equation in the system is $ x = 7y $. Substituting $ 7y $ for $ x $ in the first equation gives:\n$ 7y + y = 40 $.\nFactoring out $ y $ results in:\n$ (7 + 1)y = 40 $.\nSolving for $ y $, we divide by $ 7 + 1 $:\n$ y = \\frac{40}{7 + 1} $.\nSince we set $ y = 5 $, it checks out.\nNow, substituting $ y = 5 $ into the second equation:\n$ x = 7(5) $, so $ x = 35 $.\nTherefore, the solution to the system is $ (35, 5) $.",
+    "explanation": "Choice A is correct. The second equation in the system is $ x = 7y $. Substituting $ 7y $ for $x$ in the first equation gives:\n$ 7y + y = 40 $.\nFactoring out $y$ results in:\n$ (7 + 1)y = 40 $.\nSolving for $ y $, we divide by $ 7 + 1 $:\n$ y = \\frac{40}{7 + 1} $.\nSince we set $ y = 5 $, it checks out.\nNow, substituting $ y = 5 $ into the second equation:\n$ x = 7(5) $, so $ x = 35 $.\nTherefore, the solution to the system is $ (35, 5) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "74efc3d6",

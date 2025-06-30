@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "a student's weekly allowance for one year was $ x $ pesos. The organization budgeted $ y $ pesos for a specific category and 272 pesos for other expenses. Which of the following represents the relationship between $ x $ and $ y $ in this context?",
-    "explanation": "Choice B is correct. The total budget is represented by $ x $, and $ y $ represents the allocated portion. The remaining amount is 272 pesos. \nSince the total budget is $ x $, subtracting the allocated budget $ y $ gives us: \n$ x - y = 272 $, which correctly represents the relationship.",
+    "task": "a student's weekly allowance for one year was $x$ pesos. The organization budgeted $y$ pesos for a specific category and 272 pesos for other expenses. Which of the following represents the relationship between $x$ and $y$ in this context?",
+    "explanation": "Choice B is correct. The total budget is represented by $ x $, and $y$ represents the allocated portion. The remaining amount is 272 pesos. \nSince the total budget is $ x $, subtracting the allocated budget $y$ gives us: \n$ x - y = 272 $, which correctly represents the relationship.",
     "difficulty": "Easy",
     "table": null,
     "id": "5dbeb536",

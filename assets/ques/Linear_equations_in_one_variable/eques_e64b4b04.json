@@ -1,10 +1,10 @@
 {
-    "task": "If $x - 2 = -6$, what is the value of 3x - 5?",
+    "task": "If $x - 2 = -6$, what is the value of $3x - 5$?",
     "answers": {
-        "A": -17,
-        "B": -24,
-        "C": -20,
-        "D": -10
+        "A": "-17",
+        "B": "-24",
+        "C": "-20",
+        "D": "-10"
     },
     "correct": {
         "A": true,

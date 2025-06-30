@@ -1,10 +1,10 @@
 {
     "task": "A local transit company sells a monthly pass for Dollars87 that allows an unlimited number og trips of any length. \nTickets for invidual trips cost Dollars(1.4, 2.91, 3.35) depending on the lenght of the trip.\nWhat is the minimum number of trips per month for which  a monthly pass could cost les than  purchasing invidual tickets for trip?",
     "answers": {
-        "A": 25,
-        "B": 28,
-        "C": 26,
-        "D": 31
+        "A": "25",
+        "B": "28",
+        "C": "26",
+        "D": "31"
     },
     "correct": {
         "A": false,

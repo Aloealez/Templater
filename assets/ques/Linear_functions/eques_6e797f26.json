@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "In the xy-plane, the graph of the linear function $ f $ contains the points $ (0, 9) $ and $ (8, 33) $. Which equation defines $ f $, where $ y = f(x) $? ",
-    "explanation": "Choice B is correct.\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $ m $ represents the slope and $ (0, b) $ represents the y-intercept.\nIt's given that the graph contains the points $ (0, 9) $ and $ (8, 33) $, meaning that the y-intercept is $ b = 9 $.\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{33 - 9}{8 - 0} = 3 $\nSubstituting $ m = 3 $ and $ b = 9 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 3x + 9 $.",
+    "task": "In the xy-plane, the graph of the linear function $f$ contains the points $ (0, 9) $ and $ (8, 33) $. Which equation defines $ f $, where $ y = f(x) $? ",
+    "explanation": "Choice B is correct.\nIn the xy-plane, an equation of the graph of a linear function can be written in the form:\n$ f(x) = mx + b $, where $m$ represents the slope and $ (0, b) $ represents the y-intercept.\nIt's given that the graph contains the points $ (0, 9) $ and $ (8, 33) $, meaning that the y-intercept is $ b = 9 $.\nThe slope is found using the formula:\n$ m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{33 - 9}{8 - 0} = 3 $\nSubstituting $ m = 3 $ and $ b = 9 $ into $ f(x) = mx + b $ gives:\n$ f(x) = 3x + 9 $.",
     "difficulty": "Medium",
     "table": null,
     "id": "6e797f26",

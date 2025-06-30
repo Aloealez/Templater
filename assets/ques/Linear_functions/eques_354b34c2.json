@@ -1,9 +1,9 @@
 {
     "answers": {
-        "A": "(\\frac{-96}{9}, 0)",
-        "B": "(\\frac{87}{9}, 0)",
-        "C": "(\\frac{-87}{9}, 0)",
-        "D": "(\\frac{-78}{9}, 0)"
+        "A": "$(\\frac{-96}{9}, 0)$",
+        "B": "$(\\frac{87}{9}, 0)$",
+        "C": "$(\\frac{-87}{9}, 0)$",
+        "D": "$(\\frac{-78}{9}, 0)$"
     },
     "correct": {
         "A": false,
@@ -17,7 +17,7 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "The function $ f $ is defined by $ f(x) = 9x + 87 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+    "task": "The function $f$ is defined by $f(x) = 9x + 87 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
     "explanation": "Choice C is correct.\nThe given function $ f(x) = 9x + 87 $ is a linear function.\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 9x + 87 $\nSolving for $ x $:\n$ 9x = -87 $\n$ x = \\frac{-87}{9} $\nThus, the x-intercept is $ $\\frac{-87}{9}$ $.",
     "difficulty": "Medium",
     "table": null,

@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "A flower had a circumference of 6 units when it was first measured. The equation below can be used to find how many weeks ($ n $) it took the flower to reach a circumference of 15 units. Which of the following is the best interpretation of the number 3 in this context?\n$$ 3n + 6 = 15 $$",
-    "explanation": "Choice D is correct.\nThe circumference of the flower at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 15 represents the circumference at the final time, and 6 represents the circumference when it was first measured. It follows that 3n represents the total circumference growth over time.\nSince $ n $ represents the number of weeks between the two measurements, the coefficient 3 must represent the average number of units the flower's circumference increased per week.\n",
+    "task": "A flower had a circumference of 6 units when it was first measured. The equation below can be used to find how many weeks ($n$) it took the flower to reach a circumference of 15 units. Which of the following is the best interpretation of the number 3 in this context?\n$$3n + 6 = 15$$",
+    "explanation": "Choice D is correct.\nThe circumference of the flower at a given time is equal to its initial circumference plus the number of units it grew. In the given equation, 15 represents the circumference at the final time, and 6 represents the circumference when it was first measured. It follows that 3n represents the total circumference growth over time.\nSince $n$ represents the number of weeks between the two measurements, the coefficient 3 must represent the average number of units the flower's circumference increased per week.\n",
     "difficulty": "Medium",
     "table": null,
     "id": "e29ebfc5",

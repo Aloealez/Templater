@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "Solve the system of equations:\n$ y = 5x + 5 $\n$ y = 50 $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice D is correct. The second equation in the system is $ y = 50 $. Substituting $ 50 $ for $ y $ in the first equation gives:\n$ 50 = 5x + 5 $.\nAdding $ -5 $ to both sides results in:\n$ 45 = 5x $.\nDividing by $ 5 $ gives $ x = 9 $.\nTherefore, the solution to the system is $ (9, 50) $.",
+    "explanation": "Choice D is correct. The second equation in the system is $ y = 50 $. Substituting $ 50 $ for $y$ in the first equation gives:\n$ 50 = 5x + 5 $.\nAdding $ -5 $ to both sides results in:\n$ 45 = 5x $.\nDividing by $ 5 $ gives $ x = 9 $.\nTherefore, the solution to the system is $ (9, 50) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "65f65530",

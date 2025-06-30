@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "A model predicts that a certain lion weighed 255 kilograms when it was born and that the lion gained 4 kilograms per weeks in its early life.\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted kilograms of the lion $ x $ weeks after birth, and $ a $ and $ b $ are constants.\nWhat is the value of $ a $? ",
-    "explanation": "Choice D is correct.\nFor a certain lion, it's given that a model predicts the lion weighed 255 kilograms when it was born and gained 4 kilograms per weeks in its early life.\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the lion after $ x $ weeks.\n- $ a $ represents the initial weight/size at birth.\n- $ b $ represents the growth rate per weeks.\nSince $ a $ represents the weight of the lion at birth, the value of $ a $ is **255 kilograms**.",
+    "task": "A model predicts that a certain lion weighed 255 kilograms when it was born and that the lion gained 4 kilograms per weeks in its early life.\nThis model is defined by an equation in the form:\n$ f(x) = a + bx $, where $ f(x) $ is the predicted kilograms of the lion $x$ weeks after birth, and $a$ and $b$ are constants.\nWhat is the value of $ a $? ",
+    "explanation": "Choice D is correct.\nFor a certain lion, it's given that a model predicts the lion weighed 255 kilograms when it was born and gained 4 kilograms per weeks in its early life.\nIt's also given that this model is defined by an equation in the form:\n$ f(x) = a + bx $, where:\n- $ f(x) $ is the predicted weight/size of the lion after $x$ weeks.\n- $a$ represents the initial weight/size at birth.\n- $b$ represents the growth rate per weeks.\nSince $a$ represents the weight of the lion at birth, the value of $a$ is 255 kilograms.",
     "difficulty": "Medium",
     "table": null,
     "id": "d14656fa",

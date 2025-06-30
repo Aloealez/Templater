@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "Line $ k $ is defined by $ y = 9x - 4 $. Line $ j $ is perpendicular to line $ k $ in the xy-plane. What is the slope of line $ j $?",
-    "explanation": "Choice B is correct. Since line $ j $ is perpendicular to line $ k $, its slope is the opposite reciprocal of the slope of line $ k $. \nThe equation for line $ k $ is given as $ y = 9x - 4 $, meaning its slope is $ 9 $. \nThe opposite reciprocal of $ 9 $ is $ -\\frac{1}{9} $. \nThus, the slope of line $ j $ is $ -\\frac{1}{9} $.",
+    "task": "Line $k$ is defined by $ y = 9x - 4 $. Line $j$ is perpendicular to line $k$ in the xy-plane. What is the slope of line $ j $?",
+    "explanation": "Choice B is correct. Since line $j$ is perpendicular to line $ k $, its slope is the opposite reciprocal of the slope of line $ k $. \nThe equation for line $k$ is given as $ y = 9x - 4 $, meaning its slope is $ 9 $. \nThe opposite reciprocal of $ 9 $ is $ -\\frac{1}{9} $. \nThus, the slope of line $j$ is $ -\\frac{1}{9} $.",
     "difficulty": "Easy",
     "table": null,
     "id": "2055d9ad",

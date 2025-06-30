@@ -1,9 +1,9 @@
 {
     "answers": {
-        "A": "(\\frac{45}{6}, 0)",
-        "B": "(\\frac{-51}{6}, 0)",
-        "C": "(\\frac{-39}{6}, 0)",
-        "D": "(\\frac{-45}{6}, 0)"
+        "A": "$(\\frac{45}{6}, 0)$",
+        "B": "$(\\frac{-51}{6}, 0)$",
+        "C": "$(\\frac{-39}{6}, 0)$",
+        "D": "$(\\frac{-45}{6}, 0)$"
     },
     "correct": {
         "A": false,
@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "The function $ f $ is defined by $ f(x) = 6x + 45 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
+    "task": "The function $f$ is defined by $f(x) = 6x + 45 $. What is the x-intercept of the graph of $ y = f(x) $ in the xy-plane?",
     "explanation": "Choice D is correct.\nThe given function $ f(x) = 6x + 45 $ is a linear function.\nThe x-intercept of a graph is the point where $ y = 0 $. To find the x-intercept, we set:\n$ 0 = 6x + 45 $\nSolving for $ x $:\n$ 6x = -45 $\n$ x = \\frac{-45}{6} $\nThus, the x-intercept is $ $\\frac{-45}{6}$ $.",
     "difficulty": "Medium",
     "table": null,

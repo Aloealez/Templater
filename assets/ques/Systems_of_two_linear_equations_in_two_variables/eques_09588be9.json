@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Solve the system of equations:\n$ y = 13x -85 $\n$ y = 19 $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice C is correct. The second equation in the system is $ y = 19 $. Substituting $ 19 $ for $ y $ in the first equation gives:\n$ 19 = 13x -85 $.\nAdding $ 85 $ to both sides results in:\n$ 104 = 13x $.\nDividing by $ 13 $ gives $ x = 8 $.\nTherefore, the solution to the system is $ (8, 19) $.",
+    "explanation": "Choice C is correct. The second equation in the system is $ y = 19 $. Substituting $ 19 $ for $y$ in the first equation gives:\n$ 19 = 13x -85 $.\nAdding $ 85 $ to both sides results in:\n$ 104 = 13x $.\nDividing by $ 13 $ gives $ x = 8 $.\nTherefore, the solution to the system is $ (8, 19) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "09588be9",

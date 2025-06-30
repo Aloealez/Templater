@@ -1,10 +1,10 @@
 {
     "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\nEquation: $2x + k = 2x + 0$",
     "answers": {
-        "A": -10,
-        "B": 5,
-        "C": 10,
-        "D": 0
+        "A": "-10",
+        "B": "5",
+        "C": "10",
+        "D": "0"
     },
     "correct": {
         "A": false,
@@ -13,7 +13,7 @@
         "D": true
     },
     "difficulty": "Easy",
-    "explanation": "**Rationale**\nFor the given equation $2x + k = 2x + 0$ to have infinitely many solutions, both sides must be **identical**.\nSubtracting 2x from both sides results in $k = 0$.\nThus, the equation holds for **all** values of $x$ if and only if $k = 0$.\nTherefore, the correct answer is **0**.",
+    "explanation": "Rationale\nFor the given equation $2x + k = 2x + 0$ to have infinitely many solutions, both sides must be identical.\nSubtracting 2x from both sides results in $k = 0$.\nThus, the equation holds for all values of $x$ if and only if $k = 0$.\nTherefore, the correct answer is 0.",
     "id": "e5ce1082",
     "subcategory": "Linear_equations_in_one_variable"
 }

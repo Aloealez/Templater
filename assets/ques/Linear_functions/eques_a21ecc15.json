@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "The function $ g $ is defined by $ g(x) = 9x - 7 $. What is the value of $ g(x) $ when $ x = 1 $?",
-    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 1 $ can be found by substituting 1 for $ x $ in the given equation $ g(x) = 9x - 7 $. \nThis yields $ g(1) = 9(1) + -7 $, or $ g(1) = 2 $. Therefore, when $ x = 1 $, the value of $ g(x) $ is $ 2 $.",
+    "task": "The function $g$ is defined by $ g(x) = 9x - 7 $. What is the value of $ g(x) $ when $ x = 1 $?",
+    "explanation": "Choice D is correct. The value of $ g(x) $ when $ x = 1 $ can be found by substituting 1 for $x$ in the given equation $ g(x) = 9x - 7 $. \nThis yields $ g(1) = 9(1) + -7 $, or $ g(1) = 2 $. Therefore, when $ x = 1 $, the value of $ g(x) $ is $ 2 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "a21ecc15",

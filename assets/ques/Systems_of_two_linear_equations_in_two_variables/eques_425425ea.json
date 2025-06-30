@@ -18,7 +18,7 @@
         "D": 0.0
     },
     "task": "Solve the system of equations:\n$ y = 13x -43 $\n$ y = 35 $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice B is correct. The second equation in the system is $ y = 35 $. Substituting $ 35 $ for $ y $ in the first equation gives:\n$ 35 = 13x -43 $.\nAdding $ 43 $ to both sides results in:\n$ 78 = 13x $.\nDividing by $ 13 $ gives $ x = 6 $.\nTherefore, the solution to the system is $ (6, 35) $.",
+    "explanation": "Choice B is correct. The second equation in the system is $ y = 35 $. Substituting $ 35 $ for $y$ in the first equation gives:\n$ 35 = 13x -43 $.\nAdding $ 43 $ to both sides results in:\n$ 78 = 13x $.\nDividing by $ 13 $ gives $ x = 6 $.\nTherefore, the solution to the system is $ (6, 35) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "425425ea",

@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "Solve the system of equations:\n$ y = 5x + 13 $\n$ y = 48 $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice D is correct. The second equation in the system is $ y = 48 $. Substituting $ 48 $ for $ y $ in the first equation gives:\n$ 48 = 5x + 13 $.\nAdding $ -13 $ to both sides results in:\n$ 35 = 5x $.\nDividing by $ 5 $ gives $ x = 7 $.\nTherefore, the solution to the system is $ (7, 48) $.",
+    "explanation": "Choice D is correct. The second equation in the system is $ y = 48 $. Substituting $ 48 $ for $y$ in the first equation gives:\n$ 48 = 5x + 13 $.\nAdding $ -13 $ to both sides results in:\n$ 35 = 5x $.\nDividing by $ 5 $ gives $ x = 7 $.\nTherefore, the solution to the system is $ (7, 48) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "5076d637",

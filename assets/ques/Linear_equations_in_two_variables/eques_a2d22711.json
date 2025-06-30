@@ -17,8 +17,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "a student's weekly allowance for one year was $ x $ euros. The organization budgeted $ y $ euros for a specific category and 33 euros for other expenses. Which of the following represents the relationship between $ x $ and $ y $ in this context?",
-    "explanation": "Choice C is correct. The total budget is represented by $ x $, and $ y $ represents the allocated portion. The remaining amount is 33 euros. \nSince the total budget is $ x $, subtracting the allocated budget $ y $ gives us: \n$ x - y = 33 $, which correctly represents the relationship.",
+    "task": "a student's weekly allowance for one year was $x$ euros. The organization budgeted $y$ euros for a specific category and 33 euros for other expenses. Which of the following represents the relationship between $x$ and $y$ in this context?",
+    "explanation": "Choice C is correct. The total budget is represented by $ x $, and $y$ represents the allocated portion. The remaining amount is 33 euros. \nSince the total budget is $ x $, subtracting the allocated budget $y$ gives us: \n$ x - y = 33 $, which correctly represents the relationship.",
     "difficulty": "Easy",
     "table": null,
     "id": "a2d22711",

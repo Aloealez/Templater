@@ -1,10 +1,10 @@
 {
     "task": "Michael deposits $$45$$ in a savings account at the end of each week. At the beginning of the 1st week of a year, there was $$911$$ in the savings account. How much money, in dollars, will be in the account at the end of the 3th week of that year?",
     "answers": {
-        "A": 1057,
-        "B": 776,
-        "C": 1001,
-        "D": 1046
+        "A": "1057",
+        "B": "776",
+        "C": "1001",
+        "D": "1046"
     },
     "correct": {
         "A": false,
@@ -13,7 +13,7 @@
         "D": true
     },
     "difficulty": "Easy",
-    "explanation": "**Rationale**\nIt's given that at the beginning of the 1st week, there was $$911$$ in the savings account. Michael deposits $$45$$ at the end of each week.\nTo find the total amount at the end of 3 weeks, we use the equation:\n$911 + 3(45) = 1046$$.\nThus, the correct answer is **$1046$**.",
+    "explanation": "Rationale\nIt's given that at the beginning of the 1st week, there was $$911$$ in the savings account. Michael deposits $$45$$ at the end of each week.\nTo find the total amount at the end of 3 weeks, we use the equation:\n$911 + 3(45) = 1046$$.\nThus, the correct answer is $1046$.",
     "id": "bb1b8196",
     "subcategory": "Linear_functions"
 }

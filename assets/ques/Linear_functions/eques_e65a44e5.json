@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "The function $ g $ is defined by $ g(x) = 5x + 1 $. What is the value of $ g(x) $ when $ x = 6 $?",
-    "explanation": "Choice B is correct. The value of $ g(x) $ when $ x = 6 $ can be found by substituting 6 for $ x $ in the given equation $ g(x) = 5x + 1 $. \nThis yields $ g(6) = 5(6) + 1 $, or $ g(6) = 31 $. Therefore, when $ x = 6 $, the value of $ g(x) $ is $ 31 $.",
+    "task": "The function $g$ is defined by $ g(x) = 5x + 1 $. What is the value of $ g(x) $ when $ x = 6 $?",
+    "explanation": "Choice B is correct. The value of $ g(x) $ when $ x = 6 $ can be found by substituting 6 for $x$ in the given equation $ g(x) = 5x + 1 $. \nThis yields $ g(6) = 5(6) + 1 $, or $ g(6) = 31 $. Therefore, when $ x = 6 $, the value of $ g(x) $ is $ 31 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "e65a44e5",

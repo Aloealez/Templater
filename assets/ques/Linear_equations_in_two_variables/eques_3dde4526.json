@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "a school district's yearly education fund for one year was $ x $ million dollars. The organization budgeted $ y $ million dollars for a specific category and 17 million dollars for other expenses. Which of the following represents the relationship between $ x $ and $ y $ in this context?",
-    "explanation": "Choice B is correct. The total budget is represented by $ x $, and $ y $ represents the allocated portion. The remaining amount is 17 million dollars. \nSince the total budget is $ x $, subtracting the allocated budget $ y $ gives us: \n$ x - y = 17 $, which correctly represents the relationship.",
+    "task": "a school district's yearly education fund for one year was $x$ million dollars. The organization budgeted $y$ million dollars for a specific category and 17 million dollars for other expenses. Which of the following represents the relationship between $x$ and $y$ in this context?",
+    "explanation": "Choice B is correct. The total budget is represented by $ x $, and $y$ represents the allocated portion. The remaining amount is 17 million dollars. \nSince the total budget is $ x $, subtracting the allocated budget $y$ gives us: \n$ x - y = 17 $, which correctly represents the relationship.",
     "difficulty": "Easy",
     "table": null,
     "id": "3dde4526",

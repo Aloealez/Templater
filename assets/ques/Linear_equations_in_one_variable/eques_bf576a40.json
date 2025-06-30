@@ -1,10 +1,10 @@
 {
-    "task": "If $5x - 9 = -24$, what is the value of 15x - 19?",
+    "task": "If $5x - 9 = -24$, what is the value of\n$$15x - 19$$?",
     "answers": {
-        "A": -64,
-        "B": -69,
-        "C": -61,
-        "D": -67
+        "A": "-64",
+        "B": "-69",
+        "C": "-61",
+        "D": "-67"
     },
     "correct": {
         "A": true,

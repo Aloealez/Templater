@@ -17,8 +17,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "What value of $ p $ is the solution of the equation below?\n$$ 4(p + 1) + 5(p - 8) = 7p $$",
-    "explanation": "Choice B is correct.\nOne way to solve the equation $ 4(p + 1) + 5(p - 8) = 7p $ is to first distribute the terms outside the parentheses:\n$ 4p + 4 + 5p - 40 = 7p $\nNext, combine like terms on the left side:\n$ (4p + 5p) + (4 - 40) = 7p $\n$ 9p -36 = 7p $\nSubtracting 9p from both sides:\n$ -36 = 7p - 9p $\n$ -36 = (-2)p $\nDividing both sides by -2:\n$ p = \\frac{-36}{-2} $\nThus, the correct value of $ p $ is **$ \\frac{18}{1} $**, which is equivalent to **18.00**.",
+    "task": "What value of $p$ is the solution of the equation below?\n$$ 4(p + 1) + 5(p - 8) = 7p $$",
+    "explanation": "Choice B is correct.\nOne way to solve the equation $ 4(p + 1) + 5(p - 8) = 7p $ is to first distribute the terms outside the parentheses:\n$ 4p + 4 + 5p - 40 = 7p $\nNext, combine like terms on the left side:\n$ (4p + 5p) + (4 - 40) = 7p $\n$ 9p -36 = 7p $\nSubtracting 9p from both sides:\n$ -36 = 7p - 9p $\n$ -36 = (-2)p $\nDividing both sides by -2:\n$ p = \\frac{-36}{-2} $\nThus, the correct value of $p$ is $ \\frac{18}{1} $, which is equivalent to 18.00.",
     "difficulty": "Medium",
     "table": null,
     "id": "3e152784",

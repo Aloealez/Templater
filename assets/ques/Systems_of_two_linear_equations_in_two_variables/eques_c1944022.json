@@ -17,7 +17,7 @@
     "C": 1.0,
     "D": 0.0
   },
-  "task": "Hiro and Daniel purchased chairs and tables from a store. The price of each chair was the same, and the price of each table was the same. Hiro purchased 4 chairs and 5 tables for Dollars89, and Daniel purchased 6 chairs and 3 tables for Dollars187. Which of the following systems of linear equations represents this situation, if $ x $ represents the price of each chair and $ y $ represents the price of each table?",
+  "task": "Hiro and Daniel purchased chairs and tables from a store. The price of each chair was the same, and the price of each table was the same. Hiro purchased 4 chairs and 5 tables for Dollars89, and Daniel purchased 6 chairs and 3 tables for Dollars187. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each chair and $y$ represents the price of each table?",
   "explanation": "Choice C is correct. The total cost of chairs and tables purchased by Hiro is modeled by the equation:\n$ 4x + 5y = 89 $.\nSimilarly, the total cost of chairs and tables purchased by Daniel is:\n$ 6x + 3y = 187 $.\nThus, the correct system of equations is:\n$ 4x + 5y = 89 $\n$ 6x + 3y = 187 $.",
   "difficulty": "Easy",
   "table": null,

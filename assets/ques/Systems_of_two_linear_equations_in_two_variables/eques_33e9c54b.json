@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "Solve the system of equations:\n$ x + y = 14 $\n$ x = 6y $\nWhat is the solution $ (x, y) $ to the system?",
-    "explanation": "Choice D is correct. The second equation in the system is $ x = 6y $. Substituting $ 6y $ for $ x $ in the first equation gives:\n$ 6y + y = 14 $.\nFactoring out $ y $ results in:\n$ (6 + 1)y = 14 $.\nSolving for $ y $, we divide by $ 6 + 1 $:\n$ y = \\frac{14}{6 + 1} $.\nSince we set $ y = 2 $, it checks out.\nNow, substituting $ y = 2 $ into the second equation:\n$ x = 6(2) $, so $ x = 12 $.\nTherefore, the solution to the system is $ (12, 2) $.",
+    "explanation": "Choice D is correct. The second equation in the system is $ x = 6y $. Substituting $ 6y $ for $x$ in the first equation gives:\n$ 6y + y = 14 $.\nFactoring out $y$ results in:\n$ (6 + 1)y = 14 $.\nSolving for $ y $, we divide by $ 6 + 1 $:\n$ y = \\frac{14}{6 + 1} $.\nSince we set $ y = 2 $, it checks out.\nNow, substituting $ y = 2 $ into the second equation:\n$ x = 6(2) $, so $ x = 12 $.\nTherefore, the solution to the system is $ (12, 2) $.",
     "difficulty": "Easy",
     "table": null,
     "id": "33e9c54b",

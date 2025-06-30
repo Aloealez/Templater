@@ -18,7 +18,7 @@
         "D": 1.0
     },
     "task": "What is the equation of the line that passes through the point $ (0, 6) $ and is parallel to the graph of $ y = 4x $ in the xy-plane?",
-    "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $ m $ is the slope and $ b $ is the y-intercept. \nSince the new line is parallel to $ y = 4x $, it must have the same slope, which is $ 4 $. \nGiven that the new line passes through $ (0, 6) $, the y-intercept is $ 6 $. \nThus, the equation of the new line is $ y = 4x + 6 $.",
+    "explanation": "Choice D is correct. The equation of a line in the xy-plane is written as $ y = mx + b $, where $m$ is the slope and $b$ is the y-intercept. \nSince the new line is parallel to $ y = 4x $, it must have the same slope, which is $ 4 $. \nGiven that the new line passes through $ (0, 6) $, the y-intercept is $ 6 $. \nThus, the equation of the new line is $ y = 4x + 6 $.",
     "difficulty": "Easy",
     "table": null,
     "id": "202f6c7f",

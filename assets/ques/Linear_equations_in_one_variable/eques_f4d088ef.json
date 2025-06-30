@@ -1,10 +1,10 @@
 {
     "task": "if $4x + 26 = -10$, what is the value of $x$",
     "answers": {
-        "A": -8,
-        "B": -9,
-        "C": -12,
-        "D": -4
+        "A": "-8",
+        "B": "-9",
+        "C": "-12",
+        "D": "-4"
     },
     "correct": {
         "A": false,
