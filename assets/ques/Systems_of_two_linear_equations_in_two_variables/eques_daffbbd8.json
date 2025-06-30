@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "Hiro and Daniel purchased apples and bananas from a store. The price of each apple was the same, and the price of each banana was the same. Hiro purchased 2 apples and 6 bananas for Dollars107, and Daniel purchased 5 apples and 4 bananas for Dollars169. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each apple and $y$ represents the price of each banana?",
+    "task": "Hiro and Daniel purchased apples and bananas from a store. The price of each apple was the same, and the price of each banana was the same. Hiro purchased 2 apples and 6 bananas for 107 Dollars, and Daniel purchased 5 apples and 4 bananas for 169 Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each apple and $y$ represents the price of each banana?",
     "explanation": "Choice A is correct. The total cost of apples and bananas purchased by Hiro is modeled by the equation:\n$ 2x + 6y = 107 $.\nSimilarly, the total cost of apples and bananas purchased by Daniel is:\n$ 5x + 4y = 169 $.\nThus, the correct system of equations is:\n$ 2x + 6y = 107 $\n$ 5x + 4y = 169 $.",
     "difficulty": "Easy",
     "table": null,

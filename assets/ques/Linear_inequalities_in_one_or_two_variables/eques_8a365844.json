@@ -1,5 +1,5 @@
 {
-    "task": "Marc Bu plans to rent a boat. The rental cost is Dollars61 per week, and he must also pay a fixed cost of Dollars23. Marc Bu wants to spend no more than Dollars264. If the rental is available only for whole weeks, what is the maximum number of weeks Marc Bu can rent a boat? Which of the following equations properly represents this situation?",
+    "task": "Marc Bu plans to rent a boat. The rental cost is 61 Dollars per week, and he must also pay a fixed cost of 23 Dollars. Marc Bu wants to spend no more than 264 Dollars. If the rental is available only for whole weeks, what is the maximum number of weeks Marc Bu can rent a boat? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "61h \u2264 264",
         "B": "61h + 32 \u2264 264",

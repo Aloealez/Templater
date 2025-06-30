@@ -1,10 +1,10 @@
 {
     "task": "In a bag, there are 11 purple beads, 8 red beads, 33 orange beads, and 22 black beads. If one of these beads is selected at random, what is the probability of selecting a beads that is neither orange nor black?",
     "answers": {
-        "A": "\\frac{30}{74}",
-        "B": "\\frac{22}{74}",
-        "C": "\\frac{44}{74}",
-        "D": "\\frac{8}{74}"
+        "A": "$\\frac{30}{74}$",
+        "B": "$\\frac{22}{74}$",
+        "C": "$\\frac{44}{74}$",
+        "D": "$\\frac{8}{74}$"
     },
     "correct": {
         "A": true,

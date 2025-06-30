@@ -1,5 +1,5 @@
 {
-    "task": "If $x + 4 = 2$, what is the value of\n$$3x + 7$$?",
+    "task": "If $x + 4 = 2$, what is the value of\n$$3x + 7?$$",
     "answers": {
         "A": "1",
         "B": "6",

@@ -1,5 +1,5 @@
 {
-    "task": "Max Ku plans to rent a jet ski. The rental cost is Dollars28 per hour, and he must also pay a fixed cost of Dollars10. Max Ku wants to spend no more than Dollars234. If the rental is available only for whole hours, what is the maximum number of hours Max Ku can rent a jet ski? Which of the following equations properly represents this situation?",
+    "task": "Max Ku plans to rent a jet ski. The rental cost is 28 Dollars per hour, and he must also pay a fixed cost of 10 Dollars. Max Ku wants to spend no more than 234 Dollars. If the rental is available only for whole hours, what is the maximum number of hours Max Ku can rent a jet ski? Which of the following equations properly represents this situation?",
     "answers": {
         "A": "28h \u2264 234",
         "B": "28h + 10 \u2264 234",

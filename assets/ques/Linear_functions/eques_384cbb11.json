@@ -1,5 +1,5 @@
 {
-    "task": "The function $f$ is defined by $f(x) = 10x$. For what value of $x$ does $f(x) = 190$$?",
+    "task": "The function $f$ is defined by $f(x) = 10x$. For what value of $x$ does $f(x) = 190$?",
     "answers": {
         "A": "19",
         "B": "24",

@@ -1,10 +1,10 @@
 {
     "task": "In a bag, there are 12 yellow marbles, 25 white marbles, 13 orange marbles, and 34 red marbles. If one of these marbles is selected at random, what is the probability of selecting a marbles that is neither orange nor red?",
     "answers": {
-        "A": "\\frac{12}{84}",
-        "B": "\\frac{46}{84}",
-        "C": "\\frac{34}{84}",
-        "D": "\\frac{38}{84}"
+        "A": "$\\frac{12}{84}$",
+        "B": "$\\frac{46}{84}$",
+        "C": "$\\frac{34}{84}$",
+        "D": "$\\frac{38}{84}$"
     },
     "correct": {
         "A": false,

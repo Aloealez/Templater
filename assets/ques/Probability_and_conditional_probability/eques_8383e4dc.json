@@ -1,10 +1,10 @@
 {
     "task": "In a bag, there are 6 orange cubes, 39 red cubes, 38 green cubes, and 34 yellow cubes. If one of these cubes is selected at random, what is the probability of selecting a cubes that is neither green nor yellow?",
     "answers": {
-        "A": "\\frac{6}{117}",
-        "B": "\\frac{45}{117}",
-        "C": "\\frac{39}{117}",
-        "D": "\\frac{72}{117}"
+        "A": "$\\frac{6}{117}$",
+        "B": "$\\frac{45}{117}$",
+        "C": "$\\frac{39}{117}$",
+        "D": "$\\frac{72}{117}$"
     },
     "correct": {
         "A": false,

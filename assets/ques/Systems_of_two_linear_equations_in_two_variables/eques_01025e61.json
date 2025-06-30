@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "Daniel and Emma purchased chairs and tables from a store. The price of each chair was the same, and the price of each table was the same. Daniel purchased 5 chairs and 3 tables for Dollars66, and Emma purchased 3 chairs and 3 tables for Dollars198. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each chair and $y$ represents the price of each table?",
+    "task": "Daniel and Emma purchased chairs and tables from a store. The price of each chair was the same, and the price of each table was the same. Daniel purchased 5 chairs and 3 tables for 66 Dollars, and Emma purchased 3 chairs and 3 tables for 198 Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each chair and $y$ represents the price of each table?",
     "explanation": "Choice A is correct. The total cost of chairs and tables purchased by Daniel is modeled by the equation:\n$ 5x + 3y = 66 $.\nSimilarly, the total cost of chairs and tables purchased by Emma is:\n$ 3x + 3y = 198 $.\nThus, the correct system of equations is:\n$ 5x + 3y = 66 $,\n$ 3x + 3y = 198 $.",
     "difficulty": "Easy",
     "table": null,

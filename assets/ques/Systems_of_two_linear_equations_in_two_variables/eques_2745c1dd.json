@@ -17,7 +17,7 @@
         "C": 0.0,
         "D": 1.0
     },
-    "task": "Daniel and Hiro purchased pens and erasers from a store. The price of each pen was the same, and the price of each eraser was the same. Daniel purchased 5 pens and 3 erasers for 80Dollars, and Hiro purchased 5 pens and 3 erasers for 100Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each pen and $y$ represents the price of each eraser?",
+    "task": "Daniel and Hiro purchased pens and erasers from a store. The price of each pen was the same, and the price of each eraser was the same. Daniel purchased 5 pens and 3 erasers for 80 Dollars, and Hiro purchased 5 pens and 3 erasers for 100 Dollars. Which of the following systems of linear equations represents this situation, if $x$ represents the price of each pen and $y$ represents the price of each eraser?",
     "explanation": "Choice D is correct. The total cost of pens and erasers purchased by Daniel is modeled by the equation:\n$ 5x + 3y = 80 $.\nSimilarly, the total cost of pens and erasers purchased by Hiro is:\n$ 5x + 3y = 100 $.\nThus, the correct system of equations is:\n$ 5x + 3y = 80 $,\n$ 5x + 3y = 100 $.",
     "difficulty": "Easy",
     "table": null,

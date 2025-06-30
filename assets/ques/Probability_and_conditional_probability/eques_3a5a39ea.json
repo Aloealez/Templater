@@ -1,10 +1,10 @@
 {
     "task": "In a bag, there are 17 green balls, 16 blue balls, 26 red balls, and 13 orange balls. If one of these balls is selected at random, what is the probability of selecting a balls that is neither red nor orange?",
     "answers": {
-        "A": "\\frac{13}{72}",
-        "B": "\\frac{43}{72}",
-        "C": "\\frac{16}{72}",
-        "D": "\\frac{29}{72}"
+        "A": "$\\frac{13}{72}$",
+        "B": "$\\frac{43}{72}$",
+        "C": "$\\frac{16}{72}$",
+        "D": "$\\frac{29}{72}$"
     },
     "correct": {
         "A": false,

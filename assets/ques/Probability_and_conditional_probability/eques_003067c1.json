@@ -1,10 +1,10 @@
 {
     "task": "In a bag, there are 18 orange cards, 22 white cards, 34 black cards, and 30 blue cards. If one of these cards is selected at random, what is the probability of selecting a cards that is neither black nor blue?",
     "answers": {
-        "A": "\\frac{34}{104}",
-        "B": "\\frac{48}{104}",
-        "C": "\\frac{56}{104}",
-        "D": "\\frac{22}{104}"
+        "A": "$\\frac{34}{104}$",
+        "B": "$\\frac{48}{104}$",
+        "C": "$\\frac{56}{104}$",
+        "D": "$\\frac{22}{104}$"
     },
     "correct": {
         "A": false,

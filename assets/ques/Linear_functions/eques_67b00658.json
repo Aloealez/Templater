@@ -1,5 +1,5 @@
 {
-    "task": "The function $f$ is defined by $f(x) = 14x$. For what value of $x$ does $f(x) = 252$$?",
+    "task": "The function $f$ is defined by $f(x) = 14x$. For what value of $x$ does $f(x) = 252$?",
     "answers": {
         "A": "23",
         "B": "15",
