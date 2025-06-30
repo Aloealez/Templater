@@ -1,10 +1,10 @@
 {
-    "task": "A right triangle has legs with lengths of $ 23 $ centimeters and $ 26 $ centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
+    "task": "A right triangle has legs with lengths of $23$\u00A0 centimeters and $26$\u00A0 centimeters. What is the length of this triangle's hypotenuse, in centimeters?",
     "answers": {
-        "A": "$ 1205 $",
-        "B": "1\u221a1205",
-        "C": "$ 34 $",
-        "D": "$ 5\u221a51 $"
+        "A": "$1205$",
+        "B": "$1\u221a1205$",
+        "C": "$34$",
+        "D": "$5\u221a51$"
     },
     "correct": {
         "A": false,

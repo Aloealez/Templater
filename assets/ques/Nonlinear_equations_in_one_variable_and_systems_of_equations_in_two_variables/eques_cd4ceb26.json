@@ -1,6 +1,6 @@
 {
     "Difficulty": "Hard",
-    "task": "Solve the system:\\n1) y = 1x + 4\\n2) y = 1x\u00b2 + -6x + 9",
+    "task": "solve the system:\n1) y = 1x + 4\n2) y = 1x\u00b2 + -6x + 9",
     "answers": {
         "A": "No solution",
         "B": "(x, y) = (1, 5) only",
@@ -13,7 +13,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "$Step 1:$ Set equations equal: 1x + 4 = 1x\u00b2 + -6x + 9\\n$Step 2:$ Rearrange to standard quadratic form: 1x\u00b2 + -7x + 5 = 0\\n$Step 3:$ Solve using factoring/quadratic formula: x = 1, 5\\n$Step 4:$ Find corresponding y-values using linear equation",
+    "explanation": "$Step 1:$ Set equations equal: 1x + 4 = 1x\u00b2 + -6x + 9\n$Step 2:$ Rearrange to standard quadratic form: 1x\u00b2 + -7x + 5 = 0\n$Step 3:$ Solve using factoring/quadratic formula: x = 1, 5\n$Step 4:$ Find corresponding y-values using linear equation",
     "id": "cd4ceb26",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

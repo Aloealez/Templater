@@ -1,5 +1,5 @@
 {
-    "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\\n$$ y = 1x + 2 $$\\n$$ y = x^2 + 3x + 3 $$",
+    "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\n$$ y = 1x + 2 $$\n$$ y = x^2 + 3x + 3 $$",
     "answers": {
         "A": "-2",
         "B": "0",

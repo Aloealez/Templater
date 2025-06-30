@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "$Step 1:$ Identify coefficients: a = 2, b = 2, c = 8\\n$Step 2:$ Calculate discriminant: b\u00b2 - 4ac = 2\u00b2 - 4(2)(8) = -60\\n$Step 3:$ No real solutions (negative discriminant)",
+    "explanation": "$Step 1:$ Identify coefficients: a = 2, b = 2, c = 8\n$Step 2:$ Calculate discriminant: b\u00b2 - 4ac = 2\u00b2 - 4(2)(8) = -60\n$Step 3:$ No real solutions (negative discriminant)",
     "id": "9352ac8f",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }
