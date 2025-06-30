@@ -93,7 +93,7 @@ class _ReadingWritingActivities extends State<ReadingWritingActivities> {
             Expanded(
               child: ListView(
                 padding: EdgeInsets.only(
-                  top: 0.02 * size.height, // space between "Do Today" and activities list
+                  top: 0.005 * size.height, // space between "Do Today" and activities list
                 ),
                 children: [
                   Container(
