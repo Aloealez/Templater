@@ -17,8 +17,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "Sophia bought party hats and stickers for 139Dollars. Each party hats cost 2Dollars, and each stickers cost 1Dollars. If Sophia bought 10 party hats, how many stickers did Sophia buy?",
-    "explanation": "Choice C is correct. To determine how many stickers Sophia bought, we first calculate the amount spent on party hats:\n2Dollars times 10 = 20Dollars.\nNext, we subtract this amount from the total cost: 139Dollars - 20Dollars = 119Dollars.\nSince each stickers costs 1Dollars, we divide: 119Dollars \u00f7 1Dollars = 119.\nThus, Sophia bought 119 stickers.",
+    "task": "Sophia bought party hats and stickers for 139 Dollars. Each party hats cost 2 Dollars, and each stickers cost 1 Dollar. If Sophia bought 10 party hats, how many stickers did Sophia buy?",
+    "explanation": "Choice C is correct. To determine how many stickers Sophia bought, we first calculate the amount spent on party hats:\n2 Dollars times 10 = 20 Dollars.\nNext, we subtract this amount from the total cost: 139 Dollars - 20 Dollars = 119 Dollars.\nSince each stickers costs 1 Dollar, we divide: 119 Dollars ÷ 1 Dollar = 119.\nThus, Sophia bought 119 stickers.",
     "difficulty": "Easy",
     "table": null,
     "id": "28f7e5ed",
