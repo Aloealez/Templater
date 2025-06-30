@@ -1,5 +1,5 @@
 {
-    "task": "The measure of angle $R$ is $ \\frac{2}{3}\u03c0 $ radians. The measure of angle $ T $ is $ \\frac{1}{4}\u03c0 $ radians greater than the measure of angle $ R $. What is the measure of angle $ T $, in degrees?",
+    "task": "The measure of angle $R$ is $ \\frac{2}{3}\u03c0 $ radians. The measure of angle $ T $ is $ \\frac{1}{4}\u03c0 $ radians greater than the measure of angle $R$. What is the measure of angle $ T $, in degrees?",
     "answers": {
         "A": "45",
         "B": "120",
