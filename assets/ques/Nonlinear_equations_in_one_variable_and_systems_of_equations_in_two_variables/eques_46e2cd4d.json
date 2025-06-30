@@ -2,10 +2,10 @@
     "Difficulty": "Hard",
     "task": "Solve for x: \u221a(4x + 15) = 3",
     "answers": {
-        "A": "x = 21",
-        "B": "x = -1.5",
-        "C": "x = 2",
-        "D": "x = 6"
+        "A": "21",
+        "B": "-1.5",
+        "C": "2",
+        "D": "6"
     },
     "correct": {
         "A": false,
