@@ -55,12 +55,15 @@ class _GraphPainter extends CustomPainter {
       }
     }
     const margin = 8.0;
-    double scaleX = (size.width - 2 * margin) / ((maxX - minX) == 0 ? 1 : (maxX - minX));
-    double scaleY = (size.height - 2 * margin) / ((maxY - minY) == 0 ? 1 : (maxY - minY));
+    double scaleX =
+        (size.width - 2 * margin) / ((maxX - minX) == 0 ? 1 : (maxX - minX));
+    double scaleY =
+        (size.height - 2 * margin) / ((maxY - minY) == 0 ? 1 : (maxY - minY));
 
     Offset convertPoint(dynamic point) {
       double x = ((point[0] as num).toDouble() - minX) * scaleX + margin;
-      double y = size.height - (((point[1] as num).toDouble() - minY) * scaleY + margin);
+      double y = size.height -
+          (((point[1] as num).toDouble() - minY) * scaleY + margin);
       return Offset(x, y);
     }
 
@@ -94,7 +97,8 @@ class _GraphPainter extends CustomPainter {
         lineColorList[2],
         lineColorList[3],
       );
-      final lineThickness = (graph['line_thickness'] as num?)?.toDouble() ?? 1.0;
+      final lineThickness =
+          (graph['line_thickness'] as num?)?.toDouble() ?? 1.0;
       final linePaint = Paint()
         ..color = lineColor
         ..strokeWidth = lineThickness
@@ -113,7 +117,8 @@ class _GraphPainter extends CustomPainter {
         pointColorList[2],
         pointColorList[3],
       );
-      final pointThickness = (graph['point_thickness'] as num?)?.toDouble() ?? 0.0;
+      final pointThickness =
+          (graph['point_thickness'] as num?)?.toDouble() ?? 0.0;
       final pointPaint = Paint()
         ..color = pointColor
         ..style = PaintingStyle.fill;
@@ -222,7 +227,8 @@ class _MathQuizModelState extends State<MathQuizModel> {
   void initState() {
     _time = widget.time;
     currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
-    selectedOption = widget.answerLayout == QuizModelAnswerLayout.textInput ? '' : null;
+    selectedOption =
+        widget.answerLayout == QuizModelAnswerLayout.textInput ? '' : null;
 
     super.initState();
     for (var questionId in widget.questions.keys) {
@@ -241,19 +247,24 @@ class _MathQuizModelState extends State<MathQuizModel> {
   }
 
   void handleContinue() {
-    if (widget.answerLayout == QuizModelAnswerLayout.textInput && !widget.showMultipleQuestions) {
+    if (widget.answerLayout == QuizModelAnswerLayout.textInput &&
+        !widget.showMultipleQuestions) {
       setState(() {
         answers[currentQuestionId] = selectedOption!;
       });
       // _textInputController.clear();
     }
-    if (currentQuestionIndex < widget.questions.length - 1 && _time > 0 && !widget.showMultipleQuestions && !forceContinue) {
+    if (currentQuestionIndex < widget.questions.length - 1 &&
+        _time > 0 &&
+        !widget.showMultipleQuestions &&
+        !forceContinue) {
       if (selectedOption != null) {
         setState(
           () {
             selectedOption = null;
             currentQuestionIndex++;
-            currentQuestionId = widget.questions.keys.elementAt(currentQuestionIndex);
+            currentQuestionId =
+                widget.questions.keys.elementAt(currentQuestionIndex);
           },
         );
       }
@@ -281,15 +292,19 @@ class _MathQuizModelState extends State<MathQuizModel> {
         if (answers[questionId] == null) {
           continue;
         }
-        if (widget.questions[questionId]!.correct[answers[questionId]] ?? false) {
-          score += widget.questions[questionId]!.score[answers[questionId]] ?? 0;
+        if (widget.questions[questionId]!.correct[answers[questionId]] ??
+            false) {
+          score +=
+              widget.questions[questionId]!.score[answers[questionId]] ?? 0;
           SharedPreferences.getInstance().then((prefs) {
             double auria = prefs.getDouble('auria') ?? 0.0;
             auria += 1;
             prefs.setDouble('auria', auria);
           });
         } else if (widget.questions[questionId]!.scoreIncorrect != null) {
-          score += widget.questions[questionId]!.scoreIncorrect![answers[questionId]] ?? 0;
+          score += widget.questions[questionId]!
+                  .scoreIncorrect![answers[questionId]] ??
+              0;
         }
       }
 
@@ -340,7 +355,10 @@ class _MathQuizModelState extends State<MathQuizModel> {
         '$answerLetter.',
         style: TextStyle(
           color: Theme.of(context).colorScheme.onSurface,
-          fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 1.4 * size.width,
+          fontSize:
+              textScaleFactor(widget.questions[questionId]!.question.length) *
+                  1.4 *
+                  size.width,
         ),
       ),
     );
@@ -363,35 +381,37 @@ class _MathQuizModelState extends State<MathQuizModel> {
         answerLetter,
         questionId,
       ),
-      title: (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
-          ? HtmlAsTextSpan(
-              '${widget.questions[questionId]?.answers[answerLetter]}',
-              fontSize: textScaleFactor(
-                    widget.questions[questionId]!.question.length,
-                  ) *
-                  0.95 *
-                  size.width,
-            )
-          : LaTexT(
-              equationStyle: TextStyle(
-                fontSize: textScaleFactor(
-                      widget.questions[questionId]!.answers[answerLetter]!.length,
-                    ) *
-                    1.13 *
-                    size.width,
-              ),
-              laTeXCode: Text(
-                widget.questions[questionId]!.answers[answerLetter]!,
-                style: TextStyle(
+      title:
+          (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
+              ? HtmlAsTextSpan(
+                  '${widget.questions[questionId]?.answers[answerLetter]}',
                   fontSize: textScaleFactor(
                         widget.questions[questionId]!.question.length,
                       ) *
-                      1.2 *
+                      0.95 *
                       size.width,
-                  color: Theme.of(context).colorScheme.onSurface,
+                )
+              : LaTexT(
+                  equationStyle: TextStyle(
+                    fontSize: textScaleFactor(
+                          widget.questions[questionId]!.answers[answerLetter]!
+                              .length,
+                        ) *
+                        1.13 *
+                        size.width,
+                  ),
+                  laTeXCode: Text(
+                    widget.questions[questionId]!.answers[answerLetter]!,
+                    style: TextStyle(
+                      fontSize: textScaleFactor(
+                            widget.questions[questionId]!.question.length,
+                          ) *
+                          1.2 *
+                          size.width,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
+                  ),
                 ),
-              ),
-            ),
       onTap: selectedOption == null
           ? () {
               setState(() {
@@ -407,7 +427,9 @@ class _MathQuizModelState extends State<MathQuizModel> {
     BuildContext context,
     String answerLetter,
     String questionId,
-    Widget Function(BuildContext context, String answerLetter, String questionId) subBuildAnswer,
+    Widget Function(
+            BuildContext context, String answerLetter, String questionId)
+        subBuildAnswer,
   ) {
     Size size = MediaQuery.of(context).size;
     return Card(
@@ -516,32 +538,35 @@ class _MathQuizModelState extends State<MathQuizModel> {
     );
   }
 
-Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
-  final rawQuestion = widget.questions[questionId]?.question;
-
-  // Defensive handling
-  final questionText = rawQuestion?.toString() ?? '';
-  final questionLength = questionText.length;
-
-  return (widget.htmlFormat != -1 && widget.htmlFormat <= currentQuestionIndex)
-      ? QuizQuestionTask(
-          question: widget.questions[questionId]!,
-        )
-      : LaTexT(
-          equationStyle: TextStyle(
-            fontSize: textScaleFactor(questionLength) * 1.16 * size.width,
-          ),
-          laTeXCode: Text(
-            questionText,
-            softWrap: true,
-            style: TextStyle(
-              fontSize: textScaleFactor(questionLength) * 1.1 * size.width,
-              color: Theme.of(context).colorScheme.onSurface,
-              fontWeight: FontWeight.w600,
+  Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
+    return (widget.htmlFormat != -1 &&
+            widget.htmlFormat <= currentQuestionIndex)
+        ? QuizQuestionTask(
+            question: widget.questions[questionId]!,
+          )
+        : LaTexT(
+            equationStyle: TextStyle(
+              fontSize: textScaleFactor(
+                    widget.questions[questionId]!.question.length,
+                  ) *
+                  1.16 *
+                  size.width,
             ),
-          ),
-        );
-}
+            laTeXCode: Text(
+              widget.questions[questionId]!.question,
+              softWrap: true,
+              style: TextStyle(
+                fontSize: textScaleFactor(
+                      widget.questions[questionId]!.question.length,
+                    ) *
+                    1.1 *
+                    size.width,
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          );
+  }
 
   Widget _buildTable(List<List<String>> rows) {
     Size size = MediaQuery.of(context).size;
@@ -549,9 +574,10 @@ Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
       padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10, left: 4),
       child: Table(
         border: TableBorder.symmetric(
-            inside: BorderSide(width: 1, color: Colors.grey.shade300),
-            outside: BorderSide(width: 1, color: Colors.grey.shade300),
-            borderRadius: BorderRadius.circular(13.0),),
+          inside: BorderSide(width: 1, color: Colors.grey.shade300),
+          outside: BorderSide(width: 1, color: Colors.grey.shade300),
+          borderRadius: BorderRadius.circular(13.0),
+        ),
         children: [
           // TableRow(
           //   children: ['x', 'y']
@@ -561,52 +587,61 @@ Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
           //           ))
           //       .toList(),
           // ),
-          ...rows.map((r) => TableRow(
-                children: r
-                    .map((content) => Padding(
-                          padding: EdgeInsets.symmetric(vertical: 5),
-                          child: Center(
-                              // child: Text(content)
-                              child: LaTexT(
-                                equationStyle: TextStyle(
-                                  fontSize:
-                                  textScaleFactor(
-                                    content.length,
-                                  ) * 0.8 *
-                                      size.width,
-                                ),
-                                laTeXCode: Text(
-                                  content,
-                                  style: TextStyle(
-                                    fontSize: textScaleFactor(
-                                      content.length,
-                                    ) *
-                                        0.8 *
-                                        size.width,
-                                    color: Theme.of(context).colorScheme.onSurface,
-                                  ),
-                                ),
-                              ),
+          ...rows.map(
+            (r) => TableRow(
+              children: r
+                  .map(
+                    (content) => Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Center(
+                        // child: Text(content)
+                        child: LaTexT(
+                          equationStyle: TextStyle(
+                            fontSize: textScaleFactor(
+                                  content.length,
+                                ) *
+                                0.8 *
+                                size.width,
                           ),
-                        ),)
-                    .toList(),
-              ),),
+                          laTeXCode: Text(
+                            content,
+                            style: TextStyle(
+                              fontSize: textScaleFactor(
+                                    content.length,
+                                  ) *
+                                  0.8 *
+                                  size.width,
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildAnswerCard(BuildContext context, String answerLetter, String questionId) {
+  Widget _buildAnswerCard(
+      BuildContext context, String answerLetter, String questionId) {
     Size size = MediaQuery.of(context).size;
     return ListTile(
       contentPadding: EdgeInsets.only(
         left: 0.008 * size.width,
         right: 0.012 * size.width,
       ),
-      leading: buildAnswerChecks(context, selectedOption, answerLetter, questionId),
-      title: _buildTable((widget.questions[questionId]?.answers[answerLetter] as List<dynamic>)
-          .map((e) => (e as List<dynamic>).map((e2) => (e2 as String)).toList())
-          .toList(),),
+      leading:
+          buildAnswerChecks(context, selectedOption, answerLetter, questionId),
+      title: _buildTable(
+        (widget.questions[questionId]?.answers[answerLetter] as List<dynamic>)
+            .map((e) =>
+                (e as List<dynamic>).map((e2) => (e2 as String)).toList())
+            .toList(),
+      ),
       // Text(
       //   "${widget.questions[questionId]?.answers[answerLetter]}",
       //   style: TextStyle(fontSize: textScaleFactor(widget.questions[questionId]!.question.length) * 0.95 * size.width,),
@@ -729,7 +764,8 @@ Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
       children: [
         buildTitle(context, size, questionIndex, questionId),
         SizedBox(height: 0.035 * size.height),
-        if (!widget.showMultipleQuestions) buildQuestion(context, size, questionId, questionIndex),
+        if (!widget.showMultipleQuestions)
+          buildQuestion(context, size, questionId, questionIndex),
         if (widget.showMultipleQuestions)
           for (int i = 0; i < widget.questions.length; i++)
             Column(
@@ -801,7 +837,9 @@ Widget buildQuestionTask(BuildContext context, Size size, String questionId) {
                     width: size.width,
                     requirement: widget.requireAnswer
                         ? (selectedOption != null && selectedOption != '')
-                        : widget.answerLayout == QuizModelAnswerLayout.list || widget.answerLayout == QuizModelAnswerLayout.boxes
+                        : widget.answerLayout == QuizModelAnswerLayout.list ||
+                                widget.answerLayout ==
+                                    QuizModelAnswerLayout.boxes
                             ? selectedOption != null
                             : true,
                   ),
