@@ -1,10 +1,10 @@
 {
     "task": "In the given equation, $k$ is a constant. If the equation has infinitely many solutions, what is the value of $k$?\\nEquation: $6x + k = 6x + 12$",
     "answers": {
-        "A": 12,
-        "B": 22,
-        "C": 2,
-        "D": 27
+        "A": "12",
+        "B": "22",
+        "C": "2",
+        "D": "27"
     },
     "correct": {
         "A": true,
