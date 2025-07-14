@@ -4,7 +4,7 @@
         "A": "480",
         "B": "120",
         "C": "240",
-        "D": "120"
+        "D": "180"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "The measure of angle $ R is \\frac{2}{3}\u03c0 $ radians, and angle $T$ is $ \\frac{2}{3}\u03c0 $ radians greater. Thus, the measure of angle T is:\\n$ \\frac{2}{3}\u03c0 + \\frac{2}{3}\u03c0 = \\frac{4}{3}\u03c0 $ radians.\\nTo convert to degrees, multiply by $ 180/\u03c0 $:\\n$ \\frac{4}{3}\u03c0 \u00d7 (180/\u03c0) = 240 $ degrees.\\nThus, the correct answer is $ 240 $ degrees.",
+    "explanation": "The measure of angle $R$ is $ \\frac{2}{3}\u03c0 $ radians, and angle $T$ is $ \\frac{2}{3}\u03c0 $ radians greater. Thus, the measure of angle $T$ is:\n$ \\frac{2}{3}\u03c0 + \\frac{2}{3}\u03c0 = \\frac{4}{3}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{4}{3}\u03c0 \u00d7 (180/\u03c0) = 240 $ degrees.\nThus, the correct answer is $ 240 $ degrees.",
     "difficulty": "Medium",
     "id": "d5811d6f",
     "subcategory": "Circles"

@@ -12,8 +12,8 @@
         "C": false,
         "D": true
     },
-    "explanation": "The correct answer is 10. The volume of a triangular prism is given by V = B \u00d7 h. Since the volume is 70 cm\u00b3 and the height is 7 cm, we solve for B: 70 = B \u00d7 7. Dividing both sides by 7, we get B = 10. Thus, the area of the base is 10 cm\u00b2.",
     "difficulty": "Medium",
+    "explanation": "The correct answer is 10. The volume of a triangular prism is given by V = B \u00d7 h. Since the volume is 70 cm\u00b3 and the height is 7 cm, we solve for B: 70 = B \u00d7 7. Dividing both sides by 7, we get B = 10. Thus, the area of the base is 10 cm\u00b2.",
     "id": "bef8ad80",
     "subcategory": "Area_and_volume"
 }

@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "The measure of angle $ R is \\frac{2}{3}\u03c0 $ radians, and angle $T$ is $ \\frac{1}{4}\u03c0 $ radians greater. Thus, the measure of angle T is:\\n$ \\frac{2}{3}\u03c0 + \\frac{1}{4}\u03c0 = \\frac{11}{12}\u03c0 $ radians.\\nTo convert to degrees, multiply by $ 180/\u03c0 $:\\n$ \\frac{11}{12}\u03c0 \u00d7 (180/\u03c0) = 165 $ degrees.\\nThus, the correct answer is $ 165 $ degrees.",
+    "explanation": "The measure of angle $R$ is \\frac{2}{3}\u03c0 $ radians, and angle $T$ is $ \\frac{1}{4}\u03c0 $ radians greater. Thus, the measure of angle $T$ is:\n$ \\frac{2}{3}\u03c0 + \\frac{1}{4}\u03c0 = \\frac{11}{12}\u03c0 $ radians.\nTo convert to degrees, multiply by $ 180/\u03c0 $:\n$ \\frac{11}{12}\u03c0 \u00d7 (180/\u03c0) = 165 $ degrees.\nThus, the correct answer is $ 165 $ degrees.",
     "difficulty": "Medium",
     "id": "e7f2f26d",
     "subcategory": "Circles"
