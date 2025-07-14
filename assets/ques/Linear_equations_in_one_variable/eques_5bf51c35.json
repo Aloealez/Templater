@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "Rationale\\nSubtracting 26 from both sides of the equation $6p + 26 = 342$ gives $6p = 316$.\\nDividing both sides by 6 results in $1p = 52$.\\nTherefore, the correct answer is 52.",
+    "explanation": "Subtracting 26 from both sides of the equation $6p + 26 = 342$ gives $6p = 316$.\nDividing both sides by 6 results in $p = 52$.\nTherefore, the correct answer is 52.",
     "id": "5bf51c35",
     "subcategory": "Linear_equations_in_one_variable"
 }
