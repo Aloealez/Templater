@@ -1,10 +1,10 @@
 {
-    "task": "A survey was conducted using a sample of high school teachers selected at random from universities in the Midwest. The surveyed individuals were asked about a specific topic related to their field. What is the largest population to which the results of the survey can be generalized?",
+    "task": "A survey was conducted using a sample of high school teachers selected at random from schools in the Midwest. The surveyed individuals were asked about a specific topic related to their field. What is the largest population to which the results of the survey can be generalized?",
     "answers": {
         "A": "All professors in the United States",
         "B": "All high school teachers in the United States",
         "C": "All professors at universities in the Midwest",
-        "D": "All high school teachers at universities in the Midwest"
+        "D": "All high school teachers in the Midwest"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from high school teachers at universities in the Midwest, the largest population to which the results can be generalized is All high school teachers at universities in the Midwest. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
+    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from high school teachers in the Midwest, the largest population to which the results can be generalized is 'All high school teachers in the Midwest'. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
     "difficulty": "Medium",
     "id": "68e5cbf8",
     "subcategory": "Evaluating_statistical_claims_Observational_studies_and_experiments"

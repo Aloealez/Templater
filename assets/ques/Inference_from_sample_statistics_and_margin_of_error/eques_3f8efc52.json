@@ -2,7 +2,7 @@
     "task": "From a population of 92481 people, 1147 were chosen at random and surveyed about an election candidate. Based on the survey, it is estimated that 44% of people in the population support it, with an associated margin of error of 4%. Based on these results, which of the following is a plausible value for the total number of people in the population who support it?",
     "answers": {
         "A": "46534",
-        "B": "573",
+        "B": "36990",
         "C": "44078",
         "D": "1147"
     },

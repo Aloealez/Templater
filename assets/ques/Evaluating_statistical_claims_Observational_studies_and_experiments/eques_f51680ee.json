@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from engineers at public universities in Texas, the largest population to which the results can be generalized is All engineers at public universities in Texas. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
+    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from engineers at public universities in Texas, the largest population to which the results can be generalized is 'All engineers at public universities in Texas'. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
     "difficulty": "Medium",
     "id": "f51680ee",
     "subcategory": "Evaluating_statistical_claims_Observational_studies_and_experiments"

@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from history professors at California State Universities, the largest population to which the results can be generalized is All history professors at California State Universities. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
+    "explanation": "The results of a survey can only be generalized to the population from which the sample was selected. Since the sample was drawn from history professors at California State Universities, the largest population to which the results can be generalized is 'All history professors at California State Universities'. The other answer choices are too broad and do not correctly represent the limits of the sample population.",
     "difficulty": "Medium",
     "id": "9c6a7f64",
     "subcategory": "Evaluating_statistical_claims_Observational_studies_and_experiments"

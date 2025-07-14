@@ -1,7 +1,7 @@
 {
     "task": "If $p = 3x + 4$ and $v = x + 3$, which of the following is equivalent to $pv - 3p + v$?",
     "answers": {
-        "A": "$3x^2 + 3x + 0$",
+        "A": "$3x^2 + 3x - 6$",
         "B": "$3x^2 + 5x + 3$",
         "C": "$3x^2 + 8x - 3$",
         "D": "$3x^2 + 7x + 6$"
@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Substituting $p$ and $v$ into the given expression: $ (3x + 4)(x + 3) - 3(3x + 4) + x + 3 $. Expanding yields: $ 3x^2 + 9x + 4x + 12 - 9x - 12 + x + 3 $. Combining like terms, we get: $ $3x^2 + 5x + 3$ $, which is the correct answer.",
+    "explanation": "Substituting $p$ and $v$ into the given expression: $ (3x + 4)(x + 3) - 3(3x + 4) + x + 3 $. Expanding yields: $ 3x^2 + 9x + 4x + 12 - 9x - 12 + x + 3 $. Combining like terms, we get: $3x^2 + 5x + 3$, which is the correct answer.",
     "difficulty": "Medium",
     "id": "33363782",
     "subcategory": "Equivalent_expressions"
