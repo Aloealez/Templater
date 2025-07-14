@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "A line in the xy-plane that passes through points $(x_1, y_1)$ and $(x_2, y_2)$ has a slope of $m = \\frac{y_2 - y_1}{x_2 - x_1}$. The line of best fit shown passes through approximately $(x_1, 0.4)$ and $(x_2, 9.1)$. Computing the slope: $m = \\frac{9.1 - 0.4}{5 - 0} = 1.74$. Thus, the closest answer choice is 1.74.",
+    "explanation": "A line in the xy-plane that passes through points $(x_1, y_1)$ and $(x_2, y_2)$ has a slope of $m = \\frac{y_2 - y_1}{x_2 - x_1}$. The line of best fit shown passes through approximately $(0, 0.4)$ and $(5, 9.1)$. Computing the slope: $m = \\frac{9.1 - 0.4}{5 - 0} = 1.74$. Thus, the answer is 1.74.",
     "difficulty": "Medium",
     "image": "scatterplot.png",
     "id": "0d58e00d",
