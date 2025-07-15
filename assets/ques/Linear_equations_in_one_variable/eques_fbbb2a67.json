@@ -1,9 +1,10 @@
 {
+    "task": "If $x$ is the solution to the equation $ 3(2x - 9) - 3 = 5(x - 8) + 8 $, what is the value of $x - 8$?",
     "answers": {
-        "A": "$\\frac{-8}{1}$",
-        "B": "$\\frac{-10}{1}$",
-        "C": "$\\frac{10}{1}$",
-        "D": "$\\frac{-12}{1}$"
+        "A": "-8",
+        "B": "-10",
+        "C": "10",
+        "D": "12"
     },
     "correct": {
         "A": false,
@@ -17,10 +18,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "If $x$ is the solution to the equation below, what is the value of $x - 8$?\\n$$ 3(2x - 9) - 3 = 5(x - 8) + 8 $$",
-    "explanation": "Choice B is correct.\\nExpanding the left-hand side:\\n$ 3(2x - 9) - 3 = 6x - 27 - 3 = 6x -30 $\\nExpanding the right-hand side:\\n$ 5(x - 8) + 8 = 5x - 40 + 8 = 5x -32 $\\nRewriting the equation:\\n$ 6x -30 = 5x -32 $\\nSubtracting 5x from both sides:\\n$ (6 - 5)x = -2 $\\nSolving for x:\\n$ x = \\frac{-2}{1} = \\frac{-2}{1} $\\nSince we need to find $ x - 8 $, we compute:\\n$ x - 8 = \\frac{-10}{1} $\\nThus, the correct answer is $ \\frac{-10}{1} $. ",
+    "explanation": "Choice B is correct.\nExpanding the left-hand side:\n$ 3(2x - 9) - 3 = 6x - 27 - 3 = 6x -30 $\nExpanding the right-hand side:\n$ 5(x - 8) + 8 = 5x - 40 + 8 = 5x -32 $\nRewriting the equation:\n$ 6x -30 = 5x -32 $\nSubtracting 5x from both sides:\n$ (6 - 5)x = -2 $\nSolving for $x$ :\n$ x = \\frac{-2}{1} = \\frac{-2}{1} $\nSince we need to find $ x - 8 $, we compute:\n$ x - 8 = \\frac{-10}{1} $\nThus, the correct answer is -10. ",
     "difficulty": "Medium",
-    "table": null,
     "id": "fbbb2a67",
     "subcategory": "Linear_equations_in_one_variable"
 }

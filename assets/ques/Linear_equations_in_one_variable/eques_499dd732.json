@@ -13,7 +13,7 @@
         "D": true
     },
     "difficulty": "Easy",
-    "explanation": "Rationale\\nSubtracting 25 from both sides of the equation $3p + 25 = 129$ gives $3p = 104$.\\nDividing both sides by 3 results in $1p = 34$.\\nTherefore, the correct answer is 34.",
+    "explanation": "Subtracting 25 from both sides of the equation $3p + 25 = 129$ gives $3p = 104$.\nDividing both sides by 3 results in $p = 34$.\nTherefore, the correct answer is 34.",
     "id": "499dd732",
     "subcategory": "Linear_equations_in_one_variable"
 }

@@ -13,7 +13,7 @@
         "D": false
     },
     "difficulty": "Easy",
-    "explanation": "\\nRationale\\nChoice B is correct. Dividing each side of the given equation by 7 yields $2x + 1 = 11$. Therefore, the equation $2x + 1 = 11$ is equivalent to the given equation and has the same solution.",
+    "explanation": "Choice B is correct.\nDividing each side of the given equation by 7 yields $2x + 1 = 11$.\nTherefore, the equation $2x + 1 = 11$ is equivalent to the given equation.",
     "id": "a17ee712",
     "subcategory": "Linear_equations_in_one_variable"
 }

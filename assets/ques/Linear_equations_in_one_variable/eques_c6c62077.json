@@ -1,4 +1,5 @@
 {
+    "task": "A cactus had a height of 5 units when it was first measured. The equation below can be used to find how many years ($n$) it took the cactus to reach a height of 14 units. Which of the following is the best interpretation of the number 3 in this context?\n$$3n + 5 = 14$$",
     "answers": {
         "A": "The average number of units the cactus's height increased per year.",
         "B": "The average number of years it takes similar cactuss to grow 14 units.",
@@ -17,10 +18,8 @@
         "C": 0.0,
         "D": 0.0
     },
-    "task": "A cactus had a height of 5 units when it was first measured. The equation below can be used to find how many years ($n$) it took the cactus to reach a height of 14 units. Which of the following is the best interpretation of the number 3 in this context?\\n$$3n + 5 = 14$$",
-    "explanation": "Choice A is correct.\\nThe height of the cactus at a given time is equal to its initial height plus the number of units it grew. In the given equation, 14 represents the height at the final time, and 5 represents the height when it was first measured. It follows that 3n represents the total height growth over time.\\nSince $n$ represents the number of years between the two measurements, the coefficient 3 must represent the average number of units the cactus's height increased per year.\\n",
+   "explanation": "Choice A is correct.\nThe height of the cactus at a given time is equal to its initial height plus the number of units it grew. In the given equation, 14 represents the height at the final time, and 5 represents the height when it was first measured. It follows that 3n represents the total height growth over time.\nSince $n$ represents the number of years between the two measurements, the coefficient 3 must represent the average number of units the cactus's height increased per year.\n",
     "difficulty": "Medium",
-    "table": null,
     "id": "c6c62077",
     "subcategory": "Linear_equations_in_one_variable"
 }

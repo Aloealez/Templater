@@ -1,4 +1,5 @@
 {
+    "task": "A flower had a weight of 4 units when it was first measured. The equation below can be used to find how many months ($n$) it took the flower to reach a weight of 13 units. Which of the following is the best interpretation of the number 5 in this context?\n$$5n + 4 = 13$$",
     "answers": {
         "A": "The number of months it took the flower to double its weight.",
         "B": "The weight, in units, of the flower when it was 1 month old.",
@@ -17,10 +18,8 @@
         "C": 1.0,
         "D": 0.0
     },
-    "task": "A flower had a weight of 4 units when it was first measured. The equation below can be used to find how many months ($n$) it took the flower to reach a weight of 13 units. Which of the following is the best interpretation of the number 5 in this context?\\n$$5n + 4 = 13$$",
-    "explanation": "Choice C is correct.\\nThe weight of the flower at a given time is equal to its initial weight plus the number of units it grew. In the given equation, 13 represents the weight at the final time, and 4 represents the weight when it was first measured. It follows that 5n represents the total weight growth over time.\\nSince $n$ represents the number of months between the two measurements, the coefficient 5 must represent the average number of units the flower's weight increased per month.\\n",
+    "explanation": "Choice C is correct.\nThe weight of the flower at a given time is equal to its initial weight plus the number of units it grew. In the given equation, 13 represents the weight at the final time, and 4 represents the weight when it was first measured. It follows that 5n represents the total weight growth over time.\nSince $n$ represents the number of months between the two measurements, the coefficient 5 must represent the average number of units the flower's weight increased per month.\n",
     "difficulty": "Medium",
-    "table": null,
     "id": "dbfb1f91",
     "subcategory": "Linear_equations_in_one_variable"
 }
