@@ -4,7 +4,7 @@
         "A": "$1301$",
         "B": "$8\u221a71$",
         "C": "$36$",
-        "D": "$1\u221a1301$"
+        "D": "$\u221a1301$"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "The correct answer is 1\u221a1301. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\\n(25)\u00b2 + (26)\u00b2 = c\u00b2\\n625 + 676 = 1301 = c\u00b2\\nTaking the square root: \u221a1301 = c.\\nThe simplified radical form of \u221a1301 is 1\u221a1301, so the hypotenuse is 1\u221a1301 cm.",
+    "explanation": "The correct answer is \u221a1301. The Pythagorean theorem states that in a right triangle, the sum of the squares of the two legs is equal to the square of the hypotenuse:\n(25)\u00b2 + (26)\u00b2 = c\u00b2\n625 + 676 = 1301 = c\u00b2\nTaking the square root: \u221a1301 = c.\nSo the hypotenuse is \u221a1301 cm.",
     "difficulty": "Medium",
     "id": "dfda1e82",
     "subcategory": "Right_triangles_and_trigonometry"
