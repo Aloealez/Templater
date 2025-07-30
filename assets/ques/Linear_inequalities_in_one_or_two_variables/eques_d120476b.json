@@ -1,10 +1,10 @@
 {
-    "task": "The minimum value of $x$ is 18 less than 5 times another number $n$. Which inequality shows the possible values of $x$?",
+    "task": "The minimum value of $x$ is 18 less than 5 * another number $n$. Which inequality shows the possible values of $x$?",
     "answers": {
-        "A": "x \u2264 5n - 18",
-        "B": "x \u2265 5n - 18",
-        "C": "x \u2264 18 - 5n",
-        "D": "x \u2265 18 - 5n"
+        "A": "x < 5n - 18",
+        "B": "x > 5n - 18",
+        "C": "x < 18 - 5n",
+        "D": "x > 18 - 5n"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Since the statement describes 18 less than 5 times n, we write 5n - 18 to express that relationship. If the statement mentions a minimum value, we use \u2265, and if it mentions a maximum, we use \u2264. Thus, the correct inequality is x \u2265 5n - 18.",
+    "explanation": "Since the statement describes 18 less than 5 * n, we write 5n - 18 to express that relationship. If the statement mentions a minimum value, we use >, and if it mentions a maximum, we use <. Thus, the correct inequality is x > 5n - 18.",
     "difficulty": "Medium",
     "id": "d120476b",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

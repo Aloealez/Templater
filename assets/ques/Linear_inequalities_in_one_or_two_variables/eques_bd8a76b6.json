@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "The puppy starts at 66 grams and grows between 2.28 and 3.79 grams per day. The inequality describing this scenario is: $ 66 + 2.28 times d < w < 66 + 3.79 times d $. Substituting 360 for $d$ gives: $ 887 < w < 1430 $.",
+    "explanation": "The puppy starts at 66 grams and grows between 2.28 and 3.79 grams per day. The inequality describing this scenario is: $ 66 + 2.28 * d < w < 66 + 3.79 * d $. Substituting 360 for $d$ gives: $ 887 < w < 1430 $.",
     "difficulty": "Medium",
     "id": "bd8a76b6",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

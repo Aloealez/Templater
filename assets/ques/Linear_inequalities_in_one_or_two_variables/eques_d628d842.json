@@ -12,7 +12,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "The child starts at 129 grams and grows between 4.64 and 6.28 grams per day. The inequality describing this scenario is: $ 129 + 4.64 times d < w < 129 + 6.28 times d $. Substituting 353 for $d$ gives: $ 1767 < w < 2346 $.",
+    "explanation": "The child starts at 129 grams and grows between 4.64 and 6.28 grams per day. The inequality describing this scenario is: $ 129 + 4.64 * d < w < 129 + 6.28 * d $. Substituting 353 for $d$ gives: $ 1767 < w < 2346 $.",
     "difficulty": "Medium",
     "id": "d628d842",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

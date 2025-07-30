@@ -1,10 +1,10 @@
 {
     "task": "During a annual marathon, Marek Bujanowicz traveled a minimum of 2764 kilometers and a maximum of 4806 kilometers. Which inequality represents this situation, where $d$ is a possible distance, in kilometers, that Marek Bujanowicz traveled?",
     "answers": {
-        "A": "2764 \u2264 d \u2264 4806",
-        "B": "d \u2264 2764",
-        "C": "d \u2265 4806",
-        "D": "4806 \u2264 d \u2264 6216"
+        "A": "2764 < d < 4806",
+        "B": "d > 2764",
+        "C": "d > 4806",
+        "D": "4806 < d < 6216"
     },
     "correct": {
         "A": true,
@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Choice A is correct. It's given that during a annual marathon, Marek Bujanowicz traveled a minimum of 2764 kilometers and a maximum of 4806 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 2764 \u2264 d \u2264 4806.",
+    "explanation": "Choice A is correct. It's given that during a annual marathon, Marek Bujanowicz traveled a minimum of 2764 kilometers and a maximum of 4806 kilometers. Since $d$ represents the possible distance traveled, the correct inequality is 2764 > d > 4806.",
     "difficulty": "Easy",
     "id": "48c1a096",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

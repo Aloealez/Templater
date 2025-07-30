@@ -1,10 +1,10 @@
 {
     "task": "Steve Le plans to rent a bike. The rental cost is 40 Dollars per hour, and he must also pay a fixed cost of 8 Dollars. Steve Le wants to spend no more than 385 Dollars. If the rental is available only for whole hours, what is the maximum number of hours Steve Le can rent a bike? Which of the following equations properly represents this situation?",
     "answers": {
-        "A": "40h + 8 \u2265 385",
-        "B": "40h + 18 \u2264 385",
-        "C": "40h + 8 \u2264 385",
-        "D": "40h \u2264 385"
+        "A": "40h + 8 > 385",
+        "B": "40h + 18 < 385",
+        "C": "40h + 8 < 385",
+        "D": "40h + 2 < 385"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": true,
         "D": false
     },
-    "explanation": "Choice C is correct. The equation 40h + 8 \u2264 385 represents the given situation. Subtracting 8 from both sides and dividing by 40 gives h \u2264 9. Since the rental is available only in whole hours, the maximum hours Steve Le can rent is 9.",
+    "explanation": "Choice C is correct. The equation $40h + 8 < 385$ represents the given situation. Subtracting 8 from both sides and dividing by 40 gives $h < 9$. Since the rental is available only in whole hours, the maximum hours Steve Le can rent is 9.",
     "difficulty": "Easy",
     "id": "2b13ccd3",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

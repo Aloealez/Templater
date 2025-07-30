@@ -1,10 +1,10 @@
 {
     "task": "During a annual marathon, Aleksander Iskra traveled a minimum of 2139 miles and a maximum of 2792 miles. Which inequality represents this situation, where $d$ is a possible distance, in miles, that Aleksander Iskra traveled?",
     "answers": {
-        "A": "d \u2265 2792",
-        "B": "d \u2264 2139",
-        "C": "2792 \u2264 d \u2264 3543",
-        "D": "2139 \u2264 d \u2264 2792"
+        "A": "d > 2792",
+        "B": "d < 2139",
+        "C": "2792 < d < 3543",
+        "D": "2139 < d < 2792"
     },
     "correct": {
         "A": false,
@@ -12,7 +12,7 @@
         "C": false,
         "D": true
     },
-    "explanation": "Choice D is correct. It's given that during a annual marathon, Aleksander Iskra traveled a minimum of 2139 miles and a maximum of 2792 miles. Since $d$ represents the possible distance traveled, the correct inequality is 2139 \u2264 d \u2264 2792.",
+    "explanation": "Choice D is correct. It's given that during a annual marathon, Aleksander Iskra traveled a minimum of 2139 miles and a maximum of 2792 miles. Since $d$ represents the possible distance traveled, the correct inequality is 2139 < d < 2792.",
     "difficulty": "Easy",
     "id": "b59d3ebd",
     "subcategory": "Linear_inequalities_in_one_or_two_variables"

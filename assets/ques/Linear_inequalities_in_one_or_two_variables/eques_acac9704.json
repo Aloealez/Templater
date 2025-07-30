@@ -1,5 +1,5 @@
 {
-    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\\n$$ y \u2264 8x + 7\\n $$$$ y \u2264 -8x + 8\\n $$",
+    "task": "Which of the following ordered pairs $(x, y)$ is a solution to the system of inequalities?\n$$ y \u2264 8x + 7\n $$$$ y \u2264 -8x + 8\n $$",
     "answers": {
         "A": "(1, 0)",
         "B": "(-3, -3)",
