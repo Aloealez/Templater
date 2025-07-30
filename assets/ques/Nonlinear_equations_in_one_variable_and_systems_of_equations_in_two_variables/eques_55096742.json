@@ -1,11 +1,10 @@
 {
-    "Difficulty": "Easy",
-    "task": "Solve for x: 1x + 1 = 5",
+    "task": "Solve for $x$: $x + 1 = 5$",
     "answers": {
         "A": "4",
-        "B": 5,
-        "C": 1,
-        "D": 6
+        "B": "5",
+        "C": "1",
+        "D": "6"
     },
     "correct": {
         "A": true,
@@ -13,7 +12,8 @@
         "C": false,
         "D": false
     },
-    "explanation": "Step 1: Subtract 1 from both sides: 1x = 5 - 1 = 4\nStep 2: Divide by 1: x = 4 \u00f7 1 = 4",
+    "difficulty": "Easy",
+    "explanation": "Step 1: Subtract 1 from both sides: $x = 5 - 1 = 4$\nTherefore: x = 4",
     "id": "55096742",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

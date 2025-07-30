@@ -1,6 +1,6 @@
 {
     "Difficulty": "Easy",
-    "task": "solve the system:\n1) x + y = 2\n2) x - y = 0",
+    "task": "Solve the system:\n1) x + y = 2\n2) x - y = 0",
     "answers": {
         "A": "(x, y) = (2, 0)",
         "B": "(x, y) = (1, 1)",

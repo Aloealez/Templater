@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Setting the given equations equal to each other: $ 4x + 3 = x^2 + 2x + 1 $. Rearrange into quadratic form: $ x^2 + (-2)x + (-2) = 0 $. The discriminant is 12. Solving for $x$, we get possible values: [3, -1]. Only one of these values is listed as an answer choice, making 3 the correct answer.",
+    "explanation": "Setting the given equations equal to each other: $ 4x + 3 = x^2 + 2x + 1 $. Rearrange into quadratic form: $ x^2 + (-2)x + (-2) = 0 $. The discriminant is 12. Solving for $x$, we get possible values: 3 and -1. Only one of these values is listed as an answer choice, making 3 the correct answer.",
     "difficulty": "Medium",
     "id": "9cea5531",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"

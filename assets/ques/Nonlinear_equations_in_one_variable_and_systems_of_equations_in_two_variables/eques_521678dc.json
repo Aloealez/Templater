@@ -1,6 +1,6 @@
 {
     "Difficulty": "Hard",
-    "task": "Solve for x: 4x\u00b2 + 10x + 6 = 0",
+    "task": "Solve for $x$: $4x\u00b2 + 10x + 6 = 0$",
     "answers": {
         "A": "x = 2.45",
         "B": "x = -1.0 or x = -1.5",
@@ -13,7 +13,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "$Step 1:$ Identify coefficients: a = 4, b = 10, c = 6\n$Step 2:$ Calculate discriminant: b\u00b2 - 4ac = 10\u00b2 - 4(4)(6) = 4\n$Step 3:$ Quadratic formula: x = [-b \u00b1 \u221a(discriminant)] / (2a)\n$Step 4:$ Solutions: x = [-10 + \u221a4]/8 \u2248 -1.0\n&nbsp;&nbsp;&nbsp;&nbsp;x = [-10 - \u221a4]/8 \u2248 -1.5",
+    "explanation": "Step 1: Identify coefficients: $a = 4, b = 10, c = 6$\nStep 2: Calculate discriminant: $b\u00b2 - 4ac = 10\u00b2 - 4(4)(6) = 4$ \nStep 3: Quadratic formula: $x = [-b \u00b1 \u221a(discriminant)] / (2a)$ \nStep 4: Solutions: $x = -1.0 or x = -1.5$",
     "id": "521678dc",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
 }

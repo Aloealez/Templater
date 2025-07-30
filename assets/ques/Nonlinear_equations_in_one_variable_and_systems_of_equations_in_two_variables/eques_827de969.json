@@ -1,9 +1,9 @@
 {
-    "task": "If $(x, y)$ is a solution to the system of equations below, which of the following could be the value of $x$?\n$$ y = 5x + 3 $$\n$$ y = x^2 + 3x + -3 $$",
+    "task": "If $(x, y)$ is a solution to the system of equations \n$ y = 5x + 3 $\n$ y = x^2 + 3x + -3 $ \nwhich of the following could be the value of $x$?",
     "answers": {
         "A": "4",
         "B": "2",
-        "C": "3",
+        "C": "-3",
         "D": "6"
     },
     "correct": {
@@ -12,7 +12,7 @@
         "C": false,
         "D": false
     },
-    "explanation": "Setting the given equations equal to each other: $ 5x + 3 = x^2 + 3x + -3 $. Rearrange into quadratic form: $ x^2 + (-2)x + (-6) = 0 $. The discriminant is 28. Solving for $x$, we get possible values: [4, -2]. Only one of these values is listed as an answer choice, making 4 the correct answer.",
+    "explanation": "Setting the given equations equal to each other: $ 5x + 3 = x^2 + 3x + -3 $. Rearrange into quadratic form: $ x^2 + (-2)x + (-6) = 0 $. The discriminant is 28. Solving for $x$, we get possible values 4 and -2. Only one of these values is listed as an answer choice, making 4 the correct answer.",
     "difficulty": "Medium",
     "id": "827de969",
     "subcategory": "Nonlinear_equations_in_one_variable_and_systems_of_equations_in_two_variables"
