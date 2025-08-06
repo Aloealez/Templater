@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system of equations:\n$$ 1x + 3y = 10 $$ \n $$ 1x - 3y = -8 $$",
+    "task": "Solve the system of equations:\\n$$ 1x + 3y = 10 $$ \n $$ 1x - 3y = -8 $$",
     "answers": {
         "A": "No solution",
         "B": "(x, y) = (3, 1)",

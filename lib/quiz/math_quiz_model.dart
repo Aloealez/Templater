@@ -551,6 +551,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                   ) *
                   1.16 *
                   size.width,
+                  height: 0.5,
             ),
             laTeXCode: Text(
               widget.questions[questionId]!.question,
