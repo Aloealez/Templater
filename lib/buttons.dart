@@ -316,7 +316,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
         children: [
           SizedBox(
             height: size.height / 15,
-            width: size.width * 0.8,
+            width: size.width * 0.75,
             child: InkWell(
               onHover: (value) {
                 setState(() {

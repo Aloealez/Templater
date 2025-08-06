@@ -98,12 +98,10 @@ class _ProgressScreen extends State<ProgressScreen>
     List<ChartData> newChartData = <ChartData>[];
 
     if (widget.maxScore != null) {
-      prefs.setString(
-          'lastMaxScore_${widget.exercise}', widget.maxScore.toString(),);
+      prefs.setString('lastMaxScore_${widget.exercise}', widget.maxScore.toString(),);
       lastMaxScore = widget.maxScore!;
     } else {
-      lastMaxScore = double.parse(
-          prefs.getString('lastMaxScore_${widget.exercise}') ?? '1',);
+      lastMaxScore = double.parse(prefs.getString('lastMaxScore_${widget.exercise}') ?? '1',);
     }
 
     List<String> timestamps = prefs.getStringList(

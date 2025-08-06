@@ -232,7 +232,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
 
     super.initState();
     for (var questionId in widget.questions.keys) {
-      maxScore += widget.questions[questionId]!.score.values.elementAt(0);
+      maxScore += 1;
     }
 
     setState(() {
