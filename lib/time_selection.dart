@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:brainace_pro/builders/listening_comprehension_builder.dart';
+import 'package:brainace_pro/margins.dart';
 import 'package:brainace_pro/sats/sats_program_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -164,11 +165,7 @@ class _TimeSelectionState extends State<TimeSelection> {
       appBar: appBar(context, ''),
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(
-            left: size.width / 10,
-            right: size.width / 10,
-            top: size.height / 69,
-          ),
+          margin: activitiesMargins(size),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,

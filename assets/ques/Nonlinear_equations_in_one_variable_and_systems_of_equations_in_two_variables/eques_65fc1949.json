@@ -1,6 +1,6 @@
 {
     "Difficulty": "Easy",
-    "task": "Solve the system of equations:\n $ x + y = 6$ \n$x - y = 0$",
+    "task": "Solve the system of equations:\n $$ x + y = 6 $$ \n $$ x - y = 0 $$",
     "answers": {
         "A": "(x, y) = (3, 3)",
         "B": "(x, y) = (4, 2)",

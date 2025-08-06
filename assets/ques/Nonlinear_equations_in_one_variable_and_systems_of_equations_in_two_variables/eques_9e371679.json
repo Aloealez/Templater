@@ -1,5 +1,5 @@
 {
-    "task": "Solve the system:\n 1) $y = x + 1$ \n2) $y = 2x\u00b2 + -16x + 31$",
+    "task": "Solve the system of equations:\n $$ y = x + 1 $$ \n $$y = 2x\u00b2 + -16x + 31 $$",
     "answers": {
         "A": "(x, y) = (3, 4) and (5, 6)",
         "B": "No solution",

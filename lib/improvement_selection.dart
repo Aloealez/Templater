@@ -1,4 +1,5 @@
 import 'package:brainace_pro/buttons.dart';
+import 'package:brainace_pro/margins.dart';
 import 'package:flutter/material.dart';
 
 import 'app_bar.dart';
@@ -25,9 +26,7 @@ class _ImprovementSelectionState extends State<ImprovementSelection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(
-              top: size.height / 69,
-            ),
+            margin: activitiesMargins(size),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[

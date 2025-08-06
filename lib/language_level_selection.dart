@@ -1,3 +1,4 @@
+import 'package:brainace_pro/margins.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -81,11 +82,7 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
       appBar: appBar(context, ''),
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(
-            left: size.width / 40,
-            right: size.width / 40,
-            top: size.height / 69,
-          ),
+          margin: activitiesMargins(size),
           child: Column(
             children: <Widget>[
               Column(

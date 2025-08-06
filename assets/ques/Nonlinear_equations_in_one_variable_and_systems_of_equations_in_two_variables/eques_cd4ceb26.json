@@ -1,5 +1,5 @@
 {
-    "task": "solve the system:\n1) y = x + 4\n2) y = x\u00b2 + -6x + 9",
+    "task": "Solve the system of equations:\n $$ y = x + 4 $$ \n $$ y = x\u00b2 + -6x + 9 $$",
     "answers": {
         "A": "No solution",
         "B": "(x, y) = (1, 5)",
