@@ -1,81 +1,46 @@
-name: Flutter CI
+name: Dart Cached (faster)
 
 on:
+  push:
+    branches: [ "main" , "master" , "test" , "test2" , "aloealez" , "aloealez2" , "aloealez-actions-test" , "aloealez-5" ]
   pull_request:
-    branches: 
-      - main
-      - master
-      - test
-      - test2
-      - aloealez
-      - aloealez2
-      - aloealez-actions-test
-      - aloealez-5
+    branches: [ "main" , "master" , "test" , "test2" , "aloealez" , "aloealez2" , "aloealez-actions-test" , "aloealez-5" ]
 
 env:
   flutter_version: "3.27.1"
+  java_version: "17.x"
 
 jobs:
-  analyze:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4.5.0
         with:
+          java-version: ${{ env.java_version }}
           distribution: temurin
-          java-version: "17"
 
-      # Install Nix with a fixed environment file method
-      - name: Install Nix
-        run: |
-          curl -L https://nixos.org/nix/install | sh
-          . /home/runner/.nix-profile/etc/profile.d/nix.sh
-          echo "NIX_PATH=/nix/var/nix/profiles/per-user/runner/channels" >> $GITHUB_ENV
-
-      - name: Determine if cache should be loaded
-        id: check_cache_steps
-        run: |
-          if echo "${{ github.event.pull_request.title }}" | grep -q -i "flutter clean"; then
-            echo "flutter_clean_cache=true" >> $GITHUB_ENV
-          else
-            echo "flutter_clean_cache=false" >> $GITHUB_ENV
-          fi
-
-      - name: Load Flutter cache
-        if: env.flutter_clean_cache == 'false'
-        uses: actions/cache@v4
+      - name: Cache Flutter
+        uses: actions/cache@v4.1.2
         with:
           path: /opt/hostedtoolcache/flutter
-          key: ${{ runner.os }}-flutter-${{ env.flutter_version }}
-          restore-keys: |
-            ${{ runner.os }}-flutter-
+          key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
 
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2.14.0
         with:
           flutter-version: ${{ env.flutter_version }}
-
-      - name: Verify Flutter installation
-        run: flutter doctor
 
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Analyze code
-        id: analyze
-        continue-on-error: true
-        run: |
-          flutter analyze --write=analysis_results.json || echo "ANALYSIS_FAILED=true" >> $GITHUB_ENV
+      - name: Debug Build
+        run: flutter build apk --debug
 
-      - name: Upload analysis results
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Upload build apk
+        uses: actions/upload-artifact@v4.4.3
         with:
-          name: analysis_results
-          path: analysis_results.json
-
-      - name: Fail job if there are analysis errors
-        if: env.ANALYSIS_FAILED == 'true'
-        run: |
-          echo "::error title=Analysis failed::Flutter analyze found issues. Please check the analysis_results artifact."
-          exit 1
+          name: Debug-apk-cached
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 3
