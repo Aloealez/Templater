@@ -1,3 +1,4 @@
+import 'package:brainace_pro/margins.dart';
 import 'package:brainace_pro/quiz/math_quiz_model.dart';
 import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter/material.dart';
@@ -136,11 +137,7 @@ class _SatsProgramSelectionState extends State<SatsProgramSelection> {
                 ),
               )
             : Container(
-                margin: EdgeInsets.only(
-                  left: size.width / 40,
-                  right: size.width / 40,
-                  top: size.height / 69,
-                ),
+                margin: activitiesMargins(size),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,

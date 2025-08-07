@@ -32,7 +32,8 @@ android {
     namespace "com.pro.brainace"
 //    compileSdkVersion 34
     compileSdk 35
-    ndkVersion flutter.ndkVersion
+//    ndkVersion flutter.ndkVersion
+    ndkVersion "27.0.12077973"
 
     compileOptions {
         // Flag to enable support for the new language APIs

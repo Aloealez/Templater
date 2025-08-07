@@ -69,35 +69,40 @@ class _TitlePageState extends State<TitlePage>
           child: Stack(
             children: <Widget>[
               Align(
-                alignment: Alignment(0, -0.2),
-                child: ShaderMask(
-                  shaderCallback: (bounds) => LinearGradient(
-                    colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ).createShader(bounds),
-                  child: Text(
-                    'Welcome',
-                    style: TextStyle(
-                      fontFamily: 'OleoScriptSwashCaps',
-                      fontSize: 60.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
+                alignment: Alignment(0, -0.19),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ShaderMask(
+                      shaderCallback: (bounds) => LinearGradient(
+                        colors: [Color(0xffA7E2FF), Color(0xffDC92FF)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ).createShader(bounds),
+                      child: Text(
+                        'Welcome',
+                        style: TextStyle(
+                          fontFamily: 'OleoScriptSwashCaps',
+                          fontSize: 60.0,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment(0, -0.05),
-                child: Text(
-                  'Prepare for your SAT exam the smart way!',
-                  style: TextStyle(
-                    fontFamily: 'Open',
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
+                    SizedBox(height: size.height * 0.002),
+                    Text(
+                      'Prepare for your SAT exam the smart way!',
+                      style: TextStyle(
+                        fontFamily: 'Open',
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
               Align(

@@ -108,30 +108,6 @@ class _LanguageLevelSelectionState extends State<LanguageLevelSelection> {
                   ),
                 ],
               ),
-              // child: Column(
-              //   mainAxisAlignment: MainAxisAlignment.start,
-              //   crossAxisAlignment: CrossAxisAlignment.center,
-              //   children: <Widget>[
-              //     Text(
-              //       "Select Your",
-              //       style: TextStyle(
-              //         fontSize: size.width / 10,
-              //         fontWeight: FontWeight.w600,
-              //         color: Theme.of(context).colorScheme.onSurface,
-              //       ),
-              //       textAlign: TextAlign.center,
-              //     ),
-              //     SizedBox(height: 0.06 * size.height),
-              //     Text(
-              //       "English Level",
-              //       style: TextStyle(
-              //         fontSize: size.width / 10,
-              //         fontWeight: FontWeight.w600,
-              //         color: Theme.of(context).colorScheme.onSurface,
-              //           height: 0.7,
-              //       ),
-              //       textAlign: TextAlign.center,
-              //     ),
               SizedBox(height: size.height * 0.08),
               levelSelectionButton(
                 context,

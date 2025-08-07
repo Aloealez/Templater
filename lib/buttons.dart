@@ -315,7 +315,7 @@ class _ImprovementButtonState extends State<ImprovementButton> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: size.height / 15,
+            height: size.height / 12,
             width: size.width * 0.75,
             child: InkWell(
               onHover: (value) {
