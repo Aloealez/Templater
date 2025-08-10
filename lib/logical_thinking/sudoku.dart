@@ -380,7 +380,7 @@ class _SudokuGame extends State<SudokuGame> {
                                   fontSize: 0.05 * size.width,
                                   fontWeight:
                                       (sudoku2[9 * rowIndex + colIndex] == -1)
-                                          ? FontWeight.w900
+                                          ? FontWeight.w700
                                           : FontWeight.w300,
                                   color: color,
                                 ),
