@@ -3,7 +3,7 @@ import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:http/http.dart' as http;
 import '../margins.dart';
 
 class MathActivities extends StatefulWidget {
@@ -15,6 +15,7 @@ class MathActivities extends StatefulWidget {
 
 class _MathActivitiesState extends State<MathActivities> {
   List<String> plan = [];
+  Future<void>? questionsF;
 
   Future<void> getPlan() async {
     prefs = await SharedPreferences.getInstance();
@@ -53,6 +54,28 @@ class _MathActivitiesState extends State<MathActivities> {
       day = today.difference(firstDay).inDays + 1;
     });
   }
+  
+  Future<void> refresh() async {
+    print("Connecting to local server...");
+    try {
+      var res = await http.get(new Uri.http("127.0.0.1:9017"));
+      print(res.body);
+    } catch (e) {
+      // print("Failed to connect to local server: $e");
+    }
+
+    Future.delayed(Duration(seconds: 3), () {
+      if (questionsF == null) {
+        setState(() {
+          questionsF = refresh();
+        });
+      }
+    });
+
+    setState(() {
+      questionsF = null;
+    });
+  }
 
   @override
   void initState() {
@@ -60,6 +83,7 @@ class _MathActivitiesState extends State<MathActivities> {
     getSkill();
     calcDay();
     getPlan();
+    refresh();
   }
 
   @override

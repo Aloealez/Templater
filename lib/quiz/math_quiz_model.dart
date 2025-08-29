@@ -10,7 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math';
 import 'dart:async';
 import '../../../app_bar.dart';
-import '../initial_score_screen.dart';
 import 'build_answer_icon.dart';
 import 'package:latext/latext.dart';
 
