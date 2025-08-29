@@ -1,5 +1,5 @@
 name: brainace_pro
-description: "BrainAce.pro - Adoptive training platform using AI."
+description: "Template viewer for BrainAce Pro app."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  webview_flutter: ">=4.10.0" # (sprawdź najnowszą wersję na pub.dev)
   xml:
 
   # The following adds the Cupertino Icons font to your application.
@@ -62,7 +61,6 @@ dependencies:
     git:
       url: https://github.com/Asilmaz/flutter_quizzes.git
   page_transition: ">=2.2.1"
-  home_widget:
   timezone: ">=0.10.0"
   http:
   permission_handler: ">=11.3.1"
@@ -148,7 +146,6 @@ flutter:
     - assets/
     - assets/activities/
     - assets/icons/
-    - assets/self_reflection/
     - assets/math/
     - assets/sats/
     - assets/sats/start_images/
