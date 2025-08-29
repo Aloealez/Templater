@@ -147,9 +147,6 @@ flutter:
     - assets/activities/
     - assets/icons/
     - assets/math/
-    - assets/sats/
-    - assets/sats/start_images/
-    - assets/icons/
 
     - assets/ques/
     - assets/ques/Linear_equations_in_one_variable/
