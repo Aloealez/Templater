@@ -1,11 +1,8 @@
+import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/theme/theme_colors.dart';
-import 'package:brainace_pro/well_being/meme_data.dart';
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'title_page.dart';
 import 'package:flutter/services.dart';
-import 'package:brainace_pro/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'quiz/question_bank.dart';
 
@@ -13,12 +10,6 @@ final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await NotificationService.init();
-  await Permission.notification.isDenied.then((value) {
-    if (value) {
-      Permission.notification.request();
-    }
-  });
   SystemChrome.setPreferredOrientations(
     [
       DeviceOrientation.portraitUp,
@@ -195,10 +186,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     for (String activity in activitiesImages) {
       myAppPrecacheImage('assets/activities/$activity');
     }
-
-    if (prefs != null) {
-      MemeData.updateTodayMemes(prefs!, MemeData.MEMES_PER_DAY, context: context);
-    }
   }
 
   @override
@@ -234,7 +221,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         ),
       ),
       themeMode: themeMode,
-      home: const TitlePage(title: 'BrainAce.pro'),
+      home: MathActivities(),
     );
   }
 

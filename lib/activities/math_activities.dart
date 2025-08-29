@@ -2,7 +2,6 @@ import 'package:brainace_pro/activities/activity_button.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:brainace_pro/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../margins.dart';
@@ -152,7 +151,6 @@ class _MathActivitiesState extends State<MathActivities> {
           ],
         ),
       ),
-      bottomNavigationBar: const MyBottomNavigationBar(),
     );
   }
 }

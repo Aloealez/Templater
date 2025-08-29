@@ -1,7 +1,5 @@
-import 'package:brainace_pro/improvement_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'language_level_selection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -41,15 +39,6 @@ class _StartButtonState extends State<StartButton> {
     return InkWell(
       onTap: () {
         initMemory();
-        Navigator.push(
-          context,
-          PageTransition(
-            type: PageTransitionType.fade,
-            child: ImprovementSelection(),
-            reverseDuration: const Duration(milliseconds: 100),
-            opaque: true,
-          ),
-        );
       },
       onHover: (value) {
         setState(() {
@@ -333,16 +322,6 @@ class _ImprovementButtonState extends State<ImprovementButton> {
                 }
 
                 initMemory();
-
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    child: LanguageLevelSelection(),
-                    reverseDuration: const Duration(milliseconds: 100),
-                    opaque: true,
-                  ),
-                );
               },
               child: Container(
                 width: size.width * 0.75,

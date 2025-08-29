@@ -1,6 +1,8 @@
-import 'package:brainace_pro/activities_for_each_section.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:brainace_pro/sats/start_sats_math.dart' as satsMath;
+
 
 class ActivityButton extends StatelessWidget {
   final String img;
@@ -44,6 +46,14 @@ class ActivityButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Map<String, Widget Function(BuildContext)> sectionActivities = {
+      for (var type in SatsQuestionSubcategories.typesList.sublist(10))
+        type: (context) => satsMath.StartSatsMath(
+          subcategory: SatsQuestionSubcategories.fromString(type),
+        ),
+    };
+
     Color color1 = leftColorGradient != null ? leftColorGradient! : Theme.of(context).colorScheme.primary;
     Color color2 = rightColorGradient != null ? rightColorGradient! : Theme.of(context).colorScheme.secondary;
 

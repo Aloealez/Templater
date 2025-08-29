@@ -1,10 +1,6 @@
-import 'package:brainace_pro/activities/activities.dart';
+import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'home.dart';
-import 'score_n_progress/progress.dart';
-import 'activities/brain_train_activities.dart';
-import 'settings/settings.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
@@ -38,34 +34,28 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               return FutureBuilder(
                 future: initSharedPrefs(),
                 builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const CircularProgressIndicator();
-                  } else if (prefs.getString('skill') == 'sats') {
-                    return Activities();
-                  } else {
-                    return BrainTrainActivities();
-                  }
+                  return MathActivities();
                 },
               );
             } else if (index == 1) {
-              return const Progress();
+              // return const Progress();
               // } else if (index == 3) {
               //   return const AnalysisScreen();
             } else if (index == 3) {
-              return const Settings();
+              // return const Settings();
             } else {
-              return FutureBuilder(
-                future: initSharedPrefs(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const CircularProgressIndicator();
-                  } else if (prefs.getString('skill') == 'sats') {
-                    return const Home();
-                  } else {
-                    return const Home();
-                  }
-                },
-              );
+              // return FutureBuilder(
+              //   future: initSharedPrefs(),
+              //   builder: (context, snapshot) {
+              //     if (snapshot.connectionState == ConnectionState.waiting) {
+              //       return const CircularProgressIndicator();
+              //     } else if (prefs.getString('skill') == 'sats') {
+              //       return const Home();
+              //     } else {
+              //       return const Home();
+              //     }
+              //   },
+              // );
             }
           }(),
         ),

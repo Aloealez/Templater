@@ -5,8 +5,6 @@ import 'package:brainace_pro/animated_progress_bar.dart';
 import 'package:brainace_pro/buttons.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/quiz/quiz_question_task.dart';
-import 'package:brainace_pro/score_n_progress/progress_screen.dart';
-import 'package:brainace_pro/score_n_progress/show_improvement.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math';
@@ -308,35 +306,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
         }
       }
 
-      Navigator.pop(context);
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => (widget.initialTest)
-              ? InitialScoreScreen(
-                  title: widget.exerciseName,
-                  description: widget.description,
-                  exercise: widget.exerciseNumber,
-                  userScore: score,
-                  maxScore: maxScore,
-                  page: widget.page,
-                )
-              : (widget.endingTest
-                  ? ShowImprovement(
-                      title: widget.exerciseName,
-                      description: widget.description,
-                      exercise: widget.exerciseNumber,
-                      yourScore: score,
-                      maximum: widget.questions.length.toDouble(),
-                      page: widget.page,
-                    )
-                  : ProgressScreen(
-                      userScore: score,
-                      maxScore: maxScore,
-                      exercise: widget.exerciseString,
-                    )),
-        ),
-      );
+      /// here was continuation to proress screen
     }
   }
 

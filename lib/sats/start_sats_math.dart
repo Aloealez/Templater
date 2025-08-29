@@ -1,9 +1,9 @@
+import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:brainace_pro/quiz/question_bank.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' as math;
-import '../home.dart';
 import '../quiz/math_quiz_model.dart';
 
 class StartSatsMath extends StatefulWidget {
@@ -61,7 +61,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
             'Exercise 1 - Math', // Title
             'Math', // Exercise Name
             300, // Time in seconds
-            page: Home(),
+            page: MathActivities(),
             onEnd: (Map<String, QuizQuestionData> questions,
                 Map<String, bool> answers, bool initialTest, bool endingTest,) {
               SharedPreferences.getInstance().then((prefs) {
