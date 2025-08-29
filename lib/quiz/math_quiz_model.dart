@@ -306,6 +306,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
       }
 
       /// here was continuation to proress screen
+      Navigator.pop(context);
     }
   }
 

@@ -4,7 +4,6 @@ import 'package:brainace_pro/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'quiz/question_bank.dart';
 
 
 void main() async {
@@ -23,19 +22,13 @@ void main() async {
   final prefs = await SharedPreferences.getInstance();
   final int themeMode = prefs.getInt('themeMode') ?? 0;
 
-  SatsQuestionBank satsQuestionBank = SatsQuestionBank();
-  await satsQuestionBank.init();
-  for (var subcategory in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
+  // SatsQuestionBank satsQuestionBank = SatsQuestionBank();
+  // await satsQuestionBank.init();
+  // for (var subcategory in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
     // questionBank.loadFromAssets(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
     // questionBank.updateQuestionsFromBackend(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
-    satsQuestionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
-  }
-
-  QuestionBank questionBank = QuestionBank();
-  await questionBank.init();
-  for (var subcategory in SatsQuestionSubcategories.typesList.sublist(10)) {
-    questionBank.updateQuestions(subcategory, limit: 4);
-  }
+    // satsQuestionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
+  // }
 
   runApp(
     MyApp(themeMode: themeMode),
