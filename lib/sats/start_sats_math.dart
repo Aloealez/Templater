@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -47,6 +49,10 @@ class _StartSatsMathState extends State<StartSatsMath> {
 
     } catch (e) {
       // print("Failed to connect to local server: $e");
+      if (!e.toString().contains("SocketException")) {
+        // throw e;
+        print("Failed to connect to local server: $e");
+      }
     }
 
     Future.delayed(Duration(seconds: 1), () {

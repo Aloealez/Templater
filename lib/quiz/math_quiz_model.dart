@@ -416,14 +416,17 @@ class _MathQuizModelState extends State<MathQuizModel> {
     _timer = Timer.periodic(
       const Duration(seconds: 1),
       (timer) {
-        setState(
-          () {
-            _time--;
-            if (_time <= 0) {
-              handleContinue();
-            }
-          },
-        );
+        if (mounted)
+          {
+            setState(
+                  () {
+                _time--;
+                if (_time <= 0) {
+                  handleContinue();
+                }
+              },
+            );
+          }
       },
     );
   }
