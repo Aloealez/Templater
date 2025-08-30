@@ -1,6 +1,6 @@
-import 'package:brainace_pro/sats/start_sats_math.dart';
+import 'package:templater/sats/start_sats_math.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:brainace_pro/theme/theme_colors.dart';
+import 'package:templater/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';

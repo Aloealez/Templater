@@ -1,9 +1,9 @@
-import 'package:brainace_pro/margins.dart';
+import 'package:templater/margins.dart';
 import 'package:flutter_html_as_text/flutter_html_as_text.dart';
-import 'package:brainace_pro/animated_progress_bar.dart';
-import 'package:brainace_pro/buttons.dart';
+import 'package:templater/animated_progress_bar.dart';
+import 'package:templater/buttons.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
-import 'package:brainace_pro/quiz/quiz_question_task.dart';
+import 'package:templater/quiz/quiz_question_task.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math';

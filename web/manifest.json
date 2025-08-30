@@ -1,6 +1,6 @@
 {
-    "name": "brainace_pro",
-    "short_name": "brainace_pro",
+    "name": "templater",
+    "short_name": "templater",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

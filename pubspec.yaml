@@ -1,4 +1,4 @@
-name: brainace_pro
+name: templater
 description: "Template viewer for BrainAce Pro app."
 publish_to: "none"
 version: 1.0.0+1
