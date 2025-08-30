@@ -21,7 +21,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ">=1.0.8"
   path_provider: ">=2.1.5"
-  url_launcher: ">=6.3.1"
   intl:
   flutter_animate: ">=4.5.2"
   flutter_bta_functions:
@@ -32,12 +31,6 @@ dependencies:
     git:
       url: https://github.com/Staheos/flutter_html_as_text.git
   shared_preferences: ">=2.3.5"
-  sudoku_dart:
-    git:
-      url: https://github.com/einsitang/sudoku-dart.git
-  confetti:
-    git:
-      url: https://github.com/Staheos/flutter_confetti.git
   yaml: ">=3.1.3"
   flutter_markdown:
   tuple: ">=2.0.2"
@@ -45,9 +38,7 @@ dependencies:
     git:
       url: https://github.com/Asilmaz/flutter_quizzes.git
   page_transition: ">=2.2.1"
-  timezone: ">=0.10.0"
   http:
-  permission_handler: ">=11.3.1"
   flutter_tex: ^5.0.5
 
 dev_dependencies:
