@@ -1,4 +1,4 @@
-import 'package:brainace_pro/activities/math_activities.dart';
+import 'package:brainace_pro/sats/start_sats_math.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:brainace_pro/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
@@ -15,20 +15,8 @@ void main() async {
     ],
   );
 
-  // extend maximum size of cached images (WARNING - can take a looot of memory)
-  PaintingBinding.instance.imageCache.maximumSize = 5000;
-  PaintingBinding.instance.imageCache.maximumSizeBytes = 1000 * 1024 * 1024;
-
   final prefs = await SharedPreferences.getInstance();
   final int themeMode = prefs.getInt('themeMode') ?? 0;
-
-  // SatsQuestionBank satsQuestionBank = SatsQuestionBank();
-  // await satsQuestionBank.init();
-  // for (var subcategory in SatsQuestionSubcategories.typesList.sublist(0, 10)) {
-    // questionBank.loadFromAssets(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
-    // questionBank.updateQuestionsFromBackend(SatsQuestionSubcategories.fromString(subcategory), limit: 5);
-    // satsQuestionBank.updateQuestions(SatsQuestionSubcategories.fromString(subcategory), limit: 2);
-  // }
 
   runApp(
     MyApp(themeMode: themeMode),
@@ -105,7 +93,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       themeMode: themeMode,
-      home: MathActivities(),
+      home: StartSatsMath(),
     );
   }
 

@@ -1,4 +1,3 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:brainace_pro/margins.dart';
 import 'package:flutter_html_as_text/flutter_html_as_text.dart';
 import 'package:brainace_pro/animated_progress_bar.dart';
@@ -154,8 +153,6 @@ class MathQuizModel extends StatefulWidget {
   /// If answer is required to continue.
   final bool requireAnswer;
 
-  final AssetSource? music;
-
   final String exerciseName;
 
   final int htmlFormat;
@@ -200,7 +197,6 @@ class MathQuizModel extends StatefulWidget {
     this.onEndAsync,
     this.answerLayout = QuizModelAnswerLayout.list,
     this.requireAnswer = false,
-    this.music,
     this.htmlFormat = -1,
   });
 
@@ -217,7 +213,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
   late int _time;
   Map<String, String> answers = {};
   double maxScore = 0;
-  final player = AudioPlayer();
   bool forceContinue = false;
 
   @override
@@ -236,10 +231,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
       maxScore = maxScore + widget.initMaxScore;
     });
 
-    if (widget.music != null) {
-      player.play(widget.music!);
-      player.setReleaseMode(ReleaseMode.loop);
-    }
     startTimer();
   }
 
@@ -439,9 +430,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
 
   @override
   void dispose() {
-    player.audioCache.clearAll();
-    player.dispose();
-    _timer.cancel();
     super.dispose();
   }
 
@@ -480,7 +468,7 @@ class _MathQuizModelState extends State<MathQuizModel> {
                 ReportQuestionDialog(
                   context,
                   null,
-                  widget.questions[questionId]!.question,
+                  widget.questions[questionId]!.id,
                 );
               },
             ),
@@ -762,19 +750,6 @@ class _MathQuizModelState extends State<MathQuizModel> {
       appBar: appBar(context, ''),
       body: Stack(
         children: [
-          Align(
-            alignment: Alignment(
-              Random().nextDouble() * 2 - 1,
-              Random().nextDouble() * 2 - 1,
-            ),
-            child: Text(
-              'WS',
-              style: TextStyle(
-                fontSize: size.width / 279,
-                color: Colors.white.withOpacity(0.3),
-              ),
-            ),
-          ),
           Align(
             alignment: Alignment(0, -1),
             child: SingleChildScrollView(

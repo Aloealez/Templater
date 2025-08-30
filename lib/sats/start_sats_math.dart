@@ -1,4 +1,3 @@
-import 'package:brainace_pro/activities/math_activities.dart';
 import 'package:flutter_quizzes/flutter_quizzes.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -9,10 +8,8 @@ import 'dart:convert';
 
 
 class StartSatsMath extends StatefulWidget {
-  final SatsQuestionSubcategories subcategory;
 
   const StartSatsMath({
-    required this.subcategory,
     super.key,
   });
 
@@ -41,9 +38,9 @@ class _StartSatsMathState extends State<StartSatsMath> {
         }
         question.subcategoryStr = "";
 
-        print("Loaded question: ${question}");
+        print("Loaded question: ${question.id}");
 
-        newQuestions[question.question] = question;
+        newQuestions[question.id] = question;
       }
       questions = newQuestions;
       showQuestions();
@@ -52,7 +49,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
       // print("Failed to connect to local server: $e");
     }
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 1), () {
       if (questionsF == null) {
         questionsF = refresh();
       }
@@ -75,7 +72,7 @@ class _StartSatsMathState extends State<StartSatsMath> {
           'Exercise 1 - Math', // Title
           'Math', // Exercise Name
           300, // Time in seconds
-          page: MathActivities(),
+          page: StartSatsMath(),
           onEnd: (Map<String, QuizQuestionData> questions,
               Map<String, bool> answers, bool initialTest, bool endingTest,) {
             SharedPreferences.getInstance().then((prefs) {

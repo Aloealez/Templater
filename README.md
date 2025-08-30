@@ -1,14 +1,12 @@
-# ~~The Brain Train App~~ BrainAce.pro
+# Automatic Template Viewer
 
-App for brain training.
+SATs Math Template Viewer.
 
 ## About
 
-Improve your brain in 30 days!
-
-![Alt text](image.png)
+This is simple flutter app to view SATs math templates. Works on all platforms. Can check templates designed for BrainAce.pro app.
 
 ## Design
 
-https://www.canva.com/design/DAGRdcjwAGQ/qo1N8ozrEoEZN7P_pxaAgw/edit
+
 
